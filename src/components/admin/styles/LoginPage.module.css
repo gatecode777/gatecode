@@ -1,0 +1,411 @@
+/* ============================================
+   LOGIN PAGE STYLES
+============================================ */
+
+.loginPage {
+  min-height: 100vh;
+  display: flex;
+  background: var(--sidebar-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background mesh */
+.loginPage::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 50%, rgba(15, 185, 177, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 80% at 80% 30%, rgba(15, 185, 177, 0.05) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 40% at 50% 80%, rgba(15, 185, 177, 0.04) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Grid pattern overlay */
+.loginPage::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(15, 185, 177, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 185, 177, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+/* Left branding panel */
+.loginBrand {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.brandLogo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 64px;
+}
+
+.brandLogoIcon {
+  width: 44px;
+  height: 44px;
+  background: var(--color-primary);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-primary);
+}
+
+.brandLogoIcon svg {
+  width: 24px;
+  height: 24px;
+  color: white;
+}
+
+.brandName {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-text-inverse);
+  letter-spacing: -0.3px;
+}
+
+.brandTagline {
+  font-size: 13px;
+  color: var(--sidebar-text-muted);
+  font-weight: 400;
+}
+
+.brandHeadline {
+  margin-bottom: 24px;
+}
+
+.brandHeadline h1 {
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--color-text-inverse);
+  line-height: 1.15;
+  letter-spacing: -1px;
+  margin-bottom: 16px;
+}
+
+.brandHeadline h1 span {
+  color: var(--color-primary);
+}
+
+.brandHeadline p {
+  font-size: 16px;
+  color: var(--sidebar-text-muted);
+  line-height: 1.7;
+  max-width: 400px;
+}
+
+.brandFeatures {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 48px;
+}
+
+.brandFeature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.featureDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  flex-shrink: 0;
+  box-shadow: 0 0 12px rgba(15, 185, 177, 0.5);
+}
+
+.brandFeature span {
+  font-size: 14px;
+  color: var(--sidebar-text);
+  font-weight: 500;
+}
+
+/* Right form panel */
+.loginForm {
+  width: 480px;
+  flex-shrink: 0;
+  background: var(--color-surface);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 56px;
+  position: relative;
+  z-index: 1;
+}
+
+.formHeader {
+  margin-bottom: 40px;
+}
+
+.formHeader h2 {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+}
+
+.formHeader p {
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formLabel {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin-bottom: 7px;
+  letter-spacing: 0.2px;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  display: flex;
+  pointer-events: none;
+  transition: color var(--transition-fast);
+}
+
+.inputIcon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.formInput {
+  width: 100%;
+  height: 46px;
+  padding: 0 44px 0 44px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--color-text-primary);
+  background: var(--color-surface-2);
+  transition: all var(--transition-base);
+  outline: none;
+}
+
+.formInput::placeholder {
+  color: var(--color-text-muted);
+}
+
+.formInput:focus {
+  border-color: var(--color-primary);
+  background: var(--color-surface);
+  box-shadow: 0 0 0 3px var(--color-primary-glow);
+}
+
+.formInput:focus + .inputBorder {
+  opacity: 1;
+}
+
+.passwordToggle {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-fast);
+}
+
+.passwordToggle:hover {
+  color: var(--color-text-secondary);
+}
+
+.passwordToggle svg {
+  width: 16px;
+  height: 16px;
+}
+
+.formOptions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+  margin-top: -4px;
+}
+
+.rememberMe {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.rememberMe input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+}
+
+.rememberMe span {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.forgotLink {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.forgotLink:hover {
+  color: var(--color-primary-dark);
+}
+
+.submitButton {
+  width: 100%;
+  height: 48px;
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  letter-spacing: 0.2px;
+  box-shadow: var(--shadow-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.submitButton::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 50%);
+}
+
+.submitButton:hover:not(:disabled) {
+  background: var(--color-primary-dark);
+  box-shadow: 0 6px 24px rgba(15, 185, 177, 0.45);
+  transform: translateY(-1px);
+}
+
+.submitButton:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: var(--shadow-primary);
+}
+
+.submitButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.submitButton svg {
+  width: 18px;
+  height: 18px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.errorAlert {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px 16px;
+  background: var(--color-danger-pale);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: var(--radius-md);
+  margin-bottom: 24px;
+}
+
+.errorAlert svg {
+  width: 16px;
+  height: 16px;
+  color: var(--color-danger);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.errorAlert p {
+  font-size: 13px;
+  color: #b91c1c;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.formFooter {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.formFooter p {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.formFooter strong {
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .loginBrand {
+    display: none;
+  }
+
+  .loginForm {
+    width: 100%;
+    padding: 40px 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .loginForm {
+    padding: 32px 24px;
+  }
+
+  .formHeader h2 {
+    font-size: 24px;
+  }
+}
