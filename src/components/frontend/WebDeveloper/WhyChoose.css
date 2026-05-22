@@ -1,0 +1,154 @@
+.why-choose-section {
+  width: 100%;
+  padding: 100px 20px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+.why-choose-heading {
+  text-align: center;
+  margin-bottom: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.why-choose-heading h2 {
+  font-family: "Castoro Titling", serif;
+  font-size: clamp(30px, 5vw, 42px);
+  font-weight: 100;
+  color: #1a1a1a;
+  letter-spacing: 0.05em;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.why-choose-heading h2 span {
+  color: #0d9488;
+}
+
+.why-choose-divider {
+  width: 80px;
+  height: 3px;
+  background: #0d9488;
+  margin-bottom: 25px;
+  border-radius: 2px;
+}
+
+.why-choose-heading p {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(16px, 2vw, 19px);
+  color: #64748b;
+  font-weight: 300;
+  max-width: 600px;
+}
+
+.why-choose-wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.why-choose-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.why-card {
+  text-align: left;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.why-card.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.why-card-image {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.why-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.why-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.why-card:hover .why-card-image img {
+  transform: scale(1.1);
+}
+
+.why-card:hover .why-card-overlay {
+  opacity: 1;
+}
+
+.why-card-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 0 5px;
+}
+
+.why-card-num {
+  font-family: "Castoro Titling", serif;
+  font-size: 14px;
+  color: #0d9488;
+  font-weight: 500;
+  margin-top: 4px;
+  opacity: 0.6;
+}
+
+.why-card h3 {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(18px, 2.2vw, 22px);
+  font-weight: 500;
+  color: #1a1a1a;
+  line-height: 1.3;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+
+
+@media (max-width: 1024px) {
+  .why-choose-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .why-choose-section {
+    padding: 80px 30px;
+  }
+}
+
+@media (max-width: 650px) {
+  .why-choose-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  
+  .why-card-image {
+    height: 240px;
+  }
+
+  .why-choose-heading {
+    margin-bottom: 50px;
+  }
+}

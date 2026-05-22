@@ -1,0 +1,78 @@
+.cs-hero__button,
+.cs-card__btn,
+.project-banner__btn {
+  border-radius: 10px !important;
+  font-family: 'Roboto Flex', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 18px !important;
+  cursor: pointer;
+  border: none !important;
+  transition: all 0.3s ease !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+
+.cs-hero__button,
+.cs-card__btn--yellow,
+.project-banner__btn {
+  background-color: #f4ef2a !important;
+  color: #111111 !important;
+  box-shadow: 0 4px 15px rgba(244, 239, 42, 0.2);
+}
+
+
+.cs-card__btn--blue {
+  background-color: #375F79 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 15px rgba(55, 95, 121, 0.2);
+}
+
+
+.cs-hero__button:hover,
+.cs-card__btn:hover,
+.project-banner__btn:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+  filter: brightness(1.05);
+}
+
+
+.project-banner__btn {
+  padding: 18px 45px !important;
+  width: auto !important;
+  min-width: 250px;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+}
+
+.project-banner__btn span {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.project-banner__btn:hover span {
+  transform: translateX(5px);
+}
+
+
+.cs-card__btn {
+  padding: 12px 30px !important;
+}
+
+
+.cs-hero__button {
+  padding: 15px 40px !important;
+}
+
+@media (max-width: 768px) {
+
+  .cs-hero__button,
+  .cs-card__btn,
+  .project-banner__btn {
+    font-size: 16px !important;
+    padding: 12px 25px !important;
+  }
+}

@@ -1,0 +1,163 @@
+.cc-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 100px 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.cc-container {
+  max-width: 1300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cc-collab {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.cc-title {
+  color: #333;
+  margin-bottom: 12px;
+  letter-spacing: 0.1em;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-family: Castoro Titling;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 35px;
+  line-height: 100%;
+  letter-spacing: 2%;
+  text-align: center;
+
+}
+
+.cc-teal {
+  color: #4ab8a8;
+  font-weight: 400;
+}
+
+.cc-subtitle {
+  font-family: Roboto Flex;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 18px;
+  line-height: 100%;
+  color: #333;
+  letter-spacing: 5%;
+  margin-bottom: 20px;
+  text-align: center;
+
+}
+
+.cc-rmax {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.cc-rmax-logo {
+  max-width: 180px;
+  height: auto;
+}
+
+.cc-desc {
+  font-family: Roboto Flex;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 18px;
+  line-height: 1.7;
+  letter-spacing: 5%;
+  text-align: center;
+  color: #444;
+}
+
+.cc-divider {
+  width: 100%;
+  height: 1px;
+  background: #d1d5db;
+  margin: 0px 0px 50px;
+}
+
+.cc-clients {
+  width: 100%;
+  text-align: center;
+}
+
+.cc-clients-title {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 33px;
+  color: #333;
+  margin-bottom: 40px;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.cc-clients-grid {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.cc-clients-image {
+  max-width: 150px;
+  height: auto;
+  opacity: 0.9;
+  object-fit: contain;
+}
+
+@media (max-width: 1024px) {
+  .cc-title {
+    font-size: 32px;
+  }
+
+  .cc-clients-title {
+    font-size: 28px;
+    margin-bottom: 50px;
+  }
+
+  .cc-desc {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cc-section {
+    padding: 60px 20px;
+  }
+
+  .cc-title {
+    font-size: 26px;
+  }
+
+  .cc-clients-title {
+    font-size: 22px;
+    margin-bottom: 40px;
+  }
+
+  .cc-subtitle {
+    font-size: 16px;
+  }
+
+  .cc-divider {
+    margin: 40px 0;
+  }
+
+  .cc-clients-grid {
+    gap: 30px;
+  }
+
+  .cc-clients-image {
+    max-width: 120px;
+  }
+}

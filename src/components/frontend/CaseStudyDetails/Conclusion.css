@@ -1,0 +1,107 @@
+
+.conclusion-section {
+  width: 100%;
+  background: #f4f4f4;
+  padding: 60px 20px;
+}
+
+
+.conclusion-container {
+  max-width: 100%;
+  text-align: center;
+}
+
+
+.conclusion-title {
+  font-family: 'Castoro Titling', serif;
+  font-size: 32px;
+  letter-spacing: 2%;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+
+.conclusion-text {              
+  margin: 0 auto;               
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.5;            
+  letter-spacing: 0.02em;        
+  text-align: center;          
+
+  color: #444;
+}
+
+
+
+
+@media (max-width: 1024px) {
+  .conclusion-title {
+    font-size: 28px;
+  }
+
+  .conclusion-text {
+    font-size: 17px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .conclusion-container {
+    max-width: 700px;
+  }
+
+  .conclusion-title {
+    font-size: 24px;
+  }
+
+  .conclusion-text {
+    font-size: 16px;
+  }
+}
+
+
+@media (max-width: 425px) {
+  .conclusion-section {
+    padding: 28px 15px;
+  }
+
+  .conclusion-title {
+    font-size: 20px;
+  }
+
+  .conclusion-text {
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width: 375px) {
+  .conclusion-title {
+    font-size: 18px;
+  }
+
+  .conclusion-text {
+    font-size: 13px;
+  }
+  .conclusion-section {
+    padding: 28px 15px;
+  }
+}
+
+
+@media (max-width: 320px) {
+  .conclusion-title {
+    font-size: 16px;
+  }
+
+  .conclusion-text {
+    font-size: 12px;
+  }
+  .conclusion-section{
+    padding-top: 0px;
+  }
+}

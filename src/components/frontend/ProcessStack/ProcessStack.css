@@ -1,0 +1,528 @@
+.process-flow-section {
+  overflow: hidden;
+  padding: 50px 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.process-flow-header {
+  text-align: center;
+  margin-bottom: 80px;
+  padding: 0 20px;
+  position: relative;
+}
+
+.process-flow-header::before {
+  display: none;
+}
+
+.process-flow-header .desc {
+  margin-top: 40px;
+}
+
+.process-flow-title {
+  font-family: "Castoro Titling", serif;
+  font-weight: 100;
+  font-size: 52px;
+  line-height: 1;
+  letter-spacing: 0.15em;
+  color: #fff708;
+  margin-bottom: 14px;
+  position: relative;
+  display: inline-block;
+}
+
+.process-flow-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -15px;
+  transform: translateX(-50%);
+  width: 230px;
+  height: 3px;
+  background-color: #fff708;
+}
+
+.process-flow-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  color: #FFFFFF;
+  font-weight: 400;
+  margin-top: 20px;
+  letter-spacing: 1px;
+}
+
+.process-flow-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 5vw, 4rem);
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.process-flow-card-stack {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.process-flow-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  box-sizing: border-box;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 60px 80px;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.2);
+  transform: translateY(30px) scale(0.96);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.process-flow-card.active {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.process-flow-card.hide {
+  transform: translateY(-40px) scale(0.96);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.process-flow-card-content {
+  flex: 1;
+  text-align: left;
+  min-width: 0;
+}
+
+.process-flow-card-number {
+  display: none;
+}
+
+.process-flow-card-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: 48px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.process-flow-card-description {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #555;
+  line-height: 1.6;
+  max-width: 450px;
+}
+
+.process-flow-card-image-wrapper {
+  flex: 1.2;
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.process-flow-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 15px;
+}
+
+.process-flow-nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 50px;
+}
+
+.process-flow-nav-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.process-flow-nav-dot.active {
+  background: #ffeb3b;
+  border-color: #ffeb3b;
+  width: 30px;
+  border-radius: 5px;
+}
+
+@media (max-width: 1440px) {
+
+
+  .process-flow-card {
+    padding: 50px 70px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .process-flow-card {
+    padding: 50px 60px;
+    gap: 2.5rem;
+  }
+
+  .process-flow-card-title {
+    font-size: 42px;
+  }
+
+  .process-flow-card-description {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 991px) {
+  .process-flow-section {
+    padding: 80px 0;
+    min-height: auto;
+  }
+
+  .process-flow-header {
+    margin-bottom: 60px;
+  }
+
+  .process-flow-title {
+    font-size: 44px;
+  }
+
+  .process-flow-subtitle {
+    font-size: 34px;
+  }
+
+
+
+  .process-flow-card-stack {
+    height: 620px;
+  }
+
+  .process-flow-card {
+    flex-direction: column;
+    padding: 30px;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+
+  .process-flow-card-content {
+    order: 2;
+    text-align: left;
+  }
+
+  .process-flow-card-description {
+    max-width: 100%;
+  }
+
+  .process-flow-card-image-wrapper {
+    order: 1;
+    width: 100%;
+    height: 260px;
+    flex: none;
+  }
+
+  .process-flow-card-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .process-flow-card-description {
+    font-size: 17px;
+  }
+
+  .process-flow-nav {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .process-flow-section {
+    padding: 60px 0;
+  }
+
+  .process-flow-header {
+    margin-bottom: 50px;
+  }
+
+  .process-flow-header::before {
+    width: 100px;
+  }
+
+  .process-flow-title {
+    font-size: 36px;
+  }
+
+  .process-flow-subtitle {
+    font-size: 28px;
+  }
+
+
+
+  .process-flow-card-stack {
+    height: 560px;
+  }
+
+  .process-flow-card {
+    padding: 25px;
+    gap: 1.2rem;
+    border-radius: 10px;
+  }
+
+  .process-flow-card-image-wrapper {
+    height: 220px;
+  }
+
+  .process-flow-card-title {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+
+  .process-flow-card-description {
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .process-flow-nav {
+    margin-top: 35px;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .process-flow-section {
+    padding: 50px 0;
+  }
+
+  .process-flow-header {
+    margin-bottom: 40px;
+  }
+
+  .process-flow-header::before {
+    width: 80px;
+    height: 2px;
+    top: -15px;
+  }
+
+  .process-flow-title {
+    font-size: 26px;
+  }
+
+  .process-flow-subtitle {
+    font-size: 24px;
+  }
+
+
+
+  .process-flow-card-stack {
+    height: 500px;
+  }
+
+  .process-flow-card {
+    padding: 20px;
+    gap: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  }
+
+  .process-flow-card-image-wrapper {
+    height: 180px;
+    border-radius: 10px;
+  }
+
+  .process-flow-card-image {
+    border-radius: 10px;
+  }
+
+  .process-flow-card-title {
+    font-size: 26px;
+    margin-bottom: 12px;
+  }
+
+  .process-flow-card-description {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .process-flow-nav {
+    margin-top: 30px;
+    gap: 10px;
+  }
+
+  .process-flow-nav-dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .process-flow-nav-dot.active {
+    width: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .process-flow-section {
+    padding: 40px 0;
+  }
+
+  .process-flow-header {
+    margin-bottom: 30px;
+  }
+
+  .process-flow-title {
+    font-size: 24px;
+  }
+
+  .process-flow-subtitle {
+    font-size: 22px;
+  }
+
+  .process-flow-card-stack {
+    height: 460px;
+  }
+
+  .process-flow-card {
+    padding: 16px;
+    gap: 0.8rem;
+  }
+
+  .process-flow-card-image-wrapper {
+    height: 160px;
+    flex-shrink: 0;
+  }
+
+  .process-flow-card-content {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .process-flow-card-title {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .process-flow-card-description {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+}
+
+@media (max-width: 375px) {
+  .process-flow-title {
+    font-size: 22px;
+  }
+
+  .process-flow-subtitle {
+    font-size: 20px;
+  }
+
+
+
+  .process-flow-card-stack {
+    height: 275px;
+  }
+
+  .process-flow-card {
+    padding: 14px;
+    border-radius: 8px;
+  }
+
+  .process-flow-card-image-wrapper {
+    height: 140px;
+    border-radius: 8px;
+  }
+
+  .process-flow-card-image {
+    border-radius: 8px;
+  }
+
+  .process-flow-card-title {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .process-flow-card-description {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .process-flow-nav {
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 320px) {
+  .process-flow-section {
+    padding: 30px 0;
+  }
+
+  .process-flow-title {
+    font-size: 20px;
+  }
+
+  .process-flow-subtitle {
+    font-size: 18px;
+  }
+
+  .process-flow-card-stack {
+    height: 260px;
+  }
+
+  .process-flow-card {
+    padding: 12px;
+    gap: 0.6rem;
+  }
+
+  .process-flow-card-image-wrapper {
+    height: 120px;
+  }
+
+  .process-flow-card-title {
+    font-size: 18px;
+  }
+
+  .process-flow-card-description {
+    font-size: 12px;
+  }
+
+  .process-flow-nav {
+    margin-top: 20px;
+    gap: 8px;
+  }
+
+  .process-flow-nav-dot {
+    width: 7px;
+    height: 7px;
+  }
+
+  .process-flow-nav-dot.active {
+    width: 20px;
+  }
+}

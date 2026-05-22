@@ -2,12 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: {
-    template: '%s | Admin Panel',
-    default: 'Admin Panel',
-  },
-  description: 'Company Admin Panel — Internal Management System',
-  robots: { index: false, follow: false },
+  title: 'Gatecode Technologies',
+  description: 'Empowering businesses with technology driven solutions.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -1,0 +1,45 @@
+.expertise-section {
+  margin: 10px auto 0;
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+  padding: 0 20px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.expertise-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.expertise-title {
+  font-family: 'Roboto Flex', sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  font-size: clamp(1rem, 4vw, 22px); 
+  line-height: 100%;
+  letter-spacing: 0.05em;
+  color: #333;
+  margin: 0;
+}
+
+.expertise-desc {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(0.9rem, 3.5vw, 18px); 
+  line-height: 1.2; 
+  letter-spacing: 0.05em;
+  color: #666;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .expertise-section {
+    gap: 30px; 
+    padding: 0 15px 30px; 
+  }
+}

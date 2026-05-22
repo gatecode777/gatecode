@@ -1,0 +1,88 @@
+.cs-section {
+  width: 100%;
+  background: #f4f4f4;
+  padding-left: 0px;
+}
+
+
+.cs-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+
+.cs-text {
+  flex: 1;
+}
+
+.cs-block {
+  margin-bottom: 40px;
+}
+
+.cs-block h2 {
+  font-family: 'Castoro Titling', serif;
+  font-size: 32px;
+  letter-spacing: 0.08em;
+  color: #4a4a4a;
+  margin-bottom: 15px;
+}
+
+.cs-block p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  line-height: 1.4;
+
+  letter-spacing: 2%;
+  color: #4a4a4a;
+}
+
+
+.cs-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.cs-image img {
+  width: 100%;
+  max-width: 700px;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .cs-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 0px;
+  }
+
+  .cs-block p {
+    max-width: 100%;
+  }
+
+  .cs-image img {
+    max-width: 300px;
+  }
+}
+
+
+@media (max-width: 425px) {
+  .cs-section {
+    padding: 40px 20px;
+  }
+
+  .cs-block h2 {
+    font-size: 24px;
+  }
+
+  .cs-block p {
+    font-size: 14px;
+  }
+}

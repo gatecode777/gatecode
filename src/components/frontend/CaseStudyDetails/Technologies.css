@@ -1,0 +1,127 @@
+
+.tech-section {
+  width: 100%;
+  padding: 100px 0;
+  background: #f8fafc;
+  text-align: center;
+}
+
+
+.tech-title {
+  font-family: 'Castoro Titling', serif;
+  font-size: clamp(28px, 4vw, 42px);
+  letter-spacing: 0.1em;
+  margin-bottom: 80px;
+  font-weight: 400;
+  color: #1e293b;
+  text-transform: uppercase;
+}
+
+
+.tech-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  position: relative;
+}
+
+
+.tech-line {
+  position: absolute;
+  top: 50px;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background: #cbd5e1;
+  z-index: 0;
+}
+
+
+.tech-item {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.tech-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.tech-item:hover .tech-circle {
+  transform: translateY(-8px);
+  border-color: #3b82a0;
+  box-shadow: 0 15px 35px rgba(59, 130, 160, 0.15);
+}
+
+
+.tech-circle img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+
+.tech-item p {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #64748b;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+
+
+@media (max-width: 991px) {
+  .tech-section {
+    padding: 70px 0;
+  }
+  .tech-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px 40px;
+  }
+  .tech-line {
+    display: none; 
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-section {
+    padding: 50px 0;
+  }
+  .tech-title {
+    margin-bottom: 50px;
+  }
+  .tech-container {
+    padding: 0 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px 40px;
+  }
+  .tech-circle {
+    width: 80px;
+    height: 80px;
+  }
+  .tech-circle img {
+    width: 35px;
+    height: 35px;
+  }
+  .tech-item p {
+    font-size: 14px;
+  }
+}

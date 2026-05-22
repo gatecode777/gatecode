@@ -1,0 +1,12 @@
+.expertise-showcase {
+  padding: 100px 20px;
+  text-align: center;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+.expertise-showcase h1 {
+  font-size: 3rem;
+  color: #0f172a;
+  margin-bottom: 20px;
+}

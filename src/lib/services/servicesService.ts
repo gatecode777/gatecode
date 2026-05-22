@@ -244,10 +244,10 @@ export async function findOrCreateCategoryPage(categoryId: string, slug: string)
   }).lean();
   if (existing) return { page: existing as IServicePage, created: false };
 
-  // Ensure slug uniqueness
-  let finalSlug = `category-${slug}`;
+  // Use plain category slug so /services/{slug} URLs match directly
+  let finalSlug = slug.toLowerCase();
   const slugExists = await ServicePage.findOne({ slug: finalSlug }).select('_id').lean();
-  if (slugExists) finalSlug = `category-${slug}-${Date.now()}`;
+  if (slugExists) finalSlug = `${slug}-${Date.now()}`;
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const doc = await (ServicePage as any).create({

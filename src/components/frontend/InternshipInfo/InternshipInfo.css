@@ -1,0 +1,213 @@
+.internship-info {
+  padding: 40px 0;
+  background-color: #fff;
+}
+
+.info-box {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  margin: 0 auto 40px;
+  overflow: hidden;
+  width: 92%;
+  box-sizing: border-box;
+}
+
+.intro-box {
+  padding: 30px 60px;
+  text-align: center;
+  max-width: 963px;
+  position: relative;
+  z-index: 1;
+  transform-style: preserve-3d;
+  overflow: visible;
+}
+
+.intro-box::before,
+.intro-box::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #FFF708;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.8;
+  pointer-events: none;
+  transform: translateZ(-1px);
+}
+
+.intro-box::before {
+  left: -40px;
+  bottom: -40px;
+}
+
+.intro-box::after {
+  right: -40px;
+  bottom: -40px;
+}
+
+
+.intro-box p {
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 18px;
+  color: #334155;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  font-weight: 300;
+  margin: 0;
+}
+
+.benefits-box {
+  display: flex;
+  align-items: center;
+  padding: 40px 60px;
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto 60px;
+  overflow: visible;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  width: 92%;
+  box-sizing: border-box;
+}
+
+.benefits-content {
+  flex: 1;
+}
+
+.benefits-title {
+  font-size: 1.8rem;
+  color: #2d3748;
+  margin-bottom: 24px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.benefits-list li {
+  font-size: 1rem;
+  color: #4a5568;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.benefits-image {
+  position: absolute;
+  right: -80px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 280px;
+  pointer-events: none;
+  z-index: 999;
+}
+
+.benefits-image img {
+  width: 100%;
+  height: auto;
+  mix-blend-mode: multiply;
+}
+
+@media (max-width: 1024px) {
+  .benefits-image {
+    right: -40px;
+    width: 240px;
+  }
+}
+
+@media (max-width: 900px) {
+  .benefits-image {
+    right: -20px;
+    width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .internship-info {
+    padding: 30px 0;
+  }
+
+  .benefits-box {
+    flex-direction: column;
+    padding: 40px 30px;
+    text-align: center;
+    width: 90%;
+  }
+
+  .benefits-image {
+    position: relative;
+    right: 0;
+    top: 0;
+    transform: none;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 220px;
+    order: -1;
+    
+  }
+
+  .benefits-title {
+    text-align: center;
+    font-size: 1.6rem;
+  }
+
+  .benefits-list {
+    display: inline-block;
+    text-align: left;
+  }
+
+  .intro-box {
+    padding: 40px 25px;
+    width: 90%;
+  }
+
+  .intro-box p {
+    font-size: 15px;
+  }
+
+  .intro-box::before {
+    left: -20px;
+    bottom: -20px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .intro-box::after {
+    right: -20px;
+    bottom: -20px;
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .benefits-box,
+  .intro-box {
+    padding: 30px 20px;
+  }
+
+  .benefits-title {
+    font-size: 1.4rem;
+  }
+
+  .benefits-list li {
+    font-size: 0.95rem;
+  }
+
+  .intro-box p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .intro-box::before,
+  .intro-box::after {
+    width: 50px;
+    height: 50px;
+  }
+}
