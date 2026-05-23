@@ -3,6 +3,7 @@ import { verifyToken, COOKIE_NAME } from '@/lib/jwt';
 import { writeFile, mkdir } from 'fs/promises';
 import { existsSync } from 'fs';
 import path from 'path';
+import { put } from '@vercel/blob';
 import type { ApiResponse } from '@/types';
 
 function auth(req: NextRequest) {
@@ -22,19 +23,18 @@ const ALLOWED_IMAGE_TYPES = [
 
 const ALLOWED_DOC_TYPES = [
   'application/pdf',
-  'application/msword',                                                          // .doc
-  'application/vnd.openxmlformats-officedocument.wordprocessingml.document',    // .docx
-  'application/vnd.ms-excel',                                                   // .xls
-  'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',          // .xlsx
-  'application/vnd.ms-powerpoint',                                              // .ppt
-  'application/vnd.openxmlformats-officedocument.presentationml.presentation',  // .pptx
+  'application/msword',
+  'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+  'application/vnd.ms-excel',
+  'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+  'application/vnd.ms-powerpoint',
+  'application/vnd.openxmlformats-officedocument.presentationml.presentation',
   'text/plain',
   'text/csv',
 ];
 
 const ALLOWED_TYPES = [...ALLOWED_IMAGE_TYPES, ...ALLOWED_DOC_TYPES];
 
-// Max size: 10MB for images, 20MB for documents
 const MAX_IMAGE_SIZE = 10 * 1024 * 1024;
 const MAX_DOC_SIZE   = 20 * 1024 * 1024;
 
@@ -44,6 +44,24 @@ function sanitizeFilename(name: string): string {
     .replace(/[^a-z0-9.\-_]/g, '-')
     .replace(/-+/g, '-')
     .replace(/^-|-$/g, '');
+}
+
+const useBlob = !!process.env.BLOB_READ_WRITE_TOKEN;
+
+async function uploadToVercelBlob(file: File, filename: string): Promise<string> {
+  const blob = await put(filename, file, { access: 'public' });
+  return blob.url;
+}
+
+async function uploadToLocal(file: File, subfolder: string, filename: string): Promise<string> {
+  const uploadDir = path.join(process.cwd(), 'public', 'uploads', subfolder);
+  if (!existsSync(uploadDir)) {
+    await mkdir(uploadDir, { recursive: true });
+  }
+  const filepath = path.join(uploadDir, filename);
+  const buffer = Buffer.from(await file.arrayBuffer());
+  await writeFile(filepath, buffer);
+  return `/uploads/${subfolder}/${filename}`;
 }
 
 export async function POST(req: NextRequest) {
@@ -61,15 +79,13 @@ export async function POST(req: NextRequest) {
 
     const mimeType = file.type || 'application/octet-stream';
 
-    // Validate file type
     if (!ALLOWED_TYPES.includes(mimeType)) {
       return NextResponse.json<ApiResponse>(
-        { success: false, message: `Invalid file type: ${mimeType}. Allowed: images (JPEG, PNG, WebP, GIF, SVG), PDF, Word, Excel, PowerPoint, CSV, TXT` },
+        { success: false, message: `Invalid file type: ${mimeType}` },
         { status: 400 }
       );
     }
 
-    // Validate file size
     const isImage = ALLOWED_IMAGE_TYPES.includes(mimeType);
     const maxSize = isImage ? MAX_IMAGE_SIZE : MAX_DOC_SIZE;
     if (file.size > maxSize) {
@@ -80,36 +96,26 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Determine upload subfolder
-    let subfolder = 'general';
-    const category = formData.get('category') as string | null;
-    if (category) {
-      subfolder = sanitizeFilename(category);
-    } else if (isImage) {
-      subfolder = 'images';
+    const ext      = path.extname(file.name) || '';
+    const base     = sanitizeFilename(path.basename(file.name, ext)) || 'file';
+    const filename = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}-${base}${ext}`;
+
+    let url: string;
+
+    if (useBlob) {
+      url = await uploadToVercelBlob(file, filename);
     } else {
-      subfolder = 'documents';
+      let subfolder = 'general';
+      const category = formData.get('category') as string | null;
+      if (category) {
+        subfolder = sanitizeFilename(category);
+      } else if (isImage) {
+        subfolder = 'images';
+      } else {
+        subfolder = 'documents';
+      }
+      url = await uploadToLocal(file, subfolder, filename);
     }
-
-    // Build path
-    const uploadDir = path.join(process.cwd(), 'public', 'uploads', subfolder);
-    if (!existsSync(uploadDir)) {
-      await mkdir(uploadDir, { recursive: true });
-    }
-
-    // Generate unique filename
-    const ext         = path.extname(file.name) || '';
-    const base        = sanitizeFilename(path.basename(file.name, ext)) || 'file';
-    const timestamp   = Date.now();
-    const random      = Math.random().toString(36).slice(2, 8);
-    const filename    = `${timestamp}-${random}-${base}${ext}`;
-    const filepath    = path.join(uploadDir, filename);
-
-    // Write file
-    const buffer = Buffer.from(await file.arrayBuffer());
-    await writeFile(filepath, buffer);
-
-    const url = `/uploads/${subfolder}/${filename}`;
 
     return NextResponse.json({
       success: true,

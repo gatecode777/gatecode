@@ -20,7 +20,7 @@ export default async function Portfolio() {
 
   const [slides, categories, projects] = await Promise.all([
     PortfolioSliderModel.find({ isActive: true }).sort({ order: 1 }).lean(),
-    PortfolioCategory.find({ isActive: true }).sort({ order: 1, name: 1 }).lean(),
+    PortfolioCategory.find({ isActive: true }).sort({ order: 1 }).lean(),
     PortfolioProject.find({ isActive: true })
       .populate('categoryId', 'name slug')
       .sort({ order: 1 })
