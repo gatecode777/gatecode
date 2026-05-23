@@ -281,7 +281,7 @@ const ContactPage = () => {
   }, []);
 
   const handleGetDirections = () => {
-    window.open('https://maps.google.com/?q=New+Delhi+India', '_blank');
+    window.open('https://maps.app.goo.gl/McNsbMEo8EvS4npw5', '_blank');
   };
 
   return (

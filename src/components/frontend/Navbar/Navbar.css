@@ -322,6 +322,8 @@
     color: var(--color-gray-700);
     border-radius: var(--radius-md);
     transition: all var(--transition-fast);
+    border: none;
+    background: transparent;
 }
 
 .navbar__mobile-link:hover {
@@ -380,6 +382,7 @@
 
     .navbar__hamburger {
         display: flex;
+        border: none;
     }
 
     .navbar__logo img {
@@ -394,6 +397,10 @@
     .navbar__mobile-menu {
         
         height: calc(100vh - 70px);
+    }
+        .navbar__hamburger-line {
+        width: 18px;
+        background-color: rgb(107, 102, 102);
     }
 }
 
@@ -419,6 +426,7 @@
 
     .navbar__hamburger-line {
         width: 18px;
+        background-color: rgba(35, 31, 30, 0.5);
     }
 
     .navbar__overlay {

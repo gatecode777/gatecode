@@ -455,6 +455,7 @@
 @media (max-width: 768px) {
     .hero-section {
         padding: 40px 0 20px;
+        height: 830px;
     }
 
     .hero-container {
@@ -844,6 +845,7 @@
 @media (max-width: 320px) {
     .hero-section {
         padding: 20px 0 10px;
+        height: 700px;
     }
 
     .hero-container {

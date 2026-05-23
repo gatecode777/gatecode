@@ -126,7 +126,7 @@
 @media (max-width: 968px) {
     .services-section {
         padding: 40px 30px 60px;
-        margin-top: 410px;
+        /* margin-top: 410px; */
     }
 
     .services-header {
@@ -163,7 +163,7 @@
 @media (max-width: 480px) {
     .services-section {
         padding: 30px 16px 40px;
-        margin-top: 245px;
+        /* margin-top: 245px; */
     }
 
     .services-header {

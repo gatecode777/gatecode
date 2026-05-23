@@ -35,14 +35,14 @@ const portfolioItems = [
   { label: 'Categories', href: '/admin/portfolio/categories', icon: TagIcon },
   { label: 'Projects', href: '/admin/portfolio/projects', icon: BriefcaseIcon },
 ];
-const serviceItems = [
-  { label: 'Categories', href: '/admin/services/categories', icon: LayersIcon },
-  { label: 'Sub-Services', href: '/admin/services/sub-services', icon: ListIcon },
-];
+// const serviceItems = [
+//   { label: 'Categories', href: '/admin/services/categories', icon: LayersIcon },
+//   { label: 'Sub-Services', href: '/admin/services/sub-services', icon: ListIcon },
+// ];
 
-const technicalExpertiseItems = [
-  { label: 'Tech Expertise', href: '/admin/technical-expertise', icon: BrainIcon },
-];
+// const technicalExpertiseItems = [
+//   { label: 'Tech Expertise', href: '/admin/technical-expertise', icon: BrainIcon },
+// ];
 
 const blogItems = [
   { label: 'Categories', href: '/admin/blog/categories', icon: BookIcon },
@@ -116,10 +116,10 @@ export default function Sidebar({ adminName = 'Admin', adminEmail = '' }: Sideba
           <div className={styles.navDivider} />
           <NavSection label="Portfolio" items={portfolioItems} />
           <div className={styles.navDivider} />
-          <NavSection label="Services" items={serviceItems} />
+          {/* <NavSection label="Services" items={serviceItems} />
           <div className={styles.navDivider} />
           <NavSection label="Tech Expertise" items={technicalExpertiseItems} />
-          <div className={styles.navDivider} />
+          <div className={styles.navDivider} /> */}
           <NavSection label="Case Studies" items={caseStudyItems} />
           <div className={styles.navDivider} />
           <NavSection label="Blog" items={blogItems} />
