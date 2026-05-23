@@ -77,7 +77,7 @@ const ContactInfo = () => {
   );
 };
 
-// ==================== ContactForm Component ====================
+// ==================== ContactForm Component ===============
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     firstName: '',
