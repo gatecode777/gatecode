@@ -7,7 +7,7 @@ import ComingSoon from '@/components/frontend/ComingSoon/ComingSoon';
 
 const PER_PAGE = 3;
 
-function ProjectCards({ projects, categories, activeCategory, setActiveCategory }) {
+function ProjectCards({ projects, categories, activeCategory, setActiveCategory, isLoading }) {
   const [page, setPage] = useState(1);
 
   // Reset to page 1 whenever category changes
@@ -23,7 +23,23 @@ function ProjectCards({ projects, categories, activeCategory, setActiveCategory 
       <div className="project-cards__container">
 
         {/* No projects → Coming Soon */}
-        {isEmpty ? (
+        {isLoading ? (
+          <div className="project-cards__grid">
+            {Array.from({ length: 3 }).map((_, index) => (
+              <article key={index} className="project-card project-card--skeleton">
+                <div className="project-card__image-wrapper">
+                  <div className="project-card__skeleton project-card__skeleton--image" />
+                </div>
+                <div className="project-card__content">
+                  <div className="project-card__skeleton project-card__skeleton--title" />
+                  <div className="project-card__skeleton project-card__skeleton--text" />
+                  <div className="project-card__skeleton project-card__skeleton--text project-card__skeleton--text-short" />
+                  <div className="project-card__skeleton project-card__skeleton--button" />
+                </div>
+              </article>
+            ))}
+          </div>
+        ) : isEmpty ? (
           <ComingSoon category={activeCategory?.name} />
         ) : (
           <div className="project-cards__grid">

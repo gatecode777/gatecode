@@ -1,10 +1,6 @@
 // @ts-nocheck
-'use client';
 
-import { useEffect, useState } from 'react';
-import { useParams, useRouter } from 'next/navigation';
-
-// Each detail section imports its own CSS — import all of them
+import { notFound } from 'next/navigation';
 import '@/components/frontend/CaseStudyDetails/CaseStudy.css';
 import '@/components/frontend/CaseStudyDetails/Description.css';
 import '@/components/frontend/CaseStudyDetails/ChallengeSolution.css';
@@ -12,13 +8,16 @@ import '@/components/frontend/CaseStudyDetails/FeaturesResults.css';
 import '@/components/frontend/CaseStudyDetails/Technologies.css';
 import '@/components/frontend/CaseStudyDetails/Conclusion.css';
 import ProjectBanner from '@/components/frontend/ProjectBanner/ProjectBanner';
+import RichHtml from '@/components/frontend/RichHtml';
+import connectDB from '@/lib/db';
+import CaseStudyModel from '@/models/CaseStudy';
 
-/* ═══════════════════════════════════════════════════════════════════════════
-   SECTION RENDERERS — identical JSX/class structure to the original static
-   components, so ALL existing CSS works with zero changes.
-═══════════════════════════════════════════════════════════════════════════ */
+export const dynamic = 'force-dynamic';
 
-// ── hero block → CaseStudy.tsx layout ────────────────────────────────────
+function plain(data: any) {
+  return JSON.parse(JSON.stringify(data));
+}
+
 function SectionHero({ data, title, shortDesc }) {
   const heading = data?.title || title || '';
   const sub     = data?.subtitle || shortDesc || '';
@@ -46,24 +45,20 @@ function SectionHero({ data, title, shortDesc }) {
   );
 }
 
-// ── text block → Description.tsx layout ──────────────────────────────────
 function SectionText({ data }) {
   const body = data?.body || '';
-  console.log(data.body);
   return (
     <div className="desc">
       {data?.title && <h2 style={{ marginBottom: 12 }}>{data.title}</h2>}
-      <p className="desc_p" dangerouslySetInnerHTML={{ __html: body }} />
+      <RichHtml html={body} className="desc_p" />
     </div>
   );
 }
 
-// ── challenge + solution blocks → ChallengeSolution.tsx layout ───────────
 function SectionChallengeSolution({ challengeBlock, solutionBlock }) {
   const ch = challengeBlock?.data;
   const sl = solutionBlock?.data;
   if (!ch && !sl) return null;
-  // Side image: use solution block's image if present
   const sideImg = sl?.image || sl?.imagePosition !== 'none' ? (sl?.image || '') : '';
   return (
     <section className="cs-section">
@@ -72,13 +67,13 @@ function SectionChallengeSolution({ challengeBlock, solutionBlock }) {
           {ch && (
             <div className="cs-block">
               <h2>{ch.title || 'CHALLENGE'}</h2>
-              <p dangerouslySetInnerHTML={{ __html: ch.body || '' }} />
+              <RichHtml html={ch.body || ''} />
             </div>
           )}
           {sl && (
             <div className="cs-block">
               <h2>{sl.title || 'SOLUTION'}</h2>
-              <p dangerouslySetInnerHTML={{ __html: sl.body || '' }} />
+              <RichHtml html={sl.body || ''} />
             </div>
           )}
         </div>
@@ -92,12 +87,10 @@ function SectionChallengeSolution({ challengeBlock, solutionBlock }) {
   );
 }
 
-// ── keyFeatures + results blocks → FeaturesResults.tsx layout ────────────
 function SectionFeaturesResults({ featuresBlock, resultsBlock, imageUrl }) {
   const kf = featuresBlock?.data;
   const rs = resultsBlock?.data;
   if (!kf && !rs) return null;
-  // items saved as [{id, text}] objects from BulletListEditor
   const kfItems = (kf?.items || []).map(i => typeof i === 'string' ? i : i.text || '').filter(Boolean);
   const rsItems = (rs?.items || []).map(i => typeof i === 'string' ? i : i.text || '').filter(Boolean);
   return (
@@ -131,7 +124,6 @@ function SectionFeaturesResults({ featuresBlock, resultsBlock, imageUrl }) {
   );
 }
 
-// ── technologies block → Technologies.tsx layout ─────────────────────────
 function SectionTechnologies({ data }) {
   const items = data?.items || [];
   if (!items.length) return null;
@@ -156,7 +148,6 @@ function SectionTechnologies({ data }) {
   );
 }
 
-// ── conclusion / final text block → Conclusion.tsx layout ────────────────
 function SectionConclusion({ data }) {
   const body = data?.body || '';
   if (!body) return null;
@@ -164,13 +155,12 @@ function SectionConclusion({ data }) {
     <section className="conclusion-section">
       <div className="conclusion-container">
         <h2 className="conclusion-title">{data?.title || 'CONCLUSION'}</h2>
-        <p className="conclusion-text" dangerouslySetInnerHTML={{ __html: body }} />
+        <RichHtml html={body} className="conclusion-text" />
       </div>
     </section>
   );
 }
 
-// ── image block ───────────────────────────────────────────────────────────
 function SectionImage({ data }) {
   if (!data?.url) return null;
   return (
@@ -181,7 +171,6 @@ function SectionImage({ data }) {
   );
 }
 
-// ── twoColumn block ───────────────────────────────────────────────────────
 function SectionTwoColumn({ data }) {
   if (!data?.leftBody && !data?.rightBody && !data?.rightImage) return null;
   return (
@@ -189,11 +178,11 @@ function SectionTwoColumn({ data }) {
       <div className="cs-container">
         <div className="cs-text">
           <div className="cs-block">
-            <p dangerouslySetInnerHTML={{ __html: data.leftBody || '' }} />
+            <RichHtml html={data.leftBody || ''} />
           </div>
           {data.rightBody && (
             <div className="cs-block">
-              <p dangerouslySetInnerHTML={{ __html: data.rightBody }} />
+              <RichHtml html={data.rightBody} />
             </div>
           )}
         </div>
@@ -207,11 +196,6 @@ function SectionTwoColumn({ data }) {
   );
 }
 
-/* ═══════════════════════════════════════════════════════════════════════════
-   SMART BLOCK RENDERER
-   Groups challenge+solution and keyFeatures+results into their paired
-   section components, just like the original static page structure.
-═══════════════════════════════════════════════════════════════════════════ */
 function renderBlocks(blocks, study) {
   const sorted = [...blocks].sort((a, b) => a.order - b.order)
     .filter(b => b.isVisible);
@@ -219,7 +203,6 @@ function renderBlocks(blocks, study) {
   const sections = [];
   const consumed = new Set();
 
-  // First pass: find and pair challenge+solution and keyFeatures+results
   for (let i = 0; i < sorted.length; i++) {
     if (consumed.has(i)) continue;
     const block = sorted[i];
@@ -233,7 +216,6 @@ function renderBlocks(blocks, study) {
     }
 
     if (block.type === 'challenge') {
-      // Find the next solution block
       const solutionIdx = sorted.findIndex((b, j) => j > i && b.type === 'solution');
       const solutionBlock = solutionIdx !== -1 ? sorted[solutionIdx] : null;
       consumed.add(i);
@@ -245,7 +227,6 @@ function renderBlocks(blocks, study) {
     }
 
     if (block.type === 'solution' && !consumed.has(i)) {
-      // Orphan solution block (no preceding challenge)
       consumed.add(i);
       sections.push(
         <SectionChallengeSolution key={i} challengeBlock={null} solutionBlock={block} />
@@ -254,10 +235,8 @@ function renderBlocks(blocks, study) {
     }
 
     if (block.type === 'keyFeatures') {
-      // Find the next results block
       const resultsIdx = sorted.findIndex((b, j) => j > i && b.type === 'results');
       const resultsBlock = resultsIdx !== -1 ? sorted[resultsIdx] : null;
-      // Find an image block near these for the side photo
       const imgIdx = sorted.findIndex((b, j) => j > i && b.type === 'image' && !consumed.has(j));
       const imgBlock = imgIdx !== -1 ? sorted[imgIdx] : null;
       consumed.add(i);
@@ -275,7 +254,6 @@ function renderBlocks(blocks, study) {
     }
 
     if (block.type === 'results' && !consumed.has(i)) {
-      // Orphan results block
       consumed.add(i);
       sections.push(
         <SectionFeaturesResults key={i} featuresBlock={null} resultsBlock={block} imageUrl={'/images/homepage.jpeg'} />
@@ -289,7 +267,6 @@ function renderBlocks(blocks, study) {
       continue;
     }
 
-    // text block — detect if it's a conclusion by title
     if (block.type === 'text') {
       consumed.add(i);
       const title = (block.data?.title || '').toUpperCase();
@@ -323,55 +300,24 @@ function renderBlocks(blocks, study) {
   return sections;
 }
 
-/* ═══════════════════════════════════════════════════════════════════════════
-   MAIN PAGE
-═══════════════════════════════════════════════════════════════════════════ */
-export default function CaseStudyDetailPage() {
-  const params   = useParams();
-  const router   = useRouter();
-  const slug     = String(params?.slug ?? '');
+export default async function CaseStudyDetailPage({ params }) {
+  const { slug } = await params;
 
-  const [study, setStudy]   = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [notFound, setNotFound] = useState(false);
+  await connectDB();
 
-  useEffect(() => {
-    if (!slug) return;
-    window.scrollTo(0, 0);
-    fetch(`/api/case-studies/${slug}`)
-      .then(r => r.json())
-      .then(d => {
-        if (d.success && d.data) setStudy(d.data);
-        else setNotFound(true);
-      })
-      .catch(() => setNotFound(true))
-      .finally(() => setLoading(false));
-  }, [slug]);
+  const study = await CaseStudyModel.findOne({ slug, isActive: true }).lean();
 
-  if (loading) return (
-    <div style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#666', fontSize: 16 }}>
-      Loading…
-    </div>
-  );
-
-  if (notFound) return (
-    <div style={{ minHeight: '60vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 16 }}>
-      <h2 style={{ color: '#1a1a1a' }}>Case Study Not Found</h2>
-      <p style={{ color: '#888' }}>This case study doesn&apos;t exist or has been removed.</p>
-      <button onClick={() => router.push('/case-study')} style={{ background: '#0fb9b1', color: '#fff', border: 'none', padding: '10px 24px', borderRadius: 6, cursor: 'pointer', fontWeight: 600 }}>
-        Back to Case Studies
-      </button>
-    </div>
-  );
+  if (!study) {
+    notFound();
+  }
 
   const blocks = study.contentBlocks || [];
 
   return (
     <>
       {blocks.length > 0
-        ? renderBlocks(blocks, study)
+        ? renderBlocks(blocks, plain(study))
         : (
-          // No blocks yet — render static-style placeholder using real data
           <>
             <section className="case-study">
               <div className="case-container">

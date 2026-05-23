@@ -118,7 +118,7 @@ export interface CaseStudyTech   { _id?: string; name: string; icon: string | nu
 export interface CaseStudyButton { _id?: string; label: string; url: string; openInNewTab: boolean; isActive: boolean; order: number; }
 
 export interface CaseStudyDTO {
-  _id: string; title: string; slug: string; shortDesc: string;
+  _id: string; title: string; slug: string; shortDesc: string; description: string;
   thumbnail: string; isFeatured: boolean; isActive: boolean; order: number;
   sections: SectionVisibility;
   heroTitle: string; heroSubtitle: string; heroBanner: string;
@@ -132,7 +132,7 @@ export interface CaseStudyDTO {
 }
 
 export interface CaseStudyListItemDTO {
-  _id: string; title: string; slug: string; shortDesc: string;
+  _id: string; title: string; slug: string; shortDesc: string; description: string;
   thumbnail: string; isFeatured: boolean; isActive: boolean;
   order: number; createdAt: string;
 }

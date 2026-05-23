@@ -4,7 +4,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import './Portfolio.css';
 
-function Portfolio({ slides }) {
+function Portfolio({ slides, isLoading }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slideConfig, setSlideConfig] = useState({ cardWidth: 0, gap: 16, visibleCards: 3 });
   const wrapperRef = useRef(null);
@@ -81,25 +81,37 @@ function Portfolio({ slides }) {
 
           <div className="portfolio__cards-wrapper" ref={wrapperRef}>
             <div className="portfolio__cards-clipper" style={{ width: `${clipperWidth}px` }}>
-              <div
-                className="portfolio__cards-track"
-                style={{ transform: `translateX(-${offset}px)`, gap: `${gap}px` }}
-              >
-                {extendedItems.map((item, index) => (
-                  <article
-                    key={`${item.id}-${index}`}
-                    className="portfolio__card"
-                    style={{ width: `${cardWidth}px`, minWidth: `${cardWidth}px` }}
-                  >
-                    <img
-                      src={item.image}
-                      alt={item.altText}
-                      className="portfolio__card-image"
-                      loading="lazy"
+              {isLoading ? (
+                <div className="portfolio__cards-track" style={{ gap: `${gap}px` }}>
+                  {Array.from({ length: visibleCards || 3 }).map((_, index) => (
+                    <article
+                      key={index}
+                      className="portfolio__card portfolio__card--skeleton"
+                      style={{ width: `${cardWidth}px`, minWidth: `${cardWidth}px` }}
                     />
-                  </article>
-                ))}
-              </div>
+                  ))}
+                </div>
+              ) : (
+                <div
+                  className="portfolio__cards-track"
+                  style={{ transform: `translateX(-${offset}px)`, gap: `${gap}px` }}
+                >
+                  {extendedItems.map((item, index) => (
+                    <article
+                      key={`${item.id}-${index}`}
+                      className="portfolio__card"
+                      style={{ width: `${cardWidth}px`, minWidth: `${cardWidth}px` }}
+                    >
+                      <img
+                        src={item.image}
+                        alt={item.altText}
+                        className="portfolio__card-image"
+                        loading="lazy"
+                      />
+                    </article>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
 

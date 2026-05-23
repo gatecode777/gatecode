@@ -38,7 +38,7 @@ function validateBlock(block: { type: BlockType; data: BlockData }, i: number): 
 
 // ── Main validator ─────────────────────────────────────────────────────────
 export interface CaseStudyInput {
-  title?: string; slug?: string; shortDesc?: string; thumbnail?: string;
+  title?: string; slug?: string; shortDesc?: string; description?: string; thumbnail?: string;
   isFeatured?: boolean; isActive?: boolean; order?: number;
   contentBlocks?: Array<{ type: BlockType; order: number; isVisible: boolean; data: BlockData }>;
 }
@@ -61,6 +61,8 @@ export function validateCaseStudyInput(data: Partial<CaseStudyInput>, isUpdate =
   }
   if (data.shortDesc !== undefined && sanitizeText(data.shortDesc).length > 500)
     errors.shortDesc = 'Short description max 500 chars';
+  if (data.description !== undefined && sanitizeText(data.description).length > 2000)
+    errors.description = 'Description max 2000 chars';
 
   if (data.contentBlocks !== undefined) {
     if (!Array.isArray(data.contentBlocks)) {

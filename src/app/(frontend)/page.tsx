@@ -12,10 +12,24 @@ import CollaborationClients from '@/components/frontend/CollaborationClients/Col
 import ProjectBanner from '@/components/frontend/ProjectBanner/ProjectBanner';
 import TSlider from '@/components/frontend/TSlider/TSlider';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import connectDB from '@/lib/db';
+import TeamMember from '@/models/TeamMember';
 
-export const metadata: Metadata = { title: 'Home' };
+export const dynamic = 'force-dynamic';
 
-export default function Home() {
+export const metadata: Metadata = { title: 'Gatecode Technologies' };
+
+function plain(data: any) {
+  return JSON.parse(JSON.stringify(data));
+}
+
+export default async function Home() {
+  await connectDB();
+
+  const teamMembers = await TeamMember.find({ isActive: true })
+    .sort({ order: 1 })
+    .lean();
+
   return (
     <>
       <Hero />
@@ -30,7 +44,7 @@ export default function Home() {
       <VisionMission />
       <CollaborationClients />
       <ProjectBanner />
-      <TSlider />
+      <TSlider members={plain(teamMembers)} />
       <ContactSection />
     </>
   );

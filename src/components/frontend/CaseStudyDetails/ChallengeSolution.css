@@ -5,7 +5,7 @@
 }
 
 
-.cs-container {
+.cs-section .cs-container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0px 40px;
@@ -41,6 +41,21 @@
   color: #4a4a4a;
 }
 
+.cs-block .rich-html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: 2%;
+  color: #4a4a4a;
+}
+
+.cs-block .rich-html p {
+  font: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+}
+
 
 .cs-image {
   flex: 1;
@@ -57,13 +72,17 @@
 
 
 @media (max-width: 768px) {
-  .cs-container {
+  .cs-section .cs-container {
     flex-direction: column;
     text-align: center;
     padding: 0px;
   }
 
   .cs-block p {
+    max-width: 100%;
+  }
+
+  .cs-block .rich-html {
     max-width: 100%;
   }
 
@@ -83,6 +102,10 @@
   }
 
   .cs-block p {
+    font-size: 14px;
+  }
+
+  .cs-block .rich-html {
     font-size: 14px;
   }
 }

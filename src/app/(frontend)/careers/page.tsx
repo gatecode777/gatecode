@@ -159,8 +159,6 @@ const Careers = () => {
           ))}
         </div>
       </section>
-
-      <ProjectBanner />
     </>
   );
 };

@@ -7,7 +7,7 @@ export async function GET() {
     await connectDB();
     const studies = await CaseStudy.find({ isActive: true })
       .sort({ order: 1, createdAt: -1 })
-      .select('title slug shortDesc thumbnail isFeatured order')
+      .select('title slug shortDesc description thumbnail isFeatured order')
       .lean();
     return NextResponse.json({ success: true, data: studies });
   } catch (e) {

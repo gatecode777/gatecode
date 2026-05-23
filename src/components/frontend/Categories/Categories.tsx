@@ -3,7 +3,7 @@
 
 import './Categories.css';
 
-function Categories({ categories, activeCategory, setActiveCategory }) {
+function Categories({ categories, activeCategory, setActiveCategory, isLoading }) {
   // Use live categories or fall back to static list
   const cats = (categories && categories.length > 0)
     ? categories
@@ -20,7 +20,9 @@ function Categories({ categories, activeCategory, setActiveCategory }) {
     <section className="categories" id="categories-section">
       <div className="categories__container">
         <div className="categories__list">
-          {cats.map((cat) => (
+          {isLoading ? Array.from({ length: 6 }).map((_, index) => (
+            <span key={index} className="categories__btn categories__btn--skeleton" />
+          )) : cats.map((cat) => (
             <button
               key={cat._id}
               className={`categories__btn ${activeCategory?._id === cat._id ? 'categories__btn--active' : ''}`}

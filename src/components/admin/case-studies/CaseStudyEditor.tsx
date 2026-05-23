@@ -80,9 +80,9 @@ function BlockRouter({ type, data, onChange }: { type:BlockType; data:Record<str
 }
 
 interface Block { id:string; type:BlockType; isVisible:boolean; collapsed:boolean; data:Record<string,unknown>; }
-interface Form  { title:string; slug:string; shortDesc:string; thumbnail:string; isFeatured:boolean; isActive:boolean; order:string; blocks:Block[]; }
+interface Form  { title:string; slug:string; shortDesc:string; description:string; thumbnail:string; isFeatured:boolean; isActive:boolean; order:string; blocks:Block[]; }
 
-const EMPTY: Form = { title:'', slug:'', shortDesc:'', thumbnail:'', isFeatured:false, isActive:true, order:'0', blocks:[] };
+const EMPTY: Form = { title:'', slug:'', shortDesc:'', description:'', thumbnail:'', isFeatured:false, isActive:true, order:'0', blocks:[] };
 
 function EditorInner({ studyId }: { studyId?:string }) {
   const router = useRouter();
@@ -108,7 +108,7 @@ function EditorInner({ studyId }: { studyId?:string }) {
       if (d.success) {
         const cs = d.data;
         setForm({
-          title:cs.title, slug:cs.slug, shortDesc:cs.shortDesc??'',
+          title:cs.title, slug:cs.slug, shortDesc:cs.shortDesc??'', description:cs.description??'',
           thumbnail:cs.thumbnail, isFeatured:cs.isFeatured, isActive:cs.isActive, order:String(cs.order),
           blocks:(cs.contentBlocks??[]).map((b: { type:BlockType; isVisible:boolean; data:Record<string,unknown> })=>({ id:uid(), type:b.type, isVisible:b.isVisible??true, collapsed:false, data:b.data??{} })),
         });
@@ -152,7 +152,7 @@ function EditorInner({ studyId }: { studyId?:string }) {
     if(!validate()){ toast('warning','Fix validation errors first'); return; }
     setSaving(true);
     const payload = {
-      title:form.title, slug:form.slug, shortDesc:form.shortDesc, thumbnail:form.thumbnail,
+      title:form.title, slug:form.slug, shortDesc:form.shortDesc, description:form.description, thumbnail:form.thumbnail,
       isFeatured:form.isFeatured, isActive:form.isActive, order:parseInt(form.order)||0,
       contentBlocks:form.blocks.map((b,i)=>({ type:b.type, order:i, isVisible:b.isVisible, data:b.data })),
     };
@@ -179,7 +179,29 @@ function EditorInner({ studyId }: { studyId?:string }) {
 
   if(loading) return (
     <div className={e.editorLayout}><Sidebar />
-      <div className={e.editorMain} style={{display:'flex',alignItems:'center',justifyContent:'center',fontSize:14,color:'var(--color-text-muted)'}}>Loading…</div>
+      <div className={e.editorMain}>
+        <div className={e.editorSkeletonBody}>
+          <div className={e.editorSkeletonLeft}>
+            <div className={e.editorSkeletonCard}>
+              <div className={`${e.editorSkeletonLine} ${e.editorSkeletonTitle}`} />
+              <div className={`${e.editorSkeletonLine} ${e.editorSkeletonInput}`} />
+              <div className={`${e.editorSkeletonLine} ${e.editorSkeletonInput}`} />
+              <div className={`${e.editorSkeletonLine} ${e.editorSkeletonTextarea}`} />
+              <div className={`${e.editorSkeletonLine} ${e.editorSkeletonTextarea}`} />
+            </div>
+            {Array.from({ length: 4 }).map((_, i) => <div key={i} className={`${e.editorSkeletonLine} ${e.editorSkeletonBlock}`} />)}
+          </div>
+          <div className={e.editorSkeletonRight}>
+            {Array.from({ length: 3 }).map((_, i) => (
+              <div key={i} className={e.editorSkeletonCard}>
+                <div className={`${e.editorSkeletonLine} ${e.editorSkeletonTitle}`} />
+                <div className={`${e.editorSkeletonLine} ${e.editorSkeletonInput}`} />
+                <div className={`${e.editorSkeletonLine} ${e.editorSkeletonInput} ${e.editorSkeletonSmall}`} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 
@@ -220,6 +242,10 @@ function EditorInner({ studyId }: { studyId?:string }) {
                 <div className={e.fGroup}>
                   <label className={e.fLabel}>Short Description <span className={e.fHint}>{form.shortDesc.length}/500</span></label>
                   <textarea className={e.fTextarea} value={form.shortDesc} onChange={ev=>set('shortDesc',ev.target.value)} placeholder="Brief summary for listing page…" rows={2} maxLength={500}/>
+                </div>
+                <div className={e.fGroup}>
+                  <label className={e.fLabel}>Description <span className={e.fHint}>{form.description.length}/2000</span></label>
+                  <textarea className={e.fTextarea} value={form.description} onChange={ev=>set('description',ev.target.value)} placeholder="Detailed paragraph for listing page…" rows={4} maxLength={2000}/>
                 </div>
                 <div className={e.fGroup}>
                   <label className={e.fLabel}>Listing Thumbnail <span className={e.fRequired}>*</span></label>

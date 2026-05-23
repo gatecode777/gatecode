@@ -11,7 +11,7 @@ export async function GET(req: NextRequest, { params }: Ctx) {
     const post = await BlogPost.findOneAndUpdate(
       { slug, status:'published', isActive:true },
       { $inc:{ viewCount:1 } },
-      { new:true }
+      { returnDocument:'after' }
     ).populate('categoryId','name slug').lean();
     if (!post) return NextResponse.json({ success:false, message:'Not found' }, { status:404 });
     return NextResponse.json({ success:true, data:post });

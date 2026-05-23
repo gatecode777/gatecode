@@ -75,6 +75,7 @@ export interface ICaseStudy extends Document {
   title:       string;
   slug:        string;
   shortDesc:   string;
+  description: string;
   thumbnail:   string;
   isFeatured:  boolean;
   isActive:    boolean;
@@ -89,6 +90,7 @@ const caseStudySchema = new Schema<ICaseStudy>(
     title:     { type: String, required: [true,'Title is required'], trim: true, maxlength: [200,'Title max 200 chars'] },
     slug:      { type: String, required: [true,'Slug is required'], unique: true, lowercase: true, trim: true, match:[/^[a-z0-9-]+$/,'Slug: lowercase, numbers, hyphens only'], index: true },
     shortDesc: { type: String, trim: true, maxlength:[500,'Short desc max 500 chars'], default:'' },
+    description: { type: String, trim: true, maxlength:[2000,'Description max 2000 chars'], default:'' },
     thumbnail: { type: String, required:[true,'Thumbnail is required'] },
     isFeatured:{ type: Boolean, default: false, index: true },
     isActive:  { type: Boolean, default: true,  index: true },
@@ -100,6 +102,12 @@ const caseStudySchema = new Schema<ICaseStudy>(
 
 caseStudySchema.index({ isActive:1, order:1 });
 caseStudySchema.index({ isFeatured:1, isActive:1 });
+
+const existingCaseStudy = mongoose.models['CaseStudy'] as Model<ICaseStudy> | undefined;
+
+if (existingCaseStudy && !existingCaseStudy.schema.path('description')) {
+  mongoose.deleteModel('CaseStudy');
+}
 
 const CaseStudy: Model<ICaseStudy> =
   (mongoose.models['CaseStudy'] as Model<ICaseStudy>) ??

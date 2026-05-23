@@ -1,61 +1,39 @@
 // @ts-nocheck
-'use client';
 
-import { useState, useEffect } from 'react';
 import PortfolioHero from '@/components/frontend/PortfolioHero/PortfolioHero';
 import PortfolioSlider from '@/components/frontend/Portfolio/Portfolio';
-import Categories from '@/components/frontend/Categories/Categories';
-import ProjectCards from '@/components/frontend/ProjectCards/ProjectCards';
+import PortfolioClient from './PortfolioClient';
 import ProjectBanner from '@/components/frontend/ProjectBanner/ProjectBanner';
+import connectDB from '@/lib/db';
+import PortfolioSliderModel from '@/models/PortfolioSlider';
+import PortfolioCategory from '@/models/PortfolioCategory';
+import PortfolioProject from '@/models/PortfolioProject';
 
-export default function Portfolio() {
-  const [slides, setSlides]           = useState([]);
-  const [categories, setCategories]   = useState([]);
-  const [projects, setProjects]       = useState([]);
-  const [activeCategory, setActiveCategory] = useState(null);
+export const dynamic = 'force-dynamic';
 
-  // Fetch slider + categories on mount
-  useEffect(() => {
-    fetch('/api/portfolio/slider')
-      .then(r => r.json())
-      .then(d => { if (d.success) setSlides(d.data); })
-      .catch(() => {});
+function plain(data: any) {
+  return JSON.parse(JSON.stringify(data));
+}
 
-    fetch('/api/portfolio/categories')
-      .then(r => r.json())
-      .then(d => {
-        if (d.success && d.data.length > 0) {
-          setCategories(d.data);
-          setActiveCategory(d.data[0]); // select first category by default
-        }
-      })
-      .catch(() => {});
-  }, []);
+export default async function Portfolio() {
+  await connectDB();
 
-  // Fetch projects whenever active category changes
-  useEffect(() => {
-    if (!activeCategory) return;
-    const qs = activeCategory._id ? `?categoryId=${activeCategory._id}` : '';
-    fetch(`/api/portfolio/projects${qs}`)
-      .then(r => r.json())
-      .then(d => { if (d.success) setProjects(d.data); })
-      .catch(() => {});
-  }, [activeCategory]);
+  const [slides, categories, projects] = await Promise.all([
+    PortfolioSliderModel.find({ isActive: true }).sort({ order: 1 }).lean(),
+    PortfolioCategory.find({ isActive: true }).sort({ order: 1, name: 1 }).lean(),
+    PortfolioProject.find({ isActive: true })
+      .populate('categoryId', 'name slug')
+      .sort({ order: 1 })
+      .lean(),
+  ]);
 
   return (
     <>
       <PortfolioHero />
-      <PortfolioSlider slides={slides} />
-      <Categories
-        categories={categories}
-        activeCategory={activeCategory}
-        setActiveCategory={setActiveCategory}
-      />
-      <ProjectCards
-        projects={projects}
-        categories={categories}
-        activeCategory={activeCategory}
-        setActiveCategory={setActiveCategory}
+      <PortfolioSlider slides={plain(slides)} isLoading={false} />
+      <PortfolioClient
+        categories={plain(categories)}
+        projects={plain(projects)}
       />
       <ProjectBanner />
     </>

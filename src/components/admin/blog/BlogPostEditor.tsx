@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import Sidebar from '@/components/admin/Sidebar';
 import s from '@/components/admin/portfolio/styles/shared.module.css';
-import e from '@/components/admin/services/styles/editor.module.css';
+import e from '@/components/admin/case-studies/styles/editor.module.css';
 
 // ── Icons ──────────────────────────────────────────────────────────────────
 const PlusIcon   = () => <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>;
@@ -333,7 +333,28 @@ export default function BlogPostEditor({ postId }: Props) {
   if (loading) return (
     <div className={e.editorLayout}>
       <Sidebar />
-      <div className={e.editorMain} style={{ display:'flex', alignItems:'center', justifyContent:'center', fontSize:14, color:'var(--color-text-muted)' }}>Loading…</div>
+      <div className={e.editorMain}>
+        <div className={e.editorSkeletonBody}>
+          <div className={e.editorSkeletonLeft}>
+            <div className={e.editorSkeletonCard}>
+              <div className={`${e.editorSkeletonLine} ${e.editorSkeletonTitle}`} />
+              <div className={`${e.editorSkeletonLine} ${e.editorSkeletonInput}`} />
+              <div className={`${e.editorSkeletonLine} ${e.editorSkeletonInput}`} />
+              <div className={`${e.editorSkeletonLine} ${e.editorSkeletonTextarea}`} />
+            </div>
+            {Array.from({ length: 4 }).map((_, i) => <div key={i} className={`${e.editorSkeletonLine} ${e.editorSkeletonBlock}`} />)}
+          </div>
+          <div className={e.editorSkeletonRight}>
+            {Array.from({ length: 3 }).map((_, i) => (
+              <div key={i} className={e.editorSkeletonCard}>
+                <div className={`${e.editorSkeletonLine} ${e.editorSkeletonTitle}`} />
+                <div className={`${e.editorSkeletonLine} ${e.editorSkeletonInput}`} />
+                <div className={`${e.editorSkeletonLine} ${e.editorSkeletonInput} ${e.editorSkeletonSmall}`} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 

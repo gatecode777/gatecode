@@ -16,12 +16,13 @@ const FALLBACK_MEMBERS = [
 const INTERVAL = 2500;
 const TRANSITION = 600;
 
-const TSlider = () => {
+const TSlider = ({ members: propMembers }: { members?: any[] }) => {
   const [MEMBERS, setMEMBERS] = useState([]);
   const [items, setItems] = useState([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [useTransition, setUseTransition] = useState(true);
+  const [loading, setLoading] = useState(true);
   const autoPlayRef = useRef(null);
 
   const [dimensions, setDimensions] = useState({ cardWidth: 200, cardGap: 10 });
@@ -30,12 +31,16 @@ const TSlider = () => {
     setMEMBERS(members);
     setItems([...members, ...members, ...members]);
     setActiveIndex(members.length);
+    setLoading(false);
   }, []);
 
-  // Fetch live members from API
   useEffect(() => {
-    const controller = new AbortController();
+    if (propMembers && propMembers.length >= 1) {
+      applyMembers(propMembers);
+      return;
+    }
 
+    const controller = new AbortController();
     fetch('/api/team-members', {
       cache: 'no-store',
       signal: controller.signal,
@@ -50,13 +55,12 @@ const TSlider = () => {
       })
       .catch(error => {
         if (error?.name !== 'AbortError') {
-          console.error('Failed to load team members', error);
           applyMembers(FALLBACK_MEMBERS);
         }
       });
 
     return () => controller.abort();
-  }, [applyMembers]);
+  }, [propMembers, applyMembers]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -116,14 +120,35 @@ const TSlider = () => {
         </button>
 
         <div className="tslider__cards-viewport">
-          <div
-            className="tslider__cards-strip"
-            style={{
-              transform: `translateX(calc(50% - ${activeIndex * stepWidth + dimensions.cardWidth / 2}px))`,
-              transition: useTransition ? `transform ${TRANSITION}ms cubic-bezier(0.4, 0, 0.2, 1)` : 'none'
-            }}
-          >
-            {items.map((member, idx) => {
+          {loading ? (
+            <div className="tslider__cards-strip tslider__cards-strip--skeleton">
+              {Array.from({ length: 5 }).map((_, idx) => (
+                <div
+                  key={idx}
+                  className={`tslider__card tslider__card--skeleton ${idx === 2 ? 'is-center' : ''}`}
+                  style={{
+                    width: `${dimensions.cardWidth}px`,
+                    margin: `0 ${dimensions.cardGap / 2}px`,
+                    opacity: idx === 2 ? 1 : 0.5,
+                    transform: `scale(${idx === 2 ? 1 : 0.9}) translateY(${idx === 2 ? 0 : 10}px)`,
+                  }}
+                >
+                  <div className="tslider__avatar tslider__skeleton-avatar" style={{ width: idx === 2 ? "150px" : "135px", height: idx === 2 ? "150px" : "135px" }} />
+                  <div className="tslider__skeleton-stars" />
+                  <div className="tslider__skeleton-name" />
+                  <div className="tslider__skeleton-role" />
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div
+              className="tslider__cards-strip"
+              style={{
+                transform: `translateX(calc(50% - ${activeIndex * stepWidth + dimensions.cardWidth / 2}px))`,
+                transition: useTransition ? `transform ${TRANSITION}ms cubic-bezier(0.4, 0, 0.2, 1)` : 'none'
+              }}
+            >
+              {items.map((member, idx) => {
               const isCenter = idx === activeIndex;
               const avatarSize = isCenter ? "150px" : "135px";
               const opacity = isCenter ? 1 : 0.5;
@@ -167,8 +192,9 @@ const TSlider = () => {
                   </div>
                 </div>
               );
-            })}
-          </div>
+              })}
+            </div>
+          )}
         </div>
 
         <button className="tslider__btn next" onClick={() => handleNavigate(1)}>

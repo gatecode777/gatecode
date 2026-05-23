@@ -3,6 +3,7 @@
 .portfolio {
   padding: 0 24px 80px;
   overflow: hidden;
+  background: linear-gradient(135deg, #0f9599 0%, #0b111d 50%, #0b1321 100%);
 }
 
 .portfolio__container {
@@ -105,6 +106,22 @@
 
 .portfolio__card:hover .portfolio__card-image {
   transform: scale(1.04);
+}
+
+.portfolio__card--skeleton {
+  cursor: default;
+  background: linear-gradient(90deg, #d9e4e6 25%, #f3f7f7 50%, #d9e4e6 75%);
+  background-size: 200% 100%;
+  animation: portfolioShimmer 1.4s ease-in-out infinite;
+}
+
+.portfolio__card--skeleton:hover {
+  transform: none;
+}
+
+@keyframes portfolioShimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
 }
 
 @media (max-width: 1024px) {

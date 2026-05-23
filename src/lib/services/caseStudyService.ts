@@ -20,10 +20,10 @@ export async function listCaseStudies(opts: CaseStudyListOptions): Promise<Pagin
   if (featured !== undefined) filter.isFeatured = featured;
   if (search?.trim()) {
     const rx = new RegExp(search.trim(), 'i');
-    filter.$or = [{ title: rx }, { slug: rx }, { shortDesc: rx }];
+    filter.$or = [{ title: rx }, { slug: rx }, { shortDesc: rx }, { description: rx }];
   }
   const skip = (page - 1) * limit;
-  const projection = 'title slug shortDesc thumbnail isFeatured isActive order createdAt updatedAt';
+  const projection = 'title slug shortDesc description thumbnail isFeatured isActive order createdAt updatedAt';
   const [data, total] = await Promise.all([
     CaseStudy.find(filter).select(projection).sort({ order:1, createdAt:-1 }).skip(skip).limit(limit).lean(),
     CaseStudy.countDocuments(filter),
@@ -59,6 +59,7 @@ export async function createCaseStudy(input: CaseStudyInput): Promise<ICaseStudy
   const order = input.order ?? ((last?.order ?? -1) + 1);
   const doc = await CaseStudy.create({
     title, slug, shortDesc: sanitizeText(input.shortDesc ?? ''),
+    description: sanitizeText(input.description ?? ''),
     thumbnail: input.thumbnail, isFeatured: input.isFeatured ?? false,
     isActive: input.isActive ?? true, order,
     contentBlocks: (input.contentBlocks ?? []).map((b, i) => ({ ...b, order: b.order ?? i })),
@@ -72,6 +73,7 @@ export async function updateCaseStudy(id: string, input: Partial<CaseStudyInput>
   const updates: Record<string,any> = {};
   if (input.title       !== undefined) updates.title       = sanitizeText(input.title);
   if (input.shortDesc   !== undefined) updates.shortDesc   = sanitizeText(input.shortDesc);
+  if (input.description !== undefined) updates.description = sanitizeText(input.description);
   if (input.thumbnail   !== undefined) updates.thumbnail   = input.thumbnail;
   if (input.isFeatured  !== undefined) updates.isFeatured  = input.isFeatured;
   if (input.isActive    !== undefined) updates.isActive    = input.isActive;

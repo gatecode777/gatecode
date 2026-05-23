@@ -2,7 +2,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import './CaseStudy.css';
 import ProjectBanner from '@/components/frontend/ProjectBanner/ProjectBanner';
 
@@ -12,25 +12,16 @@ const bottomBanner = "/images/case_study_bottom.jpg";
 
 // Fallback studies shown while loading or if DB empty
 const FALLBACK = [
-  { _id:'1', slug:'damru-by-namo', title:'DAMRU BY NAMO',   shortDesc:'Transforming a restaurant business with a seamless online ordering platform', thumbnail:'/images/damru_rect.jpg' },
-  { _id:'2', slug:'eco-bin',       title:'ECO-BIN',          shortDesc:'Environmental & Cleaning Services Website', thumbnail:'/images/ecobin_mockup.jpg' },
-  { _id:'3', slug:'cocofina-sugar',title:'COCOFINA SUGAR',   shortDesc:'Coconut Sugar E-Commerce Website', thumbnail:'/images/cocofina_mockup.jpg' },
+  { _id:'1', slug:'damru-by-namo', title:'DAMRU BY NAMO',   shortDesc:'Transforming a restaurant business with a seamless online ordering platform', description:'Damru By Namo is a modern restaurant aiming to build a strong digital presence and provide customers with a seamless online food ordering experience.', thumbnail:'/images/damru_rect.jpg' },
+  { _id:'2', slug:'eco-bin',       title:'ECO-BIN',          shortDesc:'Environmental & Cleaning Services Website', description:'Developed a professional and responsive corporate website for ECOBIN, focused on improving online presence, service visibility, and lead generation.', thumbnail:'/images/ecobin_mockup.jpg' },
+  { _id:'3', slug:'cocofina-sugar',title:'COCOFINA SUGAR',   shortDesc:'Coconut Sugar E-Commerce Website', description:'Created an e-commerce experience that presents Cocofina Sugar products clearly and helps customers browse and purchase with confidence.', thumbnail:'/images/cocofina_mockup.jpg' },
 ];
 
-function CaseStudy() {
+function CaseStudy({ studies: initialStudies }) {
   const router     = useRouter();
   const sectionRef = useRef(null);
-  const [studies, setStudies] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    fetch('/api/case-studies')
-      .then(r => r.json())
-      .then(d => { if (d.success && d.data?.length) setStudies(d.data); else setStudies(FALLBACK); })
-      .catch(() => setStudies(FALLBACK))
-      .finally(() => setLoading(false));
-  }, []);
+  const studies = initialStudies && initialStudies.length > 0 ? initialStudies : FALLBACK;
+  const loading = false;
 
   useEffect(() => {
     if (loading || !sectionRef.current) return;
@@ -47,6 +38,26 @@ function CaseStudy() {
     });
     return () => observer.disconnect();
   }, [loading, studies]);
+
+  const renderSkeletonCards = () => (
+    Array.from({ length: 3 }).map((_, index) => (
+      <div key={index} className="cs-card cs-card--skeleton animate-in">
+        <div className="cs-card__content">
+          <div className="cs-skeleton cs-skeleton--title" />
+          <div className="cs-skeleton cs-skeleton--subtitle" />
+          <div className="cs-skeleton cs-skeleton--line" />
+          <div className="cs-skeleton cs-skeleton--line cs-skeleton--line-short" />
+          <div className="cs-card__buttons">
+            <div className="cs-skeleton cs-skeleton--button" />
+            <div className="cs-skeleton cs-skeleton--button" />
+          </div>
+        </div>
+        <div className="cs-card__image-wrapper">
+          <div className="cs-skeleton cs-skeleton--image" />
+        </div>
+      </div>
+    ))
+  );
 
   return (
     <div className="cs">
@@ -67,7 +78,7 @@ function CaseStudy() {
       <div className="cs-main-container" ref={sectionRef}>
         <div className="cs-container">
           <div className="cs-card-stack">
-            {(loading ? FALLBACK : studies).map((study, index) => (
+            {loading ? renderSkeletonCards() : studies.map((study, index) => (
               <div
                 key={study._id || index}
                 className="cs-card"
@@ -76,7 +87,7 @@ function CaseStudy() {
                 <div className="cs-card__content">
                   <h2 className="cs-card__title">{study.title}</h2>
                   <h3 className="cs-card__subtitle">{study.shortDesc}</h3>
-                  <p className="cs-card__description">{study.shortDesc}</p>
+                  <p className="cs-card__description">{study.description || study.shortDesc}</p>
                   <div className="cs-card__buttons">
                     <button
                       className="cs-card__btn cs-card__btn--yellow"
