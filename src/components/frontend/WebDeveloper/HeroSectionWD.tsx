@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import "./HeroSectionWD.css";
 
 const HeroSectionWD = () => {
@@ -26,9 +27,9 @@ const HeroSectionWD = () => {
             online.
           </p>
 
-          <button className="wd-hero-btn">
+          <Link href="/contact" className="wd-hero-btn">
             Get Free Consultation
-          </button>
+          </Link>
         </div>
 
         <div className="wd-hero-right">

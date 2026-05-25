@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
 import TSlider from '@/components/frontend/TSlider/TSlider';
 
@@ -34,9 +35,9 @@ const HeroSectionWD = () => {
                         boost engagement, and drive business growth.
                     </p>
 
-                    <button className="wd-hero-btn">
+                    <Link href="/contact" className="wd-hero-btn">
                         Get Free Consultation
-                    </button>
+                    </Link>
                 </div>
 
                 <div className="wd-hero-right">

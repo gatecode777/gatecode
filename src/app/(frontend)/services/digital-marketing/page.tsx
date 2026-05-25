@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
@@ -23,9 +24,9 @@ const DigitalHero = () => {
             audiences, and drive measurable growth through result-driven
             digital marketing strategies.
           </p>
-          <button className="dm-cta-button">
+          <Link href="/contact" className="dm-cta-button">
             Get Free Consultation
-          </button>
+          </Link>
         </div>
       </div>
     </section>

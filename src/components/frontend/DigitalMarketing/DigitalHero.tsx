@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 
 const DigitalHero = () => {
   return (
@@ -17,9 +18,9 @@ const DigitalHero = () => {
             audiences, and drive measurable growth through result-driven
             digital marketing strategies.
           </p>
-          <button className="dm-cta-button">
+          <Link href="/contact" className="dm-cta-button">
             Get Free Consultation
-          </button>
+          </Link>
         </div>
       </div>
     </section>

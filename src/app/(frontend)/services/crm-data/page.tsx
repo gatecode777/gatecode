@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
@@ -22,9 +23,9 @@ const DigitalHero = () => {
             Organize, manage, and optimize your customer data for better relationships, smarter decisions,<br />
             and business growth.
           </p>
-          <button className="dm-cta-button">
+          <Link href="/contact" className="dm-cta-button">
             Get Free Consultation
-          </button>
+          </Link>
         </div>
       </div>
     </section>
