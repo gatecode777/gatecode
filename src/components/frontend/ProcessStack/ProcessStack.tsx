@@ -12,7 +12,7 @@ const ProcessStack = () => {
   const isAnimating = useRef(false);
   const stackRef = useRef(null);
   const lastScrollTime = useRef(0);
-  const touchStartY = useRef(null);
+  const touchStartX = useRef(null);
 
   const processSteps = [
     {
@@ -20,7 +20,7 @@ const ProcessStack = () => {
       description:
         "We begin by understanding your business goals, challenges, and requirements to create a clear and effective strategy.",
       image:
-        "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=800&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
     },
 
     {
@@ -28,7 +28,7 @@ const ProcessStack = () => {
       description:
         "Our team conducts in-depth analysis to identify opportunities, optimize processes, and design the best possible solution.",
       image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
     },
 
     {
@@ -117,8 +117,8 @@ const ProcessStack = () => {
 
       const now = Date.now();
 
-      const isScrollingDown = e.deltaY > 0;
-      const isScrollingUp = e.deltaY < 0;
+      const isScrollingRight = e.deltaX > 0;
+      const isScrollingLeft = e.deltaX < 0;
 
       const canGoNext =
         activeIndex < processSteps.length - 1;
@@ -126,8 +126,8 @@ const ProcessStack = () => {
       const canGoPrev = activeIndex > 0;
 
       if (
-        (isScrollingDown && canGoNext) ||
-        (isScrollingUp && canGoPrev)
+        (isScrollingRight && canGoNext) ||
+        (isScrollingLeft && canGoPrev)
       ) {
         e.preventDefault();
 
@@ -135,7 +135,7 @@ const ProcessStack = () => {
           now - lastScrollTime.current >
           cooldown
         ) {
-          if (isScrollingDown) {
+          if (isScrollingRight) {
             goNext();
           } else {
             goPrev();
@@ -147,25 +147,25 @@ const ProcessStack = () => {
     };
 
     const handleTouchStart = (e) => {
-      touchStartY.current =
-        e.touches[0].clientY;
+      touchStartX.current =
+        e.touches[0].clientX;
     };
 
     const handleTouchMove = (e) => {
       if (
         !isInView ||
-        touchStartY.current === null
+        touchStartX.current === null
       )
         return;
 
-      const touchEndY =
-        e.touches[0].clientY;
+      const touchEndX =
+        e.touches[0].clientX;
 
-      const deltaY =
-        touchStartY.current - touchEndY;
+      const deltaX =
+        touchStartX.current - touchEndX;
 
-      const isScrollingDown = deltaY > 30;
-      const isScrollingUp = deltaY < -30;
+      const isScrollingRight = deltaX > 30;
+      const isScrollingLeft = deltaX < -30;
 
       const canGoNext =
         activeIndex < processSteps.length - 1;
@@ -173,10 +173,10 @@ const ProcessStack = () => {
       const canGoPrev = activeIndex > 0;
 
       if (
-        (isScrollingDown && canGoNext) ||
-        (isScrollingUp && canGoPrev)
+        (isScrollingRight && canGoNext) ||
+        (isScrollingLeft && canGoPrev)
       ) {
-        if (Math.abs(deltaY) > 50) {
+        if (Math.abs(deltaX) > 50) {
           e.preventDefault();
 
           const now = Date.now();
@@ -185,7 +185,7 @@ const ProcessStack = () => {
             now - lastScrollTime.current >
             cooldown
           ) {
-            if (isScrollingDown) {
+            if (isScrollingRight) {
               goNext();
             } else {
               goPrev();
@@ -193,14 +193,14 @@ const ProcessStack = () => {
 
             lastScrollTime.current = now;
 
-            touchStartY.current = null;
+            touchStartX.current = null;
           }
         }
       }
     };
 
     const handleTouchEnd = () => {
-      touchStartY.current = null;
+      touchStartX.current = null;
     };
 
     el.addEventListener(
@@ -319,6 +319,28 @@ const ProcessStack = () => {
               </div>
             </div>
           ))}
+
+          <button
+            className={`process-flow-arrow process-flow-arrow-left ${activeIndex === 0 ? 'disabled' : ''}`}
+            onClick={goPrev}
+            aria-label="Previous step"
+            disabled={activeIndex === 0}
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
+          </button>
+
+          <button
+            className={`process-flow-arrow process-flow-arrow-right ${activeIndex === processSteps.length - 1 ? 'disabled' : ''}`}
+            onClick={goNext}
+            aria-label="Next step"
+            disabled={activeIndex === processSteps.length - 1}
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </button>
         </div>
 
         <div className="process-flow-nav">

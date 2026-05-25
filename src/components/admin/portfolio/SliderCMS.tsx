@@ -285,7 +285,7 @@ function SliderCMSInner() {
       {/* Form Modal */}
       {formOpen && (
         <div className={s.modalOverlay} onClick={() => setFormOpen(false)}>
-          <div className={`${s.modal} ${s.modalLg}`} onClick={e => e.stopPropagation()}>
+          <div className={`${s.modal} ${s.modalLg}`} onClick={e => e.stopPropagation()} style={{height:'650px', overflow:'auto'}}>
             <div className={s.modalHeader}>
               <div>
                 <div className={s.modalTitle}>{editItem ? 'Edit Slide' : 'Add New Slide'}</div>

@@ -92,7 +92,7 @@
   border-radius: 12px;
   padding: 60px 80px;
   box-shadow: 0 40px 100px rgba(0, 0, 0, 0.2);
-  transform: translateY(30px) scale(0.96);
+  transform: translateX(60px) scale(0.96);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -100,16 +100,69 @@
 }
 
 .process-flow-card.active {
-  transform: translateY(0) scale(1);
+  transform: translateX(0) scale(1);
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
 }
 
 .process-flow-card.hide {
-  transform: translateY(-40px) scale(0.96);
+  transform: translateX(-60px) scale(0.96);
   opacity: 0;
   pointer-events: none;
+}
+
+.process-flow-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  transition: all 0.3s ease;
+  color: #555;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.process-flow-arrow:hover:not(.disabled) {
+  border-color: #333;
+  color: #000;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.process-flow-arrow.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.process-flow-arrow-left {
+  left: -24px;
+}
+
+.process-flow-arrow-right {
+  right: -24px;
+}
+
+@media (max-width: 1200px) {
+  .process-flow-arrow-left {
+    left: -16px;
+  }
+  .process-flow-arrow-right {
+    right: -16px;
+  }
+}
+
+@media (max-width: 991px) {
+  .process-flow-arrow {
+    display: none;
+  }
 }
 
 .process-flow-card-content {
