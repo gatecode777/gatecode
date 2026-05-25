@@ -21,7 +21,7 @@ const DigitalHero = () => {
           </h1>
           <p className="dm-hero-subtitle">
             Visualize, test, and refine your ideas with structured wireframes and interactive prototypes<br />
-            before development.
+            before development. 
           </p>
           <Link href="/contact" className="dm-cta-button">
             Get Free Consultation
