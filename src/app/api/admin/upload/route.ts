@@ -49,7 +49,7 @@ function sanitizeFilename(name: string): string {
 const useBlob = !!process.env.BLOB_READ_WRITE_TOKEN;
 
 async function uploadToVercelBlob(file: File, filename: string): Promise<string> {
-  const blob = await put(filename, file, { access: 'private' });
+  const blob = await put(filename, file, { access: 'public' });
   return blob.url;
 }
 
