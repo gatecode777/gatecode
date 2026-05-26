@@ -254,6 +254,40 @@ const ProcessStack = () => {
     isInView,
   ]);
 
+  // Autoplay functionality with flicker-free hover-pause using matches(':hover')
+  useEffect(() => {
+    if (!isInView) return;
+
+    const interval = setInterval(() => {
+      // Check if mouse is hovering over the slider container to pause autoplay
+      const isHoveredCurrently = stackRef.current?.closest('.process-flow-section')?.matches(':hover');
+      if (isHoveredCurrently || isAnimating.current) return;
+
+      setActiveIndex((currentActive) => {
+        if (currentActive >= processSteps.length - 1) {
+          // Loop back to start
+          isAnimating.current = true;
+          setHiddenSet(new Set());
+          setTimeout(() => {
+            isAnimating.current = false;
+          }, 600);
+          return 0;
+        } else {
+          // Move to next slide
+          isAnimating.current = true;
+          const nextIndex = currentActive + 1;
+          setHiddenSet((prev) => new Set([...prev, currentActive]));
+          setTimeout(() => {
+            isAnimating.current = false;
+          }, 600);
+          return nextIndex;
+        }
+      });
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [isInView, activeIndex, processSteps.length]);
+
   const getCardClass = (index) => {
     if (hiddenSet.has(index))
       return 'process-flow-card hide';

@@ -1,44 +1,188 @@
+/* ============================================================
+   Expertise Section - Premium Responsive Grid (Light / White Theme)
+============================================================ */
+
 .expertise-section {
-  margin: 10px auto 0;
+  max-width: 1320px;
+  margin: 100px auto 140px; /* Generous top/bottom margin for gorgeous section spacing */
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 65px; /* Spacious gap between the header and the grid of cards */
   width: 100%;
-  max-width: 900px;
+}
+
+/* Header layout lockups */
+.expertise-header {
   text-align: center;
-  padding: 0 20px;
+  max-width: 780px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  align-items: center;
 }
 
-.expertise-item {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.expertise-title {
-  font-family: 'Roboto Flex', sans-serif;
+.expertise-badge {
+  background: rgba(15, 185, 177, 0.08);
+  color: #0a8f89; /* Darker teal for perfect contrast on light background */
+  padding: 6px 18px;
+  border-radius: 9999px;
+  font-size: 0.82rem;
   font-weight: 600;
-  font-style: italic;
-  font-size: clamp(1rem, 4vw, 22px);
-  line-height: 100%;
-  letter-spacing: 0.05em;
-  color: #333;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid rgba(15, 185, 177, 0.25);
+  font-family: 'Inter', sans-serif;
+  display: inline-block;
+  margin-bottom: 14px; /* Controlled badge-to-title lockup */
+}
+
+.expertise-main-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(30px, 4.5vw, 46px);
+  font-weight: 500;
+  color: #111827; /* Rich charcoal black */
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.expertise-subtitle {
+  font-family: 'Inter', sans-serif;
+  color: #4b5563; /* Slate grey for perfect readability */
+  font-size: clamp(14.5px, 2.5vw, 17px);
+  line-height: 1.6;
+  margin: 14px 0 0 0; /* Clear, elegant title-to-subtitle space */
+  font-weight: 300;
+}
+
+/* Responsive Grid layout */
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 30px;
+  width: 100%;
+}
+
+/* Card item styling - Light Theme */
+.expertise-card {
+  background: #ffffff; /* Clean pure white card */
+  border: 1px solid rgba(0, 0, 0, 0.06); /* Subtle light gray border */
+  border-radius: 20px; /* Premium smooth corners */
+  padding: 45px 35px 40px; /* High-end padding proportions */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 28px; /* Separation from the brand icon to text content */
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03); /* Soft delicate shadow */
+}
+
+.expertise-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #0fb9b1, #3dc9c2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Card Hover animation */
+.expertise-card:hover {
+  transform: translateY(-8px);
+  background: #ffffff;
+  border-color: rgba(15, 185, 177, 0.35); /* Focus highlight brand-colored border */
+  box-shadow: 0 20px 40px rgba(15, 185, 177, 0.08), 
+              0 0 0 1px rgba(15, 185, 177, 0.05);
+}
+
+.expertise-card:hover::before {
+  opacity: 1;
+}
+
+/* Icon Container */
+.expertise-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: rgba(15, 185, 177, 0.08); /* Light brand teal backdrop */
+  color: #0fb9b1;
+  transition: all 0.4s ease;
+}
+
+.expertise-card:hover .expertise-icon-container {
+  background: #0fb9b1;
+  color: #ffffff;
+  transform: scale(1.08) rotate(5deg);
+  box-shadow: 0 8px 20px rgba(15, 185, 177, 0.25);
+}
+
+.expertise-icon {
+  display: block;
+  stroke-width: 2px;
+}
+
+/* Card content grouping */
+.expertise-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Tight typography lockup for inner elements */
+  width: 100%;
+}
+
+/* Titles inside card */
+.expertise-card-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: 22px;
+  color: #111827; /* Rich dark grey/black title */
+  margin: 0;
+  line-height: 1.35;
+}
+
+/* Descriptions inside card */
+.expertise-card-desc {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #4b5563; /* Crisp dark grey description text for easy reading */
   margin: 0;
 }
 
-.expertise-desc {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: clamp(0.9rem, 3.5vw, 18px);
-  line-height: 1.2;
-  letter-spacing: 0.05em;
-  color: #666;
-  margin: 0;
+/* Mobile & Tablet breakpoints */
+@media (max-width: 991px) {
+  .expertise-grid {
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 24px;
+  }
+  
+  .expertise-card {
+    padding: 35px 28px;
+  }
 }
 
 @media (max-width: 768px) {
   .expertise-section {
-    gap: 25px;
+    margin: 60px auto 80px;
+    gap: 45px;
+  }
+  
+  .expertise-main-title {
+    font-size: 32px;
+  }
+
+  .expertise-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 }

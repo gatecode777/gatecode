@@ -1,93 +1,91 @@
-:root {
-  --slider-speed: 20s;
-  --image-spacing: 10px;
-  --border-radius: 16px;
-  --shadow-color: rgba(0, 0, 0, 0.1);
-  --shadow-hover: rgba(0, 0, 0, 0.2);
-}
+/* ============================================================
+   Premium 3D Spherical Panoramic Carousel CSS
+============================================================ */
 
-.slider-container {
+.panorama-slider-section {
   width: 100%;
   max-width: 100%;
-  margin: 100px 0 0; 
+  padding: 80px 0 60px;
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff; /* Unified white background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Perspective Frame */
+.panorama-slider-perspective {
+  width: 100%;
+  max-width: 1200px;
+  height: clamp(340px, 45vh, 460px);
+  position: relative;
+  perspective: 1400px; /* Strong depth perspective */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Center-aligned absolutely positioned track */
+.panorama-slider-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d; /* Actively enable 3D rendering */
+}
+
+/* Card base class */
+.panorama-slide-item {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 420px; /* Standard wide landscape card width */
+  margin-left: -210px; /* Perfect center offset */
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+              opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              z-index 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Card inner image block */
+.panorama-image-wrapper {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
   overflow: hidden;
   position: relative;
-  
-  clip-path: polygon(
-    0 0, 
-    10% 4%, 
-    20% 7%, 
-    30% 9%, 
-    40% 11%, 
-    50% 12%, 
-    60% 11%, 
-    70% 9%, 
-    80% 7%, 
-    90% 4%, 
-    100% 0,
-    100% 100%,
-    90% 96%,
-    80% 93%,
-    70% 91%,
-    60% 89%,
-    50% 88%,
-    40% 89%,
-    30% 91%,
-    20% 93%,
-    10% 96%,
-    0 100%
-  );
-}
-
-.slider-track {
-  display: flex;
-  width: max-content;
-  animation: scroll var(--slider-speed) linear infinite;
-}
-
-.slider-container:hover .slider-track {
-  animation-play-state: paused;
-}
-
-.slider-item {
-  
-  width: calc(100vw / 3.5); 
-  flex-shrink: 0;
-  padding: 0 calc(var(--image-spacing) / 2);
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@media (max-width: 768px) {
-  .slider-container {
-    margin-top: 50px; 
-  }
-  .slider-item {
-    width: 100vw; 
-    padding: 0; 
-  }
-}
-
-.slider-image-wrapper {
-  width: 100%;
-  height: clamp(250px, 40vh, 450px); 
-  border-radius: var(--border-radius);
-  overflow: hidden;
-  box-shadow: 0 10px 30px var(--shadow-color);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.06);
   transition: all 0.5s ease;
-  cursor: pointer;
-  position: relative; 
 }
 
-.text-overlay {
+.panorama-slide-item.active .panorama-image-wrapper {
+  box-shadow: 0 20px 40px rgba(15, 185, 177, 0.18), 
+              0 0 0 2px rgba(15, 185, 177, 0.1);
+}
+
+.panorama-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+/* Elegant Glassmorphic Center Text Band */
+.panorama-text-overlay {
   position: absolute;
   top: 50%;
   left: 0;
   width: 100%;
   transform: translateY(-50%);
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  padding: 15px 0;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 16px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,47 +95,91 @@
   transition: all 0.5s ease;
 }
 
-.overlay-text {
-  font-family: 'Arimo', sans-serif;
-  font-weight: 400;
+.panorama-overlay-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
   font-style: italic;
-  font-size: 20px;
-  line-height: 1.1;
-  letter-spacing: 0.05em;
-  color: white;
+  font-size: 19px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: #ffffff;
   text-transform: uppercase;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  white-space: normal;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
   text-align: center;
-  padding: 0 20px;
+  padding: 0 15px;
 }
 
-.slider-image-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s ease;
+/* Hover Zoom & Overlay Shift */
+.panorama-slide-item:hover .panorama-image-wrapper img {
+  transform: scale(1.08);
 }
 
-.slider-item:hover .text-overlay {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 25px 0;
+.panorama-slide-item:hover .panorama-text-overlay {
+  background: rgba(255, 255, 255, 0.18);
+  padding: 22px 0;
 }
 
-.slider-item:hover .slider-image-wrapper {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px var(--shadow-hover);
+/* Active center items scale-on-hover */
+.panorama-slide-item.active:hover {
+  transform: translateX(0px) scale(1.08) rotateY(0deg) !important;
 }
 
-.slider-item:hover .slider-image-wrapper img {
-  transform: scale(1.1);
+/* Carousel Indicators */
+.panorama-indicators {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
+.panorama-indicator-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 99px;
+  background-color: rgba(15, 185, 177, 0.25);
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 0;
+}
+
+.panorama-indicator-dot.active {
+  width: 32px;
+  background-color: #0fb9b1;
+  box-shadow: 0 4px 10px rgba(15, 185, 177, 0.3);
+}
+
+/* Mobile & Tablet Responsiveness */
+@media (max-width: 991px) {
+  .panorama-slide-item {
+    width: 340px;
+    margin-left: -170px;
   }
-  100% {
-    transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+  .panorama-slider-section {
+    padding: 40px 0 30px;
+    gap: 25px;
+  }
+
+  .panorama-slider-perspective {
+    height: 300px;
+    perspective: 800px; /* Reduced perspective for mobile layouts */
+  }
+
+  .panorama-slide-item {
+    width: 280px;
+    margin-left: -140px;
+  }
+
+  .panorama-overlay-text {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  .panorama-text-overlay {
+    padding: 10px 0;
   }
 }

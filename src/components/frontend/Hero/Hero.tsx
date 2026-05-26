@@ -28,12 +28,7 @@ const Hero = () => {
             <button className="hero-btn hero-btn-solid" onClick={() => router.push('/get-started')}>
               Get Free Consultations <span> &rarr;</span>
             </button>
-            <button className="hero-btn hero-btn-outline" onClick={() => {
-              const servicesSection = document.getElementById('services');
-              if (servicesSection) {
-                servicesSection.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}>
+            <button className="hero-btn hero-btn-outline" onClick={() => router.push('/services')}>
               Our Services <span>&rarr;</span>
             </button>
           </div>
