@@ -5,44 +5,44 @@ import { useState } from 'react';
 import './ApplicationForm.css';
 
 const IconUser = () => (
-  <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+  <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" /><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" /></svg>
 );
 const IconMail = () => (
-  <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+  <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="M2 7l10 7 10-7" /></svg>
 );
 const IconPhone = () => (
-  <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11 19.79 19.79 0 01.22 2.41 2 2 0 012.18 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.55-.55a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92v2z"/></svg>
+  <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11 19.79 19.79 0 01.22 2.41 2 2 0 012.18 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.55-.55a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92v2z" /></svg>
 );
 const IconBriefcase = () => (
-  <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="12" strokeWidth="3"/></svg>
+  <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" /><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" /><line x1="12" y1="12" x2="12" y2="12" strokeWidth="3" /></svg>
 );
 const IconPaperclip = () => (
-  <svg viewBox="0 0 24 24"><path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48"/></svg>
+  <svg viewBox="0 0 24 24"><path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48" /></svg>
 );
 const IconSend = () => (
-  <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+  <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13" /><polygon points="22 2 15 22 11 13 2 9 22 2" /></svg>
 );
 
 const POSITIONS = {
   job: [
-    { value: 'frontend',    label: 'Frontend Developer' },
-    { value: 'backend',     label: 'Backend Developer' },
-    { value: 'fullstack',   label: 'Full Stack Developer' },
-    { value: 'uiux',        label: 'UI/UX Designer' },
-    { value: 'marketing',   label: 'Digital Marketing Executive' },
-    { value: 'data-entry',  label: 'Data Entry Operator' },
-    { value: 'bpo',         label: 'BPO Executive' },
-    { value: 'accounting',  label: 'Accounting Executive' },
-    { value: 'graphic',     label: 'Graphic Designer' },
+    { value: 'frontend', label: 'Frontend Developer' },
+    { value: 'backend', label: 'Backend Developer' },
+    { value: 'fullstack', label: 'Full Stack Developer' },
+    { value: 'uiux', label: 'UI/UX Designer' },
+    { value: 'marketing', label: 'Digital Marketing Executive' },
+    { value: 'data-entry', label: 'Data Entry Operator' },
+    { value: 'bpo', label: 'BPO Executive' },
+    { value: 'accounting', label: 'Accounting Executive' },
+    { value: 'graphic', label: 'Graphic Designer' },
   ],
   internship: [
-    { value: 'frontend-intern',   label: 'Frontend Development Intern' },
-    { value: 'backend-intern',    label: 'Backend Development Intern' },
-    { value: 'uiux-intern',       label: 'UI/UX Design Intern' },
-    { value: 'marketing-intern',  label: 'Digital Marketing Intern' },
-    { value: 'graphic-intern',    label: 'Graphic Design Intern' },
+    { value: 'frontend-intern', label: 'Frontend Development Intern' },
+    { value: 'backend-intern', label: 'Backend Development Intern' },
+    { value: 'uiux-intern', label: 'UI/UX Design Intern' },
+    { value: 'marketing-intern', label: 'Digital Marketing Intern' },
+    { value: 'graphic-intern', label: 'Graphic Design Intern' },
     { value: 'data-entry-intern', label: 'Data Entry Intern' },
-    { value: 'hr-intern',         label: 'HR Intern' },
+    { value: 'hr-intern', label: 'HR Intern' },
   ],
 };
 
@@ -57,16 +57,28 @@ const errStyle = {
 export default function ApplicationForm() {
   const [activeTab, setActiveTab] = useState('job');
   const [form, setForm] = useState({ fullName: '', email: '', phone: '', position: '' });
-  const [fileName, setFileName]   = useState('');
+  const [fileName, setFileName] = useState('');
   const [resumeFile, setResumeFile] = useState(null);
-  const [errors, setErrors]       = useState({});
+  const [errors, setErrors] = useState({});
   const [submitting, setSubmitting] = useState(false);
   const [uploading, setUploading] = useState(false);
-  const [success, setSuccess]     = useState(false);
+  const [success, setSuccess] = useState(false);
 
   const upd = (k, v) => {
+    if (k === 'phone') {
+      v = v.replace(/[^\d\s\-()+]/g, '');
+    }
     setForm(f => ({ ...f, [k]: v }));
-    if (errors[k]) setErrors(e => { const n = {...e}; delete n[k]; return n; });
+    if (errors[k]) setErrors(e => { const n = { ...e }; delete n[k]; return n; });
+  };
+
+  const handlePhoneBlur = () => {
+    if (form.phone.trim()) {
+      const cleanPhone = form.phone.replace(/[-\s()]+/g, '');
+      if (!/^(?:\+91|91|0)?[6-9]\d{9}$/.test(cleanPhone)) {
+        setErrors(prev => ({ ...prev, phone: 'Invalid phone number' }));
+      }
+    }
   };
 
   const handleTabChange = (tab) => {
@@ -79,17 +91,26 @@ export default function ApplicationForm() {
     if (!file) return;
     setResumeFile(file);
     setFileName(file.name);
-    if (errors.resume) setErrors(e => { const n = {...e}; delete n.resume; return n; });
+    if (errors.resume) setErrors(e => { const n = { ...e }; delete n.resume; return n; });
   };
 
   const validate = () => {
     const e = {};
-    if (!form.fullName.trim())  e.fullName = 'Full name is required';
-    if (!form.email.trim())     e.email    = 'Email is required';
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = 'Invalid email address';
-    if (!form.phone.trim())     e.phone    = 'Phone number is required';
-    if (!form.position)         e.position = 'Please select a position';
-    if (!resumeFile)            e.resume   = 'Please attach your resume';
+    if (!form.fullName.trim()) e.fullName = 'Full name is required';
+    if (!form.email.trim()) e.email = 'Email is required';
+    else if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(form.email)) e.email = 'Invalid email address';
+
+    if (!form.phone.trim()) {
+      e.phone = 'Phone number is required';
+    } else {
+      const cleanPhone = form.phone.replace(/[-\s()]+/g, '');
+      if (!/^(?:\+91|91|0)?[6-9]\d{9}$/.test(cleanPhone)) {
+        e.phone = 'Invalid phone number';
+      }
+    }
+
+    if (!form.position) e.position = 'Please select a position';
+    if (!resumeFile) e.resume = 'Please attach your resume';
     setErrors(e);
     return Object.keys(e).length === 0;
   };
@@ -203,7 +224,7 @@ export default function ApplicationForm() {
                 onChange={e => upd('fullName', e.target.value)}
               />
             </div>
-            {errors.fullName && <span style={errStyle}>{errors.fullName}</span>}
+            {errors.fullName && <span className="field-error-msg">{errors.fullName}</span>}
           </div>
 
           {/* Email + Phone */}
@@ -218,7 +239,7 @@ export default function ApplicationForm() {
                   onChange={e => upd('email', e.target.value)}
                 />
               </div>
-              {errors.email && <span style={errStyle}>{errors.email}</span>}
+              {errors.email && <span className="field-error-msg">{errors.email}</span>}
             </div>
             <div>
               <div className="input-group" style={errors.phone ? { borderColor: '#e53e3e' } : {}}>
@@ -228,9 +249,11 @@ export default function ApplicationForm() {
                   placeholder="Contact Number"
                   value={form.phone}
                   onChange={e => upd('phone', e.target.value)}
+                  onBlur={handlePhoneBlur}
+                  maxLength={15}
                 />
               </div>
-              {errors.phone && <span style={errStyle}>{errors.phone}</span>}
+              {errors.phone && <span className="field-error-msg">{errors.phone}</span>}
             </div>
           </div>
 
@@ -249,7 +272,7 @@ export default function ApplicationForm() {
                 ))}
               </select>
             </div>
-            {errors.position && <span style={errStyle}>{errors.position}</span>}
+            {errors.position && <span className="field-error-msg">{errors.position}</span>}
           </div>
 
           {/* Resume */}
@@ -265,12 +288,12 @@ export default function ApplicationForm() {
                 {fileName || 'Attach Resume (.pdf, .doc, .docx)'}
               </label>
             </div>
-            {errors.resume && <span style={errStyle}>{errors.resume}</span>}
+            {errors.resume && <span className="field-error-msg">{errors.resume}</span>}
           </div>
 
           {/* Submit error */}
           {errors.submit && (
-            <span style={{ ...errStyle, fontSize: 13 }}>{errors.submit}</span>
+            <span className="field-error-msg" style={{ fontSize: 13, marginBottom: 12 }}>{errors.submit}</span>
           )}
 
           <button type="submit" className="submit-btn" disabled={submitting}>

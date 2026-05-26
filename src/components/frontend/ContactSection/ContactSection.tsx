@@ -12,23 +12,32 @@ const ContactSection = () => {
     agreePrivacy: true,
     requestNda: false,
   });
-  const [errors, setErrors]     = useState<Record<string, string>>({});
+  const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitting, setSubmitting] = useState(false);
-  const [success, setSuccess]   = useState(false);
+  const [success, setSuccess] = useState(false);
 
   const upd = (k: string, v: string | boolean) => {
     setForm(f => ({ ...f, [k]: v }));
-    if (errors[k]) setErrors(e => { const n = {...e}; delete n[k]; return n; });
+    if (errors[k]) setErrors(e => { const n = { ...e }; delete n[k]; return n; });
   };
 
   const validate = () => {
     const e: Record<string, string> = {};
     if (!form.projectDetails.trim()) e.projectDetails = 'Please describe your project or requirements';
-    if (!form.name.trim())           e.name           = 'Name is required';
-    if (!form.email.trim())          e.email          = 'Email is required';
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = 'Invalid email address';
-    if (!form.phone.trim())          e.phone          = 'Phone number is required';
-    if (!form.agreePrivacy)          e.agreePrivacy   = 'You must agree to the Privacy Policy';
+    if (!form.name.trim()) e.name = 'Name is required';
+    if (!form.email.trim()) e.email = 'Email is required';
+    else if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(form.email)) e.email = 'Invalid email address';
+
+    if (!form.phone.trim()) {
+      e.phone = 'Phone number is required';
+    } else {
+      const cleanPhone = form.phone.replace(/[-\s()]+/g, '');
+      if (!/^(?:\+91|91|0)?[6-9]\d{9}$/.test(cleanPhone)) {
+        e.phone = 'Invalid phone number';
+      }
+    }
+
+    if (!form.agreePrivacy) e.agreePrivacy = 'You must agree to the Privacy Policy';
     setErrors(e);
     return Object.keys(e).length === 0;
   };
@@ -93,7 +102,7 @@ const ContactSection = () => {
                   onChange={e => upd('projectDetails', e.target.value)}
                   style={errors.projectDetails ? { borderColor: '#e53e3e' } : {}}
                 />
-                {errors.projectDetails && <span style={errStyle}>{errors.projectDetails}</span>}
+                {errors.projectDetails && <span className="field-error-msg">{errors.projectDetails}</span>}
               </div>
 
               <div className="form-row">
@@ -107,7 +116,7 @@ const ContactSection = () => {
                     onChange={e => upd('name', e.target.value)}
                     style={errors.name ? { borderColor: '#e53e3e' } : {}}
                   />
-                  {errors.name && <span style={errStyle}>{errors.name}</span>}
+                  {errors.name && <span className="field-error-msg">{errors.name}</span>}
                 </div>
                 <div className="form-group">
                   <label className="form-label">Business Email*</label>
@@ -119,7 +128,7 @@ const ContactSection = () => {
                     onChange={e => upd('email', e.target.value)}
                     style={errors.email ? { borderColor: '#e53e3e' } : {}}
                   />
-                  {errors.email && <span style={errStyle}>{errors.email}</span>}
+                  {errors.email && <span className="field-error-msg">{errors.email}</span>}
                 </div>
               </div>
 
@@ -134,7 +143,7 @@ const ContactSection = () => {
                     onChange={e => upd('phone', e.target.value)}
                     style={errors.phone ? { borderColor: '#e53e3e' } : {}}
                   />
-                  {errors.phone && <span style={errStyle}>{errors.phone}</span>}
+                  {errors.phone && <span className="field-error-msg">{errors.phone}</span>}
                 </div>
                 <div className="form-checkbox-group">
                   <label className="checkbox-item">
@@ -153,12 +162,12 @@ const ContactSection = () => {
                     />
                     <span>Request NDA for confidentiality</span>
                   </label>
-                  {errors.agreePrivacy && <span style={errStyle}>{errors.agreePrivacy}</span>}
+                  {errors.agreePrivacy && <span className="field-error-msg">{errors.agreePrivacy}</span>}
                 </div>
               </div>
 
               {errors.submit && (
-                <p style={{ ...errStyle, fontSize: 13, marginBottom: 8 }}>{errors.submit}</p>
+                <p className="field-error-msg" style={{ fontSize: 13, marginBottom: 8 }}>{errors.submit}</p>
               )}
 
               <button

@@ -26,19 +26,20 @@
 .main-contact-form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;
+  align-items: start;
 }
 
 .input-group {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .input-group label {
@@ -51,7 +52,7 @@
 .input-group input,
 .input-group select,
 .input-group textarea {
-  padding: 12px 40px;
+  padding: 12px 18px;
   border: 2px solid #f1f5f9;
   border-radius: 12px;
   font-family: 'Inter', sans-serif;
@@ -68,6 +69,29 @@
   border-color: #0FB9B1;
   background: #fff;
   box-shadow: 0 0 0 5px rgba(15, 185, 177, 0.08);
+}
+
+.field-error-msg {
+  color: #ef4444;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: -6px;
+  margin-left: 9px;
+  display: block;
+  animation: errorSlideIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes errorSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .contact-submit-btn {

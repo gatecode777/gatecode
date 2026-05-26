@@ -17,8 +17,15 @@ export async function POST(req: NextRequest) {
 
     if (!firstName?.trim()) return NextResponse.json({ success: false, message: 'First name is required' }, { status: 422 });
     if (!lastName?.trim()) return NextResponse.json({ success: false, message: 'Last name is required' }, { status: 422 });
-    if (!email?.trim()) return NextResponse.json({ success: false, message: 'Email is required' }, { status: 422 });
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return NextResponse.json({ success: false, message: 'Invalid email address' }, { status: 422 });
+
+    if (phone?.trim()) {
+      const cleanPhone = phone.trim().replace(/[-\s()]+/g, '');
+      if (!/^(?:\+91|91|0)?[6-9]\d{9}$/.test(cleanPhone)) {
+        return NextResponse.json({ success: false, message: 'Invalid phone number' }, { status: 422 });
+      }
+    }
+
     if (!subject?.trim()) return NextResponse.json({ success: false, message: 'Subject is required' }, { status: 422 });
     if (!message?.trim()) return NextResponse.json({ success: false, message: 'Message is required' }, { status: 422 });
 

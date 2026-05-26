@@ -6,7 +6,6 @@ import '@/components/frontend/Blog/Blog.css';
 import connectDB from '@/lib/db';
 import BlogPost from '@/models/BlogPost';
 import BlogCategory from '@/models/BlogCategory';
-import Comment from '@/models/Comment';
 import BlogDetailSidebarClient from '@/components/frontend/Blog/BlogDetailSidebarClient';
 
 export const dynamic = 'force-dynamic';
@@ -194,14 +193,8 @@ export default async function BlogDetailPage({ params }) {
     );
   }
 
-  const comments = await Comment.find({ postId: post._id, isApproved: true })
-    .sort({ createdAt: -1 })
-    .select('name content createdAt')
-    .lean();
-
   const blogPost = plain(post);
   const sidebarCats = plain(categories);
-  const initialComments = plain(comments);
   const blocks = [...(blogPost.contentBlocks || [])].sort((a, b) => a.order - b.order);
   const catName = blogPost.categoryId?.name || '';
   const authorName = blogPost.authorName || 'Admin';
@@ -216,7 +209,6 @@ export default async function BlogDetailPage({ params }) {
           categories={sidebarCats}
           activeCategory={catName}
           slug={slug}
-          initialComments={initialComments}
         />
 
         <main className="blog-detail-content">

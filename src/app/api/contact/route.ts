@@ -9,11 +9,15 @@ export async function POST(req: NextRequest) {
 
     // Validation
     if (!projectDetails?.trim()) return NextResponse.json({ success: false, message: 'Project details are required' }, { status: 422 });
-    if (!name?.trim())           return NextResponse.json({ success: false, message: 'Name is required' }, { status: 422 });
-    if (!email?.trim())          return NextResponse.json({ success: false, message: 'Email is required' }, { status: 422 });
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return NextResponse.json({ success: false, message: 'Invalid email address' }, { status: 422 });
-    if (!phone?.trim())          return NextResponse.json({ success: false, message: 'Phone number is required' }, { status: 422 });
-    if (!agreePrivacy)           return NextResponse.json({ success: false, message: 'You must agree to the Privacy Policy' }, { status: 422 });
+    if (!name?.trim()) return NextResponse.json({ success: false, message: 'Name is required' }, { status: 422 });
+    if (!email?.trim()) return NextResponse.json({ success: false, message: 'Email is required' }, { status: 422 });
+    if (!phone?.trim()) return NextResponse.json({ success: false, message: 'Phone number is required' }, { status: 422 });
+
+    const cleanPhone = phone.trim().replace(/[-\s()]+/g, '');
+    if (!/^(?:\+91|91|0)?[6-9]\d{9}$/.test(cleanPhone)) {
+      return NextResponse.json({ success: false, message: 'Invalid phone number' }, { status: 422 });
+    }
+    if (!agreePrivacy) return NextResponse.json({ success: false, message: 'You must agree to the Privacy Policy' }, { status: 422 });
 
     const entry = await ContactRequest.create({
       projectDetails: projectDetails.trim(),

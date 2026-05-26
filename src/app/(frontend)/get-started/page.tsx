@@ -1,7 +1,7 @@
 // @ts-nocheck
 'use client';
 
-import {  useState, useEffect  } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import './GetStarted.css';
 
@@ -87,8 +87,17 @@ const GetStartedPage = () => {
     if (!form.projectDetails.trim()) nextErrors.projectDetails = 'Please describe your project or requirements';
     if (!form.name.trim()) nextErrors.name = 'Full name is required';
     if (!form.email.trim()) nextErrors.email = 'Business email is required';
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) nextErrors.email = 'Invalid email address';
-    if (!form.phone.trim()) nextErrors.phone = 'Phone number is required';
+    else if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(form.email)) nextErrors.email = 'Invalid email address';
+
+    if (!form.phone.trim()) {
+      nextErrors.phone = 'Phone number is required';
+    } else {
+      const cleanPhone = form.phone.replace(/[-\s()]+/g, '');
+      if (!/^(?:\+91|91|0)?[6-9]\d{9}$/.test(cleanPhone)) {
+        nextErrors.phone = 'Invalid phone number';
+      }
+    }
+
     if (!form.agreePrivacy) nextErrors.agreePrivacy = 'You must agree to the Privacy Policy';
     setErrors(nextErrors);
     return Object.keys(nextErrors).length === 0;
@@ -146,8 +155,8 @@ const GetStartedPage = () => {
             solutions tailored to your business goals.
           </p>
 
-          <Link href="/internship" className="gs-btn">
-            Apply for Internship
+          <Link href="/contact" className="gs-btn">
+            Contact Us
           </Link>
         </div>
       </section>
@@ -216,15 +225,17 @@ const GetStartedPage = () => {
               </p>
             )}
 
-            <label className="gs-textarea-label">Project Details *</label>
-            <textarea
-              className="gs-textarea"
-              placeholder="Describe your project, goals, and any specific requirements..."
-              value={form.projectDetails}
-              onChange={event => updateForm('projectDetails', event.target.value)}
-              style={errors.projectDetails ? { borderColor: '#e53e3e' } : {}}
-            />
-            {errors.projectDetails && <span style={errorStyle}>{errors.projectDetails}</span>}
+            <div className="gs-field">
+              <label className="gs-textarea-label">Project Details *</label>
+              <textarea
+                className="gs-textarea"
+                placeholder="Describe your project, goals, and any specific requirements..."
+                value={form.projectDetails}
+                onChange={event => updateForm('projectDetails', event.target.value)}
+                style={errors.projectDetails ? { borderColor: '#e53e3e' } : {}}
+              />
+              {errors.projectDetails && <span className="field-error-msg">{errors.projectDetails}</span>}
+            </div>
 
             <div className="gs-row">
               <div className="gs-field">
@@ -237,7 +248,7 @@ const GetStartedPage = () => {
                   onChange={event => updateForm('name', event.target.value)}
                   style={errors.name ? { borderColor: '#e53e3e' } : {}}
                 />
-                {errors.name && <span style={errorStyle}>{errors.name}</span>}
+                {errors.name && <span className="field-error-msg">{errors.name}</span>}
               </div>
               <div className="gs-field">
                 <label>Business Email *</label>
@@ -249,7 +260,7 @@ const GetStartedPage = () => {
                   onChange={event => updateForm('email', event.target.value)}
                   style={errors.email ? { borderColor: '#e53e3e' } : {}}
                 />
-                {errors.email && <span style={errorStyle}>{errors.email}</span>}
+                {errors.email && <span className="field-error-msg">{errors.email}</span>}
               </div>
             </div>
 
@@ -264,7 +275,7 @@ const GetStartedPage = () => {
                   onChange={event => updateForm('phone', event.target.value)}
                   style={errors.phone ? { borderColor: '#e53e3e' } : {}}
                 />
-                {errors.phone && <span style={errorStyle}>{errors.phone}</span>}
+                {errors.phone && <span className="field-error-msg">{errors.phone}</span>}
               </div>
               <div className="gs-checks">
                 <label className="gs-check-label">
@@ -281,11 +292,11 @@ const GetStartedPage = () => {
                     onChange={event => updateForm('requestNda', event.target.checked)}
                   /> Request NDA for confidentiality
                 </label>
-                {errors.agreePrivacy && <span style={errorStyle}>{errors.agreePrivacy}</span>}
+                {errors.agreePrivacy && <span className="field-error-msg">{errors.agreePrivacy}</span>}
               </div>
             </div>
 
-            {errors.submit && <p style={{ ...errorStyle, fontSize: 13, marginBottom: 8 }}>{errors.submit}</p>}
+            {errors.submit && <p className="field-error-msg" style={{ fontSize: 13, marginBottom: 8 }}>{errors.submit}</p>}
 
             <button className="gs-submit" type="submit" disabled={submitting}>
               {submitting ? 'Submitting...' : 'Submit Request'}

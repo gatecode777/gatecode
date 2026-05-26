@@ -19,6 +19,11 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ success: false, message: 'Invalid email address' }, { status: 422 });
     if (!phone?.trim())
       return NextResponse.json({ success: false, message: 'Phone number is required' }, { status: 422 });
+
+    const cleanPhone = phone.trim().replace(/[-\s()]+/g, '');
+    if (!/^(?:\+91|91|0)?[6-9]\d{9}$/.test(cleanPhone)) {
+      return NextResponse.json({ success: false, message: 'Invalid phone number' }, { status: 422 });
+    }
     if (!position?.trim())
       return NextResponse.json({ success: false, message: 'Position is required' }, { status: 422 });
     if (!resumeUrl?.trim())

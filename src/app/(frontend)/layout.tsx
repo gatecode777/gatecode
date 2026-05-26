@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Navbar from '@/components/frontend/Navbar/Navbar';
 import Footer from '@/components/frontend/Footer/Footer';
 import ScrollToTop from '@/components/frontend/ScrollToTop/ScrollToTop';
+import Chatbot from '@/components/frontend/Chatbot/Chatbot';
 
 export const metadata: Metadata = {
   title: { default: 'Gatecode Technologies', template: '%s | Gatecode Technologies' },
@@ -15,6 +16,7 @@ export default function FrontendLayout({ children }: { children: React.ReactNode
       {children}
       <Footer />
       <ScrollToTop />
+      <Chatbot />
     </div>
   );
 }

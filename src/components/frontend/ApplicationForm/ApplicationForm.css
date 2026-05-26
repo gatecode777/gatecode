@@ -49,6 +49,7 @@
 .application-form {
   display: flex;
   flex-direction: column;
+  text-align: left;
 }
 
 .input-group {
@@ -107,6 +108,35 @@
 .app-form-row {
   display: flex;
   gap: 18px;
+  align-items: start;
+  margin-bottom: 0;
+}
+
+.app-form-row>div {
+  flex: 1;
+}
+
+.field-error-msg {
+  color: #ef4444;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  margin-top: -12px;
+  margin-bottom: 18px;
+  display: block;
+  animation: errorSlideIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes errorSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .file-input-wrapper {

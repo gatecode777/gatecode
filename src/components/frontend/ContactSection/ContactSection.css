@@ -133,6 +133,28 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 18px;
+  align-items: start;
+}
+
+.field-error-msg {
+  color: #ef4444;
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 6px;
+  display: block;
+  animation: errorSlideIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes errorSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .form-checkbox-group {

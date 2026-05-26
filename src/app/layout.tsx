@@ -16,7 +16,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body>
         {children}
-        <Script src='https://www.noupe.com/embed/019e62849fa17851b12acc90bdc1fa654e0e.js' async />
       </body>
     </html>
   );
