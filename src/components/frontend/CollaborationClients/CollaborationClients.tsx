@@ -17,9 +17,9 @@ const CollaborationClients = () => {
           </div>
 
           <p className="cc-desc">
-            Gatecode Technologies Pvt. Ltd. collaborates with Rmax Solutions, a trusted manufacturer of innovative 
-            products such as napkin incinerator machines and GPS-based solutions. This partnership enables us to 
-            integrate smart technology with reliable hardware solutions, delivering efficient, practical, 
+            Gatecode Technologies Pvt. Ltd. collaborates with Rmax Solutions, a trusted manufacturer of innovative
+            products such as napkin incinerator machines and GPS-based solutions. This partnership enables us to
+            integrate smart technology with reliable hardware solutions, delivering efficient, practical,
             and scalable outcomes for businesses and institutions.
           </p>
         </div>
@@ -31,14 +31,13 @@ const CollaborationClients = () => {
             TRUSTED BY <span className="cc-teal">INDUSTRY LEADERS</span>: MEET OUR <span className="cc-teal">VALUED CLIENTS</span>
           </h2>
           <div className="cc-clients-grid">
-            <img src="/images/1.jpeg" alt="Trusted Clients Logos" className="cc-clients-image" />
-            <img src="/images/2.jpeg" alt="Trusted Clients Logos" className="cc-clients-image" />
-            <img src="/images/3.jpeg" alt="Trusted Clients Logos" className="cc-clients-image" />
-            <img src="/images/7.png" alt="Trusted Clients Logos" className="cc-clients-image" />
-            <img src="/images/4.jpeg" alt="Trusted Clients Logos" className="cc-clients-image" />
-            <img src="/images/5.jpeg" alt="Trusted Clients Logos" className="cc-clients-image" />
-            <img src="/images/6.png" alt="Trusted Clients Logos" className="cc-clients-image" />
-
+            <a href="https://gatexpay.in/" target='_blank'><img src="/images/1.jpeg" alt="Trusted Clients Logos" className="cc-clients-image" /></a>
+            <a href="#" target='_blank'><img src="/images/2.jpeg" alt="Trusted Clients Logos" className="cc-clients-image" /></a>
+            <a href="#" target='_blank'><img src="/images/3.jpeg" alt="Trusted Clients Logos" className="cc-clients-image" /></a>
+            <a href="https://cocofinasugar.com/" target='_blank'><img src="/images/7.png" alt="Trusted Clients Logos" className="cc-clients-image" /></a>
+            <a href="https://ecobinuae.com/" target='_blank'><img src="/images/4.jpeg" alt="Trusted Clients Logos" className="cc-clients-image" /></a>
+            <a href="#" target='_blank'><img src="/images/5.jpeg" alt="Trusted Clients Logos" className="cc-clients-image" /></a>
+            <a href="#" target='_blank'><img src="/images/6.png" alt="Trusted Clients Logos" className="cc-clients-image" /></a>
           </div>
         </div>
       </div>

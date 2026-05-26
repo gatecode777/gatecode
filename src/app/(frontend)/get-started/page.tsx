@@ -72,7 +72,17 @@ const GetStartedPage = () => {
   };
 
   const updateForm = (key, value) => {
-    setForm(prev => ({ ...prev, [key]: value }));
+    let finalVal = value;
+    if (key === 'phone' && typeof value === 'string') {
+      let digits = value.replace(/\D/g, '');
+      if (digits.startsWith('91') && digits.length > 10) {
+        digits = digits.substring(2);
+      } else if (digits.startsWith('0') && digits.length > 10) {
+        digits = digits.substring(1);
+      }
+      finalVal = digits.slice(0, 10);
+    }
+    setForm(prev => ({ ...prev, [key]: finalVal }));
     if (errors[key]) {
       setErrors(prev => {
         const next = { ...prev };
@@ -92,8 +102,7 @@ const GetStartedPage = () => {
     if (!form.phone.trim()) {
       nextErrors.phone = 'Phone number is required';
     } else {
-      const cleanPhone = form.phone.replace(/[-\s()]+/g, '');
-      if (!/^(?:\+91|91|0)?[6-9]\d{9}$/.test(cleanPhone)) {
+      if (!/^[6-9]\d{9}$/.test(form.phone.trim())) {
         nextErrors.phone = 'Invalid phone number';
       }
     }
@@ -270,9 +279,10 @@ const GetStartedPage = () => {
                 <input
                   className="gs-input"
                   type="text"
-                  placeholder="+91 00000 00000"
+                  placeholder="Enter contact number"
                   value={form.phone}
                   onChange={event => updateForm('phone', event.target.value)}
+                  maxLength={10}
                   style={errors.phone ? { borderColor: '#e53e3e' } : {}}
                 />
                 {errors.phone && <span className="field-error-msg">{errors.phone}</span>}

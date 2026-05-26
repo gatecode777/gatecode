@@ -94,7 +94,13 @@ const ContactForm = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     let { name, value } = e.target;
     if (name === 'phone') {
-      value = value.replace(/[^\d\s\-()+]/g, '');
+      let digits = value.replace(/\D/g, '');
+      if (digits.startsWith('91') && digits.length > 10) {
+        digits = digits.substring(2);
+      } else if (digits.startsWith('0') && digits.length > 10) {
+        digits = digits.substring(1);
+      }
+      value = digits.slice(0, 10);
     }
     setFormData(prev => ({ ...prev, [name]: value }));
     if (errors[name]) {
@@ -108,8 +114,7 @@ const ContactForm = () => {
 
   const handlePhoneBlur = () => {
     if (formData.phone.trim()) {
-      const cleanPhone = formData.phone.replace(/[-\s()]+/g, '');
-      if (!/^(?:\+91|91|0)?[6-9]\d{9}$/.test(cleanPhone)) {
+      if (!/^[6-9]\d{9}$/.test(formData.phone.trim())) {
         setErrors(prev => ({ ...prev, phone: 'Invalid phone number' }));
       }
     }
@@ -123,8 +128,7 @@ const ContactForm = () => {
     else if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(formData.email)) nextErrors.email = 'Invalid email address';
 
     if (formData.phone.trim()) {
-      const cleanPhone = formData.phone.replace(/[-\s()]+/g, '');
-      if (!/^(?:\+91|91|0)?[6-9]\d{9}$/.test(cleanPhone)) {
+      if (!/^[6-9]\d{9}$/.test(formData.phone.trim())) {
         nextErrors.phone = 'Invalid phone number';
       }
     }
@@ -243,7 +247,7 @@ const ContactForm = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   onBlur={handlePhoneBlur}
-                  maxLength={15}
+                  maxLength={10}
                   style={errors.phone ? { borderColor: '#e53e3e' } : {}}
                 />
                 {errors.phone && <span className="field-error-msg">{errors.phone}</span>}

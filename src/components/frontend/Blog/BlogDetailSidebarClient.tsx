@@ -17,7 +17,13 @@ export default function BlogDetailSidebarClient({ categories, activeCategory, sl
     const { name, value } = e.target;
     let val = value;
     if (name === 'mobileNumber') {
-      val = value.replace(/[^\d\s\-()+]/g, '');
+      let digits = value.replace(/\D/g, '');
+      if (digits.startsWith('91') && digits.length > 10) {
+        digits = digits.substring(2);
+      } else if (digits.startsWith('0') && digits.length > 10) {
+        digits = digits.substring(1);
+      }
+      val = digits.slice(0, 10);
     }
     setQuoteForm(prev => ({ ...prev, [name]: val }));
     if (errors[name]) {
@@ -27,9 +33,8 @@ export default function BlogDetailSidebarClient({ categories, activeCategory, sl
 
   const handlePhoneBlur = () => {
     if (quoteForm.mobileNumber.trim()) {
-      const cleanPhone = quoteForm.mobileNumber.replace(/[-\s()]+/g, '');
-      if (!/^(?:\+91|91|0)?[6-9]\d{9}$/.test(cleanPhone)) {
-        setErrors(prev => ({ ...prev, mobileNumber: 'Invalid 10-digit phone number' }));
+      if (!/^[6-9]\d{9}$/.test(quoteForm.mobileNumber.trim())) {
+        setErrors(prev => ({ ...prev, mobileNumber: 'Invalid phone number' }));
       }
     }
   };
@@ -42,9 +47,8 @@ export default function BlogDetailSidebarClient({ categories, activeCategory, sl
     if (!quoteForm.mobileNumber.trim()) {
       e.mobileNumber = 'Mobile number is required';
     } else {
-      const cleanPhone = quoteForm.mobileNumber.replace(/[-\s()]+/g, '');
-      if (!/^(?:\+91|91|0)?[6-9]\d{9}$/.test(cleanPhone)) {
-        e.mobileNumber = 'Invalid 10-digit phone number';
+      if (!/^[6-9]\d{9}$/.test(quoteForm.mobileNumber.trim())) {
+        e.mobileNumber = 'Invalid phone number';
       }
     }
 
@@ -113,6 +117,7 @@ export default function BlogDetailSidebarClient({ categories, activeCategory, sl
                   value={quoteForm[field]}
                   onChange={handleInputChange}
                   onBlur={field === 'mobileNumber' ? handlePhoneBlur : undefined}
+                  maxLength={field === 'mobileNumber' ? 10 : undefined}
                   style={{
                     width: '100%',
                     padding: '10px 12px',

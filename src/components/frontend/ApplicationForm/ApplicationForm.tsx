@@ -66,7 +66,13 @@ export default function ApplicationForm() {
 
   const upd = (k, v) => {
     if (k === 'phone') {
-      v = v.replace(/[^\d\s\-()+]/g, '');
+      let digits = v.replace(/\D/g, '');
+      if (digits.startsWith('91') && digits.length > 10) {
+        digits = digits.substring(2);
+      } else if (digits.startsWith('0') && digits.length > 10) {
+        digits = digits.substring(1);
+      }
+      v = digits.slice(0, 10);
     }
     setForm(f => ({ ...f, [k]: v }));
     if (errors[k]) setErrors(e => { const n = { ...e }; delete n[k]; return n; });
@@ -74,8 +80,7 @@ export default function ApplicationForm() {
 
   const handlePhoneBlur = () => {
     if (form.phone.trim()) {
-      const cleanPhone = form.phone.replace(/[-\s()]+/g, '');
-      if (!/^(?:\+91|91|0)?[6-9]\d{9}$/.test(cleanPhone)) {
+      if (!/^[6-9]\d{9}$/.test(form.phone.trim())) {
         setErrors(prev => ({ ...prev, phone: 'Invalid phone number' }));
       }
     }
@@ -103,8 +108,7 @@ export default function ApplicationForm() {
     if (!form.phone.trim()) {
       e.phone = 'Phone number is required';
     } else {
-      const cleanPhone = form.phone.replace(/[-\s()]+/g, '');
-      if (!/^(?:\+91|91|0)?[6-9]\d{9}$/.test(cleanPhone)) {
+      if (!/^[6-9]\d{9}$/.test(form.phone.trim())) {
         e.phone = 'Invalid phone number';
       }
     }
@@ -250,7 +254,7 @@ export default function ApplicationForm() {
                   value={form.phone}
                   onChange={e => upd('phone', e.target.value)}
                   onBlur={handlePhoneBlur}
-                  maxLength={15}
+                  maxLength={10}
                 />
               </div>
               {errors.phone && <span className="field-error-msg">{errors.phone}</span>}

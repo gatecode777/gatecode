@@ -20,7 +20,17 @@ const Register = () => {
   const router = useRouter();
 
   const upd = (k, v) => {
-    setForm(f => ({ ...f, [k]: v }));
+    let finalVal = v;
+    if (k === 'phone' && typeof v === 'string') {
+      let digits = v.replace(/\D/g, '');
+      if (digits.startsWith('91') && digits.length > 10) {
+        digits = digits.substring(2);
+      } else if (digits.startsWith('0') && digits.length > 10) {
+        digits = digits.substring(1);
+      }
+      finalVal = digits.slice(0, 10);
+    }
+    setForm(f => ({ ...f, [k]: finalVal }));
     if (errors[k]) setErrors(e => { const n = { ...e }; delete n[k]; return n; });
   };
 
@@ -31,8 +41,7 @@ const Register = () => {
     if (!form.phone.trim()) {
       e.phone = 'Phone number is required';
     } else {
-      const cleanPhone = form.phone.replace(/[-\s()]+/g, '');
-      if (!/^(?:\+91|91|0)?[6-9]\d{9}$/.test(cleanPhone)) {
+      if (!/^[6-9]\d{9}$/.test(form.phone.trim())) {
         e.phone = 'Invalid phone number';
       }
     }
@@ -96,6 +105,7 @@ const Register = () => {
               className="input-field"
               value={form.phone}
               onChange={e => upd('phone', e.target.value)}
+              maxLength={10}
               required
             />
           </div>
