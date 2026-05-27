@@ -19,7 +19,7 @@ export async function POST(req: Request) {
 Your primary role is to answer user queries about Gatecode Technologies, our services, company background, and careers.
 
 About Gatecode Technologies:
-- We are a premier technology consulting and digital solution agency based in New Delhi, India.
+- We are a premier technology consulting and digital solution agency based in Jaipur, India.
 - Contact Details: Phone: +91 8502888838, +91 8502888839. Email: info@gatecode.in / support@gatecode.in.
 - Services we offer:
   1. Web Development (Custom websites, CMS, system integrations, CRM)
