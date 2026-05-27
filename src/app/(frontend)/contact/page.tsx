@@ -38,7 +38,7 @@ const ContactInfo = () => {
     {
       icon: <FiMapPin />,
       title: 'Visit Us',
-      details: ['Gatecode Technologies Pvt. Ltd.', 'New Delhi, India']
+      details: ['Gatecode Technologies Pvt. Ltd.', 'Jaipur, India']
     },
     {
       icon: <FiClock />,
