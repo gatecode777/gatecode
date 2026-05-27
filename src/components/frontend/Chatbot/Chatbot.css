@@ -200,12 +200,14 @@
 }
 
 .chat-bubble {
-  max-width: 80%;
+  max-width: 85%;
   padding: 12px 16px;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.6;
   border-radius: 18px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  white-space: pre-wrap;
+  word-break: break-word;
 }
 
 .user-bubble {
@@ -221,6 +223,58 @@
   border-bottom-left-radius: 4px;
   border: 1px solid #e2e8f0;
   font-weight: 400;
+}
+
+/* Beautiful formatted markdown elements inside bot responses */
+.formatted-bot-response {
+  display: flex;
+  flex-direction: column;
+}
+
+.chatbot-p {
+  margin: 0 0 12px 0;
+}
+
+.chatbot-p:last-child {
+  margin-bottom: 0;
+}
+
+.chatbot-ol, .chatbot-ul {
+  margin: 8px 0 12px 0;
+  padding-left: 20px;
+}
+
+.chatbot-ol:last-child, .chatbot-ul:last-child {
+  margin-bottom: 0;
+}
+
+.chatbot-li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.chatbot-li:last-child {
+  margin-bottom: 0;
+}
+
+.chatbot-li strong, .chatbot-p strong {
+  color: #0f766e;
+  font-weight: 700;
+}
+
+/* Premium links for phone, emails, and URLs */
+.chatbot-link {
+  color: #0d9488;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px dashed rgba(13, 148, 136, 0.4);
+  transition: all 0.2s ease;
+}
+
+.chatbot-link:hover {
+  color: #0f766e;
+  border-bottom-style: solid;
+  border-bottom-color: #0f766e;
 }
 
 /* Typing Dots Loader styling */
