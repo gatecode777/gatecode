@@ -10,7 +10,30 @@ import '@/components/frontend/WebDeveloper/IntroText.css';
 import '@/components/frontend/WebDeveloper/WhatWeOffer.css';
 import '@/components/frontend/WebDeveloper/WhyChoose.css';
 import '@/components/frontend/WebDeveloper/DevelopmentProcess.css';
-import '@/components/frontend/WebDeveloper/Technologies.css';
+import '@/components/frontend/WebDeveloper/TechnologiesWeUse.css';
+import {
+    FaShoppingCart,
+    FaEdit,
+    FaCode,
+    FaCreditCard,
+    FaShopify,
+    FaWordpress,
+    FaBriefcase,
+    FaTools,
+    FaHtml5,
+    FaCss3Alt,
+    FaJs,
+    FaReact,
+    FaPhp,
+    FaNodeJs,
+    FaPaypal,
+    FaLink,
+    FaCogs
+} from 'react-icons/fa';
+import {
+    SiWoocommerce,
+    SiStripe
+} from 'react-icons/si';
 
 // ==================== HeroSectionWD Component (Updated for E-Commerce & CMS) ====================
 const HeroSectionWD = () => {
@@ -57,8 +80,8 @@ const IntroText = () => {
     return (
         <section className="intro-container">
             <p className="intro-text">
-                At Gatecode Technologies Pvt. Ltd., we specialize in building high-performance e-commerce websites and flexible CMS solutions tailored to your business needs. 
-                Whether you want to launch an online store or manage your website content without technical knowledge, we provide secure, scalable, and easy-to-use solutions 
+                At Gatecode Technologies Pvt. Ltd., we specialize in building high-performance e-commerce websites and flexible CMS solutions tailored to your business needs.
+                Whether you want to launch an online store or manage your website content without technical knowledge, we provide secure, scalable, and easy-to-use solutions
                 that help you stay ahead in the digital market.
             </p>
         </section>
@@ -246,35 +269,68 @@ const WhyChoose = () => {
 };
 
 // ==================== DevelopmentProcess Component (Updated for E-Commerce & CMS) ====================
-const processSteps = [
-    "Requirement Analysis",
-    "UI/UX Design",
-    "Development",
-    "Testing",
-    "Launch",
-    "Support",
-];
+// const processSteps = [
+//     "Requirement Analysis",
+//     "UI/UX Design",
+//     "Development",
+//     "Testing",
+//     "Launch",
+//     "Support",
+// ];
+
+// const DevelopmentProcess = () => {
+//     return (
+//         <section className="development-section">
+//             <div className="development-heading">
+//                 <h2>
+//                     OUR <span>DEVELOPMENT PROCESS</span>
+//                 </h2>
+//                 <div className="development-line"></div>
+//             </div>
+
+//             <div className="process-wrapper">
+//                 <div className="process-line-horizontal"></div>
+
+//                 <div className="process-grid">
+//                     {processSteps.map((step, index) => (
+//                         <div className="process-card" key={index}>
+//                             <div className="vertical-drop-line"></div>
+//                             <h3>{step}</h3>
+//                         </div>
+//                     ))}
+//                 </div>
+//             </div>
+//         </section>
+//     );
+// };
 
 const DevelopmentProcess = () => {
     return (
-        <section className="development-section">
-            <div className="development-heading">
-                <h2>
-                    OUR <span>DEVELOPMENT PROCESS</span>
-                </h2>
-                <div className="development-line"></div>
+        <section className="dev-process-section">
+            <div className="dev-process-heading">
+                <h2>Our <span>Development Process</span></h2>
+                <div className="dev-process-divider" />
             </div>
-
-            <div className="process-wrapper">
-                <div className="process-line-horizontal"></div>
-
-                <div className="process-grid">
-                    {processSteps.map((step, index) => (
-                        <div className="process-card" key={index}>
-                            <div className="vertical-drop-line"></div>
-                            <h3>{step}</h3>
-                        </div>
-                    ))}
+            <div className="dev-process-body">
+                <div className="dev-process-box">
+                    {/* Desktop video (hidden on ≤426px) */}
+                    <video
+                        className="dev-video-desktop"
+                        src="/videos/expertise_video.mp4"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                    />
+                    {/* Mobile video shown only on ≤426px */}
+                    <video
+                        className="dev-video-mobile"
+                        src="/videos/1st.mp4"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                    />
                 </div>
             </div>
         </section>
@@ -282,47 +338,84 @@ const DevelopmentProcess = () => {
 };
 
 // ==================== Technologies Component (Updated with content from image) ====================
-const technologies = [
+interface TechnologyItem {
+    name: string;
+    icon: React.ReactNode;
+}
+
+interface TechnologyCategory {
+    title: string;
+    icon: React.ReactNode;
+    items: TechnologyItem[];
+}
+
+const technologies: TechnologyCategory[] = [
     {
         title: "E-Commerce Platforms",
-        items: ["Shopify", "WooCommerce", "Custom E-Commerce Solutions"],
+        icon: <FaShoppingCart />,
+        items: [
+            { name: "Shopify", icon: <FaShopify style={{ color: '#7AB55C' }} /> },
+            { name: "WooCommerce", icon: <SiWoocommerce style={{ color: '#96588A' }} /> },
+            { name: "Custom E-Commerce Solutions", icon: <FaBriefcase style={{ color: '#0d9488' }} /> },
+        ],
     },
     {
         title: "CMS Platforms",
-        items: ["WordPress", "Custom CMS Development"],
+        icon: <FaEdit />,
+        items: [
+            { name: "WordPress", icon: <FaWordpress style={{ color: '#21759B' }} /> },
+            { name: "Custom CMS Development", icon: <FaTools style={{ color: '#5a8a8a' }} /> },
+        ],
     },
     {
         title: "Technologies",
-        items: ["HTML5", "CSS3", "JavaScript", "React.js", "PHP", "Node.js"],
+        icon: <FaCode />,
+        items: [
+            { name: "HTML5", icon: <FaHtml5 style={{ color: '#E34F26' }} /> },
+            { name: "CSS3", icon: <FaCss3Alt style={{ color: '#1572B6' }} /> },
+            { name: "JavaScript", icon: <FaJs style={{ color: '#F7DF1E', backgroundColor: '#000', borderRadius: '2px' }} /> },
+            { name: "React.js", icon: <FaReact style={{ color: '#61DAFB' }} /> },
+            { name: "PHP", icon: <FaPhp style={{ color: '#777BB4' }} /> },
+            { name: "Node.js", icon: <FaNodeJs style={{ color: '#339933' }} /> },
+        ],
     },
     {
         title: "Payment & Integration Tools",
-        items: ["Razorpay", "Stripe", "PayPal", "API Integrations"],
+        icon: <FaCreditCard />,
+        items: [
+            { name: "Razorpay", icon: <FaCreditCard style={{ color: '#0d9488' }} /> },
+            { name: "Stripe", icon: <SiStripe style={{ color: '#635BFF' }} /> },
+            { name: "PayPal", icon: <FaPaypal style={{ color: '#003087' }} /> },
+            { name: "REST APIs", icon: <FaLink style={{ color: '#0d9488' }} /> },
+            { name: "API Integrations", icon: <FaCogs style={{ color: '#5a8a8a' }} /> },
+        ],
     },
 ];
 
-const Technologies = () => {
+const TechnologiesWeUse: React.FC = () => {
     return (
-        <section className="technologies-section">
-            <div className="technologies-heading">
-                <h2>
-                    <span>TECHNOLOGIES</span> WE USE
-                </h2>
-                <div className="technologies-line"></div>
-            </div>
+        <section className="tech-section">
+            <h2 className="tech-title">
+                <span className="tech-title-light">TECHNOLOGIES</span> WE USE
+            </h2>
+            <div className="tech-divider"></div>
 
-            <div className="technologies-box">
-                <div className="technologies-grid">
-                    {technologies.map((tech, index) => (
-                        <div className="technology-column" key={index}>
-                            <div className="column-header">
-                                <h3>{tech.title}</h3>
+            <div className="tech-scroll-wrapper">
+                <div className="tech-grid">
+                    {technologies.map((category, index) => (
+                        <div key={index} className="tech-category">
+                            <div className="tech-category-header">
+                                <span className="tech-category-icon">{category.icon}</span>
+                                <h3 className="tech-category-title">{category.title}</h3>
                             </div>
-                            <div className="column-content">
-                                {tech.items.map((item, i) => (
-                                    <p key={i}>{item}</p>
+                            <ul className="tech-list">
+                                {category.items.map((item, itemIndex) => (
+                                    <li key={itemIndex} className="tech-item">
+                                        <span className="tech-item-icon">{item.icon}</span>
+                                        <span className="tech-item-name">{item.name}</span>
+                                    </li>
                                 ))}
-                            </div>
+                            </ul>
                         </div>
                     ))}
                 </div>
@@ -344,7 +437,7 @@ const ECommerceCmsPage = () => {
             <WhatWeOffer />
             <WhyChoose />
             <DevelopmentProcess />
-            <Technologies />
+            <TechnologiesWeUse />
             <TSlider />
             <ContactSection />
         </div>

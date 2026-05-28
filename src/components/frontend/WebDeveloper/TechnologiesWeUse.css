@@ -1,0 +1,170 @@
+.tech-section {
+  width: 100%;
+  /* max-width: 1200px; */
+  /* margin: 0 auto; */
+  padding: 60px 120px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+}
+
+.tech-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 4px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.tech-title-light {
+  color: #6b9e9e;
+  font-weight: 400;
+}
+
+.tech-divider {
+  width: 60px;
+  height: 2px;
+  background-color: #6b9e9e;
+  margin: 0 auto 40px auto;
+}
+
+/* Scroll wrapper for small screens */
+.tech-scroll-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #6b9e9e #e0e0e0;
+  padding-bottom: 10px;
+}
+
+.tech-scroll-wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+
+.tech-scroll-wrapper::-webkit-scrollbar-track {
+  background: #e0e0e0;
+  border-radius: 3px;
+}
+
+.tech-scroll-wrapper::-webkit-scrollbar-thumb {
+  background: #6b9e9e;
+  border-radius: 3px;
+}
+
+.tech-grid {
+  display: flex;
+  width: 100%;
+  gap: 30px;
+  justify-content: center;
+}
+
+.tech-category {
+  flex: 1;
+  min-width: 200px;
+  max-width: 320px;
+}
+
+.tech-category {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.tech-category-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  background: linear-gradient(135deg, #6b9e9e, #5a8a8a);
+  color: #fff;
+}
+
+.tech-category-icon {
+  font-size: 1.2rem;
+}
+
+.tech-category-title {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.tech-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s ease;
+}
+
+.tech-item:last-child {
+  border-bottom: none;
+}
+
+.tech-item:hover {
+  background-color: #f5faf9;
+}
+
+.tech-item-icon {
+  font-size: 1rem;
+  width: 22px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.tech-item-name {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.tech-category-icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: block;
+}
+
+.tech-item-icon svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .tech-grid {
+    min-width: max-content;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .tech-section {
+    padding: 40px 12px;
+  }
+
+  .tech-title {
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+  }
+
+  .tech-grid {
+    min-width: max-content;
+    gap: 20px;
+  }
+
+  .scroll-to-top {
+    bottom: 45px !important;
+    right: 19px !important;
+    display: block !important;
+  }
+}

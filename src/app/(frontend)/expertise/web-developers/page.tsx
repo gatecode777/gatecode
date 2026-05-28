@@ -10,7 +10,33 @@ import '@/components/frontend/WebDeveloper/IntroText.css';
 import '@/components/frontend/WebDeveloper/WhatWeOffer.css';
 import '@/components/frontend/WebDeveloper/WhyChoose.css';
 import '@/components/frontend/WebDeveloper/DevelopmentProcess.css';
-import '@/components/frontend/WebDeveloper/Technologies.css';
+import '@/components/frontend/WebDeveloper/TechnologiesWeUse.css';
+import {
+    FaCode,
+    FaServer,
+    FaLaptopCode,
+    FaDatabase,
+    FaTools,
+    FaHtml5,
+    FaCss3Alt,
+    FaJs,
+    FaBootstrap,
+    FaNodeJs,
+    FaPhp,
+    FaPython,
+    FaWordpress,
+    FaShopify,
+    FaGitAlt,
+    FaGithub,
+    FaFigma,
+    FaLink
+} from 'react-icons/fa';
+import {
+    SiTailwindcss,
+    SiMysql,
+    SiMongodb,
+    SiPostgresql
+} from 'react-icons/si';
 
 // ==================== HeroSectionWD Component ====================
 const HeroSectionWD = () => {
@@ -247,87 +273,214 @@ const WhyChoose = () => {
 };
 
 // ==================== DevelopmentProcess Component ====================
-const processSteps = [
-    "Requirement & Strategy",
-    "UI/UX Design",
-    "Development",
-    "Testing",
-    "Launch",
-    "Support",
-];
+// const processSteps = [
+//     "Requirement & Strategy",
+//     "UI/UX Design",
+//     "Development",
+//     "Testing",
+//     "Launch",
+//     "Support",
+// ];
+
+// const DevelopmentProcess = () => {
+//     return (
+//         <section className="development-section">
+//             <div className="development-heading">
+//                 <h2>
+//                     OUR <span>DEVELOPMENT PROCESS</span>
+//                 </h2>
+//                 <div className="development-line"></div>
+//             </div>
+
+//             <div className="process-wrapper">
+//                 <div className="process-line-horizontal"></div>
+
+//                 <div className="process-grid">
+//                     {processSteps.map((step, index) => (
+//                         <div className="process-card" key={index}>
+//                             <div className="vertical-drop-line"></div>
+//                             <h3>{step}</h3>
+//                         </div>
+//                     ))}
+//                 </div>
+//             </div>
+//         </section>
+//     );
+// };
 
 const DevelopmentProcess = () => {
     return (
-        <section className="development-section">
-            <div className="development-heading">
-                <h2>
-                    OUR <span>DEVELOPMENT PROCESS</span>
-                </h2>
-                <div className="development-line"></div>
+        <section className="dev-process-section">
+            <div className="dev-process-heading">
+                <h2>Our <span>Development Process</span></h2>
+                <div className="dev-process-divider" />
             </div>
-
-            <div className="process-wrapper">
-                <div className="process-line-horizontal"></div>
-
-                <div className="process-grid">
-                    {processSteps.map((step, index) => (
-                        <div className="process-card" key={index}>
-                            <div className="vertical-drop-line"></div>
-                            <h3>{step}</h3>
-                        </div>
-                    ))}
+            <div className="dev-process-body">
+                <div className="dev-process-box">
+                    {/* Desktop & tablet video (hidden on ≤425px) */}
+                    <video
+                        className="dev-video-desktop"
+                        src="/videos/expertise_video.mp4"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                    />
+                    {/* Mobile video shown only on ≤425px */}
+                    <video
+                        className="dev-video-mobile"
+                        src="/videos/1st.mp4"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                    />
                 </div>
             </div>
         </section>
     );
 };
 
+
 // ==================== Technologies Component ====================
-const technologies = [
+// const technologies = [
+//     {
+//         title: "Frontend",
+//         items: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Tailwind CSS"],
+//     },
+//     {
+//         title: "Backend",
+//         items: ["Node.js", "PHP", "Python"],
+//     },
+//     {
+//         title: "CMS & Platforms",
+//         items: ["WordPress", "Shopify"],
+//     },
+//     {
+//         title: "Database",
+//         items: ["MySQL", "MongoDB", "Postgresql"],
+//     },
+//     {
+//         title: "Tools",
+//         items: ["Git", "GitHub", "Figma", "APIs Integration"],
+//     },
+// ];
+
+// const Technologies = () => {
+//     return (
+//         <section className="technologies-section">
+//             <div className="technologies-heading">
+//                 <h2>
+//                     <span>TECHNOLOGIES</span> WE USE
+//                 </h2>
+//                 <div className="technologies-line"></div>
+//             </div>
+
+//             <div className="technologies-box">
+//                 <div className="technologies-grid">
+//                     {technologies.map((tech, index) => (
+//                         <div className="technology-column" key={index}>
+//                             <div className="column-header">
+//                                 <h3>{tech.title}</h3>
+//                             </div>
+//                             <div className="column-content">
+//                                 {tech.items.map((item, i) => (
+//                                     <p key={i}>{item}</p>
+//                                 ))}
+//                             </div>
+//                         </div>
+//                     ))}
+//                 </div>
+//             </div>
+//         </section>
+//     );
+// };
+
+interface TechnologyItem {
+    name: string;
+    icon: React.ReactNode;
+}
+
+interface TechnologyCategory {
+    title: string;
+    icon: React.ReactNode;
+    items: TechnologyItem[];
+}
+
+const technologies: TechnologyCategory[] = [
     {
         title: "Frontend",
-        items: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Tailwind CSS"],
+        icon: <FaCode />,
+        items: [
+            { name: "HTML5", icon: <FaHtml5 style={{ color: '#E34F26' }} /> },
+            { name: "CSS3", icon: <FaCss3Alt style={{ color: '#1572B6' }} /> },
+            { name: "JavaScript", icon: <FaJs style={{ color: '#F7DF1E', backgroundColor: '#000', borderRadius: '2px' }} /> },
+            { name: "Bootstrap", icon: <FaBootstrap style={{ color: '#7952B3' }} /> },
+            { name: "Tailwind CSS", icon: <SiTailwindcss style={{ color: '#06B6D4' }} /> },
+        ],
     },
     {
         title: "Backend",
-        items: ["Node.js", "PHP", "Python"],
+        icon: <FaServer />,
+        items: [
+            { name: "Node.js", icon: <FaNodeJs style={{ color: '#339933' }} /> },
+            { name: "PHP", icon: <FaPhp style={{ color: '#777BB4' }} /> },
+            { name: "Python", icon: <FaPython style={{ color: '#3776AB' }} /> },
+        ],
     },
     {
         title: "CMS & Platforms",
-        items: ["WordPress", "Shopify"],
+        icon: <FaLaptopCode />,
+        items: [
+            { name: "WordPress", icon: <FaWordpress style={{ color: '#21759B' }} /> },
+            { name: "Shopify", icon: <FaShopify style={{ color: '#7AB55C' }} /> },
+        ],
     },
     {
         title: "Database",
-        items: ["MySQL", "MongoDB", "Postgresql"],
+        icon: <FaDatabase />,
+        items: [
+            { name: "MySQL", icon: <SiMysql style={{ color: '#4479A1' }} /> },
+            { name: "MongoDB", icon: <SiMongodb style={{ color: '#47A248' }} /> },
+            { name: "Postgresql", icon: <SiPostgresql style={{ color: '#4169E1' }} /> },
+        ],
     },
     {
         title: "Tools",
-        items: ["Git", "GitHub", "Figma", "APIs Integration"],
+        icon: <FaTools />,
+        items: [
+            { name: "Git", icon: <FaGitAlt style={{ color: '#F05032' }} /> },
+            { name: "GitHub", icon: <FaGithub style={{ color: '#181717' }} /> },
+            { name: "Figma", icon: <FaFigma style={{ color: '#F24E1E' }} /> },
+            { name: "APIs Integration", icon: <FaLink style={{ color: '#0d9488' }} /> },
+        ],
     },
 ];
 
-const Technologies = () => {
+const TechnologiesWeUse: React.FC = () => {
     return (
-        <section className="technologies-section">
-            <div className="technologies-heading">
-                <h2>
-                    <span>TECHNOLOGIES</span> WE USE
-                </h2>
-                <div className="technologies-line"></div>
-            </div>
+        <section className="tech-section">
+            <h2 className="tech-title">
+                <span className="tech-title-light">TECHNOLOGIES</span> WE USE
+            </h2>
+            <div className="tech-divider"></div>
 
-            <div className="technologies-box">
-                <div className="technologies-grid">
-                    {technologies.map((tech, index) => (
-                        <div className="technology-column" key={index}>
-                            <div className="column-header">
-                                <h3>{tech.title}</h3>
+            <div className="tech-scroll-wrapper">
+                <div className="tech-grid">
+                    {technologies.map((category, index) => (
+                        <div key={index} className="tech-category">
+                            <div className="tech-category-header">
+                                <span className="tech-category-icon">{category.icon}</span>
+                                <h3 className="tech-category-title">{category.title}</h3>
                             </div>
-                            <div className="column-content">
-                                {tech.items.map((item, i) => (
-                                    <p key={i}>{item}</p>
+                            <ul className="tech-list">
+                                {category.items.map((item, itemIndex) => (
+                                    <li key={itemIndex} className="tech-item">
+                                        <span className="tech-item-icon">{item.icon}</span>
+                                        <span className="tech-item-name">{item.name}</span>
+                                    </li>
                                 ))}
-                            </div>
+                            </ul>
                         </div>
                     ))}
                 </div>
@@ -335,6 +488,7 @@ const Technologies = () => {
         </section>
     );
 };
+
 
 // ==================== Main Page Component ====================
 const WebDevelopmentPage = () => {
@@ -349,7 +503,7 @@ const WebDevelopmentPage = () => {
             <WhatWeOffer />
             <WhyChoose />
             <DevelopmentProcess />
-            <Technologies />
+            <TechnologiesWeUse />
             <TSlider />
             <ContactSection />
         </div>

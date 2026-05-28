@@ -11,7 +11,29 @@ import '@/components/frontend/WebDeveloper/IntroText.css';
 import '@/components/frontend/WebDeveloper/WhatWeOffer.css';
 import '@/components/frontend/WebDeveloper/WhyChoose.css';
 import '@/components/frontend/WebDeveloper/DevelopmentProcess.css';
-import '@/components/frontend/WebDeveloper/Technologies.css';
+import '@/components/frontend/WebDeveloper/TechnologiesWeUse.css';
+import {
+    FaMobileAlt,
+    FaServer,
+    FaDatabase,
+    FaTools,
+    FaAndroid,
+    FaApple,
+    FaReact,
+    FaNodeJs,
+    FaPhp,
+    FaPython,
+    FaGitAlt,
+    FaGithub,
+    FaCreditCard,
+    FaLink
+} from 'react-icons/fa';
+import {
+    SiFlutter,
+    SiMysql,
+    SiMongodb,
+    SiFirebase
+} from 'react-icons/si';
 
 // ==================== HeroSectionWD Component (Updated for App Development) ====================
 const HeroSectionWD = () => {
@@ -58,9 +80,9 @@ const IntroText = () => {
     return (
         <section className="intro-container">
             <p className="intro-text">
-                At Gatecode Technologies Pvt. Ltd., we create innovative and user-friendly mobile applications tailored to your business needs. 
-                Our focus is on performance, usability, and scalability to ensure your app stands out in the competitive market. 
-                Whether you need an Android app, iOS app, or cross-platform solution, we deliver secure and high-quality applications 
+                At Gatecode Technologies Pvt. Ltd., we create innovative and user-friendly mobile applications tailored to your business needs.
+                Our focus is on performance, usability, and scalability to ensure your app stands out in the competitive market.
+                Whether you need an Android app, iOS app, or cross-platform solution, we deliver secure and high-quality applications
                 that help you connect with your audience effectively.
             </p>
         </section>
@@ -248,35 +270,68 @@ const WhyChoose = () => {
 };
 
 // ==================== DevelopmentProcess Component (Updated for App Development) ====================
-const processSteps = [
-    "Requirement Analysis",
-    "UI/UX Design",
-    "Development",
-    "Testing",
-    "Launch",
-    "Support",
-];
+// const processSteps = [
+//     "Requirement Analysis",
+//     "UI/UX Design",
+//     "Development",
+//     "Testing",
+//     "Launch",
+//     "Support",
+// ];
+
+// const DevelopmentProcess = () => {
+//     return (
+//         <section className="development-section">
+//             <div className="development-heading">
+//                 <h2>
+//                     OUR <span>APP DEVELOPMENT PROCESS</span>
+//                 </h2>
+//                 <div className="development-line"></div>
+//             </div>
+
+//             <div className="process-wrapper">
+//                 <div className="process-line-horizontal"></div>
+
+//                 <div className="process-grid">
+//                     {processSteps.map((step, index) => (
+//                         <div className="process-card" key={index}>
+//                             <div className="vertical-drop-line"></div>
+//                             <h3>{step}</h3>
+//                         </div>
+//                     ))}
+//                 </div>
+//             </div>
+//         </section>
+//     );
+// };
 
 const DevelopmentProcess = () => {
     return (
-        <section className="development-section">
-            <div className="development-heading">
-                <h2>
-                    OUR <span>APP DEVELOPMENT PROCESS</span>
-                </h2>
-                <div className="development-line"></div>
+        <section className="dev-process-section">
+            <div className="dev-process-heading">
+                <h2>Our <span>Development Process</span></h2>
+                <div className="dev-process-divider" />
             </div>
-
-            <div className="process-wrapper">
-                <div className="process-line-horizontal"></div>
-
-                <div className="process-grid">
-                    {processSteps.map((step, index) => (
-                        <div className="process-card" key={index}>
-                            <div className="vertical-drop-line"></div>
-                            <h3>{step}</h3>
-                        </div>
-                    ))}
+            <div className="dev-process-body">
+                <div className="dev-process-box">
+                    {/* Desktop video (hidden on ≤426px) */}
+                    <video
+                        className="dev-video-desktop"
+                        src="/videos/expertise_video.mp4"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                    />
+                    {/* Mobile video shown only on ≤426px */}
+                    <video
+                        className="dev-video-mobile"
+                        src="/videos/1st.mp4"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                    />
                 </div>
             </div>
         </section>
@@ -284,47 +339,83 @@ const DevelopmentProcess = () => {
 };
 
 // ==================== Technologies Component (Updated with content from image) ====================
-const technologies = [
+interface TechnologyItem {
+    name: string;
+    icon: React.ReactNode;
+}
+
+interface TechnologyCategory {
+    title: string;
+    icon: React.ReactNode;
+    items: TechnologyItem[];
+}
+
+const technologies: TechnologyCategory[] = [
     {
         title: "Mobile Development",
-        items: ["Kotlin (Android)", "Swift (iOS)", "Flutter", "React Native"],
+        icon: <FaMobileAlt />,
+        items: [
+            { name: "Kotlin (Android)", icon: <FaAndroid style={{ color: '#3DDC84' }} /> },
+            { name: "Swift (iOS)", icon: <FaApple style={{ color: '#000000' }} /> },
+            { name: "Flutter", icon: <SiFlutter style={{ color: '#02569B' }} /> },
+            { name: "React Native", icon: <FaReact style={{ color: '#61DAFB' }} /> },
+        ],
     },
     {
         title: "Backend Development",
-        items: ["Node.js", "PHP", "Python"],
+        icon: <FaServer />,
+        items: [
+            { name: "Node.js", icon: <FaNodeJs style={{ color: '#339933' }} /> },
+            { name: "PHP", icon: <FaPhp style={{ color: '#777BB4' }} /> },
+            { name: "Python", icon: <FaPython style={{ color: '#3776AB' }} /> },
+        ],
     },
     {
         title: "Database",
-        items: ["MySQL", "MongoDB", "Firebase"],
+        icon: <FaDatabase />,
+        items: [
+            { name: "MySQL", icon: <SiMysql style={{ color: '#4479A1' }} /> },
+            { name: "MongoDB", icon: <SiMongodb style={{ color: '#47A248' }} /> },
+            { name: "Firebase", icon: <SiFirebase style={{ color: '#FFCA28' }} /> },
+        ],
     },
     {
         title: "Tools",
-        items: ["Git", "GitHub", "Payment Gateway Integration", "REST APIs", "Firebase Services"],
+        icon: <FaTools />,
+        items: [
+            { name: "Git", icon: <FaGitAlt style={{ color: '#F05032' }} /> },
+            { name: "GitHub", icon: <FaGithub style={{ color: '#181717' }} /> },
+            { name: "Payment Gateway Integration", icon: <FaCreditCard style={{ color: '#0d9488' }} /> },
+            { name: "REST APIs", icon: <FaLink style={{ color: '#0d9488' }} /> },
+            { name: "Firebase Services", icon: <SiFirebase style={{ color: '#FFCA28' }} /> },
+        ],
     },
 ];
 
-const Technologies = () => {
+const TechnologiesWeUse: React.FC = () => {
     return (
-        <section className="technologies-section">
-            <div className="technologies-heading">
-                <h2>
-                    <span>TECHNOLOGIES</span> WE USE
-                </h2>
-                <div className="technologies-line"></div>
-            </div>
+        <section className="tech-section">
+            <h2 className="tech-title">
+                <span className="tech-title-light">TECHNOLOGIES</span> WE USE
+            </h2>
+            <div className="tech-divider"></div>
 
-            <div className="technologies-box">
-                <div className="technologies-grid">
-                    {technologies.map((tech, index) => (
-                        <div className="technology-column" key={index}>
-                            <div className="column-header">
-                                <h3>{tech.title}</h3>
+            <div className="tech-scroll-wrapper">
+                <div className="tech-grid">
+                    {technologies.map((category, index) => (
+                        <div key={index} className="tech-category">
+                            <div className="tech-category-header">
+                                <span className="tech-category-icon">{category.icon}</span>
+                                <h3 className="tech-category-title">{category.title}</h3>
                             </div>
-                            <div className="column-content">
-                                {tech.items.map((item, i) => (
-                                    <p key={i}>{item}</p>
+                            <ul className="tech-list">
+                                {category.items.map((item, itemIndex) => (
+                                    <li key={itemIndex} className="tech-item">
+                                        <span className="tech-item-icon">{item.icon}</span>
+                                        <span className="tech-item-name">{item.name}</span>
+                                    </li>
                                 ))}
-                            </div>
+                            </ul>
                         </div>
                     ))}
                 </div>
@@ -346,7 +437,7 @@ const AppDevelopmentPage = () => {
             <WhatWeOffer />
             <WhyChoose />
             <DevelopmentProcess />
-            <Technologies />
+            <TechnologiesWeUse />
             <TSlider />
             <ContactSection />
         </div>

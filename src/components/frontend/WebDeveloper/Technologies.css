@@ -6,8 +6,6 @@
   overflow-x: hidden;
 }
 
-
-
 .technologies-heading {
   text-align: center;
   margin-bottom: 50px;
@@ -33,24 +31,16 @@
   margin: 15px auto 0;
 }
 
-
-
 .technologies-box {
   width: 100%;
   max-width: 1310px;
   min-height: 260px;
-
   margin: 0 auto;
-
   border: 1px solid #151414;
-
   background: transparent;
-
   box-sizing: border-box;
-
   overflow: hidden;
 }
-
 
 .technologies-grid {
   display: flex;
@@ -67,19 +57,6 @@
   border-right: none;
 }
 
-
-
-.technology-column {
-  border-right: 1px solid #151414;
-  min-height: 260px;
-}
-
-.technology-column:last-child {
-  border-right: none;
-}
-
-
-
 .column-header {
   border-bottom: 1px solid #151414;
   padding: 18px 16px;
@@ -92,8 +69,6 @@
   color: #151414;
   margin: 0;
 }
-
-
 
 .column-content {
   padding: 16px;
@@ -124,8 +99,6 @@
   background: #999;
   border-radius: 10px;
 }
-
-
 
 @media (max-width: 1024px) {
   .technologies-section {
@@ -162,8 +135,6 @@
     line-height: 1.8;
   }
 }
-
-
 
 @media (max-width: 768px) {
   .technologies-section {
@@ -210,8 +181,6 @@
   }
 }
 
-
-
 @media (max-width: 426px) {
  .technologies-section {
     padding: 40px 10px;
@@ -224,7 +193,6 @@
 
   .technologies-grid {
     display: flex;
-    
   }
 
   .technology-column {
@@ -257,9 +225,6 @@
     line-height: 1.8;
   }
 }
-
-
-
 
 @media (max-width: 375px) {
   .technologies-section {
@@ -295,8 +260,6 @@
     line-height: 1.5;
   }
 }
-
-
 
 @media (max-width: 320px) {
   .technologies-section {
