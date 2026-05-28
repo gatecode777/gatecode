@@ -10,7 +10,17 @@ import '@/components/frontend/WebDeveloper/IntroText.css';
 import '@/components/frontend/WebDeveloper/WhatWeOffer.css';
 import '@/components/frontend/WebDeveloper/WhyChoose.css';
 import '@/components/frontend/WebDeveloper/DevelopmentProcess.css';
-import '@/components/frontend/WebDeveloper/Technologies.css';
+import '@/components/frontend/WebDeveloper/TechnologiesWeUse.css';
+import { 
+  FaPalette, 
+  FaMagic, 
+  FaFigma, 
+  FaVectorSquare, 
+  FaCamera 
+} from 'react-icons/fa';
+import { 
+  SiCanva 
+} from 'react-icons/si';
 
 // ==================== HeroSectionWD Component (Updated for Graphic Designer) ====================
 const HeroSectionWD = () => {
@@ -57,8 +67,8 @@ const IntroText = () => {
     return (
         <section className="intro-container">
             <p className="intro-text">
-                At Gatecode Technologies Pvt. Ltd., we bring your ideas to life with creative and impactful graphic design solutions. 
-                Our designers focus on creating visually appealing content that not only looks great but also communicates your brand message clearly. 
+                At Gatecode Technologies Pvt. Ltd., we bring your ideas to life with creative and impactful graphic design solutions.
+                Our designers focus on creating visually appealing content that not only looks great but also communicates your brand message clearly.
                 From branding to marketing materials, we design everything that helps your business stand out in a competitive market.
             </p>
         </section>
@@ -246,35 +256,68 @@ const WhyChoose = () => {
 };
 
 // ==================== DevelopmentProcess Component (Updated for Graphic Designer) ====================
-const processSteps = [
-    "Requirement & Idea Discussion",
-    "Concept Creation",
-    "Design Development",
-    "Review & Feedback",
-    "Revisions",
-    "Delivery",
-];
+// const processSteps = [
+//     "Requirement & Idea Discussion",
+//     "Concept Creation",
+//     "Design Development",
+//     "Review & Feedback",
+//     "Revisions",
+//     "Delivery",
+// ];
+
+// const DevelopmentProcess = () => {
+//     return (
+//         <section className="development-section">
+//             <div className="development-heading">
+//                 <h2>
+//                     OUR <span>DEVELOPMENT PROCESS</span>
+//                 </h2>
+//                 <div className="development-line"></div>
+//             </div>
+
+//             <div className="process-wrapper">
+//                 <div className="process-line-horizontal"></div>
+
+//                 <div className="process-grid">
+//                     {processSteps.map((step, index) => (
+//                         <div className="process-card" key={index}>
+//                             <div className="vertical-drop-line"></div>
+//                             <h3>{step}</h3>
+//                         </div>
+//                     ))}
+//                 </div>
+//             </div>
+//         </section>
+//     );
+// };
 
 const DevelopmentProcess = () => {
     return (
-        <section className="development-section">
-            <div className="development-heading">
-                <h2>
-                    OUR <span>DEVELOPMENT PROCESS</span>
-                </h2>
-                <div className="development-line"></div>
+        <section className="dev-process-section">
+            <div className="dev-process-heading">
+                <h2>Our <span>Development Process</span></h2>
+                <div className="dev-process-divider" />
             </div>
-
-            <div className="process-wrapper">
-                <div className="process-line-horizontal"></div>
-
-                <div className="process-grid">
-                    {processSteps.map((step, index) => (
-                        <div className="process-card" key={index}>
-                            <div className="vertical-drop-line"></div>
-                            <h3>{step}</h3>
-                        </div>
-                    ))}
+            <div className="dev-process-body">
+                <div className="dev-process-box">
+                    {/* Desktop video (hidden on ≤426px) */}
+                    <video
+                        className="dev-video-desktop"
+                        src="/videos/Graphic Designer_video.mp4"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                    />
+                    {/* Mobile video shown only on ≤426px */}
+                    <video
+                        className="dev-video-mobile"
+                        src="/videos/3rd.mp4"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                    />
                 </div>
             </div>
         </section>
@@ -282,39 +325,64 @@ const DevelopmentProcess = () => {
 };
 
 // ==================== Technologies Component (Updated with content from image) ====================
-const technologies = [
+interface TechnologyItem {
+    name: string;
+    icon: React.ReactNode;
+}
+
+interface TechnologyCategory {
+    title: string;
+    icon: React.ReactNode;
+    items: TechnologyItem[];
+}
+
+const technologies: TechnologyCategory[] = [
     {
         title: "Design Tools",
-        items: ["Adobe Photoshop", "Adobe Illustrator", "Adobe After Effects", "Canva"],
+        icon: <FaPalette />,
+        items: [
+            { name: "Adobe Photoshop", icon: <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '22px', height: '22px', backgroundColor: '#001E36', color: '#31A8FF', border: '1px solid #31A8FF', borderRadius: '4px', fontSize: '10px', fontWeight: 'bold', fontFamily: 'Inter, sans-serif', lineHeight: 1 }}>Ps</span> },
+            { name: "Adobe Illustrator", icon: <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '22px', height: '22px', backgroundColor: '#261300', color: '#FF9A00', border: '1px solid #FF9A00', borderRadius: '4px', fontSize: '10px', fontWeight: 'bold', fontFamily: 'Inter, sans-serif', lineHeight: 1 }}>Ai</span> },
+            { name: "Adobe After Effects", icon: <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '22px', height: '22px', backgroundColor: '#1D002B', color: '#D29BFF', border: '1px solid #D29BFF', borderRadius: '4px', fontSize: '10px', fontWeight: 'bold', fontFamily: 'Inter, sans-serif', lineHeight: 1 }}>Ae</span> },
+            { name: "Canva", icon: <SiCanva style={{ color: '#00C4CC' }} /> },
+            { name: "Adobe Premiere Pro", icon: <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '22px', height: '22px', backgroundColor: '#16002B', color: '#EA77FF', border: '1px solid #EA77FF', borderRadius: '4px', fontSize: '10px', fontWeight: 'bold', fontFamily: 'Inter, sans-serif', lineHeight: 1 }}>Pr</span> },
+        ],
     },
     {
         title: "Creative Tools",
-        items: ["Figma", "CorelDRAW"],
+        icon: <FaMagic />,
+        items: [
+            { name: "Figma", icon: <FaFigma style={{ color: '#F24E1E' }} /> },
+            { name: "CorelDraw", icon: <FaVectorSquare style={{ color: '#0d9488' }} /> },
+            { name: "RAW", icon: <FaCamera style={{ color: '#5a8a8a' }} /> },
+        ],
     },
 ];
 
-const Technologies = () => {
+const TechnologiesWeUse: React.FC = () => {
     return (
-        <section className="technologies-section">
-            <div className="technologies-heading">
-                <h2>
-                    <span>TECHNOLOGIES</span> WE USE
-                </h2>
-                <div className="technologies-line"></div>
-            </div>
+        <section className="tech-section">
+            <h2 className="tech-title">
+                <span className="tech-title-light">TECHNOLOGIES</span> WE USE
+            </h2>
+            <div className="tech-divider"></div>
 
-            <div className="technologies-box">
-                <div className="technologies-grid">
-                    {technologies.map((tech, index) => (
-                        <div className="technology-column" key={index}>
-                            <div className="column-header">
-                                <h3>{tech.title}</h3>
+            <div className="tech-scroll-wrapper">
+                <div className="tech-grid">
+                    {technologies.map((category, index) => (
+                        <div key={index} className="tech-category">
+                            <div className="tech-category-header">
+                                <span className="tech-category-icon">{category.icon}</span>
+                                <h3 className="tech-category-title">{category.title}</h3>
                             </div>
-                            <div className="column-content">
-                                {tech.items.map((item, i) => (
-                                    <p key={i}>{item}</p>
+                            <ul className="tech-list">
+                                {category.items.map((item, itemIndex) => (
+                                    <li key={itemIndex} className="tech-item">
+                                        <span className="tech-item-icon">{item.icon}</span>
+                                        <span className="tech-item-name">{item.name}</span>
+                                    </li>
                                 ))}
-                            </div>
+                            </ul>
                         </div>
                     ))}
                 </div>
@@ -336,7 +404,7 @@ const GraphicDesignerPage = () => {
             <WhatWeOffer />
             <WhyChoose />
             <DevelopmentProcess />
-            <Technologies />
+            <TechnologiesWeUse />
             <TSlider />
             <ContactSection />
         </div>

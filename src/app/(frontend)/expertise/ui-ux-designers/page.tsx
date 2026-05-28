@@ -10,7 +10,21 @@ import '@/components/frontend/WebDeveloper/IntroText.css';
 import '@/components/frontend/WebDeveloper/WhatWeOffer.css';
 import '@/components/frontend/WebDeveloper/WhyChoose.css';
 import '@/components/frontend/WebDeveloper/DevelopmentProcess.css';
-import '@/components/frontend/WebDeveloper/Technologies.css';
+import '@/components/frontend/WebDeveloper/TechnologiesWeUse.css';
+import { 
+  FaPalette, 
+  FaMobileAlt, 
+  FaUsers, 
+  FaFigma, 
+  FaPlay, 
+  FaGem,
+  FaPuzzlePiece
+} from 'react-icons/fa';
+import { 
+  SiSketch, 
+  SiInvision, 
+  SiNotion 
+} from 'react-icons/si';
 
 // ==================== HeroSectionWD Component (Updated for UI/UX Designer) ====================
 const HeroSectionWD = () => {
@@ -57,8 +71,8 @@ const IntroText = () => {
     return (
         <section className="intro-container">
             <p className="intro-text">
-                At Gatecode Technologies Pvt. Ltd., we design user-centric digital experiences that are visually appealing and highly functional. 
-                Our UI/UX designers focus on understanding user behavior, simplifying interactions, and creating designs that enhance engagement 
+                At Gatecode Technologies Pvt. Ltd., we design user-centric digital experiences that are visually appealing and highly functional.
+                Our UI/UX designers focus on understanding user behavior, simplifying interactions, and creating designs that enhance engagement
                 and drive results. From websites to mobile apps, we ensure every design delivers a seamless and meaningful user journey.
             </p>
         </section>
@@ -246,35 +260,68 @@ const WhyChoose = () => {
 };
 
 // ==================== DevelopmentProcess Component (Updated for UI/UX Designer) ====================
-const processSteps = [
-    "Research & Discovery",
-    "Wireframing",
-    "UI Design",
-    "Prototyping",
-    "Testing",
-    "Delivery",
-];
+// const processSteps = [
+//     "Research & Discovery",
+//     "Wireframing",
+//     "UI Design",
+//     "Prototyping",
+//     "Testing",
+//     "Delivery",
+// ];
+
+// const DevelopmentProcess = () => {
+//     return (
+//         <section className="development-section">
+//             <div className="development-heading">
+//                 <h2>
+//                     OUR <span>DEVELOPMENT PROCESS</span>
+//                 </h2>
+//                 <div className="development-line"></div>
+//             </div>
+
+//             <div className="process-wrapper">
+//                 <div className="process-line-horizontal"></div>
+
+//                 <div className="process-grid">
+//                     {processSteps.map((step, index) => (
+//                         <div className="process-card" key={index}>
+//                             <div className="vertical-drop-line"></div>
+//                             <h3>{step}</h3>
+//                         </div>
+//                     ))}
+//                 </div>
+//             </div>
+//         </section>
+//     );
+// };
 
 const DevelopmentProcess = () => {
     return (
-        <section className="development-section">
-            <div className="development-heading">
-                <h2>
-                    OUR <span>DEVELOPMENT PROCESS</span>
-                </h2>
-                <div className="development-line"></div>
+        <section className="dev-process-section">
+            <div className="dev-process-heading">
+                <h2>Our <span>Development Process</span></h2>
+                <div className="dev-process-divider" />
             </div>
-
-            <div className="process-wrapper">
-                <div className="process-line-horizontal"></div>
-
-                <div className="process-grid">
-                    {processSteps.map((step, index) => (
-                        <div className="process-card" key={index}>
-                            <div className="vertical-drop-line"></div>
-                            <h3>{step}</h3>
-                        </div>
-                    ))}
+            <div className="dev-process-body">
+                <div className="dev-process-box">
+                    {/* Desktop video (hidden on ≤426px) */}
+                    <video
+                        className="dev-video-desktop"
+                        src="/videos/UX Designer_video.mp4"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                    />
+                    {/* Mobile video shown only on ≤426px */}
+                    <video
+                        className="dev-video-mobile"
+                        src="/videos/2nd.mp4"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                    />
                 </div>
             </div>
         </section>
@@ -282,43 +329,69 @@ const DevelopmentProcess = () => {
 };
 
 // ==================== Technologies Component (Updated with content from image) ====================
-const technologies = [
+interface TechnologyItem {
+    name: string;
+    icon: React.ReactNode;
+}
+
+interface TechnologyCategory {
+    title: string;
+    icon: React.ReactNode;
+    items: TechnologyItem[];
+}
+
+const technologies: TechnologyCategory[] = [
     {
         title: "Design Tools",
-        items: ["Figma", "Adobe XD", "Sketch"],
+        icon: <FaPalette />,
+        items: [
+            { name: "Figma", icon: <FaFigma style={{ color: '#F24E1E' }} /> },
+            { name: "Adobe XD", icon: <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '22px', height: '22px', backgroundColor: '#2E001F', color: '#FF61F6', border: '1px solid #FF61F6', borderRadius: '4px', fontSize: '10px', fontWeight: 'bold', fontFamily: 'Inter, sans-serif', lineHeight: 1 }}>Xd</span> },
+            { name: "Sketch", icon: <SiSketch style={{ color: '#FDB300' }} /> },
+        ],
     },
     {
         title: "Prototyping Tools",
-        items: ["Figma Prototype", "InVision"],
+        icon: <FaMobileAlt />,
+        items: [
+            { name: "Figma Prototype", icon: <FaPlay style={{ color: '#0d9488' }} /> },
+            { name: "InVision", icon: <SiInvision style={{ color: '#FF3366' }} /> },
+        ],
     },
     {
         title: "Collaboration Tools",
-        items: ["Zeplin", "Notion"],
+        icon: <FaUsers />,
+        items: [
+            { name: "Zeplin", icon: <FaPuzzlePiece style={{ color: '#F2A530' }} /> },
+            { name: "Notion", icon: <SiNotion style={{ color: '#000000' }} /> },
+        ],
     },
 ];
 
-const Technologies = () => {
+const TechnologiesWeUse: React.FC = () => {
     return (
-        <section className="technologies-section">
-            <div className="technologies-heading">
-                <h2>
-                    <span>TECHNOLOGIES</span> WE USE
-                </h2>
-                <div className="technologies-line"></div>
-            </div>
+        <section className="tech-section">
+            <h2 className="tech-title">
+                <span className="tech-title-light">TECHNOLOGIES</span> WE USE
+            </h2>
+            <div className="tech-divider"></div>
 
-            <div className="technologies-box">
-                <div className="technologies-grid">
-                    {technologies.map((tech, index) => (
-                        <div className="technology-column" key={index}>
-                            <div className="column-header">
-                                <h3>{tech.title}</h3>
+            <div className="tech-scroll-wrapper">
+                <div className="tech-grid">
+                    {technologies.map((category, index) => (
+                        <div key={index} className="tech-category">
+                            <div className="tech-category-header">
+                                <span className="tech-category-icon">{category.icon}</span>
+                                <h3 className="tech-category-title">{category.title}</h3>
                             </div>
-                            <div className="column-content">
-                                {tech.items.map((item, i) => (
-                                    <p key={i}>{item}</p>
+                            <ul className="tech-list">
+                                {category.items.map((item, itemIndex) => (
+                                    <li key={itemIndex} className="tech-item">
+                                        <span className="tech-item-icon">{item.icon}</span>
+                                        <span className="tech-item-name">{item.name}</span>
+                                    </li>
                                 ))}
-                            </div>
+                            </ul>
                         </div>
                     ))}
                 </div>
@@ -340,7 +413,7 @@ const UxDesignerPage = () => {
             <WhatWeOffer />
             <WhyChoose />
             <DevelopmentProcess />
-            <Technologies />
+            <TechnologiesWeUse />
             <TSlider />
             <ContactSection />
         </div>

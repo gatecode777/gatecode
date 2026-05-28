@@ -1,210 +1,161 @@
-.development-section {
+/* ── Development Process (Video) ── */
+.dev-process-section {
   width: 100%;
-  padding: 100px 40px;
-  box-sizing: border-box;
-  background-color: #ffffff;
+  background: #eceef3;
 }
 
-
-
-.development-heading {
+.dev-process-heading {
   text-align: center;
-  margin-bottom: 50px;
+  padding: 60px 0 30px;
 }
 
-.development-heading h2 {
-  font-family: "Castoro Titling", serif;
+.dev-process-heading h2 {
+  font-family: 'Castoro Titling', serif;
   font-weight: 400;
   font-size: 35px;
-  line-height: 1.2;
-  letter-spacing: 2px;
-  color: #151414;
+  line-height: 100%;
+  letter-spacing: 0.05em;
+  color: #2d2d2d;
   text-transform: uppercase;
+  margin: 0 0 10px;
 }
 
-.development-heading span {
-  color: #37733a;
-  
+.dev-process-heading h2 span {
+  color: #5c8a5c;
 }
 
-.development-line {
-  width: 180px;
+.dev-process-divider {
+  width: 350px;
   height: 1px;
-  background: #cccccc;
-  margin: 15px auto 0;
-}
-
-
-
-.process-wrapper {
-  max-width: 1300px;
+  background: #5c8a5c;
   margin: 0 auto;
-  position: relative;
-  padding-top: 0;
 }
 
-
-.process-line-horizontal {
-  position: absolute;
-  top: 0;
-  left: 8.33%;
-  
-  right: 8.33%;
-  
-  height: 1px;
-  background: #cccccc;
-  z-index: 1;
+.dev-process-body {
+  padding: 0 80px 60px;
 }
 
-.process-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
+.dev-process-box {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  border: 1px solid #e0e4e8;
+}
+
+.dev-process-box video {
   width: 100%;
-  position: relative;
+  height: auto;
+  display: block;
 }
 
-.process-card {
-  position: relative;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Video responsive swap classes — scoped for specificity */
+.dev-process-box .dev-video-desktop {
+  display: block;
 }
 
-
-.vertical-drop-line {
-  width: 1px;
-  height: 65px;
-  background: #cccccc;
-  margin-bottom: 25px;
+.dev-process-box .dev-video-mobile {
+  display: none;
 }
 
-.process-card h3 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 17px;
-  color: #111111;
-  line-height: 1.3;
-  max-width: 120px;
-  margin: 0;
-}
-
-
-
+/* ── Tablet: ≤ 1024px ── */
 @media (max-width: 1024px) {
-  .development-section {
-    padding: 40px 20px;
+  .dev-process-heading {
+    padding: 50px 0 24px;
   }
 
-  .process-card h3 {
-    font-size: 15px;
+  .dev-process-heading h2 {
+    font-size: 28px;
+  }
+
+  .dev-process-divider {
+    width: 280px;
+  }
+
+  .dev-process-body {
+    padding: 0 40px 50px;
   }
 }
 
-@media (max-width: 769px) {
-  .development-section {
-    padding: 0px 20px;
+/* ── Mobile: ≤ 768px ── */
+@media (max-width: 768px) {
+
+  /* Make the section full viewport width and center it by removing the horizontal padding of the body */
+  .dev-process-section {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
   }
 
-  .development-heading {
-    margin-bottom: 10px;
+  .dev-process-heading {
+    padding: 30px 10px 15px;
   }
 
-  .development-heading h2 {
-    font-size: 26px;
-    line-height: 1.4;
+  .dev-process-heading h2 {
+    font-size: 28px;
   }
 
-  .development-line {
+  .dev-process-divider {
     width: 250px;
   }
 
-  .process-wrapper {
-    max-width: 700px;
+  .dev-process-body {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
   }
 
-  .process-line {
-    width: 584px;
-    left: 58px;
+  .dev-process-box {
+    width: 100%;
+    background: #fff;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
   }
 
-  .vertical-line {
-    width: 1px;
-    height: 35px;
-    background: #7c7c7c;
-
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .process-card {
-    padding-top: 40px;
-  }
-
-  .process-card h3 {
-    font-size: 15px;
-    line-height: 1.4;
-  }
-
-  .vertical-drop-line {
-    width: 1px;
-    height: 65px;
-    background: #cccccc;
-    margin-bottom: 25px;
-  }
-
-  .process-line-horizontal {
-    position: absolute;
-    top: 38px;
-    left: 8.33%;
-    right: 8.33%;
-    height: 1px;
-    background: #cccccc;
-    z-index: 1;
+  .dev-process-box video {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 }
 
-@media (max-width: 480px) {
-  .development-heading h2 {
+/* ── Extra Small Mobile: ≤ 425px ── */
+@media (max-width: 426px) {
+  .dev-process-heading {
+    padding: 20px 5px 10px;
+  }
+
+  .dev-process-heading h2 {
     font-size: 24px;
   }
 
-  .process-grid {
-    margin-left: 20px;
+  .dev-process-divider {
+    width: 200px;
   }
 
-  .process-line-horizontal {
-    display: none;
+  /* Swap to mobile video */
+  .dev-process-box .dev-video-desktop {
+    display: none !important;
   }
 
-  .process-grid {
-    grid-template-columns: 1fr;
-    gap: 45px;
-    padding-left: 40px;
-    border-left: 1px solid #cccccc;
-    width: fit-content;
-    margin: 0 auto;
+  .dev-process-box .dev-video-mobile {
+    display: block !important;
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* ── Tiny Mobile: ≤ 320px ── */
+@media (max-width: 320px) {
+  .dev-process-heading {
+    padding: 15px 5px;
   }
 
-  .process-card {
-    flex-direction: row;
-    padding-top: 0;
-    text-align: left;
-    gap: 20px;
+  .dev-process-heading h2 {
+    font-size: 20px;
   }
 
-  .vertical-drop-line {
-    width: 25px;
-    height: 1px;
-    margin-bottom: 0;
-    position: absolute;
-    left: -40px;
-    top: 50%;
-  }
-
-  .process-card h3 {
-    max-width: none;
+  .dev-process-divider {
+    width: 160px;
   }
 }

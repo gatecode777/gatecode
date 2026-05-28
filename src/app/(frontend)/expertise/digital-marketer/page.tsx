@@ -10,7 +10,24 @@ import '@/components/frontend/WebDeveloper/IntroText.css';
 import '@/components/frontend/WebDeveloper/WhatWeOffer.css';
 import '@/components/frontend/WebDeveloper/WhyChoose.css';
 import '@/components/frontend/WebDeveloper/DevelopmentProcess.css';
-import '@/components/frontend/WebDeveloper/Technologies.css';
+import '@/components/frontend/WebDeveloper/TechnologiesWeUse.css';
+import { 
+  FaChartBar, 
+  FaChartLine, 
+  FaFacebook,
+  FaSearch,
+  FaEnvelope,
+  FaBullhorn
+} from 'react-icons/fa';
+import { 
+  SiGoogleanalytics, 
+  SiGoogleads, 
+  SiSemrush, 
+  SiMailchimp,
+  SiHubspot,
+  SiGooglesearchconsole,
+  SiGooglemarketingplatform
+} from 'react-icons/si';
 
 // ==================== HeroSectionWD Component (Updated for Digital Marketing) ====================
 const HeroSectionWD = () => {
@@ -57,8 +74,8 @@ const IntroText = () => {
     return (
         <section className="intro-container">
             <p className="intro-text">
-                At Gatecode Technologies Pvt. Ltd., we provide comprehensive digital marketing services designed to help your business grow online. 
-                Our approach combines creativity, data analysis, and strategic planning to deliver measurable results. From increasing website traffic 
+                At Gatecode Technologies Pvt. Ltd., we provide comprehensive digital marketing services designed to help your business grow online.
+                Our approach combines creativity, data analysis, and strategic planning to deliver measurable results. From increasing website traffic
                 to improving conversions, we help you reach the right audience and achieve your business goals effectively.
             </p>
         </section>
@@ -246,71 +263,147 @@ const WhyChoose = () => {
 };
 
 // ==================== DevelopmentProcess Component (Updated for Digital Marketing) ====================
-const processSteps = [
-    "Research & Strategy",
-    "Campaign Planning",
-    "Execution",
-    "Monitoring",
-    "Reporting",
-    "Optimization",
-];
+// const processSteps = [
+//     "Research & Strategy",
+//     "Campaign Planning",
+//     "Execution",
+//     "Monitoring",
+//     "Reporting",
+//     "Optimization",
+// ];
+
+// const DevelopmentProcess = () => {
+//     return (
+//         <section className="development-section">
+//             <div className="development-heading">
+//                 <h2>
+//                     OUR <span>DEVELOPMENT PROCESS</span>
+//                 </h2>
+//                 <div className="development-line"></div>
+//             </div>
+
+//             <div className="process-wrapper">
+//                 <div className="process-line-horizontal"></div>
+
+//                 <div className="process-grid">
+//                     {processSteps.map((step, index) => (
+//                         <div className="process-card" key={index}>
+//                             <div className="vertical-drop-line"></div>
+//                             <h3>{step}</h3>
+//                         </div>
+//                     ))}
+//                 </div>
+//             </div>
+//         </section>
+//     );
+// };
 
 const DevelopmentProcess = () => {
     return (
-        <section className="development-section">
-            <div className="development-heading">
-                <h2>
-                    OUR <span>DEVELOPMENT PROCESS</span>
-                </h2>
-                <div className="development-line"></div>
+        <section className="dev-process-section">
+            <div className="dev-process-heading">
+                <h2>Our <span>Development Process</span></h2>
+                <div className="dev-process-divider" />
             </div>
-
-            <div className="process-wrapper">
-                <div className="process-line-horizontal"></div>
-
-                <div className="process-grid">
-                    {processSteps.map((step, index) => (
-                        <div className="process-card" key={index}>
-                            <div className="vertical-drop-line"></div>
-                            <h3>{step}</h3>
-                        </div>
-                    ))}
+            <div className="dev-process-body">
+                <div className="dev-process-box">
+                    {/* Desktop video (hidden on ≤426px) */}
+                    <video
+                        className="dev-video-desktop"
+                        src="/videos/JavaScript Developer_video.mp4"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                    />
+                    {/* Mobile video (shown on ≤426px) */}
+                    <video
+                        className="dev-video-mobile"
+                        src="/videos/4th.mp4"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                    />
                 </div>
             </div>
         </section>
     );
 };
 
-// ==================== Technologies Component (Updated with Marketing Tools from image) ====================
-const technologies = [
+// ==================== Technologies Component (Updated with content from image) ====================
+interface TechnologyItem {
+    name: string;
+    icon: React.ReactNode;
+}
+
+interface TechnologyCategory {
+    title: string;
+    icon: React.ReactNode;
+    items: TechnologyItem[];
+}
+
+const technologies: TechnologyCategory[] = [
     {
-        title: "Marketing Tools",
-        items: ["Google Analytics", "Google Ads", "Meta Ads (Facebook & Instagram)", "SEMrush", "AdWords", "Mailchimp"],
+        title: "Analytics & Reporting",
+        icon: <FaChartBar />,
+        items: [
+            { name: "Google Analytics", icon: <SiGoogleanalytics style={{ color: '#E37400' }} /> },
+            { name: "Google Search Console", icon: <SiGooglesearchconsole style={{ color: '#4285F4' }} /> },
+            { name: "Data Studio", icon: <FaChartLine style={{ color: '#0d9488' }} /> },
+        ],
+    },
+    {
+        title: "SEO & Paid Ads",
+        icon: <FaSearch />,
+        items: [
+            { name: "Google Ads", icon: <SiGoogleads style={{ color: '#4285F4' }} /> },
+            { name: "SEMrush", icon: <SiSemrush style={{ color: '#FF6600' }} /> },
+            { name: "Ahrefs", icon: <SiGooglemarketingplatform style={{ color: '#4285F4' }} /> },
+        ],
+    },
+    {
+        title: "Social Media Marketing",
+        icon: <FaBullhorn />,
+        items: [
+            { name: "Meta Ads (Facebook/Instagram)", icon: <FaFacebook style={{ color: '#1877F2' }} /> },
+            { name: "Google Marketing Platform", icon: <SiGooglemarketingplatform style={{ color: '#4285F4' }} /> },
+        ],
+    },
+    {
+        title: "Email & CRM",
+        icon: <FaEnvelope />,
+        items: [
+            { name: "Mailchimp", icon: <SiMailchimp style={{ color: '#FFE01B', backgroundColor: '#000000', borderRadius: '2px' }} /> },
+            { name: "HubSpot", icon: <SiHubspot style={{ color: '#FF7A59' }} /> },
+        ],
     },
 ];
 
-const Technologies = () => {
+const TechnologiesWeUse: React.FC = () => {
     return (
-        <section className="technologies-section">
-            <div className="technologies-heading">
-                <h2>
-                    <span>MARKETING TOOLS</span> WE USE
-                </h2>
-                <div className="technologies-line"></div>
-            </div>
+        <section className="tech-section">
+            <h2 className="tech-title">
+                <span className="tech-title-light">MARKETING TOOLS</span> WE USE
+            </h2>
+            <div className="tech-divider"></div>
 
-            <div className="technologies-box">
-                <div className="technologies-grid">
-                    {technologies.map((tech, index) => (
-                        <div className="technology-column" key={index}>
-                            <div className="column-header">
-                                <h3>{tech.title}</h3>
+            <div className="tech-scroll-wrapper">
+                <div className="tech-grid">
+                    {technologies.map((category, index) => (
+                        <div key={index} className="tech-category">
+                            <div className="tech-category-header">
+                                <span className="tech-category-icon">{category.icon}</span>
+                                <h3 className="tech-category-title">{category.title}</h3>
                             </div>
-                            <div className="column-content">
-                                {tech.items.map((item, i) => (
-                                    <p key={i}>{item}</p>
+                            <ul className="tech-list">
+                                {category.items.map((item, itemIndex) => (
+                                    <li key={itemIndex} className="tech-item">
+                                        <span className="tech-item-icon">{item.icon}</span>
+                                        <span className="tech-item-name">{item.name}</span>
+                                    </li>
                                 ))}
-                            </div>
+                            </ul>
                         </div>
                     ))}
                 </div>
@@ -332,7 +425,7 @@ const DigitalMarketingServicesPage = () => {
             <WhatWeOffer />
             <WhyChoose />
             <DevelopmentProcess />
-            <Technologies />
+            <TechnologiesWeUse />
             <TSlider />
             <ContactSection />
         </div>

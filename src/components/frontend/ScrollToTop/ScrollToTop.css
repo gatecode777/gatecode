@@ -1,7 +1,7 @@
 .scroll-to-top {
   position: fixed;
-  bottom: 20px;
-  right: 30px;
+  bottom: 100px;
+  right: 23px;
   z-index: 9999;
   opacity: 0;
   visibility: hidden;
@@ -90,13 +90,15 @@
 @media (max-width: 768px) {
   .scroll-to-top {
     bottom: 90px !important;
-    right: 20px !important;
+    right: 30px !important;
     display: block !important;
   }
 
   .scroll-btn {
     width: 50px;
     height: 50px;
+    bottom: 33px;
+    right: 5px;
   }
 
   .arrow-icon {
