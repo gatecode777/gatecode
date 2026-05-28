@@ -35,8 +35,8 @@ const ALLOWED_DOC_TYPES = [
 
 const ALLOWED_TYPES = [...ALLOWED_IMAGE_TYPES, ...ALLOWED_DOC_TYPES];
 
-const MAX_IMAGE_SIZE = 10 * 1024 * 1024;
-const MAX_DOC_SIZE   = 20 * 1024 * 1024;
+const MAX_IMAGE_SIZE = 5 * 1024 * 1024; // 5MB
+const MAX_DOC_SIZE   = 5 * 1024 * 1024; // 5MB
 
 function sanitizeFilename(name: string): string {
   return name
@@ -65,13 +65,17 @@ async function uploadToLocal(file: File, subfolder: string, filename: string): P
 }
 
 export async function POST(req: NextRequest) {
-  if (!auth(req)) {
-    return NextResponse.json<ApiResponse>({ success: false, message: 'Unauthorized' }, { status: 401 });
-  }
-
   try {
     const formData = await req.formData();
     const file = formData.get('file') as File | null;
+    const category = formData.get('category') as string | null;
+
+    // Allow public resume uploads (for career page job applications)
+    const isResumeUpload = category === 'resumes';
+
+    if (!isResumeUpload && !auth(req)) {
+      return NextResponse.json<ApiResponse>({ success: false, message: 'Unauthorized' }, { status: 401 });
+    }
 
     if (!file) {
       return NextResponse.json<ApiResponse>({ success: false, message: 'No file provided' }, { status: 400 });
@@ -89,9 +93,8 @@ export async function POST(req: NextRequest) {
     const isImage = ALLOWED_IMAGE_TYPES.includes(mimeType);
     const maxSize = isImage ? MAX_IMAGE_SIZE : MAX_DOC_SIZE;
     if (file.size > maxSize) {
-      const limit = isImage ? '10MB' : '20MB';
       return NextResponse.json<ApiResponse>(
-        { success: false, message: `File too large. Maximum size: ${limit}` },
+        { success: false, message: 'File too large. Maximum size: 5MB' },
         { status: 400 }
       );
     }

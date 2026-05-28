@@ -94,6 +94,16 @@ export default function ApplicationForm() {
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (!file) return;
+
+    // Check size limit: 5MB = 5 * 1024 * 1024 bytes
+    if (file.size > 5 * 1024 * 1024) {
+      setErrors(prev => ({ ...prev, resume: 'Please upload a resume smaller than 5MB.' }));
+      setResumeFile(null);
+      setFileName('');
+      e.target.value = '';
+      return;
+    }
+
     setResumeFile(file);
     setFileName(file.name);
     if (errors.resume) setErrors(e => { const n = { ...e }; delete n.resume; return n; });
@@ -114,7 +124,13 @@ export default function ApplicationForm() {
     }
 
     if (!form.position) e.position = 'Please select a position';
-    if (!resumeFile) e.resume = 'Please attach your resume';
+    
+    if (!resumeFile) {
+      e.resume = 'Please attach your resume';
+    } else if (resumeFile.size > 5 * 1024 * 1024) {
+      e.resume = 'Please upload a resume smaller than 5MB';
+    }
+
     setErrors(e);
     return Object.keys(e).length === 0;
   };
@@ -131,12 +147,37 @@ export default function ApplicationForm() {
       setUploading(true);
       const fd = new FormData();
       fd.append('file', resumeFile);
+      fd.append('category', 'resumes'); // Specify resumes category to bypass auth check
+
       const uploadRes = await fetch('/api/admin/upload', { method: 'POST', body: fd });
+      
+      // Handle potential raw 413 Payload Too Large error from web servers (Nginx/Vercel)
+      if (uploadRes.status === 413) {
+        setErrors({ submit: 'File is too large. Please upload a resume smaller than 5MB.' });
+        setSubmitting(false);
+        setUploading(false);
+        return;
+      }
+
+      if (!uploadRes.ok) {
+        let errMsg = 'Failed to upload resume. Please try again.';
+        try {
+          const errData = await uploadRes.json();
+          if (errData && errData.message) {
+            errMsg = errData.message;
+          }
+        } catch (_) {}
+        setErrors({ submit: errMsg });
+        setSubmitting(false);
+        setUploading(false);
+        return;
+      }
+
       const uploadData = await uploadRes.json();
       setUploading(false);
 
       if (!uploadData.success) {
-        setErrors({ submit: 'Failed to upload resume. Please try again.' });
+        setErrors({ submit: uploadData.message || 'Failed to upload resume. Please try again.' });
         setSubmitting(false);
         return;
       }
@@ -165,7 +206,8 @@ export default function ApplicationForm() {
       } else {
         setErrors({ submit: d.message || 'Submission failed. Please try again.' });
       }
-    } catch {
+    } catch (err) {
+      console.error('Application submit error:', err);
       setErrors({ submit: 'Network error. Please try again.' });
     } finally {
       setSubmitting(false);

@@ -8,16 +8,16 @@ import { ServicesDropdown, CompanyDropdown, TechnicalExpertiseDropdown } from '.
 import './Navbar.css';
 
 const navLinks = [
-  { label: 'Company',             path: '/', hasDropdown: true },
-  { label: 'Services',            path: '/', hasDropdown: true },
+  { label: 'Company', path: '/', hasDropdown: true },
+  { label: 'Services', path: '/', hasDropdown: true },
   { label: 'Technical Expertise', path: '/', hasDropdown: true },
-  { label: 'Blog',                path: '/blog',    hasDropdown: false },
-  { label: 'Contact Us',          path: '/contact', hasDropdown: false },
+  { label: 'Blog', path: '/blog', hasDropdown: false },
+  { label: 'Contact Us', path: '/contact', hasDropdown: false },
 ];
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen]             = useState(false);
-  const [scrolled, setScrolled]             = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [activeMobileDropdown, setActiveMobileDropdown] = useState<string | null>(null);
 
@@ -61,7 +61,7 @@ export default function Navbar() {
       <header className={`navbar${scrolled ? ' scrolled' : ''}`} id="header">
         <div className="navbar__container">
           <Link href="/" className="navbar__logo" aria-label="Gatecode Technologies Home" onClick={() => setActiveDropdown(null)}>
-            <Image src="/logo.png" alt="Gatecode Technologies" width={184} height={92} priority />
+            <Image src="/images/gatecode.png" alt="Gatecode Technologies" width={184} height={92} priority />
           </Link>
 
           <nav className="navbar__nav" aria-label="Main navigation">
