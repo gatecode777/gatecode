@@ -59,9 +59,13 @@
 /* Responsive Grid layout */
 .expertise-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   width: 100%;
+}
+
+.expertise-grid .expertise-card:last-child {
+  grid-column: 2;
 }
 
 /* Card item styling - Light Theme */
@@ -162,8 +166,12 @@
 /* Mobile & Tablet breakpoints */
 @media (max-width: 991px) {
   .expertise-grid {
-    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
+  }
+  
+  .expertise-grid .expertise-card:last-child {
+    grid-column: auto;
   }
   
   .expertise-card {
@@ -184,5 +192,9 @@
   .expertise-grid {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+
+  .expertise-grid .expertise-card:last-child {
+    grid-column: auto;
   }
 }

@@ -49,17 +49,17 @@ const ProcessStack = () => {
   ];
 
   const goNext = () => {
-    if (
-      isAnimating.current ||
-      activeIndex >= processSteps.length - 1
-    )
-      return;
+    if (isAnimating.current) return;
 
     isAnimating.current = true;
 
-    setHiddenSet((prev) => new Set([...prev, activeIndex]));
-
-    setActiveIndex((prev) => prev + 1);
+    if (activeIndex >= processSteps.length - 1) {
+      setHiddenSet(new Set());
+      setActiveIndex(0);
+    } else {
+      setHiddenSet((prev) => new Set([...prev, activeIndex]));
+      setActiveIndex((prev) => prev + 1);
+    }
 
     setTimeout(() => {
       isAnimating.current = false;
@@ -67,19 +67,26 @@ const ProcessStack = () => {
   };
 
   const goPrev = () => {
-    if (isAnimating.current || activeIndex <= 0) return;
+    if (isAnimating.current) return;
 
     isAnimating.current = true;
 
-    const prevIndex = activeIndex - 1;
-
-    setHiddenSet((prev) => {
-      const next = new Set(prev);
-      next.delete(prevIndex);
-      return next;
-    });
-
-    setActiveIndex(prevIndex);
+    if (activeIndex <= 0) {
+      const allPrev = new Set();
+      for (let i = 0; i < processSteps.length - 1; i++) {
+        allPrev.add(i);
+      }
+      setHiddenSet(allPrev);
+      setActiveIndex(processSteps.length - 1);
+    } else {
+      const prevIndex = activeIndex - 1;
+      setHiddenSet((prev) => {
+        const next = new Set(prev);
+        next.delete(prevIndex);
+        return next;
+      });
+      setActiveIndex(prevIndex);
+    }
 
     setTimeout(() => {
       isAnimating.current = false;
@@ -120,10 +127,9 @@ const ProcessStack = () => {
       const isScrollingRight = e.deltaX > 0;
       const isScrollingLeft = e.deltaX < 0;
 
-      const canGoNext =
-        activeIndex < processSteps.length - 1;
+      const canGoNext = true;
 
-      const canGoPrev = activeIndex > 0;
+      const canGoPrev = true;
 
       if (
         (isScrollingRight && canGoNext) ||
@@ -167,10 +173,9 @@ const ProcessStack = () => {
       const isScrollingRight = deltaX > 30;
       const isScrollingLeft = deltaX < -30;
 
-      const canGoNext =
-        activeIndex < processSteps.length - 1;
+      const canGoNext = true;
 
-      const canGoPrev = activeIndex > 0;
+      const canGoPrev = true;
 
       if (
         (isScrollingRight && canGoNext) ||
@@ -263,26 +268,7 @@ const ProcessStack = () => {
       const isHoveredCurrently = stackRef.current?.closest('.process-flow-section')?.matches(':hover');
       if (isHoveredCurrently || isAnimating.current) return;
 
-      setActiveIndex((currentActive) => {
-        if (currentActive >= processSteps.length - 1) {
-          // Loop back to start
-          isAnimating.current = true;
-          setHiddenSet(new Set());
-          setTimeout(() => {
-            isAnimating.current = false;
-          }, 600);
-          return 0;
-        } else {
-          // Move to next slide
-          isAnimating.current = true;
-          const nextIndex = currentActive + 1;
-          setHiddenSet((prev) => new Set([...prev, currentActive]));
-          setTimeout(() => {
-            isAnimating.current = false;
-          }, 600);
-          return nextIndex;
-        }
-      });
+      goNext();
     }, 4000);
 
     return () => clearInterval(interval);
@@ -355,10 +341,9 @@ const ProcessStack = () => {
           ))}
 
           <button
-            className={`process-flow-arrow process-flow-arrow-left ${activeIndex === 0 ? 'disabled' : ''}`}
+            className="process-flow-arrow process-flow-arrow-left"
             onClick={goPrev}
             aria-label="Previous step"
-            disabled={activeIndex === 0}
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="15 18 9 12 15 6" />
@@ -366,10 +351,9 @@ const ProcessStack = () => {
           </button>
 
           <button
-            className={`process-flow-arrow process-flow-arrow-right ${activeIndex === processSteps.length - 1 ? 'disabled' : ''}`}
+            className="process-flow-arrow process-flow-arrow-right"
             onClick={goNext}
             aria-label="Next step"
-            disabled={activeIndex === processSteps.length - 1}
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="9 18 15 12 9 6" />
