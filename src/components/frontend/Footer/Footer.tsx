@@ -109,7 +109,7 @@ export default function Footer() {
 
       <div className="ft-bottom">
         <div className="ft-bottom-inner">
-          <p><a href="https://gatecode.in/" target="_blank" rel="noopener noreferrer">Gatecode Technologies Pvt. Ltd.</a> &copy; Copyright 2026</p>
+          <p><a href="https://gatecode.in/" rel="noopener noreferrer">Gatecode Technologies Pvt. Ltd.</a> &copy; Copyright 2026</p>
         </div>
       </div>
     </footer>

@@ -1,5 +1,3 @@
-
-
 .slider-3d-wrapper {
   width: 100%;
   display: flex;
@@ -23,13 +21,11 @@
   overflow: hidden;
   position: relative;
   perspective: var(--perspective);
-  
-  clip-path: polygon(
-    0 0, 10% 4%, 20% 7%, 30% 9%, 40% 11%, 50% 12%, 
-    60% 11%, 70% 9%, 80% 7%, 90% 4%, 100% 0,
-    100% 100%, 90% 96%, 80% 93%, 70% 91%, 60% 89%, 
-    50% 88%, 40% 89%, 30% 91%, 20% 93%, 10% 96%, 0 100%
-  );
+
+  clip-path: polygon(0 0, 10% 4%, 20% 7%, 30% 9%, 40% 11%, 50% 12%,
+      60% 11%, 70% 9%, 80% 7%, 90% 4%, 100% 0,
+      100% 100%, 90% 96%, 80% 93%, 70% 91%, 60% 89%,
+      50% 88%, 40% 89%, 30% 91%, 20% 93%, 10% 96%, 0 100%);
 }
 
 .slider-track-3d {
@@ -86,7 +82,7 @@
   top: 50%;
   left: 0;
   width: 100%;
-  transform: translateY(-50%) translateZ(30px); 
+  transform: translateY(-50%) translateZ(30px);
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(12px);
   padding: 20px 0;
@@ -110,8 +106,13 @@
 }
 
 @keyframes scroll3d {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 
@@ -163,16 +164,17 @@
   .expertise-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .expertise-grid .expertise-card:last-child {
     grid-column: auto;
   }
 }
 
 @media (max-width: 768px) {
-  --card-width: 80vw;
   .expertise-grid {
     grid-template-columns: 1fr;
   }
+
   .expertise-grid .expertise-card:last-child {
     grid-column: auto;
   }
