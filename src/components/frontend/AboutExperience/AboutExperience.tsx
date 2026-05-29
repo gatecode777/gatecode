@@ -1,6 +1,6 @@
 'use client';
 
-import {  useEffect, useRef, useState  } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './AboutExperience.css';
 
 const AboutExperience = () => {
@@ -34,12 +34,11 @@ const AboutExperience = () => {
       <div className={`about-experience__container ${isVisible ? 'is-visible' : ''}`}>
         <div className="about-experience__grid">
           <div className="about-experience__text">
-            <h1 className="about-experience__number">02</h1>
-            <h2 className="about-experience__heading">
+            <h1 className="about-experience__heading">
               OUR EXPERIENCE &<br />
               GLOBAL COLLABORATIONS
-            </h2>
-            
+            </h1>
+
             <p className="about-experience__description">
               At Gatecode Technologies Pvt. Ltd., we bring 2+ years of hands-on experience delivering high-performance digital solutions to businesses across the globe. From startups to established enterprises, we have partnered with companies across diverse industries — understanding their unique challenges and turning them into powerful, scalable products.
             </p>
@@ -48,7 +47,7 @@ const AboutExperience = () => {
               Our work spans multiple sectors including Travel & Tourism, Jewellery & Luxury Goods, Environmental Services, and more — giving us a deep understanding of industry-specific workflows, international business standards, and the quality expectations that modern businesses demand.
             </p>
 
-           
+
           </div>
 
           <div className="about-experience__images">
@@ -65,11 +64,11 @@ const AboutExperience = () => {
                 <img src="/images/exp_3.png" alt="Happy Team" className="about-experience__img about-experience__img--small" />
               </div>
             </div>
-          </div>         
+          </div>
         </div>
-          <p className="about-experience__description">
-              We have successfully collaborated with numerous eCommerce businesses, helping them build, optimize, and scale their online stores. From product catalog management and payment integration to user experience enhancement and performance optimization, we support eCommerce brands in creating seamless digital shopping experiences that drive growth and customer satisfaction.
-            </p>
+        <p className="about-experience__description">
+          We have successfully collaborated with numerous eCommerce businesses, helping them build, optimize, and scale their online stores. From product catalog management and payment integration to user experience enhancement and performance optimization, we support eCommerce brands in creating seamless digital shopping experiences that drive growth and customer satisfaction.
+        </p>
       </div>
     </section>
   );

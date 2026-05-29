@@ -17,7 +17,7 @@ const ProjectBanner = ({ title, subtitle, bgImage }) => {
       <div className="project-banner__content">
         <h3 className="project-banner__title">{title || "Have A Project In Mind?"}</h3>
         <h2 className="project-banner__subtitle">{subtitle || "Let's Build Something Great Together."}</h2>
-        <button className="project-banner__btn" onClick={() => router.push('/get-started')}>
+        <button className="project-banner__btn" onClick={() => router.push('/get-started#start-form')}>
           GET STARTED <span>→</span>
         </button>
       </div>

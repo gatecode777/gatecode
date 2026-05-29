@@ -48,8 +48,6 @@ const WhatMakesDifferent = () => {
             <li>Cost-effective and scalable solutions for growing businesses</li>
           </ul>
 
-          <div className="wmd-dot" aria-hidden="true">•</div>
-
           <p className="wmd-body__para wmd-body__para--closing">
             We don't work as a typical vendor — we act as your extended technology and operations team, helping you improve efficiency, reduce costs,
             and scale sustainably.

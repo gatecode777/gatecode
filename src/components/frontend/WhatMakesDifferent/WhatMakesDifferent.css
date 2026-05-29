@@ -107,23 +107,8 @@
 .wmd-bullet-list li {
   font-family: 'Inter', sans-serif;
   font-size: 15px;
-  color: #3b6ea5;
+  color: #2d2d2d;
   line-height: 1.6;
-  cursor: default;
-  transition: color 0.2s ease;
-}
-
-.wmd-bullet-list li:hover {
-  color: #1e4d8c;
-  text-decoration: underline;
-}
-
-
-.wmd-dot {
-  font-size: 20px;
-  color: #3b6ea5;
-  margin: 10px 0 14px;
-  line-height: 1;
 }
 
 

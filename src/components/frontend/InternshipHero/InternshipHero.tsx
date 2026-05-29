@@ -24,7 +24,7 @@ const InternshipHero = () => {
             Join Gatecode Technologies Pvt. Ltd. as an intern and gain real-world experience, practical skills, and the opportunity to grow in a professional environment.
           </p>
           <Link href="/internship" className="btn btn--accent">
-            Apply for Internship
+            Scroll for Apply
           </Link>
         </div>
       </div>

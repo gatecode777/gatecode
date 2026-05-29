@@ -64,6 +64,16 @@ const GetStartedPage = () => {
   const [success, setSuccess] = useState(false);
 
   useEffect(() => {
+    if (window.location.hash) {
+      const id = window.location.hash.substring(1);
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+        return;
+      }
+    }
     window.scrollTo(0, 0);
   }, []);
 
@@ -218,7 +228,7 @@ const GetStartedPage = () => {
         </div>
       </section>
 
-      <section className="gs-contact gs-section">
+      <section className="gs-contact gs-section" id="start-form">
         <div className="gs-contact__inner">
 
           <form className="gs-form-card" onSubmit={handleSubmit} noValidate>
