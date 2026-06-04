@@ -237,7 +237,7 @@ export default function ApplicationForm() {
   }
 
   return (
-    <section className="application">
+    <section className="application" id="apply-form">
       <div className="application-card">
 
         <div className="application-tabs">

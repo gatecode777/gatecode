@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
@@ -22,6 +22,20 @@ export default function Navbar() {
   const [activeMobileDropdown, setActiveMobileDropdown] = useState<string | null>(null);
 
   const router = useRouter();
+  const headerRef = useRef<HTMLElement>(null);
+
+  // Click outside to close dropdowns
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
+        setActiveDropdown(null);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   // Scroll listener
   useEffect(() => {
@@ -58,7 +72,7 @@ export default function Navbar() {
   return (
     <>
       <div className="navbar__topbar" />
-      <header className={`navbar${scrolled ? ' scrolled' : ''}`} id="header">
+      <header ref={headerRef} className={`navbar${scrolled ? ' scrolled' : ''}`} id="header">
         <div className="navbar__container">
           <Link href="/" className="navbar__logo" aria-label="Gatecode Technologies Home" onClick={() => setActiveDropdown(null)}>
             <Image src="/images/gatecode.png" alt="Gatecode Technologies" width={184} height={92} priority />

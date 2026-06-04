@@ -394,6 +394,12 @@
   .dm-industries-list {
     grid-template-columns: 1fr;
   }
+
+  .dm-process-grid {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+    gap: 30px;
+    display: grid;
+  }
 }
 
 .dm-industries-list li {

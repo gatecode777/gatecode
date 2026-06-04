@@ -23,7 +23,17 @@ const InternshipHero = () => {
           <p className="internship-hero__text">
             Join Gatecode Technologies Pvt. Ltd. as an intern and gain real-world experience, practical skills, and the opportunity to grow in a professional environment.
           </p>
-          <Link href="/internship" className="btn btn--accent">
+          <Link
+            href="#apply-form"
+            className="btn btn--accent"
+            onClick={(e) => {
+              e.preventDefault();
+              const element = document.getElementById('apply-form');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
             Scroll for Apply
           </Link>
         </div>
