@@ -64,7 +64,7 @@
 .dm-hero-title {
   font-family: 'Castoro Titling', serif;
   font-weight: 400;
-  font-size: clamp(40px, 8vw, 70px);
+  font-size: clamp(35px, 8vw, 70px);
   line-height: 1.1;
   letter-spacing: 0.05em;
   color: #ffffff;
@@ -384,9 +384,26 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .dm-industries-list {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dm-process-grid {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 30px;
+    display: grid;
+  }
+
+  .dm-process-item {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .dm-process-item:nth-child(odd),
+  .dm-process-item:nth-child(even) {
+    transform: none !important;
   }
 }
 
