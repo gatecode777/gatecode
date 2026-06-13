@@ -114,7 +114,7 @@ export interface SectionVisibility {
 }
 
 export interface CaseStudyBullet { _id?: string; text: string; order: number; }
-export interface CaseStudyTech   { _id?: string; name: string; icon: string | null; order: number; }
+export interface CaseStudyTech { _id?: string; name: string; icon: string | null; order: number; }
 export interface CaseStudyButton { _id?: string; label: string; url: string; openInNewTab: boolean; isActive: boolean; order: number; }
 
 export interface CaseStudyDTO {
