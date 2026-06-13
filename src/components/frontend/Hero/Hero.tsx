@@ -55,13 +55,13 @@ const Hero = () => {
 
         <div className="hero-images">
           <div className="hero-img-circle circle-1">
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" alt="Skyscrapers" />
+            <img src="https://ik.imagekit.io/zp0tch54w/GATECODE%20IMAGES/Ellipse%208.png" alt="Skyscrapers" />
           </div>
           <div className="hero-img-circle circle-2">
-            <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2069&auto=format&fit=crop" alt="Office worker" />
+            <img src="https://ik.imagekit.io/zp0tch54w/GATECODE%20IMAGES/Ellipse%207.png" alt="Office worker" />
           </div>
           <div className="hero-img-circle circle-3">
-            <img src="https://images.unsplash.com/photo-1554469384-e58fac16e23a?q=80&w=1974&auto=format&fit=crop" alt="Looking up at skyscraper" />
+            <img src="https://ik.imagekit.io/zp0tch54w/GATECODE%20IMAGES/Ellipse%206.png" alt="Looking up at skyscraper" />
           </div>
         </div>
       </div>
