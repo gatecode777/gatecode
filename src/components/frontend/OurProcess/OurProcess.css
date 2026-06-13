@@ -177,16 +177,18 @@
   width: 100%;
   position: absolute;
   left: 0;
-  animation: scrollMarquee 40s linear infinite;
+  animation: scrollMarquee 40s linear forwards;
 }
 
 @keyframes scrollMarquee {
   0% {
     transform: translate3d(-100%, -100%, 0);
   }
-
+  68.75% {
+    transform: translate3d(37.5%, -100%, 0);
+  }
   100% {
-    transform: translate3d(100%, -100%, 0);
+    transform: translate3d(37.5%, -100%, 0);
   }
 }
 

@@ -11,7 +11,7 @@ import OurProcess from '@/components/frontend/OurProcess/OurProcess';
 import AboutTeam from '@/components/frontend/AboutTeam/AboutTeam';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
 import ProjectBanner from '@/components/frontend/ProjectBanner/ProjectBanner';
-import ProcessStack from '@/components/frontend/ProcessStack/ProcessStack';
+import ServicesSlider from '@/components/frontend/ServicesSlider/ServicesSlider';
 
 const About = () => {
   return (
@@ -21,7 +21,7 @@ const About = () => {
       <VisionMission />
       <AboutExperience />
       <AboutExpertise />
-      <ProcessStack />
+      <ServicesSlider />
       <WhatMakesDifferent />
 
       <OurProcess />

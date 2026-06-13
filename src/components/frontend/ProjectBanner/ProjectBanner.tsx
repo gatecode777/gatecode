@@ -9,9 +9,9 @@ const ProjectBanner = ({ title, subtitle, bgImage }) => {
   const router = useRouter();
 
   return (
-    <section 
-      className="project-banner" 
-      style={{ backgroundImage: `url(${bgImage || '/images/banner.jpg'})` }}
+    <section
+      className="project-banner"
+      style={{ backgroundImage: "url('https://ik.imagekit.io/zp0tch54w/GATECODE%20IMAGES/Rectangle%2080%20(1).png')" }}
     >
       <div className="project-banner__overlay"></div>
       <div className="project-banner__content">

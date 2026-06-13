@@ -1,11 +1,27 @@
 'use client';
 
-import {  useEffect, useRef, useState  } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './VisionMission.css';
+
+interface VisionMissionBoxProps {
+  title: string;
+  imageSrc: string;
+  description: string;
+}
+
+const VisionMissionBox = ({ title, imageSrc, description }: VisionMissionBoxProps) => (
+  <div className="vm-card">
+    <h2 className="vm-title">{title}</h2>
+    <div className="vm-image-container">
+      <img src={imageSrc} alt={title} className="vm-image" />
+    </div>
+    <p className="vm-text">{description}</p>
+  </div>
+);
 
 const VisionMission = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef(null);
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -29,35 +45,30 @@ const VisionMission = () => {
     };
   }, []);
 
+  const boxesData = [
+    {
+      title: 'VISION',
+      imageSrc: 'https://ik.imagekit.io/zp0tch54w/GATECODE%20IMAGES/Rectangle%2071.png',
+      description: 'We envision a future where businesses seamlessly scale and succeed through smart technology, streamlined operations, and data-driven decisions. Gatecode Technologies Pvt. Ltd. aims to lead this transformation by providing end-to-end business solutions that enhance productivity, reduce costs, and create long-term value for our clients worldwide.',
+    },
+    {
+      title: 'MISSION',
+      imageSrc: 'https://ik.imagekit.io/zp0tch54w/GATECODE%20IMAGES/Rectangle%2072.png',
+      description: 'At Gatecode Technologies Pvt. Ltd., our mission is to empower businesses with innovative, reliable, and cost-effective solutions by combining technology, expertise, and strategic insight. We are committed to delivering excellence across IT services, BPO operations, Back Office Services, consultancy, digital marketing, and accounting—ensuring accuracy, efficiency, scalability, and measurable results for every client.',
+    },
+  ];
+
   return (
     <section className="vm-section fe-root" ref={sectionRef}>
       <div className={`vm-container ${isVisible ? 'is-visible' : ''}`}>
-        <div className="vm-card">
-          <h2 className="vm-title">VISION</h2>
-          <div className="vm-image-container">
-            <img src="/images/vision.png" alt="Vision" className="vm-image" />
-          </div>
-          <p className="vm-text">
-            We envision a future where businesses seamlessly scale and succeed through smart technology, 
-            streamlined operations, and data-driven decisions. Gatecode Technologies Pvt. Ltd. aims to 
-            lead this transformation by providing end-to-end business solutions that enhance productivity, 
-            reduce costs, and create long-term value for our clients worldwide.
-          </p>
-        </div>
-
-        <div className="vm-card">
-          <h2 className="vm-title">MISSION</h2>
-          <div className="vm-image-container">
-            <img src="/images/mission.png" alt="Mission" className="vm-image" />
-          </div>
-          <p className="vm-text">
-            At Gatecode Technologies Pvt. Ltd., our mission is to empower businesses with innovative, 
-            reliable, and cost-effective solutions by combining technology, expertise, and strategic insight. 
-            We are committed to delivering excellence across IT services, BPO operations, Back Office Services, 
-            consultancy, digital marketing, and accounting—ensuring accuracy, efficiency, scalability, 
-            and measurable results for every client.
-          </p>
-        </div>
+        {boxesData.map((box) => (
+          <VisionMissionBox
+            key={box.title}
+            title={box.title}
+            imageSrc={box.imageSrc}
+            description={box.description}
+          />
+        ))}
       </div>
     </section>
   );

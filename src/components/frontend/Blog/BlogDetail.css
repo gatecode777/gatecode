@@ -141,7 +141,7 @@
   border: 1px solid #e2e8f0;
   margin-top: 0px;
   position: sticky;
-  top: 10px;
+  top: 110px;
   z-index: 10;
   width: 300px;
 }
@@ -483,6 +483,7 @@
 
   .form-box {
     margin-top: 0;
+    top: 100px;
   }
 }
 
@@ -555,6 +556,10 @@
     padding: 20px 15px;
     width: 100% !important;
     max-width: none !important;
+  }
+
+  .form-box {
+    top: 88px;
   }
 
   .sidebar-titlee {
