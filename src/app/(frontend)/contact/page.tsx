@@ -38,7 +38,7 @@ const ContactInfo = () => {
     {
       icon: <FiMapPin />,
       title: 'Visit Us',
-      details: ['Gatecode Technologies Pvt. Ltd.', 'Jaipur, India']
+      details: ['412, Sumer Nagar, Mansarovar.', 'Jaipur, India']
     },
     {
       icon: <FiClock />,
