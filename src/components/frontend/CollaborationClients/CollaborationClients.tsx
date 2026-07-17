@@ -13,7 +13,7 @@ const CollaborationClients = () => {
           </div>
 
           <div className="cc-rmax">
-            <img src="/images/rmax.png" alt="Rmax Solutions Logo" className="cc-rmax-logo" />
+            <img src="/images/rmax.png" alt="Rmax Solutions Partnership Logo - Gatecode Technologies" className="cc-rmax-logo" />
           </div>
 
           <p className="cc-desc">
@@ -31,13 +31,13 @@ const CollaborationClients = () => {
             TRUSTED BY <span className="cc-teal">INDUSTRY LEADERS</span>: MEET OUR <span className="cc-teal">VALUED CLIENTS</span>
           </h2>
           <div className="cc-clients-grid">
-            <a href="https://gatexpay.in/" target='_blank'><img src="/images/1.jpeg" alt="Trusted Clients Logos" className="cc-clients-image" /></a>
-            <a href="#" target='_blank'><img src="/images/2.jpeg" alt="Trusted Clients Logos" className="cc-clients-image" /></a>
-            <a href="#" target='_blank'><img src="/images/3.jpeg" alt="Trusted Clients Logos" className="cc-clients-image" /></a>
-            <a href="https://cocofinasugar.com/" target='_blank'><img src="/images/7.png" alt="Trusted Clients Logos" className="cc-clients-image" /></a>
-            <a href="https://ecobinuae.com/" target='_blank'><img src="/images/4.jpeg" alt="Trusted Clients Logos" className="cc-clients-image" /></a>
-            <a href="https://destoura.com/" target='_blank'><img src="/images/5.jpeg" alt="Trusted Clients Logos" className="cc-clients-image" /></a>
-            <a href="https://www.instagram.com/thedamrubynamo.pratapnagar/" target='_blank'><img src="/images/6.png" alt="Trusted Clients Logos" className="cc-clients-image" /></a>
+            <a href="https://gatexpay.in/" target='_blank'><img src="/images/1.jpeg" alt="Gatexpay Client Logo - Gatecode Technologies" className="cc-clients-image" /></a>
+            <a href="#" target='_blank'><img src="/images/2.jpeg" alt="Valued Enterprise Client Logo - Gatecode Technologies" className="cc-clients-image" /></a>
+            <a href="#" target='_blank'><img src="/images/3.jpeg" alt="Partner Business Client Logo - Gatecode Technologies" className="cc-clients-image" /></a>
+            <a href="https://cocofinasugar.com/" target='_blank'><img src="/images/7.png" alt="Cocofina Sugar Brand Client Logo - Gatecode Technologies" className="cc-clients-image" /></a>
+            <a href="https://ecobinuae.com/" target='_blank'><img src="/images/4.jpeg" alt="Ecobin UAE Client Logo - Gatecode Technologies" className="cc-clients-image" /></a>
+            <a href="https://destoura.com/" target='_blank'><img src="/images/5.jpeg" alt="Destoura Client Logo - Gatecode Technologies" className="cc-clients-image" /></a>
+            <a href="https://www.instagram.com/thedamrubynamo.pratapnagar/" target='_blank'><img src="/images/6.png" alt="The Damru Dynamo Pratapnagar Client Logo - Gatecode Technologies" className="cc-clients-image" /></a>
           </div>
         </div>
       </div>

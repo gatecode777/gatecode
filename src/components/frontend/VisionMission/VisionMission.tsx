@@ -13,7 +13,7 @@ const VisionMissionBox = ({ title, imageSrc, description }: VisionMissionBoxProp
   <div className="vm-card">
     <h2 className="vm-title">{title}</h2>
     <div className="vm-image-container">
-      <img src={imageSrc} alt={title} className="vm-image" />
+      <img src={imageSrc} alt={`${title} Statement - Gatecode Technologies`} className="vm-image" />
     </div>
     <p className="vm-text">{description}</p>
   </div>

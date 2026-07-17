@@ -55,13 +55,13 @@ const Hero = () => {
 
         <div className="hero-images">
           <div className="hero-img-circle circle-1">
-            <img src="https://ik.imagekit.io/zp0tch54w/GATECODE%20IMAGES/Ellipse%208.png" alt="Skyscrapers" />
+            <img src="https://ik.imagekit.io/zp0tch54w/GATECODE%20IMAGES/Ellipse%208.png" alt="Modern Business Growth and IT Infrastructure - Gatecode Technologies" />
           </div>
           <div className="hero-img-circle circle-2">
-            <img src="https://ik.imagekit.io/zp0tch54w/GATECODE%20IMAGES/Ellipse%207.png" alt="Office worker" />
+            <img src="https://ik.imagekit.io/zp0tch54w/GATECODE%20IMAGES/Ellipse%207.png" alt="Professional IT and Business Support Specialist at Work - Gatecode Technologies" />
           </div>
           <div className="hero-img-circle circle-3">
-            <img src="https://ik.imagekit.io/zp0tch54w/GATECODE%20IMAGES/Ellipse%206.png" alt="Looking up at skyscraper" />
+            <img src="https://ik.imagekit.io/zp0tch54w/GATECODE%20IMAGES/Ellipse%206.png" alt="Future Ready Technology Solutions and Innovation - Gatecode Technologies" />
           </div>
         </div>
       </div>

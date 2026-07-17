@@ -146,7 +146,7 @@ const DigitalWhyChoose = () => {
           <div className="dm-why-choose-image">
             <Image
               src="/images/path.png"
-              alt="Data Entry Illustration"
+              alt="Keyboard Input Data Entry Processes - Gatecode Technologies"
               className="dm-path-illustration"
               width={500}
               height={400}
@@ -236,11 +236,11 @@ const DigitalIndustries = () => {
           </div>
 
           <div className="dm-image-grid">
-            <Image src="/images/1.jpg" alt="Industry 1" className="dm-industry-img-1" width={200} height={150} />
-            <Image src="/images/2.jpg" alt="Industry 2" className="dm-industry-img-2" width={200} height={150} />
-            <Image src="/images/3.jpg" alt="Industry 3" className="dm-industry-img-3" width={200} height={150} />
-            <Image src="/images/4.jpg" alt="Industry 4" className="dm-industry-img-4" width={200} height={150} />
-            <Image src="/images/5.jpg" alt="Industry 5" className="dm-industry-img-5" width={200} height={150} />
+            <Image src="/images/1.jpg" alt="E-Commerce Store Product Data Entry - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
+            <Image src="/images/2.jpg" alt="Healthcare Patient Records Data Digitization - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
+            <Image src="/images/3.jpg" alt="Education Center Student Enrollment Database - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
+            <Image src="/images/4.jpg" alt="Finance and Accounting Invoice Entry - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
+            <Image src="/images/5.jpg" alt="Real Estate Listing Property Records - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
           </div>
         </div>
       </div>

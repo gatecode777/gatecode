@@ -148,7 +148,7 @@ const DigitalWhyChoose = () => {
           <div className="dm-why-choose-image">
             <Image
               src="/images/path.png"
-              alt="Custom Website Development Illustration"
+              alt="Custom Website Development Roadmap - Gatecode Technologies"
               className="dm-path-illustration"
               width={500}
               height={400}
@@ -238,11 +238,11 @@ const DigitalIndustries = () => {
           </div>
 
           <div className="dm-image-grid">
-            <Image src="/images/1.jpg" alt="Industry 1" className="dm-industry-img-1" width={200} height={150} />
-            <Image src="/images/2.jpg" alt="Industry 2" className="dm-industry-img-2" width={200} height={150} />
-            <Image src="/images/3.jpg" alt="Industry 3" className="dm-industry-img-3" width={200} height={150} />
-            <Image src="/images/4.jpg" alt="Industry 4" className="dm-industry-img-4" width={200} height={150} />
-            <Image src="/images/5.jpg" alt="Industry 5" className="dm-industry-img-5" width={200} height={150} />
+            <Image src="/images/1.jpg" alt="E-Commerce and Retail Custom Web Solutions - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
+            <Image src="/images/2.jpg" alt="Restaurant and Food Delivery Custom Web Development - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
+            <Image src="/images/3.jpg" alt="Healthcare and Wellness Portal Design - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
+            <Image src="/images/4.jpg" alt="Education and E-Learning Web Development - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
+            <Image src="/images/5.jpg" alt="Corporate Business Custom Web Solutions - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
           </div>
         </div>
       </div>

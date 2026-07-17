@@ -146,7 +146,7 @@ const DigitalWhyChoose = () => {
           <div className="dm-why-choose-image">
             <Image
               src="/images/path.png"
-              alt="Excel & Spreadsheet Management Illustration"
+              alt="Excel Spreadsheet Calculations and Data Formulas - Gatecode Technologies"
               className="dm-path-illustration"
               width={500}
               height={400}
@@ -236,11 +236,11 @@ const DigitalIndustries = () => {
           </div>
 
           <div className="dm-image-grid">
-            <Image src="/images/1.jpg" alt="Industry 1" className="dm-industry-img-1" width={200} height={150} />
-            <Image src="/images/2.jpg" alt="Industry 2" className="dm-industry-img-2" width={200} height={150} />
-            <Image src="/images/3.jpg" alt="Industry 3" className="dm-industry-img-3" width={200} height={150} />
-            <Image src="/images/4.jpg" alt="Industry 4" className="dm-industry-img-4" width={200} height={150} />
-            <Image src="/images/5.jpg" alt="Industry 5" className="dm-industry-img-5" width={200} height={150} />
+            <Image src="/images/1.jpg" alt="E-Commerce Product Inventory Spreadsheets - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
+            <Image src="/images/2.jpg" alt="Healthcare Patient Scheduler Excel Management - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
+            <Image src="/images/3.jpg" alt="Finance and Accounting Ledger Excel Sheets - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
+            <Image src="/images/4.jpg" alt="Educational School Grade and Attendance Sheets - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
+            <Image src="/images/5.jpg" alt="Real Estate Sales Tracker Spreadsheets - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
           </div>
         </div>
       </div>

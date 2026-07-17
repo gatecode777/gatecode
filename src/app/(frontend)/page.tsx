@@ -17,7 +17,22 @@ import TeamMember from '@/models/TeamMember';
 
 export const dynamic = 'force-dynamic';
 
-export const metadata: Metadata = { title: 'Gatecode Technologies' };
+export const metadata: Metadata = {
+  title: 'Gatecode Technologies — Empowering Business Innovation',
+  description: 'Gatecode Technologies is a leading software development and digital transformation company. We empower businesses with custom websites, mobile apps, UI/UX designs, accounting, and BPO solutions.',
+  keywords: [
+    'Gatecode Technologies',
+    'software development company',
+    'digital transformation',
+    'custom website development',
+    'mobile app development',
+    'UI/UX design services',
+    'BPO services',
+    'accounting support',
+    'graphic design',
+    'business tech solutions'
+  ]
+};
 
 function plain(data: any) {
   return JSON.parse(JSON.stringify(data));

@@ -59,7 +59,7 @@ const HeroSectionWD = () => {
                 <div className="wd-hero-right">
                     <Image
                         src="/images/Rectangle 305.jpg"
-                        alt="Digital Marketing"
+                        alt="Strategic Digital Marketing Solutions by Gatecode Technologies"
                         width={500}
                         height={400}
                     />
@@ -165,7 +165,7 @@ const WhatWeOffer = () => {
                             style={{ transitionDelay: `${index * 0.1}s` }}
                         >
                             <div className="offer-icon">
-                                <Image src={service.icon} alt={service.title} width={50} height={50} />
+                                <Image src={service.icon} alt={`${service.title} - Gatecode Technologies`} width={50} height={50} />
                             </div>
 
                             <h3>{service.title}</h3>
@@ -247,7 +247,7 @@ const WhyChoose = () => {
                             style={{ transitionDelay: `${index * 0.15}s` }}
                         >
                             <div className="why-card-image">
-                                <Image src={item.image} alt={item.title} width={300} height={200} />
+                                <Image src={item.image} alt={`${item.title} - Gatecode Technologies`} width={300} height={200} />
                                 <div className="why-card-overlay" />
                             </div>
                             <div className="why-card-content">

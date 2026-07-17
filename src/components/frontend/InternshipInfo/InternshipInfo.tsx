@@ -34,7 +34,7 @@ const InternshipInfo = () => {
             </ul>
           </div>
           <div className="benefits-image">
-            <img src="/images/bird_img.png" alt="Internship Benefits" />
+            <img src="/images/bird_img.png" alt="Professional IT and Software Internship Benefits - Gatecode Technologies" />
           </div>
         </div>
       </div>

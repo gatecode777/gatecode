@@ -89,7 +89,7 @@ const ImageSlider = () => {
                 <div className="panorama-image-wrapper">
                   <img
                     src={slide.src}
-                    alt={slide.text}
+                    alt={`${slide.text} - Gatecode Technologies`}
                     loading="lazy"
                   />
                   <div className="panorama-text-overlay">

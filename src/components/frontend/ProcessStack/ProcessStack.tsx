@@ -333,7 +333,7 @@ const ProcessStack = () => {
               <div className="process-flow-card-image-wrapper">
                 <img
                   src={step.image}
-                  alt={step.title}
+                  alt={`${step.title} Stage - Gatecode Technologies Workflow`}
                   className="process-flow-card-image"
                 />
               </div>

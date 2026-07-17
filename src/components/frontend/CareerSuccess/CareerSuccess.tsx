@@ -29,7 +29,7 @@ const CareerSuccess = () => {
       <div className="container career-success__container">
         <div className="career-success__left">
           <div className="tech-image">
-            <img src="/images/moto_img.png" alt="Tech Illustration" />
+            <img src="/images/moto_img.png" alt="Next Generation Career Success and Tech Solutions - Gatecode Technologies" />
           </div>
           <h2 className="career-success__title">From Learning to Career Success</h2>
           <p className="career-success__subtitle">

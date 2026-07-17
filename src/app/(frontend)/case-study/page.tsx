@@ -7,7 +7,22 @@ import CaseStudyModel from '@/models/CaseStudy';
 
 export const dynamic = 'force-dynamic';
 
-export const metadata: Metadata = { title: 'CaseStudy' };
+export const metadata: Metadata = {
+  title: 'Case Studies & Client Success Stories | Gatecode Technologies',
+  description: 'Read our case studies to see how Gatecode Technologies helps businesses overcome complex challenges and drive growth through digital transformation and custom software engineering.',
+  keywords: [
+    'Gatecode Technologies',
+    'CASE STUDIES',
+    'measurable results',
+    'innovative solutions',
+    'DAMRU BY NAMO',
+    'ECO-BIN',
+    'COCOFINA SUGAR',
+    'online ordering platform',
+    'E-Commerce Website',
+    'environmental cleaning services'
+  ]
+};
 
 function plain(data: any) {
   return JSON.parse(JSON.stringify(data));

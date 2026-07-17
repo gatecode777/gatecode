@@ -147,7 +147,7 @@ const DigitalWhyChoose = () => {
           <div className="dm-why-choose-image">
             <Image
               src="/images/path.png"
-              alt="Packaging Design Illustration"
+              alt="Product Labeling and Packaging Box Layout Mockup - Gatecode Technologies"
               className="dm-path-illustration"
               width={500}
               height={400}
@@ -237,11 +237,11 @@ const DigitalIndustries = () => {
           </div>
 
           <div className="dm-image-grid">
-            <Image src="/images/1.jpg" alt="Industry 1" className="dm-industry-img-1" width={200} height={150} />
-            <Image src="/images/2.jpg" alt="Industry 2" className="dm-industry-img-2" width={200} height={150} />
-            <Image src="/images/3.jpg" alt="Industry 3" className="dm-industry-img-3" width={200} height={150} />
-            <Image src="/images/4.jpg" alt="Industry 4" className="dm-industry-img-4" width={200} height={150} />
-            <Image src="/images/5.jpg" alt="Industry 5" className="dm-industry-img-5" width={200} height={150} />
+            <Image src="/images/1.jpg" alt="Food and Beverage Bottle and Box Designs - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
+            <Image src="/images/2.jpg" alt="Cosmetics and Personal Care Packaging Designs - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
+            <Image src="/images/3.jpg" alt="E-Commerce Store Shipping Box Designs - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
+            <Image src="/images/4.jpg" alt="Healthcare and Medical Product Label Designs - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
+            <Image src="/images/5.jpg" alt="FMCG Goods Commercial Packaging Designs - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
           </div>
         </div>
       </div>

@@ -55,7 +55,7 @@ const AboutExpertise = () => {
           {cards.map((card, i) => (
             <div className="expertise-card" key={i}>
               <div className="expertise-card__img">
-                <img src={card.img} alt={card.title} />
+                <img src={card.img} alt={`${card.title} - Gatecode Technologies`} />
               </div>
               <div className="expertise-card__body">
                 <div className="expertise-card__header">
