@@ -5,7 +5,7 @@ import ScrollToTop from '@/components/frontend/ScrollToTop/ScrollToTop';
 import Chatbot from '@/components/frontend/Chatbot/Chatbot';
 
 export const metadata: Metadata = {
-  title: { default: 'Gatecode Technologies', template: '%s | Gatecode Technologies' },
+  title: 'Gatecode Technologies',
   description: 'Empowering businesses with technology driven solutions, operational excellence, and strategic expertise.',
 };
 
