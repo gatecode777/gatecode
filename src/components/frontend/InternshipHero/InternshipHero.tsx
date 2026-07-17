@@ -10,7 +10,7 @@ const InternshipHero = () => {
         <div className="internship-hero__image-wrapper">
           <img
             src="/images/hero_img.png"
-            alt="Professional Intern"
+            alt="Professional Internship Program at Gatecode Technologies"
             className="internship-hero__image"
           />
         </div>

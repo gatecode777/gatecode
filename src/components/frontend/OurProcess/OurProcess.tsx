@@ -9,7 +9,7 @@ const OurProcess = () => {
       <div className="core-values__bg">
         <img
           src="https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?w=1600&h=700&fit=crop"
-          alt="Core Values"
+          alt="Gatecode Technologies Core Values and Business Processing Timeline Background"
         />
         <div className="core-values__overlay" />
       </div>

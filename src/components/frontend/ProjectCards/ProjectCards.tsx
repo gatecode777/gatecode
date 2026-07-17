@@ -51,7 +51,7 @@ function ProjectCards({ projects, categories, activeCategory, setActiveCategory,
               return (
                 <article key={project._id} className="project-card">
                   <div className="project-card__image-wrapper">
-                    <img src={project.thumbnail} alt={project.title} className="project-card__image" />
+                    <img src={project.thumbnail} alt={`${project.title} - Gatecode Technologies Client Showcase`} className="project-card__image" />
                   </div>
                   <div className="project-card__content">
                     <h3 className="project-card__title">{project.title}</h3>

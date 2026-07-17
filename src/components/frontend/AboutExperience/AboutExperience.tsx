@@ -53,15 +53,15 @@ const AboutExperience = () => {
           <div className="about-experience__images">
             <div className="about-experience__image-col-left">
               <div className="about-experience__img-wrapper">
-                <img src="/images/exp_1.png" alt="Office Desk" className="about-experience__img about-experience__img--tall" />
+                <img src="/images/exp_1.png" alt="Gatecode Technologies Professional Office Workspace" className="about-experience__img about-experience__img--tall" />
               </div>
             </div>
             <div className="about-experience__image-col-right">
               <div className="about-experience__img-wrapper">
-                <img src="/images/exp_2.png" alt="Team Collaboration" className="about-experience__img about-experience__img--small" />
+                <img src="/images/exp_2.png" alt="Gatecode Software Engineering Team Collaboration" className="about-experience__img about-experience__img--small" />
               </div>
               <div className="about-experience__img-wrapper">
-                <img src="/images/exp_3.png" alt="Happy Team" className="about-experience__img about-experience__img--small" />
+                <img src="/images/exp_3.png" alt="Gatecode Technologies Dedicated Web Developers" className="about-experience__img about-experience__img--small" />
               </div>
             </div>
           </div>

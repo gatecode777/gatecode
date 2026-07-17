@@ -169,7 +169,7 @@ const TSlider = ({ members: propMembers }: { members?: any[] }) => {
                   onClick={() => !isCenter && handleNavigate(idx - activeIndex)}
                 >
                   <div className="tslider__avatar" style={{ width: avatarSize, height: avatarSize }}>
-                    <img src={member.image} alt={member.name} />
+                    <img src={member.image} alt={`${member.name} - ${member.designation} at Gatecode Technologies`} />
                   </div>
                   <div className="tslider__stars" style={{ marginTop: isCenter ? '22px' : '18px' }}>
                     {[1, 2, 3, 4, 5].map(s => (

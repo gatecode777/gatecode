@@ -45,7 +45,7 @@ const Services = () => {
         {servicesData.map((service, index) => (
           <div key={index} className={`service-card ${service.className}`}>
             <div className="service-card-img">
-              <img src={service.image} alt={service.title} />
+              <img src={service.image} alt={`${service.title} Solutions - Gatecode Technologies`} />
               <div className="service-card-overlay"></div>
             </div>
             <h4 className="service-card-title">{service.title}</h4>

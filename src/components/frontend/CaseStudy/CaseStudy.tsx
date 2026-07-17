@@ -62,7 +62,7 @@ function CaseStudy({ studies: initialStudies }) {
   return (
     <div className="cs">
       <div className="cs-hero" style={{ backgroundImage: `url(${heroBg})` }}>
-        <img src={heroMan} alt="Professional thinking" className="cs-hero__man-img" />
+        <img src={heroMan} alt="Professional IT Consultant Analyzing Case Studies - Gatecode Technologies" className="cs-hero__man-img" />
         <div className="cs-hero__container">
           <div className="cs-hero__content">
             <h1 className="cs-hero__title">CASE STUDIES</h1>
@@ -101,7 +101,7 @@ function CaseStudy({ studies: initialStudies }) {
                   </div>
                 </div>
                 <div className="cs-card__image-wrapper">
-                  <img src={study.thumbnail} alt={study.title} className="cs-card__image" />
+                  <img src={study.thumbnail} alt={`${study.title} - Gatecode Technologies Case Study Success`} className="cs-card__image" />
                 </div>
               </div>
             ))}

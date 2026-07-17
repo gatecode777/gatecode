@@ -16,19 +16,19 @@ const WhatMakesDifferent = () => {
           <div className="wmd-img-card wmd-img-card--side">
             <img
               src="https://img.freepik.com/free-vector/data-points-concept-illustration_114360-3001.jpg?w=600"
-              alt="Digital interaction"
+              alt="Custom Software and Digital Interaction Solutions - Gatecode Technologies"
             />
           </div>
           <div className="wmd-img-card wmd-img-card--center">
             <img
               src="https://img.freepik.com/free-vector/ui-ux-designers-isometric-composition-with-small-people-creating-custom-design-web-site-3d-vector-illustration_1284-68939.jpg?w=740"
-              alt="UI/UX Design"
+              alt="UI UX Design Services - Gatecode Technologies"
             />
           </div>
           <div className="wmd-img-card wmd-img-card--side">
             <img
               src="https://img.freepik.com/free-vector/home-office-concept-illustration_114360-849.jpg?w=600"
-              alt="Workspace analytics"
+              alt="Enterprise Analytics and Operations Management Workspace - Gatecode Technologies"
             />
           </div>
         </div>

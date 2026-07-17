@@ -27,11 +27,11 @@ const DigitalIndustries = () => {
           </div>
 
           <div className="dm-image-grid">
-            <img src="/images/1.jpg" alt="Industry 1" className="dm-industry-img-1" />
-            <img src="/images/2.jpg" alt="Industry 2" className="dm-industry-img-2" />
-            <img src="/images/3.jpg" alt="Industry 3" className="dm-industry-img-3" />
-            <img src="/images/4.jpg" alt="Industry 4" className="dm-industry-img-4" />
-            <img src="/images/5.jpg" alt="Industry 5" className="dm-industry-img-5" />
+            <img src="/images/1.jpg" alt="E-Commerce and Retail Industry Solutions" className="dm-industry-img-1" />
+            <img src="/images/2.jpg" alt="Restaurants and Hospitality Website Development" className="dm-industry-img-2" />
+            <img src="/images/3.jpg" alt="Corporate Business Software Solutions" className="dm-industry-img-3" />
+            <img src="/images/4.jpg" alt="Education and E-Learning Web Portals" className="dm-industry-img-4" />
+            <img src="/images/5.jpg" alt="Healthcare and Wellness Digital Campaigns" className="dm-industry-img-5" />
           </div>
         </div>
       </div>

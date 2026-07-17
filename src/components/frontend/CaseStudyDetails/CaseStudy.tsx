@@ -20,12 +20,12 @@ const CaseStudy = () => {
         <div className="case-image">
           <img
             src="./Background_img.jpg"
-            alt="background"
+            alt="Gatecode Technologies Case Study Context Banner"
           />
         </div>
       </div>
       <div className="img_container">
-        <img src="./Casestudy_img.jpg" alt="casestudy" />
+        <img src="./Casestudy_img.jpg" alt="Damru By Namo E-Commerce Restaurant Project Case Study" />
       </div>
     </section>
   );

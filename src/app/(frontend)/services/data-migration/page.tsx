@@ -37,9 +37,9 @@ const DigitalAbout = () => {
     <section className="dm-about-section">
       <div className="dm-container">
         <p className="dm-about-text">
-          At Gatecode Technologies Pvt. Ltd., we provide reliable data migration services to help businesses move their data safely and efficiently 
-          between systems, platforms, or databases. Our approach focuses on accuracy, data integrity, and minimal disruption to your operations. 
-          Whether you're upgrading systems, moving to the cloud, or consolidating data, we ensure a smooth transition with secure and structured 
+          At Gatecode Technologies Pvt. Ltd., we provide reliable data migration services to help businesses move their data safely and efficiently
+          between systems, platforms, or databases. Our approach focuses on accuracy, data integrity, and minimal disruption to your operations.
+          Whether you're upgrading systems, moving to the cloud, or consolidating data, we ensure a smooth transition with secure and structured
           migration processes.
         </p>
       </div>
@@ -89,10 +89,10 @@ const DigitalServices = () => {
             <div
               key={index}
               className="dm-service-card"
-              style={{ 
-                backgroundColor: service.color, 
+              style={{
+                backgroundColor: service.color,
                 color: service.text,
-                transitionDelay: `${index * 0.1}s` 
+                transitionDelay: `${index * 0.1}s`
               }}
             >
               <h3>{service.title}</h3>
@@ -127,7 +127,7 @@ const DigitalWhyChoose = () => {
           Why Choose Our Data Migration Services
         </h2>
         <p className="dm-about-text dm-about-text-left">
-          We focus on delivering secure, accurate, and efficient data migration solutions that minimize risks and downtime. Our team ensures 
+          We focus on delivering secure, accurate, and efficient data migration solutions that minimize risks and downtime. Our team ensures
           that your data is transferred seamlessly while maintaining integrity, security, and performance.
         </p>
 
@@ -146,7 +146,7 @@ const DigitalWhyChoose = () => {
           <div className="dm-why-choose-image">
             <Image
               src="/images/path.png"
-              alt="Data Migration Illustration"
+              alt="Database Schema and Data Migration Mapping - Gatecode Technologies"
               className="dm-path-illustration"
               width={500}
               height={400}
@@ -236,11 +236,11 @@ const DigitalIndustries = () => {
           </div>
 
           <div className="dm-image-grid">
-            <Image src="/images/1.jpg" alt="Industry 1" className="dm-industry-img-1" width={200} height={150} />
-            <Image src="/images/2.jpg" alt="Industry 2" className="dm-industry-img-2" width={200} height={150} />
-            <Image src="/images/3.jpg" alt="Industry 3" className="dm-industry-img-3" width={200} height={150} />
-            <Image src="/images/4.jpg" alt="Industry 4" className="dm-industry-img-4" width={200} height={150} />
-            <Image src="/images/5.jpg" alt="Industry 5" className="dm-industry-img-5" width={200} height={150} />
+            <Image src="/images/1.jpg" alt="E-Commerce Platform Database Migration - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
+            <Image src="/images/2.jpg" alt="Healthcare Patient Records Cloud Migration - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
+            <Image src="/images/3.jpg" alt="Finance Ledger Data Migration - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
+            <Image src="/images/4.jpg" alt="Educational Institutional Database Migration - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
+            <Image src="/images/5.jpg" alt="Real Estate Property Listing Data Transfer - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
           </div>
         </div>
       </div>

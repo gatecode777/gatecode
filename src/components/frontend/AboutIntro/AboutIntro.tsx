@@ -44,7 +44,7 @@ const AboutIntro = () => {
           <div className="about-intro__visual">
             <img
               src="/images/who_we_are.png"
-              alt="Who We Are Illustration"
+              alt="Gatecode Technologies Business and IT Solutions Overview"
               className="about-intro__illustration"
             />
           </div>

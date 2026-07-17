@@ -13,9 +13,9 @@ function Portfolio({ slides, isLoading }) {
   const portfolioItems = (slides && slides.length > 0)
     ? slides.map((s, i) => ({ id: s._id || i, image: s.desktopImage, altText: s.altText || '' }))
     : [
-        { id: 1, image: '/images/portfolio-1.jpg', altText: 'Damru Restaurant' },
-        { id: 2, image: '/images/portfolio-2.jpg', altText: 'Coconut Sugar' },
-        { id: 3, image: '/images/portfolio-3.jpg', altText: 'Eco Environmental' },
+        { id: 1, image: '/images/portfolio-1.jpg', altText: 'Damru By Namo Restaurant Online Ordering Platform' },
+        { id: 2, image: '/images/portfolio-2.jpg', altText: 'Cocofina Sugar E-Commerce Website Development' },
+        { id: 3, image: '/images/portfolio-3.jpg', altText: 'Eco Bin Environmental and Cleaning Services Website' },
       ];
 
   const totalItems = portfolioItems.length;
@@ -104,7 +104,7 @@ function Portfolio({ slides, isLoading }) {
                     >
                       <img
                         src={item.image}
-                        alt={item.altText}
+                        alt={`${item.altText || 'Client Project Showcase'} - Gatecode Technologies`}
                         className="portfolio__card-image"
                         loading="lazy"
                       />

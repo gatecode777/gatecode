@@ -61,7 +61,7 @@ const EngagementSteps = () => {
                 <h3 className="step-card__title">{step.title}</h3>
               </div>
               <div className="step-card__image">
-                <img src={step.image} alt={step.title} />
+                <img src={step.image} alt={`${step.title} Process Step - Gatecode Technologies`} />
               </div>
               <div className="step-card__content">
                 <h4 className="step-card__subtitle">{step.subtitle}</h4>
