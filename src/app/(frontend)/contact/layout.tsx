@@ -14,7 +14,10 @@ export const metadata: Metadata = {
     'contact details',
     'Jaipur, India',
     'Office Hours'
-  ]
+  ],
+  alternates: {
+    canonical: '/contact',
+  },
 };
 
 export default function ContactLayout({

@@ -14,7 +14,10 @@ export const metadata: Metadata = {
     'Advertising Creatives',
     'Packaging Design',
     'Motion Graphics & Creative Visuals'
-  ]
+  ],
+  alternates: {
+    canonical: '/services/graphic-design',
+  },
 };
 
 export default function GraphicDesignLayout({

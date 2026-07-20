@@ -23,7 +23,10 @@ export const metadata: Metadata = {
     'mobile app portfolio',
     'client success stories',
     'custom software solutions'
-  ]
+  ],
+  alternates: {
+    canonical: '/portfolio',
+  },
 };
 
 export const dynamic = 'force-dynamic';

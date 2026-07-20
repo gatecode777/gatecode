@@ -14,7 +14,10 @@ export const metadata: Metadata = {
     'IT services terms',
     'BPO terms of service',
     'website usage terms'
-  ]
+  ],
+  alternates: {
+    canonical: '/terms-and-conditions',
+  },
 };
 
 export default function TermsAndConditionsPage() {

@@ -15,7 +15,10 @@ export const metadata: Metadata = {
     'Performance Marketing',
     'Analytics & Reporting',
     'lead generation'
-  ]
+  ],
+  alternates: {
+    canonical: '/services/digital-marketing',
+  },
 };
 
 export default function DigitalMarketingLayout({

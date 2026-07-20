@@ -21,7 +21,10 @@ export const metadata: Metadata = {
     'online ordering platform',
     'E-Commerce Website',
     'environmental cleaning services'
-  ]
+  ],
+  alternates: {
+    canonical: '/case-study',
+  },
 };
 
 function plain(data: any) {

@@ -1,5 +1,5 @@
 // @ts-nocheck
-
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import '@/components/frontend/Blog/BlogDetail.css';
 import '@/components/frontend/Blog/Blog.css';
@@ -12,6 +12,24 @@ export const dynamic = 'force-dynamic';
 
 function plain(data) {
   return JSON.parse(JSON.stringify(data));
+}
+
+export async function generateMetadata({ params }): Promise<Metadata> {
+  const { slug } = await params;
+  await connectDB();
+  const post = await BlogPost.findOne({ slug, status: 'published', isActive: true }).lean();
+
+  if (!post) {
+    return {};
+  }
+
+  return {
+    title: `${post.title} | Gatecode Technologies Blog`,
+    description: post.shortDesc || post.subtitle || 'Read our latest blog post.',
+    alternates: {
+      canonical: `/blog/${slug}`,
+    },
+  };
 }
 
 async function getBlogCategories() {

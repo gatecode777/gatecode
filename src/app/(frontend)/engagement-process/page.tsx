@@ -19,7 +19,10 @@ export const metadata: Metadata = {
     'Deployment and Launch',
     'Support and Maintenance',
     'collaborative IT workflow'
-  ]
+  ],
+  alternates: {
+    canonical: '/engagement-process',
+  },
 };
 
 export default function EngagementProcessPage() {

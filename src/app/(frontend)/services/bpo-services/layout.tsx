@@ -14,7 +14,10 @@ export const metadata: Metadata = {
     'Lead Generation Services',
     'Back Office Support',
     'Appointment Scheduling & Customer Coordination'
-  ]
+  ],
+  alternates: {
+    canonical: '/services/bpo-services',
+  },
 };
 
 export default function BPOServicesLayout({

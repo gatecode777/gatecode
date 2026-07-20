@@ -5,6 +5,7 @@ import ScrollToTop from '@/components/frontend/ScrollToTop/ScrollToTop';
 import Chatbot from '@/components/frontend/Chatbot/Chatbot';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://gatecode.in'),
   title: 'Gatecode Technologies',
   description: 'Empowering businesses with technology driven solutions, operational excellence, and strategic expertise.',
 };

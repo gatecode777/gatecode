@@ -14,7 +14,10 @@ export const metadata: Metadata = {
     'marketing cookies',
     'third-party cookies',
     'managing cookies'
-  ]
+  ],
+  alternates: {
+    canonical: '/cookie-policy',
+  },
 };
 
 export default function CookiePolicyPage() {
