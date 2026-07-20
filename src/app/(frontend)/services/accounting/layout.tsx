@@ -14,7 +14,10 @@ export const metadata: Metadata = {
     'Tally & Accounting Software Management',
     'Budget Planning & Financial Analysis',
     'Audit & Compliance Support'
-  ]
+  ],
+  alternates: {
+    canonical: '/services/accounting',
+  },
 };
 
 export default function AccountingLayout({

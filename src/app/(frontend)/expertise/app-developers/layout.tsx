@@ -15,7 +15,10 @@ export const metadata: Metadata = {
     'App Maintenance & Support',
     'API Integration',
     'App Deployment'
-  ]
+  ],
+  alternates: {
+    canonical: '/expertise/app-developers',
+  },
 };
 
 export default function AppDevelopersExpertiseLayout({

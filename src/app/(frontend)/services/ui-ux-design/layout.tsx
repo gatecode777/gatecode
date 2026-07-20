@@ -14,7 +14,10 @@ export const metadata: Metadata = {
     'Dashboard & Admin Panel Design',
     'Design System & Branding',
     'Responsive & Interactive Design'
-  ]
+  ],
+  alternates: {
+    canonical: '/services/ui-ux-design',
+  },
 };
 
 export default function UIUXDesignLayout({

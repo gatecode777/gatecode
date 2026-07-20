@@ -14,7 +14,10 @@ export const metadata: Metadata = {
     'privacy terms',
     'user privacy',
     'trusted third-party services'
-  ]
+  ],
+  alternates: {
+    canonical: '/privacy-policy',
+  },
 };
 
 export default function PrivacyPolicyPage() {

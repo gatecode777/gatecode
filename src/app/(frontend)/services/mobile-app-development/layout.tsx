@@ -14,7 +14,10 @@ export const metadata: Metadata = {
     'UI/UX Design for Mobile Apps',
     'API & Third-Party Integration',
     'digital transformation'
-  ]
+  ],
+  alternates: {
+    canonical: '/services/mobile-app-development',
+  },
 };
 
 export default function MobileAppDevelopmentLayout({

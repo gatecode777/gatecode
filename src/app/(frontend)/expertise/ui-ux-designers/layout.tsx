@@ -15,7 +15,10 @@ export const metadata: Metadata = {
     'UX Audit & Improvement',
     'Design Systems',
     'Figma designers'
-  ]
+  ],
+  alternates: {
+    canonical: '/expertise/ui-ux-designers',
+  },
 };
 
 export default function UIUXDesignersExpertiseLayout({

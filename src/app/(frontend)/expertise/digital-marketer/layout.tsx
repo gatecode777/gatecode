@@ -15,7 +15,10 @@ export const metadata: Metadata = {
     'Paid Ads (Google & Social Media)',
     'Analytics & Reporting',
     'lead generation'
-  ]
+  ],
+  alternates: {
+    canonical: '/expertise/digital-marketer',
+  },
 };
 
 export default function DigitalMarketerExpertiseLayout({

@@ -31,7 +31,10 @@ export const metadata: Metadata = {
     'accounting support',
     'graphic design',
     'business tech solutions'
-  ]
+  ],
+  alternates: {
+    canonical: '/',
+  },
 };
 
 function plain(data: any) {

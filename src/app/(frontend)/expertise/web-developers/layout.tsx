@@ -15,7 +15,10 @@ export const metadata: Metadata = {
     'Web Application Development',
     'SEO Friendly Development',
     'Speed Optimization'
-  ]
+  ],
+  alternates: {
+    canonical: '/expertise/web-developers',
+  },
 };
 
 export default function WebDevelopersExpertiseLayout({

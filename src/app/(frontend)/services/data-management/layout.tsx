@@ -13,7 +13,10 @@ export const metadata: Metadata = {
     'Document Digitization',
     'Data Analysis & Reporting',
     'Data Security & Confidentiality'
-  ]
+  ],
+  alternates: {
+    canonical: '/services/data-management',
+  },
 };
 
 export default function DataManagementLayout({

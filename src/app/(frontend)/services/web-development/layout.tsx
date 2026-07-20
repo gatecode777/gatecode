@@ -15,7 +15,10 @@ export const metadata: Metadata = {
     'UI/UX Focused Development',
     'API & Third-Party Integration',
     'Website Maintenance & Support'
-  ]
+  ],
+  alternates: {
+    canonical: '/services/web-development',
+  },
 };
 
 export default function WebDevelopmentLayout({

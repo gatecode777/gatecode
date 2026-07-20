@@ -14,7 +14,10 @@ export const metadata: Metadata = {
     'Business Card Design',
     'Motion Graphics',
     'Ad Creatives'
-  ]
+  ],
+  alternates: {
+    canonical: '/expertise/graphic-designers',
+  },
 };
 
 export default function GraphicDesignersExpertiseLayout({

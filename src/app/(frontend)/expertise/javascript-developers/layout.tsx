@@ -15,7 +15,10 @@ export const metadata: Metadata = {
     'React developers',
     'Node.js developers',
     'TypeScript solutions'
-  ]
+  ],
+  alternates: {
+    canonical: '/expertise/javascript-developers',
+  },
 };
 
 export default function JavaScriptDevelopersExpertiseLayout({

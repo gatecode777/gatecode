@@ -27,7 +27,10 @@ export const metadata: Metadata = {
     'process automation',
     'accounting support',
     'digital marketing'
-  ]
+  ],
+  alternates: {
+    canonical: '/about',
+  },
 };
 
 const About = () => {

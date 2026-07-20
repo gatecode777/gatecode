@@ -1,5 +1,5 @@
 // @ts-nocheck
-
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import '@/components/frontend/CaseStudyDetails/CaseStudy.css';
 import '@/components/frontend/CaseStudyDetails/Description.css';
@@ -16,6 +16,24 @@ export const dynamic = 'force-dynamic';
 
 function plain(data: any) {
   return JSON.parse(JSON.stringify(data));
+}
+
+export async function generateMetadata({ params }): Promise<Metadata> {
+  const { slug } = await params;
+  await connectDB();
+  const study = await CaseStudyModel.findOne({ slug, isActive: true }).lean();
+
+  if (!study) {
+    return {};
+  }
+
+  return {
+    title: `${study.title} | Gatecode Technologies`,
+    description: study.shortDesc,
+    alternates: {
+      canonical: `/case-study/${slug}`,
+    },
+  };
 }
 
 function SectionHero({ data, title, shortDesc }) {

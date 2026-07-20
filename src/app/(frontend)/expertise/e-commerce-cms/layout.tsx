@@ -16,7 +16,10 @@ export const metadata: Metadata = {
     'Security & Maintenance',
     'Shopify development',
     'WooCommerce development'
-  ]
+  ],
+  alternates: {
+    canonical: '/expertise/e-commerce-cms',
+  },
 };
 
 export default function ECommerceCMSExpertiseLayout({

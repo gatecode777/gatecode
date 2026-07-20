@@ -15,7 +15,10 @@ export const metadata: Metadata = {
     'Accounting Executive',
     'Graphic Designer',
     'growth-driven environment'
-  ]
+  ],
+  alternates: {
+    canonical: '/careers',
+  },
 };
 
 export default function CareersLayout({

@@ -14,7 +14,10 @@ export const metadata: Metadata = {
     'BPO services',
     'accounting support',
     'graphic design services'
-  ]
+  ],
+  alternates: {
+    canonical: '/services',
+  },
 };
 
 export default function ServicesLayout({

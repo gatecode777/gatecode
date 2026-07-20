@@ -1,11 +1,28 @@
 // @ts-nocheck
-
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import '@/components/frontend/Blog/Blog.css';
 import BlogCard from '@/components/frontend/Blog/BlogCard';
 import connectDB from '@/lib/db';
 import BlogPost from '@/models/BlogPost';
 import BlogCategory from '@/models/BlogCategory';
+
+export const metadata: Metadata = {
+  title: 'Blog & Technology Insights | Gatecode Technologies',
+  description: 'Explore the latest insights, trends, and expert articles on software development, digital marketing, BPO, UI/UX design, and business accounting.',
+  keywords: [
+    'Gatecode Technologies blog',
+    'software development trends',
+    'digital marketing insights',
+    'UI/UX design tips',
+    'business accounting guide',
+    'outsourcing strategies',
+    'IT consulting articles'
+  ],
+  alternates: {
+    canonical: '/blog',
+  },
+};
 
 export const dynamic = 'force-dynamic';
 

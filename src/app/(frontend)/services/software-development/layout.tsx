@@ -14,7 +14,10 @@ export const metadata: Metadata = {
     'Desktop Application Development',
     'API & System Integration',
     'Software Maintenance & Support'
-  ]
+  ],
+  alternates: {
+    canonical: '/services/software-development',
+  },
 };
 
 export default function SoftwareDevelopmentLayout({

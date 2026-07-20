@@ -19,7 +19,10 @@ export const metadata: Metadata = {
     'start your career',
     'fresher internship',
     'student internships'
-  ]
+  ],
+  alternates: {
+    canonical: '/internship',
+  },
 };
 
 export default function InternshipPage() {

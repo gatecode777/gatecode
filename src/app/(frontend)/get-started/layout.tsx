@@ -13,7 +13,10 @@ export const metadata: Metadata = {
     'Delivery and Launch',
     'Ongoing Support and Growth',
     'custom digital solutions'
-  ]
+  ],
+  alternates: {
+    canonical: '/get-started',
+  },
 };
 
 export default function GetStartedLayout({
