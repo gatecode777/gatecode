@@ -1,23 +1,32 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Web Development Services | Gatecode Technologies',
-  description: 'Gatecode Technologies provides custom web development, e-commerce platforms, responsive web design, CMS development, and secure web applications tailored to your business.',
+  title: 'Web Development Company in Jaipur & Custom Services | Gatecode',
+  description: 'Gatecode Technologies is a leading Web Development Company in Jaipur, India. We provide custom website development services, responsive web design, and scalable web solutions tailored to your business.',
   keywords: [
-    'Gatecode Technologies',
-    'custom web solutions',
     'Web Development Services',
-    'Custom Website Development',
-    'Responsive Web Design',
-    'E-Commerce Development',
-    'CMS Development',
-    'Web Application Development',
-    'UI/UX Focused Development',
-    'API & Third-Party Integration',
-    'Website Maintenance & Support'
+    'Website Development Company',
+    'Custom Website Development Services',
+    'Web Development Services in India',
+    'Web Development Company in Jaipur',
+    'website developer jaipur',
+    'Gatecode Technologies'
   ],
   alternates: {
     canonical: '/services/web-development',
+  },
+  openGraph: {
+    title: 'Web Development Company in Jaipur & Custom Services | Gatecode',
+    description: 'Gatecode Technologies is a leading Web Development Company in Jaipur, India. We provide custom website development services, responsive web design, and scalable web solutions.',
+    url: 'https://gatecode.in/services/web-development',
+    siteName: 'Gatecode Technologies',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Web Development Company in Jaipur & Custom Services | Gatecode',
+    description: 'Gatecode Technologies is a leading Web Development Company in Jaipur, India. We provide custom website development services, responsive web design, and scalable web solutions.',
   },
 };
 

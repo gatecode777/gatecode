@@ -1,19 +1,18 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'BPO Services & Outsourcing Solutions | Gatecode Technologies',
-  description: 'Optimize your business operations and customer satisfaction with professional BPO services from Gatecode Technologies. We provide customer support, email/chat support, technical assistance, and lead generation.',
+  title: 'BPO Company in Jaipur & Outsourcing Services | Gatecode',
+  description: 'Gatecode Technologies is a leading BPO Company in Jaipur, India. We offer customer support, inbound/outbound call center services & back-office outsourcing.',
   keywords: [
-    'Gatecode Technologies',
     'BPO Services',
+    'BPO Company',
+    'Business Process Outsourcing Services',
+    'BPO Company in Jaipur',
+    'BPO Services in India',
+    'Call Center in Jaipur',
+    'Outsourcing Company in Jaipur',
     'Customer Support Services',
-    'Email & Chat Support',
-    'Call Center Services',
-    'Data Processing Services',
-    'Technical Support Services',
-    'Lead Generation Services',
-    'Back Office Support',
-    'Appointment Scheduling & Customer Coordination'
+    'Gatecode Technologies'
   ],
   alternates: {
     canonical: '/services/bpo-services',

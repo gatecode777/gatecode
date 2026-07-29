@@ -250,20 +250,128 @@ const DigitalIndustries = () => {
   );
 };
 
+// ==================== SeoContentSection Component (SEO Optimized Content) ====================
+const SeoContentSection = () => {
+  return (
+    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
+      <div className="dm-container">
+        <div style={{ maxWidth: '1100px', margin: '0 auto', color: '#333333', lineHeight: '1.8' }}>
+          
+          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
+            Premier Web Development Company in Jaipur & India
+          </h2>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
+            Welcome to <strong>Gatecode Technologies</strong>, a premier <strong>Web Development Company in Jaipur</strong> providing end-to-end <strong>Web Development Services in India</strong> and worldwide. Whether you are a startup looking to launch your first online platform or an established enterprise needing a high-performance web solution, our team of expert developers and designers builds secure, responsive, and search-engine-optimized websites tailored to your specific business requirements.
+          </p>
+
+          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
+            Custom Website Development Services Designed for Growth
+          </h3>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            As a top-rated <strong>website developer in Jaipur</strong>, we specialize in delivering comprehensive <strong>custom website development services</strong>. We believe every business is unique, which is why we craft custom web applications, e-commerce storefronts, and content management systems from scratch using modern frameworks like React, Next.js, and Node.js.
+          </p>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Fast & Mobile Responsive</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Every site developed by Gatecode Technologies is fully responsive, mobile-first, and optimized for ultra-fast loading speeds across all devices.
+              </p>
+            </div>
+            
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>SEO & Conversion Focused</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Our <strong>Web Development Services</strong> integrate technical SEO best practices, clean semantic markup, and intuitive UX flows to maximize organic rankings and conversions.
+              </p>
+            </div>
+          </div>
+
+          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
+            Why Choose Gatecode Technologies as Your Website Development Company?
+          </h3>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            Partnering with a reliable <strong>Website Development Company</strong> ensures your digital infrastructure is built to scale. When you hire an experienced <strong>website developer in Jaipur</strong> from Gatecode Technologies, you get:
+          </p>
+
+          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
+            <li style={{ marginBottom: '10px' }}><strong>Custom Engineered Solutions:</strong> No generic templates. We write clean, maintainable, and modular code.</li>
+            <li style={{ marginBottom: '10px' }}><strong>Complete Security & Compliance:</strong> Built-in SSL, data encryption, and defense against common web vulnerabilities.</li>
+            <li style={{ marginBottom: '10px' }}><strong>Full Lifecycle Support:</strong> Continuous maintenance, security patches, and cloud deployment assistance.</li>
+          </ul>
+
+        </div>
+      </div>
+    </section>
+  );
+};
+
 // ==================== Main Page Component ====================
 const WebDevelopmentServicesPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  const webDevServiceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Web Development Services',
+    name: 'Custom Web Development Services in Jaipur',
+    provider: {
+      '@type': 'LocalBusiness',
+      name: 'Gatecode Technologies Pvt. Ltd.',
+      url: 'https://gatecode.in',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'India',
+    },
+    description: 'Custom website development, e-commerce platforms, web applications, and CMS development services engineered for performance and scalability.',
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Why should I choose Gatecode Technologies for custom website development?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Gatecode Technologies delivers high-performance custom website development services in Jaipur, India using modern frameworks like Next.js, React, and Node.js with built-in SEO and security.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What technologies do your web developers use?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'We specialize in React, Next.js, Node.js, Python, MongoDB, MySQL, and modern cloud deployment architectures.',
+        },
+      },
+    ],
+  };
+
   return (
     <div className="digital-marketing-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webDevServiceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
+      <SeoContentSection />
       <ContactSection />
     </div>
   );

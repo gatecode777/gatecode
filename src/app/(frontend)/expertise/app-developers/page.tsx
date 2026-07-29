@@ -318,6 +318,7 @@ const DevelopmentProcess = () => {
                     <video
                         className="dev-video-desktop"
                         src="/videos/expertise_video.mp4"
+                        poster="/images/2.jpg"
                         autoPlay
                         loop
                         muted
@@ -327,6 +328,7 @@ const DevelopmentProcess = () => {
                     <video
                         className="dev-video-mobile"
                         src="/videos/1st.mp4"
+                        poster="/images/2.jpg"
                         autoPlay
                         loop
                         muted
@@ -430,8 +432,25 @@ const AppDevelopmentPage = () => {
         window.scrollTo(0, 0);
     }, []);
 
+    const videoSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'VideoObject',
+        name: 'Gatecode Technologies App Development Process',
+        description: 'Watch our 6-step mobile app development process covering Research & Strategy, UI/UX Design, Development, Testing, Launch, and Support at Gatecode Technologies.',
+        thumbnailUrl: [
+            'https://gatecode.in/images/2.jpg',
+            'https://gatecode.in/images/digitalbg1.png',
+        ],
+        uploadDate: '2026-01-15T08:00:00+05:30',
+        contentUrl: 'https://gatecode.in/videos/expertise_video.mp4',
+    };
+
     return (
         <div className="web-development-page">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
+            />
             <HeroSectionWD />
             <IntroText />
             <WhatWeOffer />

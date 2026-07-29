@@ -311,6 +311,7 @@ const DevelopmentProcess = () => {
                     <video
                         className="dev-video-desktop"
                         src="/videos/JavaScript Developer_video.mp4"
+                        poster="/images/2.jpg"
                         autoPlay
                         loop
                         muted
@@ -320,6 +321,7 @@ const DevelopmentProcess = () => {
                     <video
                         className="dev-video-mobile"
                         src="/videos/4th.mp4"
+                        poster="/images/2.jpg"
                         autoPlay
                         loop
                         muted
@@ -418,8 +420,25 @@ const DigitalMarketingServicesPage = () => {
         window.scrollTo(0, 0);
     }, []);
 
+    const videoSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'VideoObject',
+        name: 'Gatecode Technologies Digital Marketing Strategy & Process',
+        description: 'Watch our 6-step digital marketing and lead generation process covering SEO Strategy, Campaign Setup, Content Creation, Performance Optimization, Analytics, and Scaling at Gatecode Technologies.',
+        thumbnailUrl: [
+            'https://gatecode.in/images/2.jpg',
+            'https://gatecode.in/images/digitalbg1.png',
+        ],
+        uploadDate: '2026-01-15T08:00:00+05:30',
+        contentUrl: 'https://gatecode.in/videos/JavaScript%20Developer_video.mp4',
+    };
+
     return (
         <div className="web-development-page">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
+            />
             <HeroSectionWD />
             <IntroText />
             <WhatWeOffer />
