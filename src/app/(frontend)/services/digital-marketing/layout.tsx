@@ -1,23 +1,34 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Digital Marketing Services | Gatecode Technologies',
-  description: 'Boost your online visibility and drive business growth with Gatecode Technologies. We offer result-driven SEO, SMM, PPC, content marketing, and brand strategies.',
+  title: 'Digital Marketing Company in Jaipur & Agency Services | Gatecode',
+  description: 'Gatecode Technologies is a top Digital Marketing Company in Jaipur, India. We offer result-driven SEO services, PPC ads, social media marketing, and lead generation.',
   keywords: [
-    'Gatecode Technologies',
     'Digital Marketing Services',
-    'Search Engine Optimization (SEO)',
-    'Social Media Marketing (SMM)',
-    'Pay-Per-Click Advertising (PPC)',
-    'Content Marketing',
-    'Brand Strategy & Promotion',
-    'Email Marketing',
-    'Performance Marketing',
-    'Analytics & Reporting',
-    'lead generation'
+    'Digital Marketing Agency',
+    'Digital Marketing Company',
+    'Digital Marketing Company in Jaipur',
+    'Digital Marketing Agency in Jaipur',
+    'Digital Marketing Services in India',
+    'Best Digital Marketing Agency Jaipur',
+    'SEO Services Jaipur',
+    'Gatecode Technologies'
   ],
   alternates: {
     canonical: '/services/digital-marketing',
+  },
+  openGraph: {
+    title: 'Digital Marketing Company in Jaipur & Agency Services | Gatecode',
+    description: 'Gatecode Technologies is a top Digital Marketing Company in Jaipur, India. We offer result-driven SEO services, PPC ads, social media marketing, and lead generation.',
+    url: 'https://gatecode.in/services/digital-marketing',
+    siteName: 'Gatecode Technologies',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Digital Marketing Company in Jaipur & Agency Services | Gatecode',
+    description: 'Gatecode Technologies is a top Digital Marketing Company in Jaipur, India. We offer result-driven SEO services, PPC ads, social media marketing, and lead generation.',
   },
 };
 

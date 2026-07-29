@@ -1,19 +1,18 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Accounting Services | Gatecode Technologies',
-  description: 'Simplify financial management and ensure tax compliance with Gatecode Technologies. We offer professional bookkeeping, GST/taxation, payroll, and reporting.',
+  title: 'Accounting Services & Bookkeeping Firm in Jaipur | Gatecode',
+  description: 'Gatecode Technologies provides expert Accounting Services in Jaipur, India. We offer bookkeeping, GST & tax filing, payroll management, and financial reporting.',
   keywords: [
-    'Gatecode Technologies',
     'Accounting Services',
     'Bookkeeping Services',
-    'GST & Taxation Services',
-    'Financial Reporting',
-    'Payroll Management',
-    'Accounts Payable & Receivable',
-    'Tally & Accounting Software Management',
-    'Budget Planning & Financial Analysis',
-    'Audit & Compliance Support'
+    'Accounting Company',
+    'Accounting Services in Jaipur',
+    'Accounting Firm in Jaipur',
+    'Bookkeeping Services in Jaipur',
+    'Accounting Services in India',
+    'GST and Tax Filing Services',
+    'Gatecode Technologies'
   ],
   alternates: {
     canonical: '/services/accounting',
