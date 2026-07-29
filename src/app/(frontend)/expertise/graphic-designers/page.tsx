@@ -304,6 +304,7 @@ const DevelopmentProcess = () => {
                     <video
                         className="dev-video-desktop"
                         src="/videos/Graphic Designer_video.mp4"
+                        poster="/images/2.jpg"
                         autoPlay
                         loop
                         muted
@@ -313,6 +314,7 @@ const DevelopmentProcess = () => {
                     <video
                         className="dev-video-mobile"
                         src="/videos/3rd.mp4"
+                        poster="/images/2.jpg"
                         autoPlay
                         loop
                         muted
@@ -397,8 +399,25 @@ const GraphicDesignerPage = () => {
         window.scrollTo(0, 0);
     }, []);
 
+    const videoSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'VideoObject',
+        name: 'Gatecode Technologies Graphic Design Process',
+        description: 'Watch our 6-step creative graphic design process covering Brand Research, Visual Concepts, Logo & Asset Creation, Revisions, Final Export, and Brand Delivery at Gatecode Technologies.',
+        thumbnailUrl: [
+            'https://gatecode.in/images/2.jpg',
+            'https://gatecode.in/images/digitalbg1.png',
+        ],
+        uploadDate: '2026-01-15T08:00:00+05:30',
+        contentUrl: 'https://gatecode.in/videos/Graphic%20Designer_video.mp4',
+    };
+
     return (
         <div className="web-development-page">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
+            />
             <HeroSectionWD />
             <IntroText />
             <WhatWeOffer />

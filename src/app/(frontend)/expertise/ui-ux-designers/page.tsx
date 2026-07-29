@@ -308,6 +308,7 @@ const DevelopmentProcess = () => {
                     <video
                         className="dev-video-desktop"
                         src="/videos/UX Designer_video.mp4"
+                        poster="/images/2.jpg"
                         autoPlay
                         loop
                         muted
@@ -317,6 +318,7 @@ const DevelopmentProcess = () => {
                     <video
                         className="dev-video-mobile"
                         src="/videos/2nd.mp4"
+                        poster="/images/2.jpg"
                         autoPlay
                         loop
                         muted
@@ -406,8 +408,25 @@ const UxDesignerPage = () => {
         window.scrollTo(0, 0);
     }, []);
 
+    const videoSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'VideoObject',
+        name: 'Gatecode Technologies UI/UX Design Process',
+        description: 'Watch our 6-step agile UI/UX design process covering User Research, Wireframing, UI Design, Prototyping, Testing, and Handoff at Gatecode Technologies.',
+        thumbnailUrl: [
+            'https://gatecode.in/images/2.jpg',
+            'https://gatecode.in/images/digitalbg1.png',
+        ],
+        uploadDate: '2026-01-15T08:00:00+05:30',
+        contentUrl: 'https://gatecode.in/videos/UX%20Designer_video.mp4',
+    };
+
     return (
         <div className="web-development-page">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
+            />
             <HeroSectionWD />
             <IntroText />
             <WhatWeOffer />

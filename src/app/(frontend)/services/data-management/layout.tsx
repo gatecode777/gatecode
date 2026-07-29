@@ -1,18 +1,18 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Data Management Services | Gatecode Technologies',
-  description: 'Organize, secure, and leverage your business data with Gatecode Technologies. We offer professional data entry, database management, digitization, and analysis.',
+  title: 'Data Management Company in Jaipur & Entry Services | Gatecode',
+  description: 'Gatecode Technologies is a leading Data Management Company in Jaipur, India. We offer secure data entry services, database management, processing & analytics.',
   keywords: [
-    'Gatecode Technologies',
     'Data Management Services',
     'Data Entry Services',
     'Data Processing Services',
-    'Data Cataloging & Organization',
-    'Database Management',
-    'Document Digitization',
-    'Data Analysis & Reporting',
-    'Data Security & Confidentiality'
+    'Database Management Services',
+    'Data Management Company in Jaipur',
+    'Data Entry Company in Jaipur',
+    'Data Management Services in India',
+    'Outsourced Data Entry Services India',
+    'Gatecode Technologies'
   ],
   alternates: {
     canonical: '/services/data-management',

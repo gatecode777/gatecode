@@ -1,19 +1,18 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Graphic Design Services | Gatecode Technologies',
-  description: 'Enhance your brand identity with creative graphic designs from Gatecode Technologies. We design custom social media posts, logos, brochures, packaging, and motion graphics.',
+  title: 'Graphic Design Company in Jaipur & Creative Agency | Gatecode',
+  description: 'Gatecode Technologies is a top Graphic Design Company in Jaipur, India. We offer custom social media graphics, branding, logo design, banners & creatives.',
   keywords: [
-    'Gatecode Technologies',
     'Graphic Design Services',
-    'Social Media Post Design',
-    'Logo Design & Branding',
-    'Banner & Poster Design',
-    'Brochure & Flyer Design',
-    'Business Card Design',
-    'Advertising Creatives',
-    'Packaging Design',
-    'Motion Graphics & Creative Visuals'
+    'Graphic Design Company',
+    'Graphic Design Agency',
+    'Graphic Design Company in Jaipur',
+    'Graphic Designer in Jaipur',
+    'Graphic Design Services in India',
+    'Best Graphic Design Agency Jaipur',
+    'Logo Design and Branding',
+    'Gatecode Technologies'
   ],
   alternates: {
     canonical: '/services/graphic-design',
