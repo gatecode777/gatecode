@@ -1,22 +1,34 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact Us | Gatecode Technologies — Get in Touch',
-  description: 'Get in touch with Gatecode Technologies today. Contact our sales and engineering teams for software inquiries, custom project consultations, or general support.',
+  title: 'Contact Gatecode Technologies | IT Software Company in Jaipur, India',
+  description: 'Get in touch with Gatecode Technologies Pvt Ltd. Contact our IT engineering & sales teams for software development inquiries, project estimates, or consultations.',
   keywords: [
-    'Gatecode Technologies',
-    'Get In Touch',
-    'digital transformation',
-    'Web Development',
-    'App Development',
-    'Digital Marketing',
-    'Business Consultancy',
-    'contact details',
-    'Jaipur, India',
-    'Office Hours'
+    'contact Gatecode Technologies',
+    'hire software developers contact',
+    'IT consulting inquiry',
+    'contact IT company in India',
+    'custom software project estimate',
+    'Gatecode Technologies Jaipur office address',
+    'software development inquiry contact',
+    'Gatecode Technologies phone number',
+    'Gatecode Technologies email'
   ],
   alternates: {
-    canonical: '/contact',
+    canonical: 'https://gatecode.in/contact',
+  },
+  openGraph: {
+    title: 'Contact Gatecode Technologies | IT Software Company in Jaipur, India',
+    description: 'Get in touch with Gatecode Technologies Pvt Ltd. Contact our IT engineering & sales teams for software development inquiries, project estimates, or consultations.',
+    url: 'https://gatecode.in/contact',
+    siteName: 'Gatecode Technologies',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact Gatecode Technologies | IT Software Company in Jaipur, India',
+    description: 'Get in touch with Gatecode Technologies Pvt Ltd. Contact our IT engineering & sales teams for software development inquiries.',
   },
 };
 
@@ -27,3 +39,4 @@ export default function ContactLayout({
 }) {
   return <>{children}</>;
 }
+

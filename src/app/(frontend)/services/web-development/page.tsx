@@ -255,52 +255,60 @@ const SeoContentSection = () => {
   return (
     <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
       <div className="dm-container">
-        <div style={{ maxWidth: '1100px', margin: '0 auto', color: '#333333', lineHeight: '1.8' }}>
+        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
           
           <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Premier Web Development Company in Jaipur & India
+            Top-Rated Website Development Company in India
           </h2>
           
           <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Welcome to <strong>Gatecode Technologies</strong>, a premier <strong>Web Development Company in Jaipur</strong> providing end-to-end <strong>Web Development Services in India</strong> and worldwide. Whether you are a startup looking to launch your first online platform or an established enterprise needing a high-performance web solution, our team of expert developers and designers builds secure, responsive, and search-engine-optimized websites tailored to your specific business requirements.
+            Welcome to <strong>Gatecode Technologies</strong>, a premier <strong>website development company in India</strong> providing end-to-end <strong>web design & development services</strong> to clients worldwide. As a trusted <strong>website development company</strong>, whether you are a startup looking to launch your first online platform or an established enterprise seeking high-performance digital solutions, our team of expert developers and designers builds secure, responsive, and search-engine-optimized websites tailored to your specific business requirements with transparent and <strong>affordable web development services</strong>.
           </p>
 
           <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Custom Website Development Services Designed for Growth
+            Custom Web App Development Services & Full Stack Solutions
           </h3>
           
           <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            As a top-rated <strong>website developer in Jaipur</strong>, we specialize in delivering comprehensive <strong>custom website development services</strong>. We believe every business is unique, which is why we craft custom web applications, e-commerce storefronts, and content management systems from scratch using modern frameworks like React, Next.js, and Node.js.
+            As an industry-leading <strong>custom web app development services</strong> provider, we specialize in building scalable digital portals, SaaS platforms, and enterprise workflows. Recognizing that every organization has distinct goals, our <strong>full stack development services</strong> combine robust backend architectures with intuitive frontend interfaces. Recognized as a high-performance <strong>react web development company</strong>, we engineer web solutions using modern frameworks like React, Next.js, Node.js, and Python.
           </p>
 
+          {/* Key Feature Highlight Cards */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
             <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Fast & Mobile Responsive</h4>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Web App Development & Custom Portals</h4>
               <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Every site developed by Gatecode Technologies is fully responsive, mobile-first, and optimized for ultra-fast loading speeds across all devices.
+                From interactive dashboards to complex SaaS web systems, our <strong>web app development</strong> team builds fast, secure, and intuitive web applications tailored to your business operations.
               </p>
             </div>
             
             <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>SEO & Conversion Focused</h4>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>API Integration Services</h4>
               <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Our <strong>Web Development Services</strong> integrate technical SEO best practices, clean semantic markup, and intuitive UX flows to maximize organic rankings and conversions.
+                Streamline data flows with custom <strong>api integration services</strong>. We seamlessly connect payment gateways, CRMs, ERPs, third-party software, and legacy systems into a unified architecture.
+              </p>
+            </div>
+
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Website Maintenance Services</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Ensure peak performance with 24/7 <strong>website maintenance services</strong>. We provide active monitoring, security patches, performance tuning, and continuous technical updates.
               </p>
             </div>
           </div>
 
           <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Choose Gatecode Technologies as Your Website Development Company?
+            Hire Dedicated Web Developers in India for Your Next Project
           </h3>
           
           <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Partnering with a reliable <strong>Website Development Company</strong> ensures your digital infrastructure is built to scale. When you hire an experienced <strong>website developer in Jaipur</strong> from Gatecode Technologies, you get:
+            Looking to expand your technical capabilities or scale your engineering bandwidth efficiently? When you partner with Gatecode Technologies to <strong>hire a web developer in India</strong> or <strong>hire dedicated web developers</strong>, you gain access to skilled full-stack engineers who seamlessly integrate into your team. We offer flexible engagement models that reduce development overhead while guaranteeing high code quality and on-time project delivery.
           </p>
 
           <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Custom Engineered Solutions:</strong> No generic templates. We write clean, maintainable, and modular code.</li>
+            <li style={{ marginBottom: '10px' }}><strong>Custom Engineered Architecture:</strong> No generic templates. We write clean, maintainable, and modular full-stack code.</li>
             <li style={{ marginBottom: '10px' }}><strong>Complete Security & Compliance:</strong> Built-in SSL, data encryption, and defense against common web vulnerabilities.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Full Lifecycle Support:</strong> Continuous maintenance, security patches, and cloud deployment assistance.</li>
+            <li style={{ marginBottom: '10px' }}><strong>End-to-End Support:</strong> Dedicated project managers, active API integrations, and ongoing <strong>website maintenance services</strong>.</li>
           </ul>
 
         </div>
@@ -315,13 +323,23 @@ const WebDevelopmentServicesPage = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/web-development' },
+      { '@type': 'ListItem', position: 3, name: 'Web Development', item: 'https://gatecode.in/services/web-development' },
+    ],
+  };
+
   const webDevServiceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
     serviceType: 'Web Development Services',
-    name: 'Custom Web Development Services in Jaipur',
+    name: 'Website Development Company in India',
     provider: {
-      '@type': 'LocalBusiness',
+      '@type': 'Organization',
       name: 'Gatecode Technologies Pvt. Ltd.',
       url: 'https://gatecode.in',
     },
@@ -329,7 +347,7 @@ const WebDevelopmentServicesPage = () => {
       '@type': 'Country',
       name: 'India',
     },
-    description: 'Custom website development, e-commerce platforms, web applications, and CMS development services engineered for performance and scalability.',
+    description: 'Premier website development company in India offering web design & development services, custom web app development services, react web development, and website maintenance services.',
   };
 
   const faqSchema = {
@@ -338,18 +356,26 @@ const WebDevelopmentServicesPage = () => {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'Why should I choose Gatecode Technologies for custom website development?',
+        name: 'Why should I choose Gatecode Technologies as my website development company in India?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Gatecode Technologies delivers high-performance custom website development services in Jaipur, India using modern frameworks like Next.js, React, and Node.js with built-in SEO and security.',
+          text: 'Gatecode Technologies is a top website development company in India offering end-to-end web design & development services, custom web app development services, and affordable web development solutions with React, Next.js, and Node.js.',
         },
       },
       {
         '@type': 'Question',
-        name: 'What technologies do your web developers use?',
+        name: 'Can I hire dedicated web developers in India for custom web app development?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'We specialize in React, Next.js, Node.js, Python, MongoDB, MySQL, and modern cloud deployment architectures.',
+          text: 'Yes! You can hire a web developer in India or hire dedicated web developers from Gatecode Technologies on flexible monthly or project-based engagement models.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you offer API integration services and website maintenance services?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Absoluely. We provide comprehensive API integration services to connect third-party platforms alongside ongoing website maintenance services for security and speed optimization.',
         },
       },
     ],
@@ -357,6 +383,10 @@ const WebDevelopmentServicesPage = () => {
 
   return (
     <div className="digital-marketing-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webDevServiceSchema) }}

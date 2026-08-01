@@ -250,20 +250,158 @@ const DigitalIndustries = () => {
   );
 };
 
+// ==================== SeoContentSection Component (SEO Optimized Content) ====================
+const SeoContentSection = () => {
+  return (
+    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
+      <div className="dm-container">
+        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
+          
+          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
+            Top BPO Companies in India
+          </h2>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
+            Welcome to <strong>Gatecode Technologies</strong>, standing out among the <strong>top bpo companies in india</strong> and premier <strong>bpo outsourcing companies</strong>. As a leading <strong>call center service provider in india</strong> among established <strong>bpo companies</strong>, we deliver round-the-clock <strong>bpo services</strong>, enterprise-grade <strong>business process outsourcing services</strong>, and multi-channel back-office solutions for global organizations.
+          </p>
+
+          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
+            Customer Support Outsourcing Services & Call Center Operations
+          </h3>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            Understanding <strong>what is customer service in bpo</strong> success requires responsive communication and rapid query resolution. Operating as a dedicated <strong>call center service provider</strong>, our agents manage high-volume <strong>customer support outsourcing services</strong>, tailored <strong>bpo customer service</strong>, and specialized <strong>outbound call center services</strong> designed to maximize client retention and conversion.
+          </p>
+
+          {/* Key Feature Highlight Cards */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Customer Support Outsourcing</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Deliver 24/7 helpdesk assistance with <strong>customer support outsourcing services</strong>. We handle live chat, email ticketing, and <strong>customer service and customer support</strong> operations.
+              </p>
+            </div>
+            
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Call Center Services</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Scale telesales and support via <strong>inbound and outbound call center services</strong>. We operate as an accredited <strong>call center service provider in india</strong> for global teams.
+              </p>
+            </div>
+
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Business Process Outsourcing</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Optimize non-core workflows with premier <strong>business process outsourcing companies</strong>. We handle data processing, lead verification, and back-office management.
+              </p>
+            </div>
+          </div>
+
+          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
+            Why Partner with Gatecode Technologies for BPO Services in India?
+          </h3>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            Partnering with top <strong>bpo companies in india</strong> ensures cost savings, zero downtime, and high customer satisfaction scores (CSAT). Partnering with Gatecode Technologies gives you:
+          </p>
+
+          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
+            <li style={{ marginBottom: '10px' }}><strong>24/7 Omnichannel Coverage:</strong> Voice, live chat, email, and social media customer query resolution.</li>
+            <li style={{ marginBottom: '10px' }}><strong>Trained Agent Workforce:</strong> Rigorous product training and English fluency for international standards.</li>
+            <li style={{ marginBottom: '10px' }}><strong>Scalable Capacity:</strong> Rapidly scale seat capacity during peak seasonal demand without infrastructure overhead.</li>
+          </ul>
+
+        </div>
+      </div>
+    </section>
+  );
+};
+
 // ==================== Main Page Component ====================
 const BPOServicesPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/bpo-services' },
+      { '@type': 'ListItem', position: 3, name: 'BPO Services', item: 'https://gatecode.in/services/bpo-services' },
+    ],
+  };
+
+  const bpoSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'BPO Services',
+    name: 'BPO Company in India',
+    provider: {
+      '@type': 'Organization',
+      name: 'Gatecode Technologies Pvt. Ltd.',
+      url: 'https://gatecode.in',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'India',
+    },
+    description: 'Top BPO company in India providing customer support outsourcing, call center services, technical support helpdesk, and back-office management.',
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Why choose Gatecode Technologies as your BPO company in India?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Gatecode Technologies is a leading BPO company in India offering 24/7 customer support outsourcing services, inbound and outbound call center services, and back-office management.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is customer service in BPO and what support channels do you manage?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Customer service in BPO involves handling customer queries, technical helpdesk, order tracking, and account assistance across phone calls, live chat, email, and social messaging.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you offer inbound and outbound call center services?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes! As an established call center service provider in India, we deliver full-suite inbound customer care and outbound tele-marketing/lead generation call center services.',
+        },
+      },
+    ],
+  };
+
   return (
     <div className="digital-marketing-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(bpoSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
+      <SeoContentSection />
       <ContactSection />
     </div>
   );

@@ -1,23 +1,34 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Careers & Job Opportunities | Gatecode Technologies',
-  description: 'Join the team at Gatecode Technologies. Explore open roles in software development, UI/UX design, digital marketing, operations, and finance, and build a rewarding career with us.',
+  title: 'Careers & IT Job Openings in India | Gatecode Technologies',
+  description: 'Join Gatecode Technologies Pvt Ltd. Explore current IT job openings for software developers, web developers, UI/UX designers, and digital marketing experts in India.',
   keywords: [
-    'Gatecode Technologies',
-    'build your career',
-    'Join our team',
-    'Web Developer',
-    'UI/UX Designer',
-    'Digital Marketing Executive',
-    'Data Entry Operator',
-    'BPO Executive',
-    'Accounting Executive',
-    'Graphic Designer',
-    'growth-driven environment'
+    'Gatecode Technologies careers',
+    'software developer jobs in India',
+    'best IT companies to work for in India',
+    'IT job openings Jaipur',
+    'web developer jobs',
+    'UI UX designer jobs',
+    'digital marketing jobs',
+    'career at Gatecode Technologies',
+    'IT careers India'
   ],
   alternates: {
-    canonical: '/careers',
+    canonical: 'https://gatecode.in/careers',
+  },
+  openGraph: {
+    title: 'Careers & IT Job Openings in India | Gatecode Technologies',
+    description: 'Join Gatecode Technologies Pvt Ltd. Explore current IT job openings for software developers, web developers, UI/UX designers, and digital marketing experts in India.',
+    url: 'https://gatecode.in/careers',
+    siteName: 'Gatecode Technologies',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Careers & IT Job Openings in India | Gatecode Technologies',
+    description: 'Join Gatecode Technologies Pvt Ltd. Explore current IT job openings for software developers and designers.',
   },
 };
 
@@ -28,3 +39,4 @@ export default function CareersLayout({
 }) {
   return <>{children}</>;
 }
+

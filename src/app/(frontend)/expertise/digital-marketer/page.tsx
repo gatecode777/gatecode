@@ -414,6 +414,73 @@ const TechnologiesWeUse: React.FC = () => {
     );
 };
 
+// ==================== SeoContentSection Component (SEO Optimized Content) ====================
+const SeoContentSection = () => {
+    return (
+        <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 20px', borderTop: '1px solid #eaeaea', boxSizing: 'border-box', width: '100%' }}>
+            <div style={{ maxWidth: '1300px', margin: '0 auto', width: '100%' }}>
+                <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
+                    
+                    <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
+                        Best Digital Marketing Company in India
+                    </h2>
+                    
+                    <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
+                        Welcome to <strong>Gatecode Technologies</strong>, an accredited <strong>digital marketing company in india</strong> recognized among the <strong>top digital marketing companies</strong> and <strong>best digital marketing company in india</strong> rankings. Whether you are looking for a reliable <strong>digital marketing agency</strong>, a full-service <strong>marketing agency</strong>, or searching for the <strong>best digital marketing company near me</strong>, we deliver data-driven <strong>digital marketing services</strong> that generate qualified leads and maximize ROI.
+                    </p>
+
+                    <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
+                        Top Digital Marketing Agency & Performance Growth Marketing
+                    </h3>
+                    
+                    <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+                        Scaling your business online requires integrated growth strategies across search engines, paid ads, and social media channels. As the <strong>best digital marketing agency</strong> and a leading <strong>digital marketing company</strong>, we craft high-converting <strong>digital marketing websites</strong> and omnichannel marketing campaigns for startups and enterprise brands.
+                    </p>
+
+                    {/* Key Feature Highlight Cards */}
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
+                        <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+                            <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Hire SEO & Performance Specialists</h4>
+                            <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                                Accelerate organic rankings. Easily <strong>hire seo specialist</strong> leads or fulfill your <strong>digital marketing hiring</strong> goals with dedicated marketers trained in technical SEO, link building, and Google Ads management.
+                            </p>
+                        </div>
+                        
+                        <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+                            <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Full-Service Growth Marketing</h4>
+                            <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                                Work with one of the <strong>best marketing agencies</strong>. From Search Engine Optimization (SEO) to Pay-Per-Click (PPC) and Social Media Marketing (SMM), our <strong>best digital marketing company</strong> team manages your entire marketing funnel.
+                            </p>
+                        </div>
+
+                        <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+                            <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Local & Global Campaign Execution</h4>
+                            <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                                If you are searching for a <strong>digital marketing agency near me</strong> or <strong>digital marketing company near me</strong>, Gatecode Technologies combines local targeting with global campaign execution.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
+                        Why Choose Gatecode Technologies for Digital Marketing?
+                    </h3>
+                    
+                    <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+                        Partnering with an accredited <strong>digital marketing company</strong> ensures predictable customer acquisition, low cost-per-lead (CPL), and transparent monthly reporting. Gatecode Technologies offers:
+                    </p>
+
+                    <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
+                        <li style={{ marginBottom: '10px' }}><strong>Data-Driven SEO & Content:</strong> Technical audits, keyword research, on-page optimization, and authority link building.</li>
+                        <li style={{ marginBottom: '10px' }}><strong>High-ROI Paid Advertising:</strong> Google Search Ads, Meta Ads (Facebook/Instagram), LinkedIn Ads, and remarketing funnels.</li>
+                        <li style={{ marginBottom: '10px' }}><strong>Dedicated Growth Marketers:</strong> Flexible engagement options for full-time, part-time, or campaign-based digital marketing team hiring.</li>
+                    </ul>
+
+                </div>
+            </div>
+        </section>
+    );
+};
+
 // ==================== Main Page Component ====================
 const DigitalMarketingServicesPage = () => {
     useEffect(() => {
@@ -433,11 +500,81 @@ const DigitalMarketingServicesPage = () => {
         contentUrl: 'https://gatecode.in/videos/JavaScript%20Developer_video.mp4',
     };
 
+    const breadcrumbSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
+            { '@type': 'ListItem', position: 2, name: 'Technical Expertise', item: 'https://gatecode.in/expertise/digital-marketer' },
+            { '@type': 'ListItem', position: 3, name: 'Digital Marketer', item: 'https://gatecode.in/expertise/digital-marketer' },
+        ],
+    };
+
+    const digitalMarketingSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        serviceType: 'Digital Marketing Services',
+        name: 'Best Digital Marketing Company in India',
+        provider: {
+            '@type': 'Organization',
+            name: 'Gatecode Technologies Pvt. Ltd.',
+            url: 'https://gatecode.in',
+        },
+        areaServed: {
+            '@type': 'Country',
+            name: 'India',
+        },
+        description: 'Best digital marketing company in India providing top SEO services, PPC paid advertising, social media marketing, and dedicated SEO specialist hiring.',
+    };
+
+    const faqSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+            {
+                '@type': 'Question',
+                name: 'Why should I choose Gatecode Technologies as my digital marketing company in India?',
+                acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Gatecode Technologies is a top digital marketing agency in India providing comprehensive SEO services, PPC campaign management, social media marketing, and dedicated SEO specialists.',
+                },
+            },
+            {
+                '@type': 'Question',
+                name: 'Can I hire an SEO specialist or PPC manager individually?',
+                acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Yes! You can hire dedicated SEO specialists, Google Ads managers, or content marketers for full-time or project-based marketing hiring.',
+                },
+            },
+            {
+                '@type': 'Question',
+                name: 'What digital marketing services do you provide?',
+                acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'We provide Search Engine Optimization (SEO), Pay-Per-Click Advertising (PPC), Social Media Marketing (SMM), Content Marketing, Email Automation, and Conversion Rate Optimization (CRO).',
+                },
+            },
+        ],
+    };
+
     return (
         <div className="web-development-page">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(digitalMarketingSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
             />
             <HeroSectionWD />
             <IntroText />
@@ -445,6 +582,7 @@ const DigitalMarketingServicesPage = () => {
             <WhyChoose />
             <DevelopmentProcess />
             <TechnologiesWeUse />
+            <SeoContentSection />
             <TSlider />
             <ContactSection />
         </div>

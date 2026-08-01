@@ -255,8 +255,70 @@ const LogoDesignBrandingServicesPage = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/graphic-design' },
+      { '@type': 'ListItem', position: 3, name: 'Logo Design & Branding', item: 'https://gatecode.in/services/logo-design' },
+    ],
+  };
+
+  const logoDesignServiceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Logo Design & Branding Services',
+    name: 'Logo Design Company in India',
+    provider: {
+      '@type': 'Organization',
+      name: 'Gatecode Technologies Pvt. Ltd.',
+      url: 'https://gatecode.in',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'India',
+    },
+    description: 'Custom logo design company in India providing vector logo creation, corporate brand identity, brand style guides, stationery design, and packaging graphics.',
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Why choose Gatecode Technologies for custom logo design & branding services?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Gatecode Technologies delivers unique, high-resolution vector logo designs, complete corporate brand guidelines, business cards, letterheads, and brand identity packages.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What file formats will I receive for my custom logo design?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'You will receive complete vector source files (AI, EPS, SVG, PDF) alongside high-resolution print and web formats (PNG, JPG) with full copyright ownership.',
+        },
+      },
+    ],
+  };
+
   return (
     <div className="digital-marketing-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(logoDesignServiceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />

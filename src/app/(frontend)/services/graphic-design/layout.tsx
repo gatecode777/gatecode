@@ -1,21 +1,40 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Graphic Design Company in Jaipur & Creative Agency | Gatecode',
-  description: 'Gatecode Technologies is a top Graphic Design Company in Jaipur, India. We offer custom social media graphics, branding, logo design, banners & creatives.',
+  title: 'Best Graphic Design Company in India | Graphic Design Agency',
+  description: 'Gatecode Technologies is the best graphic design company in India. We provide graphic design services in India, logo design and brand identity, social media graphic design services, and custom packaging visuals.',
   keywords: [
-    'Graphic Design Services',
-    'Graphic Design Company',
-    'Graphic Design Agency',
-    'Graphic Design Company in Jaipur',
-    'Graphic Designer in Jaipur',
-    'Graphic Design Services in India',
-    'Best Graphic Design Agency Jaipur',
-    'Logo Design and Branding',
+    'graphic design',
+    'graphic design agency',
+    'graphic design companies',
+    'graphic design company in india',
+    'best graphic design company in india',
+    'graphic design agency india',
+    'graphic design services',
+    'graphic design services in india',
+    'best graphic design agency in india',
+    'logo and brand design',
+    'logo design and brand identity',
+    'social media graphic design services',
+    'packaging and labelling design',
+    'graphic designer',
     'Gatecode Technologies'
   ],
   alternates: {
     canonical: '/services/graphic-design',
+  },
+  openGraph: {
+    title: 'Best Graphic Design Company in India | Graphic Design Agency',
+    description: 'Gatecode Technologies is the best graphic design company in India offering graphic design services in India, logo and brand design, and social media graphic design services.',
+    url: 'https://gatecode.in/services/graphic-design',
+    siteName: 'Gatecode Technologies',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best Graphic Design Company in India | Graphic Design Agency',
+    description: 'Gatecode Technologies is the best graphic design company in India offering graphic design services in India, logo and brand design, and social media graphic design services.',
   },
 };
 

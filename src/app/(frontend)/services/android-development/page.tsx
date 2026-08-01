@@ -254,8 +254,70 @@ const AndroidAppDevelopmentPage = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/mobile-app-development' },
+      { '@type': 'ListItem', position: 3, name: 'Android App Development', item: 'https://gatecode.in/services/android-development' },
+    ],
+  };
+
+  const androidServiceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Android App Development Services',
+    name: 'Android App Development Company in India',
+    provider: {
+      '@type': 'Organization',
+      name: 'Gatecode Technologies Pvt. Ltd.',
+      url: 'https://gatecode.in',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'India',
+    },
+    description: 'Premier Android app development company in India offering custom native Android development, Kotlin apps, Google Play Store publishing, and enterprise mobile solutions.',
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Why choose Gatecode Technologies for Android App Development Services?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Gatecode Technologies builds high-performance, secure native Android applications using Kotlin and Java, featuring Google Play Store optimization and smooth UI performance across all devices.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you handle Google Play Console submission and app store deployment?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes! We handle the complete Google Play Store publication process including app listing optimization, privacy compliance, and build approval.',
+        },
+      },
+    ],
+  };
+
   return (
     <div className="digital-marketing-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(androidServiceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />

@@ -247,20 +247,165 @@ const DigitalIndustries = () => {
   );
 };
 
+// ==================== SeoContentSection Component (SEO Optimized Content) ====================
+const SeoContentSection = () => {
+  return (
+    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
+      <div className="dm-container">
+        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
+          
+          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
+            Best Digital Marketing Company in India
+          </h2>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
+            Welcome to <strong>Gatecode Technologies</strong>, recognized as the <strong>best digital marketing company in india</strong> and a full-service <strong>digital marketing agency</strong>. As a premier <strong>digital marketing company in india</strong>, we deliver data-driven <strong>digital marketing services in india</strong>, high-ROI campaigns, specialized <strong>b2b digital marketing services</strong>, and scalable <strong>white label digital marketing services</strong> tailored to accelerate online growth for brands worldwide.
+          </p>
+
+          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
+            Result-Driven SEO Digital Marketing & Social Media Strategies
+          </h3>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            Achieving dominant online visibility requires integrated <strong>search engine optimization digital marketing</strong> and strategic multi-channel distribution. Operating as a leading <strong>performance marketing agency</strong>, our certified strategists combine technical <strong>seo digital marketing</strong> with high-converting <strong>social media marketing services</strong> to capture intent-driven leads and scale customer acquisition cost-effectively.
+          </p>
+
+          {/* Key Feature Highlight Cards */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>SEO Services & Local Search</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Dominate Google search results with a top-rated <strong>seo services company</strong>. We offer organic <strong>seo services india</strong> alongside <strong>affordable local seo services</strong> for local business rankings.
+              </p>
+            </div>
+            
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Social Media Marketing Agency</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Build an active online community with an established <strong>social media marketing agency</strong>. We run targeted campaigns across Instagram, Facebook, LinkedIn, and YouTube.
+              </p>
+            </div>
+
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>B2B Lead Generation & Growth</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Fuel your sales pipeline with <strong>b2b lead generation services in india</strong>. We design custom funnels and omnichannel campaigns as a trusted <strong>performance marketing agency</strong>.
+              </p>
+            </div>
+
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Automated Email Marketing Services</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Nurture leads and drive repeat sales with <strong>automated email marketing services</strong>. We build drip sequences, newsletter automation, and behavioral lifecycle flows.
+              </p>
+            </div>
+          </div>
+
+          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
+            Why Partner with Gatecode Technologies as Your Digital Marketing Agency?
+          </h3>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            Choosing the <strong>best digital marketing agency</strong> guarantees transparent performance tracking and maximum return on ad spend (ROAS). Partnering with our expert <strong>digital marketing company</strong> gives you:
+          </p>
+
+          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
+            <li style={{ marginBottom: '10px' }}><strong>Data-Driven Campaigns:</strong> Real-time conversion tracking, AB testing, and audience retargeting.</li>
+            <li style={{ marginBottom: '10px' }}><strong>Omnichannel Strategy:</strong> Seamless integration across <strong>seo digital marketing</strong>, Google PPC ads, <strong>automated email marketing services</strong>, and social media.</li>
+            <li style={{ marginBottom: '10px' }}><strong>White Label & B2B Solutions:</strong> Flexible <strong>white label digital marketing services</strong> for partner agencies and corporate clients.</li>
+          </ul>
+
+        </div>
+      </div>
+    </section>
+  );
+};
+
 // ==================== Main Page Component ====================
 const DigitalMarketingPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/digital-marketing' },
+      { '@type': 'ListItem', position: 3, name: 'Digital Marketing', item: 'https://gatecode.in/services/digital-marketing' },
+    ],
+  };
+
+  const digitalMarketingSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Digital Marketing Services',
+    name: 'Best Digital Marketing Company in India',
+    provider: {
+      '@type': 'Organization',
+      name: 'Gatecode Technologies Pvt. Ltd.',
+      url: 'https://gatecode.in',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'India',
+    },
+    description: 'Top digital marketing agency in India providing SEO services, PPC Google Ads, social media marketing services, and lead generation services.',
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Why should I choose Gatecode Technologies as the best digital marketing company in India?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Gatecode Technologies is a leading digital marketing agency in India providing comprehensive SEO digital marketing, social media marketing services, and performance marketing solutions.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you offer SEO services in India and local SEO packages?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes! As a full-service seo services company, we offer organic search engine optimization digital marketing along with affordable local seo services.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you provide automated email marketing services and B2B lead generation?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Absoluely. We deliver automated email marketing services and white label digital marketing services alongside targeted b2b lead generation services in India.',
+        },
+      },
+    ],
+  };
+
   return (
     <div className="digital-marketing-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(digitalMarketingSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
+      <SeoContentSection />
       <ContactSection />
     </div>
   );

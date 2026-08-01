@@ -9,44 +9,44 @@ const stepsData = [
   {
     num: '01',
     title: 'Share Your Requirements',
-    desc: 'Tell us about your project vision, business goals, and expectations. The more detail you provide, the better we can tailor a solution that truly fits your needs.',
+    desc: 'Tell us about your custom software development vision, business goals, and tech stack expectations. The more detail you provide when you share software requirements, the better we can tailor a high-performance solution for your enterprise.',
   },
   {
     num: '02',
     title: 'Consultation & Strategy',
-    desc: 'Our experts analyze your requirements in depth and craft a strategic approach — recommending the best technologies, timelines, and team structures for your goals.',
+    desc: 'Our expert software architects analyze your requirements in depth to craft a strategic digital transformation roadmap — recommending the best cloud architectures, web development frameworks, and engineering team structures.',
   },
   {
     num: '03',
     title: 'Proposal & Planning',
-    desc: 'You receive a transparent proposal covering full scope, phased milestones, cost estimation, and a realistic delivery timeline — no surprises.',
+    desc: 'You receive a transparent custom software project estimate covering clear milestone deliverables, sprint schedules, cost breakdown, and delivery timelines — zero hidden fees.',
   },
   {
     num: '04',
     title: 'Design & Development',
-    desc: 'Our team gets to work with regular updates, sprint reviews, and continuous feedback loops so you are always in the loop and in control.',
+    desc: 'Our dedicated IT engineering team builds your product using agile two-week sprints, continuous staging previews, and regular code reviews to ensure maximum transparency.',
   },
   {
     num: '05',
     title: 'Delivery & Launch',
-    desc: 'We deliver the final product with thorough QA, performance testing, and a smooth go-live process backed by our full support.',
+    desc: 'We launch your web or mobile application with automated QA testing, security audits, and zero-downtime deployment backed by full technical documentation.',
   },
   {
     num: '06',
     title: 'Ongoing Support & Growth',
-    desc: 'Post-launch, we continue optimizing, scaling, and supporting your product — because great partnerships don\'t end at delivery.',
+    desc: 'Post-launch, our IT company in India provides continuous cloud monitoring, SLA maintenance, and product scaling — because long-term partnerships drive business growth.',
   },
 ];
 
 const servicesData = [
-  'Website Development',
-  'Mobile App Development',
-  'Custom Software Solutions',
-  'UI/UX Design',
-  'Graphic & Brand Design',
-  'Digital Marketing',
-  'Branding & Promotion',
-  'Data Management & BPO',
+  'Custom Software Development',
+  'Website Development & Next.js',
+  'Mobile App Development (iOS & Android)',
+  'UI/UX Design & Prototyping',
+  'Graphic & Brand Identity Design',
+  'Digital Marketing & Performance SEO',
+  'Data Management & BPO Services',
+  'Accounting & Financial Support',
 ];
 
 const GetStartedPage = () => {
@@ -157,10 +157,52 @@ const GetStartedPage = () => {
     }
   };
 
-  const errorStyle = { color: '#e53e3e', fontSize: 12, marginTop: 6, display: 'block', fontWeight: 500 };
+  const howToSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'How to Get Started with Gatecode Technologies for Software Development',
+    description: 'Step-by-step process to kickstart custom web engineering, mobile app development, and digital transformation with Gatecode Technologies.',
+    step: stepsData.map((s, idx) => ({
+      '@type': 'HowToStep',
+      position: idx + 1,
+      name: s.title,
+      text: s.desc,
+    })),
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'How do I start a custom software project with Gatecode Technologies?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Simply fill out the Get Started project form with your software requirements. Our technical leads will analyze your scope and contact you within 24 business hours.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Can Gatecode Technologies sign a non-disclosure agreement (NDA)?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, we provide strict NDAs upon request to protect your proprietary business ideas and intellectual property before discussing technical details.',
+        },
+      },
+    ],
+  };
 
   return (
     <div className="get-started-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
 
       <section className="gs-hero gs-section">
         <div className="gs-hero__bg" style={{ background: 'url("/images/Hero_img.jpg") center/cover no-repeat' }} />
@@ -170,8 +212,7 @@ const GetStartedPage = () => {
           <h1 className="gs-hero__title">LET'S GET STARTED</h1>
 
           <p className="gs-hero__sub">
-            Share your ideas with us, and we'll turn them into powerful digital
-            solutions tailored to your business goals.
+            Share your custom software engineering and web development ideas with us, and we'll turn them into powerful digital solutions tailored to your business goals.
           </p>
 
           <Link href="/contact" className="gs-btn">
@@ -185,10 +226,7 @@ const GetStartedPage = () => {
           <span>Our Approach</span>
         </div>
         <p className="gs-intro__text">
-          At <strong>Gatecode Technologies Pvt. Ltd.</strong>, we make it effortless to begin your journey
-          with us. Whether you're looking to build a website, develop software, design your brand,
-          or grow your digital presence — our team is here to guide you at every step, with clarity
-          and craftsmanship at the core.
+          At <strong>Gatecode Technologies Pvt. Ltd.</strong>, we make it effortless to start your digital transformation journey with us. Whether you're looking to hire software developers, build a custom web application, design your brand, or scale your business operations — our top IT company team is here to guide you at every step.
         </p>
       </section>
 
@@ -202,7 +240,7 @@ const GetStartedPage = () => {
               <span className="gs-how__title-line">Works</span>
             </h2>
             <p className="gs-how__subtitle">
-              A clear, structured process designed to take your idea from concept to launch — transparently, efficiently, and on your terms.
+              A clear, structured agile software development process designed to take your idea from concept to launch — transparently, efficiently, and on your terms.
             </p>
           </div>
 
@@ -235,7 +273,7 @@ const GetStartedPage = () => {
             <p className="gs-section-label">Get In Touch</p>
             <h2 className="gs-form-card__title">Let's Build Something<br />Great Together</h2>
             <p className="gs-form-card__sub">
-              Tell us about your project and our team will connect with you to create the perfect solution.
+              Tell us about your software project or web application requirements and our engineering leads will connect with you to create the perfect solution.
             </p>
 
             {success && (
@@ -335,7 +373,7 @@ const GetStartedPage = () => {
             </ul>
 
             <div className="gs-img-card">
-              <img src="/images/Start_img.jpg" alt="Start your project" />
+              <img src="/images/Start_img.jpg" alt="Start your software project" />
             </div>
           </div>
 
@@ -347,3 +385,4 @@ const GetStartedPage = () => {
 };
 
 export default GetStartedPage;
+

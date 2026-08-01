@@ -250,20 +250,158 @@ const DigitalIndustries = () => {
   );
 };
 
+// ==================== SeoContentSection Component (SEO Optimized Content) ====================
+const SeoContentSection = () => {
+  return (
+    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
+      <div className="dm-container">
+        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
+          
+          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
+            Leading Mobile App Development Company in India
+          </h2>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
+            Welcome to <strong>Gatecode Technologies</strong>, a premier <strong>mobile app development company in india</strong> providing end-to-end <strong>mobile app development services</strong> for startups, SMEs, and global enterprises. Standing out among premier <strong>app development companies</strong>, our dedicated team of <strong>app developers</strong> designs and builds secure, high-performance, and intuitive mobile applications tailored to drive user engagement and accelerate business growth.
+          </p>
+
+          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
+            Custom Android & iOS App Development Services
+          </h3>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            As a full-service <strong>custom mobile app development company</strong>, we specialize in building native and cross-platform applications across both Google Play and Apple App Store. Whether you require scalable <strong>android app development services</strong> or high-security <strong>ios app development services</strong>, our engineering team ensures seamless responsiveness, fast load speeds, and robust API connectivity.
+          </p>
+
+          {/* Key Feature Highlight Cards */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Android App Development Services</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Recognized as a <strong>best android app development company in india</strong>, we build custom Kotlin and Java applications optimized for millions of Android devices.
+              </p>
+            </div>
+            
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>iOS App Development Services</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                As an experienced <strong>ios app development company</strong>, we craft elegant Swift and Objective-C applications engineered specifically for iPhone, iPad, and Apple ecosystem devices.
+              </p>
+            </div>
+
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>iOS and Android App Development Services</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Save time and development budget with unified <strong>ios and android app development services</strong> powered by Flutter and React Native cross-platform frameworks.
+              </p>
+            </div>
+          </div>
+
+          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
+            Why Partner with Gatecode Technologies for Mobile App Development?
+          </h3>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            Partnering with a reliable <strong>android app development company</strong> and iOS engineering house ensures your mobile product succeeds in competitive app store markets. When you hire our expert <strong>app developers</strong>, you get:
+          </p>
+
+          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
+            <li style={{ marginBottom: '10px' }}><strong>User-Centric Architecture:</strong> Intuitive UI/UX design paired with responsive navigation and smooth micro-animations.</li>
+            <li style={{ marginBottom: '10px' }}><strong>High Performance & Security:</strong> Built-in end-to-end encryption, OAuth authentication, and zero latency API integrations.</li>
+            <li style={{ marginBottom: '10px' }}><strong>Complete App Store Support:</strong> Seamless submission to Google Play Store and Apple App Store alongside continuous maintenance.</li>
+          </ul>
+
+        </div>
+      </div>
+    </section>
+  );
+};
+
 // ==================== Main Page Component ====================
 const MobileAppDevelopmentPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/mobile-app-development' },
+      { '@type': 'ListItem', position: 3, name: 'Mobile App Development', item: 'https://gatecode.in/services/mobile-app-development' },
+    ],
+  };
+
+  const mobileAppSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Mobile App Development Services',
+    name: 'Mobile App Development Company in India',
+    provider: {
+      '@type': 'Organization',
+      name: 'Gatecode Technologies Pvt. Ltd.',
+      url: 'https://gatecode.in',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'India',
+    },
+    description: 'Leading mobile app development company in India offering android app development services, ios app development services, and cross-platform app solutions.',
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Why choose Gatecode Technologies as your mobile app development company in India?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Gatecode Technologies is a premier mobile app development company in India providing native Android app development services, iOS app development services, and cross-platform mobile solutions.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you provide both iOS and Android app development services?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes! We deliver complete ios and android app development services using native technologies (Swift, Kotlin) as well as cross-platform frameworks (Flutter, React Native).',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How can I hire app developers for my mobile project?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'You can hire expert app developers from Gatecode Technologies on dedicated full-time, part-time, or project-based engagement models.',
+        },
+      },
+    ],
+  };
+
   return (
     <div className="digital-marketing-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(mobileAppSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
+      <SeoContentSection />
       <ContactSection />
     </div>
   );

@@ -492,6 +492,73 @@ const TechnologiesWeUse: React.FC = () => {
 };
 
 
+// ==================== SeoContentSection Component (SEO Optimized Content) ====================
+const SeoContentSection = () => {
+    return (
+        <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 20px', borderTop: '1px solid #eaeaea', boxSizing: 'border-box', width: '100%' }}>
+            <div style={{ maxWidth: '1300px', margin: '0 auto', width: '100%' }}>
+                <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
+                    
+                    <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
+                        Hire Dedicated Web Developers in India
+                    </h2>
+                    
+                    <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
+                        Welcome to <strong>Gatecode Technologies</strong>, a premier <strong>web development company in india</strong> and trusted <strong>web development agency</strong>. When you need to <strong>hire web developer</strong> experts or <strong>hire dedicated web developers</strong>, our team provides senior <strong>full stack web developer</strong> engineers delivering high-performance <strong>web site development</strong>, robust <strong>web development services</strong>, and scalable web solutions for brands worldwide.
+                    </p>
+
+                    <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
+                        Full Stack, Front-End & Back-End Web Development Services Company
+                    </h3>
+                    
+                    <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+                        Building modern web applications requires versatile technical mastery across client and server layers. Recognized as the <strong>best web development company</strong> and a top <strong>web design and development company</strong>, we make it effortless to <strong>hire full stack web developer</strong> specialists, <strong>hire front end web developer</strong> experts, <strong>hire back end web developers</strong>, or <strong>hire custom web app developers</strong> for your projects.
+                    </p>
+
+                    {/* Key Feature Highlight Cards */}
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
+                        <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+                            <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Hire Full Stack Web Developers</h4>
+                            <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                                Build end-to-end web products when you <strong>hire full stack web developer</strong> talent. Our engineers master React, Next.js, Node.js, PHP, and database architectures.
+                            </p>
+                        </div>
+                        
+                        <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+                            <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Front-End & Back-End Specialists</h4>
+                            <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                                Scale your engineering team. Easily <strong>hire front end web developer</strong> experts for pixel-perfect UIs and <strong>hire back end web developers</strong> for robust microservices.
+                            </p>
+                        </div>
+
+                        <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+                            <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Custom Web App Developers</h4>
+                            <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                                Accelerated product development with a specialized <strong>web development services company</strong>. <strong>Hire custom web app developers</strong> for SaaS platforms and enterprise portals.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
+                        Why Hire Web Developers from Gatecode Technologies?
+                    </h3>
+                    
+                    <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+                        Partnering with an accredited <strong>web development company</strong> guarantees clean code, agile sprint delivery, and zero technical debt. Choosing Gatecode Technologies gives you:
+                    </p>
+
+                    <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
+                        <li style={{ marginBottom: '10px' }}><strong>Flexible Engagement Models:</strong> Full-time, part-time, or milestone-based dedicated web developer hiring.</li>
+                        <li style={{ marginBottom: '10px' }}><strong>Direct Developer Communication:</strong> Transparent Slack/Jira workflows with daily code commits.</li>
+                        <li style={{ marginBottom: '10px' }}><strong>Strict NDA & IP Protection:</strong> 100% intellectual property ownership and enterprise security protocols.</li>
+                    </ul>
+
+                </div>
+            </div>
+        </section>
+    );
+};
+
 // ==================== Main Page Component ====================
 const WebDevelopmentPage = () => {
     useEffect(() => {
@@ -511,11 +578,81 @@ const WebDevelopmentPage = () => {
         contentUrl: 'https://gatecode.in/videos/expertise_video.mp4',
     };
 
+    const breadcrumbSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
+            { '@type': 'ListItem', position: 2, name: 'Technical Expertise', item: 'https://gatecode.in/expertise/web-developers' },
+            { '@type': 'ListItem', position: 3, name: 'Web Developers', item: 'https://gatecode.in/expertise/web-developers' },
+        ],
+    };
+
+    const webDeveloperSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        serviceType: 'Hire Web Developers',
+        name: 'Hire Dedicated Web Developers in India',
+        provider: {
+            '@type': 'Organization',
+            name: 'Gatecode Technologies Pvt. Ltd.',
+            url: 'https://gatecode.in',
+        },
+        areaServed: {
+            '@type': 'Country',
+            name: 'India',
+        },
+        description: 'Top web development company in India allowing businesses to hire dedicated web developers, full stack web developers, front end, back end, and custom web app developers.',
+    };
+
+    const faqSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+            {
+                '@type': 'Question',
+                name: 'Why should I hire dedicated web developers from Gatecode Technologies?',
+                acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Gatecode Technologies is a premier web development company in India allowing you to hire dedicated web developers, full stack web developer leads, and custom web app developers with flexible hiring models.',
+                },
+            },
+            {
+                '@type': 'Question',
+                name: 'What technologies do your full stack web developers specialize in?',
+                acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Our full stack web developers specialize in React, Next.js, Vue, Node.js, Python, PHP, Laravel, WordPress, Shopify, and modern cloud databases.',
+                },
+            },
+            {
+                '@type': 'Question',
+                name: 'Can I hire front end and back end web developers individually?',
+                acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Yes! You can hire front end web developer UI specialists or hire back end web developers for microservices and API development based on your project requirements.',
+                },
+            },
+        ],
+    };
+
     return (
         <div className="web-development-page">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(webDeveloperSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
             />
             <HeroSectionWD />
             <IntroText />
@@ -523,6 +660,7 @@ const WebDevelopmentPage = () => {
             <WhyChoose />
             <DevelopmentProcess />
             <TechnologiesWeUse />
+            <SeoContentSection />
             <TSlider />
             <ContactSection />
         </div>

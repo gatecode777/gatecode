@@ -250,20 +250,158 @@ const DigitalIndustries = () => {
   );
 };
 
+// ==================== SeoContentSection Component (SEO Optimized Content) ====================
+const SeoContentSection = () => {
+  return (
+    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
+      <div className="dm-container">
+        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
+          
+          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
+            Premier UI UX Design Agency in India
+          </h2>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
+            Welcome to <strong>Gatecode Technologies</strong>, a premier <strong>ui ux design agency in india</strong> and trusted <strong>ui ux design company</strong>. As a leading <strong>ui ux agency</strong>, our dedicated team of senior <strong>ui ux designer</strong> specialists crafts user-centric digital products, delivering high-performance <strong>ui ux design services</strong> and intuitive <strong>ui and ux design</strong> architectures that boost engagement and streamline customer journeys.
+          </p>
+
+          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
+            Wireframing, Prototyping & Design System Development Services
+          </h3>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            Transforming product ideas into market-ready applications requires seamless visual hierarchy and user research. Recognizing <strong>what is ui ux design</strong> excellence, we specialize in <strong>wireframing and prototyping</strong> alongside enterprise-grade <strong>design system development services</strong> to ensure consistent typography, component libraries, and visual guidelines across all user touchpoints.
+          </p>
+
+          {/* Key Feature Highlight Cards */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Mobile App & Web UI UX Design</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Partner with an experienced <strong>mobile app ui ux design company</strong>. We build responsive web platforms and iOS/Android app interfaces centered around <strong>ui and ux design</strong> best practices.
+              </p>
+            </div>
+            
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Wireframing & Prototyping</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Visualize user flows and validate product UX early with high-fidelity <strong>wireframing and prototyping</strong>, interactive Figma models, and clickable user testing skeletons.
+              </p>
+            </div>
+
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Design System Development Services</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Scale product development with custom <strong>design system development services</strong> from a <strong>best ui ux agency</strong>, creating reusable UI tokens, UI kits, and design specs.
+              </p>
+            </div>
+          </div>
+
+          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
+            Why Partner with Gatecode as Your Preferred UI UX Design Company?
+          </h3>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            Partnering with an established <strong>ui ux design agency</strong> guarantees frictionless product adoption and higher conversion rates. Choosing Gatecode Technologies gives you:
+          </p>
+
+          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
+            <li style={{ marginBottom: '10px' }}><strong>Human-Centric Research:</strong> Deep user persona mapping, heat map analysis, and usability audit reviews.</li>
+            <li style={{ marginBottom: '10px' }}><strong>Pixel-Perfect Visual UI:</strong> Modern, accessible, and clean user interface components tailored to your brand.</li>
+            <li style={{ marginBottom: '10px' }}><strong>Developer-Handshake Ready:</strong> Clean Figma design tokens, CSS specs, and component documentation for engineering teams.</li>
+          </ul>
+
+        </div>
+      </div>
+    </section>
+  );
+};
+
 // ==================== Main Page Component ====================
 const UIUXDesignServicesPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/ui-ux-design' },
+      { '@type': 'ListItem', position: 3, name: 'UI/UX Design', item: 'https://gatecode.in/services/ui-ux-design' },
+    ],
+  };
+
+  const uiUxSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'UI UX Design Services',
+    name: 'UI UX Design Company in India',
+    provider: {
+      '@type': 'Organization',
+      name: 'Gatecode Technologies Pvt. Ltd.',
+      url: 'https://gatecode.in',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'India',
+    },
+    description: 'Leading UI UX design company in India providing user research & analysis, wireframing and prototyping, mobile app UI UX design, and design system development services.',
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Why choose Gatecode Technologies as your UI UX design company in India?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Gatecode Technologies is a premier UI UX design company in India delivering user-centric ui and ux design, wireframing and prototyping, and custom design system development services.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is wireframing and prototyping in UI UX design?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Wireframing and prototyping involve creating blueprint layouts and interactive clickable prototypes to validate user experience and product functionality before software development.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you offer mobile app UI UX design services and design systems?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes! As a specialized mobile app ui ux design company, we craft intuitive iOS and Android mobile interfaces along with centralized design system development services.',
+        },
+      },
+    ],
+  };
+
   return (
     <div className="digital-marketing-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(uiUxSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
+      <SeoContentSection />
       <ContactSection />
     </div>
   );

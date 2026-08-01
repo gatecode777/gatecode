@@ -12,15 +12,15 @@ const AboutIntro = () => {
             <div className="about-intro__divider" />
             
             <p className="about-intro__description">
-              Gatecode Technologies Pvt. Ltd. is a <strong>result-driven</strong> technology and business solutions company helping startups, SMEs, and growing businesses streamline operations, reduce costs, and scale through the right technology and backend support.
+              <strong>Gatecode Technologies Pvt. Ltd.</strong> is a leading <strong>it company</strong> and trusted provider of <strong>digital transformation services</strong> helping startups, SMEs, and growing businesses streamline operations, reduce costs, and scale through custom software engineering and IT solutions. Ranked among the <strong>top it companies in india</strong>, we combine technology innovation with operational excellence.
             </p>
             
             <p className="about-intro__highlight">
-              We don't just offer services — we solve real business problems.
+              We don't just offer services — we build scalable digital solutions that drive real business growth.
             </p>
             
             <p className="about-intro__description">
-              From custom software development and website development to BPO services, accounting support, and digital marketing, we work closely with founders and teams to identify what's slowing them down — and build systems that fix it.
+              As a full-service <strong>it software company near me</strong> and global development partner, our expertise spans custom software development, mobile app engineering, BPO services, accounting support, and performance digital marketing. If you are comparing <strong>software development companies near me</strong>, we work closely with founders and teams to eliminate operational bottlenecks and build high-performance systems.
             </p>
             
             <div className="about-intro__principles">
