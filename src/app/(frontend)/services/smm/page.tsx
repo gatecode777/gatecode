@@ -257,8 +257,70 @@ const SocialMediaMarketingPage = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/digital-marketing' },
+      { '@type': 'ListItem', position: 3, name: 'SMM Services', item: 'https://gatecode.in/services/smm' },
+    ],
+  };
+
+  const smmServiceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Social Media Marketing (SMM)',
+    name: 'Social Media Marketing Agency in India',
+    provider: {
+      '@type': 'Organization',
+      name: 'Gatecode Technologies Pvt. Ltd.',
+      url: 'https://gatecode.in',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'India',
+    },
+    description: 'Premier social media marketing agency in India providing SMM management, Meta Facebook/Instagram ads, LinkedIn marketing, social media creative post designs, and community management.',
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Why should I choose Gatecode Technologies for Social Media Marketing (SMM) services?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Gatecode Technologies provides targeted social media marketing services including creative content design, Meta & LinkedIn ad campaigns, community growth, and brand awareness across all platforms.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Which social media channels do you manage?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'We manage all major platforms including Instagram, Facebook, LinkedIn, YouTube, Twitter (X), Pinterest, and Meta Paid Advertising funnels.',
+        },
+      },
+    ],
+  };
+
   return (
     <div className="digital-marketing-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(smmServiceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />

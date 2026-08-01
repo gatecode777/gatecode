@@ -256,8 +256,70 @@ const SEOServicesPage = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/digital-marketing' },
+      { '@type': 'ListItem', position: 3, name: 'SEO Services', item: 'https://gatecode.in/services/seo' },
+    ],
+  };
+
+  const seoServiceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Search Engine Optimization (SEO)',
+    name: 'SEO Services Company in India',
+    provider: {
+      '@type': 'Organization',
+      name: 'Gatecode Technologies Pvt. Ltd.',
+      url: 'https://gatecode.in',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'India',
+    },
+    description: 'Professional SEO services company in India offering keyword research, on-page SEO, technical SEO, local SEO, link building, and organic traffic growth.',
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Why should I choose Gatecode Technologies for professional SEO services in India?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Gatecode Technologies is a data-driven SEO company in India delivering white-hat SEO strategies, on-page & technical optimization, local SEO, and measurable organic traffic growth.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How long does it take to see rankings with your SEO services?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Most websites see noticeable ranking improvements and increased organic impressions within 3 to 6 months depending on domain authority, competition, and search volume.',
+        },
+      },
+    ],
+  };
+
   return (
     <div className="digital-marketing-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(seoServiceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />

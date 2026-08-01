@@ -402,6 +402,73 @@ const TechnologiesWeUse: React.FC = () => {
     );
 };
 
+// ==================== SeoContentSection Component (SEO Optimized Content) ====================
+const SeoContentSection = () => {
+    return (
+        <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 20px', borderTop: '1px solid #eaeaea', boxSizing: 'border-box', width: '100%' }}>
+            <div style={{ maxWidth: '1300px', margin: '0 auto', width: '100%' }}>
+                <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
+                    
+                    <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
+                        Hire Web & Mobile UI UX Designers in India
+                    </h2>
+                    
+                    <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
+                        Welcome to <strong>Gatecode Technologies</strong>, an accredited <strong>ui ux design company</strong> and premier provider of <strong>ui ux design services</strong>. When you need to <strong>hire ui ux designer</strong> experts or <strong>hire ux designers</strong>, our senior product designers combine research, wireframing, and interactive prototyping. Understanding <strong>what is ui ux design</strong> excellence, we craft conversion-focused digital products across mobile apps, SaaS platforms, and enterprise websites.
+                    </p>
+
+                    <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
+                        Top-Rated UI UX Design Services & UI UX Design Company
+                    </h3>
+                    
+                    <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+                        Creating memorable user experiences requires deep mastery of both <strong>ui and ux</strong> design principles. Recognized as a leading <strong>ui ux design services company</strong>, we make it effortless for businesses seeking a <strong>designer hire</strong> or <strong>ui ux developer</strong> partner to build intuitive web interfaces and high-converting mobile applications.
+                    </p>
+
+                    {/* Key Feature Highlight Cards */}
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
+                        <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+                            <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Hire Dedicated UI UX Designers</h4>
+                            <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                                Build pixel-perfect interfaces when you <strong>hire ui ux designer</strong> or <strong>hire ux designers</strong>. Our team covers user journey mapping, design systems, and frontend developer handoffs.
+                            </p>
+                        </div>
+                        
+                        <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+                            <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Hire Web & Mobile UI UX Designers</h4>
+                            <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                                Complete product design coverage. <strong>Hire Web & Mobile UI UX Designers</strong> or <strong>hire graphic designer</strong> talent for responsive web apps, iOS/Android UIs, and branding assets.
+                            </p>
+                        </div>
+
+                        <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+                            <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Figma & Interactive Prototyping</h4>
+                            <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                                Partner with an expert <strong>ui ux design company</strong> for high-fidelity Figma prototypes, micro-interactions, usability testing, and custom design systems.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
+                        Why Partner with Gatecode Technologies for UI UX Design?
+                    </h3>
+                    
+                    <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+                        Choosing certified <strong>ui ux design</strong> specialists guarantees seamless navigation, reduced user drop-off, and maximum user engagement. Choosing Gatecode Technologies gives you:
+                    </p>
+
+                    <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
+                        <li style={{ marginBottom: '10px' }}><strong>Data-Driven User Research:</strong> User personas, usability testing, wireframes, and journey maps before coding.</li>
+                        <li style={{ marginBottom: '10px' }}><strong>Figma & Design Systems:</strong> Standardized UI component libraries for rapid scalability and brand consistency.</li>
+                        <li style={{ marginBottom: '10px' }}><strong>Flexible Hiring Models:</strong> Dedicated full-time, part-time, or hourly UI UX designer engagement.</li>
+                    </ul>
+
+                </div>
+            </div>
+        </section>
+    );
+};
+
 // ==================== Main Page Component ====================
 const UxDesignerPage = () => {
     useEffect(() => {
@@ -421,11 +488,81 @@ const UxDesignerPage = () => {
         contentUrl: 'https://gatecode.in/videos/UX%20Designer_video.mp4',
     };
 
+    const breadcrumbSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
+            { '@type': 'ListItem', position: 2, name: 'Technical Expertise', item: 'https://gatecode.in/expertise/ui-ux-designers' },
+            { '@type': 'ListItem', position: 3, name: 'UI/UX Designers', item: 'https://gatecode.in/expertise/ui-ux-designers' },
+        ],
+    };
+
+    const uiUxSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        serviceType: 'UI UX Design Services',
+        name: 'Hire Web & Mobile UI UX Designers in India',
+        provider: {
+            '@type': 'Organization',
+            name: 'Gatecode Technologies Pvt. Ltd.',
+            url: 'https://gatecode.in',
+        },
+        areaServed: {
+            '@type': 'Country',
+            name: 'India',
+        },
+        description: 'Top UI UX design company in India allowing businesses to hire dedicated UI UX designers, web & mobile designers, Figma experts, and UI UX developers.',
+    };
+
+    const faqSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+            {
+                '@type': 'Question',
+                name: 'Why should I hire UI UX designers from Gatecode Technologies?',
+                acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Gatecode Technologies is a leading UI UX design company in India allowing you to hire UI UX designer talent, web & mobile designers, and Figma prototyping experts with flexible hiring options.',
+                },
+            },
+            {
+                '@type': 'Question',
+                name: 'What design tools do your UI UX designers use?',
+                acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Our UI UX designers master industry-standard tools including Figma, Sketch, Adobe XD, InVision, and Photoshop to build responsive design systems.',
+                },
+            },
+            {
+                '@type': 'Question',
+                name: 'What is included in your UI UX design services?',
+                acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Our UI UX design services cover user research, wireframing, interactive prototyping, UI design systems, usability testing, and developer handoff assets.',
+                },
+            },
+        ],
+    };
+
     return (
         <div className="web-development-page">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(uiUxSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
             />
             <HeroSectionWD />
             <IntroText />
@@ -433,6 +570,7 @@ const UxDesignerPage = () => {
             <WhyChoose />
             <DevelopmentProcess />
             <TechnologiesWeUse />
+            <SeoContentSection />
             <TSlider />
             <ContactSection />
         </div>

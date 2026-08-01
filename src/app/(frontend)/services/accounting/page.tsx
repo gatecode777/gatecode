@@ -247,20 +247,158 @@ const DigitalIndustries = () => {
   );
 };
 
+// ==================== SeoContentSection Component (SEO Optimized Content) ====================
+const SeoContentSection = () => {
+  return (
+    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
+      <div className="dm-container">
+        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
+          
+          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
+            Top Accounting Services Company in India
+          </h2>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
+            Welcome to <strong>Gatecode Technologies</strong>, a leading <strong>accounting services company in india</strong> and trusted <strong>accounting and taxation firm in india</strong>. Standing out among established <strong>accounting firms</strong>, our team of certified financial experts delivers end-to-end <strong>accounting services</strong>, <strong>indian cost accounts service</strong>, and specialized <strong>outsourced accounting and bookkeeping services</strong> tailored to maintain complete fiscal health for businesses worldwide.
+          </p>
+
+          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
+            Professional Accounting & Bookkeeping Services
+          </h3>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            Streamlining corporate ledgers requires meticulous precision and tax regulatory compliance. We provide full-suite <strong>accounting and bookkeeping services</strong> and reliable <strong>bookkeeping services in india</strong>, delivering structured <strong>accounting bookkeeping service</strong> management, balance sheet reconciliation, and timely <strong>gst filing goods and services tax</strong> execution.
+          </p>
+
+          {/* Key Feature Highlight Cards */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Accounting & Bookkeeping Services</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Maintain double-entry ledgers with <strong>bookkeeping services in india</strong>. We handle accounts payable/receivable via high-performance <strong>outsourced accounting and bookkeeping services</strong>.
+              </p>
+            </div>
+            
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>GST Filing & Taxation Firm</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Simplify tax preparation with an experienced <strong>accounting and taxation firm in india</strong>. We manage monthly <strong>gst filing goods and services tax</strong> and regional corporate filings.
+              </p>
+            </div>
+
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Payroll Management Services</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Automate employee salary calculations and tax deductions with structured <strong>payroll management services</strong> powered by modern <strong>accounting software company</strong> tools.
+              </p>
+            </div>
+          </div>
+
+          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
+            Why Partner with Gatecode as Your Accounting Firm in India?
+          </h3>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            Partnering with an experienced <strong>accounting bookkeeping service</strong> provider guarantees zero audit penalties and optimized cash flows. Choosing Gatecode Technologies gives you:
+          </p>
+
+          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
+            <li style={{ marginBottom: '10px' }}><strong>100% Tax & Legal Compliance:</strong> Timely GST returns, income tax filings, and <strong>indian cost accounts service</strong> alignment.</li>
+            <li style={{ marginBottom: '10px' }}><strong>Cloud Software Integration:</strong> Seamless handling of Tally, QuickBooks, Zoho Books, and SAP accounting platforms.</li>
+            <li style={{ marginBottom: '10px' }}><strong>Confidential & Secure Handling:</strong> Bank-grade data encryption and strict NDA-backed financial management.</li>
+          </ul>
+
+        </div>
+      </div>
+    </section>
+  );
+};
+
 // ==================== Main Page Component ====================
 const AccountingServicesPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/accounting' },
+      { '@type': 'ListItem', position: 3, name: 'Accounting', item: 'https://gatecode.in/services/accounting' },
+    ],
+  };
+
+  const accountingSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Accounting Services',
+    name: 'Accounting Services Company in India',
+    provider: {
+      '@type': 'Organization',
+      name: 'Gatecode Technologies Pvt. Ltd.',
+      url: 'https://gatecode.in',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'India',
+    },
+    description: 'Premier accounting services company in India providing bookkeeping services, taxation & compliance, payroll management, and financial reporting.',
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Why choose Gatecode Technologies for accounting & financial services in India?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Gatecode Technologies is a trusted accounting services company in India providing end-to-end accounting & bookkeeping services, GST tax filing, payroll processing, and financial management.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you offer bookkeeping services in India and GST tax filing?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes! We deliver comprehensive accounting bookkeeping service management alongside monthly GST filing goods and services tax filing for businesses.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What payroll management services and cloud accounting software support do you provide?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'We automate monthly employee payroll processing and integrate with popular accounting software company platforms like Tally, QuickBooks, and Zoho Books.',
+        },
+      },
+    ],
+  };
+
   return (
     <div className="digital-marketing-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(accountingSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
+      <SeoContentSection />
       <ContactSection />
     </div>
   );

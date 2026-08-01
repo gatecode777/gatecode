@@ -8,19 +8,32 @@ import BlogPost from '@/models/BlogPost';
 import BlogCategory from '@/models/BlogCategory';
 
 export const metadata: Metadata = {
-  title: 'Blog & Technology Insights | Gatecode Technologies',
-  description: 'Explore the latest insights, trends, and expert articles on software development, digital marketing, BPO, UI/UX design, and business accounting.',
+  title: 'IT, Software & Web Development Blog | Gatecode Technologies',
+  description: 'Explore the latest insights, trends, and expert articles on software development, web engineering, digital marketing, UI/UX design, and IT outsourcing.',
   keywords: [
     'Gatecode Technologies blog',
     'software development trends',
     'digital marketing insights',
     'UI/UX design tips',
-    'business accounting guide',
+    'web development blog',
     'outsourcing strategies',
     'IT consulting articles'
   ],
   alternates: {
-    canonical: '/blog',
+    canonical: 'https://gatecode.in/blog',
+  },
+  openGraph: {
+    title: 'IT, Software & Web Development Blog | Gatecode Technologies',
+    description: 'Explore the latest insights, trends, and expert articles on software development, web engineering, digital marketing, UI/UX design, and IT outsourcing.',
+    url: 'https://gatecode.in/blog',
+    siteName: 'Gatecode Technologies',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'IT, Software & Web Development Blog | Gatecode Technologies',
+    description: 'Explore the latest tech & software insights from Gatecode Technologies.',
   },
 };
 
@@ -148,8 +161,38 @@ export default async function Blog({ searchParams }) {
   const visiblePosts = plain(posts);
   const sidebarCats = plain(categories);
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Company', item: 'https://gatecode.in/about' },
+      { '@type': 'ListItem', position: 3, name: 'Blog', item: 'https://gatecode.in/blog' },
+    ],
+  };
+
+  const blogSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    name: 'Gatecode Technologies Tech Blog',
+    description: 'Latest insights on software engineering, web development, UI/UX design, digital marketing, and cloud tech.',
+    publisher: {
+      '@type': 'Organization',
+      name: 'Gatecode Technologies Pvt. Ltd.',
+      url: 'https://gatecode.in',
+    },
+  };
+
   return (
     <div className="blog-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+      />
       <div className="blog-container">
         <CategorySidebar categories={sidebarCats} activeCategory={activeCat?.name || 'All'} />
 

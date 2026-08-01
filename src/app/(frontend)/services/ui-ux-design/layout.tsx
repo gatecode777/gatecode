@@ -1,25 +1,28 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'UI UX Design Company in Jaipur & Agency Services | Gatecode',
-  description: 'Gatecode Technologies is a premier UI UX Design Company in Jaipur, India. We create intuitive web & mobile app interfaces, wireframes, and design systems.',
+  title: 'UI UX Design Agency in India | UI UX Design Services',
+  description: 'Gatecode Technologies is a premier UI UX design company in India. We offer UI UX design services, mobile app UI UX design, wireframing and prototyping, and design system development services for global products.',
   keywords: [
-    'UI UX Design Services',
-    'UI UX Design Agency',
-    'UI UX Design Company',
-    'Custom UI UX Design Services',
-    'UI UX Design Company in Jaipur',
-    'UI UX Design Agency in Jaipur',
-    'UI UX Design Services in India',
-    'UI UX Designer in Jaipur',
+    'ui ux design',
+    'ui ux design agency',
+    'ui ux design company',
+    'ui ux design services',
+    'ui ux design agency in india',
+    'ui ux designer',
+    'best ui ux agency',
+    'wireframing and prototyping',
+    'design system development services',
+    'mobile app ui ux design company',
+    'ui and ux design',
     'Gatecode Technologies'
   ],
   alternates: {
     canonical: '/services/ui-ux-design',
   },
   openGraph: {
-    title: 'UI UX Design Company in Jaipur & Agency Services | Gatecode',
-    description: 'Gatecode Technologies is a premier UI UX Design Company in Jaipur, India. We create intuitive web & mobile app interfaces, wireframes, and design systems.',
+    title: 'UI UX Design Agency in India | UI UX Design Services',
+    description: 'Gatecode Technologies is a premier UI UX design company in India offering UI UX design services, mobile app UI UX design, and wireframing and prototyping.',
     url: 'https://gatecode.in/services/ui-ux-design',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
@@ -27,8 +30,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'UI UX Design Company in Jaipur & Agency Services | Gatecode',
-    description: 'Gatecode Technologies is a premier UI UX Design Company in Jaipur, India. We create intuitive web & mobile app interfaces, wireframes, and design systems.',
+    title: 'UI UX Design Agency in India | UI UX Design Services',
+    description: 'Gatecode Technologies is a premier UI UX design company in India offering UI UX design services, mobile app UI UX design, and wireframing and prototyping.',
   },
 };
 

@@ -1,23 +1,40 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'UI/UX Designer Expertise | Gatecode Technologies',
-  description: 'Hire expert UI/UX designers from Gatecode Technologies. We design intuitive user interfaces (UI) and conversion-focused user experiences (UX) using Figma and Sketch.',
+  title: 'Hire Dedicated UI UX Designers | Top UI UX Design Company in India',
+  description: 'Looking to hire UI UX designer talent? Gatecode Technologies is a premier UI UX design company providing custom web & mobile app UI UX design services, Figma prototyping, and expert UI UX developers.',
   keywords: [
-    'Gatecode Technologies',
-    'UI/UX Designer Expertise',
-    'User Interface (UI) Design',
-    'User Experience (UX) Design',
-    'Wireframing & Prototyping',
-    'User Research & Analysis',
-    'Mobile App Design',
-    'Website Design',
-    'UX Audit & Improvement',
-    'Design Systems',
-    'Figma designers'
+    'ui ux design',
+    'ui ux',
+    'ui ux designer',
+    'what is ui ux design',
+    'ui and ux',
+    'ui ux designer job',
+    'ui ux developer',
+    'ui ux design services',
+    'ui ux design company',
+    'hire ui ux designer',
+    'Hire Web & Mobile UI UX Designers',
+    'ui ux design services company',
+    'hire graphic designer',
+    'designer hire',
+    'hire ux designers'
   ],
   alternates: {
-    canonical: '/expertise/ui-ux-designers',
+    canonical: 'https://gatecode.in/expertise/ui-ux-designers',
+  },
+  openGraph: {
+    title: 'Hire Dedicated UI UX Designers | Top UI UX Design Company in India',
+    description: 'Looking to hire UI UX designer talent? Gatecode Technologies is a premier UI UX design company providing custom web & mobile app UI UX design services, Figma prototyping, and expert UI UX developers.',
+    url: 'https://gatecode.in/expertise/ui-ux-designers',
+    siteName: 'Gatecode Technologies',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Hire Dedicated UI UX Designers | Top UI UX Design Company in India',
+    description: 'Looking to hire UI UX designer talent? Gatecode Technologies is a premier UI UX design company providing custom web & mobile app UI UX design services.',
   },
 };
 
@@ -28,3 +45,4 @@ export default function UIUXDesignersExpertiseLayout({
 }) {
   return <>{children}</>;
 }
+

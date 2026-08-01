@@ -1,24 +1,42 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'E-Commerce & CMS Development | Gatecode Technologies',
-  description: 'Launch powerful online stores and easy-to-manage CMS platforms with Gatecode Technologies. We deliver custom e-commerce web development, secure payment integrations, and WordPress solutions.',
+  title: 'E-Commerce & CMS Website Development Company in India | Hire Shopify & WooCommerce Developers',
+  description: 'Looking for an e-commerce website development company in India? Gatecode Technologies provides top e-commerce web development services, CMS development, and dedicated Shopify, WooCommerce, & Magento developers.',
   keywords: [
-    'Gatecode Technologies',
-    'E-Commerce & CMS Development',
-    'E-Commerce Website Development',
-    'CMS Website Development',
-    'Shopping Cart & Checkout Integration',
-    'Payment Gateway Integration',
-    'Product & Inventory Management',
-    'Website Migration & Upgrade',
-    'Performance Optimization',
-    'Security & Maintenance',
-    'Shopify development',
-    'WooCommerce development'
+    'ecommerce app development company',
+    'ecommerce web development',
+    'ecommerce website development',
+    'ecommerce development',
+    'ecommerce development services',
+    'ecommerce development company india',
+    'ecommerce web development services',
+    'hire ecommerce developer',
+    'cms development company',
+    'hire magento developer',
+    'hire woocommerce developer',
+    'hire shopify developer',
+    'hire shopify developer india',
+    'ecommerce website development company',
+    'ecommerce website development company in india',
+    'ecommerce website designing company in india',
+    'best ecommerce website development company'
   ],
   alternates: {
-    canonical: '/expertise/e-commerce-cms',
+    canonical: 'https://gatecode.in/expertise/e-commerce-cms',
+  },
+  openGraph: {
+    title: 'E-Commerce & CMS Website Development Company in India | Hire Shopify & WooCommerce Developers',
+    description: 'Looking for an e-commerce website development company in India? Gatecode Technologies provides top e-commerce web development services, CMS development, and dedicated Shopify, WooCommerce, & Magento developers.',
+    url: 'https://gatecode.in/expertise/e-commerce-cms',
+    siteName: 'Gatecode Technologies',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'E-Commerce & CMS Website Development Company in India | Hire Shopify & WooCommerce Developers',
+    description: 'Looking for an e-commerce website development company in India? Gatecode Technologies provides top e-commerce web development services and CMS solutions.',
   },
 };
 
@@ -29,3 +47,4 @@ export default function ECommerceCMSExpertiseLayout({
 }) {
   return <>{children}</>;
 }
+

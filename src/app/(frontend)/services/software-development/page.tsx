@@ -250,20 +250,158 @@ const DigitalIndustries = () => {
   );
 };
 
+// ==================== SeoContentSection Component (SEO Optimized Content) ====================
+const SeoContentSection = () => {
+  return (
+    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
+      <div className="dm-container">
+        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
+          
+          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
+            Premier Custom Software Development Company in India
+          </h2>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
+            Welcome to <strong>Gatecode Technologies</strong>, a leading <strong>custom software development company in India</strong> providing end-to-end <strong>software development services</strong> for global enterprises, mid-sized firms, and fast-growing tech startups. As a trusted <strong>software development company</strong>, our expert team of <strong>software developer</strong> specialists builds secure, robust, and scalable <strong>b2b software</strong> architectures tailored to streamline your operations and drive sustainable business growth.
+          </p>
+
+          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
+            Enterprise Application Software & Custom Software Development Services
+          </h3>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            Delivering high-performance <strong>custom software development services</strong> requires deep industry knowledge and technical precision. We excel in <strong>enterprise software development</strong> and <strong>software application development services</strong>, engineering mission-critical <strong>enterprise application software</strong> that automates internal workflows, enhances data security, and scales effortlessly alongside organizational expansion.
+          </p>
+
+          {/* Key Feature Highlight Cards */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Custom CRM Development Services</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Manage customer relationships, automated lead funnels, and sales pipelines efficiently with our custom tailored <strong>custom crm development services</strong>.
+              </p>
+            </div>
+            
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>ERP Software Development Services</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Unify organizational databases, inventory tracking, financial ledgers, and human resources with robust <strong>erp software development services</strong>.
+              </p>
+            </div>
+
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Embedded Software Development Services</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Build high-reliability firmware, IoT solutions, and system-level applications with our <strong>embedded software development services</strong>.
+              </p>
+            </div>
+          </div>
+
+          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
+            Why Choose Gatecode as Your Custom Software Development Company in India?
+          </h3>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            When selecting a <strong>software development company in india</strong>, you need a partner with proven engineering standards. Choosing Gatecode Technologies as your preferred <strong>custom software development company</strong> guarantees:
+          </p>
+
+          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
+            <li style={{ marginBottom: '10px' }}><strong>Tailored Architecture:</strong> Complete custom software development without reliance on restrictive third-party templates.</li>
+            <li style={{ marginBottom: '10px' }}><strong>Enterprise Security:</strong> Strict adherence to cloud data encryption, ISO standards, and zero-vulnerability testing.</li>
+            <li style={{ marginBottom: '10px' }}><strong>Full Lifecycle Support:</strong> Ongoing maintenance, database optimization, and active system integrations.</li>
+          </ul>
+
+        </div>
+      </div>
+    </section>
+  );
+};
+
 // ==================== Main Page Component ====================
 const SoftwareDevelopmentServicesPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/software-development' },
+      { '@type': 'ListItem', position: 3, name: 'Software Development', item: 'https://gatecode.in/services/software-development' },
+    ],
+  };
+
+  const softwareDevSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Software Development Services',
+    name: 'Custom Software Development Company in India',
+    provider: {
+      '@type': 'Organization',
+      name: 'Gatecode Technologies Pvt. Ltd.',
+      url: 'https://gatecode.in',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'India',
+    },
+    description: 'Top custom software development company in India offering custom software development services, enterprise software development, SaaS product development, CRM & ERP software development.',
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Why choose Gatecode Technologies as your custom software development company in India?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Gatecode Technologies is a premier custom software development company in India specializing in enterprise application software, custom software development services, and b2b software solutions.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you provide custom CRM and ERP software development services?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, we design custom CRM development services and ERP software development services engineered to streamline business operations and centralize data workflows.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What types of software application development services do your developers offer?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Our expert software developers build cloud SaaS applications, desktop software, embedded software development services, and custom enterprise portals.',
+        },
+      },
+    ],
+  };
+
   return (
     <div className="digital-marketing-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareDevSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
+      <SeoContentSection />
       <ContactSection />
     </div>
   );

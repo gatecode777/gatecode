@@ -1,23 +1,35 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'JavaScript Developer Expertise | Gatecode Technologies',
-  description: 'Hire experienced JavaScript developers from Gatecode Technologies. We build fast, interactive SPAs, dynamic web applications, and backend systems using React, Node.js, and TypeScript.',
+  title: 'Hire Full Stack JavaScript Developer | Top JavaScript Development Company in India',
+  description: 'Looking to hire javascript developer talent? Gatecode Technologies is a premier javascript web development company providing full stack development with javascript, frontend UI, Node.js backend & custom javascript app development.',
   keywords: [
-    'Gatecode Technologies',
-    'JavaScript Developer Expertise',
-    'Frontend Development',
-    'Single Page Applications (SPA)',
-    'Website Optimization',
-    'Web Application Development',
-    'API Integration',
-    'JavaScript Framework Development',
-    'React developers',
-    'Node.js developers',
-    'TypeScript solutions'
+    'javascript developer',
+    'which company developed javascript',
+    'javascript development company',
+    'hire javascript developer',
+    'javascript app development',
+    'javascript development services',
+    'javascript web development company',
+    'full stack development with javascript',
+    'javascript in frontend development',
+    'Hire Full Stack JavaScript Developer'
   ],
   alternates: {
-    canonical: '/expertise/javascript-developers',
+    canonical: 'https://gatecode.in/expertise/javascript-developers',
+  },
+  openGraph: {
+    title: 'Hire Full Stack JavaScript Developer | Top JavaScript Development Company in India',
+    description: 'Looking to hire javascript developer talent? Gatecode Technologies is a premier javascript web development company providing full stack development with javascript, frontend UI, Node.js backend & custom javascript app development.',
+    url: 'https://gatecode.in/expertise/javascript-developers',
+    siteName: 'Gatecode Technologies',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Hire Full Stack JavaScript Developer | Top JavaScript Development Company in India',
+    description: 'Looking to hire javascript developer talent? Gatecode Technologies is a premier javascript web development company providing full stack development with javascript.',
   },
 };
 
@@ -28,3 +40,4 @@ export default function JavaScriptDevelopersExpertiseLayout({
 }) {
   return <>{children}</>;
 }
+

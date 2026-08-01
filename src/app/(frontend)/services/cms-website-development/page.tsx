@@ -255,8 +255,70 @@ const CMSWebsiteDevelopmentPage = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/web-development' },
+      { '@type': 'ListItem', position: 3, name: 'CMS Website Development', item: 'https://gatecode.in/services/cms-website-development' },
+    ],
+  };
+
+  const cmsServiceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'CMS Website Development',
+    name: 'CMS Website Development Services in India',
+    provider: {
+      '@type': 'Organization',
+      name: 'Gatecode Technologies Pvt. Ltd.',
+      url: 'https://gatecode.in',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'India',
+    },
+    description: 'CMS website development company in India specializing in WordPress, Shopify, Headless CMS, Drupal, Strapi, and custom Content Management System development.',
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Which Content Management Systems (CMS) do you develop websites for?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'We build CMS websites on WordPress, Shopify, WooCommerce, Magento, Strapi, Sanity, and custom headless CMS architectures tailored to your workflow.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Will I be able to update my website content easily without coding skills?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes! All our CMS platforms feature intuitive admin dashboards enabling non-technical users to publish blogs, edit pages, manage products, and update imagery effortlessly.',
+        },
+      },
+    ],
+  };
+
   return (
     <div className="digital-marketing-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(cmsServiceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />

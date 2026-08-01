@@ -1,23 +1,41 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Digital Marketer Expertise | Gatecode Technologies',
-  description: 'Grow your business with result-driven digital marketing from Gatecode Technologies. Hire experts in SEO, SMM, SEM, content writing, paid advertising, and email marketing.',
+  title: 'Best Digital Marketing Company in India | Hire SEO Specialist & Growth Agency',
+  description: 'Looking for the best digital marketing agency or digital marketing company in India? Gatecode Technologies provides top digital marketing services, SEO specialist hiring, PPC ads & performance growth marketing.',
   keywords: [
-    'Gatecode Technologies',
-    'Digital Marketer Expertise',
-    'Search Engine Optimization (SEO)',
-    'Social Media Marketing (SMM)',
-    'Search Engine Marketing (SEM)',
-    'Content Marketing',
-    'Email Marketing',
-    'Social Media Optimization (SMO)',
-    'Paid Ads (Google & Social Media)',
-    'Analytics & Reporting',
-    'lead generation'
+    'digital marketing agency near me',
+    'digital marketing company near me',
+    'best digital marketing company near me',
+    'digital marketing agency',
+    'digital marketing company',
+    'marketing agency',
+    'best digital marketing agency',
+    'digital marketing company in india',
+    'top digital marketing companies',
+    'best digital marketing company in india',
+    'digital marketing services',
+    'digital marketing hiring',
+    'digital marketing websites',
+    'best digital marketing company',
+    'best marketing agencies',
+    'hire seo specialist'
   ],
   alternates: {
-    canonical: '/expertise/digital-marketer',
+    canonical: 'https://gatecode.in/expertise/digital-marketer',
+  },
+  openGraph: {
+    title: 'Best Digital Marketing Company in India | Hire SEO Specialist & Growth Agency',
+    description: 'Looking for the best digital marketing agency or digital marketing company in India? Gatecode Technologies provides top digital marketing services, SEO specialist hiring, PPC ads & performance growth marketing.',
+    url: 'https://gatecode.in/expertise/digital-marketer',
+    siteName: 'Gatecode Technologies',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best Digital Marketing Company in India | Hire SEO Specialist & Growth Agency',
+    description: 'Looking for the best digital marketing agency or digital marketing company in India? Gatecode Technologies provides top digital marketing services and SEO expertise.',
   },
 };
 
@@ -28,3 +46,4 @@ export default function DigitalMarketerExpertiseLayout({
 }) {
   return <>{children}</>;
 }
+

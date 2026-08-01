@@ -250,20 +250,158 @@ const DigitalIndustries = () => {
   );
 };
 
+// ==================== SeoContentSection Component (SEO Optimized Content) ====================
+const SeoContentSection = () => {
+  return (
+    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
+      <div className="dm-container">
+        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
+          
+          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
+            Best Graphic Design Company in India
+          </h2>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
+            Welcome to <strong>Gatecode Technologies</strong>, celebrated as the <strong>best graphic design company in india</strong> and a full-service <strong>graphic design agency india</strong>. Standing out among premier <strong>graphic design companies</strong>, our team of expert <strong>graphic designer</strong> artists delivers world-class <strong>graphic design services in india</strong>, custom <strong>logo and brand design</strong>, and strategic marketing assets for brands worldwide.
+          </p>
+
+          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
+            Logo Design and Brand Identity & Social Media Visuals
+          </h3>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            Understanding <strong>what is graphic design</strong> power is essential for brand positioning. Operating as a top-tier <strong>graphics design agency in india</strong>, we combine creative <strong>logo design and brand identity</strong> solutions with high-converting <strong>social media graphic design services</strong> and eye-catching <strong>packaging and labelling design product</strong> solutions.
+          </p>
+
+          {/* Key Feature Highlight Cards */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Logo Design & Brand Identity</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Establish a strong brand identity with a <strong>best graphic design agency in india</strong>. We craft vector logos, typography guidelines, and <strong>logo and brand design</strong> kits.
+              </p>
+            </div>
+            
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Social Media Graphic Design</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Drive social engagement with <strong>social media graphic design services</strong>. We design custom Instagram posts, ad creatives, carousel slides, and web banners.
+              </p>
+            </div>
+
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Packaging & Labelling Design</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Elevate retail product presentation with <strong>packaging and labelling design product</strong> visuals created by an accredited <strong>graphic design company in india</strong>.
+              </p>
+            </div>
+          </div>
+
+          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
+            Why Partner with Gatecode Technologies as Your Graphic Design Agency?
+          </h3>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            Choosing the <strong>best graphic design company in india</strong> ensures consistent brand messaging across all digital and print mediums. Partnering with Gatecode Technologies gives you:
+          </p>
+
+          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
+            <li style={{ marginBottom: '10px' }}><strong>Custom Creative Concepting:</strong> Tailored visual storytelling designed to resonate with target customer demographics.</li>
+            <li style={{ marginBottom: '10px' }}><strong>Print & Digital Ready Formats:</strong> High-resolution vector files, CMYK print files, and web-optimized SVG/PNG assets.</li>
+            <li style={{ marginBottom: '10px' }}><strong>Fast Turnaround Times:</strong> Streamlined design revisions backed by experienced visual artists.</li>
+          </ul>
+
+        </div>
+      </div>
+    </section>
+  );
+};
+
 // ==================== Main Page Component ====================
 const GraphicDesignServicesPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/graphic-design' },
+      { '@type': 'ListItem', position: 3, name: 'Graphic Design', item: 'https://gatecode.in/services/graphic-design' },
+    ],
+  };
+
+  const graphicDesignSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Graphic Design Services',
+    name: 'Graphic Design Services Company in India',
+    provider: {
+      '@type': 'Organization',
+      name: 'Gatecode Technologies Pvt. Ltd.',
+      url: 'https://gatecode.in',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'India',
+    },
+    description: 'Premier graphic design agency in India offering logo design, social media graphics, branding packages, packaging design, and motion graphics.',
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Why choose Gatecode Technologies as your graphic design agency in India?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Gatecode Technologies is a premier graphic design agency in India delivering custom logo and brand design, social media graphic design services, and print media graphics.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What logo design and brand identity services do you offer?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'We craft vector logos, brand identity guidelines, business cards, letterheads, and brand style guides for startups and corporate clients.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you provide social media graphic design services and product packaging design?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes! We create high-converting social media graphic design services along with custom product packaging and labelling design.',
+        },
+      },
+    ],
+  };
+
   return (
     <div className="digital-marketing-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(graphicDesignSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
+      <SeoContentSection />
       <ContactSection />
     </div>
   );

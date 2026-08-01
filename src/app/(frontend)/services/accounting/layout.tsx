@@ -1,21 +1,38 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Accounting Services & Bookkeeping Firm in Jaipur | Gatecode',
-  description: 'Gatecode Technologies provides expert Accounting Services in Jaipur, India. We offer bookkeeping, GST & tax filing, payroll management, and financial reporting.',
+  title: 'Accounting and Bookkeeping Services | Accounting Firm in India',
+  description: 'Gatecode Technologies is a leading accounting services company in India. We provide outsourced accounting and bookkeeping services, GST filing, payroll management services, and financial solutions.',
   keywords: [
-    'Accounting Services',
-    'Bookkeeping Services',
-    'Accounting Company',
-    'Accounting Services in Jaipur',
-    'Accounting Firm in Jaipur',
-    'Bookkeeping Services in Jaipur',
-    'Accounting Services in India',
-    'GST and Tax Filing Services',
+    'accounting services',
+    'accounting and bookkeeping services',
+    'accounting bookkeeping service',
+    'bookkeeping services in india',
+    'accounting services company in india',
+    'outsourced accounting and bookkeeping services',
+    'accounting and taxation firm in india',
+    'payroll management services',
+    'indian cost accounts service',
+    'gst filing goods and services tax',
+    'accounting software company',
+    'accounting firms',
     'Gatecode Technologies'
   ],
   alternates: {
     canonical: '/services/accounting',
+  },
+  openGraph: {
+    title: 'Accounting and Bookkeeping Services | Accounting Firm in India',
+    description: 'Gatecode Technologies is a leading accounting services company in India providing outsourced accounting and bookkeeping services, GST filing, and payroll management services.',
+    url: 'https://gatecode.in/services/accounting',
+    siteName: 'Gatecode Technologies',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Accounting and Bookkeeping Services | Accounting Firm in India',
+    description: 'Gatecode Technologies is a leading accounting services company in India providing outsourced accounting and bookkeeping services, GST filing, and payroll management services.',
   },
 };
 
