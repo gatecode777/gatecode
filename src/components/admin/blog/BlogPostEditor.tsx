@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import Sidebar from '@/components/admin/Sidebar';
 import s from '@/components/admin/portfolio/styles/shared.module.css';
@@ -15,7 +15,7 @@ const UploadIcon = () => <svg viewBox="0 0 24 24" fill="none" stroke="currentCol
 const EyeIcon    = () => <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>;
 const EyeOffIcon = () => <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"/><path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/><line x1="1" y1="1" x2="23" y2="23"/></svg>;
 
-type BlockType = 'paragraph'|'heading'|'bulletList'|'numberedList'|'numberedSection'|'imageGrid'|'singleImage'|'quote'|'divider'|'callout';
+type BlockType = 'paragraph'|'heading'|'bulletList'|'numberedList'|'numberedSection'|'imageGrid'|'singleImage'|'quote'|'divider'|'callout'|'table'|'faq';
 
 interface Block { _id?: string; type: BlockType; order: number; isVisible: boolean; data: Record<string, unknown>; }
 
@@ -23,7 +23,7 @@ const BLOCK_LABELS: Record<BlockType, string> = {
   paragraph:'Paragraph', heading:'Heading', bulletList:'Bullet List',
   numberedList:'Numbered List', numberedSection:'Numbered Section (with sub-bullets)',
   imageGrid:'Image Grid', singleImage:'Single Image', quote:'Quote / Blockquote',
-  divider:'Divider', callout:'Callout Box',
+  divider:'Divider', callout:'Callout Box', table:'Table / Comparison Grid', faq:'FAQ Accordion'
 };
 
 function makeBlock(type: BlockType): Block {
@@ -38,37 +38,686 @@ function makeBlock(type: BlockType): Block {
     quote:           { text:'', author:'' },
     divider:         {},
     callout:         { text:'', style:'info' },
+    table:           {
+      headers: ['Feature', 'Web Design (UI/UX)', 'Web Development'],
+      rows: [
+        ['Primary Focus', 'Visual appearance, layout, typography, & user feel.', 'Code logic, databases, server setup, & interactive features.'],
+        ['Core Tools', 'Figma, Adobe XD, Photoshop, Illustrator.', 'VS Code, Git, JavaScript, Node.js, React, databases.'],
+        ['Objective', 'Create intuitive, aesthetically pleasing interface.', 'Turn visual designs into functional, secure, fast websites.']
+      ]
+    },
+    faq:             {
+      title: 'Frequently Asked Questions (FAQ)',
+      items: [
+        {
+          question: 'What is digital marketing and how does it benefit my business?',
+          answer: 'Digital marketing uses online channels like Google, social media, email, and websites to connect businesses with targeted customers. It increases online visibility, generates qualified sales leads, and delivers measurable ROI.'
+        },
+        {
+          question: 'What are the primary types of digital marketing?',
+          answer: 'The primary types include Search Engine Optimization (SEO), Pay-Per-Click Advertising (PPC), Content Marketing, Social Media Marketing, Email Marketing, and Affiliate Marketing.'
+        }
+      ]
+    }
   };
   return { type, order: 0, isVisible: true, data: defaults[type] };
 }
 
 // ── Image upload helper ────────────────────────────────────────────────────
 async function uploadImage(file: File): Promise<string> {
-  const fd = new FormData(); fd.append('file', file);
-  const res = await fetch('/api/admin/upload', { method:'POST', body:fd });
-  const d = await res.json();
-  return d.success ? d.data.url : '';
+  try {
+    const fd = new FormData();
+    fd.append('file', file);
+    const res = await fetch('/api/admin/upload', { method: 'POST', body: fd });
+    const d = await res.json();
+    if (d.success) return d.data.url;
+    alert(d.message || 'Image upload failed');
+    return '';
+  } catch (err) {
+    console.error('Upload error:', err);
+    alert('Upload failed. Please check internet connection or file size.');
+    return '';
+  }
 }
 
 function ImageUploadInline({ value, onChange, label = 'Upload Image' }: { value: string; onChange: (url: string) => void; label?: string }) {
   const [uploading, setUploading] = useState(false);
   const handle = async (file: File) => {
-    setUploading(true); const url = await uploadImage(file); setUploading(false);
+    setUploading(true);
+    const url = await uploadImage(file);
+    setUploading(false);
     if (url) onChange(url);
   };
   return (
     <div style={{ display:'flex', flexDirection:'column', gap:6 }}>
-      {value && <img src={value} alt="preview" style={{ maxHeight:120, objectFit:'cover', borderRadius:6, marginBottom:4 }} />}
+      {value && (
+        <div style={{ position: 'relative', width: 'fit-content' }}>
+          <img
+            key={value}
+            src={value}
+            alt="preview"
+            style={{ maxHeight: 120, maxWidth: '100%', objectFit: 'cover', borderRadius: 6, marginBottom: 4, display: 'block' }}
+          />
+          <button
+            type="button"
+            onClick={() => onChange('')}
+            title="Remove Image"
+            style={{
+              position: 'absolute',
+              top: 4,
+              right: 4,
+              background: '#ef4444',
+              color: '#ffffff',
+              border: 'none',
+              borderRadius: '50%',
+              width: 22,
+              height: 22,
+              fontSize: 12,
+              fontWeight: 700,
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              boxShadow: '0 2px 6px rgba(0,0,0,0.3)',
+            }}
+          >
+            ✕
+          </button>
+        </div>
+      )}
       <div style={{ display:'flex', gap:8, alignItems:'center' }}>
-        <input type="text" className={s.formInput} style={{ flex:1, fontSize:12 }} value={value} onChange={ev => onChange(ev.target.value)} placeholder="Image URL or upload ↓" />
+        <input
+          type="text"
+          className={s.formInput}
+          style={{ flex:1, fontSize:12 }}
+          value={value}
+          onChange={ev => onChange(ev.target.value)}
+          placeholder="Image URL or upload ↓"
+        />
         <label style={{ display:'inline-flex', alignItems:'center', gap:4, padding:'6px 12px', background:'var(--color-surface)', border:'1.5px solid var(--color-border)', borderRadius:'var(--radius-md)', cursor:'pointer', fontSize:12, fontWeight:600, color:'var(--color-text-secondary)', whiteSpace:'nowrap' }}>
           <UploadIcon /> {uploading ? 'Uploading…' : label}
-          <input type="file" accept="image/*" disabled={uploading} style={{ display:'none' }} onChange={ev => { const f = ev.target.files?.[0]; if (f) handle(f); ev.target.value=''; }} />
+          <input
+            type="file"
+            accept="image/*"
+            disabled={uploading}
+            style={{ display:'none' }}
+            onChange={ev => {
+              const f = ev.target.files?.[0];
+              if (f) handle(f);
+              ev.target.value = '';
+            }}
+          />
         </label>
       </div>
     </div>
   );
 }
+
+// Helper to extract links from text (both HTML <a> tags and Markdown [text](url))
+function extractLinks(text: string) {
+  const links: { full: string; text: string; url: string; type: 'html' | 'markdown' }[] = [];
+  if (!text) return links;
+
+  // 1. Match HTML <a> tags: <a ...href="URL"...>Text</a>
+  const htmlRegex = /<a\s+[^>]*href=["']([^"']*)["'][^>]*>(.*?)<\/a>/gi;
+  let match: RegExpExecArray | null;
+  while ((match = htmlRegex.exec(text)) !== null) {
+    links.push({ full: match[0], url: match[1], text: match[2].replace(/<[^>]+>/g, ''), type: 'html' });
+  }
+
+  // 2. Match Markdown links: [Text](URL)
+  const mdRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  while ((match = mdRegex.exec(text)) !== null) {
+    links.push({ full: match[0], text: match[1], url: match[2], type: 'markdown' });
+  }
+
+  return links;
+}
+
+// ── Rich Textarea with Clean Link Insertion & One-Click Delete ───────────────
+function RichTextarea({
+  label,
+  value,
+  onChange,
+  rows = 4,
+  placeholder,
+}: {
+  label?: string;
+  value: string;
+  onChange: (val: string) => void;
+  rows?: number;
+  placeholder?: string;
+}) {
+  const ref = useRef<HTMLTextAreaElement>(null);
+  const [showLinkModal, setShowLinkModal] = useState(false);
+  const [linkUrl, setLinkUrl] = useState('');
+  const [linkText, setLinkText] = useState('');
+  const [selRange, setSelRange] = useState({ start: 0, end: 0 });
+
+  const activeLinks = extractLinks(value);
+
+  const openLinkModal = () => {
+    const el = ref.current;
+    if (el) {
+      const start = el.selectionStart;
+      const end = el.selectionEnd;
+      const selected = value.substring(start, end);
+      setSelRange({ start, end });
+      setLinkText(selected);
+      setLinkUrl('');
+    } else {
+      setSelRange({ start: value.length, end: value.length });
+      setLinkText('');
+      setLinkUrl('');
+    }
+    setShowLinkModal(true);
+  };
+
+  const applyLink = () => {
+    let rawUrl = linkUrl.trim();
+    if (!rawUrl) return;
+
+    // Ensure URL has protocol if missing (e.g. gatecode.in -> https://gatecode.in)
+    if (!/^https?:\/\//i.test(rawUrl) && !rawUrl.startsWith('/') && !rawUrl.startsWith('#')) {
+      rawUrl = 'https://' + rawUrl;
+    }
+
+    const textToUse = linkText.trim() || 'Link';
+    // Clean markdown link syntax instead of verbose raw HTML inside textarea
+    const formattedLink = `[${textToUse}](${rawUrl})`;
+
+    const start = selRange.start;
+    const end = selRange.end;
+    const before = value.substring(0, start);
+    const after = value.substring(end);
+    const newValue = before + formattedLink + after;
+
+    onChange(newValue);
+    setShowLinkModal(false);
+    setLinkUrl('');
+    setLinkText('');
+  };
+
+  const handleDeleteLink = (fullMatch: string, innerText: string) => {
+    // Replaces full link markup (whether <a href="...">...</a> or [text](url)) with plain text
+    const newValue = value.replace(fullMatch, innerText);
+    onChange(newValue);
+  };
+
+  const makeBold = () => {
+    const el = ref.current;
+    if (!el) return;
+    const start = el.selectionStart;
+    const end = el.selectionEnd;
+    const selected = value.substring(start, end);
+    if (!selected) return;
+    const wrapped = `**${selected}**`;
+    onChange(value.substring(0, start) + wrapped + value.substring(end));
+  };
+
+  const getPreviewHtml = (val: string) => {
+    if (!val) return '';
+    let html = val.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" style="color:#0fb9b1;text-decoration:underline;">$1</a>');
+    html = html.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    return html;
+  };
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        {label && <label className={e.fLabel} style={{ margin: 0 }}>{label}</label>}
+        <div style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
+          <button
+            type="button"
+            onClick={makeBold}
+            title="Bold selected text"
+            style={{
+              padding: '2px 8px',
+              fontSize: 12,
+              fontWeight: 'bold',
+              borderRadius: 4,
+              border: '1px solid var(--color-border)',
+              background: 'var(--color-surface)',
+              color: 'var(--color-text-primary)',
+              cursor: 'pointer',
+            }}
+          >
+            B
+          </button>
+          <button
+            type="button"
+            onClick={openLinkModal}
+            title="Select text and click to attach hyperlink"
+            style={{
+              padding: '3px 10px',
+              fontSize: 12,
+              fontWeight: 600,
+              borderRadius: 4,
+              border: 'none',
+              background: '#0fb9b1',
+              color: '#ffffff',
+              cursor: 'pointer',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 4,
+            }}
+          >
+            🔗 Add Link to Word
+          </button>
+        </div>
+      </div>
+
+      <textarea
+        ref={ref}
+        className={e.fTextarea}
+        rows={rows}
+        value={value}
+        onChange={ev => onChange(ev.target.value)}
+        placeholder={placeholder}
+      />
+
+      {/* Active Links Bar - One-click Delete Option */}
+      {activeLinks.length > 0 && (
+        <div style={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 6,
+          padding: '8px 12px',
+          background: 'rgba(239, 68, 68, 0.06)',
+          border: '1px solid rgba(239, 68, 68, 0.25)',
+          borderRadius: 6,
+          marginTop: 2
+        }}>
+          <span style={{ fontSize: 11, fontWeight: 700, color: '#f87171', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+            🔗 Active Links in this Block (Click ✕ to remove link):
+          </span>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+            {activeLinks.map((lnk, i) => (
+              <div key={i} style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 6,
+                padding: '4px 10px',
+                background: 'var(--color-surface, #0f172a)',
+                border: '1px solid var(--color-border, #334155)',
+                borderRadius: 20,
+                fontSize: 12
+              }}>
+                <span style={{ fontWeight: 600, color: '#38bdf8' }}>&ldquo;{lnk.text}&rdquo;</span>
+                <span style={{ color: '#64748b', fontSize: 11 }}>➔ {lnk.url}</span>
+                <button
+                  type="button"
+                  onClick={() => handleDeleteLink(lnk.full, lnk.text)}
+                  style={{
+                    background: '#ef4444',
+                    color: '#fff',
+                    border: 'none',
+                    borderRadius: '50%',
+                    width: 18,
+                    height: 18,
+                    fontSize: 10,
+                    cursor: 'pointer',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginLeft: 2
+                  }}
+                  title="Remove link & keep plain text"
+                >
+                  ✕
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {showLinkModal && (
+        <div style={{
+          padding: 12,
+          background: 'var(--color-surface-2, #1e293b)',
+          border: '1px solid #0fb9b1',
+          borderRadius: 8,
+          marginTop: 4,
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 10,
+          boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
+        }}>
+          <div style={{ fontSize: 13, fontWeight: 600, color: '#0fb9b1', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <span>🔗 Add Hyperlink on Word</span>
+            <span style={{ fontSize: 11, color: '#94a3b8' }}>Highlight word or type below</span>
+          </div>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <div>
+              <label style={{ fontSize: 11, color: '#94a3b8', display: 'block', marginBottom: 2 }}>Word / Text to Link:</label>
+              <input
+                type="text"
+                className={e.fInput}
+                style={{ fontSize: 12, width: '100%' }}
+                placeholder="e.g. gatecode"
+                value={linkText}
+                onChange={ev => setLinkText(ev.target.value)}
+              />
+            </div>
+            <div>
+              <label style={{ fontSize: 11, color: '#94a3b8', display: 'block', marginBottom: 2 }}>Target Link URL:</label>
+              <input
+                type="text"
+                className={e.fInput}
+                style={{ fontSize: 12, width: '100%' }}
+                placeholder="e.g. https://gatecode.in/services/web-development"
+                value={linkUrl}
+                onChange={ev => setLinkUrl(ev.target.value)}
+                autoFocus
+                onKeyDown={ev => { if (ev.key === 'Enter') { ev.preventDefault(); applyLink(); } }}
+              />
+            </div>
+          </div>
+
+          <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 8, marginTop: 4 }}>
+            <button
+              type="button"
+              className={`${s.btn} ${s.btnSecondary} ${s.btnSm}`}
+              onClick={() => setShowLinkModal(false)}
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              className={`${s.btn} ${s.btnPrimary} ${s.btnSm}`}
+              style={{ background: '#0fb9b1', borderColor: '#0fb9b1', color: '#fff' }}
+              onClick={applyLink}
+            >
+              Insert Link
+            </button>
+          </div>
+        </div>
+      )}
+
+      {value && (value.includes('[') || value.includes('<a') || value.includes('**')) && (
+        <div style={{ fontSize: 12, color: 'var(--color-text-muted)', background: 'rgba(15, 185, 177, 0.08)', border: '1px dashed #0fb9b1', padding: '8px 12px', borderRadius: 6, marginTop: 2 }}>
+          <span style={{ fontWeight: 600, color: '#0fb9b1', display: 'block', marginBottom: 2 }}>👁 Live Formatted Preview:</span>
+          <div style={{ color: 'var(--color-text-primary)' }} dangerouslySetInnerHTML={{ __html: getPreviewHtml(value) }} />
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ── Rich Input with Link Insertion & Bold ───────────────────────────────
+function RichInput({
+  label,
+  value,
+  onChange,
+  placeholder,
+  style,
+}: {
+  label?: string;
+  value: string;
+  onChange: (val: string) => void;
+  placeholder?: string;
+  style?: React.CSSProperties;
+}) {
+  const ref = useRef<HTMLInputElement>(null);
+  const [showLinkModal, setShowLinkModal] = useState(false);
+  const [linkUrl, setLinkUrl] = useState('');
+  const [linkText, setLinkText] = useState('');
+  const [selRange, setSelRange] = useState({ start: 0, end: 0 });
+
+  const activeLinks = extractLinks(value);
+
+  const openLinkModal = () => {
+    const el = ref.current;
+    if (el) {
+      const start = el.selectionStart || 0;
+      const end = el.selectionEnd || 0;
+      const selected = value.substring(start, end);
+      setSelRange({ start, end });
+      setLinkText(selected);
+      setLinkUrl('');
+    } else {
+      setSelRange({ start: value.length, end: value.length });
+      setLinkText('');
+      setLinkUrl('');
+    }
+    setShowLinkModal(true);
+  };
+
+  const applyLink = () => {
+    let rawUrl = linkUrl.trim();
+    if (!rawUrl) return;
+
+    if (!/^https?:\/\//i.test(rawUrl) && !rawUrl.startsWith('/') && !rawUrl.startsWith('#')) {
+      rawUrl = 'https://' + rawUrl;
+    }
+
+    const textToUse = linkText.trim() || 'Link';
+    const formattedLink = `[${textToUse}](${rawUrl})`;
+
+    const start = selRange.start;
+    const end = selRange.end;
+    const before = value.substring(0, start);
+    const after = value.substring(end);
+    const newValue = before + formattedLink + after;
+
+    onChange(newValue);
+    setShowLinkModal(false);
+    setLinkUrl('');
+    setLinkText('');
+  };
+
+  const handleDeleteLink = (fullMatch: string, innerText: string) => {
+    const newValue = value.replace(fullMatch, innerText);
+    onChange(newValue);
+  };
+
+  const makeBold = () => {
+    const el = ref.current;
+    if (!el) return;
+    const start = el.selectionStart || 0;
+    const end = el.selectionEnd || 0;
+    const selected = value.substring(start, end);
+    if (!selected) return;
+    const wrapped = `**${selected}**`;
+    onChange(value.substring(0, start) + wrapped + value.substring(end));
+  };
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 4, flex: 1 }}>
+      {label && (
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <label className={e.fLabel} style={{ margin: 0 }}>{label}</label>
+          <div style={{ display: 'flex', gap: 4, alignItems: 'center' }}>
+            <button
+              type="button"
+              onClick={makeBold}
+              title="Bold selected text"
+              style={{
+                padding: '1px 6px',
+                fontSize: 11,
+                fontWeight: 'bold',
+                borderRadius: 3,
+                border: '1px solid var(--color-border)',
+                background: 'var(--color-surface)',
+                color: 'var(--color-text-primary)',
+                cursor: 'pointer',
+              }}
+            >
+              B
+            </button>
+            <button
+              type="button"
+              onClick={openLinkModal}
+              title="Select word and click to add link"
+              style={{
+                padding: '2px 8px',
+                fontSize: 11,
+                fontWeight: 600,
+                borderRadius: 3,
+                border: 'none',
+                background: '#0fb9b1',
+                color: '#ffffff',
+                cursor: 'pointer',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 2,
+              }}
+            >
+              🔗 Add Link
+            </button>
+          </div>
+        </div>
+      )}
+
+      <div style={{ display: 'flex', gap: 4, alignItems: 'center' }}>
+        <input
+          ref={ref}
+          className={e.fInput}
+          style={{ flex: 1, ...style }}
+          value={value}
+          onChange={ev => onChange(ev.target.value)}
+          placeholder={placeholder}
+        />
+        {!label && (
+          <div style={{ display: 'flex', gap: 4, alignItems: 'center' }}>
+            <button
+              type="button"
+              onClick={makeBold}
+              title="Bold selected text"
+              style={{
+                padding: '4px 8px',
+                fontSize: 11,
+                fontWeight: 'bold',
+                borderRadius: 4,
+                border: '1px solid var(--color-border)',
+                background: 'var(--color-surface)',
+                color: 'var(--color-text-primary)',
+                cursor: 'pointer',
+              }}
+            >
+              B
+            </button>
+            <button
+              type="button"
+              onClick={openLinkModal}
+              title="Select word and click to add link"
+              style={{
+                padding: '4px 8px',
+                fontSize: 11,
+                fontWeight: 600,
+                borderRadius: 4,
+                border: 'none',
+                background: '#0fb9b1',
+                color: '#ffffff',
+                cursor: 'pointer',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              🔗 Link
+            </button>
+          </div>
+        )}
+      </div>
+
+      {activeLinks.length > 0 && (
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4, marginTop: 2 }}>
+          {activeLinks.map((lnk, i) => (
+            <span key={i} style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 4,
+              padding: '2px 8px',
+              background: 'var(--color-surface-2, #1e293b)',
+              border: '1px solid var(--color-border, #334155)',
+              borderRadius: 12,
+              fontSize: 11,
+              color: '#38bdf8'
+            }}>
+              &ldquo;{lnk.text}&rdquo; ➔ {lnk.url}
+              <button
+                type="button"
+                onClick={() => handleDeleteLink(lnk.full, lnk.text)}
+                style={{
+                  background: '#ef4444',
+                  color: '#fff',
+                  border: 'none',
+                  borderRadius: '50%',
+                  width: 14,
+                  height: 14,
+                  fontSize: 9,
+                  cursor: 'pointer',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+                title="Remove link"
+              >
+                ✕
+              </button>
+            </span>
+          ))}
+        </div>
+      )}
+
+      {showLinkModal && (
+        <div style={{
+          padding: 10,
+          background: 'var(--color-surface-2, #1e293b)',
+          border: '1px solid #0fb9b1',
+          borderRadius: 6,
+          marginTop: 4,
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 8,
+          boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
+        }}>
+          <div style={{ fontSize: 12, fontWeight: 600, color: '#0fb9b1' }}>🔗 Add Hyperlink on Word</div>
+          <div style={{ display: 'flex', gap: 6 }}>
+            <input
+              type="text"
+              className={e.fInput}
+              style={{ fontSize: 12, flex: 1 }}
+              placeholder="Word to link"
+              value={linkText}
+              onChange={ev => setLinkText(ev.target.value)}
+            />
+            <input
+              type="text"
+              className={e.fInput}
+              style={{ fontSize: 12, flex: 1.5 }}
+              placeholder="Target URL (e.g. https://gatecode.in)"
+              value={linkUrl}
+              onChange={ev => setLinkUrl(ev.target.value)}
+              autoFocus
+              onKeyDown={ev => { if (ev.key === 'Enter') { ev.preventDefault(); applyLink(); } }}
+            />
+          </div>
+          <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 6 }}>
+            <button
+              type="button"
+              className={`${s.btn} ${s.btnSecondary} ${s.btnSm}`}
+              style={{ padding: '2px 8px', fontSize: 11 }}
+              onClick={() => setShowLinkModal(false)}
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              className={`${s.btn} ${s.btnPrimary} ${s.btnSm}`}
+              style={{ background: '#0fb9b1', borderColor: '#0fb9b1', color: '#fff', padding: '2px 10px', fontSize: 11 }}
+              onClick={applyLink}
+            >
+              Insert Link
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 function BlockEditor({ block, onChange }: { block: Block; onChange: (data: Record<string,unknown>) => void }) {
   const d = block.data;
 
@@ -76,8 +725,13 @@ function BlockEditor({ block, onChange }: { block: Block; onChange: (data: Recor
     case 'paragraph':
       return (
         <div className={e.fGroup}>
-          <label className={e.fLabel}>Paragraph Text</label>
-          <textarea className={e.fTextarea} rows={4} value={String(d.text||'')} onChange={ev => onChange({...d, text:ev.target.value})} placeholder="Write paragraph content here…" />
+          <RichTextarea
+            label="Paragraph Text"
+            rows={5}
+            value={String(d.text||'')}
+            onChange={text => onChange({...d, text})}
+            placeholder="Write paragraph content here. Select any word and click 'Add Link to Selected Word'..."
+          />
         </div>
       );
 
@@ -85,8 +739,12 @@ function BlockEditor({ block, onChange }: { block: Block; onChange: (data: Recor
       return (
         <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
           <div className={e.fGroup}>
-            <label className={e.fLabel}>Heading Text</label>
-            <input className={e.fInput} value={String(d.text||'')} onChange={ev => onChange({...d, text:ev.target.value})} placeholder="Heading content…" />
+            <RichInput
+              label="Heading Text"
+              value={String(d.text||'')}
+              onChange={text => onChange({...d, text})}
+              placeholder="Heading content…"
+            />
           </div>
           <div style={{ display:'flex', gap:8 }}>
             <div className={e.fGroup} style={{ flex:1 }}>
@@ -114,14 +772,22 @@ function BlockEditor({ block, onChange }: { block: Block; onChange: (data: Recor
       return (
         <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
           <div className={e.fGroup}>
-            <label className={e.fLabel}>Section Title (optional)</label>
-            <input className={e.fInput} value={String(d.title||'')} onChange={ev => onChange({...d, title:ev.target.value})} placeholder="Optional heading above the list…" />
+            <RichInput
+              label="Section Title (optional)"
+              value={String(d.title||'')}
+              onChange={title => onChange({...d, title})}
+              placeholder="Optional heading above the list…"
+            />
           </div>
           <label className={e.fLabel}>Items</label>
           {items.map((item, i) => (
-            <div key={i} style={{ display:'flex', gap:6 }}>
-              <span style={{ minWidth:20, color:'var(--color-text-muted)', fontSize:12, paddingTop:9 }}>{block.type === 'numberedList' ? `${i+1}.` : '•'}</span>
-              <input className={e.fInput} style={{ flex:1 }} value={item} onChange={ev => { const n=[...items]; n[i]=ev.target.value; onChange({...d, items:n}); }} placeholder={`Item ${i+1}`} />
+            <div key={i} style={{ display:'flex', gap:6, alignItems:'center' }}>
+              <span style={{ minWidth:20, color:'var(--color-text-muted)', fontSize:12 }}>{block.type === 'numberedList' ? `${i+1}.` : '•'}</span>
+              <RichInput
+                value={item}
+                onChange={val => { const n=[...items]; n[i]=val; onChange({...d, items:n}); }}
+                placeholder={`Item ${i+1}`}
+              />
               <button onClick={() => { const n=items.filter((_,j) => j!==i); onChange({...d, items:n.length?n:['']}) }} style={{ color:'var(--color-danger)', background:'none', border:'none', cursor:'pointer', padding:'0 4px' }}><TrashIcon /></button>
             </div>
           ))}
@@ -140,19 +806,32 @@ function BlockEditor({ block, onChange }: { block: Block; onChange: (data: Recor
               <input className={e.fInput} value={String(d.number||'')} onChange={ev => onChange({...d, number:ev.target.value})} placeholder="1" />
             </div>
             <div className={e.fGroup} style={{ flex:1 }}>
-              <label className={e.fLabel}>Section Title</label>
-              <input className={e.fInput} value={String(d.title||'')} onChange={ev => onChange({...d, title:ev.target.value})} placeholder="e.g. Business Automation" />
+              <RichInput
+                label="Section Title"
+                value={String(d.title||'')}
+                onChange={title => onChange({...d, title})}
+                placeholder="e.g. Business Automation"
+              />
             </div>
           </div>
           <div className={e.fGroup}>
-            <label className={e.fLabel}>Body Text</label>
-            <textarea className={e.fTextarea} rows={3} value={String(d.body||'')} onChange={ev => onChange({...d, body:ev.target.value})} placeholder="Description for this numbered section…" />
+            <RichTextarea
+              label="Body Text"
+              rows={3}
+              value={String(d.body||'')}
+              onChange={body => onChange({...d, body})}
+              placeholder="Description for this numbered section…"
+            />
           </div>
           <label className={e.fLabel}>Sub-bullet Items (optional)</label>
           {subItems.map((item, i) => (
-            <div key={i} style={{ display:'flex', gap:6 }}>
-              <span style={{ minWidth:16, color:'var(--color-text-muted)', fontSize:12, paddingTop:9 }}>•</span>
-              <input className={e.fInput} style={{ flex:1 }} value={item} onChange={ev => { const n=[...subItems]; n[i]=ev.target.value; onChange({...d, subItems:n}); }} placeholder={`Sub item ${i+1}`} />
+            <div key={i} style={{ display:'flex', gap:6, alignItems:'center' }}>
+              <span style={{ minWidth:16, color:'var(--color-text-muted)', fontSize:12 }}>•</span>
+              <RichInput
+                value={item}
+                onChange={val => { const n=[...subItems]; n[i]=val; onChange({...d, subItems:n}); }}
+                placeholder={`Sub item ${i+1}`}
+              />
               <button onClick={() => onChange({...d, subItems:subItems.filter((_,j)=>j!==i)})} style={{ color:'var(--color-danger)', background:'none', border:'none', cursor:'pointer', padding:'0 4px' }}><TrashIcon /></button>
             </div>
           ))}
@@ -203,12 +882,21 @@ function BlockEditor({ block, onChange }: { block: Block; onChange: (data: Recor
       return (
         <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
           <div className={e.fGroup}>
-            <label className={e.fLabel}>Quote Text</label>
-            <textarea className={e.fTextarea} rows={3} value={String(d.text||'')} onChange={ev => onChange({...d, text:ev.target.value})} placeholder="The quote content…" />
+            <RichTextarea
+              label="Quote Text"
+              rows={3}
+              value={String(d.text||'')}
+              onChange={text => onChange({...d, text})}
+              placeholder="The quote content…"
+            />
           </div>
           <div className={e.fGroup}>
-            <label className={e.fLabel}>Attribution (optional)</label>
-            <input className={e.fInput} value={String(d.author||'')} onChange={ev => onChange({...d, author:ev.target.value})} placeholder="e.g. Geeta Bisht, Content Writer" />
+            <RichInput
+              label="Attribution (optional)"
+              value={String(d.author||'')}
+              onChange={author => onChange({...d, author})}
+              placeholder="e.g. Geeta Bisht, Content Writer"
+            />
           </div>
         </div>
       );
@@ -225,11 +913,239 @@ function BlockEditor({ block, onChange }: { block: Block; onChange: (data: Recor
             </select>
           </div>
           <div className={e.fGroup}>
-            <label className={e.fLabel}>Text</label>
-            <textarea className={e.fTextarea} rows={2} value={String(d.text||'')} onChange={ev => onChange({...d, text:ev.target.value})} placeholder="Callout message…" />
+            <RichTextarea
+              label="Text"
+              rows={2}
+              value={String(d.text||'')}
+              onChange={text => onChange({...d, text})}
+              placeholder="Callout message…"
+            />
           </div>
         </div>
       );
+
+    case 'table': {
+      const headers = (d.headers as string[]) || ['Feature', 'Web Design (UI/UX)', 'Web Development'];
+      const rows = (d.rows as string[][]) || [
+        ['Primary Focus', 'Visual appearance, layout, typography, & user feel.', 'Code logic, databases, server setup, & interactive features.'],
+        ['Core Tools', 'Figma, Adobe XD, Photoshop, Illustrator.', 'VS Code, Git, JavaScript, Node.js, React, databases.'],
+        ['Objective', 'Create intuitive, aesthetically pleasing interface.', 'Turn visual designs into functional, secure, fast websites.']
+      ];
+
+      const addColumn = () => {
+        const newHeaders = [...headers, `Column ${headers.length + 1}`];
+        const newRows = rows.map(r => [...r, '']);
+        onChange({ ...d, headers: newHeaders, rows: newRows });
+      };
+
+      const removeColumn = (colIndex: number) => {
+        if (headers.length <= 1) return;
+        const newHeaders = headers.filter((_, idx) => idx !== colIndex);
+        const newRows = rows.map(r => r.filter((_, idx) => idx !== colIndex));
+        onChange({ ...d, headers: newHeaders, rows: newRows });
+      };
+
+      const addRow = () => {
+        const emptyRow = new Array(headers.length).fill('');
+        onChange({ ...d, rows: [...rows, emptyRow] });
+      };
+
+      const removeRow = (rowIndex: number) => {
+        if (rows.length <= 1) return;
+        onChange({ ...d, rows: rows.filter((_, idx) => idx !== rowIndex) });
+      };
+
+      const updateCell = (rowIndex: number, colIndex: number, val: string) => {
+        const newRows = rows.map((r, rIdx) =>
+          rIdx === rowIndex ? r.map((c, cIdx) => (cIdx === colIndex ? val : c)) : r
+        );
+        onChange({ ...d, rows: newRows });
+      };
+
+      const updateHeaderCell = (colIndex: number, val: string) => {
+        const newHeaders = headers.map((h, cIdx) => (cIdx === colIndex ? val : h));
+        onChange({ ...d, headers: newHeaders });
+      };
+
+      return (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <label className={e.fLabel} style={{ margin: 0, color: '#0fb9b1', fontWeight: 600, fontSize: 13 }}>
+              📊 Table / Comparison Grid Editor
+            </label>
+            <div style={{ display: 'flex', gap: 8 }}>
+              <button
+                type="button"
+                className={`${s.btn} ${s.btnSecondary} ${s.btnSm}`}
+                style={{ fontSize: 12 }}
+                onClick={addColumn}
+              >
+                <PlusIcon /> Add Column
+              </button>
+              <button
+                type="button"
+                className={`${s.btn} ${s.btnSecondary} ${s.btnSm}`}
+                style={{ fontSize: 12 }}
+                onClick={addRow}
+              >
+                <PlusIcon /> Add Row
+              </button>
+            </div>
+          </div>
+
+          {/* Unified Outer Scrollbar Wrapper for Headers + Rows */}
+          <div style={{ overflowX: 'auto', width: '100%', paddingBottom: 12 }}>
+            <div style={{ minWidth: Math.max(650, headers.length * 300), display: 'flex', flexDirection: 'column', gap: 14 }}>
+              
+              {/* Table Headers Section */}
+              <div style={{ background: 'var(--color-surface-2, #1e293b)', padding: 12, borderRadius: 8, border: '1px solid var(--color-border)', width: '100%' }}>
+                <label className={e.fLabel} style={{ fontSize: 12, marginBottom: 8, display: 'block', color: '#38bdf8' }}>
+                  Column Headers ({headers.length} Columns)
+                </label>
+                <div style={{ display: 'grid', gridTemplateColumns: `repeat(${headers.length}, 1fr)`, gap: 12 }}>
+                  {headers.map((h, i) => (
+                    <div key={i} style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                        <span style={{ fontSize: 11, color: '#94a3b8', fontWeight: 600 }}>Header {i + 1}</span>
+                        {headers.length > 1 && (
+                          <button
+                            type="button"
+                            onClick={() => removeColumn(i)}
+                            style={{ color: 'var(--color-danger)', background: 'none', border: 'none', cursor: 'pointer', fontSize: 10 }}
+                            title="Delete Column"
+                          >
+                            ✕ Col
+                          </button>
+                        )}
+                      </div>
+                      <RichInput
+                        value={h}
+                        onChange={val => updateHeaderCell(i, val)}
+                        placeholder={`Header ${i + 1}`}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Table Rows Section */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10, width: '100%' }}>
+                <label className={e.fLabel} style={{ fontSize: 12, margin: 0 }}>
+                  Table Rows ({rows.length} Rows)
+                </label>
+                {rows.map((row, rIdx) => (
+                  <div key={rIdx} style={{ background: 'var(--color-surface-2, #1e293b)', padding: 12, borderRadius: 8, border: '1px solid var(--color-border)', width: '100%' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 8, alignItems: 'center' }}>
+                      <span style={{ fontSize: 12, fontWeight: 600, color: '#0fb9b1' }}>Row {rIdx + 1}</span>
+                      {rows.length > 1 && (
+                        <button
+                          type="button"
+                          onClick={() => removeRow(rIdx)}
+                          style={{ color: 'var(--color-danger)', background: 'none', border: 'none', cursor: 'pointer', fontSize: 11, display: 'inline-flex', alignItems: 'center', gap: 4 }}
+                        >
+                          <TrashIcon /> Delete Row
+                        </button>
+                      )}
+                    </div>
+                    <div style={{ display: 'grid', gridTemplateColumns: `repeat(${headers.length}, 1fr)`, gap: 12 }}>
+                      {headers.map((_, cIdx) => (
+                        <div key={cIdx} style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+                          <span style={{ fontSize: 11, color: '#64748b' }}>{headers[cIdx] || `Col ${cIdx + 1}`}:</span>
+                          <RichInput
+                            value={row[cIdx] || ''}
+                            onChange={val => updateCell(rIdx, cIdx, val)}
+                            placeholder={`Cell (${rIdx + 1}, ${cIdx + 1})`}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    case 'faq': {
+      const items = (d.items as { question: string; answer: string }[]) || [
+        { question: 'What is digital marketing and how does it benefit my business?', answer: 'Digital marketing uses online channels...' }
+      ];
+      const title = String(d.title || 'Frequently Asked Questions (FAQ)');
+
+      const addItem = () => {
+        onChange({ ...d, items: [...items, { question: '', answer: '' }] });
+      };
+
+      const removeItem = (idx: number) => {
+        if (items.length <= 1) return;
+        onChange({ ...d, items: items.filter((_, i) => i !== idx) });
+      };
+
+      const updateItem = (idx: number, field: 'question' | 'answer', val: string) => {
+        const next = items.map((it, i) => (i === idx ? { ...it, [field]: val } : it));
+        onChange({ ...d, items: next });
+      };
+
+      return (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+          <div className={e.fGroup}>
+            <RichInput
+              label="FAQ Section Header Title"
+              value={title}
+              onChange={tVal => onChange({ ...d, title: tVal })}
+              placeholder="e.g. Frequently Asked Questions (FAQ)"
+            />
+          </div>
+
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <label className={e.fLabel} style={{ margin: 0, color: '#0fb9b1', fontWeight: 600, fontSize: 13 }}>
+              ❓ FAQ Accordion Questions ({items.length} Items)
+            </label>
+            <button
+              type="button"
+              className={`${s.btn} ${s.btnSecondary} ${s.btnSm}`}
+              style={{ fontSize: 12 }}
+              onClick={addItem}
+            >
+              <PlusIcon /> Add Question
+            </button>
+          </div>
+
+          {items.map((item, idx) => (
+            <div key={idx} style={{ background: 'var(--color-surface-2, #1e293b)', padding: 14, borderRadius: 8, border: '1px solid var(--color-border)', display: 'flex', flexDirection: 'column', gap: 10 }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <span style={{ fontSize: 12, fontWeight: 700, color: '#38bdf8' }}>Question {idx + 1}</span>
+                {items.length > 1 && (
+                  <button
+                    type="button"
+                    onClick={() => removeItem(idx)}
+                    style={{ color: 'var(--color-danger)', background: 'none', border: 'none', cursor: 'pointer', fontSize: 11, display: 'inline-flex', alignItems: 'center', gap: 4 }}
+                  >
+                    <TrashIcon /> Remove Question
+                  </button>
+                )}
+              </div>
+              <RichInput
+                label="Question"
+                value={item.question}
+                onChange={val => updateItem(idx, 'question', val)}
+                placeholder={`e.g. What is digital marketing?`}
+              />
+              <RichTextarea
+                label="Answer"
+                rows={3}
+                value={item.answer}
+                onChange={val => updateItem(idx, 'answer', val)}
+                placeholder={`Type detailed answer here. You can select words and add links or bolding...`}
+              />
+            </div>
+          ))}
+        </div>
+      );
+    }
 
     case 'divider':
       return <div style={{ padding:'8px 0', color:'var(--color-text-muted)', fontSize:13, textAlign:'center' }}>— Horizontal divider —</div>;
@@ -319,7 +1235,8 @@ export default function BlogPostEditor({ postId }: Props) {
     if (!meta.title.trim()) { alert('Title is required'); return; }
     if (!meta.slug.trim())  { alert('Slug is required'); return; }
     setSaving(true);
-    const body = { ...meta, ...(status ? { status } : {}), contentBlocks: blocks.map((b,i) => ({...b, order:i})) };
+    const catId = meta.categoryId && meta.categoryId !== '' && meta.categoryId !== 'null' ? meta.categoryId : null;
+    const body = { ...meta, categoryId: catId, ...(status ? { status } : {}), contentBlocks: blocks.map((b,i) => ({...b, order:i})) };
     const url    = isEdit ? `/api/admin/blog/posts/${postId}` : '/api/admin/blog/posts';
     const method = isEdit ? 'PATCH' : 'POST';
     const res    = await fetch(url, { method, headers:{'Content-Type':'application/json'}, body:JSON.stringify(body) });

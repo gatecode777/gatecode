@@ -11,14 +11,21 @@ function auth(req: NextRequest) {
   return t ? verifyToken(t) : null;
 }
 
-// ── Allowed MIME types ──────────────────────────────────────────────────────
+// ── Allowed MIME types & Extensions ──────────────────────────────────────────
 const ALLOWED_IMAGE_TYPES = [
   'image/jpeg',
   'image/jpg',
+  'image/pjpeg',
+  'image/jfif',
   'image/png',
+  'image/x-png',
   'image/webp',
   'image/gif',
   'image/svg+xml',
+  'image/bmp',
+  'image/avif',
+  'image/heic',
+  'image/tiff',
 ];
 
 const ALLOWED_DOC_TYPES = [
@@ -31,6 +38,11 @@ const ALLOWED_DOC_TYPES = [
   'application/vnd.openxmlformats-officedocument.presentationml.presentation',
   'text/plain',
   'text/csv',
+];
+
+const ALLOWED_EXTENSIONS = [
+  '.jpg', '.jpeg', '.jfif', '.png', '.webp', '.gif', '.svg', '.bmp', '.avif', '.heic',
+  '.pdf', '.doc', '.docx', '.xls', '.xlsx', '.ppt', '.pptx', '.txt', '.csv'
 ];
 
 const ALLOWED_TYPES = [...ALLOWED_IMAGE_TYPES, ...ALLOWED_DOC_TYPES];
@@ -81,16 +93,18 @@ export async function POST(req: NextRequest) {
       return NextResponse.json<ApiResponse>({ success: false, message: 'No file provided' }, { status: 400 });
     }
 
+    const ext = (path.extname(file.name) || '').toLowerCase();
+    const isAllowedExt = ALLOWED_EXTENSIONS.includes(ext);
     const mimeType = file.type || 'application/octet-stream';
 
-    if (!ALLOWED_TYPES.includes(mimeType)) {
+    if (!ALLOWED_TYPES.includes(mimeType) && !isAllowedExt) {
       return NextResponse.json<ApiResponse>(
-        { success: false, message: `Invalid file type: ${mimeType}` },
+        { success: false, message: `Invalid file type: ${mimeType || ext}` },
         { status: 400 }
       );
     }
 
-    const isImage = ALLOWED_IMAGE_TYPES.includes(mimeType);
+    const isImage = ALLOWED_IMAGE_TYPES.includes(mimeType) || ['.jpg', '.jpeg', '.jfif', '.png', '.webp', '.gif', '.svg', '.bmp', '.avif', '.heic'].includes(ext);
     const maxSize = isImage ? MAX_IMAGE_SIZE : MAX_DOC_SIZE;
     if (file.size > maxSize) {
       return NextResponse.json<ApiResponse>(
@@ -99,7 +113,6 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const ext      = path.extname(file.name) || '';
     const base     = sanitizeFilename(path.basename(file.name, ext)) || 'file';
     const filename = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}-${base}${ext}`;
 
