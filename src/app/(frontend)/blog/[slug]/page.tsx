@@ -7,6 +7,7 @@ import connectDB from '@/lib/db';
 import BlogPost from '@/models/BlogPost';
 import BlogCategory from '@/models/BlogCategory';
 import BlogDetailSidebarClient from '@/components/frontend/Blog/BlogDetailSidebarClient';
+import BlogBlockFaq from '@/components/frontend/Blog/BlogBlockFaq';
 
 export const dynamic = 'force-dynamic';
 
@@ -54,15 +55,30 @@ async function getBlogCategories() {
   ];
 }
 
+function parseFormattedText(text: string) {
+  if (!text) return null;
+  let html = text.replace(
+    /\[([^\]]+)\]\(([^)]+)\)/g,
+    '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>'
+  );
+  html = html.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  html = html.replace(/__([^_]+)__/g, '<strong>$1</strong>');
+
+  if (/<[a-z][\s\S]*>/i.test(html)) {
+    return <span dangerouslySetInnerHTML={{ __html: html }} />;
+  }
+  return text;
+}
+
 function BlockParagraph({ data }) {
   if (!data?.text) return null;
-  return <p>{data.text}</p>;
+  return <p>{parseFormattedText(data.text)}</p>;
 }
 
 function BlockHeading({ data }) {
   if (!data?.text) return null;
   const Tag = data.level || 'h3';
-  return <Tag className={data.style === 'yellow' ? 'yellow-text' : ''}>{data.text}</Tag>;
+  return <Tag className={data.style === 'yellow' ? 'yellow-text' : ''}>{parseFormattedText(data.text)}</Tag>;
 }
 
 function BlockBulletList({ data }) {
@@ -70,9 +86,9 @@ function BlockBulletList({ data }) {
   if (!items.length) return null;
   return (
     <>
-      {data?.title && <h3>{data.title}</h3>}
+      {data?.title && <p className="list-section-title">{parseFormattedText(data.title)}</p>}
       <ul>
-        {items.map((item, i) => <li key={i}>{item}</li>)}
+        {items.map((item, i) => <li key={i}>{parseFormattedText(item)}</li>)}
       </ul>
     </>
   );
@@ -83,10 +99,10 @@ function BlockNumberedList({ data }) {
   if (!items.length) return null;
   return (
     <>
-      {data?.title && <h3>{data.title}</h3>}
+      {data?.title && <p className="list-section-title">{parseFormattedText(data.title)}</p>}
       <ol>
         {items.map((item, i) => (
-          <li key={i}><strong>{i + 1}. <span></span>{item}</strong></li>
+          <li key={i}>{parseFormattedText(item)}</li>
         ))}
       </ol>
     </>
@@ -95,16 +111,20 @@ function BlockNumberedList({ data }) {
 
 function BlockNumberedSection({ data }) {
   const subItems = data?.subItems || [];
+  const numStr = data?.number ? (String(data.number).endsWith('.') ? `${data.number} ` : `${data.number}. `) : '';
+
   return (
-    <li>
-      <strong>{data?.number}. <span></span>{data?.title}</strong>
-      {data?.body && <p>{data.body}</p>}
+    <div className="numbered-section-block">
+      <div className="numbered-section-header">
+        <strong>{numStr}{parseFormattedText(data?.title)}</strong>
+      </div>
+      {data?.body && <p>{parseFormattedText(data.body)}</p>}
       {subItems.length > 0 && (
         <ul>
-          {subItems.map((item, i) => <li key={i}>{item}</li>)}
+          {subItems.map((item, i) => <li key={i}>{parseFormattedText(item)}</li>)}
         </ul>
       )}
-    </li>
+    </div>
   );
 }
 
@@ -131,7 +151,7 @@ function BlockSingleImage({ data }) {
   return (
     <div className="article-banner" style={{ margin: '24px 0' }}>
       <img src={data.url} alt={data.alt || ''} />
-      {data.caption && <p style={{ textAlign: 'center', fontSize: 13, color: '#888', marginTop: 6 }}>{data.caption}</p>}
+      {data.caption && <p style={{ textAlign: 'center', fontSize: 13, color: '#888', marginTop: 6 }}>{parseFormattedText(data.caption)}</p>}
     </div>
   );
 }
@@ -140,8 +160,8 @@ function BlockQuote({ data }) {
   if (!data?.text) return null;
   return (
     <blockquote style={{ borderLeft: '4px solid #f0c300', paddingLeft: 16, margin: '20px 0', fontStyle: 'italic', color: '#555' }}>
-      <p>{data.text}</p>
-      {data.author && <footer style={{ fontSize: 13, color: '#888', marginTop: 4 }}>- {data.author}</footer>}
+      <p>{parseFormattedText(data.text)}</p>
+      {data.author && <footer style={{ fontSize: 13, color: '#888', marginTop: 4 }}>- {parseFormattedText(data.author)}</footer>}
     </blockquote>
   );
 }
@@ -156,7 +176,40 @@ function BlockCallout({ data }) {
   const st = styles[data.style] || styles.info;
   return (
     <div style={{ ...st, padding: '12px 16px', borderRadius: 6, margin: '16px 0', fontSize: 14 }}>
-      {data.text}
+      {parseFormattedText(data.text)}
+    </div>
+  );
+}
+
+function BlockTable({ data }) {
+  const headers = data?.headers || [];
+  const rows = data?.rows || [];
+  if (!headers.length && !rows.length) return null;
+
+  return (
+    <div className="table-responsive-wrapper">
+      <table className="article-table">
+        {headers.length > 0 && (
+          <thead>
+            <tr>
+              {headers.map((h: string, i: number) => (
+                <th key={i}>{parseFormattedText(h)}</th>
+              ))}
+            </tr>
+          </thead>
+        )}
+        {rows.length > 0 && (
+          <tbody>
+            {rows.map((row: string[], rIdx: number) => (
+              <tr key={rIdx}>
+                {row.map((cell: string, cIdx: number) => (
+                  <td key={cIdx}>{parseFormattedText(cell)}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        )}
+      </table>
     </div>
   );
 }
@@ -170,6 +223,8 @@ function renderBlock(block, i) {
     case 'bulletList': return <BlockBulletList key={i} data={data} />;
     case 'numberedList': return <BlockNumberedList key={i} data={data} />;
     case 'numberedSection': return <BlockNumberedSection key={i} data={data} />;
+    case 'table': return <BlockTable key={i} data={data} />;
+    case 'faq': return <BlogBlockFaq key={i} data={data} />;
     case 'imageGrid': return <BlockImageGrid key={i} data={data} />;
     case 'singleImage': return <BlockSingleImage key={i} data={data} />;
     case 'quote': return <BlockQuote key={i} data={data} />;

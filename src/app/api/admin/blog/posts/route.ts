@@ -43,13 +43,24 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     if (!body.title?.trim()) return NextResponse.json<ApiResponse>({ success:false, message:'Title is required' }, { status:422 });
     if (!body.slug?.trim())  return NextResponse.json<ApiResponse>({ success:false, message:'Slug is required' }, { status:422 });
+    
+    const categoryId = body.categoryId && body.categoryId !== '' && body.categoryId !== 'null' ? body.categoryId : null;
     const last = await BlogPost.findOne().sort({ order:-1 }).select('order').lean();
     const readingTimeMinutes = calcReadingTime(body.contentBlocks || []);
     const publishedAt = body.status === 'published' ? new Date() : null;
-    const post = await BlogPost.create({ ...body, slug: body.slug.trim().toLowerCase(), readingTimeMinutes, publishedAt, order:(last?.order??-1)+1 });
+    const post = await BlogPost.create({
+      ...body,
+      categoryId,
+      slug: body.slug.trim().toLowerCase(),
+      readingTimeMinutes,
+      publishedAt,
+      order:(last?.order??-1)+1
+    });
     return NextResponse.json({ success:true, message:'Post created', data:post }, { status:201 });
   } catch(e:unknown) {
-    const msg = e instanceof Error && e.message.includes('duplicate') ? 'Slug already exists' : 'Server error';
+    console.error('API Error in POST /api/admin/blog/posts:', e);
+    const errText = e instanceof Error ? e.message : 'Server error';
+    const msg = e instanceof Error && e.message.includes('duplicate') ? 'Slug already exists' : errText;
     return NextResponse.json<ApiResponse>({ success:false, message:msg }, { status:msg.includes('Slug')?409:500 });
   }
 }

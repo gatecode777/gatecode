@@ -14,7 +14,7 @@ import mongoose, { Document, Model, Schema } from 'mongoose';
 
 export interface IContentBlock {
   _id: mongoose.Types.ObjectId;
-  type: 'paragraph'|'heading'|'bulletList'|'numberedList'|'numberedSection'|'imageGrid'|'singleImage'|'quote'|'divider'|'callout';
+  type: 'paragraph'|'heading'|'bulletList'|'numberedList'|'numberedSection'|'imageGrid'|'singleImage'|'quote'|'divider'|'callout'|'table'|'faq';
   order: number;
   isVisible: boolean;
   data: Record<string, unknown>;
@@ -57,7 +57,7 @@ export interface IBlogPost extends Document {
 
 const contentBlockSchema = new Schema<IContentBlock>(
   {
-    type:      { type: String, required: true, enum: ['paragraph','heading','bulletList','numberedList','numberedSection','imageGrid','singleImage','quote','divider','callout'] },
+    type:      { type: String, required: true, enum: ['paragraph','heading','bulletList','numberedList','numberedSection','imageGrid','singleImage','quote','divider','callout','table','faq'] },
     order:     { type: Number, default: 0 },
     isVisible: { type: Boolean, default: true },
     data:      { type: Schema.Types.Mixed, default: {} },
@@ -103,8 +103,10 @@ blogPostSchema.index({ status: 1, isActive: 1, publishedAt: -1 });
 blogPostSchema.index({ categoryId: 1, status: 1, isActive: 1 });
 blogPostSchema.index({ isFeatured: 1, status: 1 });
 
-const BlogPost: Model<IBlogPost> =
-  (mongoose.models['BlogPost'] as Model<IBlogPost>) ??
-  mongoose.model<IBlogPost>('BlogPost', blogPostSchema);
+if (mongoose.models['BlogPost']) {
+  delete mongoose.models['BlogPost'];
+}
+
+const BlogPost: Model<IBlogPost> = mongoose.model<IBlogPost>('BlogPost', blogPostSchema);
 
 export default BlogPost;
