@@ -1,4 +1,5 @@
 import mongoose, { Document, Model, Schema } from 'mongoose';
+import './BlogCategory';
 
 // ── Block types ────────────────────────────────────────────────────────────
 // paragraph      → { text: string }
