@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { verifyToken, COOKIE_NAME } from '@/lib/jwt';
 import connectDB from '@/lib/db';
 import BlogPost from '@/models/BlogPost';
+import BlogCategory from '@/models/BlogCategory';
 import type { ApiResponse } from '@/types';
 
 function auth(req: NextRequest) { const t = req.cookies.get(COOKIE_NAME)?.value; return t ? verifyToken(t) : null; }
