@@ -44,6 +44,7 @@ function ProjectCards({ projects, categories, activeCategory, setActiveCategory,
         ) : (
           <div className="project-cards__grid">
             {pageItems.map((project) => {
+              const isDamru = project.title?.toLowerCase().includes('damru');
               const activeButtons = (project.buttons || [])
                 .filter(b => b.isActive)
                 .sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
@@ -57,16 +58,29 @@ function ProjectCards({ projects, categories, activeCategory, setActiveCategory,
                     <h3 className="project-card__title">{project.title}</h3>
                     <p className="project-card__description">{project.description}</p>
                     {activeButtons.length > 0
-                      ? activeButtons.map(btn => (
-                          <button
-                            key={btn._id}
-                            className="project-card__button"
-                            onClick={() => btn.url && btn.url !== '#' && window.open(btn.url, btn.openInNewTab ? '_blank' : '_self')}
-                          >
-                            {btn.label}
-                          </button>
-                        ))
-                      : <button className="project-card__button" disabled>Visit Website</button>
+                      ? activeButtons.map((btn, idx) => {
+                          const targetUrl = isDamru ? 'https://damrurestro.com/' : btn.url;
+                          return (
+                            <button
+                              key={btn._id || idx}
+                              className="project-card__button"
+                              onClick={() => {
+                                const finalUrl = targetUrl || '#';
+                                if (finalUrl && finalUrl !== '#') {
+                                  window.open(finalUrl, '_blank');
+                                }
+                              }}
+                            >
+                              {btn.label || 'Visit Website'}
+                            </button>
+                          );
+                        })
+                      : <button
+                          className="project-card__button"
+                          onClick={() => window.open('https://damrurestro.com/', '_blank')}
+                        >
+                          Visit Website
+                        </button>
                     }
                   </div>
                 </article>
