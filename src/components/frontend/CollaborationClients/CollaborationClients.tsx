@@ -37,7 +37,7 @@ const CollaborationClients = () => {
             <a href="https://cocofinasugar.com/" target='_blank'><img src="/images/7.png" alt="Cocofina Sugar Brand Client Logo - Gatecode Technologies" className="cc-clients-image" /></a>
             <a href="https://ecobinuae.com/" target='_blank'><img src="/images/4.jpeg" alt="Ecobin UAE Client Logo - Gatecode Technologies" className="cc-clients-image" /></a>
             <a href="https://destoura.com/" target='_blank'><img src="/images/5.jpeg" alt="Destoura Client Logo - Gatecode Technologies" className="cc-clients-image" /></a>
-            <a href="https://www.instagram.com/thedamrubynamo.pratapnagar/" target='_blank'><img src="/images/6.png" alt="The Damru Dynamo Pratapnagar Client Logo - Gatecode Technologies" className="cc-clients-image" /></a>
+            <a href="https://damrurestro.com/" target='_blank'><img src="/images/6.png" alt="The Damru Dynamo Pratapnagar Client Logo - Gatecode Technologies" className="cc-clients-image" /></a>
           </div>
         </div>
       </div>
