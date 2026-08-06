@@ -83,7 +83,7 @@ const inputStyle: React.CSSProperties = {
   color: '#0f172a',
   backgroundColor: '#f8fafc',
   outline: 'none',
-  transition: 'border-color 0.2s ease, box-shadow 0.2s ease',
+  transition: 'all 0.2s ease',
   boxSizing: 'border-box',
 };
 
@@ -97,12 +97,6 @@ const selectStyle: React.CSSProperties = {
   appearance: 'none',
   WebkitAppearance: 'none',
   MozAppearance: 'none',
-};
-
-const focusStyle: React.CSSProperties = {
-  border: '1.5px solid #0fb9b1',
-  boxShadow: '0 0 0 3px rgba(15, 185, 177, 0.15)',
-  backgroundColor: '#ffffff',
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -120,28 +114,61 @@ export default function ProjectInquiryForm({
 
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const [errorMsg, setErrorMsg] = useState('');
+  const [serverError, setServerError] = useState('');
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
   const [focusedField, setFocusedField] = useState<string | null>(null);
+
+  const clearFieldError = (name: string) => {
+    if (fieldErrors[name]) {
+      setFieldErrors((prev) => {
+        const next = { ...prev };
+        delete next[name];
+        return next;
+      });
+    }
+    if (serverError) setServerError('');
+  };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-    if (errorMsg) setErrorMsg('');
+    clearFieldError(name);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name.trim()) { setErrorMsg('Please enter your name'); return; }
-    if (!formData.phone.trim()) { setErrorMsg('Please enter your phone number'); return; }
-    if (!/^[6-9]\d{9}$/.test(formData.phone.trim())) { setErrorMsg('Enter a valid 10-digit mobile number starting with 6–9'); return; }
-    if (!formData.email.trim()) { setErrorMsg('Please enter your business email'); return; }
-    if (!formData.requirement) { setErrorMsg('Please select what you need'); return; }
-    if (!formData.budget) { setErrorMsg('Please select your budget range'); return; }
+
+    const errors: Record<string, string> = {};
+    if (!formData.name.trim()) {
+      errors.name = 'Please enter your name';
+    }
+    if (!formData.phone.trim()) {
+      errors.phone = 'Please enter your phone number';
+    } else if (!/^[6-9]\d{9}$/.test(formData.phone.trim())) {
+      errors.phone = 'Enter a valid 10-digit mobile number starting with 6–9';
+    }
+    if (!formData.email.trim()) {
+      errors.email = 'Please enter your business email';
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())) {
+      errors.email = 'Please enter a valid email address';
+    }
+    if (!formData.requirement) {
+      errors.requirement = 'Please select what you need';
+    }
+    if (!formData.budget) {
+      errors.budget = 'Please select your budget range';
+    }
+
+    if (Object.keys(errors).length > 0) {
+      setFieldErrors(errors);
+      return;
+    }
 
     setSubmitting(true);
-    setErrorMsg('');
+    setServerError('');
+    setFieldErrors({});
 
     try {
       const res = await fetch('/api/client-inquiries', {
@@ -159,24 +186,52 @@ export default function ProjectInquiryForm({
       if (data.success) {
         setSubmitted(true);
       } else {
-        setErrorMsg(data.message || 'Something went wrong. Please try again.');
+        setServerError(data.message || 'Something went wrong. Please try again.');
       }
     } catch {
-      setErrorMsg('Failed to submit form. Please check your connection.');
+      setServerError('Failed to submit form. Please check your connection.');
     } finally {
       setSubmitting(false);
     }
   };
 
-  const getInputStyle = (fieldName: string): React.CSSProperties => ({
-    ...inputStyle,
-    ...(focusedField === fieldName ? focusStyle : {}),
-  });
+  const getInputStyle = (fieldName: string): React.CSSProperties => {
+    const hasError = !!fieldErrors[fieldName];
+    const isFocused = focusedField === fieldName;
+    return {
+      ...inputStyle,
+      border: hasError
+        ? '1.5px solid #ef4444'
+        : isFocused
+        ? '1.5px solid #0fb9b1'
+        : '1.5px solid #cbd5e1',
+      boxShadow: hasError
+        ? '0 0 0 3px rgba(239, 68, 68, 0.12)'
+        : isFocused
+        ? '0 0 0 3px rgba(15, 185, 177, 0.15)'
+        : 'none',
+      backgroundColor: isFocused ? '#ffffff' : '#f8fafc',
+    };
+  };
 
-  const getSelectStyle = (fieldName: string): React.CSSProperties => ({
-    ...selectStyle,
-    ...(focusedField === fieldName ? focusStyle : {}),
-  });
+  const getSelectStyle = (fieldName: string): React.CSSProperties => {
+    const hasError = !!fieldErrors[fieldName];
+    const isFocused = focusedField === fieldName;
+    return {
+      ...selectStyle,
+      border: hasError
+        ? '1.5px solid #ef4444'
+        : isFocused
+        ? '1.5px solid #0fb9b1'
+        : '1.5px solid #cbd5e1',
+      boxShadow: hasError
+        ? '0 0 0 3px rgba(239, 68, 68, 0.12)'
+        : isFocused
+        ? '0 0 0 3px rgba(15, 185, 177, 0.15)'
+        : 'none',
+      backgroundColor: isFocused ? '#ffffff' : '#f8fafc',
+    };
+  };
 
   if (submitted) {
     return (
@@ -189,6 +244,7 @@ export default function ProjectInquiryForm({
           onClick={() => {
             setSubmitted(false);
             setFormData({ name: '', phone: '', email: '', requirement: '', budget: '' });
+            setFieldErrors({});
           }}
           style={{
             display: 'inline-flex',
@@ -218,7 +274,7 @@ export default function ProjectInquiryForm({
       <h3 style={titleStyle}>Get a Project Estimate</h3>
       <p style={subtitleStyle}>Fill out the details below and we&apos;ll get back to you promptly.</p>
 
-      {errorMsg && <div style={errorStyle}>{errorMsg}</div>}
+      {serverError && <div style={errorStyle}>{serverError}</div>}
 
       <form onSubmit={handleSubmit} style={formStyle} noValidate>
 
@@ -239,6 +295,11 @@ export default function ProjectInquiryForm({
             required
             style={getInputStyle('name')}
           />
+          {fieldErrors.name && (
+            <span style={{ fontSize: '12px', color: '#ef4444', fontWeight: 500 }}>
+              {fieldErrors.name}
+            </span>
+          )}
         </div>
 
         {/* 2. Phone */}
@@ -263,13 +324,18 @@ export default function ProjectInquiryForm({
             onChange={e => {
               const digits = e.target.value.replace(/\D/g, '').slice(0, 10);
               setFormData(prev => ({ ...prev, phone: digits }));
-              if (errorMsg) setErrorMsg('');
+              clearFieldError('phone');
             }}
             onFocus={() => setFocusedField('phone')}
             onBlur={() => setFocusedField(null)}
             required
             style={getInputStyle('phone')}
           />
+          {fieldErrors.phone && (
+            <span style={{ fontSize: '12px', color: '#ef4444', fontWeight: 500 }}>
+              {fieldErrors.phone}
+            </span>
+          )}
         </div>
 
         {/* 3. Business Email */}
@@ -289,6 +355,11 @@ export default function ProjectInquiryForm({
             required
             style={getInputStyle('email')}
           />
+          {fieldErrors.email && (
+            <span style={{ fontSize: '12px', color: '#ef4444', fontWeight: 500 }}>
+              {fieldErrors.email}
+            </span>
+          )}
         </div>
 
         {/* 4. What do you need? */}
@@ -313,6 +384,11 @@ export default function ProjectInquiryForm({
             <option value="Web Application">Web Application</option>
             <option value="Not sure">Not sure</option>
           </select>
+          {fieldErrors.requirement && (
+            <span style={{ fontSize: '12px', color: '#ef4444', fontWeight: 500 }}>
+              {fieldErrors.requirement}
+            </span>
+          )}
         </div>
 
         {/* 5. Budget range */}
@@ -336,6 +412,11 @@ export default function ProjectInquiryForm({
             <option value="₹1.5L–₹5L">₹1.5L–₹5L</option>
             <option value="₹5L+">₹5L+</option>
           </select>
+          {fieldErrors.budget && (
+            <span style={{ fontSize: '12px', color: '#ef4444', fontWeight: 500 }}>
+              {fieldErrors.budget}
+            </span>
+          )}
         </div>
 
         <button
