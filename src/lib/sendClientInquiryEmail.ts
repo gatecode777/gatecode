@@ -12,10 +12,10 @@ export interface ClientInquiryEmailData {
 export async function sendClientInquiryEmail(data: ClientInquiryEmailData) {
   const host = process.env.SMTP_HOST || 'smtp.gmail.com';
   const port = Number(process.env.SMTP_PORT) || 465;
-  const user = process.env.SMTP_USER || 'omrishi@gatexpay.co.in';
+  const user = process.env.SMTP_USER || 'omrishisharma2@gmail.cpm';
   // Strip spaces from App Password (e.g. "mstp mowp ouwq szke" -> "mstpmowpouwqszke")
   const pass = (process.env.SMTP_PASS || '').replace(/\s+/g, '');
-  const to = process.env.SMTP_TO || 'vitin@gatecode.in';
+  const to = process.env.SMTP_TO || 'sahil1048201@gmail.com';
 
   // Create transporter dynamically per call to ensure fresh env variables
   const transporter = nodemailer.createTransport({
