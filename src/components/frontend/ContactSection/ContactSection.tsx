@@ -9,7 +9,7 @@ const ContactSection = () => {
     name: '',
     email: '',
     phone: '',
-    agreePrivacy: true,
+    agreePrivacy: false,
     requestNda: false,
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -65,7 +65,7 @@ const ContactSection = () => {
       const d = await res.json();
       if (d.success) {
         setSuccess(true);
-        setForm({ projectDetails: '', name: '', email: '', phone: '', agreePrivacy: true, requestNda: false });
+        setForm({ projectDetails: '', name: '', email: '', phone: '', agreePrivacy: false, requestNda: false });
       } else {
         setErrors({ submit: d.message || 'Submission failed. Please try again.' });
       }

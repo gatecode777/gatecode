@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import connectDB from '@/lib/db';
 import ClientInquiry from '@/models/ClientInquiry';
+import { sendClientInquiryEmail } from '@/lib/sendClientInquiryEmail';
 
 export async function POST(req: NextRequest) {
   try {
@@ -15,6 +16,7 @@ export async function POST(req: NextRequest) {
     if (!requirement?.trim()) return NextResponse.json({ success: false, message: 'Please select what you need' }, { status: 422 });
     if (!budget?.trim())      return NextResponse.json({ success: false, message: 'Please select a budget range' }, { status: 422 });
 
+    // Save to MongoDB
     const entry = await ClientInquiry.create({
       name: name.trim(),
       phone: phone.trim(),
@@ -23,12 +25,32 @@ export async function POST(req: NextRequest) {
       budget: budget.trim(),
     });
 
+    // Send email notification (non-blocking — don't fail the response if email fails)
+    const submittedAt = new Date().toLocaleString('en-IN', {
+      timeZone: 'Asia/Kolkata',
+      day: '2-digit',
+      month: 'short',
+      year: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: true,
+    });
+
+    sendClientInquiryEmail({
+      name: name.trim(),
+      phone: phone.trim(),
+      email: email.trim(),
+      requirement: requirement.trim(),
+      budget: budget.trim(),
+      submittedAt,
+    }).catch(err => console.error('[ClientInquiry] Email send failed:', err));
+
     return NextResponse.json(
       { success: true, message: 'Inquiry submitted successfully', data: { _id: entry._id } },
       { status: 201 }
     );
   } catch (e) {
-    console.error(e);
+    console.error('[ClientInquiry] Error:', e);
     return NextResponse.json({ success: false, message: 'Server error' }, { status: 500 });
   }
 }

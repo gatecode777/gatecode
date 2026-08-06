@@ -64,7 +64,7 @@ const ContactInfo = () => {
       </div>
 
       <div className="social-connect">
-        <h3>Connect With Us</h3>
+        <h3 style={{ color: '#ffffff' }}>Connect With Us</h3>
         <div className="social-links">
           {socials.map((social, index) => (
             <a key={index} href={social.link} className="social-btn" target="_blank" rel="noopener noreferrer">
