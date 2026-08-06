@@ -29,6 +29,7 @@ import {
   GitMerge
 } from 'lucide-react';
 import './CrmLandingPage.css';
+import ProjectInquiryForm from './ProjectInquiryForm';
 
 export default function CrmLandingPage() {
   const scrollToSection = (id: string) => {
@@ -468,54 +469,9 @@ export default function CrmLandingPage() {
               </div>
             </motion.div>
 
-            {/* WhatsApp Action Box */}
-            <motion.div className="crm-contact-action-box">
-              <div>
-                <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(37,211,102,0.12)', color: '#25D366', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px auto' }}>
-                  <MessageSquare size={28} />
-                </div>
-
-                <h3 style={{ fontSize: '24px', fontWeight: 800, color: 'var(--crm-text-heading)', marginBottom: '10px' }}>
-                  Talk To Us On WhatsApp
-                </h3>
-
-                <p style={{ color: 'var(--crm-text-body)', fontSize: '15px', lineHeight: 1.5, marginBottom: '24px' }}>
-                  Get an immediate response! Chat with our enterprise software architect right now to get a transparent estimate and build roadmap.
-                </p>
-
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '24px', textAlign: 'left' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 14, color: 'var(--crm-text-body)' }}>
-                    <Check size={16} style={{ color: '#25D366' }} /> Average response time: <strong>under 15 minutes</strong>
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 14, color: 'var(--crm-text-body)' }}>
-                    <Check size={16} style={{ color: '#25D366' }} /> Direct discussion with senior software architects
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 14, color: 'var(--crm-text-body)' }}>
-                    <Check size={16} style={{ color: '#25D366' }} /> Free enterprise scope & ROI assessment
-                  </div>
-                </div>
-              </div>
-
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                <a
-                  href={whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="crm-whatsapp-btn"
-                >
-                  <MessageSquare size={20} />
-                  Chat on WhatsApp (+91 8502888838)
-                </a>
-
-                <a
-                  href="tel:+918502888838"
-                  className="crm-btn crm-btn-secondary"
-                  style={{ width: '100%' }}
-                >
-                  <Phone size={18} />
-                  Call Directly: +91 8502888838
-                </a>
-              </div>
+            {/* Project Inquiry Form */}
+            <motion.div style={{ flex: 1 }}>
+              <ProjectInquiryForm buttonBg="#0fb9b1" />
             </motion.div>
           </div>
         </div>

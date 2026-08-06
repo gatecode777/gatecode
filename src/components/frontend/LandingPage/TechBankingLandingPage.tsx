@@ -35,6 +35,7 @@ import {
   GitMerge
 } from 'lucide-react';
 import './TechBankingLandingPage.css';
+import ProjectInquiryForm from './ProjectInquiryForm';
 
 export default function TechBankingLandingPage() {
   const scrollToSection = (id: string) => {
@@ -523,57 +524,9 @@ export default function TechBankingLandingPage() {
               </div>
             </motion.div>
 
-            {/* WhatsApp Action Box */}
-            <motion.div className="tb-contact-action-box">
-              <div>
-                <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(37,211,102,0.12)', color: '#25D366', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px auto' }}>
-                  <MessageSquare size={28} />
-                </div>
-
-                <h3 style={{ fontSize: 24, fontWeight: 800, color: 'var(--tb-text-heading)', marginBottom: 10 }}>
-                  Talk To Us On WhatsApp
-                </h3>
-
-                <p style={{ color: 'var(--tb-text-body)', fontSize: 15, lineHeight: 1.5, marginBottom: 24 }}>
-                  Get an immediate response from our banking technology architect. Discuss your core banking requirements, compliance needs, or API integration roadmap.
-                </p>
-
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 24, textAlign: 'left' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 14, color: 'var(--tb-text-body)' }}>
-                    <Check size={16} style={{ color: '#25D366' }} /> Average response: <strong>under 15 minutes</strong>
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 14, color: 'var(--tb-text-body)' }}>
-                    <Check size={16} style={{ color: '#25D366' }} /> Direct 1-on-1 with senior banking tech architects
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 14, color: 'var(--tb-text-body)' }}>
-                    <Check size={16} style={{ color: '#25D366' }} /> Free compliance gap audit & project scoping
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 14, color: 'var(--tb-text-body)' }}>
-                    <Check size={16} style={{ color: '#25D366' }} /> NDA available on request before discussion
-                  </div>
-                </div>
-              </div>
-
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-                <a
-                  href={whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="tb-whatsapp-btn"
-                >
-                  <MessageSquare size={20} />
-                  Chat on WhatsApp (+91 8502888838)
-                </a>
-
-                <a
-                  href="tel:+918502888838"
-                  className="tb-btn tb-btn-secondary"
-                  style={{ width: '100%' }}
-                >
-                  <Phone size={18} />
-                  Call Directly: +91 8502888838
-                </a>
-              </div>
+            {/* Project Inquiry Form */}
+            <motion.div style={{ flex: 1 }}>
+              <ProjectInquiryForm buttonBg="#0fb9b1" />
             </motion.div>
           </div>
         </div>
