@@ -38,6 +38,7 @@ const teamItems = [
 ];
 
 const contactItems = [
+  { label: 'Client Enquiries', href: '/admin/client-inquiries', icon: InboxIcon },
   { label: 'Enquiries', href: '/admin/contact', icon: InboxIcon },
   { label: 'Company Contact', href: '/admin/company-contact', icon: InboxIcon },
   { label: 'Quote Requests', href: '/admin/quotes', icon: InboxIcon },

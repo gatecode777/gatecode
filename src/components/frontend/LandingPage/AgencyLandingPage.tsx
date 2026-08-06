@@ -29,6 +29,7 @@ import {
   Check
 } from 'lucide-react';
 import './AgencyLandingPage.css';
+import ProjectInquiryForm from './ProjectInquiryForm';
 
 export default function AgencyLandingPage() {
   const scrollToSection = (id: string) => {
@@ -397,7 +398,7 @@ export default function AgencyLandingPage() {
               Ready To Build A <span>High-Performing Website?</span>
             </h2>
             <p className="agency-section-subtitle">
-              Skip long inquiry forms. Talk directly with our senior web development team on WhatsApp or phone.
+              Get an immediate estimate & project scope. Fill out the form below or contact our team directly.
             </p>
           </motion.div>
 
@@ -466,54 +467,9 @@ export default function AgencyLandingPage() {
               </div>
             </motion.div>
 
-            {/* Direct WhatsApp Action Box */}
-            <motion.div className="agency-contact-action-box">
-              <div>
-                <div style={{ width: '56px', height: '56px', borderRadius: '50%', background: 'rgba(37, 211, 102, 0.12)', color: '#25D366', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px auto' }}>
-                  <MessageSquare size={28} />
-                </div>
-
-                <h3 style={{ fontSize: '24px', fontWeight: 800, color: 'var(--agency-text-heading)', marginBottom: '10px' }}>
-                  Talk To Us On WhatsApp
-                </h3>
-
-                <p style={{ color: 'var(--agency-text-body)', fontSize: '15px', lineHeight: 1.5, marginBottom: '24px' }}>
-                  Get an immediate response! Chat with our web architect right now to get a transparent estimate and project timeline.
-                </p>
-
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '28px', textAlign: 'left' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '14px', color: 'var(--agency-text-body)' }}>
-                    <Check size={16} style={{ color: '#25D366' }} /> Average response time: <strong>under 15 minutes</strong>
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '14px', color: 'var(--agency-text-body)' }}>
-                    <Check size={16} style={{ color: '#25D366' }} /> Direct 1-on-1 discussion with senior engineers
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '14px', color: 'var(--agency-text-body)' }}>
-                    <Check size={16} style={{ color: '#25D366' }} /> Free initial consultation & scope estimate
-                  </div>
-                </div>
-              </div>
-
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                <a
-                  href={whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="agency-whatsapp-btn"
-                >
-                  <MessageSquare size={20} />
-                  Chat on WhatsApp (+91 8502888838)
-                </a>
-
-                <a
-                  href="tel:+918502888838"
-                  className="agency-btn agency-btn-secondary"
-                  style={{ width: '100%' }}
-                >
-                  <Phone size={18} />
-                  Call Directly: +91 8502888838
-                </a>
-              </div>
+            {/* Project Inquiry Form */}
+            <motion.div style={{ flex: 1 }}>
+              <ProjectInquiryForm buttonBg="#0fb9b1" />
             </motion.div>
           </div>
         </div>
