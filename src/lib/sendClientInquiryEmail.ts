@@ -10,19 +10,17 @@ export interface ClientInquiryEmailData {
 }
 
 export async function sendClientInquiryEmail(data: ClientInquiryEmailData) {
-  const host = process.env.SMTP_HOST || 'smtp.gmail.com';
-  const port = Number(process.env.SMTP_PORT) || 465;
-  const user = process.env.SMTP_USER || 'omrishisharma2@gmail.cpm';
-  // Strip spaces from App Password (e.g. "mstp mowp ouwq szke" -> "mstpmowpouwqszke")
-  const pass = (process.env.SMTP_PASS || '').replace(/\s+/g, '');
-  const to = process.env.SMTP_TO || 'sahil1048201@gmail.com';
+  const host = process.env.SMTP_HOST || 'smtp.mailersend.net';
+  const port = Number(process.env.SMTP_PORT) || 587;
+  const user = process.env.SMTP_USER || 'MS_JQxBNX@test-r9084zvppqegw63d.mlsender.net';
+  const pass = process.env.SMTP_PASS || 'mssp.7ZZ6Avh.jpzkmgqjyyvl059v.zoiZMKE';
+  const to = process.env.SMTP_TO || 'madarauchiha3676@gmail.com';
 
-  // Create transporter dynamically per call to ensure fresh env variables
+  // Create generic SMTP transporter (supports MailerSend, Gmail, SendGrid, etc.)
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
     host,
     port,
-    secure: port === 465, // true for 465, false for 587
+    secure: port === 465, // true for 465, false for 587/2525
     auth: {
       user,
       pass,
