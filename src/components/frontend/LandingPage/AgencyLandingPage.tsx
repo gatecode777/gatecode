@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
   Globe,
@@ -30,8 +30,11 @@ import {
 } from 'lucide-react';
 import './AgencyLandingPage.css';
 import ProjectInquiryForm from './ProjectInquiryForm';
+import ProjectInquiryModal from './ProjectInquiryModal';
 
 export default function AgencyLandingPage() {
+  const [isModalOpen, setIsModalOpen] = useState(true);
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -43,6 +46,11 @@ export default function AgencyLandingPage() {
 
   return (
     <div className="agency-page-root">
+      <ProjectInquiryModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        buttonBg="#0fb9b1"
+      />
       {/* ==========================================
           1. HERO SECTION
          ========================================== */}

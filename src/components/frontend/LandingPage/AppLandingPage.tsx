@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
   Smartphone,
@@ -27,8 +27,15 @@ import {
 } from 'lucide-react';
 import './AppLandingPage.css';
 import ProjectInquiryForm from './ProjectInquiryForm';
+import ProjectInquiryModal from './ProjectInquiryModal';
 
 export default function AppLandingPage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    setIsModalOpen(true);
+  }, []);
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -40,6 +47,11 @@ export default function AppLandingPage() {
 
   return (
     <div className="app-page-root">
+      <ProjectInquiryModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        buttonBg="#0fb9b1"
+      />
       {/* HERO SECTION */}
       <section className="app-hero">
         <div className="app-container">

@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
   Landmark,
@@ -36,8 +36,15 @@ import {
 } from 'lucide-react';
 import './TechBankingLandingPage.css';
 import ProjectInquiryForm from './ProjectInquiryForm';
+import ProjectInquiryModal from './ProjectInquiryModal';
 
 export default function TechBankingLandingPage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    setIsModalOpen(true);
+  }, []);
+
   const scrollToSection = (id: string) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -49,6 +56,11 @@ export default function TechBankingLandingPage() {
 
   return (
     <div className="tb-page-root">
+      <ProjectInquiryModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        buttonBg="#0fb9b1"
+      />
       {/* ==========================================
           1. HERO
          ========================================== */}

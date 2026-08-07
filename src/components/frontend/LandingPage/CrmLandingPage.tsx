@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
   Database,
@@ -30,8 +30,15 @@ import {
 } from 'lucide-react';
 import './CrmLandingPage.css';
 import ProjectInquiryForm from './ProjectInquiryForm';
+import ProjectInquiryModal from './ProjectInquiryModal';
 
 export default function CrmLandingPage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    setIsModalOpen(true);
+  }, []);
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -43,6 +50,11 @@ export default function CrmLandingPage() {
 
   return (
     <div className="crm-page-root">
+      <ProjectInquiryModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        buttonBg="#0fb9b1"
+      />
 
       {/* ==========================================
           1. HERO SECTION
