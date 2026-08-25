@@ -595,7 +595,7 @@ const AppDevelopmentPage = () => {
             <DevelopmentProcess />
             <TechnologiesWeUse />
             <SeoContentSection />
-            <TSlider />
+            {/* <TSlider /> */}
             <ContactSection />
         </div>
     );

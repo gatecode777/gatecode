@@ -583,7 +583,7 @@ const DigitalMarketingServicesPage = () => {
             <DevelopmentProcess />
             <TechnologiesWeUse />
             <SeoContentSection />
-            <TSlider />
+            {/* <TSlider /> */}
             <ContactSection />
         </div>
     );

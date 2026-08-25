@@ -105,6 +105,8 @@ const TSlider = ({ members: propMembers }: { members?: any[] }) => {
     return () => clearInterval(autoPlayRef.current);
   }, [activeIndex, isAnimating, MEMBERS.length]);
 
+  return null;
+  /*
   return (
     <div className="tslider">
       <div className="tslider__header">
@@ -205,6 +207,7 @@ const TSlider = ({ members: propMembers }: { members?: any[] }) => {
       </div>
     </div>
   );
+  */
 };
 
 export default TSlider;
