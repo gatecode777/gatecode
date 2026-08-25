@@ -551,7 +551,7 @@ const JavaScriptDeveloperPage = () => {
             <DevelopmentProcess />
             <TechnologiesWeUse />
             <SeoContentSection />
-            <TSlider />
+            {/* <TSlider /> */}
             <ContactSection />
         </div>
     );

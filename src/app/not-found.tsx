@@ -16,7 +16,7 @@ export default function NotFound() {
         background: 'linear-gradient(160deg, #f0fffe 0%, #ffffff 50%, #f8fafc 100%)',
         position: 'relative',
         overflow: 'hidden',
-      }}>
+      }}> 
 
         {/* Background decoration circles */}
         <div aria-hidden="true" style={{

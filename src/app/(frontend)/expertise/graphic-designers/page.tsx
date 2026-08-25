@@ -562,7 +562,7 @@ const GraphicDesignerPage = () => {
             <DevelopmentProcess />
             <TechnologiesWeUse />
             <SeoContentSection />
-            <TSlider />
+            {/* <TSlider /> */}
             <ContactSection />
         </div>
     );

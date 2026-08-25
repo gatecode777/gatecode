@@ -62,7 +62,7 @@ export default async function Home() {
       <VisionMission />
       <CollaborationClients />
       <ProjectBanner />
-      <TSlider members={plain(teamMembers)} />
+      {/* <TSlider members={plain(teamMembers)} /> */}
       <ContactSection />
     </>
   );
