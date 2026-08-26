@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Mobile App Development Company in India | App Development Services',
-  description: 'Gatecode Technologies is a leading custom mobile app development company in India. We offer android app development services, ios app development services, and cross-platform app solutions for global businesses.',
+  title: 'Best Android Mobile App Development Company In Jaipur',
+  description: 'Get expert Android app development services from a trusted company for custom, scalable, secure, and high-performance mobile applications.',
   keywords: [
     'mobile app development company',
     'mobile app development company in india',

@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'UI UX Design Agency in India | UI UX Design Services',
-  description: 'Gatecode Technologies is a premier UI UX design company in India. We offer UI UX design services, mobile app UI UX design, wireframing and prototyping, and design system development services for global products.',
+  title: 'Best Ui Ux Design Company In Jaipur | Gatecode Tech Pvt Ltd',
+  description: 'Get Expert Ui Ux Design Services In Jaipur From A Trusted Company. We Create User-friendly, Engaging, And Conversion-focused Digital Experiences.',
   keywords: [
     'ui ux design',
     'ui ux design agency',
