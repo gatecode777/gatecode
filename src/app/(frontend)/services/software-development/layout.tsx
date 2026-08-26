@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Custom Software Development Company in India | Software Services',
-  description: 'Gatecode Technologies is a leading custom software development company in India. We provide enterprise application software, custom software development services, custom CRM development services, and ERP software solutions.',
+  title: 'Best It Software Development Services Agency In Jaipur',
+  description: 'Get Custom Software Development Services For Web And Business Needs From An Expert Software Development Agency With Scalable, Secure It Solutions.',
   keywords: [
     'software development company',
     'custom software development company',

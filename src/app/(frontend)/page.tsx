@@ -18,19 +18,17 @@ import TeamMember from '@/models/TeamMember';
 export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
-  title: 'Gatecode Technologies — Empowering Business Innovation',
-  description: 'Gatecode Technologies is a leading software development and digital transformation company. We empower businesses with custom websites, mobile apps, UI/UX designs, accounting, and BPO solutions.',
+  title: 'Best It Services Company In Jaipur | Reliable It Solutions Provider',
+  description: 'Reliable It Solutions, Cloud Services, And Technology Expertise To Secure Your Business, Improve Efficiency, And Accelerate Growth.',
   keywords: [
-    'Gatecode Technologies',
-    'software development company',
-    'digital transformation',
-    'custom website development',
-    'mobile app development',
-    'UI/UX design services',
-    'BPO services',
-    'accounting support',
-    'graphic design',
-    'business tech solutions'
+    'it solution company',
+    'best it company',
+    'it service company',
+    'managed cloud services provider',
+    'it solutions services',
+    'managed it services for businesses',
+    'technology solutions companies',
+    'it infrastructure solutions provider'
   ],
   alternates: {
     canonical: '/',

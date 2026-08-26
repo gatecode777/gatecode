@@ -1,22 +1,18 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Website Development Company in India | Web Design & Development Services',
-  description: 'Gatecode Technologies is a premier website development company in India. We deliver top-tier web design & development services, custom web app development services, react web development, and affordable web development services globally.',
+  title: 'Best Website Development Company In Jaipur',
+  description: 'Get Expert Web Development, Website Design, Redesign And Programming Services From A Trusted Website Development Company For Your Business.',
   keywords: [
+    'web development services',
+    'website development services',
+    'website design services',
+    'website redesign services',
+    'web design services',
+    'best website development company',
+    'website development',
     'website development company',
-    'website development company in india',
-    'web design & development services',
-    'web app development',
-    'custom web app development services',
-    'full stack development services',
-    'react web development company',
-    'api integration services',
-    'website maintenance services',
-    'affordable web development services',
-    'hire a web developer india',
-    'hire dedicated web developers',
-    'Gatecode Technologies'
+    'website programming company'
   ],
   alternates: {
     canonical: '/services/web-development',
