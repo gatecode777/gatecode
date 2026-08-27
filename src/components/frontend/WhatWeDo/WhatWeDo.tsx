@@ -83,7 +83,7 @@ const WhatWeDo = () => {
       <div className="wwd-header">
         <h2 className="wwd-title">WHAT WE DO</h2>
         <div className="wwd-underline" />
-        <p className="wwd-heading">Services built to scale your business</p>
+        <h3 className="wwd-heading">Services built to scale your business</h3>
         <p className="wwd-subtitle">
           From IT to back-office operations — one trusted partner for everything that drives growth.
         </p>
