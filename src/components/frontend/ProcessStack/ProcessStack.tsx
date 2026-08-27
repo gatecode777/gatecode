@@ -302,9 +302,9 @@ const ProcessStack = () => {
           HOW WE WORK
         </h2>
 
-        <p className="process-flow-subtitle">
+        <h3 className="process-flow-subtitle">
           A simple, proven 4-step process
-        </p>
+        </h3>
       </div>
 
       <div
@@ -321,9 +321,9 @@ const ProcessStack = () => {
               }}
             >
               <div className="process-flow-card-content">
-                <h2 className="process-flow-card-title">
+                <h4 className="process-flow-card-title">
                   {step.title}
-                </h2>
+                </h4>
 
                 <p className="process-flow-card-description">
                   {step.description}

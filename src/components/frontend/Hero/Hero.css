@@ -151,14 +151,15 @@
     width: 100%;
 }
 
+.stat-item h3,
 .stat-item h4 {
-    font-family: Roboto Flex;
+    font-family: "Roboto Flex", sans-serif;
     font-weight: 300;
-    font-style: Medium;
     font-size: 40px;
     line-height: 100%;
-    letter-spacing: 5%;
+    letter-spacing: 0.05em;
     color: #FFF708;
+    margin: 0;
 }
 
 .stat-item p {
@@ -379,8 +380,10 @@
         gap: 28px;
     }
 
+    .stat-item h3,
     .stat-item h4 {
         font-size: 30px;
+        margin: 0;
     }
 
     .stat-item p {
@@ -535,8 +538,10 @@
         gap: 18px;
     }
 
+    .stat-item h3,
     .stat-item h4 {
         font-size: 26px;
+        margin: 0;
     }
 
     .stat-item p {
@@ -599,8 +604,10 @@
         text-align: center;
     }
 
+    .stat-item h3,
     .stat-item h4 {
         font-size: 26px;
+        margin: 0;
     }
 
     .stat-item p {
@@ -736,8 +743,10 @@
         gap: 12px;
     }
 
+    .stat-item h3,
     .stat-item h4 {
         font-size: 24px;
+        margin: 0;
     }
 
     .stat-item p {
@@ -777,8 +786,10 @@
         font-size: 13px;
     }
 
+    .stat-item h3,
     .stat-item h4 {
         font-size: 22px;
+        margin: 0;
     }
 
     .stat-item p {
@@ -911,8 +922,10 @@
         font-size: 12px;
     }
 
+    .stat-item h3,
     .stat-item h4 {
         font-size: 20px;
+        margin: 0;
     }
 
     .stat-item p {

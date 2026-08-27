@@ -15,10 +15,10 @@ const Hero = () => {
             BUSINESSES WITH {' '}<br />
             SMART
           </h1>
-          <h3 className="hero-subtitle">
+          <h2 className="hero-subtitle">
             IT Services, BPO Services, Data Management, {' '}<br />
             Business Solutions, Accounting, Digital Marketing
-          </h3>
+          </h2>
           <p className="hero-description">
             Reduce operational costs and scale faster with our expert IT, BPO, {' '}<br />
             and data management services.
@@ -35,19 +35,19 @@ const Hero = () => {
 
           <div className="hero-stats">
             <div className="stat-item">
-              <h4>100+</h4>
+              <h3>100+</h3>
               <p>Clients Served</p>
             </div>
             <div className="stat-item">
-              <h4>2+</h4>
+              <h3>2+</h3>
               <p>Years Experience</p>
             </div>
             <div className="stat-item">
-              <h4>98%</h4>
+              <h3>98%</h3>
               <p>Client Retention</p>
             </div>
             <div className="stat-item">
-              <h4>24/7</h4>
+              <h3>24/7</h3>
               <p>Support Coverage</p>
             </div>
           </div>

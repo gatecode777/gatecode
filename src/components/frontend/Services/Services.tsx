@@ -48,7 +48,7 @@ const Services = () => {
               <img src={service.image} alt={`${service.title} Solutions - Gatecode Technologies`} />
               <div className="service-card-overlay"></div>
             </div>
-            <h4 className="service-card-title">{service.title}</h4>
+            <h3 className="service-card-title">{service.title}</h3>
           </div>
         ))}
       </div>

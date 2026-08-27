@@ -93,7 +93,7 @@ const ImageSlider = () => {
                     loading="lazy"
                   />
                   <div className="panorama-text-overlay">
-                    <span className="panorama-overlay-text">{slide.text}</span>
+                    <h3 className="panorama-overlay-text">{slide.text}</h3>
                   </div>
                 </div>
               </div>

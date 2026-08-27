@@ -198,7 +198,7 @@ const DigitalProcess = () => {
         <div className="dm-process-grid">
           {processSteps.map((item, index) => (
             <div key={index} className="dm-process-item">
-              <div className="dm-process-label">{item.title}</div>
+              <h3 className="dm-process-label">{item.title}</h3>
               <div className="dm-process-content">
                 <p>{item.desc}</p>
               </div>
