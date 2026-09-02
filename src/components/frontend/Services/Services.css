@@ -40,6 +40,7 @@
 }
 
 .service-card {
+    display: block;
     position: relative;
     width: calc(20% - 16px);
     height: 400px;
@@ -47,6 +48,8 @@
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .service-card:hover {

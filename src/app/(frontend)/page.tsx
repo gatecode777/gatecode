@@ -18,8 +18,8 @@ import TeamMember from '@/models/TeamMember';
 export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
-  title: 'Best It Services Company In Jaipur | Reliable It Solutions Provider',
-  description: 'Reliable It Solutions, Cloud Services, And Technology Expertise To Secure Your Business, Improve Efficiency, And Accelerate Growth.',
+  title: 'Best It Services Company In Jaipur | Gatecode Technologies',
+  description: 'Gatecode Technologies, a trusted IT service company in Jaipur, delivers web, software & cloud solutions to 100+ businesses. Get a free quote now!',
   keywords: [
     'it solution company',
     'best it company',

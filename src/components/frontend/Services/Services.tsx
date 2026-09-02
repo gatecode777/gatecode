@@ -1,32 +1,38 @@
 'use client';
 
+import Link from 'next/link';
 import './Services.css';
 
 const servicesData = [
   {
     title: 'IT SERVICES',
     image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop',
-    className: 'card-1'
+    className: 'card-1',
+    link: '/services/web-development'
   },
   {
     title: 'BPO SERVICES',
     image: 'https://images.unsplash.com/photo-1556740714-a8395b3bf30f?q=80&w=800&auto=format&fit=crop',
-    className: 'card-2'
+    className: 'card-2',
+    link: '/services/bpo-services'
   },
   {
     title: 'ACCOUNTING',
     image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=800&auto=format&fit=crop',
-    className: 'card-3'
+    className: 'card-3',
+    link: '/services/accounting'
   },
   {
-    title: 'BACK OFFICE HANDLING',
+    title: 'DATA MANAGEMENT',
     image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=800&auto=format&fit=crop',
-    className: 'card-4'
+    className: 'card-4',
+    link: '/services/data-management'
   },
   {
-    title: 'BUSINESS MANAGEMENT',
+    title: 'DIGITAL MARKETING',
     image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop',
-    className: 'card-5'
+    className: 'card-5',
+    link: '/services/digital-marketing'
   }
 ];
 
@@ -43,13 +49,13 @@ const Services = () => {
 
       <div className="services-grid">
         {servicesData.map((service, index) => (
-          <div key={index} className={`service-card ${service.className}`}>
+          <Link key={index} href={service.link} className={`service-card ${service.className}`}>
             <div className="service-card-img">
               <img src={service.image} alt={`${service.title} Solutions - Gatecode Technologies`} />
               <div className="service-card-overlay"></div>
             </div>
             <h3 className="service-card-title">{service.title}</h3>
-          </div>
+          </Link>
         ))}
       </div>
     </section>
