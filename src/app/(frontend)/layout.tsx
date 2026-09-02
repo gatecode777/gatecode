@@ -6,11 +6,11 @@ import Chatbot from '@/components/frontend/Chatbot/Chatbot';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://gatecode.in'),
-  title: 'Gatecode Technologies | Web & Software Development Company',
-  description: 'Empowering businesses with technology driven solutions, custom web development, software engineering, and strategic IT expertise.',
+  title: 'Best It Services Company In Jaipur | Gatecode Technologies',
+  description: 'Gatecode Technologies, a trusted IT service company in Jaipur, delivers web, software & cloud solutions to 100+ businesses. Get a free quote now!',
   openGraph: {
-    title: 'Gatecode Technologies | Web & Software Development Company',
-    description: 'Empowering businesses with technology driven solutions, custom web development, software engineering, and strategic IT expertise.',
+    title: 'Best It Services Company In Jaipur | Gatecode Technologies',
+    description: 'Gatecode Technologies, a trusted IT service company in Jaipur, delivers web, software & cloud solutions to 100+ businesses. Get a free quote now!',
     url: 'https://gatecode.in',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
@@ -18,8 +18,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Gatecode Technologies | Web & Software Development Company',
-    description: 'Empowering businesses with technology driven solutions, custom web development, software engineering, and strategic IT expertise.',
+    title: 'Best It Services Company In Jaipur | Gatecode Technologies',
+    description: 'Gatecode Technologies, a trusted IT service company in Jaipur, delivers web, software & cloud solutions to 100+ businesses. Get a free quote now!',
   },
 };
 

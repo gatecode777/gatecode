@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Best Website Development Company In Jaipur',
-  description: 'Get Expert Web Development, Website Design, Redesign And Programming Services From A Trusted Website Development Company For Your Business.',
+  description: 'Gatecode Technologies is a trusted web development company in Jaipur, delivering custom, SEO-friendly websites to 100+ businesses. Get a free quote',
   keywords: [
     'web development services',
     'website development services',
