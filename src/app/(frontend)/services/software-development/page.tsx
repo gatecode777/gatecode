@@ -311,6 +311,69 @@ const SeoContentSection = () => {
             <li style={{ marginBottom: '10px' }}><strong>Full Lifecycle Support:</strong> Ongoing maintenance, database optimization, and active system integrations.</li>
           </ul>
 
+          {/* Smart & Scalable Software Solutions */}
+          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '36px', marginBottom: '14px' }}>
+            Smart &amp; Scalable Software Solutions
+          </h3>
+
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            Our approach to{' '}
+            <Link href="/services/scalable-solutions" style={{ color: '#4e7c7e', fontWeight: '600', textDecoration: 'underline' }}>
+              smart and scalable software solutions
+            </Link>{' '}
+            focuses on solving real business challenges through reliable technology and well-planned software architecture. We develop solutions that are aligned with your operational requirements, user needs, data workflows, and long-term business objectives rather than relying on a one-size-fits-all approach.
+          </p>
+
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            From business automation and enterprise applications to industry-specific software platforms, our development team works across modern technologies to build applications that can adapt as your organization grows. We emphasize performance, security, usability, maintainability, and scalability throughout the development lifecycle, helping businesses manage increasing users, data, integrations, and operational complexity.
+          </p>
+
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '28px' }}>
+            Our software solutions are designed with future requirements in mind, making it easier to introduce new features, connect additional systems, and improve functionality as your business evolves.
+          </p>
+
+          {/* Custom Development & System Integration */}
+          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '8px', marginBottom: '14px' }}>
+            Custom Development &amp; System Integration
+          </h3>
+
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            Every business has different processes, workflows, and technology requirements. Our{' '}
+            <Link href="/services/system-integration" style={{ color: '#4e7c7e', fontWeight: '600', textDecoration: 'underline' }}>
+              custom software development and system integration services
+            </Link>{' '}
+            help organizations create software around their specific operational needs instead of adjusting their processes to fit generic applications.
+          </p>
+
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            We design and develop custom applications with appropriate technologies, databases, APIs, and system architecture based on the project's functional and technical requirements. Our team can integrate existing business systems such as CRM, ERP, payment platforms, third-party APIs, databases, and other enterprise applications to establish a more connected technology environment.
+          </p>
+
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '28px' }}>
+            By combining custom development with reliable system integration, we help reduce disconnected workflows, improve data accessibility, and create smoother communication between different business applications. Our focus remains on building maintainable solutions that can be managed, enhanced, and integrated as technical requirements change.
+          </p>
+
+          {/* Ongoing Support & Future-Ready Technology */}
+          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '8px', marginBottom: '14px' }}>
+            Ongoing Support &amp; Future-Ready Technology
+          </h3>
+
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            Software development does not end when an application goes live.{' '}
+            <Link href="/services/ongoing-support" style={{ color: '#4e7c7e', fontWeight: '600', textDecoration: 'underline' }}>
+              Ongoing maintenance and technical support
+            </Link>{' '}
+            are important for keeping business-critical software secure, stable, compatible, and performant as technology and business requirements evolve.
+          </p>
+
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            Our ongoing software support services include application maintenance, bug resolution, performance optimization, security updates, compatibility improvements, technical enhancements, and integration support. We can also help businesses evaluate existing applications and identify areas where improvements can increase reliability, usability, or operational efficiency.
+          </p>
+
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
+            With a focus on maintainable architecture and modern technology practices, we help organizations prepare their software for future changes. Whether you need to enhance an existing application, introduce new functionality, integrate another platform, or scale your software infrastructure, our team works to ensure your technology can evolve alongside your business.
+          </p>
+
         </div>
       </div>
     </section>

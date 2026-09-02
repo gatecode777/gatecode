@@ -270,7 +270,7 @@ const SeoContentSection = () => {
           </h3>
           
           <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            As an industry-leading <strong>custom web app development services</strong> provider, we specialize in building scalable digital portals, SaaS platforms, and enterprise workflows. Recognizing that every organization has distinct goals, our <strong>full stack development services</strong> combine robust backend architectures with intuitive frontend interfaces. Recognized as a high-performance <strong>react web development company</strong>, we engineer web solutions using modern frameworks like React, Next.js, Node.js, and Python.
+            As an industry-leading <Link href="/services/custom-website-development" style={{ color: '#4e7c7e', fontWeight: '600', textDecoration: 'underline' }}>custom web app development services</Link> provider, we specialize in building scalable digital portals, SaaS platforms, and enterprise workflows. Recognizing that every organization has distinct goals, our <strong>full stack development services</strong> combine robust backend architectures with intuitive frontend interfaces. Recognized as a high-performance <strong>react web development company</strong>, we engineer web solutions using modern frameworks like React, Next.js, Node.js, and Python.
           </p>
 
           {/* Key Feature Highlight Cards */}
@@ -310,6 +310,34 @@ const SeoContentSection = () => {
             <li style={{ marginBottom: '10px' }}><strong>Complete Security & Compliance:</strong> Built-in SSL, data encryption, and defense against common web vulnerabilities.</li>
             <li style={{ marginBottom: '10px' }}><strong>End-to-End Support:</strong> Dedicated project managers, active API integrations, and ongoing <strong>website maintenance services</strong>.</li>
           </ul>
+
+          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '36px', marginBottom: '14px' }}>
+            CMS Website Development Services for Scalable &amp; Easy-to-Manage Websites
+          </h3>
+
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            At Gatecode Technologies, we provide{' '}
+            <Link href="/services/cms-website-development" style={{ color: '#4e7c7e', fontWeight: '600', textDecoration: 'underline' }}>
+              CMS website development services
+            </Link>{' '}
+            for businesses that need a flexible, secure, and easy-to-manage online presence. Our CMS solutions enable business owners and content teams to create, edit, organize, and publish website content without depending on developers for every update.
+          </p>
+
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            Our developers build CMS websites around your business goals, content structure, design requirements, and long-term growth plans. From business websites and corporate portals to blogs, service websites, and content-driven platforms, we create responsive CMS solutions with clean architecture, intuitive content management, SEO-friendly structures, and performance-focused development.
+          </p>
+
+          <h4 style={{ fontSize: '20px', fontWeight: '600', color: '#1a1a1a', marginTop: '28px', marginBottom: '12px' }}>
+            Custom CMS Development &amp; Integration
+          </h4>
+
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            We develop and customize CMS websites according to your specific requirements rather than relying only on pre-built templates. Our team can customize website functionality, content structures, themes, plugins/modules, third-party integrations, forms, user roles, and APIs to create a CMS environment that is practical for your team to manage.
+          </p>
+
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
+            We also focus on essential technical aspects such as mobile responsiveness, website security, page performance, structured content, SEO-friendly URLs, and scalable architecture to support long-term website management.
+          </p>
 
         </div>
       </div>

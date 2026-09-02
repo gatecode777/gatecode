@@ -66,7 +66,7 @@ const Slider3D = () => {
               <div className="slider-card-3d">
                 <img
                   src={slide.src}
-                  alt={`Slide ${index + 1}`}
+                  alt={`${slide.text} - Gatecode Technologies`}
                   loading="lazy"
                 />
                 <div className="text-overlay-3d">

@@ -206,7 +206,7 @@ function SectionTwoColumn({ data }) {
         </div>
         {data.rightImage && (
           <div className="cs-image">
-            <img src={data.rightImage} alt="" />
+            <img src={data.rightImage} alt="Case Study Section Illustration - Gatecode Technologies" />
           </div>
         )}
       </div>

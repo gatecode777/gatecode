@@ -311,6 +311,72 @@ const SeoContentSection = () => {
             <li style={{ marginBottom: '10px' }}><strong>Developer-Handshake Ready:</strong> Clean Figma design tokens, CSS specs, and component documentation for engineering teams.</li>
           </ul>
 
+          {/* UI Design Section */}
+          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '36px', marginBottom: '14px' }}>
+            User Interface (UI) Design Services
+          </h3>
+
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            Creating an effective{' '}
+            <Link href="/services/ui-design" style={{ color: '#4e7c7e', fontWeight: '600', textDecoration: 'underline' }}>
+              user interface design
+            </Link>{' '}
+            requires more than an attractive visual appearance. At Gatecode Technologies, we design interfaces that combine visual clarity, usability, accessibility, and brand consistency to create digital products that are easy to understand and interact with. Our UI design process considers the specific requirements of your website, mobile application, web application, or enterprise product before defining the visual direction.
+          </p>
+
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            Our UI designers work on essential interface elements such as typography, color usage, spacing, layouts, navigation, buttons, forms, icons, cards, dashboards, and reusable components. We create responsive interface designs that maintain consistency across different screen sizes and devices while following established design principles and platform-specific considerations.
+          </p>
+
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '16px' }}>
+            We also focus on developing consistent UI design systems that help businesses maintain a unified visual experience as their digital products grow. By combining structured components, clear visual hierarchy, responsive layouts, and accessibility-conscious design practices, we help create interfaces that are visually consistent, functional, and easier for users to navigate.
+          </p>
+
+          <p style={{ fontSize: '15px', fontWeight: '600', color: '#1a1a1a', marginBottom: '8px' }}>Our UI Design Approach Includes:</p>
+          <ul style={{ paddingLeft: '20px', marginBottom: '28px', fontSize: '16px', color: '#555555' }}>
+            <li style={{ marginBottom: '8px' }}>Responsive website and web application interface design</li>
+            <li style={{ marginBottom: '8px' }}>Mobile app UI design for iOS and Android</li>
+            <li style={{ marginBottom: '8px' }}>Dashboard and enterprise application UI</li>
+            <li style={{ marginBottom: '8px' }}>Typography, spacing, colors, and visual hierarchy</li>
+            <li style={{ marginBottom: '8px' }}>Reusable UI components and design systems</li>
+            <li style={{ marginBottom: '8px' }}>Accessibility-conscious and user-friendly interface design</li>
+          </ul>
+
+          {/* UX Design Section */}
+          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '8px', marginBottom: '14px' }}>
+            User Experience (UX) Design Services
+          </h3>
+
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            A strong{' '}
+            <Link href="/services/ux-design" style={{ color: '#4e7c7e', fontWeight: '600', textDecoration: 'underline' }}>
+              user experience design
+            </Link>{' '}
+            focuses on how people interact with a digital product and how easily they can accomplish their goals. At Gatecode Technologies, our UX design process is centered on understanding user needs, business objectives, content structure, and interaction patterns before defining the experience of the product.
+          </p>
+
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            Our UX designers work through user flows, information architecture, navigation structures, wireframes, prototypes, and interaction patterns to identify potential usability issues early in the design process. We use these design methods to help teams understand how users may move through a website or application and where the experience can be simplified or improved.
+          </p>
+
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            Depending on the project requirements, UX planning can include user research, user personas, journey mapping, information architecture, task flows, wireframing, interactive prototyping, and usability evaluation. This structured approach helps reduce unnecessary complexity and provides a clearer foundation for developers before implementation begins.
+          </p>
+
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '16px' }}>
+            We design UX experiences with both user expectations and business requirements in mind, helping create digital products that are intuitive, accessible, efficient, and easier to use across different devices and user scenarios.
+          </p>
+
+          <p style={{ fontSize: '15px', fontWeight: '600', color: '#1a1a1a', marginBottom: '8px' }}>Our UX Design Approach Includes:</p>
+          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
+            <li style={{ marginBottom: '8px' }}>User research and requirement analysis</li>
+            <li style={{ marginBottom: '8px' }}>User flows and customer journey mapping</li>
+            <li style={{ marginBottom: '8px' }}>Information architecture and content structure</li>
+            <li style={{ marginBottom: '8px' }}>Wireframing and interactive prototyping</li>
+            <li style={{ marginBottom: '8px' }}>Usability-focused interaction design</li>
+            <li style={{ marginBottom: '8px' }}>UX evaluation and design improvements</li>
+          </ul>
+
         </div>
       </div>
     </section>

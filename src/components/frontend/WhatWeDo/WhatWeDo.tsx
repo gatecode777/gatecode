@@ -1,11 +1,13 @@
 'use client';
 
+import Link from 'next/link';
 import './WhatWeDo.css';
 
 const services = [
   {
     title: 'IT Services',
     description: 'Custom software, cloud infrastructure, web & app development tailored to your business.',
+    link: '/services/web-development',
     icon: (
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
         <line x1="8" y1="6" x2="16" y2="6" />
@@ -20,6 +22,7 @@ const services = [
   {
     title: 'BPO Services',
     description: 'Customer support, back-office and call center operations that scale with you.',
+    link: '/services/bpo-services',
     icon: (
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
@@ -31,6 +34,7 @@ const services = [
   {
     title: 'Back Office Handling',
     description: 'Accurate, secure and high-volume data processing with rapid turnaround.',
+    link: '/contact',
     icon: (
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="3" width="20" height="14" rx="2" />
@@ -44,6 +48,7 @@ const services = [
   {
     title: 'Accounting',
     description: 'Bookkeeping, payroll and financial reporting handled by certified professionals.',
+    link: '/services/accounting',
     icon: (
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
@@ -57,6 +62,7 @@ const services = [
   {
     title: 'Consultancy',
     description: 'Strategic business consultancy to optimise operations and accelerate growth.',
+    link: '/contact',
     icon: (
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
@@ -69,6 +75,7 @@ const services = [
   {
     title: 'Digital Marketing',
     description: 'SEO, social media, paid ads and content strategies that drive measurable growth.',
+    link: '/services/digital-marketing',
     icon: (
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
         <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
@@ -95,7 +102,7 @@ const WhatWeDo = () => {
             <div className="wwd-icon">{service.icon}</div>
             <h4 className="wwd-card-title">{service.title}</h4>
             <p className="wwd-card-desc">{service.description}</p>
-            <a href="#" className="wwd-learn-more">Learn more <span>↗</span></a>
+            <Link href={service.link} className="wwd-learn-more">Learn more <span>↗</span></Link>
           </div>
         ))}
       </div>

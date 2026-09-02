@@ -35,7 +35,7 @@ const FeaturesResults = () => {
         </div>
 
         <div className="box">
-          <img src="/images/homepage.jpeg" alt="home" />
+          <img src="/images/homepage.jpeg" alt="Damru By Namo Restaurant Homepage Design - Gatecode Technologies" />
         </div>
 
       </div>
