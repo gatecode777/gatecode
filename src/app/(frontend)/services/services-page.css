@@ -80,17 +80,31 @@
   padding: 0 24px;
 }
 
-/* Horizontal swipe container for mobile */
+/* Horizontal swipe container with visible scrollbar */
 .services-tab-scroller {
   overflow-x: auto;
-  scrollbar-width: none;
-  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: #0fb9b1 #e5e7eb;
   -webkit-overflow-scrolling: touch;
+  padding-bottom: 8px;
 }
 
 .services-tab-scroller::-webkit-scrollbar {
-  display: none;
-  /* Chrome/Safari */
+  height: 6px;
+}
+
+.services-tab-scroller::-webkit-scrollbar-track {
+  background: #e5e7eb;
+  border-radius: 99px;
+}
+
+.services-tab-scroller::-webkit-scrollbar-thumb {
+  background: #0fb9b1;
+  border-radius: 99px;
+}
+
+.services-tab-scroller::-webkit-scrollbar-thumb:hover {
+  background: #0eaba3;
 }
 
 .services-tab-deck {

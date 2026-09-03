@@ -35,8 +35,38 @@
     display: flex;
     justify-content: center;
     gap: 20px;
-    padding-bottom: 80px;
+    padding-bottom: 30px;
     align-items: flex-start;
+}
+
+.services-view-all-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    padding-bottom: 70px;
+}
+
+.services-view-all-btn {
+    display: inline-block;
+    padding: 14px 38px;
+    background-color: #0fb9b1;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border: none;
+    border-radius: 99px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 10px 25px rgba(15, 185, 177, 0.3);
+}
+
+.services-view-all-btn:hover {
+    background-color: #0eaba3;
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(15, 185, 177, 0.4);
 }
 
 .service-card {
@@ -118,7 +148,12 @@
         flex-wrap: wrap;
         gap: 24px;
         align-items: stretch;
-        padding-bottom: 10px;
+        padding-bottom: 0px;
+    }
+
+    .services-view-all-wrapper {
+        margin-top: 40px;
+        padding-bottom: 40px;
     }
 
     .service-card {
@@ -129,7 +164,7 @@
 
 @media (max-width: 968px) {
     .services-section {
-        padding: 40px 30px 60px;
+        padding: 40px 30px 0px;
         /* margin-top: 410px; */
     }
 
@@ -150,7 +185,12 @@
 @media (max-width: 768px) {
     .services-grid {
         gap: 16px;
-        padding-bottom: 40px;
+        padding-bottom: 0px;
+    }
+
+    .services-view-all-wrapper {
+        margin-top: 36px;
+        padding-bottom: 36px;
     }
 
     .service-card {
@@ -166,7 +206,7 @@
 
 @media (max-width: 480px) {
     .services-section {
-        padding: 30px 16px 40px;
+        padding: 30px 16px 0px;
         /* margin-top: 245px; */
     }
 
@@ -185,7 +225,12 @@
 
     .services-grid {
         gap: 14px;
-        padding-bottom: 20px;
+        padding-bottom: 0px;
+    }
+
+    .services-view-all-wrapper {
+        margin-top: 36px;
+        padding-bottom: 36px;
     }
 
     .service-card {
