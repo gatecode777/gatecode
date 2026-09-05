@@ -4,7 +4,6 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
 <url>
@@ -62,7 +61,6 @@
   <lastmod>2026-07-28T12:00:57+00:00</lastmod>
   <priority>0.90</priority>
 </url>
-<!-- Web Development -->
 <url>
   <loc>https://gatecode.in/services/web-development</loc>
   <lastmod>2026-05-28T12:00:57+00:00</lastmod>
@@ -78,7 +76,6 @@
   <lastmod>2026-09-03T12:00:00+00:00</lastmod>
   <priority>0.70</priority>
 </url>
-<!-- Software Development -->
 <url>
   <loc>https://gatecode.in/services/software-development</loc>
   <lastmod>2026-05-28T12:00:57+00:00</lastmod>
@@ -99,7 +96,6 @@
   <lastmod>2026-09-03T12:00:00+00:00</lastmod>
   <priority>0.70</priority>
 </url>
-<!-- Mobile App Development -->
 <url>
   <loc>https://gatecode.in/services/mobile-app-development</loc>
   <lastmod>2026-05-28T12:00:57+00:00</lastmod>
@@ -110,7 +106,6 @@
   <lastmod>2026-09-03T12:00:00+00:00</lastmod>
   <priority>0.70</priority>
 </url>
-<!-- Graphic Design -->
 <url>
   <loc>https://gatecode.in/services/graphic-design</loc>
   <lastmod>2026-05-28T12:00:57+00:00</lastmod>
@@ -146,7 +141,6 @@
   <lastmod>2026-09-03T12:00:00+00:00</lastmod>
   <priority>0.70</priority>
 </url>
-<!-- Digital Marketing -->
 <url>
   <loc>https://gatecode.in/services/digital-marketing</loc>
   <lastmod>2026-05-28T12:00:57+00:00</lastmod>
@@ -197,7 +191,6 @@
   <lastmod>2026-09-03T12:00:00+00:00</lastmod>
   <priority>0.70</priority>
 </url>
-<!-- Data Management -->
 <url>
   <loc>https://gatecode.in/services/data-management</loc>
   <lastmod>2026-05-28T12:00:57+00:00</lastmod>
@@ -243,7 +236,6 @@
   <lastmod>2026-09-03T12:00:00+00:00</lastmod>
   <priority>0.70</priority>
 </url>
-<!-- UI/UX Design -->
 <url>
   <loc>https://gatecode.in/services/ui-ux-design</loc>
   <lastmod>2026-05-28T12:00:57+00:00</lastmod>
@@ -269,7 +261,6 @@
   <lastmod>2026-09-03T12:00:00+00:00</lastmod>
   <priority>0.70</priority>
 </url>
-<!-- BPO Services -->
 <url>
   <loc>https://gatecode.in/services/bpo-services</loc>
   <lastmod>2026-05-28T12:00:57+00:00</lastmod>
@@ -295,7 +286,6 @@
   <lastmod>2026-09-03T12:00:00+00:00</lastmod>
   <priority>0.70</priority>
 </url>
-<!-- Accounting -->
 <url>
   <loc>https://gatecode.in/services/accounting</loc>
   <lastmod>2026-05-28T12:00:57+00:00</lastmod>
