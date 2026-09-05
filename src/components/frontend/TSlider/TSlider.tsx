@@ -5,12 +5,12 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import './TSlider.css';
 
 const FALLBACK_MEMBERS = [
-  { _id: '1', name: "Rishab Singh", designation: "Graphic Designer", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&h=400&auto=format&fit=crop", stars: 5 },
-  { _id: '2', name: "Geeta Bisht", designation: "UI/UX Designer", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&h=400&auto=format&fit=crop", stars: 5 },
-  { _id: '3', name: "Balram Suman", designation: "Full Stack Developer", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=400&h=400&auto=format&fit=crop", stars: 5 },
-  { _id: '4', name: "Kanchan Meena", designation: "HR", image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400&h=400&auto=format&fit=crop", stars: 5 },
-  { _id: '5', name: "Arjun Sharma", designation: "Backend Developer", image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=400&h=400&auto=format&fit=crop", stars: 5 },
-  { _id: '6', name: "Priya Verma", designation: "Product Manager", image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&h=400&auto=format&fit=crop", stars: 5 },
+  { _id: '1', name: "Rishab Singh", designation: "Graphic Designer", image: "/images/team-rishab.webp", stars: 5 },
+  { _id: '2', name: "Geeta Bisht", designation: "UI/UX Designer", image: "/images/team-geeta.webp", stars: 5 },
+  { _id: '3', name: "Balram Suman", designation: "Full Stack Developer", image: "/images/team-balram.webp", stars: 5 },
+  { _id: '4', name: "Kanchan Meena", designation: "HR", image: "/images/team-kanchan.webp", stars: 5 },
+  { _id: '5', name: "Arjun Sharma", designation: "Backend Developer", image: "/images/team-arjun.webp", stars: 5 },
+  { _id: '6', name: "Priya Verma", designation: "Product Manager", image: "/images/team-priya.webp", stars: 5 },
 ];
 
 const INTERVAL = 2500;

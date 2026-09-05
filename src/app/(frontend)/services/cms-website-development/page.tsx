@@ -10,10 +10,16 @@ import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 const DigitalHero = () => {
   return (
     <section className="dm-hero">
-      <div
-        className="dm-hero-bg"
-        style={{ backgroundImage: `url('/images/Rectangle 228 (20).png')` }}
-      />
+      <div className="dm-hero-bg">
+        <Image
+          src="/images/Rectangle 228 (21).webp"
+          alt="Tailored website design agency offering custom CMS services"
+          fill
+          priority
+          sizes="100vw"
+          style={{ objectFit: 'cover', objectPosition: 'center' }}
+        />
+      </div>
       <div className="dm-container dm-hero-content">
         <div className="dm-hero-text-wrapper">
           <h1 className="dm-hero-title">
@@ -38,10 +44,10 @@ const DigitalAbout = () => {
     <section className="dm-about-section">
       <div className="dm-container">
         <p className="dm-about-text">
-          At Gatecode Technologies Pvt. Ltd., we provide CMS (Content Management System) website development services that give you full control 
-          over your website content without technical complexity. Our solutions are designed to be user-friendly, scalable, and secure—allowing 
-          you to update, manage, and expand your website effortlessly. Whether it's a business website, blog, or e-commerce platform, we build 
-          CMS-driven websites tailored to your needs and future growth.
+          At Gatecode Technologies Pvt. Ltd., we create WordPress websites based on the goals of your business, the content and the way you want your customers to engage with your website. Rather than depending solely on the pre-installed theme, we modify the design, functionality and website layout based on your specifications.
+        </p>
+        <p className="dm-about-text" style={{ marginTop: '16px' }}>
+          The main aspects of our WordPress development include mobile responsiveness, website speed, usability, security and effective content management. Whatever type of website you need such as a business site, blog, services website or e-commerce site, we deliver a practical solution of WordPress.
         </p>
       </div>
     </section>
@@ -112,12 +118,12 @@ const DigitalServices = () => {
 
 // ==================== DigitalWhyChoose Component (Updated for CMS Website Development) ====================
 const benefits = [
-  'Easy content management without technical skills',
-  'Cost-effective and scalable solutions',
-  'Quick updates and content publishing',
-  'SEO-friendly website structure',
-  'Secure and reliable platform',
-  'Customizable features and functionalities',
+  'Easy Content Management',
+  'SEO-Friendly Structure',
+  'Faster Content Updates',
+  'Secure & Reliable',
+  'Flexible & Scalable',
+  'Features That Fit Your Needs',
 ];
 
 const DigitalWhyChoose = () => {
@@ -125,11 +131,13 @@ const DigitalWhyChoose = () => {
     <section className="dm-why-choose-section">
       <div className="dm-container">
         <h2 className="dm-section-title dm-section-header-left">
-          Why Choose CMS Website Development
+          Why Choose CMS Website Development?
         </h2>
         <p className="dm-about-text dm-about-text-left">
-          CMS websites provide flexibility, ease of use, and scalability, making them ideal for businesses that want control over their digital content. 
-          Our CMS solutions are designed to simplify content management while ensuring high performance, security, and user experience.
+          A CMS website makes it easier to keep your website content updated without depending on a developer for every small change. You can manage pages, publish new content, and keep important information up to date as your business changes.
+        </p>
+        <p className="dm-about-text dm-about-text-left" style={{ marginTop: '16px' }}>
+          At Gatecode Technologies, we build CMS websites around your content needs and business requirements. We focus on making the website easy to manage, responsive, secure, and flexible, while keeping room for new pages, features, and future improvements.
         </p>
 
         <div className="dm-why-choose-layout">
@@ -146,7 +154,7 @@ const DigitalWhyChoose = () => {
 
           <div className="dm-why-choose-image">
             <Image
-              src="/images/path.png"
+              src="/images/path.webp"
               alt="CMS Website Development Lifecycle Diagram - Gatecode Technologies"
               className="dm-path-illustration"
               width={500}
@@ -237,11 +245,11 @@ const DigitalIndustries = () => {
           </div>
 
           <div className="dm-image-grid">
-            <Image src="/images/1.jpg" alt="E-Commerce CMS Platforms - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
-            <Image src="/images/2.jpg" alt="Education and E-Learning Portal CMS - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
-            <Image src="/images/3.jpg" alt="Corporate Business CMS Solutions - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
-            <Image src="/images/4.jpg" alt="Media and Blogging Website CMS - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
-            <Image src="/images/5.jpg" alt="Healthcare and Medical Info CMS - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
+            <Image src="/images/1.webp" alt="E-Commerce CMS Platforms - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
+            <Image src="/images/2.webp" alt="Education and E-Learning Portal CMS - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
+            <Image src="/images/3.webp" alt="Corporate Business CMS Solutions - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
+            <Image src="/images/4.webp" alt="Media and Blogging Website CMS - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
+            <Image src="/images/5.webp" alt="Healthcare and Medical Info CMS - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
           </div>
         </div>
       </div>

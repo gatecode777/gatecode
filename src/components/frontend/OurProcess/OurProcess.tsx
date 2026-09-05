@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import './OurProcess.css';
 import { FiBarChart2, FiCpu, FiClipboard, FiTrendingUp } from 'react-icons/fi';
 
@@ -7,9 +8,12 @@ const OurProcess = () => {
   return (
     <section className="our-process-section">
       <div className="core-values__bg">
-        <img
-          src="https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?w=1600&h=700&fit=crop"
+        <Image
+          src="/images/our-process-bg.webp"
           alt="Gatecode Technologies Core Values and Business Processing Timeline Background"
+          fill
+          sizes="100vw"
+          style={{ objectFit: 'cover' }}
         />
         <div className="core-values__overlay" />
       </div>

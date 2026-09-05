@@ -1,7 +1,8 @@
 // @ts-nocheck
 'use client';
 
-import {  useState, useEffect, useRef  } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 import './ProcessStack.css';
 
 const ProcessStack = () => {
@@ -19,32 +20,32 @@ const ProcessStack = () => {
       title: "Consultation",
       description:
         "We begin by understanding your business goals, challenges, and requirements to create a clear and effective strategy.",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
+      image: "/images/Consultation.webp",
+      alt: "Business consultation services for strategic growth",
     },
 
     {
       title: "Analysis",
       description:
         "Our team conducts in-depth analysis to identify opportunities, optimize processes, and design the best possible solution.",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
+      image: "/images/Analysis.webp",
+      alt: "Business analysis services and data insights",
     },
 
     {
       title: "Execution",
       description:
         "We implement the planned strategy using proven methods and technologies to deliver efficient and measurable results.",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
+      image: "/images/Execution.webp",
+      alt: "Business strategy execution and project management team",
     },
 
     {
       title: "Support",
       description:
         "We provide continuous support and maintenance to ensure smooth operations and long-term success.",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
+      image: "/images/Support.webp",
+      alt: "IT support services and customer assistance team",
     },
   ];
 
@@ -331,10 +332,14 @@ const ProcessStack = () => {
               </div>
 
               <div className="process-flow-card-image-wrapper">
-                <img
+                <Image
                   src={step.image}
-                  alt={`${step.title} Stage - Gatecode Technologies Workflow`}
+                  alt={step.alt}
                   className="process-flow-card-image"
+                  width={600}
+                  height={400}
+                  sizes="(max-width: 768px) 100vw, 600px"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
               </div>
             </div>

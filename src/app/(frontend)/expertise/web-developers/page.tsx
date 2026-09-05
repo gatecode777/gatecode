@@ -43,7 +43,7 @@ const HeroSectionWD = () => {
     return (
         <section
             className="wd-hero-section"
-            style={{ backgroundImage: 'url("/images/Rectangle 305.jpg")' }}
+            style={{ backgroundImage: 'url("/images/Rectangle 305.webp")' }}
         >
             <div className="wd-hero-overlay"></div>
 
@@ -68,7 +68,7 @@ const HeroSectionWD = () => {
 
                 <div className="wd-hero-right">
                     <Image
-                        src="/images/Rectangle 305.jpg"
+                        src="/images/Rectangle 305.webp"
                         alt="Custom Website Development Services by Gatecode Technologies"
                         width={500}
                         height={400}
@@ -95,42 +95,42 @@ const IntroText = () => {
 // ==================== WhatWeOffer Component ====================
 const services = [
     {
-        icon: "/images/icon1.png",
+        icon: "/images/icon1.webp",
         title: "Custom Website Development",
         description: "Fully customized websites designed according to your brand and business needs.",
     },
     {
-        icon: "/images/icon2.png",
+        icon: "/images/icon2.webp",
         title: "Responsive Web Design",
         description: "Mobile-friendly and device-optimized websites for better user experience.",
     },
     {
-        icon: "/images/icon3.png",
+        icon: "/images/icon3.webp",
         title: "E-Commerce Development",
         description: "Complete online store solutions with secure payments and smooth user journey.",
     },
     {
-        icon: "/images/icon4.png",
+        icon: "/images/icon4.webp",
         title: "CMS Development",
         description: "Easy-to-manage websites using platforms like WordPress.",
     },
     {
-        icon: "/images/icon5.png",
+        icon: "/images/icon5.webp",
         title: "Website Redesign",
         description: "Upgrade your existing website with a modern and professional look.",
     },
     {
-        icon: "/images/icon6.png",
+        icon: "/images/icon6.webp",
         title: "Web Application Development",
         description: "Custom web apps built for performance, scalability, and efficiency.",
     },
     {
-        icon: "/images/icon7.png",
+        icon: "/images/icon7.webp",
         title: "SEO Friendly Development",
         description: "Optimized website structure to rank better on search engines.",
     },
     {
-        icon: "/images/icon8.png",
+        icon: "/images/icon8.webp",
         title: "Speed Optimization",
         description: "Fast-loading websites to reduce bounce rate and improve user experience.",
     },
@@ -192,27 +192,27 @@ const WhatWeOffer = () => {
 // ==================== WhyChoose Component ====================
 const chooseData = [
     {
-        image: "/images/img1.jpg",
+        image: "/images/img1.webp",
         title: "Technical Expertise & Innovation",
     },
     {
-        image: "/images/img2.jpg",
+        image: "/images/img2.webp",
         title: "Client-Centric Solutions",
     },
     {
-        image: "/images/img3.jpg",
+        image: "/images/img3.webp",
         title: "Agile Development Process",
     },
     {
-        image: "/images/img4.jpg",
+        image: "/images/img4.webp",
         title: "Quality Assurance & Testing",
     },
     {
-        image: "/images/img5.jpg",
+        image: "/images/img5.webp",
         title: "On-Time Delivery",
     },
     {
-        image: "/images/img6.jpg",
+        image: "/images/img6.webp",
         title: "Support & Maintenance",
     },
 ];
@@ -321,7 +321,7 @@ const DevelopmentProcess = () => {
                     <video
                         className="dev-video-desktop"
                         src="/videos/expertise_video.mp4"
-                        poster="/images/2.jpg"
+                        poster="/images/2.webp"
                         autoPlay
                         loop
                         muted
@@ -331,7 +331,7 @@ const DevelopmentProcess = () => {
                     <video
                         className="dev-video-mobile"
                         src="/videos/1st.mp4"
-                        poster="/images/2.jpg"
+                        poster="/images/2.webp"
                         autoPlay
                         loop
                         muted
@@ -571,8 +571,8 @@ const WebDevelopmentPage = () => {
         name: 'Gatecode Technologies Web Development Process',
         description: 'Watch our 6-step agile web development process covering Research & Strategy, UI/UX Design, Development, Testing, Launch, and Support at Gatecode Technologies.',
         thumbnailUrl: [
-            'https://gatecode.in/images/2.jpg',
-            'https://gatecode.in/images/digitalbg1.png',
+            'https://gatecode.in/images/2.webp',
+            'https://gatecode.in/images/digitalbg1.webp',
         ],
         uploadDate: '2026-01-15T08:00:00+05:30',
         contentUrl: 'https://gatecode.in/videos/expertise_video.mp4',

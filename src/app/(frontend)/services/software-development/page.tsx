@@ -12,7 +12,7 @@ const DigitalHero = () => {
     <section className="dm-hero">
       <div
         className="dm-hero-bg"
-        style={{ backgroundImage: `url('/images/Rectangle 228 (4).png')` }}
+        style={{ backgroundImage: `url('/images/Rectangle 228 (4).webp')` }}
       />
       <div className="dm-container dm-hero-content">
         <div className="dm-hero-text-wrapper">
@@ -38,10 +38,10 @@ const DigitalAbout = () => {
     <section className="dm-about-section">
       <div className="dm-container">
         <p className="dm-about-text">
-          At Gatecode Technologies Pvt. Ltd., we develop innovative software solutions tailored to modern business requirements. 
-          Our team focuses on creating reliable, scalable, and user-friendly software that simplifies complex operations and improves 
-          productivity. From custom business applications to enterprise software and automation systems, we combine advanced technology 
-          with strategic development approaches to deliver high-quality digital solutions that support long-term business success.
+          At Gatecode Technologies Pvt. Ltd., we develop software around the way your business actually works. We first understand your processes, challenges, users, and goals before deciding how the solution should be built. This helps us avoid unnecessary features and focus on functionality that is useful for your team and customers.
+        </p>
+        <p className="dm-about-text" style={{ marginTop: '16px' }}>
+          From custom business software and web applications to enterprise solutions and automation systems, we build solutions that can simplify routine tasks, organize information, and improve day-to-day operations. Our focus is on creating software that is reliable, easy to use, secure, and flexible enough to adapt as your business grows.
         </p>
       </div>
     </section>
@@ -112,12 +112,12 @@ const DigitalServices = () => {
 
 // ==================== DigitalWhyChoose Component (Updated for Software Development Services) ====================
 const benefits = [
-  'Custom and scalable software solutions',
-  'Secure and high-performance applications',
-  'Automation-driven workflow optimization',
-  'User-friendly and modern interfaces',
-  'Continuous support and maintenance',
-  'Future-ready technology solutions',
+  'Software Built Around Your Needs',
+  'Simpler Business Workflows',
+  'Scalable as Your Business Grows',
+  'Easy-to-Use Interfaces',
+  'Secure & Reliable Functionality',
+  'Ongoing Maintenance & Support',
 ];
 
 const DigitalWhyChoose = () => {
@@ -125,12 +125,13 @@ const DigitalWhyChoose = () => {
     <section className="dm-why-choose-section">
       <div className="dm-container">
         <h2 className="dm-section-title dm-section-header-left">
-          Why Choose Our Software Development Services
+          Why Choose Our Software Development Services?
         </h2>
         <p className="dm-about-text dm-about-text-left">
-          We combine modern technologies, strategic planning, and user-focused development approaches to deliver software solutions that are 
-          secure, scalable, and future-ready. Our team works closely with clients to understand business challenges and create customized 
-          solutions that improve productivity, optimize operations, and support digital transformation.
+          Choosing the right software development partner is about more than just writing code. You need a solution that fits your business processes, is easy for your team to use, and can adapt as your requirements change.
+        </p>
+        <p className="dm-about-text dm-about-text-left" style={{ marginTop: '16px' }}>
+          At Gatecode Technologies, we first understand the problem you're trying to solve and then plan the software around your actual requirements. Our approach focuses on reliable functionality, security, performance, usability, and long-term maintainability rather than adding features that you don't really need.
         </p>
 
         <div className="dm-why-choose-layout">
@@ -147,7 +148,7 @@ const DigitalWhyChoose = () => {
 
           <div className="dm-why-choose-image">
             <Image
-              src="/images/path.png"
+              src="/images/path.webp"
               alt="Custom Software Development Services Roadmap - Gatecode Technologies"
               className="dm-path-illustration"
               width={500}
@@ -238,11 +239,11 @@ const DigitalIndustries = () => {
           </div>
 
           <div className="dm-image-grid">
-            <Image src="/images/1.jpg" alt="Finance and Banking Software Solutions - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
-            <Image src="/images/2.jpg" alt="E-Commerce and Retail Platform Management - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
-            <Image src="/images/3.jpg" alt="Corporate Enterprise ERP and Workflow Systems - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
-            <Image src="/images/4.jpg" alt="Logistics and Supply Chain Software - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
-            <Image src="/images/5.jpg" alt="Healthcare and Medical Care Applications - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
+            <Image src="/images/1.webp" alt="Finance and Banking Software Solutions - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
+            <Image src="/images/2.webp" alt="E-Commerce and Retail Platform Management - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
+            <Image src="/images/3.webp" alt="Corporate Enterprise ERP and Workflow Systems - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
+            <Image src="/images/4.webp" alt="Logistics and Supply Chain Software - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
+            <Image src="/images/5.webp" alt="Healthcare and Medical Care Applications - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
           </div>
         </div>
       </div>

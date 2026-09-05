@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import './AboutIntro.css';
 
 const AboutIntro = () => {
@@ -42,10 +43,14 @@ const AboutIntro = () => {
           </div>
 
           <div className="about-intro__visual">
-            <img
-              src="/images/who_we_are.png"
+            <Image
+              src="/images/who_we_are.webp"
               alt="Gatecode Technologies Business and IT Solutions Overview"
               className="about-intro__illustration"
+              width={500}
+              height={400}
+              sizes="(max-width: 768px) 100vw, 500px"
+              style={{ width: '100%', height: 'auto' }}
             />
           </div>
         </div>

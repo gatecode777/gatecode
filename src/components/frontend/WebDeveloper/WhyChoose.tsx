@@ -1,32 +1,33 @@
 // @ts-nocheck
 'use client';
 
-import {  useEffect, useRef  } from 'react';
+import { useEffect, useRef } from 'react';
+import Image from 'next/image';
 import "./WhyChoose.css";
 
 const chooseData = [
   {
-    image: "/images/img1.jpg",
+    image: "/images/img1.webp",
     title: "Technical Expertise & Innovation",
   },
   {
-    image: "/images/img2.jpg",
+    image: "/images/img2.webp",
     title: "Client-Centric Solutions",
   },
   {
-    image: "/images/img3.jpg",
+    image: "/images/img3.webp",
     title: "Agile Development Process",
   },
   {
-    image: "/images/img4.jpg",
+    image: "/images/img4.webp",
     title: "Quality Assurance & Testing",
   },
   {
-    image: "/images/img5.jpg",
+    image: "/images/img5.webp",
     title: "On-Time Delivery",
   },
   {
-    image: "/images/img6.jpg",
+    image: "/images/img6.webp",
     title: "Support & Maintenance",
   },
 ];
@@ -71,7 +72,13 @@ const WhyChoose = () => {
               style={{ transitionDelay: `${index * 0.15}s` }}
             >
               <div className="why-card-image">
-                <img src={item.image} alt={item.title} />
+                <Image 
+                  src={item.image} 
+                  alt={item.title} 
+                  fill 
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px" 
+                  style={{ objectFit: 'cover' }} 
+                />
                 <div className="why-card-overlay" />
               </div>
               <div className="why-card-content">

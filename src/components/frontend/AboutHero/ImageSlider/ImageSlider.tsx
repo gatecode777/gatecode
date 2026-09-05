@@ -1,19 +1,29 @@
-// @ts-nocheck
 'use client';
 
 import { useState, useEffect } from 'react';
 import './ImageSlider.css';
 
-import img1 from '../../assets/image1.png';
-import img2 from '../../assets/image2.png';
-import img3 from '../../assets/image3.png';
-import img4 from '../../assets/image4.png';
-
 const slides = [
-  { src: img1, text: 'Client-Centric Approach' },
-  { src: img2, text: 'Experienced Team' },
-  { src: img3, text: 'End-to-End Product Engineering' },
-  { src: img4, text: 'Multi-Domain Expertise' },
+  {
+    src: '/images/image1.webp',
+    text: 'Client-Centric Approach',
+    alt: 'Consultant showing client-centric mindset while having business discussion',
+  },
+  {
+    src: '/images/image2.webp',
+    text: 'Experienced Team',
+    alt: 'IT experts working together in office using laptop',
+  },
+  {
+    src: '/images/image3.webp',
+    text: 'End-to-End Product Engineering',
+    alt: 'Precision automated machines demonstrating end-to-end product engineering cycle',
+  },
+  {
+    src: '/images/image4.webp',
+    text: 'Multi-Domain Expertise',
+    alt: 'IT specialist exhibiting cross-domain knowledge via global digital technology network',
+  },
 ];
 
 const ImageSlider = () => {
@@ -94,8 +104,8 @@ const ImageSlider = () => {
               >
                 <div className="panorama-image-wrapper">
                   <img
-                    src={slide.src.src || slide.src}
-                    alt={slide.text}
+                    src={slide.src}
+                    alt={slide.alt}
                     loading="lazy"
                   />
                   <div className="panorama-text-overlay">

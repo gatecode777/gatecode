@@ -1,6 +1,7 @@
 'use client';
 
 import React from "react";
+import Image from "next/image";
 import "./FeaturesResults.css";
 
 const FeaturesResults = () => {
@@ -35,7 +36,14 @@ const FeaturesResults = () => {
         </div>
 
         <div className="box">
-          <img src="/images/homepage.jpeg" alt="Damru By Namo Restaurant Homepage Design - Gatecode Technologies" />
+          <Image 
+            src="/images/homepage.webp" 
+            alt="Damru By Namo Restaurant Homepage Design - Gatecode Technologies" 
+            width={380} 
+            height={2000} 
+            sizes="(max-width: 768px) 320px, 380px" 
+            style={{ width: '100%', height: 'auto', display: 'block' }} 
+          />
         </div>
 
       </div>

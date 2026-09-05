@@ -6,7 +6,10 @@ export const metadata: Metadata = {
   title: "Gatecode Technologies",
   description: "Empowering businesses with technology driven solutions.",
   icons: {
-    icon: [{ url: "/images/favicon.png", type: "image/png" }],
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/images/favicon.png", type: "image/png" },
+    ],
     apple: "/images/favicon.png",
   },
 };
@@ -22,12 +25,12 @@ export default function RootLayout({
         {/* Load Google Tag Manager Script */}
         <Script
           id="gtm-script"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           src="https://www.googletagmanager.com/gtm.js?id=GTM-PSVZ559Q"
         />
 
         {/* Initialize GTM Data Layer */}
-        <Script id="gtm-init" strategy="afterInteractive">
+        <Script id="gtm-init" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({

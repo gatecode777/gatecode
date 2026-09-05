@@ -1,54 +1,55 @@
 // @ts-nocheck
 'use client';
 
-import {  useEffect, useRef  } from 'react';
+import { useEffect, useRef } from 'react';
+import Image from 'next/image';
 import "./WhatWeOffer.css";
 
 const services = [
   {
-    icon: "/images/icon1.png",
+    icon: "/images/icon1.webp",
     title: "Custom Website Development",
     description:
       "Fully customized websites designed according to your brand and business needs.",
   },
   {
-    icon: "/images/icon2.png",
+    icon: "/images/icon2.webp",
     title: "Responsive Web Design",
     description:
       "Mobile-friendly and device-optimized websites for better user experience.",
   },
   {
-    icon: "/images/icon3.png",
+    icon: "/images/icon3.webp",
     title: "E-Commerce Development",
     description:
       "Complete online store solutions with secure payments and smooth user journey.",
   },
   {
-    icon: "/images/icon4.png",
+    icon: "/images/icon4.webp",
     title: "CMS Development",
     description:
       "Easy-to-manage websites using platforms like WordPress.",
   },
   {
-    icon: "/images/icon5.png",
+    icon: "/images/icon5.webp",
     title: "Website Redesign",
     description:
       "Upgrade your existing website with a modern and professional look.",
   },
   {
-    icon: "/images/icon6.png",
+    icon: "/images/icon6.webp",
     title: "Web Application Development",
     description:
       "Custom web apps built for performance, scalability, and efficiency.",
   },
   {
-    icon: "/images/icon7.png",
+    icon: "/images/icon7.webp",
     title: "SEO Friendly Development",
     description:
       "Optimized website structure to rank better on search engines.",
   },
   {
-    icon: "/images/icon8.png",
+    icon: "/images/icon8.webp",
     title: "Speed Optimization",
     description:
       "Fast-loading websites to reduce bounce rate and improve user experience.",
@@ -94,7 +95,13 @@ const WhatWeOffer = () => {
               style={{ transitionDelay: `${index * 0.1}s` }}
             >
               <div className="offer-icon">
-                <img src={service.icon} alt={service.title} />
+                <Image 
+                  src={service.icon} 
+                  alt={service.title} 
+                  width={80} 
+                  height={80} 
+                  style={{ width: '100%', height: '100%', objectFit: 'contain' }} 
+                />
               </div>
 
               <h3>{service.title}</h3>

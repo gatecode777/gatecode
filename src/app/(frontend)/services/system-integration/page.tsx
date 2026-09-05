@@ -12,7 +12,7 @@ const DigitalHero = () => {
     <section className="dm-hero">
       <div
         className="dm-hero-bg"
-        style={{ backgroundImage: `url('/images/Rectangle 228 (6).png')` }}
+        style={{ backgroundImage: `url('/images/Rectangle 228 (6).webp')` }}
       />
       <div className="dm-container dm-hero-content">
         <div className="dm-hero-text-wrapper">
@@ -38,10 +38,10 @@ const DigitalAbout = () => {
     <section className="dm-about-section">
       <div className="dm-container">
         <p className="dm-about-text">
-          At Gatecode Technologies Pvt. Ltd., we specialize in custom development and system integration services designed to align with 
-          your unique business processes. Our solutions focus on creating scalable, secure, and high-performance applications while ensuring 
-          seamless integration between different platforms, tools, and technologies. Whether it's building custom software from scratch or 
-          connecting existing systems, we help businesses streamline operations, reduce complexity, and enhance productivity.
+          At Gatecode Technologies Pvt. Ltd., we build custom software and system integration solutions around the way your business actually works. We first understand your processes, challenges, and goals before choosing the right technology or development approach.
+        </p>
+        <p className="dm-about-text" style={{ marginTop: '16px' }}>
+          Our team focuses on creating secure, scalable, and reliable software that can work smoothly with your existing tools and platforms. Whether you need a custom application, API integration, or help connecting different business systems, we aim to make your operations simpler, more efficient, and easier to manage.
         </p>
       </div>
     </section>
@@ -112,11 +112,11 @@ const DigitalServices = () => {
 
 // ==================== DigitalWhyChoose Component (Updated for Custom Development & System Integration) ====================
 const benefits = [
-  'Tailored solutions for specific business needs',
-  'Seamless connectivity between systems',
-  'Improved operational efficiency',
-  'Reduced manual processes and errors',
-  'Scalable and future-ready architecture',
+  'Solutions built around your requirements',
+  'Better connectivity between systems',
+  'Less manual work and fewer errors',
+  'Improved performance and efficiency',
+  'Scalable and maintainable architecture',
   'Secure and reliable integrations',
 ];
 
@@ -125,11 +125,13 @@ const DigitalWhyChoose = () => {
     <section className="dm-why-choose-section">
       <div className="dm-container">
         <h2 className="dm-section-title dm-section-header-left">
-          Why Choose Custom Development & Integration
+          Why Choose Our Custom Development & Integration Services?
         </h2>
         <p className="dm-about-text dm-about-text-left">
-          Every business has unique processes and system requirements. Our custom development and integration services ensure that your 
-          software ecosystem works seamlessly together, improving efficiency, reducing manual effort, and enhancing overall productivity.
+          Every project has different requirements, existing tools, and technical challenges. Our custom development and integration services are designed to work with your specific setup—whether you’re building something new, improving an existing application, or connecting multiple systems.
+        </p>
+        <p className="dm-about-text dm-about-text-left" style={{ marginTop: '16px' }}>
+          We focus on practical solutions that make technology easier to manage and use. From planning and development to API integration and system connectivity, we work closely with you to understand the requirements, choose the right approach, and build solutions that are reliable, secure, scalable, and easy to maintain.
         </p>
 
         <div className="dm-why-choose-layout">
@@ -146,7 +148,7 @@ const DigitalWhyChoose = () => {
 
           <div className="dm-why-choose-image">
             <Image
-              src="/images/path.png"
+              src="/images/path.webp"
               alt="Custom Development and System Integration Flowchart - Gatecode Technologies"
               className="dm-path-illustration"
               width={500}
@@ -237,11 +239,11 @@ const DigitalIndustries = () => {
           </div>
 
           <div className="dm-image-grid">
-            <Image src="/images/1.jpg" alt="E-Commerce and Retail API Integrations - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
-            <Image src="/images/2.jpg" alt="Healthcare Systems Interface Integration - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
-            <Image src="/images/3.jpg" alt="Education Portal and LMS Integrations - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
-            <Image src="/images/4.jpg" alt="Corporate Enterprise Database Connections - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
-            <Image src="/images/5.jpg" alt="Finance and Accounting Platform Integration - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
+            <Image src="/images/1.webp" alt="E-Commerce and Retail API Integrations - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
+            <Image src="/images/2.webp" alt="Healthcare Systems Interface Integration - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
+            <Image src="/images/3.webp" alt="Education Portal and LMS Integrations - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
+            <Image src="/images/4.webp" alt="Corporate Enterprise Database Connections - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
+            <Image src="/images/5.webp" alt="Finance and Accounting Platform Integration - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
           </div>
         </div>
       </div>

@@ -126,7 +126,7 @@ const About = () => {
     name: 'Gatecode Technologies Pvt. Ltd.',
     alternateName: 'Gatecode Technologies',
     url: 'https://gatecode.in',
-    logo: 'https://gatecode.in/images/logo.png',
+    logo: 'https://gatecode.in/images/logo.webp',
     description: 'Gatecode Technologies Pvt. Ltd. is a top IT company in India specializing in custom software development, mobile apps, web development, BPO, and digital marketing.',
     sameAs: [
       'https://www.linkedin.com/company/gatecode-technologies',

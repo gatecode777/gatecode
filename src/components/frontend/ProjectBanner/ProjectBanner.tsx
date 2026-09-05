@@ -11,7 +11,7 @@ const ProjectBanner = ({ title, subtitle, bgImage }) => {
   return (
     <section
       className="project-banner"
-      style={{ backgroundImage: "url('https://ik.imagekit.io/zp0tch54w/GATECODE%20IMAGES/Rectangle%2080%20(1).png')" }}
+      style={{ backgroundImage: "url('/images/rectangle-80.webp')" }}
     >
       <div className="project-banner__overlay"></div>
       <div className="project-banner__content">

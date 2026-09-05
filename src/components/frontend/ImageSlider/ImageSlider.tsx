@@ -1,13 +1,30 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import './ImageSlider.css';
 
 const slides = [
-  { src: '/images/image1.png', text: 'Client-Centric Approach' },
-  { src: '/images/image2.png', text: 'Experienced Team' },
-  { src: '/images/image3.png', text: 'End-to-End Product Engineering' },
-  { src: '/images/image4.png', text: 'Multi-Domain Expertise' },
+  {
+    src: '/images/image1.webp',
+    text: 'Client-Centric Approach',
+    alt: 'Consultant showing client-centric mindset while having business discussion',
+  },
+  {
+    src: '/images/image2.webp',
+    text: 'Experienced Team',
+    alt: 'IT experts working together in office using laptop',
+  },
+  {
+    src: '/images/image3.webp',
+    text: 'End-to-End Product Engineering',
+    alt: 'Precision automated machines demonstrating end-to-end product engineering cycle',
+  },
+  {
+    src: '/images/image4.webp',
+    text: 'Multi-Domain Expertise',
+    alt: 'IT specialist exhibiting cross-domain knowledge via global digital technology network',
+  },
 ];
 
 const ImageSlider = () => {
@@ -87,10 +104,13 @@ const ImageSlider = () => {
                 onClick={() => setActiveIndex(index)}
               >
                 <div className="panorama-image-wrapper">
-                  <img
+                  <Image
                     src={slide.src}
-                    alt={`${slide.text} - Gatecode Technologies`}
-                    loading="lazy"
+                    alt={slide.alt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 420px"
+                    priority={index === 0}
+                    style={{ objectFit: 'cover' }}
                   />
                   <div className="panorama-text-overlay">
                     <h3 className="panorama-overlay-text">{slide.text}</h3>

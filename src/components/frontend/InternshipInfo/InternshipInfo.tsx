@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import './InternshipInfo.css';
 
 const InternshipInfo = () => {
@@ -34,7 +35,13 @@ const InternshipInfo = () => {
             </ul>
           </div>
           <div className="benefits-image">
-            <img src="/images/bird_img.png" alt="Professional IT and Software Internship Benefits - Gatecode Technologies" />
+            <Image 
+              src="/images/bird_img.webp" 
+              alt="Professional IT and Software Internship Benefits - Gatecode Technologies" 
+              width={280} 
+              height={280} 
+              style={{ width: '100%', height: 'auto' }}
+            />
           </div>
         </div>
       </div>

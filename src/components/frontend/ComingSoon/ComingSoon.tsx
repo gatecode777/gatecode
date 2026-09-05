@@ -7,7 +7,7 @@ function ComingSoon({ category }: { category?: string }) {
     <div className="coming-soon">
       <div className="coming-soon__icon-wrapper">
         <img
-          src="/images/coming-soon-icon.jpg"
+          src="/images/coming-soon-icon.webp"
           alt="Coming Soon"
           className="coming-soon__icon"
         />

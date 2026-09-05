@@ -50,7 +50,7 @@ function SectionHero({ data, title, shortDesc }) {
         </div>
         {banner && (
           <div className="case-image">
-            <img src='/images/Background_img.jpg' alt={heading} />
+            <img src='/images/Background_img.webp' alt={heading} />
           </div>
         )}
       </div>
@@ -265,7 +265,7 @@ function renderBlocks(blocks, study) {
           key={i}
           featuresBlock={block}
           resultsBlock={resultsBlock}
-          imageUrl={imgBlock?.data?.url || '/images/homepage.jpeg'}
+          imageUrl={imgBlock?.data?.url || '/images/homepage.webp'}
         />
       );
       continue;
@@ -274,7 +274,7 @@ function renderBlocks(blocks, study) {
     if (block.type === 'results' && !consumed.has(i)) {
       consumed.add(i);
       sections.push(
-        <SectionFeaturesResults key={i} featuresBlock={null} resultsBlock={block} imageUrl={'/images/homepage.jpeg'} />
+        <SectionFeaturesResults key={i} featuresBlock={null} resultsBlock={block} imageUrl={'/images/homepage.webp'} />
       );
       continue;
     }

@@ -12,8 +12,8 @@ function fmtDate(iso) {
 const BlogCard = ({ post }) => {
   const catName      = post.categoryId?.name  || post.category  || '';
   const authorName   = post.authorName        || post.author    || 'Admin';
-  const authorImg    = post.authorImage       || post.authorImg || '/images/user-pro.png';
-  const coverImg     = post.coverImage        || post.image     || '/images/blog-default.jpg';
+  const authorImg    = post.authorImage       || post.authorImg || '/images/user-pro.webp';
+  const coverImg     = post.coverImage        || post.image     || '/images/blog-default.webp';
   const dateStr      = post.publishedAt ? fmtDate(post.publishedAt) : (post.date || '');
   const commentCount = post.commentCount !== undefined ? post.commentCount : (post.comments || '0');
   const slug         = post.slug              || '';
@@ -21,13 +21,13 @@ const BlogCard = ({ post }) => {
   return (
     <div className="blog-card">
       <div className="card-image-wrapper">
-        <img src={coverImg} alt={post.title} className="card-image" loading="lazy" />
+        <img src={coverImg} alt={post.title} className="card-image" width={400} height={250} loading="lazy" />
         <div className="card-category">{catName}</div>
       </div>
 
       <div className="card-body">
         <div className="card-author">
-          <img src={authorImg} alt={authorName} className="author-img" loading="lazy" />
+          <img src={authorImg} alt={authorName} className="author-img" width={40} height={40} loading="lazy" />
           <div className="author-infoo">
             <span className="author-namee">{authorName}</span>
             <div className="card-meta">

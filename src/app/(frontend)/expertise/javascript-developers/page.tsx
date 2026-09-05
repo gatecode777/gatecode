@@ -35,7 +35,7 @@ const HeroSectionWD = () => {
     return (
         <section
             className="wd-hero-section"
-            style={{ backgroundImage: 'url("/images/Rectangle 305.jpg")' }}
+            style={{ backgroundImage: 'url("/images/Rectangle 305.webp")' }}
         >
             <div className="wd-hero-overlay"></div>
 
@@ -59,7 +59,7 @@ const HeroSectionWD = () => {
 
                 <div className="wd-hero-right">
                     <Image
-                        src="/images/Rectangle 305.jpg"
+                        src="/images/Rectangle 305.webp"
                         alt="Custom Full Stack JavaScript Development by Gatecode Technologies"
                         width={500}
                         height={400}
@@ -86,42 +86,42 @@ const IntroText = () => {
 // ==================== WhatWeOffer Component (Updated for JavaScript Developer) ====================
 const services = [
     {
-        icon: "/images/icon1.png",
+        icon: "/images/icon1.webp",
         title: "Custom JavaScript Development",
         description: "Building tailored web solutions using JavaScript for unique business requirements.",
     },
     {
-        icon: "/images/icon2.png",
+        icon: "/images/icon2.webp",
         title: "Frontend Development",
         description: "Creating interactive and responsive user interfaces for seamless user experience.",
     },
     {
-        icon: "/images/icon3.png",
+        icon: "/images/icon3.webp",
         title: "Single Page Applications (SPA)",
         description: "Fast and dynamic applications that provide smooth and app-like user experiences.",
     },
     {
-        icon: "/images/icon4.png",
+        icon: "/images/icon4.webp",
         title: "Website Optimization",
         description: "Improving speed, performance, and responsiveness of websites.",
     },
     {
-        icon: "/images/icon5.png",
+        icon: "/images/icon5.webp",
         title: "Web Application Development",
         description: "Developing scalable and high-performance web applications.",
     },
     {
-        icon: "/images/icon6.png",
+        icon: "/images/icon6.webp",
         title: "API Integration",
         description: "Connecting applications with third-party services for enhanced functionality.",
     },
     {
-        icon: "/images/icon7.png",
+        icon: "/images/icon7.webp",
         title: "JavaScript Framework Development",
         description: "Using modern frameworks to build efficient and scalable applications.",
     },
     {
-        icon: "/images/icon8.png",
+        icon: "/images/icon8.webp",
         title: "Maintenance & Support",
         description: "Ongoing updates and support for smooth performance.",
     },
@@ -183,27 +183,27 @@ const WhatWeOffer = () => {
 // ==================== WhyChoose Component (Updated for JavaScript Developer) ====================
 const chooseData = [
     {
-        image: "/images/img1.jpg",
+        image: "/images/img1.webp",
         title: "Web Application Development",
     },
     {
-        image: "/images/img2.jpg",
+        image: "/images/img2.webp",
         title: "API Integration",
     },
     {
-        image: "/images/img3.jpg",
+        image: "/images/img3.webp",
         title: "JavaScript Framework Development",
     },
     {
-        image: "/images/img4.jpg",
+        image: "/images/img4.webp",
         title: "Maintenance & Support",
     },
     {
-        image: "/images/img5.jpg",
+        image: "/images/img5.webp",
         title: "On-Time Project Delivery",
     },
     {
-        image: "/images/img6.jpg",
+        image: "/images/img6.webp",
         title: "Dedicated Support",
     },
 ];
@@ -278,7 +278,7 @@ const DevelopmentProcess = () => {
                     <video
                         className="dev-video-desktop"
                         src="/videos/expertise_video.mp4"
-                        poster="/images/2.jpg"
+                        poster="/images/2.webp"
                         autoPlay
                         loop
                         muted
@@ -288,7 +288,7 @@ const DevelopmentProcess = () => {
                     <video
                         className="dev-video-mobile"
                         src="/videos/1st.mp4"
-                        poster="/images/2.jpg"
+                        poster="/images/2.webp"
                         autoPlay
                         loop
                         muted
@@ -461,8 +461,8 @@ const JavaScriptDeveloperPage = () => {
         name: 'Gatecode Technologies JavaScript Development Process',
         description: 'Watch our 6-step agile JavaScript development process covering Research & Strategy, UI/UX Design, Development, Testing, Launch, and Support at Gatecode Technologies.',
         thumbnailUrl: [
-            'https://gatecode.in/images/2.jpg',
-            'https://gatecode.in/images/digitalbg1.png',
+            'https://gatecode.in/images/2.webp',
+            'https://gatecode.in/images/digitalbg1.webp',
         ],
         uploadDate: '2026-01-15T08:00:00+05:30',
         contentUrl: 'https://gatecode.in/videos/expertise_video.mp4',

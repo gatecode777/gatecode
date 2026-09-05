@@ -4,12 +4,12 @@ import Link from 'next/link';
 import "./HeroSectionWD.css";
 
 const HeroSectionWD = () => {
-  const heroImage = "/images/Rectangle 305.jpg";
+  const heroImage = "/images/Rectangle 305.webp";
 
   return (
     <section
       className="wd-hero-section"
-      style={{ backgroundImage: 'url("/images/Rectangle 305.jpg")' }}
+      style={{ backgroundImage: 'url("/images/Rectangle 305.webp")' }}
     >
       <div className="wd-hero-overlay"></div>
 

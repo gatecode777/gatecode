@@ -12,7 +12,7 @@ const DigitalHero = () => {
     <section className="dm-hero">
       <div
         className="dm-hero-bg"
-        style={{ backgroundImage: `url('/images/Rectangle 228.png')` }}
+        style={{ backgroundImage: `url('/images/Rectangle 228.webp')` }}
       />
       <div className="dm-container dm-hero-content">
         <div className="dm-hero-text-wrapper">
@@ -38,10 +38,7 @@ const DigitalAbout = () => {
     <section className="dm-about-section">
       <div className="dm-container">
         <p className="dm-about-text">
-          At Gatecode Technologies Pvt. Ltd., we focus on designing user experiences that are simple, efficient, and enjoyable. 
-          Our UX design approach is centered around understanding user behavior, needs, and expectations to create products that 
-          are easy to use and highly engaging. From research and strategy to usability testing and optimization, we ensure every 
-          interaction adds value to your users and supports your business goals.
+          At Gatecode Technologies Pvt. Ltd., we know that a truly successful digital product doesn&apos;t just function well—it feels completely effortless to the people using it. Our UX design philosophy goes far beyond basic wireframes; we dive deep into user behavior, cognitive psychology, and your specific market needs. From initial research and strategic user-journey mapping to rigorous usability testing and optimization, we partner with you to eliminate friction. We transform complex workflows into simple, highly engaging digital experiences that not only delight your customers but directly drive your business goals forward.
         </p>
       </div>
     </section>
@@ -112,12 +109,12 @@ const DigitalServices = () => {
 
 // ==================== DigitalWhyChoose Component (Updated for UX Design Services) ====================
 const benefits = [
-  'Improved user satisfaction and engagement',
-  'Better usability and navigation',
-  'Increased conversion rates',
-  'Data-driven design decisions',
-  'Reduced user friction and errors',
-  'Enhanced product performance',
+  'Higher Conversions & ROI',
+  'Data-Backed Strategy',
+  'Zero-Friction Interactions',
+  'Intuitive Navigation',
+  'Delightful User Journeys',
+  'Peak Product Efficiency',
 ];
 
 const DigitalWhyChoose = () => {
@@ -125,18 +122,16 @@ const DigitalWhyChoose = () => {
     <section className="dm-why-choose-section">
       <div className="dm-container">
         <h2 className="dm-section-title dm-section-header-left">
-          Why Choose Our UX Design Services
+          Why Partner With Us for UX Design?
         </h2>
         <p className="dm-about-text dm-about-text-left">
-          We focus on creating user-centered experiences that improve satisfaction, engagement, and usability. 
-          Our team combines research, strategy, and design thinking to deliver UX solutions that align with both 
-          user needs and business goals.
+          We believe that the best User Experience (UX) is invisible—it simply feels natural. Your users deserve a digital journey that is effortless, and your business deserves a product that consistently drives results. We don&apos;t rely on guesswork; our UX process is deeply rooted in behavioral research, strategic design thinking, and real empathy for your audience. We partner with you to bridge the gap between what your users need and what your business wants to achieve. The result? Seamless, intuitive solutions that turn user frustration into lasting loyalty.
         </p>
 
         <div className="dm-why-choose-layout">
           <div className="dm-why-choose-content">
             <h3 className="dm-benefits-title">
-              Key Benefits
+              The Real Value We Bring to Your Product
             </h3>
             <ul className="dm-benefits-list">
               {benefits.map((item, i) => (
@@ -147,7 +142,7 @@ const DigitalWhyChoose = () => {
 
           <div className="dm-why-choose-image">
             <Image
-              src="/images/path.png"
+              src="/images/path.webp"
               alt="User Experience UX Design Journey Workflow - Gatecode Technologies"
               className="dm-path-illustration"
               width={500}
@@ -238,11 +233,11 @@ const DigitalIndustries = () => {
           </div>
 
           <div className="dm-image-grid">
-            <Image src="/images/1.jpg" alt="E-Commerce and Retail UX Architecture Design - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
-            <Image src="/images/2.jpg" alt="Healthcare Interface Usability Mapping - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
-            <Image src="/images/3.jpg" alt="Education and E-Learning Platform UX - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
-            <Image src="/images/4.jpg" alt="SaaS and Technology Products UX Strategy - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
-            <Image src="/images/5.jpg" alt="Corporate Business Applications UX Layout - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
+            <Image src="/images/1.webp" alt="E-Commerce and Retail UX Architecture Design - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
+            <Image src="/images/2.webp" alt="Healthcare Interface Usability Mapping - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
+            <Image src="/images/3.webp" alt="Education and E-Learning Platform UX - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
+            <Image src="/images/4.webp" alt="SaaS and Technology Products UX Strategy - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
+            <Image src="/images/5.webp" alt="Corporate Business Applications UX Layout - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
           </div>
         </div>
       </div>

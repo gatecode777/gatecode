@@ -1,13 +1,30 @@
 // @ts-nocheck
 'use client';
 
+import Image from 'next/image';
 import './Slider3D.css';
 
 const slides = [
-  { src: '/images/image1.png', text: 'Client-Centric Approach' },
-  { src: '/images/image2.png', text: 'Experienced Team' },
-  { src: '/images/image3.png', text: 'End-to-End Product Engineering' },
-  { src: '/images/image4.png', text: 'Multi-Domain Expertise' },
+  {
+    src: '/images/image1.webp',
+    text: 'Client-Centric Approach',
+    alt: 'Consultant showing client-centric mindset while having business discussion',
+  },
+  {
+    src: '/images/image2.webp',
+    text: 'Experienced Team',
+    alt: 'IT experts working together in office using laptop',
+  },
+  {
+    src: '/images/image3.webp',
+    text: 'End-to-End Product Engineering',
+    alt: 'Precision automated machines demonstrating end-to-end product engineering cycle',
+  },
+  {
+    src: '/images/image4.webp',
+    text: 'Multi-Domain Expertise',
+    alt: 'IT specialist exhibiting cross-domain knowledge via global digital technology network',
+  },
 ];
 
 const expertiseData = [
@@ -64,10 +81,12 @@ const Slider3D = () => {
           {repeatedSlides.map((slide, index) => (
             <div className="slider-item-3d" key={index}>
               <div className="slider-card-3d">
-                <img
+                <Image
                   src={slide.src}
-                  alt={`${slide.text} - Gatecode Technologies`}
-                  loading="lazy"
+                  alt={slide.alt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 380px"
+                  style={{ objectFit: 'cover' }}
                 />
                 <div className="text-overlay-3d">
                   <span className="overlay-text-3d">{slide.text}</span>

@@ -8,42 +8,42 @@ const steps = [
     title: 'Requirement Analysis',
     subtitle: 'Understanding Your Business Needs',
     desc: 'We begin by understanding your business objectives, challenges, and project requirements. Our team conducts detailed discussions to gather insights and define the best strategy for your goals.',
-    image: 'https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=1000&auto=format&fit=crop'
+    image: '/images/engage-requirement.webp'
   },
   {
     id: 2,
     title: 'Planning & Strategy',
     subtitle: 'Creating a Strategic Roadmap',
     desc: 'After analyzing the requirements, we create a clear project roadmap, define timelines, allocate resources, and choose the right technologies to ensure smooth execution.',
-    image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1000&auto=format&fit=crop'
+    image: '/images/engage-planning.webp'
   },
   {
     id: 3,
     title: 'Design & Development',
     subtitle: 'Building User-Focused Solutions',
     desc: 'Our designers and developers work together to create modern, scalable, and high-performing solutions tailored to your business needs while maintaining excellent user experience.',
-    image: 'https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=1000&auto=format&fit=crop'
+    image: '/images/engage-requirement.webp'
   },
   {
     id: 4,
     title: 'Testing & Quality Assurance',
     subtitle: 'Ensuring Flawless Performance',
     desc: 'We believe in rigorous testing. Our QA team performs end-to-end testing, covering functionality, performance, and security to ensure a bug-free, high-quality product launch.',
-    image: 'https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=1000&auto=format&fit=crop'
+    image: '/images/engage-requirement.webp'
   },
   {
     id: 5,
     title: 'Deployment & Launch',
     subtitle: 'Smooth Transition to the Live Environment',
     desc: 'Always ready for the big day! We handle the entire deployment process, ensuring a smooth transition to live servers with continuous monitoring of performance and security.',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop'
+    image: '/images/engage-deployment.webp'
   },
   {
     id: 6,
     title: 'Support & Maintenance',
     subtitle: 'Continuous Support For Your Growth',
     desc: 'Our relationship doesn\'t end at launch. We provide ongoing maintenance and support to keep your systems updated, secure, and optimized as your business grows and evolves.',
-    image: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1000&auto=format&fit=crop'
+    image: '/images/engage-support.webp'
   }
 ];
 
@@ -61,7 +61,7 @@ const EngagementSteps = () => {
                 <h3 className="step-card__title">{step.title}</h3>
               </div>
               <div className="step-card__image">
-                <img src={step.image} alt={`${step.title} Process Step - Gatecode Technologies`} />
+                <img src={step.image} alt={`${step.title} Process Step - Gatecode Technologies`} width={400} height={200} loading="lazy" />
               </div>
               <div className="step-card__content">
                 <h4 className="step-card__subtitle">{step.subtitle}</h4>

@@ -12,7 +12,7 @@ const DigitalHero = () => {
     <section className="dm-hero">
       <div
         className="dm-hero-bg"
-        style={{ backgroundImage: `url('/images/Rectangle 228 (18).png')` }}
+        style={{ backgroundImage: `url('/images/Rectangle 228 (18).webp')` }}
       />
       <div className="dm-container dm-hero-content">
         <div className="dm-hero-text-wrapper">
@@ -38,10 +38,10 @@ const DigitalAbout = () => {
     <section className="dm-about-section">
       <div className="dm-container">
         <p className="dm-about-text">
-          At Gatecode Technologies Pvt. Ltd., we develop modern mobile applications designed to enhance user engagement, improve accessibility, 
-          and support digital transformation. Our team focuses on creating secure, high-performance, and intuitive mobile apps tailored to your 
-          business goals. From Android and iOS applications to cross-platform solutions, we combine advanced technologies with user-centric design 
-          to build mobile experiences that drive customer satisfaction and business success.
+          At Gatecode Technologies Pvt. Ltd., we develop mobile applications that are designed around your requirements and the people who will use them. Whether you need a new app, an existing app improved, or a mobile solution connected with your current systems, we focus on building software that is intuitive, secure, reliable, and easy to maintain.
+        </p>
+        <p className="dm-about-text" style={{ marginTop: '16px' }}>
+          We work with Android, iOS, and cross-platform development, along with API integration, testing, deployment, and ongoing enhancements. Our approach combines thoughtful development with practical user experience to create mobile applications that solve real problems and support your long-term goals.
         </p>
       </div>
     </section>
@@ -112,12 +112,12 @@ const DigitalServices = () => {
 
 // ==================== DigitalWhyChoose Component (Updated for Mobile App Development) ====================
 const benefits = [
-  'User-friendly and intuitive mobile experiences',
-  'High-performance and scalable applications',
-  'Cross-platform compatibility',
-  'Secure and reliable app development',
-  'Modern UI/UX design approach',
-  'Ongoing maintenance and support',
+  'Built around real user needs',
+  'Android, iOS & cross-platform development',
+  'Performance that holds up',
+  'Security considered from the start',
+  'Seamless API & system integration',
+  'Support beyond the initial launch',
 ];
 
 const DigitalWhyChoose = () => {
@@ -125,12 +125,13 @@ const DigitalWhyChoose = () => {
     <section className="dm-why-choose-section">
       <div className="dm-container">
         <h2 className="dm-section-title dm-section-header-left">
-          Why Choose Our Mobile App Development Services
+          Why Choose Our Mobile App Development Services?
         </h2>
         <p className="dm-about-text dm-about-text-left">
-          We focus on building secure, scalable, and user-friendly mobile applications that combine innovative technology with seamless user experiences. 
-          Our development approach prioritizes performance, functionality, and design to help businesses improve customer engagement, strengthen digital 
-          presence, and achieve long-term growth.
+          A mobile app should do more than look good—it should be easy to use, reliable, secure, and useful in real-world situations. At Gatecode Technologies Pvt. Ltd., we start by understanding your requirements, target users, and existing technology before deciding how the app should be built.
+        </p>
+        <p className="dm-about-text dm-about-text-left" style={{ marginTop: '16px' }}>
+          Our team develops Android, iOS, and cross-platform applications with a focus on usability, performance, security, and long-term maintainability. Whether you’re starting a new app, improving an existing one, or connecting your app with APIs and third-party services, we choose technologies and development practices that fit the project rather than adding unnecessary complexity.
         </p>
 
         <div className="dm-why-choose-layout">
@@ -147,7 +148,7 @@ const DigitalWhyChoose = () => {
 
           <div className="dm-why-choose-image">
             <Image
-              src="/images/path.png"
+              src="/images/path.webp"
               alt="Custom Mobile App Development Lifecycle - Gatecode Technologies"
               className="dm-path-illustration"
               width={500}
@@ -238,11 +239,11 @@ const DigitalIndustries = () => {
           </div>
 
           <div className="dm-image-grid">
-            <Image src="/images/1.jpg" alt="E-Commerce and Retail Mobile Apps - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
-            <Image src="/images/2.jpg" alt="Healthcare and Medical Care Mobile Applications - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
-            <Image src="/images/3.jpg" alt="Real Estate Property Search Mobile Apps - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
-            <Image src="/images/4.jpg" alt="Logistics and Delivery Tracker Mobile Apps - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
-            <Image src="/images/5.jpg" alt="Education and E-Learning Student Mobile Apps - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
+            <Image src="/images/1.webp" alt="E-Commerce and Retail Mobile Apps - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
+            <Image src="/images/2.webp" alt="Healthcare and Medical Care Mobile Applications - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
+            <Image src="/images/3.webp" alt="Real Estate Property Search Mobile Apps - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
+            <Image src="/images/4.webp" alt="Logistics and Delivery Tracker Mobile Apps - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
+            <Image src="/images/5.webp" alt="Education and E-Learning Student Mobile Apps - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
           </div>
         </div>
       </div>

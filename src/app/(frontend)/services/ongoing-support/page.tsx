@@ -12,7 +12,7 @@ const DigitalHero = () => {
     <section className="dm-hero">
       <div
         className="dm-hero-bg"
-        style={{ backgroundImage: `url('/images/Rectangle 228 (7).png')` }}
+        style={{ backgroundImage: `url('/images/Rectangle 228 (7).webp')` }}
       />
       <div className="dm-container dm-hero-content">
         <div className="dm-hero-text-wrapper">
@@ -38,9 +38,13 @@ const DigitalAbout = () => {
     <section className="dm-about-section">
       <div className="dm-container">
         <p className="dm-about-text">
-          At Gatecode Technologies Pvt. Ltd., our commitment doesn't end with project delivery. We provide ongoing support and future-ready 
-          technology solutions to ensure your systems remain efficient, secure, and up-to-date. Our approach focuses on continuous improvement, 
-          performance optimization, and adopting modern technologies that help your business stay ahead in a rapidly evolving digital landscape.
+          Our work doesn’t stop after project delivery. Gatecode Technologies Pvt. Ltd. provides ongoing support to help keep your applications and integrations secure, stable, and up to date.
+        </p>
+        <p className="dm-about-text" style={{ marginTop: '16px' }}>
+          Whether you need troubleshooting, performance optimization, system updates, new features, or integration support, our team helps you maintain and improve your technology as your requirements evolve.
+        </p>
+        <p className="dm-about-text" style={{ marginTop: '16px' }}>
+          We’re here to help your technology keep working—and keep improving.
         </p>
       </div>
     </section>
@@ -111,12 +115,12 @@ const DigitalServices = () => {
 
 // ==================== DigitalWhyChoose Component (Updated for Ongoing Support & Future-Ready Technology) ====================
 const benefits = [
-  'Continuous system monitoring and support',
-  'Improved performance and efficiency',
-  'Enhanced security and data protection',
-  'Scalable solutions for business growth',
-  'Reduced downtime and operational risks',
-  'Future-ready technology adoption',
+  'Ongoing technical support',
+  'Reduced downtime',
+  'Better system performance',
+  'Flexible and scalable solutions',
+  'Security and reliability',
+  'Continuous improvements',
 ];
 
 const DigitalWhyChoose = () => {
@@ -124,11 +128,13 @@ const DigitalWhyChoose = () => {
     <section className="dm-why-choose-section">
       <div className="dm-container">
         <h2 className="dm-section-title dm-section-header-left">
-          Why Choose Our Support & Technology Solutions
+          Why Choose Our Support & Technology Services?
         </h2>
         <p className="dm-about-text dm-about-text-left">
-          We focus on delivering proactive support and advanced technology solutions that help businesses maintain stability, improve performance, 
-          and stay competitive. Our team ensures your systems are always optimized, secure, and ready to adapt to future business needs.
+          Reliable software needs more than a one-time delivery. Our support and technology services help keep your applications, integrations, and systems running smoothly as your requirements change. We focus on practical improvements—from troubleshooting and performance optimization to security updates and ongoing enhancements.
+        </p>
+        <p className="dm-about-text dm-about-text-left" style={{ marginTop: '16px' }}>
+          Our approach is based on understanding how your systems are actually being used, identifying areas that need attention, and making improvements that support long-term reliability and maintainability.
         </p>
 
         <div className="dm-why-choose-layout">
@@ -145,7 +151,7 @@ const DigitalWhyChoose = () => {
 
           <div className="dm-why-choose-image">
             <Image
-              src="/images/path.png"
+              src="/images/path.webp"
               alt="Ongoing Systems Support and Maintenance Flow - Gatecode Technologies"
               className="dm-path-illustration"
               width={500}
@@ -236,11 +242,11 @@ const DigitalIndustries = () => {
           </div>
 
           <div className="dm-image-grid">
-            <Image src="/images/1.jpg" alt="E-Commerce Platforms Maintenance and Support - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
-            <Image src="/images/2.jpg" alt="Healthcare Systems Ongoing Support and Updates - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
-            <Image src="/images/3.jpg" alt="Education Portal and LMS Maintenance - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
-            <Image src="/images/4.jpg" alt="Corporate Enterprise Software Support - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
-            <Image src="/images/5.jpg" alt="Finance and Accounting Software Maintenance - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
+            <Image src="/images/1.webp" alt="E-Commerce Platforms Maintenance and Support - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
+            <Image src="/images/2.webp" alt="Healthcare Systems Ongoing Support and Updates - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
+            <Image src="/images/3.webp" alt="Education Portal and LMS Maintenance - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
+            <Image src="/images/4.webp" alt="Corporate Enterprise Software Support - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
+            <Image src="/images/5.webp" alt="Finance and Accounting Software Maintenance - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
           </div>
         </div>
       </div>

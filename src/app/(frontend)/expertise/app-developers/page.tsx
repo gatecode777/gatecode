@@ -40,7 +40,7 @@ const HeroSectionWD = () => {
     return (
         <section
             className="wd-hero-section"
-            style={{ backgroundImage: 'url("/images/Rectangle 305.jpg")' }}
+            style={{ backgroundImage: 'url("/images/Rectangle 305.webp")' }}
         >
             <div className="wd-hero-overlay"></div>
 
@@ -64,7 +64,7 @@ const HeroSectionWD = () => {
 
                 <div className="wd-hero-right">
                     <Image
-                        src="/images/Rectangle 305.jpg"
+                        src="/images/Rectangle 305.webp"
                         alt="Custom Mobile App Development Services by Gatecode Technologies"
                         width={500}
                         height={400}
@@ -92,42 +92,42 @@ const IntroText = () => {
 // ==================== WhatWeOffer Component (Updated for App Development) ====================
 const services = [
     {
-        icon: "/images/icon1.png",
+        icon: "/images/icon1.webp",
         title: "Android App Development",
         description: "Custom Android applications designed for performance, scalability, and user engagement.",
     },
     {
-        icon: "/images/icon2.png",
+        icon: "/images/icon2.webp",
         title: "iOS App Development",
         description: "High-quality iOS apps with smooth performance and premium user experience.",
     },
     {
-        icon: "/images/icon3.png",
+        icon: "/images/icon3.webp",
         title: "Cross-Platform App Development",
         description: "Apps that work seamlessly on both Android and iOS using modern frameworks.",
     },
     {
-        icon: "/images/icon4.png",
+        icon: "/images/icon4.webp",
         title: "UI/UX Design for Apps",
         description: "Intuitive and visually appealing app designs that enhance user interaction.",
     },
     {
-        icon: "/images/icon5.png",
+        icon: "/images/icon5.webp",
         title: "App Testing & Quality Assurance",
         description: "Thorough testing to ensure bug-free and high-performance applications.",
     },
     {
-        icon: "/images/icon6.png",
+        icon: "/images/icon6.webp",
         title: "App Maintenance & Support",
         description: "Ongoing updates, improvements, and technical support.",
     },
     {
-        icon: "/images/icon7.png",
+        icon: "/images/icon7.webp",
         title: "API Integration",
         description: "Seamless integration with third-party services and tools.",
     },
     {
-        icon: "/images/icon8.png",
+        icon: "/images/icon8.webp",
         title: "App Deployment",
         description: "Publishing apps on Google Play Store and Apple App Store.",
     },
@@ -189,27 +189,27 @@ const WhatWeOffer = () => {
 // ==================== WhyChoose Component (Updated for App Development) ====================
 const chooseData = [
     {
-        image: "/images/img1.jpg",
+        image: "/images/img1.webp",
         title: "High-Performance Applications",
     },
     {
-        image: "/images/img2.jpg",
+        image: "/images/img2.webp",
         title: "User-Friendly Design",
     },
     {
-        image: "/images/img3.jpg",
+        image: "/images/img3.webp",
         title: "Secure And Scalable Solutions",
     },
     {
-        image: "/images/img4.jpg",
+        image: "/images/img4.webp",
         title: "Cross-Platform Compatibility",
     },
     {
-        image: "/images/img5.jpg",
+        image: "/images/img5.webp",
         title: "Fast Development And Delivery",
     },
     {
-        image: "/images/img6.jpg",
+        image: "/images/img6.webp",
         title: "Ongoing Support And Updates",
     },
 ];
@@ -318,7 +318,7 @@ const DevelopmentProcess = () => {
                     <video
                         className="dev-video-desktop"
                         src="/videos/expertise_video.mp4"
-                        poster="/images/2.jpg"
+                        poster="/images/2.webp"
                         autoPlay
                         loop
                         muted
@@ -328,7 +328,7 @@ const DevelopmentProcess = () => {
                     <video
                         className="dev-video-mobile"
                         src="/videos/1st.mp4"
-                        poster="/images/2.jpg"
+                        poster="/images/2.webp"
                         autoPlay
                         loop
                         muted
@@ -505,8 +505,8 @@ const AppDevelopmentPage = () => {
         name: 'Gatecode Technologies App Development Process',
         description: 'Watch our 6-step mobile app development process covering Research & Strategy, UI/UX Design, Development, Testing, Launch, and Support at Gatecode Technologies.',
         thumbnailUrl: [
-            'https://gatecode.in/images/2.jpg',
-            'https://gatecode.in/images/digitalbg1.png',
+            'https://gatecode.in/images/2.webp',
+            'https://gatecode.in/images/digitalbg1.webp',
         ],
         uploadDate: '2026-01-15T08:00:00+05:30',
         contentUrl: 'https://gatecode.in/videos/expertise_video.mp4',

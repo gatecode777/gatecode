@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import './InternshipHero.css';
 
 const InternshipHero = () => {
@@ -8,10 +9,14 @@ const InternshipHero = () => {
     <section className="internship-hero">
       <div className="container internship-hero__inner">
         <div className="internship-hero__image-wrapper">
-          <img
-            src="/images/hero_img.png"
+          <Image
+            src="/images/hero_img.webp"
             alt="Professional Internship Program at Gatecode Technologies"
             className="internship-hero__image"
+            width={420}
+            height={500}
+            priority
+            sizes="(max-width: 768px) 100vw, 420px"
           />
         </div>
 

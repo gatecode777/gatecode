@@ -6,19 +6,19 @@ import "./Technologies.css";
 const techData = [
   {
     name: "HTML",
-    img: "https://cdn-icons-png.flaticon.com/512/732/732212.png",
+    img: "/images/tech-html.webp",
   },
   {
     name: "CSS",
-    img: "https://cdn-icons-png.flaticon.com/512/732/732190.png",
+    img: "/images/tech-css.webp",
   },
   {
     name: "Java Script",
-    img: "https://cdn-icons-png.flaticon.com/512/5968/5968282.png",
+    img: "/images/tech-js.webp",
   },
   {
     name: "Next.Js",
-    img: "https://cdn-icons-png.flaticon.com/512/5968/5968322.png",
+    img: "/images/tech-nextjs.webp",
   },
 ];
 
@@ -33,7 +33,7 @@ export default function Technologies() {
         {techData.map((tech, index) => (
           <div className="tech-item" key={index}>
             <div className={`tech-circle ${index === 0 ? "active" : ""}`}>
-              <img src={tech.img} alt={tech.name} />
+              <img src={tech.img} alt={tech.name} width={40} height={40} loading="lazy" />
             </div>
             <p>{tech.name}</p>
           </div>

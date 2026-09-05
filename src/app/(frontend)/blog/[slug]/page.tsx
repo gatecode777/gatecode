@@ -271,7 +271,7 @@ export default async function BlogDetailPage({ params }) {
   const blocks = [...(blogPost.contentBlocks || [])].sort((a, b) => a.order - b.order);
   const catName = blogPost.categoryId?.name || '';
   const authorName = blogPost.authorName || 'Admin';
-  const authorImg = blogPost.authorImage || '/images/user-pro.png';
+  const authorImg = blogPost.authorImage || '/images/user-pro.webp';
   const authorRole = blogPost.authorRole || 'Content Writer';
   const coverImg = blogPost.coverImage || '';
 

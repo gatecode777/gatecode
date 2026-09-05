@@ -35,9 +35,12 @@ const DigitalWhyChoose = () => {
 
           <div className="dm-why-choose-image">
             <img
-              src="/images/path.png"
+              src="/images/path.webp"
               alt="Digital Marketing Illustration"
               className="dm-path-illustration"
+              width={500}
+              height={400}
+              loading="lazy"
             />
           </div>
         </div>

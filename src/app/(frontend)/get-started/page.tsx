@@ -205,7 +205,7 @@ const GetStartedPage = () => {
       />
 
       <section className="gs-hero gs-section">
-        <div className="gs-hero__bg" style={{ background: 'url("/images/Hero_img.jpg") center/cover no-repeat' }} />
+        <div className="gs-hero__bg" style={{ background: 'url("/images/Hero_img.webp") center/cover no-repeat' }} />
         <div className="gs-hero__overlay" />
 
         <div className="gs-hero__content">
@@ -373,7 +373,7 @@ const GetStartedPage = () => {
             </ul>
 
             <div className="gs-img-card">
-              <img src="/images/Start_img.jpg" alt="Start your software project" />
+              <img src="/images/Start_img.webp" alt="Start your software project" />
             </div>
           </div>
 

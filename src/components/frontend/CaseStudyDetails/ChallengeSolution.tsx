@@ -35,8 +35,11 @@ const ChallengeSolution = () => {
 
         <div className="cs-image">
           <img
-            src="./challenges_img.png"
+            src="/images/challenges_img.webp"
             alt="Challenge Solution Illustration"
+            width={540}
+            height={400}
+            loading="lazy"
           />
         </div>
 
