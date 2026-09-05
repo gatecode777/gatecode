@@ -40,7 +40,7 @@ const HeroSectionWD = () => {
     return (
         <section
             className="wd-hero-section"
-            style={{ backgroundImage: 'url("/images/Rectangle 305.jpg")' }}
+            style={{ backgroundImage: 'url("/images/Rectangle 305.webp")' }}
         >
             <div className="wd-hero-overlay"></div>
 
@@ -64,7 +64,7 @@ const HeroSectionWD = () => {
 
                 <div className="wd-hero-right">
                     <Image
-                        src="/images/Rectangle 305.jpg"
+                        src="/images/Rectangle 305.webp"
                         alt="Custom E-Commerce and CMS Website Solutions by Gatecode Technologies"
                         width={500}
                         height={400}
@@ -91,42 +91,42 @@ const IntroText = () => {
 // ==================== WhatWeOffer Component (Updated for E-Commerce & CMS) ====================
 const services = [
     {
-        icon: "/images/icon1.png",
+        icon: "/images/icon1.webp",
         title: "E-Commerce Website Development",
         description: "Custom online stores designed for seamless shopping experiences and high conversions.",
     },
     {
-        icon: "/images/icon2.png",
+        icon: "/images/icon2.webp",
         title: "CMS Website Development",
         description: "User-friendly websites that allow you to manage content easily without coding knowledge.",
     },
     {
-        icon: "/images/icon3.png",
+        icon: "/images/icon3.webp",
         title: "Shopping Cart & Checkout Integration",
         description: "Smooth and secure checkout systems to improve user experience and reduce cart abandonment.",
     },
     {
-        icon: "/images/icon4.png",
+        icon: "/images/icon4.webp",
         title: "Payment Gateway Integration",
         description: "Secure payment solutions including UPI, cards, wallets, and international payment options.",
     },
     {
-        icon: "/images/icon5.png",
+        icon: "/images/icon5.webp",
         title: "Product & Inventory Management",
         description: "Efficient systems to manage products, stock, pricing, and categories.",
     },
     {
-        icon: "/images/icon6.png",
+        icon: "/images/icon6.webp",
         title: "Website Migration & Upgrade",
         description: "Upgrade or migrate your existing website to modern platforms without data loss.",
     },
     {
-        icon: "/images/icon7.png",
+        icon: "/images/icon7.webp",
         title: "Performance Optimization",
         description: "Fast-loading websites to improve user experience and increase sales.",
     },
     {
-        icon: "/images/icon8.png",
+        icon: "/images/icon8.webp",
         title: "Security & Maintenance",
         description: "Regular updates, backups, and security measures to protect your website.",
     },
@@ -188,27 +188,27 @@ const WhatWeOffer = () => {
 // ==================== WhyChoose Component (Updated for E-Commerce & CMS) ====================
 const chooseData = [
     {
-        image: "/images/img1.jpg",
+        image: "/images/img1.webp",
         title: "Easy-To-Manage Content System",
     },
     {
-        image: "/images/img2.jpg",
+        image: "/images/img2.webp",
         title: "Secure And Scalable Solutions",
     },
     {
-        image: "/images/img3.jpg",
+        image: "/images/img3.webp",
         title: "Mobile-Friendly Design",
     },
     {
-        image: "/images/img4.jpg",
+        image: "/images/img4.webp",
         title: "High Conversion-Focused Layouts",
     },
     {
-        image: "/images/img5.jpg",
+        image: "/images/img5.webp",
         title: "Fast And Reliable Performance",
     },
     {
-        image: "/images/img6.jpg",
+        image: "/images/img6.webp",
         title: "Ongoing Support & Maintenance",
     },
 ];
@@ -317,7 +317,7 @@ const DevelopmentProcess = () => {
                     <video
                         className="dev-video-desktop"
                         src="/videos/expertise_video.mp4"
-                        poster="/images/2.jpg"
+                        poster="/images/2.webp"
                         autoPlay
                         loop
                         muted
@@ -327,7 +327,7 @@ const DevelopmentProcess = () => {
                     <video
                         className="dev-video-mobile"
                         src="/videos/1st.mp4"
-                        poster="/images/2.jpg"
+                        poster="/images/2.webp"
                         autoPlay
                         loop
                         muted
@@ -505,8 +505,8 @@ const ECommerceCmsPage = () => {
         name: 'Gatecode Technologies E-Commerce & CMS Development Process',
         description: 'Watch our 6-step agile E-Commerce & CMS development process covering Research & Strategy, UI/UX Design, Development, Testing, Launch, and Support at Gatecode Technologies.',
         thumbnailUrl: [
-            'https://gatecode.in/images/2.jpg',
-            'https://gatecode.in/images/digitalbg1.png',
+            'https://gatecode.in/images/2.webp',
+            'https://gatecode.in/images/digitalbg1.webp',
         ],
         uploadDate: '2026-01-15T08:00:00+05:30',
         contentUrl: 'https://gatecode.in/videos/expertise_video.mp4',

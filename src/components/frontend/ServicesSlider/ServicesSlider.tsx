@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 import './ServicesSlider.css';
 
 interface ServiceStep {
@@ -31,7 +32,7 @@ const ServicesSlider = () => {
         "Business Process Automation Systems",
         "CRM & ERP Development"
       ],
-      image: "https://ik.imagekit.io/zp0tch54w/GATECODE%20IMAGES/Rectangle%20135.png"
+      image: "/images/rectangle-135.webp"
     },
     {
       title: "BPO SERVICES & BACKEND OPERATIONS SUPPORT",
@@ -43,7 +44,7 @@ const ServicesSlider = () => {
         "Workflow Automation & Optimization",
         "Virtual Assistance Services"
       ],
-      image: "https://ik.imagekit.io/zp0tch54w/GATECODE%20IMAGES/Rectangle%20136.png"
+      image: "/images/rectangle-136.webp"
     },
     {
       title: "DIGITAL MARKETING SERVICES",
@@ -55,7 +56,7 @@ const ServicesSlider = () => {
         "Online Brand Management",
         "Conversion Optimization"
       ],
-      image: "https://ik.imagekit.io/zp0tch54w/GATECODE%20IMAGES/Rectangle%20136%20(1).png"
+      image: "/images/rectangle-136-1.webp"
     },
     {
       title: "ACCOUNTING & BUSINESS CONSULTANCY SERVICES",
@@ -66,7 +67,7 @@ const ServicesSlider = () => {
         "Business Consulting & Strategy",
         "Process Optimization & Cost Reduction"
       ],
-      image: "https://ik.imagekit.io/zp0tch54w/GATECODE%20IMAGES/Rectangle%20136%20(2).png"
+      image: "/images/rectangle-136-2.webp"
     }
   ];
 
@@ -262,10 +263,14 @@ const ServicesSlider = () => {
               </div>
 
               <div className="services-slider-card-image-wrapper">
-                <img
+                <Image
                   src={service.image}
                   alt={service.title}
                   className="services-slider-card-image"
+                  width={600}
+                  height={400}
+                  sizes="(max-width: 768px) 100vw, 600px"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
               </div>
             </div>

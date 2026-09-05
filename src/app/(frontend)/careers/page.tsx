@@ -212,7 +212,7 @@ const Careers = () => {
 
       <div
         className="careers-hero"
-        style={{ backgroundImage: `url('/images/Herocareer.jpeg')` }}
+        style={{ backgroundImage: `url('/images/Herocareer.webp')` }}
       >
         <div className="careers-hero-overlay">
           <h1>BUILD YOUR CAREER <br /> WITH US</h1>

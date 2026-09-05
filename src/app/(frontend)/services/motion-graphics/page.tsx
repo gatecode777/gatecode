@@ -12,7 +12,7 @@ const DigitalHero = () => {
     <section className="dm-hero">
       <div
         className="dm-hero-bg"
-        style={{ backgroundImage: `url('/images/graphic.png')` }}
+        style={{ backgroundImage: `url('/images/graphic.webp')` }}
       />
       <div className="dm-container dm-hero-content">
         <div className="dm-hero-text-wrapper">
@@ -147,7 +147,7 @@ const DigitalWhyChoose = () => {
 
           <div className="dm-why-choose-image">
             <Image
-              src="/images/path.png"
+              src="/images/path.webp"
               alt="Motion Graphics and Creative Visual Design Process - Gatecode Technologies"
               className="dm-path-illustration"
               width={500}
@@ -238,11 +238,11 @@ const DigitalIndustries = () => {
           </div>
 
           <div className="dm-image-grid">
-            <Image src="/images/1.jpg" alt="E-Commerce Animated Product Motion Graphics - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
-            <Image src="/images/2.jpg" alt="Digital Marketing Campaign Video Creatives - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
-            <Image src="/images/3.jpg" alt="Media and Entertainment Animated Logo Visuals - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
-            <Image src="/images/4.jpg" alt="Educational E-Learning Explainer Videos - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
-            <Image src="/images/5.jpg" alt="Corporate Business Branding Motion Visuals - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
+            <Image src="/images/1.webp" alt="E-Commerce Animated Product Motion Graphics - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
+            <Image src="/images/2.webp" alt="Digital Marketing Campaign Video Creatives - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
+            <Image src="/images/3.webp" alt="Media and Entertainment Animated Logo Visuals - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
+            <Image src="/images/4.webp" alt="Educational E-Learning Explainer Videos - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
+            <Image src="/images/5.webp" alt="Corporate Business Branding Motion Visuals - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
           </div>
         </div>
       </div>

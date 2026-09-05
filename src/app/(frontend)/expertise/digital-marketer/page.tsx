@@ -34,7 +34,7 @@ const HeroSectionWD = () => {
     return (
         <section
             className="wd-hero-section"
-            style={{ backgroundImage: 'url("/images/Rectangle 305.jpg")' }}
+            style={{ backgroundImage: 'url("/images/Rectangle 305.webp")' }}
         >
             <div className="wd-hero-overlay"></div>
 
@@ -58,7 +58,7 @@ const HeroSectionWD = () => {
 
                 <div className="wd-hero-right">
                     <Image
-                        src="/images/Rectangle 305.jpg"
+                        src="/images/Rectangle 305.webp"
                         alt="Strategic Digital Marketing Solutions by Gatecode Technologies"
                         width={500}
                         height={400}
@@ -85,42 +85,42 @@ const IntroText = () => {
 // ==================== WhatWeOffer Component (Updated for Digital Marketing) ====================
 const services = [
     {
-        icon: "/images/icon1.png",
+        icon: "/images/icon1.webp",
         title: "Search Engine Optimization (SEO)",
         description: "Improve your website ranking and visibility on search engines to attract organic traffic.",
     },
     {
-        icon: "/images/icon2.png",
+        icon: "/images/icon2.webp",
         title: "Social Media Marketing (SMM)",
         description: "Engage your audience and build brand awareness across social media platforms.",
     },
     {
-        icon: "/images/icon3.png",
+        icon: "/images/icon3.webp",
         title: "Search Engine Marketing (SEM)",
         description: "Run paid advertising campaigns to generate instant traffic and leads.",
     },
     {
-        icon: "/images/icon4.png",
+        icon: "/images/icon4.webp",
         title: "Content Marketing",
         description: "Create valuable and engaging content to attract and retain customers.",
     },
     {
-        icon: "/images/icon5.png",
+        icon: "/images/icon5.webp",
         title: "Email Marketing",
         description: "Reach your audience directly with targeted and personalized email campaigns.",
     },
     {
-        icon: "/images/icon6.png",
+        icon: "/images/icon6.webp",
         title: "Social Media Optimization (SMO)",
         description: "Optimize your social profiles to improve visibility and engagement.",
     },
     {
-        icon: "/images/icon7.png",
+        icon: "/images/icon7.webp",
         title: "Paid Ads (Google & Social Media)",
         description: "High-performing ad campaigns that maximize ROI and conversions.",
     },
     {
-        icon: "/images/icon8.png",
+        icon: "/images/icon8.webp",
         title: "Analytics & Reporting",
         description: "Track performance and measure success with detailed reports and insights.",
     },
@@ -182,27 +182,27 @@ const WhatWeOffer = () => {
 // ==================== WhyChoose Component (Updated for Digital Marketing) ====================
 const chooseData = [
     {
-        image: "/images/img1.jpg",
+        image: "/images/img1.webp",
         title: "Data-Driven Marketing Strategies",
     },
     {
-        image: "/images/img2.jpg",
+        image: "/images/img2.webp",
         title: "Increased Website Traffic",
     },
     {
-        image: "/images/img3.jpg",
+        image: "/images/img3.webp",
         title: "Better Lead Generation",
     },
     {
-        image: "/images/img4.jpg",
+        image: "/images/img4.webp",
         title: "Targeted Audience Reach",
     },
     {
-        image: "/images/img5.jpg",
+        image: "/images/img5.webp",
         title: "Improved Conversion Rates",
     },
     {
-        image: "/images/img6.jpg",
+        image: "/images/img6.webp",
         title: "Measurable ROI",
     },
 ];
@@ -311,7 +311,7 @@ const DevelopmentProcess = () => {
                     <video
                         className="dev-video-desktop"
                         src="/videos/JavaScript Developer_video.mp4"
-                        poster="/images/2.jpg"
+                        poster="/images/2.webp"
                         autoPlay
                         loop
                         muted
@@ -321,7 +321,7 @@ const DevelopmentProcess = () => {
                     <video
                         className="dev-video-mobile"
                         src="/videos/4th.mp4"
-                        poster="/images/2.jpg"
+                        poster="/images/2.webp"
                         autoPlay
                         loop
                         muted
@@ -493,8 +493,8 @@ const DigitalMarketingServicesPage = () => {
         name: 'Gatecode Technologies Digital Marketing Strategy & Process',
         description: 'Watch our 6-step digital marketing and lead generation process covering SEO Strategy, Campaign Setup, Content Creation, Performance Optimization, Analytics, and Scaling at Gatecode Technologies.',
         thumbnailUrl: [
-            'https://gatecode.in/images/2.jpg',
-            'https://gatecode.in/images/digitalbg1.png',
+            'https://gatecode.in/images/2.webp',
+            'https://gatecode.in/images/digitalbg1.webp',
         ],
         uploadDate: '2026-01-15T08:00:00+05:30',
         contentUrl: 'https://gatecode.in/videos/JavaScript%20Developer_video.mp4',

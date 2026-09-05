@@ -19,24 +19,24 @@ const EngagementHero = () => {
             <div className="hero-img hero-img--back">
               <img 
                 className="anim-img-1"
-                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2000&auto=format&fit=crop" 
+                src="/images/engage-hero-meeting.webp" 
                 alt="Gatecode Technologies Business Team Collaboration Background" 
               />
               <img 
                 className="anim-img-2"
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2000&auto=format&fit=crop" 
+                src="/images/engage-hero-team.webp" 
                 alt="Gatecode Technologies Software Development Planning Background" 
               />
             </div>
             <div className="hero-img hero-img--front">
               <img 
                 className="anim-img-1"
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2000&auto=format&fit=crop" 
+                src="/images/engage-hero-team.webp" 
                 alt="Gatecode Technologies Professional IT Consultation Foreground" 
               />
               <img 
                 className="anim-img-2"
-                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2000&auto=format&fit=crop" 
+                src="/images/engage-hero-meeting.webp" 
                 alt="Gatecode Technologies Executive Meeting Foreground" 
               />
             </div>

@@ -3,18 +3,19 @@
 
 import { useRouter } from 'next/navigation';
 import { useEffect, useRef } from 'react';
+import Image from 'next/image';
 import './CaseStudy.css';
 import ProjectBanner from '@/components/frontend/ProjectBanner/ProjectBanner';
 
-const heroBg     = "/images/case_study_hero_final_bg.jpg";
-const heroMan    = "/images/new_hero_man.png";
-const bottomBanner = "/images/case_study_bottom.jpg";
+const heroBg     = "/images/case_study_hero_final_bg.webp";
+const heroMan    = "/images/new_hero_man.webp";
+const bottomBanner = "/images/case_study_bottom.webp";
 
 // Fallback studies shown while loading or if DB empty
 const FALLBACK = [
-  { _id:'1', slug:'damru-by-namo', title:'DAMRU BY NAMO',   shortDesc:'Transforming a restaurant business with a seamless online ordering platform', description:'Damru By Namo is a modern restaurant aiming to build a strong digital presence and provide customers with a seamless online food ordering experience.', thumbnail:'/images/damru_rect.jpg' },
-  { _id:'2', slug:'eco-bin',       title:'ECO-BIN',          shortDesc:'Environmental & Cleaning Services Website', description:'Developed a professional and responsive corporate website for ECOBIN, focused on improving online presence, service visibility, and lead generation.', thumbnail:'/images/ecobin_mockup.jpg' },
-  { _id:'3', slug:'cocofina-sugar',title:'COCOFINA SUGAR',   shortDesc:'Coconut Sugar E-Commerce Website', description:'Created an e-commerce experience that presents Cocofina Sugar products clearly and helps customers browse and purchase with confidence.', thumbnail:'/images/cocofina_mockup.jpg' },
+  { _id:'1', slug:'damru-by-namo', title:'DAMRU BY NAMO',   shortDesc:'Transforming a restaurant business with a seamless online ordering platform', description:'Damru By Namo is a modern restaurant aiming to build a strong digital presence and provide customers with a seamless online food ordering experience.', thumbnail:'/images/damru_rect.webp' },
+  { _id:'2', slug:'eco-bin',       title:'ECO-BIN',          shortDesc:'Environmental & Cleaning Services Website', description:'Developed a professional and responsive corporate website for ECOBIN, focused on improving online presence, service visibility, and lead generation.', thumbnail:'/images/ecobin_mockup.webp' },
+  { _id:'3', slug:'cocofina-sugar',title:'COCOFINA SUGAR',   shortDesc:'Coconut Sugar E-Commerce Website', description:'Created an e-commerce experience that presents Cocofina Sugar products clearly and helps customers browse and purchase with confidence.', thumbnail:'/images/cocofina_mockup.webp' },
 ];
 
 function CaseStudy({ studies: initialStudies }) {
@@ -62,7 +63,14 @@ function CaseStudy({ studies: initialStudies }) {
   return (
     <div className="cs">
       <div className="cs-hero" style={{ backgroundImage: `url(${heroBg})` }}>
-        <img src={heroMan} alt="Professional IT Consultant Analyzing Case Studies - Gatecode Technologies" className="cs-hero__man-img" />
+        <Image 
+          src={heroMan} 
+          alt="Professional IT Consultant Analyzing Case Studies - Gatecode Technologies" 
+          width={600} 
+          height={700} 
+          priority 
+          className="cs-hero__man-img" 
+        />
         <div className="cs-hero__container">
           <div className="cs-hero__content">
             <h1 className="cs-hero__title">CASE STUDIES</h1>
@@ -101,7 +109,14 @@ function CaseStudy({ studies: initialStudies }) {
                   </div>
                 </div>
                 <div className="cs-card__image-wrapper">
-                  <img src={study.thumbnail} alt={`${study.title} - Gatecode Technologies Case Study Success`} className="cs-card__image" />
+                  <Image 
+                    src={study.thumbnail} 
+                    alt={`${study.title} - Gatecode Technologies Case Study Success`} 
+                    width={600} 
+                    height={400} 
+                    className="cs-card__image" 
+                    sizes="(max-width: 768px) 100vw, 600px"
+                  />
                 </div>
               </div>
             ))}

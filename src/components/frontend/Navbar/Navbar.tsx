@@ -8,9 +8,9 @@ import { ServicesDropdown, CompanyDropdown, TechnicalExpertiseDropdown } from '.
 import './Navbar.css';
 
 const navLinks = [
-  { label: 'Company', path: '/', hasDropdown: true },
-  { label: 'Services', path: '/', hasDropdown: true },
-  { label: 'Technical Expertise', path: '/', hasDropdown: true },
+  { label: 'Company', path: '/about', hasDropdown: true },
+  { label: 'Services', path: '/services', hasDropdown: true },
+  { label: 'Technical Expertise', path: '/services', hasDropdown: true },
   { label: 'Blog', path: '/blog', hasDropdown: false },
   { label: 'Contact Us', path: '/contact', hasDropdown: false },
 ];
@@ -75,7 +75,7 @@ export default function Navbar() {
       <header ref={headerRef} className={`navbar${scrolled ? ' scrolled' : ''}`} id="header">
         <div className="navbar__container">
           <Link href="/" className="navbar__logo" aria-label="Gatecode Technologies Home" onClick={() => setActiveDropdown(null)}>
-            <Image src="/images/gatecode.png" alt="Gatecode Technologies" width={184} height={92} priority />
+            <Image src="/images/gatecode.webp" alt="Gatecode Technologies" width={184} height={92} priority />
           </Link>
 
           <nav className="navbar__nav" aria-label="Main navigation">
@@ -112,9 +112,9 @@ export default function Navbar() {
           </nav>
 
           <div className="navbar__actions">
-            <button className="btn btn--primary" onClick={() => { setMenuOpen(false); setActiveDropdown(null); router.push('/get-started'); }}>
+            <Link href="/get-started" className="btn btn--primary" onClick={() => { setMenuOpen(false); setActiveDropdown(null); }}>
               Get Started
-            </button>
+            </Link>
           </div>
 
           <button
@@ -132,45 +132,47 @@ export default function Navbar() {
 
       {menuOpen && <div className="navbar__overlay" onClick={() => setMenuOpen(false)} />}
 
-      <div className={`navbar__mobile-menu${menuOpen ? ' open' : ''}`} aria-hidden={!menuOpen}>
-        {navLinks.map(link => (
-          <div key={link.label} className="navbar__mobile-item">
-            {link.hasDropdown ? (
-              <>
-                <button
-                  className={`navbar__mobile-link${activeMobileDropdown === link.label ? ' active' : ''}`}
-                  onClick={() => toggleMobileDropdown(link.label)}
-                >
-                  {link.label}
-                  <svg className={`navbar__dropdown-icon${activeMobileDropdown === link.label ? ' rotate' : ''}`} width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="6 9 12 15 18 9" />
-                  </svg>
-                </button>
-                {activeMobileDropdown === link.label && link.label === 'Services' && (
-                  <div className="navbar__mobile-dropdown">
-                    <ServicesDropdown isMobile onItemClick={() => setMenuOpen(false)} />
-                  </div>
-                )}
-                {activeMobileDropdown === link.label && link.label === 'Company' && (
-                  <div className="navbar__mobile-dropdown">
-                    <CompanyDropdown isMobile onItemClick={() => setMenuOpen(false)} />
-                  </div>
-                )}
-                {activeMobileDropdown === link.label && link.label === 'Technical Expertise' && (
-                  <div className="navbar__mobile-dropdown">
-                    <TechnicalExpertiseDropdown isMobile onItemClick={() => setMenuOpen(false)} />
-                  </div>
-                )}
-              </>
-            ) : (
-              <Link href={link.path} className="navbar__mobile-link" onClick={() => setMenuOpen(false)}>{link.label}</Link>
-            )}
+      {menuOpen && (
+        <div className="navbar__mobile-menu open" aria-hidden={false}>
+          {navLinks.map(link => (
+            <div key={link.label} className="navbar__mobile-item">
+              {link.hasDropdown ? (
+                <>
+                  <button
+                    className={`navbar__mobile-link${activeMobileDropdown === link.label ? ' active' : ''}`}
+                    onClick={() => toggleMobileDropdown(link.label)}
+                  >
+                    {link.label}
+                    <svg className={`navbar__dropdown-icon${activeMobileDropdown === link.label ? ' rotate' : ''}`} width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                  </button>
+                  {activeMobileDropdown === link.label && link.label === 'Services' && (
+                    <div className="navbar__mobile-dropdown">
+                      <ServicesDropdown isMobile onItemClick={() => setMenuOpen(false)} />
+                    </div>
+                  )}
+                  {activeMobileDropdown === link.label && link.label === 'Company' && (
+                    <div className="navbar__mobile-dropdown">
+                      <CompanyDropdown isMobile onItemClick={() => setMenuOpen(false)} />
+                    </div>
+                  )}
+                  {activeMobileDropdown === link.label && link.label === 'Technical Expertise' && (
+                    <div className="navbar__mobile-dropdown">
+                      <TechnicalExpertiseDropdown isMobile onItemClick={() => setMenuOpen(false)} />
+                    </div>
+                  )}
+                </>
+              ) : (
+                <Link href={link.path} className="navbar__mobile-link" onClick={() => setMenuOpen(false)}>{link.label}</Link>
+              )}
+            </div>
+          ))}
+          <div className="navbar__mobile-actions">
+            <Link href="/get-started" className="btn btn--primary" onClick={() => setMenuOpen(false)}>Get Started</Link>
           </div>
-        ))}
-        <div className="navbar__mobile-actions">
-          <button className="btn btn--primary" onClick={() => { setMenuOpen(false); router.push('/get-started'); }}>Get Started</button>
         </div>
-      </div>
+      )}
     </>
   );
 }

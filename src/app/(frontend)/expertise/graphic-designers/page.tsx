@@ -27,7 +27,7 @@ const HeroSectionWD = () => {
     return (
         <section
             className="wd-hero-section"
-            style={{ backgroundImage: 'url("/images/Rectangle 305.jpg")' }}
+            style={{ backgroundImage: 'url("/images/Rectangle 305.webp")' }}
         >
             <div className="wd-hero-overlay"></div>
 
@@ -51,7 +51,7 @@ const HeroSectionWD = () => {
 
                 <div className="wd-hero-right">
                     <Image
-                        src="/images/Rectangle 305.jpg"
+                        src="/images/Rectangle 305.webp"
                         alt="Creative Graphic Design and Branding Services by Gatecode Technologies"
                         width={500}
                         height={400}
@@ -78,42 +78,42 @@ const IntroText = () => {
 // ==================== WhatWeOffer Component (Updated for Graphic Designer) ====================
 const services = [
     {
-        icon: "/images/icon1.png",
+        icon: "/images/icon1.webp",
         title: "Logo Design & Branding",
         description: "Unique and memorable logos for various industries.",
     },
     {
-        icon: "/images/icon2.png",
+        icon: "/images/icon2.webp",
         title: "Social Media Design",
         description: "Engaging posts, banners, and creative designs to boost your online presence.",
     },
     {
-        icon: "/images/icon3.png",
+        icon: "/images/icon3.webp",
         title: "Banner & Poster Design",
         description: "Eye-catching banners and posters for marketing, promotions, and events.",
     },
     {
-        icon: "/images/icon4.png",
+        icon: "/images/icon4.webp",
         title: "Packaging Design",
         description: "Creative packaging designs that attract customers and enhance product appeal.",
     },
     {
-        icon: "/images/icon5.png",
+        icon: "/images/icon5.webp",
         title: "Brochure & Flyer Design",
         description: "Professional brochures and flyers for effective marketing communication.",
     },
     {
-        icon: "/images/icon6.png",
+        icon: "/images/icon6.webp",
         title: "Business Card Design",
         description: "Modern and professional business card designs that leave a lasting impression.",
     },
     {
-        icon: "/images/icon7.png",
+        icon: "/images/icon7.webp",
         title: "Motion Graphics",
         description: "Create animations and motion visuals for digital marketing and branding.",
     },
     {
-        icon: "/images/icon8.png",
+        icon: "/images/icon8.webp",
         title: "Ad Creatives",
         description: "High-converting advertisement designs for online and offline campaigns.",
     },
@@ -175,27 +175,27 @@ const WhatWeOffer = () => {
 // ==================== WhyChoose Component (Updated for Graphic Designer) ====================
 const chooseData = [
     {
-        image: "/images/img1.jpg",
+        image: "/images/img1.webp",
         title: "Creative and Unique Design Concepts",
     },
     {
-        image: "/images/img2.jpg",
+        image: "/images/img2.webp",
         title: "Strong Branding Focus",
     },
     {
-        image: "/images/img3.jpg",
+        image: "/images/img3.webp",
         title: "High-Quality Visual Output",
     },
     {
-        image: "/images/img4.jpg",
+        image: "/images/img4.webp",
         title: "Fast Delivery And Revisions",
     },
     {
-        image: "/images/img5.jpg",
+        image: "/images/img5.webp",
         title: "Trend-Based Modern Designs",
     },
     {
-        image: "/images/img6.jpg",
+        image: "/images/img6.webp",
         title: "Client-Focused Approach",
     },
 ];
@@ -304,7 +304,7 @@ const DevelopmentProcess = () => {
                     <video
                         className="dev-video-desktop"
                         src="/videos/Graphic Designer_video.mp4"
-                        poster="/images/2.jpg"
+                        poster="/images/2.webp"
                         autoPlay
                         loop
                         muted
@@ -314,7 +314,7 @@ const DevelopmentProcess = () => {
                     <video
                         className="dev-video-mobile"
                         src="/videos/3rd.mp4"
-                        poster="/images/2.jpg"
+                        poster="/images/2.webp"
                         autoPlay
                         loop
                         muted
@@ -472,8 +472,8 @@ const GraphicDesignerPage = () => {
         name: 'Gatecode Technologies Graphic Design Process',
         description: 'Watch our 6-step creative graphic design process covering Brand Research, Visual Concepts, Logo & Asset Creation, Revisions, Final Export, and Brand Delivery at Gatecode Technologies.',
         thumbnailUrl: [
-            'https://gatecode.in/images/2.jpg',
-            'https://gatecode.in/images/digitalbg1.png',
+            'https://gatecode.in/images/2.webp',
+            'https://gatecode.in/images/digitalbg1.webp',
         ],
         uploadDate: '2026-01-15T08:00:00+05:30',
         contentUrl: 'https://gatecode.in/videos/Graphic%20Designer_video.mp4',

@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import './CareerSuccess.css';
 import { 
   FiLayers, 
@@ -29,7 +30,14 @@ const CareerSuccess = () => {
       <div className="container career-success__container">
         <div className="career-success__left">
           <div className="tech-image">
-            <img src="/images/moto_img.png" alt="Next Generation Career Success and Tech Solutions - Gatecode Technologies" />
+            <Image 
+              src="/images/moto_img.webp" 
+              alt="Next Generation Career Success and Tech Solutions - Gatecode Technologies" 
+              width={450} 
+              height={300} 
+              sizes="(max-width: 768px) 100vw, 450px"
+              style={{ width: '100%', height: 'auto' }}
+            />
           </div>
           <h2 className="career-success__title">From Learning to Career Success</h2>
           <p className="career-success__subtitle">

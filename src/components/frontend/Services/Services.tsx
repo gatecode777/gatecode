@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import './Services.css';
 
 const servicesData = [
@@ -8,31 +9,36 @@ const servicesData = [
     title: 'WEB DEVELOPMENT',
     image: '/images/Gatecode images/pexels-mizunokozuki-12899156.webp',
     className: 'card-1',
-    link: '/services/web-development'
+    link: '/services/web-development',
+    alt: 'Professional website development services and coding'
   },
   {
     title: 'BPO SERVICES',
     image: '/images/Gatecode images/pexels-yankrukov-8867427.webp',
     className: 'card-2',
-    link: '/services/bpo-services'
+    link: '/services/bpo-services',
+    alt: 'Professional BPO and customer support services'
   },
   {
     title: 'ACCOUNTING',
     image: '/images/Gatecode images/pexels-leeloothefirst-7247404.webp',
     className: 'card-3',
-    link: '/services/accounting'
+    link: '/services/accounting',
+    alt: 'Business accounting and financial management services'
   },
   {
     title: 'DATA MANAGEMENT',
     image: '/images/Gatecode images/Data management.webp',
     className: 'card-4',
-    link: '/services/data-management'
+    link: '/services/data-management',
+    alt: 'Professional data management and business analytics services'
   },
   {
     title: 'DIGITAL MARKETING',
     image: '/images/Gatecode images/Digital marketing .webp',
     className: 'card-5',
-    link: '/services/digital-marketing'
+    link: '/services/digital-marketing',
+    alt: 'Digital marketing services for business growth'
   }
 ];
 
@@ -51,7 +57,13 @@ const Services = () => {
         {servicesData.map((service, index) => (
           <Link key={index} href={service.link} className={`service-card ${service.className}`}>
             <div className="service-card-img">
-              <img src={service.image} alt={`${service.title} Solutions - Gatecode Technologies`} />
+              <Image 
+                src={service.image} 
+                alt={service.alt} 
+                fill 
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 250px" 
+                style={{ objectFit: 'cover' }} 
+              />
               <div className="service-card-overlay"></div>
             </div>
             <h3 className="service-card-title">{service.title}</h3>

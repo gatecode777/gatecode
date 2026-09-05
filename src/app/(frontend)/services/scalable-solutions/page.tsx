@@ -12,7 +12,7 @@ const DigitalHero = () => {
     <section className="dm-hero">
       <div
         className="dm-hero-bg"
-        style={{ backgroundImage: `url('/images/Rectangle 228 (5).png')` }}
+        style={{ backgroundImage: `url('/images/Rectangle 228 (5).webp')` }}
       />
       <div className="dm-container dm-hero-content">
         <div className="dm-hero-text-wrapper">
@@ -38,10 +38,10 @@ const DigitalAbout = () => {
     <section className="dm-about-section">
       <div className="dm-container">
         <p className="dm-about-text">
-          At Gatecode Technologies Pvt. Ltd., we develop smart and scalable software solutions tailored to evolving business needs. 
-          Our approach focuses on combining advanced technology, automation, and user-centric design to create systems that simplify 
-          complex processes and improve productivity. Whether you need custom business software, enterprise solutions, or cloud-based 
-          applications, we ensure every solution is built to scale, adapt, and perform efficiently as your business grows.
+          At Gatecode Technologies Pvt. Ltd., we develop software solutions based on your business processes, goals, and day-to-day requirements. We first understand what you need the software to solve, then plan the features and technology around those needs.
+        </p>
+        <p className="dm-about-text" style={{ marginTop: '16px' }}>
+          From custom business software and enterprise applications to cloud-based solutions and automation, we build systems that can simplify repetitive tasks, organize information, and improve everyday workflows. We focus on practical functionality, easy usability, security, and reliable performance so the software remains useful as your business changes.
         </p>
       </div>
     </section>
@@ -112,12 +112,12 @@ const DigitalServices = () => {
 
 // ==================== DigitalWhyChoose Component (Updated for Smart & Scalable Software Solutions) ====================
 const benefits = [
-  'Scalable solutions for business growth',
-  'Improved efficiency and productivity',
-  'Automation-driven operations',
-  'Secure and reliable performance',
-  'Seamless integration with existing systems',
-  'Future-ready technology solutions',
+  'Built Around Your Business Needs',
+  'Secure & Reliable Performance',
+  'Improved Efficiency & Productivity',
+  'Easy Integration With Existing Systems',
+  'Automation for Routine Tasks',
+  'Scalable for Future Growth',
 ];
 
 const DigitalWhyChoose = () => {
@@ -125,12 +125,10 @@ const DigitalWhyChoose = () => {
     <section className="dm-why-choose-section">
       <div className="dm-container">
         <h2 className="dm-section-title dm-section-header-left">
-          Why Choose Smart & Scalable Solutions
+          Why Choose Our Smart & Scalable Software Solutions?
         </h2>
         <p className="dm-about-text dm-about-text-left">
-          Modern businesses require flexible and intelligent systems that can adapt to changing demands. Our smart and scalable software 
-          solutions are designed to improve efficiency, reduce operational complexity, and support sustainable business growth through 
-          advanced technologies and strategic development approaches.
+          Every business has its own way of working, so software should fit your processes—not the other way around. At Gatecode Technologies Pvt. Ltd., we focus on understanding your requirements first and then building software that is practical, reliable, and easy to use. Our solutions are designed to improve daily operations, connect existing systems, and support your business as it grows.
         </p>
 
         <div className="dm-why-choose-layout">
@@ -147,7 +145,7 @@ const DigitalWhyChoose = () => {
 
           <div className="dm-why-choose-image">
             <Image
-              src="/images/path.png"
+              src="/images/path.webp"
               alt="Smart and Scalable Software Architecture Flow - Gatecode Technologies"
               className="dm-path-illustration"
               width={500}
@@ -238,11 +236,11 @@ const DigitalIndustries = () => {
           </div>
 
           <div className="dm-image-grid">
-            <Image src="/images/1.jpg" alt="E-Commerce and Retail Scalable Architecture - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
-            <Image src="/images/2.jpg" alt="Healthcare Patient Management System Solutions - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
-            <Image src="/images/3.jpg" alt="Education and E-Learning Platform Operations - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
-            <Image src="/images/4.jpg" alt="Corporate Enterprise Automation Software - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
-            <Image src="/images/5.jpg" alt="Logistics and Operations Workflow Systems - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
+            <Image src="/images/1.webp" alt="E-Commerce and Retail Scalable Architecture - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
+            <Image src="/images/2.webp" alt="Healthcare Patient Management System Solutions - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
+            <Image src="/images/3.webp" alt="Education and E-Learning Platform Operations - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
+            <Image src="/images/4.webp" alt="Corporate Enterprise Automation Software - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
+            <Image src="/images/5.webp" alt="Logistics and Operations Workflow Systems - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
           </div>
         </div>
       </div>

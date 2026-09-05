@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import './WhatMakesDifferent.css';
 
 const WhatMakesDifferent = () => {
@@ -14,21 +15,30 @@ const WhatMakesDifferent = () => {
 
         <div className="wmd-images-row">
           <div className="wmd-img-card wmd-img-card--side">
-            <img
-              src="https://img.freepik.com/free-vector/data-points-concept-illustration_114360-3001.jpg?w=600"
+            <Image
+              src="/images/wmd-data-points.webp"
               alt="Custom Software and Digital Interaction Solutions - Gatecode Technologies"
+              width={220}
+              height={170}
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
             />
           </div>
           <div className="wmd-img-card wmd-img-card--center">
-            <img
-              src="https://img.freepik.com/free-vector/ui-ux-designers-isometric-composition-with-small-people-creating-custom-design-web-site-3d-vector-illustration_1284-68939.jpg?w=740"
+            <Image
+              src="/images/wmd-ui-ux-design.webp"
               alt="UI UX Design Services - Gatecode Technologies"
+              width={290}
+              height={230}
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
             />
           </div>
           <div className="wmd-img-card wmd-img-card--side">
-            <img
-              src="https://img.freepik.com/free-vector/home-office-concept-illustration_114360-849.jpg?w=600"
+            <Image
+              src="/images/wmd-home-office.webp"
               alt="Enterprise Analytics and Operations Management Workspace - Gatecode Technologies"
+              width={220}
+              height={170}
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
             />
           </div>
         </div>

@@ -12,7 +12,7 @@ const DigitalHero = () => {
     <section className="dm-hero">
       <div
         className="dm-hero-bg"
-        style={{ backgroundImage: `url('/images/Rectangle 228 (17).png')` }}
+        style={{ backgroundImage: `url('/images/Rectangle 228 (17).webp')` }}
       />
       <div className="dm-container dm-hero-content">
         <div className="dm-hero-text-wrapper">
@@ -146,7 +146,7 @@ const DigitalWhyChoose = () => {
 
           <div className="dm-why-choose-image">
             <Image
-              src="/images/path.png"
+              src="/images/path.webp"
               alt="Dedicated Support and Business Assistance Lifecycle - Gatecode Technologies"
               className="dm-path-illustration"
               width={500}
@@ -237,11 +237,11 @@ const DigitalIndustries = () => {
           </div>
 
           <div className="dm-image-grid">
-            <Image src="/images/1.jpg" alt="E-Commerce Customer Support Helpdesk - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
-            <Image src="/images/2.jpg" alt="Healthcare Support Patient Helpdesk - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
-            <Image src="/images/3.jpg" alt="Finance and Accounting Customer Support - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
-            <Image src="/images/4.jpg" alt="Education Center Student Helpdesk - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
-            <Image src="/images/5.jpg" alt="Corporate Business Helpdesk Operations - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
+            <Image src="/images/1.webp" alt="E-Commerce Customer Support Helpdesk - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
+            <Image src="/images/2.webp" alt="Healthcare Support Patient Helpdesk - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
+            <Image src="/images/3.webp" alt="Finance and Accounting Customer Support - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
+            <Image src="/images/4.webp" alt="Education Center Student Helpdesk - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
+            <Image src="/images/5.webp" alt="Corporate Business Helpdesk Operations - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
           </div>
         </div>
       </div>

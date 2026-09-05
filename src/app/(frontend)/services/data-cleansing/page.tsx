@@ -12,7 +12,7 @@ const DigitalHero = () => {
     <section className="dm-hero">
       <div
         className="dm-hero-bg"
-        style={{ backgroundImage: `url('/images/data-management.png')` }}
+        style={{ backgroundImage: `url('/images/data-management.webp')` }}
       />
       <div className="dm-container dm-hero-content">
         <div className="dm-hero-text-wrapper">
@@ -145,7 +145,7 @@ const DigitalWhyChoose = () => {
 
           <div className="dm-why-choose-image">
             <Image
-              src="/images/path.png"
+              src="/images/path.webp"
               alt="Database Cleansing and Data Integrity Audit Flow - Gatecode Technologies"
               className="dm-path-illustration"
               width={500}
@@ -236,11 +236,11 @@ const DigitalIndustries = () => {
           </div>
 
           <div className="dm-image-grid">
-            <Image src="/images/1.jpg" alt="E-Commerce Customer Directory Data Cleansing - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
-            <Image src="/images/2.jpg" alt="Healthcare Medical Records Verification - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
-            <Image src="/images/3.jpg" alt="Education Center Student Enrollment Validation - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
-            <Image src="/images/4.jpg" alt="Finance and Accounting Transaction Record Cleansing - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
-            <Image src="/images/5.jpg" alt="Real Estate Listing Database Standardization - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
+            <Image src="/images/1.webp" alt="E-Commerce Customer Directory Data Cleansing - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
+            <Image src="/images/2.webp" alt="Healthcare Medical Records Verification - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
+            <Image src="/images/3.webp" alt="Education Center Student Enrollment Validation - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
+            <Image src="/images/4.webp" alt="Finance and Accounting Transaction Record Cleansing - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
+            <Image src="/images/5.webp" alt="Real Estate Listing Database Standardization - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
           </div>
         </div>
       </div>

@@ -10,10 +10,16 @@ import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 const DigitalHero = () => {
   return (
     <section className="dm-hero">
-      <div
-        className="dm-hero-bg"
-        style={{ backgroundImage: `url('/images/digitalbg1.png')` }}
-      />
+      <div className="dm-hero-bg">
+        <Image
+          src="/images/digitalbg1.webp"
+          alt="Website design firm providing bespoke, dynamic website services"
+          fill
+          priority
+          sizes="100vw"
+          style={{ objectFit: 'cover', objectPosition: 'center' }}
+        />
+      </div>
       <div className="dm-container dm-hero-content">
         <div className="dm-hero-text-wrapper">
           <h1 className="dm-hero-title">
@@ -50,14 +56,54 @@ const DigitalAbout = () => {
 
 // ==================== DigitalServices Component (Updated for Web Development) ====================
 const services = [
-  { title: 'Custom Website Development', desc: 'Tailor-made websites designed to meet your unique business needs and objectives.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'Responsive Web Design', desc: 'Multi-briefly and responsive websites that provide smooth experiences across all devices.', color: '#fbff06', text: '#000000' },
-  { title: 'E-Commerce Development', desc: 'Scalable e-commerce solutions with secure payment integration and seamless shopping experiences.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'CMS Development', desc: 'Easy-to-manage content management systems for efficient website updates and control.', color: '#fbff06', text: '#000000' },
-  { title: 'Web Application Development', desc: 'Dynamic and scalable web applications designed to streamline business operations.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'UI/UX Focused Development', desc: 'User-centric interfaces that enhance engagement, usability, and customer experience.', color: '#fbff06', text: '#000000' },
-  { title: 'API & Third-Party Integration', desc: 'Seamless integration of payment gateways, APIs, and external business tools.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'Website Maintenance & Support', desc: 'Continuous monitoring, updates, security improvements, and technical support.', color: '#fbff06', text: '#000000' },
+  { 
+    title: 'Custom Website Development', 
+    desc: 'Websites built around your business goals, with the right features, structure, and flexibility to support your growth.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'Responsive Web Design', 
+    desc: 'Mobile-friendly websites that look great and work smoothly across phones, tablets, and desktop devices.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
+  { 
+    title: 'E-Commerce Development', 
+    desc: 'Scalable online stores with product management, secure payments, and a simple shopping experience for your customers.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'CMS Development', 
+    desc: 'Easy-to-manage websites that let you update pages, content, and important information without technical help.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
+  { 
+    title: 'Web Application Development', 
+    desc: 'Custom web applications designed to simplify business processes, improve workflows, and handle your specific requirements.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'UI/UX Focused Development', 
+    desc: 'Clean, user-friendly interfaces with simple navigation that help visitors find information and take action easily.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
+  { 
+    title: 'API & Third-Party Integration', 
+    desc: 'Connect your website with APIs, payment gateways, CRM systems, and other tools for smoother business operations.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'Website Maintenance & Support', 
+    desc: 'Ongoing updates, bug fixes, performance checks, and technical support to keep your website secure and running smoothly.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
 ];
 
 const DigitalServices = () => {
@@ -85,6 +131,11 @@ const DigitalServices = () => {
     <section className="dm-services-section" ref={sectionRef}>
       <div className="dm-container">
         <h2 className="dm-section-title">Our Web Development Services</h2>
+        <p className="dm-services-subtitle">
+          Every business has different needs. We build websites around your goals, customers, and requirements,
+          <br className="dm-services-desktop-br" />
+          with a focus on performance, usability, security, and future growth.
+        </p>
         <div className="dm-services-grid">
           {services.map((service, index) => (
             <div
@@ -112,12 +163,12 @@ const DigitalServices = () => {
 
 // ==================== DigitalWhyChoose Component (Updated for Web Development) ====================
 const benefits = [
-  'Responsive and mobile-friendly designs',
-  'SEO-friendly website structure',
-  'Fast loading and optimized performance',
-  'Secure and scalable development',
-  'User-focused experience and navigation',
-  'Ongoing support and maintenance',
+  'Unique, Brand-Focused Design',
+  'Built to Grow With Your Business',
+  'SEO-Friendly Structure',
+  'Fast and Reliable Performance',
+  'Secure and Dependable',
+  'Designed to Engage and Convert',
 ];
 
 const DigitalWhyChoose = () => {
@@ -128,9 +179,10 @@ const DigitalWhyChoose = () => {
           Why Choose Our Web Development Services
         </h2>
         <p className="dm-about-text dm-about-text-left">
-          We combine innovative design, advanced technologies, and strategic development approaches to deliver websites that are 
-          visually appealing, highly functional, and performant across all devices. Our team focuses on creating scalable digital 
-          solutions that improve user engagement, strengthen brand presence, and support long-term business success.
+          A template website may look good at first, but it often comes with limitations as your business grows. You may find it difficult to add new features, improve performance, or create an experience that truly represents your brand.
+        </p>
+        <p className="dm-about-text dm-about-text-left" style={{ marginTop: '16px' }}>
+          At Gatecode Technologies, we take a different approach. We have developed custom websites for <strong>100+ businesses</strong> across different industries, including schools, fintech, e-commerce, manufacturing, and more. Instead of starting with a ready-made theme, we first understand your business, goals, and customers. This helps us build a website that fits your needs today and can grow with your business in the future.
         </p>
 
         <div className="dm-why-choose-layout">
@@ -147,7 +199,7 @@ const DigitalWhyChoose = () => {
 
           <div className="dm-why-choose-image">
             <Image
-              src="/images/path.png"
+              src="/images/path.webp"
               alt="Custom Web Development Services Flow Illustration - Gatecode Technologies"
               className="dm-path-illustration"
               width={500}
@@ -162,12 +214,30 @@ const DigitalWhyChoose = () => {
 
 // ==================== DigitalProcess Component (Updated for Web Development) ====================
 const processSteps = [
-  { title: 'Requirement Analysis', desc: 'Understanding your business goals and project requirements.' },
-  { title: 'Planning & Strategy', desc: 'Creating a structured roadmap and selecting the right technologies.' },
-  { title: 'UI/UX Design', desc: 'Designing intuitive and visually engaging user interfaces.' },
-  { title: 'Development', desc: 'Building responsive and high-performance web solutions.' },
-  { title: 'Testing & Quality Assurance', desc: 'Ensuring functionality, responsiveness, and security.' },
-  { title: 'Deployment & Support', desc: 'Launching the website and providing ongoing support.' },
+  {
+    title: 'Requirement Analysis',
+    desc: 'We discuss your goals, audience, features, and project requirements to understand exactly what your website needs.',
+  },
+  {
+    title: 'Planning & Strategy',
+    desc: 'We plan the website structure, features, and technology to keep development focused and avoid unnecessary changes.',
+  },
+  {
+    title: 'UI/UX Design',
+    desc: 'We create clean layouts and simple navigation with your users, content, and mobile experience in mind.',
+  },
+  {
+    title: 'Development',
+    desc: 'Our developers build the website using suitable technologies, focusing on performance, functionality, and responsive design.',
+  },
+  {
+    title: 'Testing & Quality Assurance',
+    desc: 'We test features, forms, links, responsiveness, and performance to identify and fix issues before launch.',
+  },
+  {
+    title: 'Deployment & Support',
+    desc: 'After final checks, we launch the website and provide support for updates, fixes, performance, and future requirements.',
+  },
 ];
 
 const DigitalProcess = () => {
@@ -195,6 +265,11 @@ const DigitalProcess = () => {
     <section className="dm-process-section" ref={sectionRef}>
       <div className="dm-container">
         <h2 className="dm-section-title">Our Development Process</h2>
+        <p className="dm-process-subtitle">
+          We follow a clear development process to understand your needs, build the right solution,
+          <br className="dm-process-desktop-br" />
+          and deliver a website that works smoothly for your business.
+        </p>
         <div className="dm-process-grid">
           {processSteps.map((item, index) => (
             <div key={index} className="dm-process-item">
@@ -204,6 +279,11 @@ const DigitalProcess = () => {
               </div>
             </div>
           ))}
+        </div>
+        <div className="dm-process-closing">
+          <p>
+            From planning to launch, we focus on building a reliable website that is easy to use and ready to grow with your business.
+          </p>
         </div>
       </div>
     </section>
@@ -238,11 +318,11 @@ const DigitalIndustries = () => {
           </div>
 
           <div className="dm-image-grid">
-            <Image src="/images/1.jpg" alt="E-Commerce and Retail Web Development - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
-            <Image src="/images/2.jpg" alt="Restaurant and Food Ordering Platforms - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
-            <Image src="/images/3.jpg" alt="Corporate Business Digital Solutions - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
-            <Image src="/images/4.jpg" alt="Healthcare and Wellness Applications - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
-            <Image src="/images/5.jpg" alt="Education and Training E-Learning Portals - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
+            <Image src="/images/1.webp" alt="E-Commerce and Retail Web Development - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
+            <Image src="/images/2.webp" alt="Restaurant and Food Ordering Platforms - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
+            <Image src="/images/3.webp" alt="Corporate Business Digital Solutions - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
+            <Image src="/images/4.webp" alt="Healthcare and Wellness Applications - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
+            <Image src="/images/5.webp" alt="Education and Training E-Learning Portals - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
           </div>
         </div>
       </div>

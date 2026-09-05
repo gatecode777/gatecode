@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 import './VisionMission.css';
 
 interface VisionMissionBoxProps {
@@ -13,7 +14,15 @@ const VisionMissionBox = ({ title, imageSrc, description }: VisionMissionBoxProp
   <div className="vm-card">
     <h2 className="vm-title">{title}</h2>
     <div className="vm-image-container">
-      <img src={imageSrc} alt={`${title} Statement - Gatecode Technologies`} className="vm-image" />
+      <Image 
+        src={imageSrc} 
+        alt={`${title} Statement - Gatecode Technologies`} 
+        className="vm-image" 
+        width={600} 
+        height={300} 
+        sizes="(max-width: 768px) 100vw, 600px"
+        style={{ width: '100%', height: 'auto', objectFit: 'cover' }} 
+      />
     </div>
     <p className="vm-text">{description}</p>
   </div>
@@ -48,12 +57,12 @@ const VisionMission = () => {
   const boxesData = [
     {
       title: 'VISION',
-      imageSrc: 'https://ik.imagekit.io/zp0tch54w/GATECODE%20IMAGES/Rectangle%2071.png',
+      imageSrc: '/images/rectangle-71.webp',
       description: 'We envision a future where businesses seamlessly scale and succeed through smart technology, streamlined operations, and data-driven decisions. Gatecode Technologies Pvt. Ltd. aims to lead this transformation by providing end-to-end business solutions that enhance productivity, reduce costs, and create long-term value for our clients worldwide.',
     },
     {
       title: 'MISSION',
-      imageSrc: 'https://ik.imagekit.io/zp0tch54w/GATECODE%20IMAGES/Rectangle%2072.png',
+      imageSrc: '/images/rectangle-72.webp',
       description: 'At Gatecode Technologies Pvt. Ltd., our mission is to empower businesses with innovative, reliable, and cost-effective solutions by combining technology, expertise, and strategic insight. We are committed to delivering excellence across IT services, BPO operations, Back Office Services, consultancy, digital marketing, and accounting—ensuring accuracy, efficiency, scalability, and measurable results for every client.',
     },
   ];

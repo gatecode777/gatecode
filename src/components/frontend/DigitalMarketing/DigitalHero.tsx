@@ -6,7 +6,7 @@ const DigitalHero = () => {
     <section className="dm-hero">
       <div
         className="dm-hero-bg"
-        style={{ backgroundImage: `url('/images/digitalbg1.png')` }}
+        style={{ backgroundImage: `url('/images/digitalbg1.webp')` }}
       />
       <div className="dm-container dm-hero-content">
         <div className="dm-hero-text-wrapper">

@@ -12,7 +12,7 @@ const DigitalHero = () => {
     <section className="dm-hero">
       <div
         className="dm-hero-bg"
-        style={{ backgroundImage: `url('/images/Rectangle 228.png')` }}
+        style={{ backgroundImage: `url('/images/Rectangle 228.webp')` }}
       />
       <div className="dm-container dm-hero-content">
         <div className="dm-hero-text-wrapper">
@@ -38,9 +38,7 @@ const DigitalAbout = () => {
     <section className="dm-about-section">
       <div className="dm-container">
         <p className="dm-about-text">
-          At Gatecode Technologies Pvt. Ltd., we create modern and user-centric UI designs that focus on clarity, aesthetics, and usability. 
-          Our goal is to design interfaces that not only look visually appealing but also provide smooth and engaging user interactions. 
-          Whether it's a website, mobile app, or software platform, we design interfaces that reflect your brand and deliver a seamless digital experience.
+          At Gatecode Technologies Pvt. Ltd., we believe your digital presence should be as intuitive as it is beautiful. We go beyond basic aesthetics to craft user-centric UI designs where absolute clarity meets flawless functionality. Whether we are shaping a dynamic website, an engaging mobile app, or a complex software platform, our expert team focuses on eliminating user friction and designing smooth, meaningful interactions. By perfectly aligning our creative precision with your unique brand identity, we deliver seamless digital experiences that not only captivate your audience but build immediate trust and drive real business results.
         </p>
       </div>
     </section>
@@ -111,12 +109,11 @@ const DigitalServices = () => {
 
 // ==================== DigitalWhyChoose Component (Updated for UI Design Services) ====================
 const benefits = [
-  'Visually appealing and modern design',
-  'Improved user engagement',
-  'Consistent and scalable design systems',
-  'Better usability and navigation',
-  'Responsive and device-friendly interfaces',
-  'Customized design solutions',
+  'Aesthetics with Purpose',
+  'Frictionless Navigation',
+  'Built for Growth',
+  'Flawless on Every Screen',
+  'Tailored to Your Goals',
 ];
 
 const DigitalWhyChoose = () => {
@@ -124,18 +121,16 @@ const DigitalWhyChoose = () => {
     <section className="dm-why-choose-section">
       <div className="dm-container">
         <h2 className="dm-section-title dm-section-header-left">
-          Why Choose Our UI Design Services
+          Why Partner With Us for UI Design?
         </h2>
         <p className="dm-about-text dm-about-text-left">
-          We focus on creating visually appealing and user-friendly interfaces that enhance user interaction and satisfaction. 
-          Our team combines creativity, usability principles, and modern design trends to deliver UI designs that improve engagement 
-          and support business growth.
+          We understand that your website or app is often the first impression your business makes. That’s why we don't just focus on making things look &quot;pretty&quot;—we design intuitive, human-centered interfaces that actually drive business results. By blending bold creativity with proven usability principles, our team crafts digital spaces where your customers feel instantly comfortable. When you work with us, you aren’t just getting a design file; you’re investing in a strategic digital experience built to capture attention, keep users engaged, and support your long-term growth.
         </p>
 
         <div className="dm-why-choose-layout">
           <div className="dm-why-choose-content">
             <h3 className="dm-benefits-title">
-              Key Benefits
+              The Value We Bring to Your Project
             </h3>
             <ul className="dm-benefits-list">
               {benefits.map((item, i) => (
@@ -146,7 +141,7 @@ const DigitalWhyChoose = () => {
 
           <div className="dm-why-choose-image">
             <Image
-              src="/images/path.png"
+              src="/images/path.webp"
               alt="User Interface UI Design Workflow Layout - Gatecode Technologies"
               className="dm-path-illustration"
               width={500}
@@ -236,11 +231,11 @@ const DigitalIndustries = () => {
           </div>
 
           <div className="dm-image-grid">
-            <Image src="/images/1.jpg" alt="E-Commerce and Retail Web UI Design - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
-            <Image src="/images/2.jpg" alt="Healthcare Patient Management System UI Design - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
-            <Image src="/images/3.jpg" alt="Education and LMS Portal UI Design - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
-            <Image src="/images/4.jpg" alt="Corporate Enterprise Software User Interface - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
-            <Image src="/images/5.jpg" alt="Finance and Accounting Application UI Design - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
+            <Image src="/images/1.webp" alt="E-Commerce and Retail Web UI Design - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
+            <Image src="/images/2.webp" alt="Healthcare Patient Management System UI Design - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
+            <Image src="/images/3.webp" alt="Education and LMS Portal UI Design - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
+            <Image src="/images/4.webp" alt="Corporate Enterprise Software User Interface - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
+            <Image src="/images/5.webp" alt="Finance and Accounting Application UI Design - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
           </div>
         </div>
       </div>

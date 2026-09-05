@@ -369,7 +369,7 @@ const ContactPage = () => {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Gatecode Technologies Pvt. Ltd.',
-    image: 'https://gatecode.in/images/logo.png',
+    image: 'https://gatecode.in/images/logo.webp',
     '@id': 'https://gatecode.in/#organization',
     url: 'https://gatecode.in',
     telephone: '+918502888838',
@@ -457,7 +457,7 @@ const ContactPage = () => {
           </div>
         </div>
         <Image
-          src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=2000&auto=format&fit=crop"
+          src="/images/contact-map-bg.webp"
           alt="Map Placeholder"
           className="map-placeholder-img"
           width={2000}

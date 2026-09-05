@@ -8,7 +8,7 @@ const capabilities = [
     heading: 'Project Planning & Strategy',
     body: 'We work closely with our clients to define clear objectives and develop comprehensive roadmaps for success. Our strategic approach ensures every project is aligned with your business goals and delivered on time.',
     list: ['Requirements Analysis & Discovery', 'Feasibility Studies & ROI Assessment', 'Resource Planning & Allocation', 'Risk Management & Mitigation'],
-    img: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=640&h=460&fit=crop',
+    img: '/images/cap-planning.webp',
     reverse: false,
   },
   {
@@ -16,7 +16,7 @@ const capabilities = [
     heading: 'Development & Delivery',
     body: 'Our agile delivery model ensures continuous progress, transparency, and adaptability throughout every phase — from initial design to final deployment and beyond.',
     list: ['Agile & Scrum Methodology', 'Continuous Integration & Deployment', 'Quality Assurance & Testing', 'Post-launch Support & Maintenance'],
-    img: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=640&h=460&fit=crop',
+    img: '/images/cap-delivery.webp',
     reverse: true,
   },
 ];
@@ -38,7 +38,7 @@ const AboutCapabilities = () => {
               </ul>
             </div>
             <div className="about-cap__image">
-              <img src={cap.img} alt={cap.heading} />
+              <img src={cap.img} alt={cap.heading} width={640} height={460} loading="lazy" />
             </div>
           </div>
         ))}

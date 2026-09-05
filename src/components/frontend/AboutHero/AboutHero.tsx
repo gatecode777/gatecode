@@ -7,7 +7,7 @@ const AboutHero = () => {
     <section className="about-hero">
       <div className="about-hero__container">
         <div className="about-hero__globe">
-          <img src="/images/globe.png" alt="Gatecode Technologies Global Business and Technology Network Globe" />
+          <img src="/images/globe.webp" alt="Gatecode Technologies Global Business and Technology Network Globe" width={450} height={450} />
         </div>
         <div className="about-hero__content">
           <p className="about-hero__eyebrow">ABOUT</p>

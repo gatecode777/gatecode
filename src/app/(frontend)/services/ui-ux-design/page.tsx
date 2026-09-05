@@ -12,7 +12,7 @@ const DigitalHero = () => {
     <section className="dm-hero">
       <div
         className="dm-hero-bg"
-        style={{ backgroundImage: `url('/images/Rectangle 228.png')` }}
+        style={{ backgroundImage: `url('/images/Rectangle 228.webp')` }}
       />
       <div className="dm-container dm-hero-content">
         <div className="dm-hero-text-wrapper">
@@ -38,10 +38,7 @@ const DigitalAbout = () => {
     <section className="dm-about-section">
       <div className="dm-container">
         <p className="dm-about-text">
-          At Gatecode Technologies Pvt. Ltd., we design modern and user-centric digital experiences that combine creativity, functionality, and usability. 
-          Our UI/UX design services focus on creating intuitive interfaces and seamless user journeys that improve customer engagement and satisfaction. 
-          From websites and mobile applications to dashboards and digital platforms, we craft visually appealing and highly functional designs tailored 
-          to your business goals and audience needs.
+          At Gatecode Technologies Pvt. Ltd., we believe great design goes beyond making things look beautiful—it’s about how it makes your users feel and act. We partner with you to craft UI/UX experiences that seamlessly blend striking creativity with effortless functionality. Whether we are designing a dynamic website, an engaging mobile app, or a complex data dashboard, our focus is on what truly matters: eliminating user friction and building intuitive journeys. By deeply understanding both your core business goals and your audience's behavior, we deliver digital platforms that don't just look impressive, but actively drive engagement, build trust, and deliver real results.
         </p>
       </div>
     </section>
@@ -112,12 +109,11 @@ const DigitalServices = () => {
 
 // ==================== DigitalWhyChoose Component (Updated for UI/UX Design Services) ====================
 const benefits = [
-  'User-focused and intuitive designs',
-  'Modern and visually appealing interfaces',
-  'Improved customer engagement and usability',
-  'Responsive designs for all devices',
-  'Consistent branding and user experience',
-  'Optimized user journeys and interactions',
+  'Intuitive, User-Centric Experiences',
+  'Higher Engagement & Retention',
+  'Flawless Across All Devices',
+  'Unified & Trusted Brand Identity',
+  'Optimized Conversion Journeys',
 ];
 
 const DigitalWhyChoose = () => {
@@ -125,18 +121,16 @@ const DigitalWhyChoose = () => {
     <section className="dm-why-choose-section">
       <div className="dm-container">
         <h2 className="dm-section-title dm-section-header-left">
-          Why Choose Our UI/UX Design Services
+          Why Partner With Us for UI/UX Design?
         </h2>
         <p className="dm-about-text dm-about-text-left">
-          We focus on creating designs that are not only visually appealing but also functional, user-friendly, and business-focused. 
-          Our design approach combines creativity, research, and usability to deliver engaging digital experiences that improve customer 
-          interaction, increase user retention, and strengthen brand identity.
+          We believe that great design is more than just making things look beautiful—it’s a powerful business tool. We don't just design screens; we engineer digital experiences that genuinely connect with your audience. By combining deep user research, creative vision, and proven usability principles, we craft intuitive interfaces that eliminate frustration. The result? Engaging digital journeys that not only strengthen your brand identity but actively boost customer retention and drive measurable business growth.
         </p>
 
         <div className="dm-why-choose-layout">
           <div className="dm-why-choose-content">
             <h3 className="dm-benefits-title">
-              Key Benefits
+              Key Benefits We Deliver
             </h3>
             <ul className="dm-benefits-list">
               {benefits.map((item, i) => (
@@ -147,7 +141,7 @@ const DigitalWhyChoose = () => {
 
           <div className="dm-why-choose-image">
             <Image
-              src="/images/path.png"
+              src="/images/path.webp"
               alt="User Centric UI UX Design Workflow - Gatecode Technologies"
               className="dm-path-illustration"
               width={500}
@@ -238,11 +232,11 @@ const DigitalIndustries = () => {
           </div>
 
           <div className="dm-image-grid">
-            <Image src="/images/1.jpg" alt="E-Commerce and Retail UI UX Design - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
-            <Image src="/images/2.jpg" alt="Healthcare and Medical Systems UI UX Design - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
-            <Image src="/images/3.jpg" alt="Real Estate Platforms UI UX Design - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
-            <Image src="/images/4.jpg" alt="Logistics and Shipping Systems User Interface - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
-            <Image src="/images/5.jpg" alt="Education and E-Learning User Experience Design - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
+            <Image src="/images/1.webp" alt="E-Commerce and Retail UI UX Design - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
+            <Image src="/images/2.webp" alt="Healthcare and Medical Systems UI UX Design - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
+            <Image src="/images/3.webp" alt="Real Estate Platforms UI UX Design - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
+            <Image src="/images/4.webp" alt="Logistics and Shipping Systems User Interface - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
+            <Image src="/images/5.webp" alt="Education and E-Learning User Experience Design - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
           </div>
         </div>
       </div>

@@ -12,7 +12,7 @@ const DigitalHero = () => {
     <section className="dm-hero">
       <div
         className="dm-hero-bg"
-        style={{ backgroundImage: `url('/images/Rectangle 228 (21).png')` }}
+        style={{ backgroundImage: `url('/images/Rectangle 228 (20).webp')` }}
       />
       <div className="dm-container dm-hero-content">
         <div className="dm-hero-text-wrapper">
@@ -38,10 +38,10 @@ const DigitalAbout = () => {
     <section className="dm-about-section">
       <div className="dm-container">
         <p className="dm-about-text">
-          At Gatecode Technologies Pvt. Ltd., we specialize in custom website development solutions built specifically for your business needs. 
-          Unlike template-based websites, our custom solutions are designed from scratch to match your brand identity, functionality requirements, 
-          and target audience. We focus on performance, scalability, and user experience to deliver websites that not only look great but also 
-          perform exceptionally well in achieving your business objectives.
+          At Gatecode Technologies Pvt. Ltd., we build custom websites based on how your business actually works. We first understand your goals, audience, and required features, then plan the website around those needs instead of forcing your business into a ready-made template.
+        </p>
+        <p className="dm-about-text" style={{ marginTop: '16px' }}>
+          Our focus goes beyond visual design. We work on responsive performance, usability, scalability, and a clean website structure so your site is easy for customers to use and practical for your team to manage. Whether you need a business website, e-commerce platform, or custom web application, we aim to build a solution that can support your business as it grows.
         </p>
       </div>
     </section>
@@ -112,12 +112,12 @@ const DigitalServices = () => {
 
 // ==================== DigitalWhyChoose Component (Updated for Custom Website Development) ====================
 const benefits = [
-  'Unique and brand-focused design',
-  'Better performance and speed',
-  'Scalable for future growth',
-  'Enhanced security and reliability',
-  'SEO-friendly architecture',
-  'Improved user engagement and conversions',
+  'Design That Represents Your Brand',
+  'Better Speed & Performance',
+  'Flexible & Ready to Grow',
+  'Security & Reliable Functionality',
+  'SEO-Friendly Structure',
+  'Better User Experience',
 ];
 
 const DigitalWhyChoose = () => {
@@ -125,12 +125,13 @@ const DigitalWhyChoose = () => {
     <section className="dm-why-choose-section">
       <div className="dm-container">
         <h2 className="dm-section-title dm-section-header-left">
-          Why Choose Custom Website Development
+          Why Choose Custom Website Development?
         </h2>
         <p className="dm-about-text dm-about-text-left">
-          Custom website development provides flexibility, uniqueness, and scalability that template-based solutions cannot offer. 
-          It allows businesses to create a strong digital identity, integrate advanced features, and deliver better user experiences 
-          tailored to their audience.
+          A custom website gives you more control over how your business is presented and how customers interact with it. Instead of adjusting your business to fit a pre-built template, you can build the website around your actual goals, features, and customer needs.
+        </p>
+        <p className="dm-about-text dm-about-text-left" style={{ marginTop: '16px' }}>
+          At Gatecode Technologies, we focus on creating websites that are practical, easy to use, and prepared for future changes. From the website structure and user experience to performance and integrations, each part can be planned according to your business requirements.
         </p>
 
         <div className="dm-why-choose-layout">
@@ -147,7 +148,7 @@ const DigitalWhyChoose = () => {
 
           <div className="dm-why-choose-image">
             <Image
-              src="/images/path.png"
+              src="/images/path.webp"
               alt="Custom Website Development Roadmap - Gatecode Technologies"
               className="dm-path-illustration"
               width={500}
@@ -238,11 +239,11 @@ const DigitalIndustries = () => {
           </div>
 
           <div className="dm-image-grid">
-            <Image src="/images/1.jpg" alt="E-Commerce and Retail Custom Web Solutions - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
-            <Image src="/images/2.jpg" alt="Restaurant and Food Delivery Custom Web Development - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
-            <Image src="/images/3.jpg" alt="Healthcare and Wellness Portal Design - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
-            <Image src="/images/4.jpg" alt="Education and E-Learning Web Development - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
-            <Image src="/images/5.jpg" alt="Corporate Business Custom Web Solutions - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
+            <Image src="/images/1.webp" alt="E-Commerce and Retail Custom Web Solutions - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
+            <Image src="/images/2.webp" alt="Restaurant and Food Delivery Custom Web Development - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
+            <Image src="/images/3.webp" alt="Healthcare and Wellness Portal Design - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
+            <Image src="/images/4.webp" alt="Education and E-Learning Web Development - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
+            <Image src="/images/5.webp" alt="Corporate Business Custom Web Solutions - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
           </div>
         </div>
       </div>

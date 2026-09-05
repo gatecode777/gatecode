@@ -12,7 +12,7 @@ const DigitalHero = () => {
     <section className="dm-hero">
       <div
         className="dm-hero-bg"
-        style={{ backgroundImage: `url('/images/Rectangle 228 (19).png')` }}
+        style={{ backgroundImage: `url('/images/Rectangle 228 (19).webp')` }}
       />
       <div className="dm-container dm-hero-content">
         <div className="dm-hero-text-wrapper">
@@ -38,9 +38,7 @@ const DigitalAbout = () => {
     <section className="dm-about-section">
       <div className="dm-container">
         <p className="dm-about-text">
-          At Gatecode Technologies Pvt. Ltd., we specialize in developing high-performance Android applications tailored to your business goals. 
-          Our team focuses on creating intuitive, secure, and scalable mobile solutions that provide exceptional user experiences. From concept 
-          to deployment, we use modern technologies and best development practices to build Android apps that are reliable, feature-rich, and future-ready.
+          At Gatecode Technologies, we don't just write code; we partner with you to build high-performance Android applications that drive real business results. Our experienced team focuses on what matters most to your users: seamless performance, rock-solid security, and an intuitive experience. From your first idea to the final app store launch, we apply proven development practices to ensure your app isn't just ready for today, but scalable for tomorrow's growth.
         </p>
       </div>
     </section>
@@ -111,12 +109,12 @@ const DigitalServices = () => {
 
 // ==================== DigitalWhyChoose Component (Updated for Android App Development) ====================
 const benefits = [
-  'High-performance and scalable applications',
-  'User-friendly and intuitive interfaces',
-  'Secure and reliable development',
-  'Cross-device compatibility',
-  'Continuous updates and support',
-  'Future-ready mobile solutions',
+  'Built to Scale',
+  'Ironclad Security',
+  'Long-Term Partnership',
+  'Engaging User Experience',
+  'Flawless Everywhere',
+  'Future-Proof Tech',
 ];
 
 const DigitalWhyChoose = () => {
@@ -124,17 +122,16 @@ const DigitalWhyChoose = () => {
     <section className="dm-why-choose-section">
       <div className="dm-container">
         <h2 className="dm-section-title dm-section-header-left">
-          Why Choose Our Android App Development Services
+          Why Partner With Us for Android App Development?
         </h2>
         <p className="dm-about-text dm-about-text-left">
-          We focus on building Android applications that combine innovation, performance, and user experience. Our development approach ensures 
-          high-quality, scalable, and secure mobile apps that meet business objectives and deliver value to users.
+          We don't just build apps; we engineer strategic mobile solutions. By blending innovative design with rock-solid engineering, we create Android applications that solve real business challenges. Our proven development approach ensures your app isn't just launched—it's built to scale, stay secure, and consistently deliver value to your users.
         </p>
 
         <div className="dm-why-choose-layout">
           <div className="dm-why-choose-content">
             <h3 className="dm-benefits-title">
-              Key Benefits
+              Key Benefits We Deliver
             </h3>
             <ul className="dm-benefits-list">
               {benefits.map((item, i) => (
@@ -145,7 +142,7 @@ const DigitalWhyChoose = () => {
 
           <div className="dm-why-choose-image">
             <Image
-              src="/images/path.png"
+              src="/images/path.webp"
               alt="Android App Development Architecture Roadmap - Gatecode Technologies"
               className="dm-path-illustration"
               width={500}
@@ -236,11 +233,11 @@ const DigitalIndustries = () => {
           </div>
 
           <div className="dm-image-grid">
-            <Image src="/images/1.jpg" alt="E-Commerce Android Mobile App Development - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
-            <Image src="/images/2.jpg" alt="Healthcare and Medical Android Apps - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
-            <Image src="/images/3.jpg" alt="Education and E-Learning Android Applications - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
-            <Image src="/images/4.jpg" alt="Food and Restaurant Android Delivery Apps - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
-            <Image src="/images/5.jpg" alt="Travel and Hospitality Android App Solutions - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
+            <Image src="/images/1.webp" alt="E-Commerce Android Mobile App Development - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
+            <Image src="/images/2.webp" alt="Healthcare and Medical Android Apps - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
+            <Image src="/images/3.webp" alt="Education and E-Learning Android Applications - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
+            <Image src="/images/4.webp" alt="Food and Restaurant Android Delivery Apps - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
+            <Image src="/images/5.webp" alt="Travel and Hospitality Android App Solutions - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
           </div>
         </div>
       </div>

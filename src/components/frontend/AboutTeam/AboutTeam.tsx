@@ -1,12 +1,13 @@
 'use client';
 
+import Image from 'next/image';
 import './AboutTeam.css';
 
 const teamMembers = [
-  { name: 'Rahul Sharma', role: 'CEO & Founder', img: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face' },
-  { name: 'Priya Mehta', role: 'Chief Technology Officer', img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face' },
-  { name: 'Amit Kumar', role: 'Lead Developer', img: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face' },
-  { name: 'Sneha Patel', role: 'UI/UX Designer', img: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face' },
+  { name: 'Rahul Sharma', role: 'CEO & Founder', img: '/images/about-team-rahul.webp' },
+  { name: 'Priya Mehta', role: 'Chief Technology Officer', img: '/images/about-team-priya.webp' },
+  { name: 'Amit Kumar', role: 'Lead Developer', img: '/images/about-team-amit.webp' },
+  { name: 'Sneha Patel', role: 'UI/UX Designer', img: '/images/about-team-sneha.webp' },
 ];
 
 const AboutTeam = () => {
@@ -22,7 +23,14 @@ const AboutTeam = () => {
           {teamMembers.map((m, i) => (
             <div className="team-card" key={i}>
               <div className="team-card__img">
-                <img src={m.img} alt={m.name} />
+                <Image 
+                  src={m.img} 
+                  alt={m.name} 
+                  width={400} 
+                  height={400} 
+                  sizes="(max-width: 768px) 100vw, 300px" 
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                />
               </div>
               <div className="team-card__info">
                 <h4>{m.name}</h4>

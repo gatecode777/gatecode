@@ -8,6 +8,13 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://gatecode.in'),
   title: 'Best It Services Company In Jaipur | Gatecode Technologies',
   description: 'Gatecode Technologies, a trusted IT service company in Jaipur, delivers web, software & cloud solutions to 100+ businesses. Get a free quote now!',
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/images/favicon.png', type: 'image/png' },
+    ],
+    apple: '/images/favicon.png',
+  },
   openGraph: {
     title: 'Best It Services Company In Jaipur | Gatecode Technologies',
     description: 'Gatecode Technologies, a trusted IT service company in Jaipur, delivers web, software & cloud solutions to 100+ businesses. Get a free quote now!',
@@ -30,8 +37,8 @@ export default function FrontendLayout({ children }: { children: React.ReactNode
     name: 'Gatecode Technologies Pvt. Ltd.',
     alternateName: 'Gatecode Technologies',
     url: 'https://gatecode.in',
-    logo: 'https://gatecode.in/images/logo.png',
-    image: 'https://gatecode.in/images/digitalbg1.png',
+    logo: 'https://gatecode.in/images/logo.webp',
+    image: 'https://gatecode.in/images/digitalbg1.webp',
     description: 'Gatecode Technologies is a premier Web & Custom Software Development Company in Jaipur, India providing software engineering and digital solutions.',
     address: {
       '@type': 'PostalAddress',

@@ -2,6 +2,7 @@
 'use client';
 
 import { useState, useEffect, useCallback, useRef } from 'react';
+import Image from 'next/image';
 import './Portfolio.css';
 
 function Portfolio({ slides, isLoading }) {
@@ -13,9 +14,9 @@ function Portfolio({ slides, isLoading }) {
   const portfolioItems = (slides && slides.length > 0)
     ? slides.map((s, i) => ({ id: s._id || i, image: s.desktopImage, altText: s.altText || '' }))
     : [
-        { id: 1, image: '/images/portfolio-1.jpg', altText: 'Damru By Namo Restaurant Online Ordering Platform' },
-        { id: 2, image: '/images/portfolio-2.jpg', altText: 'Cocofina Sugar E-Commerce Website Development' },
-        { id: 3, image: '/images/portfolio-3.jpg', altText: 'Eco Bin Environmental and Cleaning Services Website' },
+        { id: 1, image: '/images/portfolio-1.webp', altText: 'Damru By Namo Restaurant Online Ordering Platform' },
+        { id: 2, image: '/images/portfolio-2.webp', altText: 'Cocofina Sugar E-Commerce Website Development' },
+        { id: 3, image: '/images/portfolio-3.webp', altText: 'Eco Bin Environmental and Cleaning Services Website' },
       ];
 
   const totalItems = portfolioItems.length;
@@ -102,11 +103,13 @@ function Portfolio({ slides, isLoading }) {
                       className="portfolio__card"
                       style={{ width: `${cardWidth}px`, minWidth: `${cardWidth}px` }}
                     >
-                      <img
+                      <Image
                         src={item.image}
                         alt={`${item.altText || 'Client Project Showcase'} - Gatecode Technologies`}
                         className="portfolio__card-image"
-                        loading="lazy"
+                        fill
+                        sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 380px"
+                        style={{ objectFit: 'fill' }}
                       />
                     </article>
                   ))}

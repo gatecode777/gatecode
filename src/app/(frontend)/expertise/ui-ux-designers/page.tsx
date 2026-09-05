@@ -31,7 +31,7 @@ const HeroSectionWD = () => {
     return (
         <section
             className="wd-hero-section"
-            style={{ backgroundImage: 'url("/images/Rectangle 305.jpg")' }}
+            style={{ backgroundImage: 'url("/images/Rectangle 305.webp")' }}
         >
             <div className="wd-hero-overlay"></div>
 
@@ -55,7 +55,7 @@ const HeroSectionWD = () => {
 
                 <div className="wd-hero-right">
                     <Image
-                        src="/images/Rectangle 305.jpg"
+                        src="/images/Rectangle 305.webp"
                         alt="Creative UI UX Design Services by Gatecode Technologies"
                         width={500}
                         height={400}
@@ -82,42 +82,42 @@ const IntroText = () => {
 // ==================== WhatWeOffer Component (Updated for UI/UX Designer) ====================
 const services = [
     {
-        icon: "/images/icon1.png",
+        icon: "/images/icon1.webp",
         title: "UI (User Interface) Design",
         description: "Modern, visually appealing interfaces that reflect your brand identity and attract users.",
     },
     {
-        icon: "/images/icon2.png",
+        icon: "/images/icon2.webp",
         title: "UX (User Experience) Design",
         description: "Creating smooth, intuitive, and user-friendly experiences that improve usability.",
     },
     {
-        icon: "/images/icon3.png",
+        icon: "/images/icon3.webp",
         title: "Wireframing & Prototyping",
         description: "Building structured layouts and interactive prototypes before development.",
     },
     {
-        icon: "/images/icon4.png",
+        icon: "/images/icon4.webp",
         title: "User Research & Analysis",
         description: "Understanding user needs, behaviors, and expectations to create effective designs.",
     },
     {
-        icon: "/images/icon5.png",
+        icon: "/images/icon5.webp",
         title: "Mobile App Design",
         description: "Designing engaging and responsive mobile app interfaces.",
     },
     {
-        icon: "/images/icon6.png",
+        icon: "/images/icon6.webp",
         title: "Website Design",
         description: "Crafting modern and responsive website designs for better engagement.",
     },
     {
-        icon: "/images/icon7.png",
+        icon: "/images/icon7.webp",
         title: "UX Audit & Improvement",
         description: "Analyzing and improving existing designs for better performance.",
     },
     {
-        icon: "/images/icon8.png",
+        icon: "/images/icon8.webp",
         title: "Design Systems",
         description: "Creating consistent design guidelines for scalable and uniform products.",
     },
@@ -179,27 +179,27 @@ const WhatWeOffer = () => {
 // ==================== WhyChoose Component (Updated for UI/UX Designer) ====================
 const chooseData = [
     {
-        image: "/images/img1.jpg",
+        image: "/images/img1.webp",
         title: "User-Centered Design Approach",
     },
     {
-        image: "/images/img2.jpg",
+        image: "/images/img2.webp",
         title: "Modern And Creative Designs",
     },
     {
-        image: "/images/img3.jpg",
+        image: "/images/img3.webp",
         title: "Improved User Engagement",
     },
     {
-        image: "/images/img4.jpg",
+        image: "/images/img4.webp",
         title: "Conversion-Focused Layouts",
     },
     {
-        image: "/images/img5.jpg",
+        image: "/images/img5.webp",
         title: "Consistent And Scalable Design Systems",
     },
     {
-        image: "/images/img6.jpg",
+        image: "/images/img6.webp",
         title: "Fast And Efficient Delivery",
     },
 ];
@@ -308,7 +308,7 @@ const DevelopmentProcess = () => {
                     <video
                         className="dev-video-desktop"
                         src="/videos/UX Designer_video.mp4"
-                        poster="/images/2.jpg"
+                        poster="/images/2.webp"
                         autoPlay
                         loop
                         muted
@@ -318,7 +318,7 @@ const DevelopmentProcess = () => {
                     <video
                         className="dev-video-mobile"
                         src="/videos/2nd.mp4"
-                        poster="/images/2.jpg"
+                        poster="/images/2.webp"
                         autoPlay
                         loop
                         muted
@@ -481,8 +481,8 @@ const UxDesignerPage = () => {
         name: 'Gatecode Technologies UI/UX Design Process',
         description: 'Watch our 6-step agile UI/UX design process covering User Research, Wireframing, UI Design, Prototyping, Testing, and Handoff at Gatecode Technologies.',
         thumbnailUrl: [
-            'https://gatecode.in/images/2.jpg',
-            'https://gatecode.in/images/digitalbg1.png',
+            'https://gatecode.in/images/2.webp',
+            'https://gatecode.in/images/digitalbg1.webp',
         ],
         uploadDate: '2026-01-15T08:00:00+05:30',
         contentUrl: 'https://gatecode.in/videos/UX%20Designer_video.mp4',

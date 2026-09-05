@@ -109,18 +109,21 @@
   padding: 0 20px;
 }
 
-.cc-clients-grid a {
+.cc-clients-grid a,
+.cc-clients-grid .cc-client-item {
   display: flex;
   align-items: center;
   justify-content: center;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.cc-clients-grid a:hover {
+.cc-clients-grid a:hover,
+.cc-clients-grid .cc-client-item:hover {
   transform: translateY(-6px) scale(1.05);
 }
 
 .cc-clients-image {
+  width: auto;
   max-width: 150px;
   height: auto;
   opacity: 0.9;

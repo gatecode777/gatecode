@@ -1,6 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import './Hero.css';
 
 const Hero = () => {
@@ -55,13 +56,32 @@ const Hero = () => {
 
         <div className="hero-images">
           <div className="hero-img-circle circle-1">
-            <img src="https://ik.imagekit.io/zp0tch54w/GATECODE%20IMAGES/Ellipse%208.png" alt="Modern Business Growth and IT Infrastructure - Gatecode Technologies" />
+            <Image 
+              src="/images/hero-showcase-1.webp" 
+              alt="Modern Business Growth and IT Infrastructure - Gatecode Technologies" 
+              fill
+              sizes="(max-width: 768px) 140px, 280px"
+              priority
+              style={{ objectFit: 'cover' }}
+            />
           </div>
           <div className="hero-img-circle circle-2">
-            <img src="https://ik.imagekit.io/zp0tch54w/GATECODE%20IMAGES/Ellipse%207.png" alt="Professional IT and Business Support Specialist at Work - Gatecode Technologies" />
+            <Image 
+              src="/images/hero-showcase-2.webp" 
+              alt="Professional IT and Business Support Specialist at Work - Gatecode Technologies" 
+              fill
+              sizes="(max-width: 768px) 140px, 280px"
+              style={{ objectFit: 'cover' }}
+            />
           </div>
           <div className="hero-img-circle circle-3">
-            <img src="https://ik.imagekit.io/zp0tch54w/GATECODE%20IMAGES/Ellipse%206.png" alt="Future Ready Technology Solutions and Innovation - Gatecode Technologies" />
+            <Image 
+              src="/images/hero-showcase-3.webp" 
+              alt="Future Ready Technology Solutions and Innovation - Gatecode Technologies" 
+              fill
+              sizes="(max-width: 768px) 140px, 280px"
+              style={{ objectFit: 'cover' }}
+            />
           </div>
         </div>
       </div>
