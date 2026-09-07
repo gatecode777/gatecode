@@ -453,6 +453,8 @@
   .process-flow-nav-dot {
     width: 24px;
     height: 24px;
+    min-width: 24px;
+    min-height: 24px;
   }
 
   .process-flow-nav-dot::after {
@@ -602,6 +604,8 @@
   .process-flow-nav-dot {
     width: 24px;
     height: 24px;
+    min-width: 24px;
+    min-height: 24px;
   }
 
   .process-flow-nav-dot::after {

@@ -184,6 +184,8 @@
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+    will-change: transform;
+    transform-origin: 0 0;
 }
 
 .hero-img-circle picture,
@@ -198,66 +200,45 @@
 
     0%,
     22.22% {
-        width: 280px;
-        height: 280px;
-        top: -20px;
-        left: 220px;
+        transform: translate3d(220px, -20px, 0) scale(1);
         z-index: 1;
         animation-timing-function: ease-in;
     }
 
     27.77% {
-        width: 240px;
-        height: 240px;
-        top: 145px;
-        left: 300px;
+        transform: translate3d(300px, 145px, 0) scale(0.8571);
         z-index: 2;
         animation-timing-function: ease-out;
     }
 
     33.33%,
     55.55% {
-        width: 200px;
-        height: 200px;
-        top: 310px;
-        left: 260px;
+        transform: translate3d(260px, 310px, 0) scale(0.7143);
         z-index: 3;
         animation-timing-function: ease-in;
     }
 
     61.11% {
-        width: 220px;
-        height: 220px;
-        top: 320px;
-        left: 80px;
+        transform: translate3d(80px, 320px, 0) scale(0.7857);
         z-index: 3;
         animation-timing-function: ease-out;
     }
 
     66.66%,
     88.88% {
-        width: 240px;
-        height: 240px;
-        top: 140px;
-        left: -20px;
+        transform: translate3d(-20px, 140px, 0) scale(0.8571);
         z-index: 2;
         animation-timing-function: ease-in;
     }
 
     94.44% {
-        width: 260px;
-        height: 260px;
-        top: 0px;
-        left: 80px;
+        transform: translate3d(80px, 0px, 0) scale(0.9286);
         z-index: 1;
         animation-timing-function: ease-out;
     }
 
     100% {
-        width: 280px;
-        height: 280px;
-        top: -20px;
-        left: 220px;
+        transform: translate3d(220px, -20px, 0) scale(1);
         z-index: 1;
     }
 }
@@ -265,26 +246,29 @@
 .circle-1 {
     width: 280px;
     height: 280px;
-    top: -20px;
-    left: 220px;
+    top: 0;
+    left: 0;
+    transform: translate3d(220px, -20px, 0) scale(1);
     z-index: 1;
     animation: cycleDesktopBoxes 9s infinite linear;
 }
 
 .circle-2 {
-    width: 240px;
-    height: 240px;
-    top: 140px;
-    left: -20px;
+    width: 280px;
+    height: 280px;
+    top: 0;
+    left: 0;
+    transform: translate3d(-20px, 140px, 0) scale(0.8571);
     z-index: 2;
     animation: cycleDesktopBoxes 9s infinite linear -6s;
 }
 
 .circle-3 {
-    width: 200px;
-    height: 200px;
-    top: 310px;
-    left: 260px;
+    width: 280px;
+    height: 280px;
+    top: 0;
+    left: 0;
+    transform: translate3d(260px, 310px, 0) scale(0.7143);
     z-index: 3;
     animation: cycleDesktopBoxes 9s infinite linear -3s;
 }
@@ -405,66 +389,45 @@
 
         0%,
         22.22% {
-            width: 200px;
-            height: 200px;
-            top: 0px;
-            left: calc(50% - 30px);
+            transform: translate3d(calc(50% - 30px), 0px, 0) scale(1);
             z-index: 1;
             animation-timing-function: ease-in;
         }
 
         27.77% {
-            width: 175px;
-            height: 175px;
-            top: 115px;
-            left: calc(50% + 30px);
+            transform: translate3d(calc(50% + 30px), 115px, 0) scale(0.875);
             z-index: 2;
             animation-timing-function: ease-out;
         }
 
         33.33%,
         55.55% {
-            width: 150px;
-            height: 150px;
-            top: 230px;
-            left: calc(50% - 10px);
+            transform: translate3d(calc(50% - 10px), 230px, 0) scale(0.75);
             z-index: 3;
             animation-timing-function: ease-in;
         }
 
         61.11% {
-            width: 160px;
-            height: 160px;
-            top: 235px;
-            left: calc(50% - 120px);
+            transform: translate3d(calc(50% - 120px), 235px, 0) scale(0.8);
             z-index: 3;
             animation-timing-function: ease-out;
         }
 
         66.66%,
         88.88% {
-            width: 170px;
-            height: 170px;
-            top: 115px;
-            left: calc(50% - 160px);
+            transform: translate3d(calc(50% - 160px), 115px, 0) scale(0.85);
             z-index: 2;
             animation-timing-function: ease-in;
         }
 
         94.44% {
-            width: 185px;
-            height: 185px;
-            top: 15px;
-            left: calc(50% - 120px);
+            transform: translate3d(calc(50% - 120px), 15px, 0) scale(0.925);
             z-index: 1;
             animation-timing-function: ease-out;
         }
 
         100% {
-            width: 200px;
-            height: 200px;
-            top: 0px;
-            left: calc(50% - 30px);
+            transform: translate3d(calc(50% - 30px), 0px, 0) scale(1);
             z-index: 1;
         }
     }
@@ -472,26 +435,29 @@
     .circle-1 {
         width: 200px;
         height: 200px;
-        top: 0px;
-        left: calc(50% - 30px);
+        top: 0;
+        left: 0;
+        transform: translate3d(calc(50% - 30px), 0px, 0) scale(1);
         z-index: 1;
         animation: cycleMobileBoxes 9s infinite linear;
     }
 
     .circle-2 {
-        width: 170px;
-        height: 170px;
-        top: 115px;
-        left: calc(50% - 160px);
+        width: 200px;
+        height: 200px;
+        top: 0;
+        left: 0;
+        transform: translate3d(calc(50% - 160px), 115px, 0) scale(0.85);
         z-index: 2;
         animation: cycleMobileBoxes 9s infinite linear -6s;
     }
 
     .circle-3 {
-        width: 150px;
-        height: 150px;
-        top: 230px;
-        left: calc(50% - 10px);
+        width: 200px;
+        height: 200px;
+        top: 0;
+        left: 0;
+        transform: translate3d(calc(50% - 10px), 230px, 0) scale(0.75);
         z-index: 3;
         animation: cycleMobileBoxes 9s infinite linear -3s;
     }
@@ -625,66 +591,45 @@
 
         0%,
         22.22% {
-            width: 160px;
-            height: 160px;
-            top: 5px;
-            left: calc(50% - 20px);
+            transform: translate3d(calc(50% - 20px), 5px, 0) scale(1);
             z-index: 1;
             animation-timing-function: ease-in;
         }
 
         27.77% {
-            width: 138px;
-            height: 138px;
-            top: 90px;
-            left: calc(50% + 20px);
+            transform: translate3d(calc(50% + 20px), 90px, 0) scale(0.8625);
             z-index: 2;
             animation-timing-function: ease-out;
         }
 
         33.33%,
         55.55% {
-            width: 115px;
-            height: 115px;
-            top: 170px;
-            left: calc(50% - 5px);
+            transform: translate3d(calc(50% - 5px), 170px, 0) scale(0.7188);
             z-index: 3;
             animation-timing-function: ease-in;
         }
 
         61.11% {
-            width: 122px;
-            height: 122px;
-            top: 180px;
-            left: calc(50% - 95px);
+            transform: translate3d(calc(50% - 95px), 180px, 0) scale(0.7625);
             z-index: 3;
             animation-timing-function: ease-out;
         }
 
         66.66%,
         88.88% {
-            width: 130px;
-            height: 130px;
-            top: 90px;
-            left: calc(50% - 120px);
+            transform: translate3d(calc(50% - 120px), 90px, 0) scale(0.8125);
             z-index: 2;
             animation-timing-function: ease-in;
         }
 
         94.44% {
-            width: 145px;
-            height: 145px;
-            top: 12px;
-            left: calc(50% - 95px);
+            transform: translate3d(calc(50% - 95px), 12px, 0) scale(0.9063);
             z-index: 1;
             animation-timing-function: ease-out;
         }
 
         100% {
-            width: 160px;
-            height: 160px;
-            top: 5px;
-            left: calc(50% - 20px);
+            transform: translate3d(calc(50% - 20px), 5px, 0) scale(1);
             z-index: 1;
         }
     }
@@ -692,24 +637,27 @@
     .circle-1 {
         width: 160px;
         height: 160px;
-        top: 5px;
-        left: calc(50% - 20px);
+        top: 0;
+        left: 0;
+        transform: translate3d(calc(50% - 20px), 5px, 0) scale(1);
         animation: cycleSmallBoxes 9s infinite linear;
     }
 
     .circle-2 {
-        width: 130px;
-        height: 130px;
-        top: 90px;
-        left: calc(50% - 120px);
+        width: 160px;
+        height: 160px;
+        top: 0;
+        left: 0;
+        transform: translate3d(calc(50% - 120px), 90px, 0) scale(0.8125);
         animation: cycleSmallBoxes 9s infinite linear -6s;
     }
 
     .circle-3 {
-        width: 115px;
-        height: 115px;
-        top: 170px;
-        left: calc(50% - 5px);
+        width: 160px;
+        height: 160px;
+        top: 0;
+        left: 0;
+        transform: translate3d(calc(50% - 5px), 170px, 0) scale(0.7188);
         animation: cycleSmallBoxes 9s infinite linear -3s;
     }
 }
@@ -806,66 +754,45 @@
 
         0%,
         22.22% {
-            width: 130px;
-            height: 130px;
-            top: 0px;
-            left: calc(50% - 20px);
+            transform: translate3d(calc(50% - 20px), 0px, 0) scale(1);
             z-index: 1;
             animation-timing-function: ease-in;
         }
 
         27.77% {
-            width: 112px;
-            height: 112px;
-            top: 65px;
-            left: calc(50% + 10px);
+            transform: translate3d(calc(50% + 10px), 65px, 0) scale(0.8615);
             z-index: 2;
             animation-timing-function: ease-out;
         }
 
         33.33%,
         55.55% {
-            width: 95px;
-            height: 95px;
-            top: 130px;
-            left: calc(50% - 10px);
+            transform: translate3d(calc(50% - 10px), 130px, 0) scale(0.7308);
             z-index: 3;
             animation-timing-function: ease-in;
         }
 
         61.11% {
-            width: 100px;
-            height: 100px;
-            top: 140px;
-            left: calc(50% - 80px);
+            transform: translate3d(calc(50% - 80px), 140px, 0) scale(0.7692);
             z-index: 3;
             animation-timing-function: ease-out;
         }
 
         66.66%,
         88.88% {
-            width: 108px;
-            height: 108px;
-            top: 65px;
-            left: calc(50% - 100px);
+            transform: translate3d(calc(50% - 100px), 65px, 0) scale(0.8308);
             z-index: 2;
             animation-timing-function: ease-in;
         }
 
         94.44% {
-            width: 120px;
-            height: 120px;
-            top: 8px;
-            left: calc(50% - 80px);
+            transform: translate3d(calc(50% - 80px), 8px, 0) scale(0.9231);
             z-index: 1;
             animation-timing-function: ease-out;
         }
 
         100% {
-            width: 130px;
-            height: 130px;
-            top: 0px;
-            left: calc(50% - 20px);
+            transform: translate3d(calc(50% - 20px), 0px, 0) scale(1);
             z-index: 1;
         }
     }
@@ -873,24 +800,27 @@
     .circle-1 {
         width: 130px;
         height: 130px;
-        top: 0px;
-        left: calc(50% - 20px);
+        top: 0;
+        left: 0;
+        transform: translate3d(calc(50% - 20px), 0px, 0) scale(1);
         animation: cycleTinyBoxes 9s infinite linear;
     }
 
     .circle-2 {
-        width: 108px;
-        height: 108px;
-        top: 65px;
-        left: calc(50% - 100px);
+        width: 130px;
+        height: 130px;
+        top: 0;
+        left: 0;
+        transform: translate3d(calc(50% - 100px), 65px, 0) scale(0.8308);
         animation: cycleTinyBoxes 9s infinite linear -6s;
     }
 
     .circle-3 {
-        width: 95px;
-        height: 95px;
-        top: 130px;
-        left: calc(50% - 10px);
+        width: 130px;
+        height: 130px;
+        top: 0;
+        left: 0;
+        transform: translate3d(calc(50% - 10px), 130px, 0) scale(0.7308);
         animation: cycleTinyBoxes 9s infinite linear -3s;
     }
 }

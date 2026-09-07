@@ -5,7 +5,13 @@ import { useRouter } from 'next/navigation';
 import './ProjectBanner.css';
 
 
-const ProjectBanner = ({ title, subtitle, bgImage }) => {
+interface ProjectBannerProps {
+  title?: string;
+  subtitle?: string;
+  bgImage?: string;
+}
+
+const ProjectBanner = ({ title, subtitle, bgImage }: ProjectBannerProps = {}) => {
   const router = useRouter();
 
   return (

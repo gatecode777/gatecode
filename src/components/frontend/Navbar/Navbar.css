@@ -202,20 +202,20 @@
 
 .btn--primary {
     color: var(--color-white);
-    background: #0FB9B1;
+    background: #08837c;
     border: 1px solid transparent;
-    box-shadow: 0 4px 14px rgba(15, 185, 177, 0.3);
+    box-shadow: 0 4px 14px rgba(8, 131, 124, 0.3);
     font-weight: 700;
     background-size: 200% 200%;
     transition: background-position 0.5s ease, box-shadow var(--transition-base), transform var(--transition-base);
 }
 
 .btn--primary:hover {
-    background: linear-gradient(135deg, #0FB9B1 0%, #0e7490 40%, #0d9488 70%, #0FB9B1 100%);
+    background: linear-gradient(135deg, #08837c 0%, #0e7490 40%, #0d9488 70%, #08837c 100%);
     background-size: 200% 200%;
     animation: gradientShift 1.5s ease infinite;
     border-color: transparent;
-    box-shadow: 0 6px 20px rgba(15, 185, 177, 0.45);
+    box-shadow: 0 6px 20px rgba(8, 131, 124, 0.45);
     transform: translateY(-1px);
 }
 
