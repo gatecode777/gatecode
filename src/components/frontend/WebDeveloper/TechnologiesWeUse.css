@@ -161,10 +161,4 @@
     min-width: max-content;
     gap: 20px;
   }
-
-  .scroll-to-top {
-    bottom: 45px !important;
-    right: 19px !important;
-    display: block !important;
-  }
 }

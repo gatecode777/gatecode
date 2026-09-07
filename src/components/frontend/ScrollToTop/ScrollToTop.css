@@ -87,21 +87,83 @@
 }
 
 
+@media (max-width: 1024px) {
+  .scroll-to-top {
+    bottom: 84px !important;
+    right: 23px !important;
+  }
+
+  .scroll-btn {
+    width: 60px !important;
+    height: 60px !important;
+    margin: 0 !important;
+    bottom: auto !important;
+    right: auto !important;
+    left: auto !important;
+    top: auto !important;
+  }
+}
+
 @media (max-width: 768px) {
   .scroll-to-top {
-    bottom: 90px !important;
-    right: 30px !important;
+    bottom: 76px !important;
+    right: 23px !important;
     display: block !important;
   }
 
   .scroll-btn {
-    width: 50px;
-    height: 50px;
-    bottom: 33px;
-    right: 2px;
+    width: 52px !important;
+    height: 52px !important;
+    margin: 0 !important;
+    bottom: auto !important;
+    right: auto !important;
+    left: auto !important;
+    top: auto !important;
+  }
+
+  .arrow-icon {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 480px) {
+  .scroll-to-top {
+    bottom: 74px !important;
+    right: 23px !important;
+  }
+
+  .scroll-btn {
+    width: 50px !important;
+    height: 50px !important;
+    margin: 0 !important;
+    bottom: auto !important;
+    right: auto !important;
+    left: auto !important;
+    top: auto !important;
   }
 
   .arrow-icon {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 380px) {
+  .scroll-to-top {
+    bottom: 74px !important;
+    right: 23px !important;
+  }
+
+  .scroll-btn {
+    width: 50px !important;
+    height: 50px !important;
+    margin: 0 !important;
+    bottom: auto !important;
+    right: auto !important;
+    left: auto !important;
+    top: auto !important;
+  }
+
+  .arrow-icon {
+    font-size: 17px;
   }
 }
