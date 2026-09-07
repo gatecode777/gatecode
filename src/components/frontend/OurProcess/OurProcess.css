@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Inter:wght@300;400;500;600;700&display=swap');
-
 .our-process-section {
   padding: 60px 0;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-inter, 'Inter'), sans-serif;
   overflow: hidden;
   position: relative;
 }

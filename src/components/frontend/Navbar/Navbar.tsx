@@ -87,6 +87,7 @@ export default function Navbar() {
                 <Link
                   href={link.path}
                   className="navbar__link"
+                  aria-label={link.hasDropdown ? `${link.label} menu` : link.label}
                   aria-expanded={link.hasDropdown ? activeDropdown === link.label : undefined}
                   onClick={link.hasDropdown ? (e) => { e.preventDefault(); toggleDropdown(link.label); } : handleDropdownItemClick}
                 >
@@ -112,7 +113,7 @@ export default function Navbar() {
           </nav>
 
           <div className="navbar__actions">
-            <Link href="/get-started" className="btn btn--primary" onClick={() => { setMenuOpen(false); setActiveDropdown(null); }}>
+            <Link href="/get-started" className="btn btn--primary" aria-label="Get Started with Gatecode" onClick={() => { setMenuOpen(false); setActiveDropdown(null); }}>
               Get Started
             </Link>
           </div>
@@ -133,7 +134,7 @@ export default function Navbar() {
       {menuOpen && <div className="navbar__overlay" onClick={() => setMenuOpen(false)} />}
 
       {menuOpen && (
-        <div className="navbar__mobile-menu open" aria-hidden={false}>
+        <nav className="navbar__mobile-menu open" aria-label="Mobile navigation">
           {navLinks.map(link => (
             <div key={link.label} className="navbar__mobile-item">
               {link.hasDropdown ? (
@@ -141,6 +142,8 @@ export default function Navbar() {
                   <button
                     className={`navbar__mobile-link${activeMobileDropdown === link.label ? ' active' : ''}`}
                     onClick={() => toggleMobileDropdown(link.label)}
+                    aria-label={`Toggle ${link.label} mobile menu`}
+                    aria-expanded={activeMobileDropdown === link.label}
                   >
                     {link.label}
                     <svg className={`navbar__dropdown-icon${activeMobileDropdown === link.label ? ' rotate' : ''}`} width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
@@ -164,14 +167,14 @@ export default function Navbar() {
                   )}
                 </>
               ) : (
-                <Link href={link.path} className="navbar__mobile-link" onClick={() => setMenuOpen(false)}>{link.label}</Link>
+                <Link href={link.path} className="navbar__mobile-link" aria-label={`Mobile ${link.label}`} onClick={() => setMenuOpen(false)}>{link.label}</Link>
               )}
             </div>
           ))}
           <div className="navbar__mobile-actions">
-            <Link href="/get-started" className="btn btn--primary" onClick={() => setMenuOpen(false)}>Get Started</Link>
+            <Link href="/get-started" className="btn btn--primary" aria-label="Get Started - Mobile navigation" onClick={() => setMenuOpen(false)}>Get Started</Link>
           </div>
-        </div>
+        </nav>
       )}
     </>
   );

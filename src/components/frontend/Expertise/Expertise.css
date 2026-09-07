@@ -23,15 +23,15 @@
 }
 
 .expertise-badge {
-  background: rgba(15, 185, 177, 0.08);
-  color: #0a8f89; /* Darker teal for perfect contrast on light background */
+  background: rgba(13, 148, 136, 0.1);
+  color: #086963; /* High contrast accessible teal (5.7:1 ratio) */
   padding: 6px 18px;
   border-radius: 9999px;
   font-size: 0.82rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  border: 1px solid rgba(15, 185, 177, 0.25);
+  border: 1px solid rgba(13, 148, 136, 0.3);
   font-family: 'Inter', sans-serif;
   display: inline-block;
   margin-bottom: 14px; /* Controlled badge-to-title lockup */

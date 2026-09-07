@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import Navbar from '@/components/frontend/Navbar/Navbar';
-import Footer from '@/components/frontend/Footer/Footer';
-import ScrollToTop from '@/components/frontend/ScrollToTop/ScrollToTop';
-import Chatbot from '@/components/frontend/Chatbot/Chatbot';
+
+const Footer = dynamic(() => import('@/components/frontend/Footer/Footer'));
+const ScrollToTop = dynamic(() => import('@/components/frontend/ScrollToTop/ScrollToTop'));
+const Chatbot = dynamic(() => import('@/components/frontend/Chatbot/Chatbot'));
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://gatecode.in'),
@@ -55,12 +57,28 @@ export default function FrontendLayout({ children }: { children: React.ReactNode
 
   return (
     <div className="">
+      <link
+        rel="preload"
+        as="image"
+        href="/images/hero-showcase-1-mobile.webp"
+        media="(max-width: 768px)"
+        fetchPriority="high"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href="/images/hero-showcase-1.webp"
+        media="(min-width: 769px)"
+        fetchPriority="high"
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
       <Navbar />
-      {children}
+      <main id="main-content">
+        {children}
+      </main>
       <Footer />
       <ScrollToTop />
       <Chatbot />

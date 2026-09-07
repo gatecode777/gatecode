@@ -218,17 +218,35 @@
 }
 
 .process-flow-nav-dot {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: width 0.3s ease;
+}
+
+.process-flow-nav-dot::after {
+  content: '';
   width: 10px;
   height: 10px;
   border-radius: 50%;
   border: 2px solid #ddd;
   background: transparent;
-  cursor: pointer;
   transition: all 0.3s ease;
-  padding: 0;
 }
 
 .process-flow-nav-dot.active {
+  width: 38px;
+}
+
+.process-flow-nav-dot.active::after {
   background: #ffeb3b;
   border-color: #ffeb3b;
   width: 30px;
@@ -433,11 +451,20 @@
   }
 
   .process-flow-nav-dot {
+    width: 24px;
+    height: 24px;
+  }
+
+  .process-flow-nav-dot::after {
     width: 8px;
     height: 8px;
   }
 
   .process-flow-nav-dot.active {
+    width: 32px;
+  }
+
+  .process-flow-nav-dot.active::after {
     width: 24px;
   }
 }
@@ -573,11 +600,20 @@
   }
 
   .process-flow-nav-dot {
+    width: 24px;
+    height: 24px;
+  }
+
+  .process-flow-nav-dot::after {
     width: 7px;
     height: 7px;
   }
 
   .process-flow-nav-dot.active {
+    width: 28px;
+  }
+
+  .process-flow-nav-dot.active::after {
     width: 20px;
   }
 }

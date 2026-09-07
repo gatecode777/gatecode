@@ -2,8 +2,8 @@
 import type { Metadata } from 'next';
 import nextDynamic from 'next/dynamic';
 import Hero from '@/components/frontend/Hero/Hero';
-import Services from '@/components/frontend/Services/Services';
 
+const Services = nextDynamic(() => import('@/components/frontend/Services/Services'));
 const BrandHeader = nextDynamic(() => import('@/components/frontend/BrandHeader/BrandHeader'));
 const ImageSlider = nextDynamic(() => import('@/components/frontend/ImageSlider/ImageSlider'));
 const Expertise = nextDynamic(() => import('@/components/frontend/Expertise/Expertise'));
@@ -13,8 +13,6 @@ const VisionMission = nextDynamic(() => import('@/components/frontend/VisionMiss
 const CollaborationClients = nextDynamic(() => import('@/components/frontend/CollaborationClients/CollaborationClients'));
 const ProjectBanner = nextDynamic(() => import('@/components/frontend/ProjectBanner/ProjectBanner'));
 const ContactSection = nextDynamic(() => import('@/components/frontend/ContactSection/ContactSection'));
-import connectDB from '@/lib/db';
-import TeamMember from '@/models/TeamMember';
 
 export const dynamic = 'force-dynamic';
 
@@ -36,17 +34,7 @@ export const metadata: Metadata = {
   },
 };
 
-function plain(data: any) {
-  return JSON.parse(JSON.stringify(data));
-}
-
-export default async function Home() {
-  await connectDB();
-
-  const teamMembers = await TeamMember.find({ isActive: true })
-    .sort({ order: 1 })
-    .lean();
-
+export default function Home() {
   return (
     <>
       <Hero />
@@ -61,7 +49,6 @@ export default async function Home() {
       <VisionMission />
       <CollaborationClients />
       <ProjectBanner />
-      {/* <TSlider members={plain(teamMembers)} /> */}
       <ContactSection />
     </>
   );

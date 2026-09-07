@@ -1,5 +1,14 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import {
+  plusJakartaSans,
+  jetbrainsMono,
+  castoroTitling,
+  robotoFlex,
+  inter,
+  arimo,
+  playfairDisplay,
+} from "./fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -20,17 +29,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${plusJakartaSans.variable} ${jetbrainsMono.variable} ${castoroTitling.variable} ${robotoFlex.variable} ${inter.variable} ${arimo.variable} ${playfairDisplay.variable}`}
+    >
       <body>
         {/* Load Google Tag Manager Script */}
         <Script
           id="gtm-script"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtm.js?id=GTM-PSVZ559Q"
         />
 
         {/* Initialize GTM Data Layer */}
-        <Script id="gtm-init" strategy="lazyOnload">
+        <Script id="gtm-init" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({

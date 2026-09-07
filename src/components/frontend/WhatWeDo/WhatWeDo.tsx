@@ -102,7 +102,7 @@ const WhatWeDo = () => {
             <div className="wwd-icon">{service.icon}</div>
             <h4 className="wwd-card-title">{service.title}</h4>
             <p className="wwd-card-desc">{service.description}</p>
-            <Link href={service.link} className="wwd-learn-more">Learn more <span>↗</span></Link>
+            <Link href={service.link} className="wwd-learn-more" aria-label={`Learn more about ${service.title}`}>Learn more <span>↗</span></Link>
           </div>
         ))}
       </div>

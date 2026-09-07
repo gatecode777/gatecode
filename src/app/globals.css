@@ -3,9 +3,6 @@
    Design System: Teal-forward, refined SaaS
 ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Roboto+Flex:opsz,wght@8..144,100..900&family=Inter:wght@300;400;500;600;700&family=Arimo:ital,wght@0,400;0,500;1,400&family=Playfair+Display:wght@400;500;600&display=swap');
-
 :root {
   --color-primary: #0fb9b1;
   --color-white: #fff;
@@ -43,8 +40,13 @@
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
   --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.06);
   --shadow-primary: 0 4px 20px rgba(15, 185, 177, 0.35);
-  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --font-sans: var(--font-plus-jakarta), 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), 'JetBrains Mono', 'Fira Code', monospace;
+  --font-castoro: var(--font-castoro), 'Castoro Titling', serif;
+  --font-roboto-flex: var(--font-roboto-flex), 'Roboto Flex', sans-serif;
+  --font-inter: var(--font-inter), 'Inter', sans-serif;
+  --font-arimo: var(--font-arimo), 'Arimo', sans-serif;
+  --font-playfair: var(--font-playfair), 'Playfair Display', serif;
   --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);

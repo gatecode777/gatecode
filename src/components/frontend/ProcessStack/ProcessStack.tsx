@@ -370,6 +370,7 @@ const ProcessStack = () => {
           {processSteps.map((_, index) => (
             <button
               key={index}
+              aria-label={`Go to step ${index + 1}`}
               className={`process-flow-nav-dot ${
                 index === activeIndex
                   ? 'active'
