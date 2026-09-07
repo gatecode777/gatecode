@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import './Hero.css';
 
 const Hero = () => {
@@ -52,38 +51,43 @@ const Hero = () => {
 
         <div className="hero-images">
           <div className="hero-img-circle circle-1">
-            <Image 
-              src="/images/hero-showcase-1.webp" 
-              alt="Modern Business Growth and IT Infrastructure - Gatecode Technologies" 
-              priority
-              fetchPriority="high"
-              decoding="async"
-              width={287}
-              height={280}
-              sizes="(max-width: 768px) 200px, 287px"
-            />
+            <picture>
+              <source media="(max-width: 768px)" srcSet="/images/hero-showcase-1-mobile.webp" />
+              <img 
+                src="/images/hero-showcase-1.webp" 
+                alt="Modern Business Growth and IT Infrastructure - Gatecode Technologies" 
+                fetchPriority="high"
+                decoding="async"
+                width={287}
+                height={280}
+              />
+            </picture>
           </div>
           <div className="hero-img-circle circle-2">
-            <Image 
-              src="/images/hero-showcase-2.webp" 
-              alt="Professional IT and Business Support Specialist at Work - Gatecode Technologies" 
-              priority
-              fetchPriority="high"
-              decoding="async"
-              width={287}
-              height={280}
-              sizes="(max-width: 768px) 170px, 287px"
-            />
+            <picture>
+              <source media="(max-width: 768px)" srcSet="/images/hero-showcase-2-mobile.webp" />
+              <img 
+                src="/images/hero-showcase-2.webp" 
+                alt="Professional IT and Business Support Specialist at Work - Gatecode Technologies" 
+                fetchPriority="high"
+                decoding="async"
+                width={287}
+                height={280}
+              />
+            </picture>
           </div>
           <div className="hero-img-circle circle-3">
-            <Image 
-              src="/images/hero-showcase-3.webp" 
-              alt="Future Ready Technology Solutions and Innovation - Gatecode Technologies" 
-              decoding="async"
-              width={287}
-              height={280}
-              sizes="(max-width: 768px) 150px, 287px"
-            />
+            <picture>
+              <source media="(max-width: 768px)" srcSet="/images/hero-showcase-3-mobile.webp" />
+              <img 
+                src="/images/hero-showcase-3.webp" 
+                alt="Future Ready Technology Solutions and Innovation - Gatecode Technologies" 
+                fetchPriority="high"
+                decoding="async"
+                width={287}
+                height={280}
+              />
+            </picture>
           </div>
         </div>
       </div>
