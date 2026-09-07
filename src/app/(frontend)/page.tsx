@@ -1,18 +1,15 @@
-// @ts-nocheck
 import type { Metadata } from 'next';
-import nextDynamic from 'next/dynamic';
 import Hero from '@/components/frontend/Hero/Hero';
-
-const Services = nextDynamic(() => import('@/components/frontend/Services/Services'));
-const BrandHeader = nextDynamic(() => import('@/components/frontend/BrandHeader/BrandHeader'));
-const ImageSlider = nextDynamic(() => import('@/components/frontend/ImageSlider/ImageSlider'));
-const Expertise = nextDynamic(() => import('@/components/frontend/Expertise/Expertise'));
-const WhatWeDo = nextDynamic(() => import('@/components/frontend/WhatWeDo/WhatWeDo'));
-const ProcessStack = nextDynamic(() => import('@/components/frontend/ProcessStack/ProcessStack'));
-const VisionMission = nextDynamic(() => import('@/components/frontend/VisionMission/VisionMission'));
-const CollaborationClients = nextDynamic(() => import('@/components/frontend/CollaborationClients/CollaborationClients'));
-const ProjectBanner = nextDynamic(() => import('@/components/frontend/ProjectBanner/ProjectBanner'));
-const ContactSection = nextDynamic(() => import('@/components/frontend/ContactSection/ContactSection'));
+import Services from '@/components/frontend/Services/Services';
+import BrandHeader from '@/components/frontend/BrandHeader/BrandHeader';
+import ImageSlider from '@/components/frontend/ImageSlider/ImageSlider';
+import Expertise from '@/components/frontend/Expertise/Expertise';
+import WhatWeDo from '@/components/frontend/WhatWeDo/WhatWeDo';
+import ProcessStack from '@/components/frontend/ProcessStack/ProcessStack';
+import VisionMission from '@/components/frontend/VisionMission/VisionMission';
+import CollaborationClients from '@/components/frontend/CollaborationClients/CollaborationClients';
+import ProjectBanner from '@/components/frontend/ProjectBanner/ProjectBanner';
+import ContactSection from '@/components/frontend/ContactSection/ContactSection';
 
 export const dynamic = 'force-dynamic';
 

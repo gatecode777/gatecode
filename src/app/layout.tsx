@@ -33,16 +33,24 @@ export default function RootLayout({
       lang="en"
       className={`${plusJakartaSans.variable} ${jetbrainsMono.variable} ${castoroTitling.variable} ${robotoFlex.variable} ${inter.variable} ${arimo.variable} ${playfairDisplay.variable}`}
     >
+      <head>
+        <link rel="preconnect" href="https://ik.imagekit.io" crossOrigin="" />
+        <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="" />
+        <link rel="dns-prefetch" href="https://ik.imagekit.io" />
+        <link rel="dns-prefetch" href="https://images.unsplash.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+      </head>
       <body>
         {/* Load Google Tag Manager Script */}
         <Script
           id="gtm-script"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           src="https://www.googletagmanager.com/gtm.js?id=GTM-PSVZ559Q"
         />
 
         {/* Initialize GTM Data Layer */}
-        <Script id="gtm-init" strategy="afterInteractive">
+        <Script id="gtm-init" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({

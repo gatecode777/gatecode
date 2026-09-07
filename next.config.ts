@@ -13,6 +13,10 @@ const nextConfig: NextConfig = {
     formats: ['image/avif', 'image/webp'],
     unoptimized: false,
   },
+  experimental: {
+    optimizePackageImports: ['lucide-react', 'react-icons', 'framer-motion'],
+  },
+  turbopack: {},
 };
 
 export default nextConfig;
