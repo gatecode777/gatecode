@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;600;700&family=Roboto+Serif:wght@400;500&display=swap');
-
 .blog-page {
   background: linear-gradient(120deg, #0FB9B1 0%, #0E3A5D 45%, #0B0F1A 100%);
   min-height: 100vh;
   padding: 56px 0 72px;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-inter, 'Inter'), sans-serif;
   color: #fff;
 }
 

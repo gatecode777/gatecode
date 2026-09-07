@@ -1,12 +1,7 @@
-'use client';
-
-import { useRouter } from 'next/navigation';
-import Image from 'next/image';
+import Link from 'next/link';
 import './Hero.css';
 
 const Hero = () => {
-  const router = useRouter();
-
   return (
     <section className="hero-section fe-root">
       <div className="hero-container">
@@ -26,12 +21,12 @@ const Hero = () => {
           </p>
 
           <div className="hero-buttons">
-            <button className="hero-btn hero-btn-solid" onClick={() => router.push('/get-started')}>
+            <Link href="/get-started" className="hero-btn hero-btn-solid">
               Get Free Consultations <span> &rarr;</span>
-            </button>
-            <button className="hero-btn hero-btn-outline" onClick={() => router.push('/services')}>
+            </Link>
+            <Link href="/services" className="hero-btn hero-btn-outline">
               Our Services <span>&rarr;</span>
-            </button>
+            </Link>
           </div>
 
           <div className="hero-stats">
@@ -56,32 +51,43 @@ const Hero = () => {
 
         <div className="hero-images">
           <div className="hero-img-circle circle-1">
-            <Image 
-              src="/images/hero-showcase-1.webp" 
-              alt="Modern Business Growth and IT Infrastructure - Gatecode Technologies" 
-              fill
-              sizes="(max-width: 768px) 140px, 280px"
-              priority
-              style={{ objectFit: 'cover' }}
-            />
+            <picture>
+              <source media="(max-width: 768px)" srcSet="/images/hero-showcase-1-mobile.webp" />
+              <img 
+                src="/images/hero-showcase-1.webp" 
+                alt="Modern Business Growth and IT Infrastructure - Gatecode Technologies" 
+                fetchPriority="high"
+                decoding="async"
+                width={280}
+                height={280}
+              />
+            </picture>
           </div>
           <div className="hero-img-circle circle-2">
-            <Image 
-              src="/images/hero-showcase-2.webp" 
-              alt="Professional IT and Business Support Specialist at Work - Gatecode Technologies" 
-              fill
-              sizes="(max-width: 768px) 140px, 280px"
-              style={{ objectFit: 'cover' }}
-            />
+            <picture>
+              <source media="(max-width: 768px)" srcSet="/images/hero-showcase-2-mobile.webp" />
+              <img 
+                src="/images/hero-showcase-2.webp" 
+                alt="Professional IT and Business Support Specialist at Work - Gatecode Technologies" 
+                fetchPriority="high"
+                decoding="async"
+                width={280}
+                height={280}
+              />
+            </picture>
           </div>
           <div className="hero-img-circle circle-3">
-            <Image 
-              src="/images/hero-showcase-3.webp" 
-              alt="Future Ready Technology Solutions and Innovation - Gatecode Technologies" 
-              fill
-              sizes="(max-width: 768px) 140px, 280px"
-              style={{ objectFit: 'cover' }}
-            />
+            <picture>
+              <source media="(max-width: 768px)" srcSet="/images/hero-showcase-3-mobile.webp" />
+              <img 
+                src="/images/hero-showcase-3.webp" 
+                alt="Future Ready Technology Solutions and Innovation - Gatecode Technologies" 
+                fetchPriority="high"
+                decoding="async"
+                width={280}
+                height={280}
+              />
+            </picture>
           </div>
         </div>
       </div>

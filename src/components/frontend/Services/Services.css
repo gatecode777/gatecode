@@ -13,7 +13,7 @@
 
 .services-title {
     color: #fff;
-    font-family: "Castoro Titling", serif;
+    font-family: var(--font-castoro, "Castoro Titling"), serif;
     font-weight: 100;
     font-size: 50px;
     line-height: 1;
@@ -22,7 +22,7 @@
 }
 
 .services-subtitle {
-    font-family: "Roboto Flex", sans-serif;
+    font-family: var(--font-roboto-flex, "Roboto Flex"), sans-serif;
     color: #94a3b8;
     font-weight: 200;
     font-size: 18px;
@@ -49,7 +49,7 @@
 .services-view-all-btn {
     display: inline-block;
     padding: 14px 38px;
-    background-color: #0fb9b1;
+    background-color: #097b74;
     color: #ffffff;
     font-family: 'Inter', sans-serif;
     font-size: 15px;
@@ -60,13 +60,13 @@
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 10px 25px rgba(15, 185, 177, 0.3);
+    box-shadow: 0 10px 25px rgba(9, 123, 116, 0.35);
 }
 
 .services-view-all-btn:hover {
-    background-color: #0eaba3;
+    background-color: #07655f;
     transform: translateY(-3px);
-    box-shadow: 0 14px 30px rgba(15, 185, 177, 0.4);
+    box-shadow: 0 14px 30px rgba(9, 123, 116, 0.45);
 }
 
 .service-card {
