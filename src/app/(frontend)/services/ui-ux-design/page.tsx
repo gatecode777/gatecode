@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import FAQSection, { uiUxDesignFaqs } from '@/components/frontend/FAQSection/FAQSection';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component (Updated for UI/UX Design Services) ====================
@@ -416,26 +417,42 @@ const UIUXDesignServicesPage = () => {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'Why choose Gatecode Technologies as your UI UX design company in India?',
+        name: 'What is the difference between UI and UX design, and why do I need both?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Gatecode Technologies is a premier UI UX design company in India delivering user-centric ui and ux design, wireframing and prototyping, and custom design system development services.',
+          text: 'UX (User Experience) focuses on the logical flow, usability, and how a user navigates through your platform to solve their problems efficiently. UI (User Interface) focuses on the visual elements, such as colors, typography, and interactive components. At Gatecode, we combine both to create digital products that are not only visually stunning but also highly intuitive and easy to use.',
         },
       },
       {
         '@type': 'Question',
-        name: 'What is wireframing and prototyping in UI UX design?',
+        name: 'How does good UI/UX design impact my business and conversion rates?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Wireframing and prototyping involve creating blueprint layouts and interactive clickable prototypes to validate user experience and product functionality before software development.',
+          text: 'A well-researched UI/UX design directly impacts your bottom line. By providing a seamless, frustration-free journey, you reduce website bounce rates and keep users engaged longer. An intuitive design builds immediate trust with your audience, which ultimately leads to higher conversion rates and increased sales for your business.',
         },
       },
       {
         '@type': 'Question',
-        name: 'Do you offer mobile app UI UX design services and design systems?',
+        name: 'Do you offer UI/UX redesign services for existing websites or applications?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes! As a specialized mobile app ui ux design company, we craft intuitive iOS and Android mobile interfaces along with centralized design system development services.',
+          text: 'Yes, absolutely! If your current website or mobile app looks outdated, has a high drop-off rate, or is difficult to navigate, our team can help. We conduct a comprehensive UX audit of your existing platform to identify friction points, and then completely revamp the interface to modernize the look and significantly improve usability.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is your process for designing a custom UI/UX?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'We follow a highly structured, user-centric design process. It begins with requirement analysis and user research. We then create wireframes and interactive prototypes to map out the user journey. Once the core structure is approved, we design high-fidelity visual interfaces and conduct rigorous usability testing before handing the assets over to the development team.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Can your design team collaborate with our internal developers?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, we frequently work alongside internal engineering teams. We deliver clean, highly organized design files, comprehensive design systems, and clickable prototypes. Our UI/UX designers ensure clear communication with developers so that the final coded product is a pixel-perfect match to the original design.',
         },
       },
     ],
@@ -463,6 +480,13 @@ const UIUXDesignServicesPage = () => {
       <DigitalIndustries />
       <SeoContentSection />
       <ContactSection />
+      <FAQSection
+        eyebrow="FAQS"
+        titleLine1="FREQUENTLY ASKED"
+        titleHighlight="QUESTIONS"
+        subtitle="Explore answers to essential questions regarding our human-centric UI/UX design, wireframing, design systems, and usability audits."
+        items={uiUxDesignFaqs}
+      />
     </div>
   );
 };

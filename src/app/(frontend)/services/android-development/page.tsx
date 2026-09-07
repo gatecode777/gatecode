@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import FAQSection, { androidAppDevFaqs } from '@/components/frontend/FAQSection/FAQSection';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component (Updated for Android App Development) ====================
@@ -284,18 +285,42 @@ const AndroidAppDevelopmentPage = () => {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'Why choose Gatecode Technologies for Android App Development Services?',
+        name: 'What types of Android applications do you develop?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Gatecode Technologies builds high-performance, secure native Android applications using Kotlin and Java, featuring Google Play Store optimization and smooth UI performance across all devices.',
+          text: 'We offer custom Android app development services tailored to your specific business needs. Whether you require a high-performance enterprise solution, an engaging e-commerce application, or a dynamic SaaS mobile platform, our team engineers scalable, secure, and user-friendly Android apps that drive business growth.',
         },
       },
       {
         '@type': 'Question',
-        name: 'Do you handle Google Play Console submission and app store deployment?',
+        name: 'What technologies do you use for Android app development?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes! We handle the complete Google Play Store publication process including app listing optimization, privacy compliance, and build approval.',
+          text: "We utilize modern, robust technologies to build industry-leading Android applications. Depending on your project's performance requirements, we develop using native programming languages like Kotlin and Java, or leverage advanced cross-platform frameworks to ensure efficient development and highly responsive user interfaces.",
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Can your team integrate the Android app with our existing website or software?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, absolutely! We specialize in custom API development and system integration. We can securely connect your new Android application with your existing web platforms, CRMs, ERPs, legacy systems, and third-party payment gateways to ensure seamless, real-time data synchronization.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you handle the process of publishing the app on the Google Play Store?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "Yes, our end-to-end development services include complete Google Play Store deployment. We ensure your application complies with all of Google's strict technical, performance, and security guidelines, managing the entire submission and approval process on your behalf.",
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you provide support and updates after the Android app goes live?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Our partnership continues long after your app is launched. We provide ongoing support and maintenance services, which include active performance monitoring, security patches, bug fixes, and upgrading your app to ensure full compatibility with the latest Android OS releases.',
         },
       },
     ],
@@ -322,6 +347,13 @@ const AndroidAppDevelopmentPage = () => {
       <DigitalProcess />
       <DigitalIndustries />
       <ContactSection />
+      <FAQSection
+        eyebrow="FAQS"
+        titleLine1="FREQUENTLY ASKED"
+        titleHighlight="QUESTIONS"
+        subtitle="Explore answers to essential questions regarding native Kotlin/Java development, API integrations, Google Play deployment, and ongoing app maintenance."
+        items={androidAppDevFaqs}
+      />
     </div>
   );
 };

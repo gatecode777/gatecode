@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import FAQSection, { cmsWebsiteDevFaqs } from '@/components/frontend/FAQSection/FAQSection';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component (Updated for CMS Website Development) ====================
@@ -296,18 +297,42 @@ const CMSWebsiteDevelopmentPage = () => {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'Which Content Management Systems (CMS) do you develop websites for?',
+        name: 'What is a CMS website, and why does my business need one?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'We build CMS websites on WordPress, Shopify, WooCommerce, Magento, Strapi, Sanity, and custom headless CMS architectures tailored to your workflow.',
+          text: "A Content Management System (CMS) is a platform that allows you to easily create, manage, and update your website's content without needing to write any code. If your business requires frequent updates—such as publishing blogs, adding new products, or updating company news—a CMS gives you complete control over your website quickly and efficiently.",
         },
       },
       {
         '@type': 'Question',
-        name: 'Will I be able to update my website content easily without coding skills?',
+        name: 'Do I need technical knowledge or coding skills to manage my CMS website?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes! All our CMS platforms feature intuitive admin dashboards enabling non-technical users to publish blogs, edit pages, manage products, and update imagery effortlessly.',
+          text: 'Not at all! The primary benefit of our CMS development services is providing you with a highly intuitive and user-friendly admin dashboard. You and your team can easily edit text, upload images, manage pages, and publish content with just a few clicks, requiring zero technical expertise.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you build custom CMS platforms or use headless CMS architectures?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'We do both based on your specific business requirements. We specialize in building custom-engineered CMS portals tailored to your exact workflows. Additionally, as a high-performance web development company, we integrate modern Headless CMS solutions using frameworks like React and Next.js, which separate the backend content management from the frontend to deliver lightning-fast loading speeds.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Will my CMS website be secure against hacking and vulnerabilities?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, security is a top priority for us. Unlike poorly maintained template sites that are prone to attacks, we build secure CMS architectures with built-in SSL, data encryption, and advanced defenses against common web vulnerabilities. We also offer ongoing maintenance services to ensure your CMS is always updated with the latest security patches.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Are the CMS websites developed by Gatecode SEO-friendly?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Absolutely. We engineer our CMS solutions with search engine optimization (SEO) at their core. We ensure clean code structure, fast page load times, mobile responsiveness, and easy-to-use SEO modules so you can effortlessly optimize your meta tags, URLs, and content to rank higher on Google.',
         },
       },
     ],
@@ -334,6 +359,13 @@ const CMSWebsiteDevelopmentPage = () => {
       <DigitalProcess />
       <DigitalIndustries />
       <ContactSection />
+      <FAQSection
+        eyebrow="FAQS"
+        titleLine1="FREQUENTLY ASKED"
+        titleHighlight="QUESTIONS"
+        subtitle="Explore answers to essential questions regarding CMS architecture, admin controls, Headless CMS integrations, security, and SEO optimization."
+        items={cmsWebsiteDevFaqs}
+      />
     </div>
   );
 };

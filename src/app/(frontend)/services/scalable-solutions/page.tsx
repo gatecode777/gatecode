@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import FAQSection, { scalableSolutionsFaqs } from '@/components/frontend/FAQSection/FAQSection';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component (Updated for Smart & Scalable Software Solutions) ====================
@@ -254,8 +255,73 @@ const SmartScalableSoftwareSolutionsPage = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/scalable-solutions' },
+      { '@type': 'ListItem', position: 3, name: 'Scalable Solutions', item: 'https://gatecode.in/services/scalable-solutions' },
+    ],
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What are scalable web and software solutions?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Scalable solutions are custom-built digital platforms engineered to handle growth seamlessly. Whether your business experiences a sudden surge in website traffic, an expanding user base, or increased data processing needs, a scalable architecture ensures your application continues to perform optimally without crashing or slowing down.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Why is scalability important for my growing business?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'As your business expands, your digital infrastructure must be able to keep up. Without a scalable foundation, increased workloads can lead to system downtime, slow loading speeds, and a poor user experience. Scalable solutions future-proof your digital assets, allowing you to seamlessly add new features and handle higher capacities cost-effectively.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How do you ensure the scalability of a web application or software?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'We achieve scalability by utilizing modern, high-performance tech stacks like React, Next.js, Node.js, and Python, paired with modular architectures. By implementing optimized database structures, efficient load balancing, and clean, modular code, we ensure your platform can scale both vertically (adding more power) and horizontally (adding more servers) as your demands increase.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Can you upgrade my existing legacy software to make it scalable?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes! Our team can conduct a comprehensive technical audit of your current system to identify performance bottlenecks. We can then restructure, optimize, or entirely migrate your legacy application to a more robust framework, improving database queries and integrating modern cloud hosting solutions for superior resource management.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Are scalable digital solutions cost-effective in the long run?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Absolutely. While engineering a scalable architecture requires strategic initial planning, it is highly cost-effective long term. It prevents the need for expensive, complete system rebuilds every few years. Furthermore, modern scalable cloud infrastructure allows you to optimize costs by only paying for the computing resources you actually use during traffic peaks.',
+        },
+      },
+    ],
+  };
+
   return (
     <div className="digital-marketing-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />
@@ -263,6 +329,13 @@ const SmartScalableSoftwareSolutionsPage = () => {
       <DigitalProcess />
       <DigitalIndustries />
       <ContactSection />
+      <FAQSection
+        eyebrow="FAQS"
+        titleLine1="FREQUENTLY ASKED"
+        titleHighlight="QUESTIONS"
+        subtitle="Find answers to key questions about building, optimizing, and future-proofing scalable web and software architecture."
+        items={scalableSolutionsFaqs}
+      />
     </div>
   );
 };

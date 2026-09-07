@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import FAQSection, { customWebDevFaqs } from '@/components/frontend/FAQSection/FAQSection';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component (Updated for Custom Website Development) ====================
@@ -257,8 +258,73 @@ const CustomWebsiteDevelopmentPage = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/web-development' },
+      { '@type': 'ListItem', position: 3, name: 'Custom Website Development', item: 'https://gatecode.in/services/custom-website-development' },
+    ],
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What is the difference between custom website development and template-based websites?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Custom website development involves building your platform from the ground up, tailored specifically to your business goals, target audience, and operational workflows. Unlike generic templates, custom solutions offer a unique UI/UX design, highly scalable architecture, superior security, and optimized performance without any unnecessary code bloat.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What technologies do you use for building custom websites?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Our full-stack engineering team builds robust and scalable custom web solutions using modern frameworks such as React, Next.js, Node.js, and Python. We focus on writing clean, modular, and maintainable code that can easily integrate with custom APIs, enterprise ERPs, and third-party payment gateways.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How do you ensure my custom website is fast and SEO-friendly?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'We engineer all custom websites with performance and search engine visibility at their core. By utilizing advanced frameworks like Next.js for efficient rendering, optimizing core web vitals, and implementing clean HTML structures, we ensure your website loads lightning-fast and ranks higher on search engines like Google.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Will my custom website be scalable as my business grows?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Absolutely. One of the biggest advantages of custom web development is scalability. We design your database and backend architecture to handle increased traffic and complex data workflows, ensuring that your website or web application can seamlessly expand alongside your business without needing a complete rebuild.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is your process for developing a custom website?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'We follow a structured, end-to-end development process. It begins with in-depth requirement analysis and strategic planning, followed by custom UI/UX design. Once the design is approved, our developers build and rigorously test the site for functionality and security. Post-launch, we provide continuous monitoring and dedicated maintenance support.',
+        },
+      },
+    ],
+  };
+
   return (
     <div className="digital-marketing-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />
@@ -266,6 +332,13 @@ const CustomWebsiteDevelopmentPage = () => {
       <DigitalProcess />
       <DigitalIndustries />
       <ContactSection />
+      <FAQSection
+        eyebrow="FAQS"
+        titleLine1="FREQUENTLY ASKED"
+        titleHighlight="QUESTIONS"
+        subtitle="Explore answers to key questions regarding custom website architecture, tech stack, SEO performance, scalability, and development process."
+        items={customWebDevFaqs}
+      />
     </div>
   );
 };

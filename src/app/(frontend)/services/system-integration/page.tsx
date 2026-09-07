@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import FAQSection, { systemIntegrationFaqs } from '@/components/frontend/FAQSection/FAQSection';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component (Updated for Custom Development & System Integration) ====================
@@ -257,8 +258,73 @@ const CustomDevelopmentSystemIntegrationPage = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/system-integration' },
+      { '@type': 'ListItem', position: 3, name: 'System Integration', item: 'https://gatecode.in/services/system-integration' },
+    ],
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What is system integration, and why does my business need it?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'System integration is the process of connecting different software applications, third-party tools, and IT systems so they can communicate and function as a single, unified platform. If your business uses multiple isolated tools (like a separate CRM, accounting software, and e-commerce platform), integration eliminates data silos, automates workflows, and drastically improves operational efficiency.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What types of systems and third-party software can you integrate?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Our engineering team can seamlessly integrate a wide variety of platforms. We specialize in connecting modern web applications with ERPs, CRMs, payment gateways, marketing automation tools, external business APIs, and custom SaaS solutions to create a synchronized digital ecosystem for your business.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Can you integrate new web applications with our existing legacy systems?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, absolutely. We understand that replacing an entire legacy system can be expensive and disruptive. We build custom API bridges and middleware that allow your older, existing infrastructure to securely communicate and share data with modern web and mobile applications without requiring a complete system overhaul.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How does API integration improve our daily business operations?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Custom API integration enables real-time data syncing across all your software tools. This means your team no longer has to manually enter data into multiple systems, which reduces human error, saves countless administrative hours, and provides you with accurate, up-to-date analytics for better decision-making.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: "Is our company's data secure during and after the integration process?",
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Data security is our top priority. We implement robust security protocols, including end-to-end data encryption, secure authentication (like OAuth), and strict compliance checks. We ensure that data flows securely between systems without exposing your architecture to common web vulnerabilities or unauthorized access.',
+        },
+      },
+    ],
+  };
+
   return (
     <div className="digital-marketing-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />
@@ -266,6 +332,13 @@ const CustomDevelopmentSystemIntegrationPage = () => {
       <DigitalProcess />
       <DigitalIndustries />
       <ContactSection />
+      <FAQSection
+        eyebrow="FAQS"
+        titleLine1="FREQUENTLY ASKED"
+        titleHighlight="QUESTIONS"
+        subtitle="Explore answers to essential questions regarding system integration, API bridges, legacy synchronization, and enterprise security."
+        items={systemIntegrationFaqs}
+      />
     </div>
   );
 };

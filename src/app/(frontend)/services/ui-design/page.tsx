@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import FAQSection, { uiDesignFaqs } from '@/components/frontend/FAQSection/FAQSection';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component (Updated for UI Design Services) ====================
@@ -249,8 +250,73 @@ const UIDesignServicesPage = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/ui-design' },
+      { '@type': 'ListItem', position: 3, name: 'UI Design', item: 'https://gatecode.in/services/ui-design' },
+    ],
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What is UI (User Interface) design, and why does my business need it?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'UI design focuses on the visual and interactive elements of your digital product, including layouts, color schemes, typography, and buttons. A strong, modern UI is crucial because it creates a powerful first impression, builds brand credibility, and keeps users visually engaged with your website or mobile application.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you use pre-made templates for your UI designs, or is it fully custom?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'We deliver 100% custom UI designs and never rely on generic templates. Our expert design team crafts bespoke, highly aesthetic interfaces that perfectly align with your unique brand identity, ensuring your digital platform stands out from the competition.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How do you ensure the UI design looks perfect on all devices?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'We strictly follow a responsive and mobile-first design approach. Our UI designers create adaptable layouts that scale seamlessly across desktop monitors, tablets, and smartphones, guaranteeing a pixel-perfect and engaging visual experience on any screen size.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Can you revamp the user interface of an existing website or legacy application?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "Yes, we specialize in UI modernization. If your current software looks outdated or fails to capture your audience's attention, we can conduct a complete visual overhaul. We will redesign the interface to give it a fresh, modern, and premium look without disrupting your backend architecture.",
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How do your UI designers ensure a smooth handoff to the development team?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'We bridge the gap between design and development by creating comprehensive design systems and clear developer handoffs. We deliver highly organized design files, interactive prototypes, and detailed style guides so that engineers can translate our visual designs into pixel-perfect code without any guesswork.',
+        },
+      },
+    ],
+  };
+
   return (
     <div className="digital-marketing-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />
@@ -258,6 +324,13 @@ const UIDesignServicesPage = () => {
       <DigitalProcess />
       <DigitalIndustries />
       <ContactSection />
+      <FAQSection
+        eyebrow="FAQS"
+        titleLine1="FREQUENTLY ASKED"
+        titleHighlight="QUESTIONS"
+        subtitle="Explore answers to essential questions regarding custom UI design, responsive interfaces, visual revamps, and design systems."
+        items={uiDesignFaqs}
+      />
     </div>
   );
 };

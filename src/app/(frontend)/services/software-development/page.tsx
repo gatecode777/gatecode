@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import FAQSection, { softwareDevFaqs } from '@/components/frontend/FAQSection/FAQSection';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component (Updated for Software Development Services) ====================
@@ -420,26 +421,42 @@ const SoftwareDevelopmentServicesPage = () => {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'Why choose Gatecode Technologies as your custom software development company in India?',
+        name: 'What types of Software Development services does Gatecode Technologies provide?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Gatecode Technologies is a premier custom software development company in India specializing in enterprise application software, custom software development services, and b2b software solutions.',
+          text: 'We offer custom software development, enterprise solutions, SaaS platforms, and business workflow automation services. Our team designs scalable and secure software tailored specifically to your business needs, helping to enhance your operational efficiency.',
         },
       },
       {
         '@type': 'Question',
-        name: 'Do you provide custom CRM and ERP software development services?',
+        name: 'What is the difference between custom software and ready-made (off-the-shelf) software?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes, we design custom CRM development services and ERP software development services engineered to streamline business operations and centralize data workflows.',
+          text: 'Ready-made software is generic and often comes with limited or rigid features. In contrast, we build 100% custom-engineered software that aligns perfectly with your unique business workflows. Custom software provides better security, high scalability, and complete control over your requirements without any unnecessary recurring licensing fees.',
         },
       },
       {
         '@type': 'Question',
-        name: 'What types of software application development services do your developers offer?',
+        name: 'Can your custom software integrate with our existing systems like CRM or ERP?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Our expert software developers build cloud SaaS applications, desktop software, embedded software development services, and custom enterprise portals.',
+          text: 'Yes, absolutely! We provide seamless API integration services. We can effectively connect your new software with your existing CRMs, ERPs, payment gateways, third-party tools, and legacy systems to ensure a smooth data flow within a unified architecture.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What technologies do you use for software development?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'As a leading full-stack development company, we utilize a modern and robust tech stack. This includes advanced frameworks like React, Next.js, Node.js, and Python for both backend architectures and intuitive frontend interfaces, ensuring high performance, speed, and strict data security.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you provide post-development support and maintenance after deployment?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "Our commitment doesn't end with software delivery. We provide end-to-end support and 24/7 maintenance services. This includes active monitoring, security patches, performance tuning, and future technical updates to ensure your software always operates at peak performance.",
         },
       },
     ],
@@ -467,6 +484,13 @@ const SoftwareDevelopmentServicesPage = () => {
       <DigitalIndustries />
       <SeoContentSection />
       <ContactSection />
+      <FAQSection
+        eyebrow="FAQS"
+        titleLine1="FREQUENTLY ASKED"
+        titleHighlight="QUESTIONS"
+        subtitle="Everything you need to know about our custom software engineering, tech stack, API integrations, and maintenance services."
+        items={softwareDevFaqs}
+      />
     </div>
   );
 };

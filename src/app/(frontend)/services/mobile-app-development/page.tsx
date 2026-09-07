@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import FAQSection, { mobileAppDevFaqs } from '@/components/frontend/FAQSection/FAQSection';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component (Updated for Mobile App Development) ====================
@@ -357,26 +358,42 @@ const MobileAppDevelopmentPage = () => {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'Why choose Gatecode Technologies as your mobile app development company in India?',
+        name: 'What platforms do you build mobile applications for?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Gatecode Technologies is a premier mobile app development company in India providing native Android app development services, iOS app development services, and cross-platform mobile solutions.',
+          text: 'We provide end-to-end mobile app development services for both iOS and Android platforms. Whether you need a native application built specifically for Apple or Google ecosystems, or a highly efficient cross-platform app, we deliver solutions that ensure maximum reach and seamless performance across all mobile devices.',
         },
       },
       {
         '@type': 'Question',
-        name: 'Do you provide both iOS and Android app development services?',
+        name: 'Should I choose native or cross-platform app development for my business?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes! We deliver complete ios and android app development services using native technologies (Swift, Kotlin) as well as cross-platform frameworks (Flutter, React Native).',
+          text: 'It depends on your business goals and budget. Cross-platform apps are highly cost-effective and offer a faster time-to-market since they use a single codebase for both iOS and Android. However, if your application requires heavy device-specific hardware integration or complex graphics, we recommend custom native app development for maximum performance.',
         },
       },
       {
         '@type': 'Question',
-        name: 'How can I hire app developers for my mobile project?',
+        name: 'Can your team integrate a new mobile app with our existing website or internal software?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'You can hire expert app developers from Gatecode Technologies on dedicated full-time, part-time, or project-based engagement models.',
+          text: 'Absolutely. As full-stack engineering experts, we specialize in seamless custom API integrations. We can connect your new mobile application directly to your existing website, CMS, CRM, ERP, and secure payment gateways, ensuring real-time data synchronization across your entire digital ecosystem.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How long does it typically take to develop a custom mobile app?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "The development timeline depends entirely on the app's complexity, required features, and integrations. A standard application may take a few months to develop, while a complex, enterprise-level app will take longer. We always begin with a thorough requirement analysis and provide a clear, structured roadmap and timeline before development begins.",
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you assist with App Store deployment and post-launch app maintenance?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, our services cover the entire app development lifecycle. We manage the strict submission and approval processes for both the Apple App Store and Google Play Store. After your app is live, we provide ongoing maintenance, security patches, bug fixes, and continuous performance tuning to keep it running flawlessly.',
         },
       },
     ],
@@ -404,6 +421,13 @@ const MobileAppDevelopmentPage = () => {
       <DigitalIndustries />
       <SeoContentSection />
       <ContactSection />
+      <FAQSection
+        eyebrow="FAQS"
+        titleLine1="FREQUENTLY ASKED"
+        titleHighlight="QUESTIONS"
+        subtitle="Find answers to key questions regarding mobile app platforms, native vs. cross-platform frameworks, API connectivity, and app store publishing."
+        items={mobileAppDevFaqs}
+      />
     </div>
   );
 };
