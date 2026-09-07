@@ -42,6 +42,22 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
       </head>
       <body>
+        {/* Google tag (gtag.js) */}
+        <Script
+          id="google-tag-gtag"
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-CERWSX5DM9"
+        />
+        <Script id="google-tag-gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-CERWSX5DM9');
+          `}
+        </Script>
+
         {/* Load Google Tag Manager Script */}
         <Script
           id="gtm-script"

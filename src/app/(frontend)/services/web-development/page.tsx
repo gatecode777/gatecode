@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import FAQSection from '@/components/frontend/FAQSection/FAQSection';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component (Updated for Web Development) ====================
@@ -464,26 +465,42 @@ const WebDevelopmentServicesPage = () => {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'Why should I choose Gatecode Technologies as my website development company in India?',
+        name: 'What types of Web Development Services does Gatecode Technologies provide?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Gatecode Technologies is a top website development company in India offering end-to-end web design & development services, custom web app development services, and affordable web development solutions with React, Next.js, and Node.js.',
+          text: 'We offer custom website development, e-commerce solutions, CMS development, and dynamic web applications. Our team focuses on building responsive, secure, and SEO-friendly websites that deliver a seamless user experience (UI/UX) across all devices to support your business growth.',
         },
       },
       {
         '@type': 'Question',
-        name: 'Can I hire dedicated web developers in India for custom web app development?',
+        name: 'Do you offer custom web development or use pre-built templates?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes! You can hire a web developer in India or hire dedicated web developers from Gatecode Technologies on flexible monthly or project-based engagement models.',
+          text: 'We deliver 100% custom-engineered architecture. We do not use generic templates; instead, we write clean, maintainable, and modular full-stack code to ensure your SaaS platforms, enterprise workflows, and web apps can scale efficiently.',
         },
       },
       {
         '@type': 'Question',
-        name: 'Do you offer API integration services and website maintenance services?',
+        name: 'What modern technologies do you use to build websites and web apps?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Absoluely. We provide comprehensive API integration services to connect third-party platforms alongside ongoing website maintenance services for security and speed optimization.',
+          text: 'As a high-performance web development company, we utilize modern frameworks including React, Next.js, Node.js, and Python. We also provide seamless API integration services to connect payment gateways, CRMs, ERPs, and external business tools into a unified system.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Can I hire dedicated web developers from Gatecode for my project?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, absolutely! If you are looking to expand your technical capabilities or scale your engineering bandwidth, you can hire our skilled full-stack engineers in India. We offer flexible engagement models that reduce development overhead while guaranteeing high code quality and on-time delivery.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you provide post-launch support and maintenance?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "Yes, our partnership doesn't end at launch. We provide 24/7 website maintenance and end-to-end technical support. This includes active monitoring, security patches, performance tuning, and continuous updates to ensure your website operates at peak performance.",
         },
       },
     ],
@@ -511,6 +528,7 @@ const WebDevelopmentServicesPage = () => {
       <DigitalIndustries />
       <SeoContentSection />
       <ContactSection />
+      <FAQSection />
     </div>
   );
 };

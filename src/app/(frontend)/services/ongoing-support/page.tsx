@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import FAQSection, { ongoingSupportFaqs } from '@/components/frontend/FAQSection/FAQSection';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component (Updated for Ongoing Support & Future-Ready Technology) ====================
@@ -260,8 +261,73 @@ const OngoingSupportFutureReadyTechnologyPage = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/ongoing-support' },
+      { '@type': 'ListItem', position: 3, name: 'Ongoing Support & Future-Ready Technology', item: 'https://gatecode.in/services/ongoing-support' },
+    ],
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What is included in your ongoing support and maintenance services?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Our ongoing support services include 24/7 uptime monitoring, regular security patches, framework and plugin updates, bug fixes, and continuous performance tuning. We ensure that your website, web application, or software remains secure, fast, and fully functional at all times.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Why do I need ongoing maintenance after my website or software is launched?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Technology constantly evolves, and so do web security threats. Without regular updates, your digital platform can become vulnerable to hacking, experience slow loading speeds, or face compatibility issues with new browsers and devices. Ongoing maintenance future-proofs your platform and guarantees a seamless user experience.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How quickly does your team respond to critical technical issues or downtime?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'We prioritize the stability of your business. We provide active monitoring to detect issues before they affect your users. In the event of a critical error or downtime, our dedicated technical support team responds immediately to troubleshoot and resolve the issue with minimal disruption to your operations.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you provide maintenance for websites or software developed by other companies?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, we do! If you have an existing application built by another agency, our full-stack engineers will conduct a comprehensive technical audit, review the existing codebase, and seamlessly take over the continuous support, optimization, and security management of your platform.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you offer flexible support packages tailored to our specific business needs?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Absolutely. We understand that every business has different operational requirements and budgets. We offer flexible engagement models, including monthly retainers and dedicated support SLAs (Service Level Agreements), ensuring you only pay for the level of technical support your business actually needs.',
+        },
+      },
+    ],
+  };
+
   return (
     <div className="digital-marketing-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />
@@ -269,6 +335,13 @@ const OngoingSupportFutureReadyTechnologyPage = () => {
       <DigitalProcess />
       <DigitalIndustries />
       <ContactSection />
+      <FAQSection
+        eyebrow="FAQS"
+        titleLine1="FREQUENTLY ASKED"
+        titleHighlight="QUESTIONS"
+        subtitle="Find answers to key questions regarding our 24/7 uptime monitoring, security patches, legacy audits, and flexible maintenance SLAs."
+        items={ongoingSupportFaqs}
+      />
     </div>
   );
 };
