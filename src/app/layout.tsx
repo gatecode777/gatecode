@@ -34,6 +34,19 @@ export default function RootLayout({
       className={`${plusJakartaSans.variable} ${jetbrainsMono.variable} ${castoroTitling.variable} ${robotoFlex.variable} ${inter.variable} ${arimo.variable} ${playfairDisplay.variable}`}
     >
       <head>
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-CERWSX5DM9" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-CERWSX5DM9');
+            `,
+          }}
+        />
         <link rel="preconnect" href="https://ik.imagekit.io" crossOrigin="" />
         <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="" />
@@ -42,22 +55,6 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
       </head>
       <body>
-        {/* Google tag (gtag.js) */}
-        <Script
-          id="google-tag-gtag"
-          strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=G-CERWSX5DM9"
-        />
-        <Script id="google-tag-gtag-init" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-CERWSX5DM9');
-          `}
-        </Script>
-
         {/* Load Google Tag Manager Script */}
         <Script
           id="gtm-script"
