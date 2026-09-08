@@ -10,9 +10,10 @@ import {
 
 export const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '800'],
+  weight: ['400', '500', '600', '700'],
   variable: '--font-plus-jakarta',
   display: 'swap',
+  preload: false,
 });
 
 export const jetbrainsMono = JetBrains_Mono({
@@ -20,6 +21,7 @@ export const jetbrainsMono = JetBrains_Mono({
   weight: ['400', '500'],
   variable: '--font-jetbrains-mono',
   display: 'swap',
+  preload: false,
 });
 
 export const castoroTitling = Castoro_Titling({
@@ -27,6 +29,7 @@ export const castoroTitling = Castoro_Titling({
   weight: '400',
   variable: '--font-castoro',
   display: 'swap',
+  preload: true,
 });
 
 export const robotoFlex = Roboto_Flex({
@@ -37,9 +40,10 @@ export const robotoFlex = Roboto_Flex({
 
 export const inter = Inter({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
+  weight: ['400', '500', '600'],
   variable: '--font-inter',
   display: 'swap',
+  preload: false,
 });
 
 export const arimo = Arimo({
@@ -48,6 +52,7 @@ export const arimo = Arimo({
   style: ['normal', 'italic'],
   variable: '--font-arimo',
   display: 'swap',
+  preload: false,
 });
 
 export const playfairDisplay = Playfair_Display({
@@ -55,4 +60,5 @@ export const playfairDisplay = Playfair_Display({
   weight: ['400', '500', '600'],
   variable: '--font-playfair',
   display: 'swap',
+  preload: false,
 });

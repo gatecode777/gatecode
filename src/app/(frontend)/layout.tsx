@@ -60,13 +60,6 @@ export default function FrontendLayout({ children }: { children: React.ReactNode
       <link
         rel="preload"
         as="image"
-        href="/images/hero-showcase-1-mobile.webp"
-        media="(max-width: 768px)"
-        fetchPriority="high"
-      />
-      <link
-        rel="preload"
-        as="image"
         href="/images/hero-showcase-1.webp"
         media="(min-width: 769px)"
         fetchPriority="high"
