@@ -178,6 +178,12 @@ pre {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@media (max-width: 768px) {
+  .fe-root {
+    background-attachment: scroll;
+  }
+}
+
 .fe-root a {
   text-decoration: none;
   color: inherit;

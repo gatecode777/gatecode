@@ -24,7 +24,7 @@ const Hero = () => {
             <Link href="/get-started" className="hero-btn hero-btn-solid" aria-label="Get Free Consultations with Gatecode Technologies">
               Get Free Consultations <span> &rarr;</span>
             </Link>
-            <Link href="/services" className="hero-btn hero-btn-outline" aria-label="Explore Our IT and Software Services">
+            <Link href="/services" className="hero-btn hero-btn-outline" aria-label="Our Services - Explore Our IT and Software Services">
               Our Services <span>&rarr;</span>
             </Link>
           </div>
@@ -69,7 +69,7 @@ const Hero = () => {
               <img 
                 src="/images/hero-showcase-2.webp" 
                 alt="Professional IT and Business Support Specialist at Work - Gatecode Technologies" 
-                fetchPriority="high"
+                loading="lazy"
                 decoding="async"
                 width={287}
                 height={280}
@@ -82,7 +82,7 @@ const Hero = () => {
               <img 
                 src="/images/hero-showcase-3.webp" 
                 alt="Future Ready Technology Solutions and Innovation - Gatecode Technologies" 
-                fetchPriority="high"
+                loading="lazy"
                 decoding="async"
                 width={287}
                 height={280}

@@ -61,7 +61,7 @@ const Services = () => {
                 src={service.image} 
                 alt={service.alt} 
                 fill 
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 250px" 
+                sizes="(max-width: 480px) 95vw, (max-width: 768px) 50vw, (max-width: 1200px) 33vw, 260px" 
                 style={{ objectFit: 'cover' }} 
               />
               <div className="service-card-overlay"></div>

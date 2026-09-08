@@ -11,7 +11,7 @@ import CollaborationClients from '@/components/frontend/CollaborationClients/Col
 import ProjectBanner from '@/components/frontend/ProjectBanner/ProjectBanner';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
 
-export const dynamic = 'force-dynamic';
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: 'Best It Services Company In Jaipur | Gatecode Technologies',

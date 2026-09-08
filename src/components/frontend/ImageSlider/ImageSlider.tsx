@@ -109,7 +109,7 @@ const ImageSlider = () => {
                     alt={slide.alt}
                     fill
                     sizes="(max-width: 768px) 100vw, 420px"
-                    priority={index === 0}
+                    loading="lazy"
                     style={{ objectFit: 'cover' }}
                   />
                   <div className="panorama-text-overlay">
