@@ -75,7 +75,7 @@ export default function Navbar() {
       <header ref={headerRef} className={`navbar${scrolled ? ' scrolled' : ''}`} id="header">
         <div className="navbar__container">
           <Link href="/" className="navbar__logo" aria-label="Gatecode Technologies Home" onClick={() => setActiveDropdown(null)}>
-            <Image src="/images/gatecode.webp" alt="Gatecode Technologies" width={184} height={92} priority />
+            <Image src="/images/gatecode.webp" alt="Gatecode Technologies" width={184} height={92} />
           </Link>
 
           <nav className="navbar__nav" aria-label="Main navigation">

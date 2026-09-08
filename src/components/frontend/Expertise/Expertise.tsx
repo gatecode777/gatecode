@@ -1,5 +1,3 @@
-'use client';
-
 import './Expertise.css';
 
 const expertiseData = [

@@ -3,8 +3,7 @@ import dynamic from 'next/dynamic';
 import Navbar from '@/components/frontend/Navbar/Navbar';
 
 const Footer = dynamic(() => import('@/components/frontend/Footer/Footer'));
-const ScrollToTop = dynamic(() => import('@/components/frontend/ScrollToTop/ScrollToTop'));
-const Chatbot = dynamic(() => import('@/components/frontend/Chatbot/Chatbot'));
+import FloatingWidgets from '@/components/frontend/FloatingWidgets/FloatingWidgets';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://gatecode.in'),
@@ -73,8 +72,7 @@ export default function FrontendLayout({ children }: { children: React.ReactNode
         {children}
       </main>
       <Footer />
-      <ScrollToTop />
-      <Chatbot />
+      <FloatingWidgets />
     </div>
   );
 }

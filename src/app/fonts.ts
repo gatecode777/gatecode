@@ -1,25 +1,15 @@
 import {
   Plus_Jakarta_Sans,
-  JetBrains_Mono,
   Castoro_Titling,
   Roboto_Flex,
   Inter,
   Arimo,
-  Playfair_Display,
 } from 'next/font/google';
 
 export const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   variable: '--font-plus-jakarta',
-  display: 'swap',
-  preload: false,
-});
-
-export const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  weight: ['400', '500'],
-  variable: '--font-jetbrains-mono',
   display: 'swap',
   preload: false,
 });
@@ -36,6 +26,7 @@ export const robotoFlex = Roboto_Flex({
   subsets: ['latin'],
   variable: '--font-roboto-flex',
   display: 'swap',
+  preload: false,
 });
 
 export const inter = Inter({
@@ -55,10 +46,3 @@ export const arimo = Arimo({
   preload: false,
 });
 
-export const playfairDisplay = Playfair_Display({
-  subsets: ['latin'],
-  weight: ['400', '500', '600'],
-  variable: '--font-playfair',
-  display: 'swap',
-  preload: false,
-});

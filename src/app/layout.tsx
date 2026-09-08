@@ -2,12 +2,10 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import {
   plusJakartaSans,
-  jetbrainsMono,
   castoroTitling,
   robotoFlex,
   inter,
   arimo,
-  playfairDisplay,
 } from "./fonts";
 import "./globals.css";
 
@@ -31,7 +29,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${plusJakartaSans.variable} ${jetbrainsMono.variable} ${castoroTitling.variable} ${robotoFlex.variable} ${inter.variable} ${arimo.variable} ${playfairDisplay.variable}`}
+      className={`${plusJakartaSans.variable} ${castoroTitling.variable} ${robotoFlex.variable} ${inter.variable} ${arimo.variable}`}
     >
       <head>
         <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="" />
@@ -40,7 +38,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
       </head>
       <body>
-        {/* Google Analytics gtag.js */}
+        {/* Google Analytics & Google Tag (gtag.js) */}
         <Script
           id="gtag-script"
           strategy="lazyOnload"
@@ -52,19 +50,6 @@ export default function RootLayout({
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-CERWSX5DM9');
-          `}
-        </Script>
-        {/* Google Tag (GT-MK985SPV) */}
-        <Script
-          id="gt-script"
-          strategy="lazyOnload"
-          src="https://www.googletagmanager.com/gtag/js?id=GT-MK985SPV"
-        />
-        <Script id="gt-init" strategy="lazyOnload">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
             gtag('config', 'GT-MK985SPV');
           `}
         </Script>
