@@ -1,9 +1,5 @@
-// @ts-nocheck
-'use client';
-
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import './ProjectBanner.css';
-
 
 interface ProjectBannerProps {
   title?: string;
@@ -12,8 +8,6 @@ interface ProjectBannerProps {
 }
 
 const ProjectBanner = ({ title, subtitle, bgImage }: ProjectBannerProps = {}) => {
-  const router = useRouter();
-
   return (
     <section
       className="project-banner"
@@ -23,9 +17,9 @@ const ProjectBanner = ({ title, subtitle, bgImage }: ProjectBannerProps = {}) =>
       <div className="project-banner__content">
         <h2 className="project-banner__title">{title || "Have A Project In Mind?"}</h2>
         <h3 className="project-banner__subtitle">{subtitle || "Let's Build Something Great Together."}</h3>
-        <button className="project-banner__btn" onClick={() => router.push('/get-started#start-form')}>
+        <Link href="/get-started#start-form" className="project-banner__btn">
           GET STARTED <span>→</span>
-        </button>
+        </Link>
       </div>
     </section>
   );
