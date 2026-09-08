@@ -5,35 +5,35 @@ import './Services.css';
 const servicesData = [
   {
     title: 'WEB DEVELOPMENT',
-    image: '/images/Gatecode images/pexels-mizunokozuki-12899156.webp',
+    image: '/images/pexels-mizunokozuki-12899156.webp',
     className: 'card-1',
     link: '/services/web-development',
     alt: 'Professional website development services and coding'
   },
   {
     title: 'BPO SERVICES',
-    image: '/images/Gatecode images/pexels-yankrukov-8867427.webp',
+    image: '/images/pexels-yankrukov-8867427.webp',
     className: 'card-2',
     link: '/services/bpo-services',
     alt: 'Professional BPO and customer support services'
   },
   {
     title: 'ACCOUNTING',
-    image: '/images/Gatecode images/pexels-leeloothefirst-7247404.webp',
+    image: '/images/pexels-leeloothefirst-7247404.webp',
     className: 'card-3',
     link: '/services/accounting',
     alt: 'Business accounting and financial management services'
   },
   {
     title: 'DATA MANAGEMENT',
-    image: '/images/Gatecode images/Data management.webp',
+    image: '/images/Data management.webp',
     className: 'card-4',
     link: '/services/data-management',
     alt: 'Professional data management and business analytics services'
   },
   {
     title: 'DIGITAL MARKETING',
-    image: '/images/Gatecode images/Digital marketing .webp',
+    image: '/images/Digital marketing .webp',
     className: 'card-5',
     link: '/services/digital-marketing',
     alt: 'Digital marketing services for business growth'
