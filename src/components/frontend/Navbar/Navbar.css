@@ -350,6 +350,10 @@
 }
 
 @media (max-width: 1024px) {
+    .navbar__topbar {
+        background: #0FB9B1;
+    }
+
     .navbar__container {
         padding: 0 24px;
     }
