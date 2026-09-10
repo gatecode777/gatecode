@@ -379,7 +379,8 @@
 @media (max-width: 968px) {
     .navbar {
         height: 70px;
-        margin-top: 10px;
+        margin-top: 0;
+        box-shadow: none;
     }
 
     .navbar__nav,
@@ -414,7 +415,8 @@
 @media (max-width: 480px) {
     .navbar {
         height: 60px;
-        margin-top: 8px;
+        margin-top: 0;
+        box-shadow: none;
     }
 
     .navbar__container {
