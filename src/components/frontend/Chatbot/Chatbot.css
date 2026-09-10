@@ -51,6 +51,7 @@
   background: rgba(15, 185, 177, 0.4);
   z-index: 1;
   animation: pulseOuter 2s infinite ease-out;
+  will-change: transform, opacity;
 }
 
 @keyframes pulseOuter {
@@ -80,6 +81,7 @@
   bottom: 0;
   right: 0;
   animation: slideUpFade 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
   transform-origin: bottom right;
 }
 

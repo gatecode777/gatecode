@@ -32,6 +32,7 @@
   display: flex;
   width: max-content;
   animation: scroll3d var(--slider-speed) linear infinite;
+  will-change: transform;
   transform-style: preserve-3d;
   padding: 40px 0;
 }
