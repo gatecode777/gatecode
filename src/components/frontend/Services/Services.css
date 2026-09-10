@@ -4,9 +4,6 @@
     max-width: 100%;
     margin: 0 auto;
     position: relative;
-    background: #ffffff !important;
-    background-attachment: scroll !important;
-    color: #0f172a;
 }
 
 .services-header {
@@ -15,7 +12,7 @@
 }
 
 .services-title {
-    color: #0f172a;
+    color: #fff;
     font-family: var(--font-castoro, "Castoro Titling"), serif;
     font-weight: 100;
     font-size: 50px;
@@ -26,7 +23,7 @@
 
 .services-subtitle {
     font-family: var(--font-roboto-flex, "Roboto Flex"), sans-serif;
-    color: #475569;
+    color: #94a3b8;
     font-weight: 200;
     font-size: 18px;
     line-height: 1.6;
@@ -148,8 +145,7 @@
 
 @media (max-width: 1024px) {
     .services-section {
-        background-color: #ffffff !important;
-        background-image: none !important;
+        background: linear-gradient(180deg, #0E3A5D 0%, #0E3A5D 20%, #0d5c70 60%, #0FB9B1 100%) !important;
         background-attachment: scroll !important;
         margin-top: -1px;
         padding-top: 55px;
@@ -160,7 +156,7 @@
     }
 
     .services-subtitle {
-        color: #475569;
+        color: #f1f5f9;
         font-weight: 300;
     }
 
