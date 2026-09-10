@@ -4,6 +4,7 @@ import Navbar from '@/components/frontend/Navbar/Navbar';
 
 const Footer = dynamic(() => import('@/components/frontend/Footer/Footer'));
 import FloatingWidgets from '@/components/frontend/FloatingWidgets/FloatingWidgets';
+import './frontend.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://gatecode.in'),

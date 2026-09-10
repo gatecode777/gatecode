@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import './ContactSection.css';
 
 const ContactSection = () => {
   const [form, setForm] = useState({

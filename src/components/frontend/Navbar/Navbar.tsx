@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { ServicesDropdown, CompanyDropdown, TechnicalExpertiseDropdown } from '../NavbarDropdown/NavbarDropdown';
-import './Navbar.css';
 
 const navLinks = [
   { label: 'Company', path: '/about', hasDropdown: true },

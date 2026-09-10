@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import './ProjectBanner.css';
 
 interface ProjectBannerProps {
   title?: string;

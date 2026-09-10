@@ -1,0 +1,17 @@
+/* Consolidated Frontend Stylesheet — eliminates fragmented CSS chunks */
+@import '../../components/frontend/Navbar/Navbar.css';
+@import '../../components/frontend/NavbarDropdown/NavbarDropdown.css';
+@import '../../components/frontend/Hero/Hero.css';
+@import '../../components/frontend/Services/Services.css';
+@import '../../components/frontend/BrandHeader/BrandHeader.css';
+@import '../../components/frontend/ImageSlider/ImageSlider.css';
+@import '../../components/frontend/Expertise/Expertise.css';
+@import '../../components/frontend/WhatWeDo/WhatWeDo.css';
+@import '../../components/frontend/ProcessStack/ProcessStack.css';
+@import '../../components/frontend/VisionMission/VisionMission.css';
+@import '../../components/frontend/CollaborationClients/CollaborationClients.css';
+@import '../../components/frontend/ProjectBanner/ProjectBanner.css';
+@import '../../components/frontend/ContactSection/ContactSection.css';
+@import '../../components/frontend/Footer/Footer.css';
+@import '../../components/frontend/ScrollToTop/ScrollToTop.css';
+@import '../../components/frontend/Chatbot/Chatbot.css';

@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { FaArrowUp } from 'react-icons/fa';
-import './ScrollToTop.css';
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);

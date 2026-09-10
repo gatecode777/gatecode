@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import './CollaborationClients.css';
 
 const CollaborationClients = () => {
   return (

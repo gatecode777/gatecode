@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import './Hero.css';
 
 const Hero = () => {
   return (

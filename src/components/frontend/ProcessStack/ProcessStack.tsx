@@ -3,7 +3,6 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import './ProcessStack.css';
 
 const ProcessStack = () => {
   const [activeIndex, setActiveIndex] = useState(0);

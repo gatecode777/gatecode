@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import './WhatWeDo.css';
 
 const services = [
   {

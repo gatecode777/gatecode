@@ -1,5 +1,3 @@
-import './Expertise.css';
-
 const expertiseData = [
   {
     title: 'Multi-Domain Expertise',
