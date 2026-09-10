@@ -1,4 +1,5 @@
 import type { NextConfig } from 'next';
+import path from 'path';
 
 const nextConfig: NextConfig = {
   images: {
@@ -14,11 +15,23 @@ const nextConfig: NextConfig = {
     unoptimized: false,
   },
   experimental: {
-    optimizeCss: true,
     optimizePackageImports: ['lucide-react', 'react-icons', 'framer-motion'],
   },
   turbopack: {
     root: __dirname,
+    resolveAlias: {
+      'next/dist/build/polyfills/polyfill-module': './src/lib/empty-polyfill.js',
+      '../build/polyfills/polyfill-module': './src/lib/empty-polyfill.js',
+      '@next/polyfill-module': './src/lib/empty-polyfill.js',
+    },
+  },
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      'next/dist/build/polyfills/polyfill-module': path.resolve(__dirname, 'src/lib/empty-polyfill.js'),
+      '../build/polyfills/polyfill-module': path.resolve(__dirname, 'src/lib/empty-polyfill.js'),
+    };
+    return config;
   },
 };
 

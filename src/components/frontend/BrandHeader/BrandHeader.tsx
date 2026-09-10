@@ -1,5 +1,3 @@
-import './BrandHeader.css';
-
 const BrandHeader = () => {
   return (
     <header className="brand-hero-section">

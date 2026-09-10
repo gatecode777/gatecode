@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa';
 import { BsTwitterX } from 'react-icons/bs';
 import { FiMail, FiPhone } from 'react-icons/fi';
-import './Footer.css';
 
 const serviceLinks = [
   { name: 'Web Development', slug: 'web-development' },

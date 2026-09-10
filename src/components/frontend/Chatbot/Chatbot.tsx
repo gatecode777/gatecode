@@ -2,7 +2,6 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { FiMessageSquare, FiX, FiSend } from 'react-icons/fi';
-import './Chatbot.css';
 
 interface Message {
   sender: 'user' | 'bot';

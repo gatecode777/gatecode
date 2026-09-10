@@ -32,14 +32,13 @@ export default function RootLayout({
       className={`${plusJakartaSans.variable} ${castoroTitling.variable} ${robotoFlex.variable} ${inter.variable} ${arimo.variable}`}
     >
       <head>
-        <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="" />
-        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="" />
-        <link rel="dns-prefetch" href="https://images.unsplash.com" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
       </head>
       <body>
-        {/* Google Tag Manager — single loader + unified init */}
-        <Script id="gtm-init" strategy="lazyOnload">
+        {/* Google Tag Manager — single container (GTM-PSVZ559Q) */}
+        <Script id="gtm-init" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({
@@ -47,14 +46,11 @@ export default function RootLayout({
               event: 'gtm.js'
             });
             function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-CERWSX5DM9');
-            gtag('config', 'GT-MK985SPV');
           `}
         </Script>
         <Script
           id="gtm-script"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtm.js?id=GTM-PSVZ559Q"
         />
 
