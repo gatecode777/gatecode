@@ -38,29 +38,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
       </head>
       <body>
-        {/* Google Analytics & Google Tag (gtag.js) */}
-        <Script
-          id="gtag-script"
-          strategy="lazyOnload"
-          src="https://www.googletagmanager.com/gtag/js?id=G-CERWSX5DM9"
-        />
-        <Script id="gtag-init" strategy="lazyOnload">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-CERWSX5DM9');
-            gtag('config', 'GT-MK985SPV');
-          `}
-        </Script>
-        {/* Load Google Tag Manager Script */}
-        <Script
-          id="gtm-script"
-          strategy="lazyOnload"
-          src="https://www.googletagmanager.com/gtm.js?id=GTM-PSVZ559Q"
-        />
-
-        {/* Initialize GTM Data Layer */}
+        {/* Google Tag Manager — single loader + unified init */}
         <Script id="gtm-init" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
@@ -68,8 +46,17 @@ export default function RootLayout({
               'gtm.start': new Date().getTime(),
               event: 'gtm.js'
             });
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-CERWSX5DM9');
+            gtag('config', 'GT-MK985SPV');
           `}
         </Script>
+        <Script
+          id="gtm-script"
+          strategy="lazyOnload"
+          src="https://www.googletagmanager.com/gtm.js?id=GTM-PSVZ559Q"
+        />
 
         {/* Google Tag Manager (noscript) */}
         <noscript>

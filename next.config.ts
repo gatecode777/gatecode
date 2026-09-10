@@ -14,6 +14,7 @@ const nextConfig: NextConfig = {
     unoptimized: false,
   },
   experimental: {
+    optimizeCss: true,
     optimizePackageImports: ['lucide-react', 'react-icons', 'framer-motion'],
   },
   turbopack: {
