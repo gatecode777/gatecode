@@ -1,7 +1,8 @@
 .services-slider-section {
   overflow: hidden;
   padding: 80px 0 90px;
-  background-color: #f7f8fc;
+  background: #ffffff !important;
+  background-attachment: scroll !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
