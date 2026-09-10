@@ -144,6 +144,22 @@
 }
 
 @media (max-width: 1024px) {
+    .services-section {
+        background: linear-gradient(180deg, #0E3A5D 0%, #0E3A5D 20%, #0d5c70 60%, #0FB9B1 100%) !important;
+        background-attachment: scroll !important;
+        margin-top: -1px;
+        padding-top: 55px;
+    }
+
+    .services-header {
+        margin-bottom: 36px;
+    }
+
+    .services-subtitle {
+        color: #f1f5f9;
+        font-weight: 300;
+    }
+
     .services-grid {
         flex-wrap: wrap;
         gap: 24px;
@@ -164,7 +180,7 @@
 
 @media (max-width: 968px) {
     .services-section {
-        padding: 40px 30px 0px;
+        padding: 48px 30px 0px;
         /* margin-top: 410px; */
     }
 
@@ -206,7 +222,7 @@
 
 @media (max-width: 480px) {
     .services-section {
-        padding: 30px 16px 0px;
+        padding: 40px 16px 0px;
         /* margin-top: 245px; */
     }
 
