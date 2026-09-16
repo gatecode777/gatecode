@@ -6,22 +6,21 @@ import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
-// ==================== DigitalHero Component (Updated for SEO Services) ====================
+// ==================== DigitalHero Component (Updated for Logo Design & Branding Services) ====================
 const DigitalHero = () => {
   return (
     <section className="dm-hero">
       <div
         className="dm-hero-bg"
-        style={{ backgroundImage: `url('/images/Rectangle 228 (8).webp')` }}
+        style={{ backgroundImage: `url('/images/graphic.webp')` }}
       />
       <div className="dm-container dm-hero-content">
         <div className="dm-hero-text-wrapper">
           <h1 className="dm-hero-title">
-            SEO<br />SERVICES
+            LOGO DESIGN<br />& BRANDING<br />SERVICES
           </h1>
           <p className="dm-hero-subtitle">
-            Improve your online visibility, attract targeted traffic, and grow your business with<br />
-            result-driven SEO strategies.
+            Create a powerful first impression with a unique logo and a strong brand identity that sets you apart.
           </p>
           <Link href="/contact" className="dm-cta-button">
             Get Free Consultation
@@ -32,32 +31,32 @@ const DigitalHero = () => {
   );
 };
 
-// ==================== DigitalAbout Component (Updated for SEO Services) ====================
+// ==================== DigitalAbout Component (Updated for Logo Design & Branding Services) ====================
 const DigitalAbout = () => {
   return (
     <section className="dm-about-section">
       <div className="dm-container">
         <p className="dm-about-text">
-          At Gatecode Technologies Pvt. Ltd., we provide professional SEO services designed to improve your website's search engine rankings, 
-          increase organic traffic, and strengthen your online presence. Our SEO strategies focus on optimizing website performance, improving 
-          user experience, and targeting the right audience to generate long-term business growth. From keyword research and on-page optimization 
-          to technical SEO and content strategies, we deliver customized solutions tailored to your business goals.
+          At Gatecode Technologies Pvt. Ltd., we design impactful logos and complete branding solutions that define your business identity. 
+          Our approach blends creativity, strategy, and market understanding to craft visuals that not only look great but also communicate 
+          your brand message effectively. From logo creation to full brand development, we help businesses build a consistent and memorable 
+          presence across all platforms.
         </p>
       </div>
     </section>
   );
 };
 
-// ==================== DigitalServices Component (Updated for SEO Services) ====================
+// ==================== DigitalServices Component (Updated for Logo Design & Branding Services) ====================
 const services = [
-  { title: 'Keyword Research & Strategy', desc: 'Identifying high-performing keywords and creating strategic SEO plans to improve search visibility.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'On-Page SEO Optimization', desc: 'Optimizing website content, meta tags, headings, and structure for better search engine rankings.', color: '#fbff06', text: '#000000' },
-  { title: 'Technical SEO', desc: 'Improving website speed, mobile responsiveness, indexing, and technical performance for search engines.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'Content Optimization', desc: 'Creating and optimizing SEO-friendly content that improves engagement and organic reach.', color: '#fbff06', text: '#000000' },
-  { title: 'Local SEO Services', desc: 'Enhancing local search visibility to help businesses attract nearby customers and improve local presence.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'Link Building Strategies', desc: 'Building quality backlinks to improve domain authority and search engine credibility.', color: '#fbff06', text: '#000000' },
-  { title: 'SEO Audit & Analysis', desc: 'Comprehensive website audits to identify SEO issues and performance improvement opportunities.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'Performance Tracking & Reporting', desc: 'Monitoring keyword rankings, traffic, and SEO performance through detailed reports and analytics.', color: '#fbff06', text: '#000000' },
+  { title: 'Custom Logo Design', desc: 'Unique and creative logo designs tailored to represent your brand\'s vision and values.', color: '#4e7c7e', text: '#ffffff' },
+  { title: 'Brand Identity Development', desc: 'Complete branding solutions including logo, color palette, typography, and visual elements.', color: '#fbff06', text: '#000000' },
+  { title: 'Brand Style Guide', desc: 'Detailed guidelines for maintaining consistency in design, colors, fonts, and brand usage.', color: '#4e7c7e', text: '#ffffff' },
+  { title: 'Business Stationery Design', desc: 'Professional designs for business cards, letterheads, envelopes, and other corporate materials.', color: '#fbff06', text: '#000000' },
+  { title: 'Social Media Branding', desc: 'Consistent and visually appealing branding for social media platforms.', color: '#4e7c7e', text: '#ffffff' },
+  { title: 'Rebranding Solutions', desc: 'Refreshing and modernizing your existing brand identity for better market relevance.', color: '#fbff06', text: '#000000' },
+  { title: 'Packaging & Label Design', desc: 'Creative packaging designs that enhance product appeal and brand recognition.', color: '#4e7c7e', text: '#ffffff' },
+  { title: 'Visual Branding Assets', desc: 'A complete set of design elements to ensure brand consistency across all platforms.', color: '#fbff06', text: '#000000' },
 ];
 
 const DigitalServices = () => {
@@ -84,7 +83,7 @@ const DigitalServices = () => {
   return (
     <section className="dm-services-section" ref={sectionRef}>
       <div className="dm-container">
-        <h2 className="dm-section-title">Our SEO Services</h2>
+        <h2 className="dm-section-title">What We Offer</h2>
         <div className="dm-services-grid">
           {services.map((service, index) => (
             <div
@@ -110,14 +109,14 @@ const DigitalServices = () => {
   );
 };
 
-// ==================== DigitalWhyChoose Component (Updated for SEO Services) ====================
+// ==================== DigitalWhyChoose Component (Updated for Logo Design & Branding Services) ====================
 const benefits = [
-  'Improved search engine rankings',
-  'Increased organic website traffic',
-  'Better online visibility and brand awareness',
-  'Higher lead generation and conversions',
-  'Enhanced user experience and website performance',
-  'Long-term digital growth strategies',
+  'Unique and memorable brand identity',
+  'Strong visual consistency across platforms',
+  'Professional and modern design approach',
+  'Improved brand recognition and trust',
+  'Customized branding solutions',
+  'Long-term brand growth and positioning',
 ];
 
 const DigitalWhyChoose = () => {
@@ -125,12 +124,12 @@ const DigitalWhyChoose = () => {
     <section className="dm-why-choose-section">
       <div className="dm-container">
         <h2 className="dm-section-title dm-section-header-left">
-          Why Choose Our SEO Services
+          Why Choose Our Logo Design & Branding Services
         </h2>
         <p className="dm-about-text dm-about-text-left">
-          We focus on delivering ethical, data-driven, and performance-oriented SEO strategies that improve search rankings and generate long-term results. 
-          Our team combines technical expertise, market analysis, and content optimization to help businesses increase visibility, attract targeted audiences, 
-          and achieve sustainable digital growth.
+          We focus on creating meaningful and visually compelling branding that reflects your business identity and connects with your audience. 
+          Our team combines creativity with strategic thinking to deliver branding solutions that improve recognition, build trust, and support 
+          long-term business growth.
         </p>
 
         <div className="dm-why-choose-layout">
@@ -148,7 +147,7 @@ const DigitalWhyChoose = () => {
           <div className="dm-why-choose-image">
             <Image
               src="/images/path.webp"
-              alt="Search Engine Optimization Keyword Ranking Metrics - Gatecode Technologies"
+              alt="Logo Concept and Branding Guidelines Showcase - Gatecode Technologies"
               className="dm-path-illustration"
               width={500}
               height={400}
@@ -160,14 +159,14 @@ const DigitalWhyChoose = () => {
   );
 };
 
-// ==================== DigitalProcess Component (Updated for SEO Services) ====================
+// ==================== DigitalProcess Component (Updated for Logo Design & Branding Services) ====================
 const processSteps = [
-  { title: 'Website & Market Analysis', desc: 'Understanding your business, target audience, and market trends.' },
-  { title: 'Keyword Research & Planning', desc: 'Creating customized marketing strategies based on your goals.' },
-  { title: 'On-Page & Technical Optimization', desc: 'Improving website structure, speed, and content optimization.' },
-  { title: 'Content & Link Building', desc: 'Creating optimized content and strengthening website authority.' },
-  { title: 'Performance Monitoring', desc: 'Tracking rankings, traffic, and SEO performance metrics.' },
-  { title: 'Continuous Optimization', desc: 'Regular improvements and updates for long-term SEO success.' },
+  { title: 'Brand Research & Discovery', desc: 'Understanding your business, audience, and brand vision.' },
+  { title: 'Concept Development', desc: 'Creating initial logo concepts and branding directions.' },
+  { title: 'Design Creation', desc: 'Developing logos and visual identity elements.' },
+  { title: 'Review & Refinement', desc: 'Improving designs based on feedback and requirements.' },
+  { title: 'Final Delivery', desc: 'Providing complete branding assets and guidelines.' },
+  { title: 'Ongoing Brand Support', desc: 'Ensuring consistency and updates across all branding materials.' },
 ];
 
 const DigitalProcess = () => {
@@ -194,7 +193,7 @@ const DigitalProcess = () => {
   return (
     <section className="dm-process-section" ref={sectionRef}>
       <div className="dm-container">
-        <h2 className="dm-section-title">Our SEO Process</h2>
+        <h2 className="dm-section-title">Our Design Process</h2>
         <div className="dm-process-grid">
           {processSteps.map((item, index) => (
             <div key={index} className="dm-process-item">
@@ -210,15 +209,15 @@ const DigitalProcess = () => {
   );
 };
 
-// ==================== DigitalIndustries Component (Updated for SEO Services) ====================
+// ==================== DigitalIndustries Component (Updated for Logo Design & Branding Services) ====================
 const industries = [
   'E-Commerce & Retail',
   'Restaurants & Hospitality',
-  'Corporate Businesses',
-  'Education & Training',
   'Healthcare & Wellness',
-  'Real Estate & Construction',
-  'Startups & Enterprises',
+  'Education & Training',
+  'Corporate Businesses',
+  'Startups & Agencies',
+  'Real Estate & Service Industries',
 ];
 
 const DigitalIndustries = () => {
@@ -238,11 +237,11 @@ const DigitalIndustries = () => {
           </div>
 
           <div className="dm-image-grid">
-            <Image src="/images/1.webp" alt="E-Commerce Store On-Page SEO Optimization - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
-            <Image src="/images/2.webp" alt="Restaurant and Cafe Local SEO Marketing - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
-            <Image src="/images/3.webp" alt="Corporate Enterprise Search Engine Ranking - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
-            <Image src="/images/4.webp" alt="Educational School Academy Link Building - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
-            <Image src="/images/5.webp" alt="Healthcare Clinic Google Maps SEO - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
+            <Image src="/images/1.webp" alt="E-Commerce Store Corporate Logo Design - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
+            <Image src="/images/2.webp" alt="Restaurant and Cafe Custom Logo Branding - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
+            <Image src="/images/3.webp" alt="Healthcare and Medical Logo Mark Design - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
+            <Image src="/images/4.webp" alt="Educational School and Academy Emblem Design - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
+            <Image src="/images/5.webp" alt="Corporate Business Branding Logo Redesign - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
           </div>
         </div>
       </div>
@@ -251,7 +250,7 @@ const DigitalIndustries = () => {
 };
 
 // ==================== Main Page Component ====================
-const SEOServicesPage = () => {
+const LogoDesignBrandingServicesPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -261,16 +260,16 @@ const SEOServicesPage = () => {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/digital-marketing' },
-      { '@type': 'ListItem', position: 3, name: 'SEO Services', item: 'https://gatecode.in/services/seo' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/graphic-design' },
+      { '@type': 'ListItem', position: 3, name: 'Logo Design & Branding', item: 'https://gatecode.in/services/graphic-design/logo-design' },
     ],
   };
 
-  const seoServiceSchema = {
+  const logoDesignServiceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    serviceType: 'Search Engine Optimization (SEO)',
-    name: 'SEO Services Company in India',
+    serviceType: 'Logo Design & Branding Services',
+    name: 'Logo Design Company in India',
     provider: {
       '@type': 'Organization',
       name: 'Gatecode Technologies Pvt. Ltd.',
@@ -280,7 +279,7 @@ const SEOServicesPage = () => {
       '@type': 'Country',
       name: 'India',
     },
-    description: 'Professional SEO services company in India offering keyword research, on-page SEO, technical SEO, local SEO, link building, and organic traffic growth.',
+    description: 'Custom logo design company in India providing vector logo creation, corporate brand identity, brand style guides, stationery design, and packaging graphics.',
   };
 
   const faqSchema = {
@@ -289,18 +288,18 @@ const SEOServicesPage = () => {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'Why should I choose Gatecode Technologies for professional SEO services in India?',
+        name: 'Why choose Gatecode Technologies for custom logo design & branding services?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Gatecode Technologies is a data-driven SEO company in India delivering white-hat SEO strategies, on-page & technical optimization, local SEO, and measurable organic traffic growth.',
+          text: 'Gatecode Technologies delivers unique, high-resolution vector logo designs, complete corporate brand guidelines, business cards, letterheads, and brand identity packages.',
         },
       },
       {
         '@type': 'Question',
-        name: 'How long does it take to see rankings with your SEO services?',
+        name: 'What file formats will I receive for my custom logo design?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Most websites see noticeable ranking improvements and increased organic impressions within 3 to 6 months depending on domain authority, competition, and search volume.',
+          text: 'You will receive complete vector source files (AI, EPS, SVG, PDF) alongside high-resolution print and web formats (PNG, JPG) with full copyright ownership.',
         },
       },
     ],
@@ -314,7 +313,7 @@ const SEOServicesPage = () => {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(seoServiceSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(logoDesignServiceSchema) }}
       />
       <script
         type="application/ld+json"
@@ -331,4 +330,4 @@ const SEOServicesPage = () => {
   );
 };
 
-export default SEOServicesPage;
+export default LogoDesignBrandingServicesPage;

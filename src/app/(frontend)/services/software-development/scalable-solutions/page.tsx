@@ -260,8 +260,8 @@ const SmartScalableSoftwareSolutionsPage = () => {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/scalable-solutions' },
-      { '@type': 'ListItem', position: 3, name: 'Scalable Solutions', item: 'https://gatecode.in/services/scalable-solutions' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/software-development/scalable-solutions' },
+      { '@type': 'ListItem', position: 3, name: 'Scalable Solutions', item: 'https://gatecode.in/services/software-development/scalable-solutions' },
     ],
   };
 

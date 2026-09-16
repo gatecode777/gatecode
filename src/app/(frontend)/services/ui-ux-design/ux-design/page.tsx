@@ -257,8 +257,8 @@ const UXDesignServicesPage = () => {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/ux-design' },
-      { '@type': 'ListItem', position: 3, name: 'UX Design', item: 'https://gatecode.in/services/ux-design' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/ui-ux-design/ux-design' },
+      { '@type': 'ListItem', position: 3, name: 'UX Design', item: 'https://gatecode.in/services/ui-ux-design/ux-design' },
     ],
   };
 

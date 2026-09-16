@@ -313,7 +313,7 @@ const SeoContentSection = () => {
 
           <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
             Creating an effective{' '}
-            <Link href="/services/ui-design" style={{ color: '#4e7c7e', fontWeight: '600', textDecoration: 'underline' }}>
+            <Link href="/services/ui-ux-design/ui-design" style={{ color: '#4e7c7e', fontWeight: '600', textDecoration: 'underline' }}>
               user interface design
             </Link>{' '}
             requires more than an attractive visual appearance. At Gatecode Technologies, we design interfaces that combine visual clarity, usability, accessibility, and brand consistency to create digital products that are easy to understand and interact with. Our UI design process considers the specific requirements of your website, mobile application, web application, or enterprise product before defining the visual direction.
@@ -344,7 +344,7 @@ const SeoContentSection = () => {
 
           <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
             A strong{' '}
-            <Link href="/services/ux-design" style={{ color: '#4e7c7e', fontWeight: '600', textDecoration: 'underline' }}>
+            <Link href="/services/ui-ux-design/ux-design" style={{ color: '#4e7c7e', fontWeight: '600', textDecoration: 'underline' }}>
               user experience design
             </Link>{' '}
             focuses on how people interact with a digital product and how easily they can accomplish their goals. At Gatecode Technologies, our UX design process is centered on understanding user needs, business objectives, content structure, and interaction patterns before defining the experience of the product.

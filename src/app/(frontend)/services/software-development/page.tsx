@@ -320,7 +320,7 @@ const SeoContentSection = () => {
 
           <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
             Our approach to{' '}
-            <Link href="/services/scalable-solutions" style={{ color: '#4e7c7e', fontWeight: '600', textDecoration: 'underline' }}>
+            <Link href="/services/software-development/scalable-solutions" style={{ color: '#4e7c7e', fontWeight: '600', textDecoration: 'underline' }}>
               smart and scalable software solutions
             </Link>{' '}
             focuses on solving real business challenges through reliable technology and well-planned software architecture. We develop solutions that are aligned with your operational requirements, user needs, data workflows, and long-term business objectives rather than relying on a one-size-fits-all approach.
@@ -341,7 +341,7 @@ const SeoContentSection = () => {
 
           <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
             Every business has different processes, workflows, and technology requirements. Our{' '}
-            <Link href="/services/system-integration" style={{ color: '#4e7c7e', fontWeight: '600', textDecoration: 'underline' }}>
+            <Link href="/services/software-development/system-integration" style={{ color: '#4e7c7e', fontWeight: '600', textDecoration: 'underline' }}>
               custom software development and system integration services
             </Link>{' '}
             help organizations create software around their specific operational needs instead of adjusting their processes to fit generic applications.
@@ -362,7 +362,7 @@ const SeoContentSection = () => {
 
           <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
             Software development does not end when an application goes live.{' '}
-            <Link href="/services/ongoing-support" style={{ color: '#4e7c7e', fontWeight: '600', textDecoration: 'underline' }}>
+            <Link href="/services/software-development/ongoing-support" style={{ color: '#4e7c7e', fontWeight: '600', textDecoration: 'underline' }}>
               Ongoing maintenance and technical support
             </Link>{' '}
             are important for keeping business-critical software secure, stable, compatible, and performant as technology and business requirements evolve.

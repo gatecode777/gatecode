@@ -258,7 +258,7 @@ const AndroidAppDevelopmentPage = () => {
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
       { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/mobile-app-development' },
-      { '@type': 'ListItem', position: 3, name: 'Android App Development', item: 'https://gatecode.in/services/android-development' },
+      { '@type': 'ListItem', position: 3, name: 'Android App Development', item: 'https://gatecode.in/services/mobile-app-development/android-development' },
     ],
   };
 

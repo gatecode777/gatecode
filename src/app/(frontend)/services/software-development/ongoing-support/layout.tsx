@@ -5,13 +5,13 @@ export const metadata: Metadata = {
   description:
     'Get Reliable It Support Services And Technology Solutions To Improve Performance, Strengthen Security, Reduce Downtime, And Support Business Growth.',
   alternates: {
-    canonical: '/services/ongoing-support',
+    canonical: '/services/software-development/ongoing-support',
   },
   openGraph: {
     title: 'It Support Services & Technology Solutions | Expert Team',
     description:
       'Get Reliable It Support Services And Technology Solutions To Improve Performance, Strengthen Security, Reduce Downtime, And Support Business Growth.',
-    url: 'https://gatecode.in/services/ongoing-support',
+    url: 'https://gatecode.in/services/software-development/ongoing-support',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

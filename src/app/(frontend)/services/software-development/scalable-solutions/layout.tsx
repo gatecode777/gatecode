@@ -15,13 +15,13 @@ export const metadata: Metadata = {
     'best software solution service',
   ],
   alternates: {
-    canonical: '/services/scalable-solutions',
+    canonical: '/services/software-development/scalable-solutions',
   },
   openGraph: {
     title: 'Best Business Software Solutions Service In Jaipur',
     description:
       'Smart Software Solution Services, Providing Enterprise, Sap, Automotive, Shipping, And Business Software Solutions For Scalable Digital Growth.',
-    url: 'https://gatecode.in/services/scalable-solutions',
+    url: 'https://gatecode.in/services/software-development/scalable-solutions',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',
