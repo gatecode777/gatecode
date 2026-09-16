@@ -63,9 +63,9 @@ function catHref(slug: string): string {
   return `/services/${slug}`;
 }
 
-// Sub-service pages always go to /services/[sub-slug]
-function subHref(slug: string): string {
-  return `/services/${slug}`;
+// Sub-service pages go to /services/[category-slug]/[sub-slug]
+function subHref(catSlug: string, slug: string): string {
+  return `/services/${catSlug}/${slug}`;
 }
 
 // All expertise items route to /expertise/[slug]
@@ -123,7 +123,7 @@ export function ServicesDropdown({ isMobile, onItemClick }: DropdownProps) {
                         <li key={sub.slug} className="services-dropdown__item">
                           <span className="services-dropdown__bullet">•</span>
                           <Link
-                            href={subHref(sub.slug)}
+                            href={subHref(cat.slug, sub.slug)}
                             className="services-dropdown__text services-dropdown__sublink"
                             onClick={onItemClick}
                           >

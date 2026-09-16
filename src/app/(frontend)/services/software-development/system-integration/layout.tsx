@@ -12,13 +12,13 @@ export const metadata: Metadata = {
     'integrated management services',
   ],
   alternates: {
-    canonical: '/services/system-integration',
+    canonical: '/services/software-development/system-integration',
   },
   openGraph: {
     title: 'Best Custom App Development & System Integration Services',
     description:
       'Custom Application Development, System Integration, Custom Software And App Development, And Integrated Management Services For Businesses.',
-    url: 'https://gatecode.in/services/system-integration',
+    url: 'https://gatecode.in/services/software-development/system-integration',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

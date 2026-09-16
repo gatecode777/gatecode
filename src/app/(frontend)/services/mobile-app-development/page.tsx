@@ -272,7 +272,7 @@ const SeoContentSection = () => {
           </h3>
           
           <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            As a full-service <strong>custom mobile app development company</strong>, we specialize in building native and cross-platform applications across both Google Play and Apple App Store. Whether you require scalable <Link href="/services/android-development" style={{ color: '#4e7c7e', fontWeight: '600', textDecoration: 'underline' }}>android app development services</Link> or high-security <strong>ios app development services</strong>, our engineering team ensures seamless responsiveness, fast load speeds, and robust API connectivity.
+            As a full-service <strong>custom mobile app development company</strong>, we specialize in building native and cross-platform applications across both Google Play and Apple App Store. Whether you require scalable <Link href="/services/mobile-app-development/android-development" style={{ color: '#4e7c7e', fontWeight: '600', textDecoration: 'underline' }}>android app development services</Link> or high-security <strong>ios app development services</strong>, our engineering team ensures seamless responsiveness, fast load speeds, and robust API connectivity.
           </p>
 
           {/* Key Feature Highlight Cards */}

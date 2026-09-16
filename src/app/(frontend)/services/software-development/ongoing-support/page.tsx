@@ -266,8 +266,8 @@ const OngoingSupportFutureReadyTechnologyPage = () => {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/ongoing-support' },
-      { '@type': 'ListItem', position: 3, name: 'Ongoing Support & Future-Ready Technology', item: 'https://gatecode.in/services/ongoing-support' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/software-development/ongoing-support' },
+      { '@type': 'ListItem', position: 3, name: 'Ongoing Support & Future-Ready Technology', item: 'https://gatecode.in/services/software-development/ongoing-support' },
     ],
   };
 

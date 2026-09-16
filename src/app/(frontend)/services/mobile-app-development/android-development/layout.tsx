@@ -19,13 +19,13 @@ export const metadata: Metadata = {
     'educational app development services',
   ],
   alternates: {
-    canonical: '/services/android-development',
+    canonical: '/services/mobile-app-development/android-development',
   },
   openGraph: {
     title: 'Best Maintenance Management Software & Fleet Solutions System',
     description:
       'Get Expert Android, Mobile, Web, Shopify, And Custom App Development Services To Build Secure, Scalable, And High-performing Applications.',
-    url: 'https://gatecode.in/services/android-development',
+    url: 'https://gatecode.in/services/mobile-app-development/android-development',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

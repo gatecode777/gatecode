@@ -351,7 +351,7 @@ const SeoContentSection = () => {
           </h3>
           
           <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            As an industry-leading <Link href="/services/custom-website-development" style={{ color: '#4e7c7e', fontWeight: '600', textDecoration: 'underline' }}>custom web app development services</Link> provider, we specialize in building scalable digital portals, SaaS platforms, and enterprise workflows. Recognizing that every organization has distinct goals, our <strong>full stack development services</strong> combine robust backend architectures with intuitive frontend interfaces. Recognized as a high-performance <strong>react web development company</strong>, we engineer web solutions using modern frameworks like React, Next.js, Node.js, and Python.
+            As an industry-leading <Link href="/services/web-development/custom-website-development" style={{ color: '#4e7c7e', fontWeight: '600', textDecoration: 'underline' }}>custom web app development services</Link> provider, we specialize in building scalable digital portals, SaaS platforms, and enterprise workflows. Recognizing that every organization has distinct goals, our <strong>full stack development services</strong> combine robust backend architectures with intuitive frontend interfaces. Recognized as a high-performance <strong>react web development company</strong>, we engineer web solutions using modern frameworks like React, Next.js, Node.js, and Python.
           </p>
 
           {/* Key Feature Highlight Cards */}
@@ -398,7 +398,7 @@ const SeoContentSection = () => {
 
           <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
             At Gatecode Technologies, we provide{' '}
-            <Link href="/services/cms-website-development" style={{ color: '#4e7c7e', fontWeight: '600', textDecoration: 'underline' }}>
+            <Link href="/services/web-development/cms-website-development" style={{ color: '#4e7c7e', fontWeight: '600', textDecoration: 'underline' }}>
               CMS website development services
             </Link>{' '}
             for businesses that need a flexible, secure, and easy-to-manage online presence. Our CMS solutions enable business owners and content teams to create, edit, organize, and publish website content without depending on developers for every update.

@@ -17,13 +17,13 @@ export const metadata: Metadata = {
     'wordpress site maintenance services',
   ],
   alternates: {
-    canonical: '/services/cms-website-development',
+    canonical: '/services/web-development/cms-website-development',
   },
   openGraph: {
     title: 'Best Wordpress Website Development Services In Jaipur',
     description:
       'Get Expert Wordpress Website Design, Development, Maintenance And Ecommerce Services To Build A Fast, Secure And Professional Business Website.',
-    url: 'https://gatecode.in/services/cms-website-development',
+    url: 'https://gatecode.in/services/web-development/cms-website-development',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',
