@@ -17,12 +17,10 @@ const DigitalHero = () => {
       <div className="dm-container dm-hero-content">
         <div className="dm-hero-text-wrapper">
           <h1 className="dm-hero-title">
-            DIGITAL<br />MARKETING<br />SERVICES
+            Best Digital<br />Marketing Company
           </h1>
           <p className="dm-hero-subtitle">
-            We help businesses increase online visibility, attract targeted
-            audiences, and drive measurable growth through result-driven
-            digital marketing strategies.
+            Welcome to Gatecode Technologies, a premier full-service digital marketing agency based in India. We specialize in delivering data-driven marketing services and high-ROI campaigns designed to accelerate online growth for brands worldwide. Whether you need specialized B2B marketing strategies or scalable white-label solutions, our team crafts customized plans tailored to your exact business goals.
           </p>
           <Link href="/contact" className="dm-cta-button">
             Get Free Consultation
@@ -39,7 +37,7 @@ const DigitalAbout = () => {
     <section className="dm-about-section">
       <div className="dm-container">
         <p className="dm-about-text">
-          At Gatecode Technologies Pvt. Ltd., we provide strategic digital marketing solutions designed to strengthen your online presence and accelerate business growth. Our team combines creativity, data-driven strategies, and modern marketing techniques to help brands connect with the right audience, improve engagement, and generate quality leads. From SEO and social media marketing to performance campaigns and branding, we create customized marketing solutions that deliver real business results.
+          Achieving dominant online visibility requires more than just basic tactics; it demands an integrated, multi-channel approach. As a leading performance marketing agency, our certified strategists combine deep technical SEO with high-converting social media campaigns. Our goal is simple: to capture intent-driven leads and help you scale customer acquisition cost-effectively.
         </p>
       </div>
     </section>
@@ -48,14 +46,54 @@ const DigitalAbout = () => {
 
 // ==================== DigitalServices Component ====================
 const services = [
-  { title: 'Search Engine Optimization (SEO)', desc: 'Improve website visibility and rank higher on search engines with optimized SEO strategies.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'Social Media Marketing (SMM)', desc: 'Build brand awareness and engage audiences through impactful social media campaigns.', color: '#fbff06', text: '#000000' },
-  { title: 'Pay-Per-Click Advertising (PPC)', desc: 'Generate targeted traffic and quality leads with performance-focused paid advertising campaigns.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'Content Marketing', desc: 'Create valuable and engaging content that attracts, informs, and converts audiences.', color: '#fbff06', text: '#000000' },
-  { title: 'Brand Strategy & Promotion', desc: 'Strengthen brand identity and improve online presence with strategic branding solutions.', color: '#fbff06', text: '#000000' },
-  { title: 'Email Marketing', desc: 'Connect with customers through personalized email campaigns designed to increase engagement.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'Performance Marketing', desc: 'Data-driven marketing campaigns focused on measurable growth, ROI, and customer acquisition.', color: '#fbff06', text: '#000000' },
-  { title: 'Analytics & Reporting', desc: 'Track campaign performance and customer behavior with detailed analytics and reporting.', color: '#4e7c7e', text: '#ffffff' },
+  { 
+    title: 'Search Engine Optimization (SEO)', 
+    desc: 'Dominate search rankings and drive high-intent organic traffic. We use proven, technical SEO strategies to ensure your customers find you first on Google.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'Social Media Marketing (SMM)', 
+    desc: 'Turn followers into loyal customers. We build active, engaged communities and run scroll-stopping campaigns across all major social platforms.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
+  { 
+    title: 'Pay-Per-Click Advertising (PPC)', 
+    desc: 'Maximize your ROI with laser-targeted ads. We build and manage data-driven PPC campaigns that capture high-quality leads ready to convert.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'Content Marketing', 
+    desc: "Tell a story that sells. We craft authoritative, engaging content that answers your audience's questions, builds industry trust, and drives organic reach.", 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
+  { 
+    title: 'Brand Strategy & Promotion', 
+    desc: 'Stand out in a crowded market. We develop compelling brand identities and strategic promotional campaigns that leave a lasting digital footprint.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
+  { 
+    title: 'Email Marketing', 
+    desc: 'Nurture relationships and drive repeat sales. We build automated, personalized email sequences that keep your audience engaged at every stage of their journey.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'Performance Marketing', 
+    desc: 'Scale your business efficiently. We execute highly optimized, cross-channel campaigns focused entirely on measurable growth, lower acquisition costs, and high ROI.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
+  { 
+    title: 'Analytics & Reporting', 
+    desc: 'Make decisions based on data, not guesswork. We provide 100% transparent, real-time analytics to track user behavior, campaign success, and revenue growth.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
 ];
 
 const DigitalServices = () => {
@@ -113,9 +151,9 @@ const benefits = [
   'Increased online visibility',
   'Improved customer engagement',
   'Targeted audience reach',
-  'Lead generation and conversions',
-  'Data-driven marketing strategies',
-  'Performance tracking and optimization',
+  'Data-Driven Campaigns',
+  'Omnichannel Strategy',
+  'White Label & B2B Solutions',
 ];
 
 const DigitalWhyChoose = () => {
@@ -255,64 +293,64 @@ const SeoContentSection = () => {
         <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
           
           <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Best Digital Marketing Company in India
+            Leading Digital Marketing Agency in India
           </h2>
           
           <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Welcome to <strong>Gatecode Technologies</strong>, recognized as the <strong>best digital marketing company in india</strong> and a full-service <strong>digital marketing agency</strong>. As a premier <strong>digital marketing company in india</strong>, we deliver data-driven <strong>digital marketing services in india</strong>, high-ROI campaigns, specialized <strong>b2b digital marketing services</strong>, and scalable <strong>white label digital marketing services</strong> tailored to accelerate online growth for brands worldwide.
+            Welcome to Gatecode Technologies, a full-service digital marketing agency dedicated to accelerating your brand&apos;s online growth. We specialize in delivering data-driven marketing services, high-ROI campaigns, and specialized B2B solutions. Whether you need comprehensive brand scaling or flexible white-label services, our strategies are tailored to generate measurable, long-term results for businesses worldwide.
           </p>
 
           <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Result-Driven SEO Digital Marketing & Social Media Strategies
+            Result-Driven SEO &amp; Social Media Strategies
           </h3>
           
           <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Achieving dominant online visibility requires integrated <strong>search engine optimization digital marketing</strong> and strategic multi-channel distribution. Operating as a leading <strong>performance marketing agency</strong>, our certified strategists combine technical <strong>seo digital marketing</strong> with high-converting <strong>social media marketing services</strong> to capture intent-driven leads and scale customer acquisition cost-effectively.
+            Achieving true online visibility requires a strategic, multi-channel approach. As a performance-focused marketing agency, our certified experts seamlessly integrate technical SEO with high-converting social media campaigns. We focus on capturing intent-driven traffic and scaling your customer acquisition cost-effectively, ensuring every click adds value to your business.
           </p>
 
           {/* Key Feature Highlight Cards */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
             <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>SEO Services & Local Search</h4>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>SEO Services &amp; Local Search</h4>
               <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Dominate Google search results with a top-rated <strong>seo services company</strong>. We offer organic <strong>seo services india</strong> alongside <strong>affordable local seo services</strong> for local business rankings.
+                Dominate search engine results and drive relevant traffic. We provide comprehensive organic SEO and targeted local search optimization to improve your rankings and connect you with customers actively looking for your services.
               </p>
             </div>
             
             <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Social Media Marketing Agency</h4>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Social Media Marketing</h4>
               <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Build an active online community with an established <strong>social media marketing agency</strong>. We run targeted campaigns across Instagram, Facebook, LinkedIn, and YouTube.
+                Build a loyal, active online community. Our team designs and manages highly targeted, creative campaigns across Instagram, Facebook, LinkedIn, and YouTube to elevate your brand presence and engage your audience.
               </p>
             </div>
 
             <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>B2B Lead Generation & Growth</h4>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>B2B Lead Generation &amp; Growth</h4>
               <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Fuel your sales pipeline with <strong>b2b lead generation services in india</strong>. We design custom funnels and omnichannel campaigns as a trusted <strong>performance marketing agency</strong>.
+                Fuel your sales pipeline with high-quality prospects. We design custom conversion funnels and omnichannel campaigns proven to turn industry leads into long-term B2B partnerships.
               </p>
             </div>
 
             <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Automated Email Marketing Services</h4>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Automated Email Marketing</h4>
               <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Nurture leads and drive repeat sales with <strong>automated email marketing services</strong>. We build drip sequences, newsletter automation, and behavioral lifecycle flows.
+                Nurture relationships and drive repeat sales. We build personalized drip sequences, automated newsletters, and behavioral lifecycle flows to keep your audience engaged at every stage of their journey.
               </p>
             </div>
           </div>
 
           <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Partner with Gatecode Technologies as Your Digital Marketing Agency?
+            Why Partner with Gatecode Technologies?
           </h3>
           
           <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Choosing the <strong>best digital marketing agency</strong> guarantees transparent performance tracking and maximum return on ad spend (ROAS). Partnering with our expert <strong>digital marketing company</strong> gives you:
+            Choosing the right marketing partner ensures transparent performance tracking and a clear focus on your Return on Ad Spend (ROAS). When you work with our experts, you gain access to:
           </p>
 
           <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Data-Driven Campaigns:</strong> Real-time conversion tracking, AB testing, and audience retargeting.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Omnichannel Strategy:</strong> Seamless integration across <strong>seo digital marketing</strong>, Google PPC ads, <strong>automated email marketing services</strong>, and social media.</li>
-            <li style={{ marginBottom: '10px' }}><strong>White Label & B2B Solutions:</strong> Flexible <strong>white label digital marketing services</strong> for partner agencies and corporate clients.</li>
+            <li style={{ marginBottom: '10px' }}><strong>Data-Driven Campaigns:</strong> Real-time conversion tracking, rigorous A/B testing, and precise audience retargeting.</li>
+            <li style={{ marginBottom: '10px' }}><strong>Omnichannel Strategy:</strong> A unified approach combining organic SEO, Google PPC advertising, email automation, and social media.</li>
+            <li style={{ marginBottom: '10px' }}><strong>Scalable Solutions:</strong> Flexible white-label services and B2B marketing systems designed for partner agencies and growing corporate enterprises.</li>
           </ul>
 
         </div>

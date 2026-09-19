@@ -6,7 +6,7 @@ import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
-// ==================== DigitalHero Component (Updated for User Research & Analysis Services) ====================
+// ==================== DigitalHero Component ====================
 const DigitalHero = () => {
   return (
     <section className="dm-hero">
@@ -20,7 +20,7 @@ const DigitalHero = () => {
             USER RESEARCH<br />& ANALYSIS<br />SERVICES
           </h1>
           <p className="dm-hero-subtitle">
-            Understand your users deeply and build experiences that truly meet their needs.
+            Uncover genuine customer motivations, identify behavioral friction points, and build validated digital experiences backed by empirical user data.
           </p>
           <Link href="/contact" className="dm-cta-button">
             Get Free Consultation
@@ -31,32 +31,69 @@ const DigitalHero = () => {
   );
 };
 
-// ==================== DigitalAbout Component (Updated for User Research & Analysis Services) ====================
+// ==================== DigitalAbout Component ====================
 const DigitalAbout = () => {
   return (
     <section className="dm-about-section">
       <div className="dm-container">
         <p className="dm-about-text">
-          At Gatecode Technologies Pvt. Ltd., we provide in-depth user research and analysis services to help businesses create user-focused 
-          products and experiences. Our approach is centered on understanding user behavior, preferences, challenges, and expectations. 
-          By gathering real insights and analyzing data, we help you make informed design and business decisions that improve usability, 
-          engagement, and overall customer satisfaction.
+          At Gatecode Technologies Pvt. Ltd., we deliver comprehensive user research and behavioral analysis services that replace assumptions with validated human insight. Successful digital products are built on a thorough understanding of who your users are, the tasks they need to accomplish, and the roadblocks they encounter along the way. Our research team combines generative discovery methods—including structured 1-on-1 user interviews, field observation, and contextual inquiry—with evaluative testing, quantitative product analytics, heuristic assessments, and conversion funnel analysis. By translating raw behavioral data into actionable design priorities, customer journey maps, and evidence-backed product roadmaps, we empower engineering, design, and product teams to make confident decisions that measurably increase user adoption, customer satisfaction, and long-term retention.
         </p>
       </div>
     </section>
   );
 };
 
-// ==================== DigitalServices Component (Updated for User Research & Analysis Services) ====================
+// ==================== DigitalServices Component ====================
 const services = [
-  { title: 'User Behavior Analysis', desc: 'Study how users interact with your product to identify patterns and improvement areas.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'Market & Audience Research', desc: 'Understand your target audience, industry trends, and competitive landscape.', color: '#fbff06', text: '#000000' },
-  { title: 'User Persona Development', desc: 'Create detailed user personas to represent your target audience segments.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'User Journey Mapping', desc: 'Map the journey of a user through your product.', color: '#fbff06', text: '#000000' },
-  { title: 'Surveys & Feedback Collection', desc: 'Gather insights directly from users through surveys and feedback tools.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'Usability Analysis', desc: 'Evaluate product usability to improve user satisfaction and performance.', color: '#fbff06', text: '#000000' },
-  { title: 'Data-Driven Insights', desc: 'Analyze data to uncover actionable insights and opportunities for growth.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'UX Research Reporting', desc: 'Provide structured reports with findings, recommendations, and strategies.', color: '#fbff06', text: '#000000' },
+  { 
+    title: 'User Behavior & Funnel Analysis', 
+    desc: 'Evaluate clickstreams, session replays, and interaction drop-offs to pinpoint exactly where users encounter friction or abandon workflows.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'Market & Competitive Benchmarking', 
+    desc: 'Audit competitive products, market paradigms, and usability standards to uncover strategic opportunities for product differentiation.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
+  { 
+    title: 'Data-Driven User Personas', 
+    desc: 'Synthesize empirical customer research into detailed persona profiles outlining goals, frustrations, tech fluency, and jobs-to-be-done.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'Customer Journey Mapping', 
+    desc: 'Map end-to-end user touchpoints, emotional highs and lows, and operational handoffs across complex multi-platform product lifecycles.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
+  { 
+    title: 'User Surveys & Feedback Loops', 
+    desc: 'Deploy targeted qualitative surveys, CSAT/NPS feedback mechanisms, and contextual in-app polls to measure sentiment at critical moments.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'Usability Testing & Heuristic Audits', 
+    desc: 'Conduct moderated and unmoderated usability evaluation against Nielsen Norman heuristics to uncover usability flaws before code release.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
+  { 
+    title: 'Information Architecture & Card Sorting', 
+    desc: 'Perform open and closed card sorting exercises and tree testing to structure menus, taxonomies, and navigation intuitively for users.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'Actionable UX Research Reporting', 
+    desc: 'Deliver stakeholder-ready executive summaries, video highlight reels, and prioritized issue matrices mapped directly to product backlog items.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
 ];
 
 const DigitalServices = () => {
@@ -109,14 +146,14 @@ const DigitalServices = () => {
   );
 };
 
-// ==================== DigitalWhyChoose Component (Updated for User Research & Analysis Services) ====================
+// ==================== DigitalWhyChoose Component ====================
 const benefits = [
-  'Better understanding of user needs',
-  'Improved product usability and design',
-  'Data-driven decision making',
-  'Identification of user pain points',
-  'Enhanced customer satisfaction',
-  'Stronger product-market fit',
+  'Elimination of costly product redesigns and guesswork',
+  'Deep clarity on core user problems and mental models',
+  'Evidence-backed feature prioritization for development roadmaps',
+  'Quantifiable gains in workflow task completion rates',
+  'Reduced onboarding friction and measurable churn reduction',
+  'Direct alignment between user expectations and business goals',
 ];
 
 const DigitalWhyChoose = () => {
@@ -127,8 +164,7 @@ const DigitalWhyChoose = () => {
           Why Choose Our User Research & Analysis Services
         </h2>
         <p className="dm-about-text dm-about-text-left">
-          We focus on delivering accurate, data-driven insights that help businesses understand their users better and create meaningful experiences. 
-          Our research-driven approach ensures that your product decisions are aligned with real user needs and market demands.
+          We combine rigorous behavioral psychology with agile digital product development methodologies. Our research practitioners avoid vanity metrics, delivering verifiable insights that directly inform interface architecture, feature prioritization, and sustainable commercial growth.
         </p>
 
         <div className="dm-why-choose-layout">
@@ -158,13 +194,14 @@ const DigitalWhyChoose = () => {
   );
 };
 
-// ==================== DigitalProcess Component (Updated for User Research & Analysis Services) ====================
+// ==================== DigitalProcess Component ====================
 const processSteps = [
-  { title: 'Research Planning', desc: 'Define research goals, methods, and target audience.' },
-  { title: 'Data Collection', desc: 'Gather user data through surveys, interviews, and analytics.' },
-  { title: 'Analysis & Insights', desc: 'Identify key themes and insights, develop actionable recommendations.' },
-  { title: 'Industry Insights', desc: 'Analyze market trends and competition, identify emerging technologies.' },
-  { title: 'Reporting', desc: 'Present findings and recommendations to stakeholders.' },
+  { title: 'Research Planning & Objectives', desc: 'Define primary research questions, target participant recruitment profiles, and evaluation criteria.' },
+  { title: 'Qualitative & Quantitative Discovery', desc: 'Conduct in-depth user interviews, contextual inquiries, interactive card sorting, and broad surveys.' },
+  { title: 'Behavioral & Telemetry Analysis', desc: 'Synthesize quantitative session telemetry, drop-off heatmaps, and funnel analytics against user feedback.' },
+  { title: 'Persona & Journey Synthesis', desc: 'Construct actionable archetypes, empathy maps, and journey flows identifying critical friction areas.' },
+  { title: 'Usability Testing & Validation', desc: 'Run moderated test sessions with prototypes or live systems to measure time-on-task and satisfaction.' },
+  { title: 'Strategic Recommendations & Roadmapping', desc: 'Deliver actionable insight reports with prioritized design recommendations and engineering tasks.' },
 ];
 
 const DigitalProcess = () => {
@@ -207,7 +244,7 @@ const DigitalProcess = () => {
   );
 };
 
-// ==================== DigitalIndustries Component (Updated for User Research & Analysis Services) ====================
+// ==================== DigitalIndustries Component ====================
 const industries = [
   'E-Commerce & Retail',
   'Healthcare & Wellness',
@@ -247,6 +284,72 @@ const DigitalIndustries = () => {
   );
 };
 
+// ==================== SeoContentSection Component ====================
+const SeoContentSection = () => {
+  return (
+    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
+      <div className="dm-container">
+        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
+          
+          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
+            Professional User Research & UX Behavioral Analysis
+          </h2>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
+            Building digital products without systematic user research introduces substantial risk, often resulting in complex interfaces that confuse target customers and yield low retention. At Gatecode Technologies, our user research consultants employ structured behavioral methodologies that uncover authentic user motivations, evaluate interface workflows, and validate product concepts before significant development capital is spent.
+          </p>
+
+          {/* Key Feature Highlight Cards */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px', margin: '30px 0' }}>
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Qualitative User Interviews</h3>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                1-on-1 contextual interviews and task demonstrations that uncover unspoken customer frustrations, mental models, and real-world workarounds.
+              </p>
+            </div>
+            
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Empirical Usability Testing</h3>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Moderated testing with target demographics measuring task completion times, error rates, and system usability scores across key user journeys.
+              </p>
+            </div>
+
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Behavioral Analytics & Heatmaps</h3>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Quantitative event tracking, scroll patterns, and session analysis that reveal exact moments where prospective buyers hesitate or churn.
+              </p>
+            </div>
+
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Heuristic & Accessibility Audits</h3>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Expert usability reviews evaluating interface consistency, error prevention, feedback mechanisms, and WCAG accessibility standards.
+              </p>
+            </div>
+          </div>
+
+          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
+            Why Data-Backed User Research Accelerates Product Success
+          </h3>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            By grounding product decisions in verified user behaviors rather than internal organizational opinions, businesses dramatically reduce engineering rework, improve product-market fit, and create products customers recommend. Partnering with Gatecode Technologies ensures your team receives:
+          </p>
+
+          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
+            <li style={{ marginBottom: '10px' }}><strong>Objective Evidence:</strong> Unbiased evaluation of user workflows and prototypes directly from real users.</li>
+            <li style={{ marginBottom: '10px' }}><strong>Prioritized Product Roadmaps:</strong> Clear distinction between high-impact user problems and cosmetic suggestions.</li>
+            <li style={{ marginBottom: '10px' }}><strong>Cross-Functional Alignment:</strong> Clear video insights and data reports that build shared empathy across leadership, design, and engineering.</li>
+          </ul>
+
+        </div>
+      </div>
+    </section>
+  );
+};
+
 // ==================== Main Page Component ====================
 const UserResearchAnalysisServicesPage = () => {
   useEffect(() => {
@@ -261,6 +364,7 @@ const UserResearchAnalysisServicesPage = () => {
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
+      <SeoContentSection />
       <ContactSection />
     </div>
   );

@@ -6,7 +6,7 @@ import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
-// ==================== DigitalHero Component (Updated for Data Management Services) ====================
+// ==================== DigitalHero Component ====================
 const DigitalHero = () => {
   return (
     <section className="dm-hero">
@@ -20,8 +20,7 @@ const DigitalHero = () => {
             DATA<br />MANAGEMENT<br />SERVICES
           </h1>
           <p className="dm-hero-subtitle">
-            We provide accurate, secure, and efficient data management solutions that help businesses organize<br />
-            information, improve productivity, and streamline operations.
+            Reliable, accurate, and secure enterprise data management solutions designed to organize datasets, eliminate errors, and accelerate business intelligence.
           </p>
           <Link href="/contact" className="dm-cta-button">
             Get Free Consultation
@@ -32,31 +31,69 @@ const DigitalHero = () => {
   );
 };
 
-// ==================== DigitalAbout Component (Updated for Data Management Services) ====================
+// ==================== DigitalAbout Component ====================
 const DigitalAbout = () => {
   return (
     <section className="dm-about-section">
       <div className="dm-container">
         <p className="dm-about-text">
-          At Gatecode Technologies Pvt. Ltd., we understand that data is one of the most valuable assets for any business. Our data management 
-          services are designed to help organizations handle large volumes of information with accuracy, security, and efficiency. From data entry 
-          and processing to database management and reporting, we deliver reliable solutions that improve operational workflows, reduce errors, 
-          and support better decision-making.
+          At Gatecode Technologies Pvt. Ltd., we treat data as the core strategic foundation of modern commercial operations. Disorganized records, duplicate entries, fragmented databases, and manual processing backlogs create severe operational bottlenecks and lead to poor executive decisions. Our enterprise data management services deliver complete end-to-end support—spanning high-speed double-verified data entry, automated ETL processing, rigorous data cleansing, document digitization, CRM database optimization, and actionable BI reporting. Backed by strict non-disclosure protocols, ISO-aligned data privacy frameworks, and modern automation pipelines, we help global organizations maintain pristine data hygiene, streamline operational workflows, and unlock reliable intelligence for confident growth.
         </p>
       </div>
     </section>
   );
 };
 
-// ==================== DigitalServices Component (Updated for Data Management Services) ====================
+// ==================== DigitalServices Component ====================
 const services = [
-  { title: 'Data Entry Services', desc: 'Structured data processing services designed to improve workflow efficiency and information management.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'Data Processing Services', desc: 'Reliable data collection and organization solutions for easy accessibility and structured management.', color: '#fbff06', text: '#000000' },
-  { title: 'Data Cataloging & Organization', desc: 'Identify and remove inaccurate, incomplete, or duplicate data to maintain high-quality databases.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'Database Management', desc: 'Secure and organized database solutions that ensure smooth data handling and storage.', color: '#fbff06', text: '#000000' },
-  { title: 'Document Digitization', desc: 'Convert physical documents into secure digital formats for better accessibility and management.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'Data Analysis & Reporting', desc: 'Transform raw data into meaningful insights through structured reporting and analysis.', color: '#fbff06', text: '#000000' },
-  { title: 'Data Security & Confidentiality', desc: 'Ensure secure handling and protection of sensitive business information with reliable security practices.', color: '#4e7c7e', text: '#ffffff' },
+  { 
+    title: 'High-Precision Data Entry', 
+    desc: 'Double-key verification and rapid alphanumeric entry across online portals, ERPs, billing systems, and unstructured files.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'Automated Data Processing', 
+    desc: 'Structured ETL workflows, batch sorting, format transformation, and schema conversion to prepare datasets for analytics.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
+  { 
+    title: 'Data Cleansing & Deduplication', 
+    desc: 'Systematic identification and removal of duplicate records, syntax errors, obsolete contacts, and formatting inconsistencies.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'Document Digitization & OCR', 
+    desc: 'High-resolution scanning, intelligent OCR conversion, and metadata tagging to transform physical paperwork into searchable digital archives.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
+  { 
+    title: 'CRM Data Optimization', 
+    desc: 'Audit, enrichment, contact deduplication, and field structuring across Salesforce, HubSpot, Zoho, and custom CRM platforms.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'Data Analysis & BI Dashboards', 
+    desc: 'Transforming raw operational metrics into interactive Power BI and Tableau dashboards, visual charts, and executive KPI reports.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
+  { 
+    title: 'Excel & Spreadsheet Modeling', 
+    desc: 'Formulating automated macros, dynamic Power Query pipelines, complex formula architectures, and executive tracking spreadsheets.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'Secure Cloud Data Migration', 
+    desc: 'Zero-downtime data transfer, schema mapping, and post-migration validation between legacy on-premise servers and cloud environments.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
 ];
 
 const DigitalServices = () => {
@@ -109,14 +146,14 @@ const DigitalServices = () => {
   );
 };
 
-// ==================== DigitalWhyChoose Component (Updated for Data Management Services) ====================
+// ==================== DigitalWhyChoose Component ====================
 const benefits = [
-  'Accurate and organized data handling',
-  'Improved business productivity',
-  'Reduced manual errors',
-  'Secure and confidential data management',
-  'Faster access to information',
-  'Scalable data solutions for business growth',
+  '99.9% data accuracy backed by dual-operator verification',
+  'Strict data security with NDA compliance and 256-bit encryption',
+  'Scalable processing capacity that easily accommodates volume spikes',
+  'Elimination of operational backlogs through fast turnarounds',
+  'Seamless compatibility across modern CRMs, ERPs, and cloud storage',
+  'Measurable operational cost reduction compared to in-house data teams',
 ];
 
 const DigitalWhyChoose = () => {
@@ -127,9 +164,7 @@ const DigitalWhyChoose = () => {
           Why Choose Our Data Management Services
         </h2>
         <p className="dm-about-text dm-about-text-left">
-          We focus on delivering accurate, secure, and organized data management solutions tailored to your business requirements. Our team ensures 
-          efficient handling of business information while maintaining confidentiality, minimizing errors, and improving operational efficiency. 
-          With a structured and technology-driven approach, we help businesses manage data more effectively and make informed decisions.
+          We combine human precision with modern data automation to deliver clean, structured, and audit-ready data environments. Our rigorous quality control protocols and enterprise-grade confidentiality ensure that your critical operational information is protected, organized, and immediately accessible.
         </p>
 
         <div className="dm-why-choose-layout">
@@ -159,14 +194,14 @@ const DigitalWhyChoose = () => {
   );
 };
 
-// ==================== DigitalProcess Component (Updated for Data Management Services) ====================
+// ==================== DigitalProcess Component ====================
 const processSteps = [
-  { title: 'Requirement Analysis', desc: 'Understanding your data handling and operational requirements.' },
-  { title: 'Data Collection & Organization', desc: 'Gathering, structuring, and organizing business information efficiently.' },
-  { title: 'Data Processing & Validation', desc: 'Processing and verifying data for accuracy and consistency.' },
-  { title: 'Database Management', desc: 'Maintaining secure and organized databases for easy accessibility.' },
-  { title: 'Reporting & Analysis', desc: 'Generating reports and insights for better decision-making.' },
-  { title: 'Ongoing Support & Maintenance', desc: 'Providing continuous support, updates, and data optimization solutions.' },
+  { title: 'Data Audit & Requirement Scoping', desc: 'Assess current database structures, source formats, quality issues, and project SLA requirements.' },
+  { title: 'Workflow Design & Security Setup', desc: 'Establish secure SFTP transfer protocols, field mapping schemas, and non-disclosure governance.' },
+  { title: 'Data Extraction & High-Speed Entry', desc: 'Execute structured double-key data entry, optical character recognition, and format extraction.' },
+  { title: 'Validation & Quality Assurance', desc: 'Run automated validation scripts and manual spot checks to maintain a strict 99.9% accuracy benchmark.' },
+  { title: 'Database Integration & Formatting', desc: 'Upload validated records into client CRMs, custom databases, or cloud analytics storage.' },
+  { title: 'Continuous Maintenance & Backups', desc: 'Provide regular database maintenance, periodic deduplication, and encrypted backup archiving.' },
 ];
 
 const DigitalProcess = () => {
@@ -209,7 +244,7 @@ const DigitalProcess = () => {
   );
 };
 
-// ==================== DigitalIndustries Component (Updated for Data Management Services) ====================
+// ==================== DigitalIndustries Component ====================
 const industries = [
   'Healthcare & Medical',
   'E-Commerce & Retail',
@@ -249,7 +284,7 @@ const DigitalIndustries = () => {
   );
 };
 
-// ==================== SeoContentSection Component (SEO Optimized Content) ====================
+// ==================== SeoContentSection Component (Optimized Existing Section - In Place) ====================
 const SeoContentSection = () => {
   return (
     <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
@@ -257,57 +292,64 @@ const SeoContentSection = () => {
         <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
           
           <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Top Data Management Company in India
+            Enterprise Data Management & Data Processing Services Company
           </h2>
           
           <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Welcome to <strong>Gatecode Technologies</strong>, standing out among premier <strong>data management companies in india</strong>. We specialize in delivering <strong>integrated data management services</strong>, high-volume <strong>data entry</strong> solutions, and end-to-end <strong>service data management</strong> tailored to streamline organizational data grids, eliminate record redundancies, and enforce strict corporate compliance.
+            At <strong>Gatecode Technologies</strong>, we provide comprehensive <strong>integrated data management services</strong> designed to resolve data fragmentation, eliminate processing backlogs, and ensure total data integrity for enterprises worldwide. Our specialized specialists deliver structured <strong>data entry</strong> solutions, automated processing pipelines, and secure database optimization tailored to maintain accurate and compliant corporate records.
           </p>
 
           <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Database Management System Solutions & Data Processing Services Company
+            High-Speed Data Processing & Database Management Architecture
           </h3>
           
           <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Efficient corporate operations rely on robust <strong>database management</strong> architectures. Operating as a specialized <strong>data processing services company</strong>, our engineers build scalable <strong>database management system</strong> environments that ensure fast query execution, seamless cloud backup, and structured <strong>data catalog</strong> management for large enterprise datasets.
+            Modern business operations rely on responsive, error-free databases. As an established data management partner, our teams implement structured data pipelines that guarantee fast query execution, organized catalog taxonomy, and seamless synchronization across your critical CRM and ERP applications.
           </p>
 
           {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px', margin: '30px 0' }}>
             <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Data Entry Services India</h4>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Verified Data Entry Services</h4>
               <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Outsource manual inputs with double-verified <strong>data entry services india</strong>. We provide high-speed catalog logging, sheet management, and <strong>outsourced data entry</strong> workflows.
+                High-volume alphanumeric entry with dual-operator verification, catalog indexing, and format standardization for clean records.
               </p>
             </div>
             
             <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Database Management System</h4>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Database Management & Hygiene</h4>
               <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Maintain high-performance cloud databases with a enterprise <strong>database management system</strong>. We handle indexing, data migration, schema design, and server optimization.
+                Structured indexing, automated deduplication, and schema optimization that maintain high query performance across enterprise databases.
               </p>
             </div>
 
             <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Document Digitization Services</h4>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Document Digitization & OCR</h4>
               <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Convert physical paper sheets, invoices, and legal records into searchable cloud archives with professional <strong>document digitization services</strong>.
+                Converting physical forms, legal archives, and billing invoices into searchable, indexed digital assets with automated text recognition.
+              </p>
+            </div>
+
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>CRM & Analytics Integration</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Cleansing, migrating, and structuring contact records into Salesforce, HubSpot, and Zoho to power targeted marketing and sales workflows.
               </p>
             </div>
           </div>
 
           <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Partner with Gatecode for Integrated Data Management Services?
+            Why Partner with Gatecode Technologies for Integrated Data Management?
           </h3>
           
           <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Partnering with an experienced <strong>data management</strong> specialist ensures 99.9% accuracy and complete data privacy. Choosing Gatecode Technologies guarantees:
+            Outsourcing data operations to a specialized provider guarantees 99.9% accuracy, rapid scalability, and complete data privacy. Choosing Gatecode Technologies ensures:
           </p>
 
           <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Double-Verified Accuracy:</strong> Stringent verification protocols minimizing typos and formatting errors.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Strict Data Security:</strong> NDA-backed workflows, encrypted cloud storage, and ISO-compliant access controls.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Scalable Data Cataloging:</strong> Organized <strong>data catalog</strong> tagging for instant retrieval across corporate CRMs.</li>
+            <li style={{ marginBottom: '10px' }}><strong>Double-Verified Accuracy:</strong> Rigorous quality control checks that eliminate duplicate entries, typos, and formatting flaws.</li>
+            <li style={{ marginBottom: '10px' }}><strong>Strict Data Confidentiality:</strong> Comprehensive non-disclosure agreements, encrypted transmission, and role-based access control.</li>
+            <li style={{ marginBottom: '10px' }}><strong>Scalable Processing Turnaround:</strong> Flexible operational shifts capable of handling high-volume surges and seasonal demands effortlessly.</li>
           </ul>
 
         </div>
@@ -349,37 +391,6 @@ const DataManagementServicesPage = () => {
     description: 'Premier data management company in India offering data entry services, data processing, document digitization services, and database management system solutions.',
   };
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Why should I choose Gatecode Technologies as my data management company in India?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Gatecode Technologies is a trusted data management company in India delivering double-verified data entry services, enterprise database management system solutions, and document digitization.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Do you offer data entry services in India with high accuracy SLAs?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes! We provide double-checked data entry services India for e-commerce catalogs, CRM systems, and enterprise financial ledgers with 99.9% accuracy guarantee.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'What document digitization services and data processing options do you provide?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'We convert paper files, invoices, and physical sheets into secure digital formats with organized data catalog tagging and database management support.',
-        },
-      },
-    ],
-  };
-
   return (
     <div className="digital-marketing-page">
       <script
@@ -389,10 +400,6 @@ const DataManagementServicesPage = () => {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(dataManagementSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <DigitalHero />
       <DigitalAbout />

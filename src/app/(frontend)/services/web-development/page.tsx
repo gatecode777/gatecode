@@ -27,8 +27,7 @@ const DigitalHero = () => {
             WEB<br />DEVELOPMENT<br />SERVICES
           </h1>
           <p className="dm-hero-subtitle">
-            We create custom web solutions tailored to your business goals and user requirements, 
-            delivering responsive, secure, and user-friendly websites across all devices.
+            We engineer high-performance, secure, and responsive web solutions tailored to your business goals, delivering intuitive digital experiences that engage audiences and drive sustained growth.
           </p>
           <Link href="/contact" className="dm-cta-button">
             Get Free Consultation
@@ -45,10 +44,10 @@ const DigitalAbout = () => {
     <section className="dm-about-section">
       <div className="dm-container">
         <p className="dm-about-text">
-          At Gatecode Technologies Pvt. Ltd., we create custom web solutions tailored to your business goals and user requirements. 
-          Our focus is on developing responsive, secure, and user-friendly websites that deliver seamless digital experiences across all devices. 
-          Whether you need a business website, e-commerce platform, or custom web application, our team combines creativity and technology 
-          to build solutions that drive engagement, improve performance, and support business growth.
+          At Gatecode Technologies Pvt. Ltd., we engineer custom web solutions rooted in modern architectural standards, reliable performance, and conversion-focused user experiences. We take time to analyze your operational workflows, target audience expectations, and technical needs before writing a single line of code, ensuring every digital product aligns precisely with your strategic goals.
+        </p>
+        <p className="dm-about-text" style={{ marginTop: '16px' }}>
+          From custom corporate websites and high-converting e-commerce platforms to complex web applications and portal architectures, our development methodology emphasizes clean code, lightning-fast load times, mobile responsiveness, and airtight security. We build digital assets that not only look remarkable but also scale effortlessly as your enterprise grows.
         </p>
       </div>
     </section>
@@ -59,49 +58,49 @@ const DigitalAbout = () => {
 const services = [
   { 
     title: 'Custom Website Development', 
-    desc: 'Websites built around your business goals, with the right features, structure, and flexibility to support your growth.', 
+    desc: 'Tailored web architectures built from scratch with clean, maintainable code matching your exact operational workflows and brand identity.', 
     color: '#4e7c7e', 
     text: '#ffffff' 
   },
   { 
     title: 'Responsive Web Design', 
-    desc: 'Mobile-friendly websites that look great and work smoothly across phones, tablets, and desktop devices.', 
+    desc: 'Mobile-first layouts engineered with fluid grids and responsive typography that render flawlessly across smartphones, tablets, and desktops.', 
     color: '#fbff06', 
     text: '#000000' 
   },
   { 
     title: 'E-Commerce Development', 
-    desc: 'Scalable online stores with product management, secure payments, and a simple shopping experience for your customers.', 
+    desc: 'High-converting online storefronts with streamlined checkout flows, multi-gateway payment integrations, and robust inventory management.', 
     color: '#4e7c7e', 
     text: '#ffffff' 
   },
   { 
     title: 'CMS Development', 
-    desc: 'Easy-to-manage websites that let you update pages, content, and important information without technical help.', 
+    desc: 'Flexible content management solutions enabling non-technical teams to publish, edit, and organize media and content effortlessly.', 
     color: '#fbff06', 
     text: '#000000' 
   },
   { 
     title: 'Web Application Development', 
-    desc: 'Custom web applications designed to simplify business processes, improve workflows, and handle your specific requirements.', 
+    desc: 'Complex, interactive web applications featuring modular APIs, high-speed data processing, and enterprise-grade reliability.', 
     color: '#4e7c7e', 
     text: '#ffffff' 
   },
   { 
     title: 'UI/UX Focused Development', 
-    desc: 'Clean, user-friendly interfaces with simple navigation that help visitors find information and take action easily.', 
+    desc: 'Intuitive user journeys, accessible navigation, and optimized micro-interactions designed to maximize visitor engagement and retention.', 
     color: '#fbff06', 
     text: '#000000' 
   },
   { 
-    title: 'API & Third-Party Integration', 
-    desc: 'Connect your website with APIs, payment gateways, CRM systems, and other tools for smoother business operations.', 
+    title: 'API & System Integration', 
+    desc: 'Seamless connections between your web platform and third-party tools, ERPs, CRM software, and payment infrastructure.', 
     color: '#4e7c7e', 
     text: '#ffffff' 
   },
   { 
     title: 'Website Maintenance & Support', 
-    desc: 'Ongoing updates, bug fixes, performance checks, and technical support to keep your website secure and running smoothly.', 
+    desc: 'Proactive monitoring, routine security patches, performance tuning, and technical updates to keep your web properties peak-performing.', 
     color: '#fbff06', 
     text: '#000000' 
   },
@@ -133,9 +132,9 @@ const DigitalServices = () => {
       <div className="dm-container">
         <h2 className="dm-section-title">Our Web Development Services</h2>
         <p className="dm-services-subtitle">
-          Every business has different needs. We build websites around your goals, customers, and requirements,
+          Every organization has distinct requirements. We build scalable, resilient web solutions designed around your objectives,
           <br className="dm-services-desktop-br" />
-          with a focus on performance, usability, security, and future growth.
+          combining technical elegance, intuitive usability, advanced security, and measurable performance.
         </p>
         <div className="dm-services-grid">
           {services.map((service, index) => (
@@ -164,12 +163,12 @@ const DigitalServices = () => {
 
 // ==================== DigitalWhyChoose Component (Updated for Web Development) ====================
 const benefits = [
-  'Unique, Brand-Focused Design',
-  'Built to Grow With Your Business',
-  'SEO-Friendly Structure',
-  'Fast and Reliable Performance',
-  'Secure and Dependable',
-  'Designed to Engage and Convert',
+  'Bespoke, clean-code architecture tailored to your business model.',
+  'Lightning-fast loading speeds optimized for Core Web Vitals.',
+  'Search-engine-friendly structure with semantic HTML and schema markup.',
+  'Responsive, mobile-first design ensuring smooth usability on every screen.',
+  'Robust security protocols with SSL, data encryption, and vulnerability defense.',
+  'Scalable cloud infrastructure built to handle sustained traffic growth.',
 ];
 
 const DigitalWhyChoose = () => {
@@ -180,10 +179,10 @@ const DigitalWhyChoose = () => {
           Why Choose Our Web Development Services
         </h2>
         <p className="dm-about-text dm-about-text-left">
-          A template website may look good at first, but it often comes with limitations as your business grows. You may find it difficult to add new features, improve performance, or create an experience that truly represents your brand.
+          Off-the-shelf templates and rigid site builders often fall short when your business reaches scale. They introduce unnecessary code bloat, restrictive plugin dependencies, performance bottlenecks, and security vulnerabilities that hinder user experience and conversion rates.
         </p>
         <p className="dm-about-text dm-about-text-left" style={{ marginTop: '16px' }}>
-          At Gatecode Technologies, we take a different approach. We have developed custom websites for <strong>100+ businesses</strong> across different industries, including schools, fintech, e-commerce, manufacturing, and more. Instead of starting with a ready-made theme, we first understand your business, goals, and customers. This helps us build a website that fits your needs today and can grow with your business in the future.
+          At Gatecode Technologies, our engineering methodology centers on precision, scalability, and business outcomes. Having engineered bespoke web solutions for enterprises across diverse sectors—including e-commerce, fintech, manufacturing, healthcare, and education—we construct custom architectures engineered for speed, search visibility, and seamless third-party integrations.
         </p>
 
         <div className="dm-why-choose-layout">
@@ -216,28 +215,28 @@ const DigitalWhyChoose = () => {
 // ==================== DigitalProcess Component (Updated for Web Development) ====================
 const processSteps = [
   {
-    title: 'Requirement Analysis',
-    desc: 'We discuss your goals, audience, features, and project requirements to understand exactly what your website needs.',
+    title: 'Discovery & Architecture Planning',
+    desc: 'We analyze your strategic goals, user personas, technical dependencies, and functional requirements to establish a rock-solid technical blueprint.',
   },
   {
-    title: 'Planning & Strategy',
-    desc: 'We plan the website structure, features, and technology to keep development focused and avoid unnecessary changes.',
+    title: 'Information Architecture & UX Wireframing',
+    desc: 'We structure page hierarchies, content workflows, and interactive wireframes to ensure intuitive navigation and effortless user journeys.',
   },
   {
-    title: 'UI/UX Design',
-    desc: 'We create clean layouts and simple navigation with your users, content, and mobile experience in mind.',
+    title: 'UI Design & Interactive Prototyping',
+    desc: 'We craft high-fidelity visual interfaces adhering to your brand identity, modern typography standards, and interactive micro-animations.',
   },
   {
-    title: 'Development',
-    desc: 'Our developers build the website using suitable technologies, focusing on performance, functionality, and responsive design.',
+    title: 'Full-Stack Engineering & Integration',
+    desc: 'Our developers write clean, modular frontend and backend code, seamlessly integrating APIs, databases, payment systems, and CMS controls.',
   },
   {
-    title: 'Testing & Quality Assurance',
-    desc: 'We test features, forms, links, responsiveness, and performance to identify and fix issues before launch.',
+    title: 'Rigorous QA & Performance Testing',
+    desc: 'We conduct extensive cross-browser verification, mobile responsiveness testing, Core Web Vitals optimization, and vulnerability assessments.',
   },
   {
-    title: 'Deployment & Support',
-    desc: 'After final checks, we launch the website and provide support for updates, fixes, performance, and future requirements.',
+    title: 'Deployment & Continuous Optimization',
+    desc: 'We deploy your platform with zero downtime, configure caching and analytics, and provide ongoing technical maintenance and support.',
   },
 ];
 

@@ -21,8 +21,7 @@ const DigitalHero = () => {
             MOBILE<br />APP<br />DEVELOPMENT
           </h1>
           <p className="dm-hero-subtitle">
-            We develop modern mobile applications designed to enhance user engagement, improve accessibility,<br />
-            and support digital transformation.
+            We architect and engineer high-performance mobile applications across Android and iOS platforms, delivering intuitive user journeys, rock-solid security, and scalable cloud-connected backends.
           </p>
           <Link href="/contact" className="dm-cta-button">
             Get Free Consultation
@@ -39,10 +38,10 @@ const DigitalAbout = () => {
     <section className="dm-about-section">
       <div className="dm-container">
         <p className="dm-about-text">
-          At Gatecode Technologies Pvt. Ltd., we develop mobile applications that are designed around your requirements and the people who will use them. Whether you need a new app, an existing app improved, or a mobile solution connected with your current systems, we focus on building software that is intuitive, secure, reliable, and easy to maintain.
+          At Gatecode Technologies Pvt. Ltd., our mobile application engineering focuses on creating intuitive, resilient digital experiences tailored to real-world user behaviors. We thoroughly examine your business objectives, target audience demographics, device ecosystems, and operational workflows before determining whether a native (Kotlin/Swift) or cross-platform (Flutter/React Native) architecture best fits your long-term roadmap.
         </p>
         <p className="dm-about-text" style={{ marginTop: '16px' }}>
-          We work with Android, iOS, and cross-platform development, along with API integration, testing, deployment, and ongoing enhancements. Our approach combines thoughtful development with practical user experience to create mobile applications that solve real problems and support your long-term goals.
+          Our engineering standards emphasize battery efficiency, fluid 60fps animations, offline-first data caching, and enterprise-grade data encryption. From customer-facing e-commerce applications and SaaS mobile extensions to internal workflow tools and IoT interfaces, we build mobile applications designed to capture user engagement, earn five-star app store ratings, and scale seamlessly with your customer base.
         </p>
       </div>
     </section>
@@ -51,14 +50,54 @@ const DigitalAbout = () => {
 
 // ==================== DigitalServices Component (Updated for Mobile App Development) ====================
 const services = [
-  { title: 'Android App Development', desc: 'Custom Android applications designed for performance, scalability, and seamless user experience.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'iOS App Development', desc: 'High-quality iOS applications built for functionality and premium user engagement.', color: '#fbff06', text: '#000000' },
-  { title: 'Cross-Platform App Development', desc: 'Cross-platform mobile apps that work efficiently across both Android and iOS platforms.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'E-Commerce App Development', desc: 'Feature-rich e-commerce applications with secure payment systems and smooth shopping experiences.', color: '#fbff06', text: '#000000' },
-  { title: 'Custom Mobile App Solutions', desc: 'Tailor-made mobile applications developed according to unique business requirements.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'UI/UX Design for Mobile Apps', desc: 'Modern and intuitive mobile app interfaces designed to improve usability and engagement.', color: '#fbff06', text: '#000000' },
-  { title: 'API & Third-Party Integration', desc: 'Seamless integration of payment gateways, maps, chat systems, and external services.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'Maintenance & Support', desc: 'Continuous updates, performance optimization, bug fixing, and technical support for long-term app reliability.', color: '#fbff06', text: '#000000' },
+  { 
+    title: 'Native Android App Development', 
+    desc: 'Custom Kotlin and Java applications engineered specifically for Android OS, utilizing Jetpack components and Material Design principles.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'Native iOS App Development', 
+    desc: 'High-fidelity Swift and SwiftUI applications built for iPhones and iPads, offering fluid animations and seamless Apple ecosystem integration.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
+  { 
+    title: 'Cross-Platform App Engineering', 
+    desc: 'Cost-effective Flutter and React Native solutions that share a unified codebase while delivering near-native speed on iOS and Android.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'Mobile Commerce & FinTech Apps', 
+    desc: 'High-converting shopping and payment applications featuring PCI-compliant checkouts, one-tap mobile wallets, and instant push notifications.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
+  { 
+    title: 'Enterprise Mobility Solutions', 
+    desc: 'Secure, field-ready mobile apps equipped with biometric authentication, offline synchronization, and integration with ERP/CRM databases.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'Mobile UI/UX Design & Prototyping', 
+    desc: 'Human-centric mobile interfaces designed for natural thumb zones, tactile haptics, intuitive swipe gestures, and clear accessibility.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
+  { 
+    title: 'API Integration & Cloud Synchronization', 
+    desc: 'Real-time synchronization connecting mobile frontends with REST/GraphQL backends, geospatial mapping, and cloud notification hubs.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'App Lifecycle Maintenance & Support', 
+    desc: 'Proactive OS version compatibility updates, crash analytics triage, performance profiling, and continuous security patching.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
 ];
 
 const DigitalServices = () => {
@@ -113,12 +152,12 @@ const DigitalServices = () => {
 
 // ==================== DigitalWhyChoose Component (Updated for Mobile App Development) ====================
 const benefits = [
-  'Built around real user needs',
-  'Android, iOS & cross-platform development',
-  'Performance that holds up',
-  'Security considered from the start',
-  'Seamless API & system integration',
-  'Support beyond the initial launch',
+  'Native-level performance with smooth 60fps animations.',
+  'End-to-end data encryption with secure keychain storage.',
+  'Offline-first architecture with automatic background data sync.',
+  'Fast time-to-market using streamlined CI/CD mobile pipelines.',
+  '100% compliance with Google Play and Apple App Store guidelines.',
+  'Ongoing crash monitoring and proactive operating system updates.',
 ];
 
 const DigitalWhyChoose = () => {
@@ -129,10 +168,10 @@ const DigitalWhyChoose = () => {
           Why Choose Our Mobile App Development Services?
         </h2>
         <p className="dm-about-text dm-about-text-left">
-          A mobile app should do more than look good—it should be easy to use, reliable, secure, and useful in real-world situations. At Gatecode Technologies Pvt. Ltd., we start by understanding your requirements, target users, and existing technology before deciding how the app should be built.
+          A mobile application is a direct extension of your brand into your customers' hands. Sluggish touch responses, confusing navigation, excessive battery drain, or unexpected crashes will quickly lead to uninstalls and damage your company's reputation.
         </p>
         <p className="dm-about-text dm-about-text-left" style={{ marginTop: '16px' }}>
-          Our team develops Android, iOS, and cross-platform applications with a focus on usability, performance, security, and long-term maintainability. Whether you’re starting a new app, improving an existing one, or connecting your app with APIs and third-party services, we choose technologies and development practices that fit the project rather than adding unnecessary complexity.
+          At Gatecode Technologies, we take a disciplined engineering approach to mobile software. By combining user-centric interface design, strict memory profiling, comprehensive device lab testing, and secure cloud connectivity, we build mobile applications that delight users, protect sensitive data, and support long-term business retention.
         </p>
 
         <div className="dm-why-choose-layout">
@@ -164,12 +203,30 @@ const DigitalWhyChoose = () => {
 
 // ==================== DigitalProcess Component (Updated for Mobile App Development) ====================
 const processSteps = [
-  { title: 'Requirement Analysis', desc: 'Understanding your business goals, audience, and app requirements.' },
-  { title: 'Planning & Strategy', desc: 'Creating a structured roadmap and selecting the right technologies.' },
-  { title: 'UI/UX Design', desc: 'Designing engaging and user-friendly mobile interfaces.' },
-  { title: 'App Development', desc: 'Building secure, scalable, and high-performance applications.' },
-  { title: 'Testing & Quality Assurance', desc: 'Ensuring smooth functionality, performance, and security.' },
-  { title: 'Deployment & Support', desc: 'Launching the application and providing continuous support and updates.' },
+  { 
+    title: 'Discovery & Mobile Strategy', 
+    desc: 'We evaluate your product vision, target demographics, mobile feature set, and target OS ecosystems to create an execution roadmap.' 
+  },
+  { 
+    title: 'UI/UX Wireframing & Prototyping', 
+    desc: 'We design intuitive user journeys, gesture-driven wireframes, and interactive prototypes tailored to touch devices.' 
+  },
+  { 
+    title: 'Native & Cross-Platform Development', 
+    desc: 'Our developers write clean, modular client code while configuring secure APIs, database models, and cloud services.' 
+  },
+  { 
+    title: 'Real-Device QA & Performance Testing', 
+    desc: 'We conduct extensive tests across physical Android and iOS devices, verifying memory footprints, battery drain, and screen adaptability.' 
+  },
+  { 
+    title: 'App Store Submission & Launch', 
+    desc: 'We handle complete submission assets, privacy policies, and review cycles for both the Google Play Store and Apple App Store.' 
+  },
+  { 
+    title: 'Post-Launch Telemetry & Support', 
+    desc: 'We track real-time crash logs, monitor user feedback, push performance updates, and ensure compatibility with future OS releases.' 
+  },
 ];
 
 const DigitalProcess = () => {

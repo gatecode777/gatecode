@@ -1,13 +1,15 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Best Digital Marketing Company in India | Digital Marketing Agency',
-  description: 'Gatecode Technologies is the best digital marketing company in India. We offer performance marketing agency solutions, seo digital marketing, social media marketing services, and b2b digital marketing services globally.',
+  title: 'Best Digital Marketing Company In Jaipur | Gatecode Technologies',
+  description: 'Best digital marketing company in Jaipur offering SEO, Google Ads, SMM, and result-driven digital solutions to grow your business online.',
   keywords: [
     'digital marketing agency',
     'digital marketing company',
     'digital marketing company in india',
     'best digital marketing company in india',
+    'digital marketing company in jaipur',
+    'best digital marketing company in jaipur',
     'seo digital marketing',
     'search engine optimization digital marketing',
     'social media marketing agency',
@@ -25,8 +27,8 @@ export const metadata: Metadata = {
     canonical: '/services/digital-marketing',
   },
   openGraph: {
-    title: 'Best Digital Marketing Company in India | Digital Marketing Agency',
-    description: 'Gatecode Technologies is the best digital marketing company in India offering performance marketing agency solutions, seo digital marketing, and social media marketing services.',
+    title: 'Best Digital Marketing Company In Jaipur | Gatecode Technologies',
+    description: 'Best digital marketing company in Jaipur offering SEO, Google Ads, SMM, and result-driven digital solutions to grow your business online.',
     url: 'https://gatecode.in/services/digital-marketing',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
@@ -34,8 +36,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Digital Marketing Company in India | Digital Marketing Agency',
-    description: 'Gatecode Technologies is the best digital marketing company in India offering performance marketing agency solutions, seo digital marketing, and social media marketing services.',
+    title: 'Best Digital Marketing Company In Jaipur | Gatecode Technologies',
+    description: 'Best digital marketing company in Jaipur offering SEO, Google Ads, SMM, and result-driven digital solutions to grow your business online.',
   },
 };
 

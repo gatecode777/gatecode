@@ -21,8 +21,7 @@ const DigitalHero = () => {
             UX (USER EXPERIENCE)<br />DESIGN<br />SERVICES
           </h1>
           <p className="dm-hero-subtitle">
-            Creating seamless, intuitive and meaningful user experiences that drive<br />
-            engagement and satisfaction.
+            We architect frictionless, intuitive user experiences through behavioral research, cognitive journey mapping, and usability testing to turn casual visitors into loyal brand advocates.
           </p>
           <Link href="/contact" className="dm-cta-button">
             Get Free Consultation
@@ -39,7 +38,10 @@ const DigitalAbout = () => {
     <section className="dm-about-section">
       <div className="dm-container">
         <p className="dm-about-text">
-          At Gatecode Technologies Pvt. Ltd., we know that a truly successful digital product doesn&apos;t just function well—it feels completely effortless to the people using it. Our UX design philosophy goes far beyond basic wireframes; we dive deep into user behavior, cognitive psychology, and your specific market needs. From initial research and strategic user-journey mapping to rigorous usability testing and optimization, we partner with you to eliminate friction. We transform complex workflows into simple, highly engaging digital experiences that not only delight your customers but directly drive your business goals forward.
+          At Gatecode Technologies Pvt. Ltd., our user experience (UX) design methodology is rooted in cognitive ergonomics, behavioral research, and commercial strategy. A truly successful digital product doesn't just look appealing—it feels completely effortless to navigate, guiding users to their goals with zero cognitive fatigue.
+        </p>
+        <p className="dm-about-text" style={{ marginTop: '16px' }}>
+          We dive deep into target user mental models, operational pain points, and task complexities. From structured user interviews and card sorting to comprehensive user journey mapping and iterative usability testing, we systematically eradicate friction points. The result is an intuitive digital architecture that drives higher task completion, builds customer trust, and elevates overall product retention.
         </p>
       </div>
     </section>
@@ -48,14 +50,54 @@ const DigitalAbout = () => {
 
 // ==================== DigitalServices Component (Updated for UX Design Services) ====================
 const services = [
-  { title: 'User Research & Analysis', desc: 'Understanding user behavior, needs, and pain points through detailed research and insights.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'Information Architecture', desc: 'Structuring content and navigation for easy access and better usability.', color: '#fbff06', text: '#000000' },
-  { title: 'Wireframing & User Flows', desc: 'Designing wireframes and user journeys to map out smooth user interactions.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'Prototyping & Interaction Design', desc: 'Creating interactive prototypes to visualize and test user experiences.', color: '#fbff06', text: '#000000' },
-  { title: 'Usability Testing', desc: 'Evaluating designs with real users to improve usability and performance.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'UX Audit & Optimization', desc: 'Analyzing existing products and improving user experience for better engagement.', color: '#fbff06', text: '#000000' },
-  { title: 'Conversion Optimization', desc: 'Enhancing user journeys to improve conversions and achieve business objectives.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'Accessibility & User-Friendly Design', desc: 'Ensuring designs are inclusive, accessible, and easy to use for all users.', color: '#fbff06', text: '#000000' },
+  { 
+    title: 'User Persona & Behavioral Research', 
+    desc: 'Deep qualitative and quantitative user interviews, empathy mapping, and behavioral analysis to understand motivations.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'Information Architecture & Navigation', 
+    desc: 'Structuring content categories, taxonomies, and clear hierarchical pathways that make complex data immediately findable.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
+  { 
+    title: 'User Journey & Task Flow Mapping', 
+    desc: 'Defining end-to-end user paths, minimizing friction points, and optimizing conversion funnels across multi-step flows.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'Low-Fidelity Wireframe Prototyping', 
+    desc: 'Rapid structural wireframes that validate screen hierarchy, content priorities, and functional interactions before visual design.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
+  { 
+    title: 'Usability Testing & Feedback Analysis', 
+    desc: 'Moderated user testing, think-aloud protocols, and heat map analysis to validate prototypes with real target users.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'Comprehensive UX Auditing', 
+    desc: 'Evaluating existing digital products against Nielsen Norman heuristics to identify cognitive hurdles and usability defects.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
+  { 
+    title: 'Conversion Rate Optimization (CRO) UX', 
+    desc: 'Strategic layout refinements and checkout flow simplifications engineered to decrease bounce rates and increase sales.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'Inclusive & Accessible UX Engineering', 
+    desc: 'Designing accessible digital journeys compliant with WCAG 2.1 guidelines, screen reader navigation, and keyboard controls.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
 ];
 
 const DigitalServices = () => {
@@ -110,12 +152,12 @@ const DigitalServices = () => {
 
 // ==================== DigitalWhyChoose Component (Updated for UX Design Services) ====================
 const benefits = [
-  'Higher Conversions & ROI',
-  'Data-Backed Strategy',
-  'Zero-Friction Interactions',
-  'Intuitive Navigation',
-  'Delightful User Journeys',
-  'Peak Product Efficiency',
+  'Measurable increase in user task completion rates.',
+  'Eradication of confusing friction points across conversion funnels.',
+  'Data-backed design decisions rooted in actual user testing.',
+  'Intuitive information architecture that reduces customer support tickets.',
+  'Universal accessibility adhering to international WCAG standards.',
+  'Comprehensive UX specifications ready for development execution.',
 ];
 
 const DigitalWhyChoose = () => {
@@ -126,7 +168,10 @@ const DigitalWhyChoose = () => {
           Why Partner With Us for UX Design?
         </h2>
         <p className="dm-about-text dm-about-text-left">
-          We believe that the best User Experience (UX) is invisible—it simply feels natural. Your users deserve a digital journey that is effortless, and your business deserves a product that consistently drives results. We don&apos;t rely on guesswork; our UX process is deeply rooted in behavioral research, strategic design thinking, and real empathy for your audience. We partner with you to bridge the gap between what your users need and what your business wants to achieve. The result? Seamless, intuitive solutions that turn user frustration into lasting loyalty.
+          The most effective user experience is invisible—it empowers users to complete their objectives effortlessly without second-guessing where to click. When digital products rely on assumptions instead of research, users experience friction, abandon shopping carts, and leave negative feedback.
+        </p>
+        <p className="dm-about-text dm-about-text-left" style={{ marginTop: '16px' }}>
+          At Gatecode Technologies, we replace guesswork with empirical research. By combining behavioral psychology, ergonomic heuristics, and continuous usability testing, we design streamlined digital pathways that turn complex user requirements into delightful, intuitive experiences that drive sustained business growth.
         </p>
 
         <div className="dm-why-choose-layout">
@@ -158,12 +203,30 @@ const DigitalWhyChoose = () => {
 
 // ==================== DigitalProcess Component (Updated for UX Design Services) ====================
 const processSteps = [
-  { title: 'Research & Discovery', desc: 'Understanding users, business goals, and market trends.' },
-  { title: 'Strategy & Planning', desc: 'Defining user journeys, workflows, and experience strategy.' },
-  { title: 'Wireframing & Prototyping', desc: 'Creating layouts and interactive prototypes.' },
-  { title: 'Testing & Validation', desc: 'Conducting usability testing and gathering feedback.' },
-  { title: 'Optimization & Improvement', desc: 'Refining experiences for better performance and engagement.' },
-  { title: 'Final Delivery', desc: 'Providing UX documentation and implementation support.' },
+  { 
+    title: 'Empathize & Problem Scoping', 
+    desc: 'We conduct stakeholder interviews, survey target users, and analyze operational hurdles to define core problem statements.' 
+  },
+  { 
+    title: 'Research Synthesis & Persona Building', 
+    desc: 'We transform user data into actionable empathy maps, user journey charts, and prioritized feature backlogs.' 
+  },
+  { 
+    title: 'IA & Card Sorting', 
+    desc: 'We run open and closed card sorting exercises to construct intuitive navigation structures and taxonomy trees.' 
+  },
+  { 
+    title: 'Wireframing & Interaction Design', 
+    desc: 'We design low-fidelity structural blueprints and interactive wireframes mapping every decision fork in the user journey.' 
+  },
+  { 
+    title: 'Empirical Usability Testing', 
+    desc: 'We test interactive prototypes with real users, tracking task success rates, time-on-task metrics, and subjective feedback.' 
+  },
+  { 
+    title: 'Iteration & Technical Specification', 
+    desc: 'We refine workflows based on usability findings and provide comprehensive UX design documentation to engineering teams.' 
+  },
 ];
 
 const DigitalProcess = () => {
@@ -238,8 +301,82 @@ const DigitalIndustries = () => {
             <Image src="/images/2.webp" alt="Healthcare Interface Usability Mapping - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
             <Image src="/images/3.webp" alt="Education and E-Learning Platform UX - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
             <Image src="/images/4.webp" alt="SaaS and Technology Products UX Strategy - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
-            <Image src="/images/5.webp" alt="Corporate Business Applications UX Layout - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
+            <Image src="/images/5.webp" alt="Finance and Accounting System User Flows - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
           </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// ==================== Section 6: Image Reference Section (SEO & Conversion Highlight) ====================
+const SeoContentSection = () => {
+  return (
+    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
+      <div className="dm-container">
+        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
+          
+          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
+            Leading User Experience (UX) Design Agency in India
+          </h2>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
+            Welcome to <strong>Gatecode Technologies Pvt. Ltd.</strong>, an established <strong>user experience design agency</strong> delivering comprehensive, data-driven UX design services. We partner with product managers, tech founders, and enterprise organizations to transform complex digital workflows into seamless, intuitive journeys.
+          </p>
+
+          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
+            Engineering Intuitive Experiences Through Scientific User Empathy
+          </h3>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            The greatest user experience is one where the interface fades into the background, allowing users to achieve their goals with zero cognitive friction. Our UX strategists and researchers dive into cognitive psychology, interaction design, and usability metrics to ensure your software, mobile application, or web platform delivers maximum utility and effortless delight.
+          </p>
+
+          {/* Key Feature Highlight Cards */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Behavioral Persona Research</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Ground every screen in authentic user needs, behavioral drivers, and pain points uncovered through empirical research.
+              </p>
+            </div>
+            
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Streamlined Information Architecture</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Structure dense data, navigation menus, and content trees so users find critical information in three clicks or less.
+              </p>
+            </div>
+
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Rigorous Usability Testing</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Validate product concepts with real target users before engineering begins, eliminating expensive post-launch code rewrites.
+              </p>
+            </div>
+
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Conversion-Focused Journeys</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Systematically remove friction, reduce input fatigue, and guide users smoothly toward conversion milestones.
+              </p>
+            </div>
+          </div>
+
+          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
+            Why Choose Gatecode Technologies for UX Architecture?
+          </h3>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            Partnering with Gatecode Technologies ensures your digital product is built upon rigorous human-centered methodologies:
+          </p>
+
+          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
+            <li style={{ marginBottom: '10px' }}><strong>HCI-Trained Designers:</strong> Specialized expertise in human-computer interaction, cognitive load reduction, and usability principles.</li>
+            <li style={{ marginBottom: '10px' }}><strong>Transparent Usability Reports:</strong> Concrete metrics on task completion rates, session recordings, and empirical recommendations.</li>
+            <li style={{ marginBottom: '10px' }}><strong>Seamless Developer Handoff:</strong> Comprehensive user flow maps, wireframe blueprints, and interactive prototypes for engineering squads.</li>
+          </ul>
+
         </div>
       </div>
     </section>
@@ -257,9 +394,26 @@ const UXDesignServicesPage = () => {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/ui-ux-design/ux-design' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/ui-ux-design' },
       { '@type': 'ListItem', position: 3, name: 'UX Design', item: 'https://gatecode.in/services/ui-ux-design/ux-design' },
     ],
+  };
+
+  const uxServiceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'User Experience (UX) Design Services',
+    name: 'UX Design Company in India',
+    provider: {
+      '@type': 'Organization',
+      name: 'Gatecode Technologies Pvt. Ltd.',
+      url: 'https://gatecode.in',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'India',
+    },
+    description: 'Expert UX design agency in India delivering user research, journey mapping, wireframing, heuristic evaluation, and usability testing.',
   };
 
   const faqSchema = {
@@ -268,42 +422,34 @@ const UXDesignServicesPage = () => {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'What is UX (User Experience) design, and why is it critical for my business?',
+        name: 'What is the role of a UX designer in product development?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: "UX design focuses on the overall experience and satisfaction a user has while interacting with your digital product. It ensures your website or application is logical, easy to navigate, and efficiently solves the user's problem. Good UX is critical because it reduces friction, minimizes bounce rates, and directly boosts customer retention and conversions.",
+          text: 'A UX designer focuses on the entire journey a user takes when interacting with a digital product. Their goal is to make the experience intuitive, efficient, and enjoyable by researching user needs, structuring information architecture, designing user flows, and conducting usability testing.',
         },
       },
       {
         '@type': 'Question',
-        name: 'What is your process for creating a custom UX design?',
+        name: 'How does investing in UX design increase business revenue?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Our UX design process is deeply analytical and user-centric. We start with comprehensive user research and requirement analysis, followed by creating user personas and journey maps. We then develop wireframes and interactive prototypes, allowing us to map out the perfect structural flow before any visual UI design or coding begins.',
+          text: 'Strategic UX design directly drives ROI by eliminating friction points in conversion funnels. By making navigation intuitive and checkout processes simple, businesses reduce drop-offs, lower customer support overhead, and dramatically increase user retention and lifetime value.',
         },
       },
       {
         '@type': 'Question',
-        name: 'How does UX design differ from UI design?',
+        name: 'What is the difference between a UX audit and full UX redesign?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'While UI (User Interface) focuses on the visual aesthetics like colors, buttons, and typography, UX (User Experience) is entirely about the underlying structural logic and functionality. UX ensures the platform is intuitive and easy to navigate, while UI ensures it looks premium. We expertly integrate both to deliver a flawless digital product.',
+          text: 'A UX audit analyzes an existing product against industry heuristics, analytics data, and user feedback to identify specific usability bottlenecks and quick wins. A full UX redesign reimagines the entire user journey, information architecture, and core workflows from the ground up.',
         },
       },
       {
         '@type': 'Question',
-        name: 'Can you improve the user experience (UX) of our existing website or app?',
+        name: 'How do you conduct usability testing for our product?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Absolutely. If your current platform suffers from high drop-off rates, low sales, or poor user feedback, we can perform an in-depth UX audit. We identify navigation bottlenecks and usability issues, and then restructure the user journey and wireframes to drastically improve overall performance and user engagement.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Do you conduct usability testing during the UX design phase?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, usability testing is a core component of our UX strategy. Before finalizing any structure, we test interactive prototypes to gather real data on how users naturally navigate the platform. This allows us to identify and eliminate friction points early on, ensuring the final product is highly intuitive from day one.',
+          text: 'We test clickable prototypes or live applications with real users matching your target audience demographic. We give them realistic tasks to complete, record their interactions and think-aloud thoughts, and analyze completion rates to identify areas for refinement.',
         },
       },
     ],
@@ -317,6 +463,10 @@ const UXDesignServicesPage = () => {
       />
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(uxServiceSchema) }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <DigitalHero />
@@ -325,12 +475,13 @@ const UXDesignServicesPage = () => {
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
+      <SeoContentSection />
       <ContactSection />
       <FAQSection
         eyebrow="FAQS"
         titleLine1="FREQUENTLY ASKED"
         titleHighlight="QUESTIONS"
-        subtitle="Explore answers to essential questions regarding our analytical UX research, wireframing, usability audits, and interactive prototyping."
+        subtitle="Explore answers to essential questions regarding user experience strategy, usability audits, information architecture, and user journey optimization."
         items={uxDesignFaqs}
       />
     </div>

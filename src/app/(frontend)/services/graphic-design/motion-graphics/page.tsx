@@ -6,7 +6,7 @@ import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
-// ==================== DigitalHero Component (Updated for Motion Graphics & Creative Visuals) ====================
+// ==================== Section 1: Hero Section ====================
 const DigitalHero = () => {
   return (
     <section className="dm-hero">
@@ -15,13 +15,12 @@ const DigitalHero = () => {
         style={{ backgroundImage: `url('/images/graphic.webp')` }}
       />
       <div className="dm-container dm-hero-content">
-        <div className="dm-hero-text-wrapper">
-          <h1 className="dm-hero-title">
-            MOTION GRAPHICS<br />& CREATIVE<br />VISUALS
+        <div className="dm-hero-text-wrapper" style={{ maxWidth: '900px' }}>
+          <h1 className="dm-hero-title" style={{ fontSize: 'clamp(28px, 4.5vw, 50px)', lineHeight: '1.2', textTransform: 'none' }}>
+            Dynamic Motion Graphics &amp; Creative Visuals That Bring Ideas to Life
           </h1>
-          <p className="dm-hero-subtitle">
-            Bring your ideas to life with dynamic motion graphics and visually engaging creatives that capture<br />
-            attention and elevate your brand.
+          <p className="dm-hero-subtitle" style={{ maxWidth: '750px', marginTop: '20px' }}>
+            At Gatecode Technologies Pvt. Ltd., we create captivating motion graphics, 2D explainer animations, animated social assets, and promotional video visuals. Our motion design services combine narrative pacing, kinetic typography, and fluid visual effects to elevate viewer retention and brand recognition.
           </p>
           <Link href="/contact" className="dm-cta-button">
             Get Free Consultation
@@ -32,32 +31,75 @@ const DigitalHero = () => {
   );
 };
 
-// ==================== DigitalAbout Component (Updated for Motion Graphics & Creative Visuals) ====================
+// ==================== Section 2: Introduction Section ====================
 const DigitalAbout = () => {
   return (
     <section className="dm-about-section">
       <div className="dm-container">
+        <p className="dm-about-text" style={{ marginBottom: '18px' }}>
+          Motion is one of the most powerful tools in digital visual communication. In fast-scrolling environments where static images are easily overlooked, purposeful animation catches the eye, clarifies complex technical workflows, and conveys brand personality within seconds.
+        </p>
+        <p className="dm-about-text" style={{ marginBottom: '18px' }}>
+          At Gatecode Technologies Pvt. Ltd., our motion graphic artists focus on clarity, pacing, and visual storytelling. Rather than creating movement for its own sake, we design motion graphics that support your commercial message — guiding viewer focus toward key product benefits, explainer points, or calls to action.
+        </p>
         <p className="dm-about-text">
-          At Gatecode Technologies Pvt. Ltd., we create high-impact motion graphics and creative visuals designed to communicate your message 
-          in a powerful and engaging way. Our approach combines creativity, storytelling, and modern design techniques to produce visually 
-          compelling content that enhances brand identity and audience engagement. From social media animations to promotional videos and 
-          visual storytelling, we deliver creative solutions that make your brand stand out.
+          From short-form animated social reels and logo stings to comprehensive product walkthroughs and corporate presentation motion design, we produce video assets optimized for all digital channels. We ensure seamless rendering across resolutions, delivering compelling visuals that keep your audience engaged.
         </p>
       </div>
     </section>
   );
 };
 
-// ==================== DigitalServices Component (Updated for Motion Graphics & Creative Visuals) ====================
+// ==================== Section 3: Our Motion Graphics Services ====================
 const services = [
-  { title: 'Social Media Motion Graphics', desc: 'Eye-catching animated posts, reels, and short videos designed to boost engagement on social platforms.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'Promotional & Marketing Videos', desc: 'Creative promotional videos that effectively showcase your products, services, and brand messages.', color: '#fbff06', text: '#000000' },
-  { title: 'Logo Animation', desc: 'Professional logo animations that add life and uniqueness to your brand identity.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'Explainer Videos', desc: 'Clear and engaging animated videos that simplify complex ideas and communicate your message effectively.', color: '#fbff06', text: '#000000' },
-  { title: 'UI Motion & Micro-Interactions', desc: 'Interactive motion elements that enhance user experience in websites and mobile applications.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'Video Editing & Post-Production', desc: 'High-quality video editing services including transitions, effects, and visual enhancements.', color: '#fbff06', text: '#000000' },
-  { title: 'Creative Ad Visuals', desc: 'Dynamic visual content designed for digital advertising and marketing campaigns.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'Storyboarding & Concept Development', desc: 'Structured planning and creative storytelling for impactful visual content.', color: '#fbff06', text: '#000000' },
+  {
+    title: '2D Explainer & Product Animations',
+    desc: 'We transform complex services and software workflows into clear, engaging animated video explainers that drive conversions.',
+    color: '#4e7c7e',
+    text: '#ffffff',
+  },
+  {
+    title: 'Animated Social Media & Reel Assets',
+    desc: 'We produce short-form kinetic animations and vertical motion templates tailored to stop scrolling on Instagram and TikTok.',
+    color: '#fbff06',
+    text: '#000000',
+  },
+  {
+    title: 'Logo Animation & Brand Stings',
+    desc: 'We design fluid, memorable animated logo stings and signature brand intros for corporate videos, webinars, and presentations.',
+    color: '#4e7c7e',
+    text: '#ffffff',
+  },
+  {
+    title: 'Kinetic Typography & Title Sequences',
+    desc: 'We craft rhythmic, expressive text animations that deliver core messaging clearly even when viewers watch with audio muted.',
+    color: '#fbff06',
+    text: '#000000',
+  },
+  {
+    title: 'UI/UX Micro-Interactions & App Demos',
+    desc: 'We showcase digital interfaces, mobile app features, and SaaS dashboards with smooth animated product walkthroughs.',
+    color: '#4e7c7e',
+    text: '#ffffff',
+  },
+  {
+    title: 'Promotional Video Ads & Banners',
+    desc: 'We build high-converting animated advertising creatives formatted for Meta Ads, YouTube bumper ads, and digital billboards.',
+    color: '#fbff06',
+    text: '#000000',
+  },
+  {
+    title: 'Presentation & Pitch Deck Graphics',
+    desc: 'We integrate subtle, professional motion elements into investor pitch decks and conference keynotes for enhanced engagement.',
+    color: '#4e7c7e',
+    text: '#ffffff',
+  },
+  {
+    title: 'Visual Effects & Media Compositing',
+    desc: 'We combine vector graphics, sound effects, typography, and live-action video footage into polished, cohesive visual stories.',
+    color: '#fbff06',
+    text: '#000000',
+  },
 ];
 
 const DigitalServices = () => {
@@ -84,7 +126,7 @@ const DigitalServices = () => {
   return (
     <section className="dm-services-section" ref={sectionRef}>
       <div className="dm-container">
-        <h2 className="dm-section-title">What We Offer</h2>
+        <h2 className="dm-section-title">Our Motion Graphics Services</h2>
         <div className="dm-services-grid">
           {services.map((service, index) => (
             <div
@@ -110,14 +152,14 @@ const DigitalServices = () => {
   );
 };
 
-// ==================== DigitalWhyChoose Component (Updated for Motion Graphics & Creative Visuals) ====================
+// ==================== Section 4: Why Choose Us / Key Benefits ====================
 const benefits = [
-  'Increased audience engagement',
-  'Strong visual storytelling',
-  'Improved brand visibility',
-  'High-quality creative content',
-  'Modern and trend-focused designs',
-  'Effective communication through visuals',
+  'Custom narrative storyboards crafted to communicate your core message effectively',
+  'Fluid, broadcast-grade animation using industry-standard motion design tools',
+  'Multi-platform aspect ratios optimized for vertical reels, widescreen, and square feeds',
+  'Clear sound design integration and audio-independent visual storytelling',
+  'Seamless brand alignment incorporating your typography, colors, and design guidelines',
+  'Reliable milestone-based delivery with structured feedback and revision checkpoints',
 ];
 
 const DigitalWhyChoose = () => {
@@ -125,18 +167,19 @@ const DigitalWhyChoose = () => {
     <section className="dm-why-choose-section">
       <div className="dm-container">
         <h2 className="dm-section-title dm-section-header-left">
-          Why Choose Our Motion Graphics Services
+          Why Choose Gatecode Technologies for Motion Graphics?
         </h2>
+        <p className="dm-about-text dm-about-text-left" style={{ marginBottom: '16px' }}>
+          Producing effective motion design requires a fine balance of creative storytelling, animation timing, and message clarity. We don’t just create flashy animations — we craft focused visual narratives that help viewers quickly understand your value proposition.
+        </p>
         <p className="dm-about-text dm-about-text-left">
-          We focus on creating visually engaging and strategically designed motion graphics that capture attention and deliver impactful brand 
-          communication. Our creative team combines innovation, storytelling, and modern tools to produce high-quality visuals that improve 
-          engagement, enhance brand identity, and drive results.
+          At Gatecode Technologies, our motion artists manage every step of production, from initial scriptwriting and storyboards to final sound mixing and rendering, ensuring a cohesive and polished result.
         </p>
 
         <div className="dm-why-choose-layout">
           <div className="dm-why-choose-content">
             <h3 className="dm-benefits-title">
-              Key Benefits
+              Key Benefits:
             </h3>
             <ul className="dm-benefits-list">
               {benefits.map((item, i) => (
@@ -148,7 +191,7 @@ const DigitalWhyChoose = () => {
           <div className="dm-why-choose-image">
             <Image
               src="/images/path.webp"
-              alt="Motion Graphics and Creative Visual Design Process - Gatecode Technologies"
+              alt="Motion Graphics and Creative Visuals Production Workflow - Gatecode Technologies"
               className="dm-path-illustration"
               width={500}
               height={400}
@@ -160,14 +203,32 @@ const DigitalWhyChoose = () => {
   );
 };
 
-// ==================== DigitalProcess Component (Updated for Motion Graphics & Creative Visuals) ====================
+// ==================== Section 5: Marketing Process ====================
 const processSteps = [
-  { title: 'Requirement & Concept Analysis', desc: 'Understanding your goals, audience, and creative vision.' },
-  { title: 'Storyboarding & Planning', desc: 'Developing visual concepts and animation flow.' },
-  { title: 'Design & Animation', desc: 'Creating engaging graphics and motion elements.' },
-  { title: 'Review & Feedback', desc: 'Refining visuals based on client input and improvements.' },
-  { title: 'Final Production', desc: 'Delivering high-quality motion graphics and videos.' },
-  { title: 'Ongoing Creative Support', desc: 'Providing updates and additional creative assets as needed.' },
+  {
+    title: '1. Script & Narrative Conception',
+    desc: 'We define the core objective, message points, timing parameters, and voiceover script for your animation.',
+  },
+  {
+    title: '2. Storyboarding & Styleframes',
+    desc: 'We develop frame-by-frame visual sketches and high-fidelity styleframes to lock in the visual direction upfront.',
+  },
+  {
+    title: '3. Asset Illustration & Prep',
+    desc: 'Our illustrators build custom vector characters, icons, and interface layouts prepped for animation rigging.',
+  },
+  {
+    title: '4. Motion Animation & Keyframing',
+    desc: 'We bring the visual assets to life with natural physics, kinetic typography, and fluid visual transitions.',
+  },
+  {
+    title: '5. Sound Design & Audio Mixing',
+    desc: 'We incorporate professional voiceovers, licensed background tracks, and custom sound effects for impact.',
+  },
+  {
+    title: '6. Multi-Format Final Rendering',
+    desc: 'We render the final animation in optimal formats (MP4, WebM, Lottie/JSON, GIF) suited for web and social feeds.',
+  },
 ];
 
 const DigitalProcess = () => {
@@ -194,7 +255,7 @@ const DigitalProcess = () => {
   return (
     <section className="dm-process-section" ref={sectionRef}>
       <div className="dm-container">
-        <h2 className="dm-section-title">Our Creative Process</h2>
+        <h2 className="dm-section-title">Our Motion Graphics Process</h2>
         <div className="dm-process-grid">
           {processSteps.map((item, index) => (
             <div key={index} className="dm-process-item">
@@ -210,15 +271,15 @@ const DigitalProcess = () => {
   );
 };
 
-// ==================== DigitalIndustries Component (Updated for Motion Graphics & Creative Visuals) ====================
+// ==================== Industries Section ====================
 const industries = [
   'E-Commerce & Retail',
-  'Digital Marketing & Advertising',
-  'Media & Entertainment',
-  'Education & E-Learning',
+  'Real Estate',
+  'Healthcare & Wellness',
+  'Education & Training',
+  'Restaurants & Hospitality',
   'Corporate Businesses',
-  'Startups & Agencies',
-  'Real Estate & Services',
+  'Startups & Enterprises',
 ];
 
 const DigitalIndustries = () => {
@@ -238,11 +299,11 @@ const DigitalIndustries = () => {
           </div>
 
           <div className="dm-image-grid">
-            <Image src="/images/1.webp" alt="E-Commerce Animated Product Motion Graphics - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
-            <Image src="/images/2.webp" alt="Digital Marketing Campaign Video Creatives - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
-            <Image src="/images/3.webp" alt="Media and Entertainment Animated Logo Visuals - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
-            <Image src="/images/4.webp" alt="Educational E-Learning Explainer Videos - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
-            <Image src="/images/5.webp" alt="Corporate Business Branding Motion Visuals - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
+            <Image src="/images/1.webp" alt="E-Commerce Product Motion Ads - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
+            <Image src="/images/2.webp" alt="Real Estate Property Video Walkthroughs - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
+            <Image src="/images/3.webp" alt="Healthcare Explainer Animations - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
+            <Image src="/images/4.webp" alt="Educational Course Animation Graphics - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
+            <Image src="/images/5.webp" alt="Corporate Business Presentation Motion - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
           </div>
         </div>
       </div>
@@ -250,23 +311,160 @@ const DigitalIndustries = () => {
   );
 };
 
+// ==================== Section 6: Image Reference Section (SEO & Conversion Highlight) ====================
+const SeoContentSection = () => {
+  return (
+    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
+      <div className="dm-container">
+        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
+          
+          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
+            Professional Motion Graphics Agency for Engaging Visual Storytelling
+          </h2>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
+            Welcome to Gatecode Technologies Pvt. Ltd., your creative studio for high-impact motion graphics and dynamic visual content. We help forward-thinking companies clarify complex messages, captivate digital viewers, and boost engagement across marketing channels through purposeful animation.
+          </p>
+
+          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
+            Engaging Audiences with Fluid Animation &amp; Clear Communication
+          </h3>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            Animation combines visual art, sound, and timing into a single cohesive medium. Our motion design team focuses on practical business communication — whether showcasing how your mobile app functions, highlighting key product specifications, or driving paid ad conversions.
+          </p>
+
+          {/* Key Feature Highlight Cards */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>2D Explainer Animations</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Simplify complex software workflows and corporate services into engaging, easily understood animated video narratives.
+              </p>
+            </div>
+            
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Logo Stings &amp; Intros</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Reinforce brand identity across webinars, YouTube channels, and sales videos with fluid, polished logo reveal animations.
+              </p>
+            </div>
+
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Social Media Motion Ads</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Drive higher click-through rates across Instagram, TikTok, and Meta Ads with short, high-energy animated video creatives.
+              </p>
+            </div>
+
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>UI Demos &amp; Micro-Animations</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Bring software user experiences to life with smooth interface mockups and lightweight Lottie animations for websites.
+              </p>
+            </div>
+          </div>
+
+          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
+            Why Partner with Gatecode Technologies for Motion Graphics?
+          </h3>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            Quality animation delivers measurable viewer retention. Partnering with our motion studio gives your business:
+          </p>
+
+          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
+            <li style={{ marginBottom: '10px' }}><strong>Complete Production Pipeline:</strong> In-house scriptwriting, custom illustration, animation keyframing, and sound design.</li>
+            <li style={{ marginBottom: '10px' }}><strong>Platform-Optimized Deliverables:</strong> Formats tailored for web performance, video feeds, presentation decks, and advertising networks.</li>
+            <li style={{ marginBottom: '10px' }}><strong>Transparent Collaboration:</strong> Structured storyboard reviews and milestone approvals to ensure seamless execution.</li>
+          </ul>
+
+        </div>
+      </div>
+    </section>
+  );
+};
+
 // ==================== Main Page Component ====================
-const MotionGraphicsCreativeVisualsPage = () => {
+const MotionGraphicsPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/graphic-design' },
+      { '@type': 'ListItem', position: 3, name: 'Motion Graphics', item: 'https://gatecode.in/services/graphic-design/motion-graphics' },
+    ],
+  };
+
+  const motionServiceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Motion Graphics & Creative Visuals',
+    name: 'Motion Graphics Agency',
+    provider: {
+      '@type': 'Organization',
+      name: 'Gatecode Technologies Pvt. Ltd.',
+      url: 'https://gatecode.in',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'India',
+    },
+    description: 'Professional motion graphics agency offering 2D explainer video animations, logo stings, kinetic typography, animated social media ads, and product video demos.',
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What types of motion graphics do you produce?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'We create 2D explainer animations, animated social media ads, logo reveals, kinetic typography, UI/UX software demos, and corporate video graphics.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you provide voiceovers and sound design for animations?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, we provide full audio mixing including licensed background music, sound effects, and professional voiceover coordination.',
+        },
+      },
+    ],
+  };
+
   return (
     <div className="digital-marketing-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(motionServiceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
+      <SeoContentSection />
       <ContactSection />
     </div>
   );
 };
 
-export default MotionGraphicsCreativeVisualsPage;
+export default MotionGraphicsPage;
