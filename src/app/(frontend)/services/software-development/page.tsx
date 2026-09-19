@@ -21,8 +21,7 @@ const DigitalHero = () => {
             SOFTWARE<br />DEVELOPMENT<br />SERVICES
           </h1>
           <p className="dm-hero-subtitle">
-            We build secure, scalable, and performance-driven software solutions that help businesses streamline<br />
-            operations, improve efficiency, and accelerate growth.
+            We architect secure, scalable, and custom software systems designed to automate complex workflows, connect business applications, and fuel sustainable operational growth.
           </p>
           <Link href="/contact" className="dm-cta-button">
             Get Free Consultation
@@ -39,10 +38,10 @@ const DigitalAbout = () => {
     <section className="dm-about-section">
       <div className="dm-container">
         <p className="dm-about-text">
-          At Gatecode Technologies Pvt. Ltd., we develop software around the way your business actually works. We first understand your processes, challenges, users, and goals before deciding how the solution should be built. This helps us avoid unnecessary features and focus on functionality that is useful for your team and customers.
+          At Gatecode Technologies Pvt. Ltd., we engineer software solutions around the way your organization actually functions. Before writing code or selecting frameworks, our technical consultants thoroughly analyze your operational bottlenecks, user roles, data flows, and commercial goals. This disciplined discovery process eliminates unnecessary feature bloat, delivering purposeful software that empowers your workforce and satisfies your users.
         </p>
         <p className="dm-about-text" style={{ marginTop: '16px' }}>
-          From custom business software and web applications to enterprise solutions and automation systems, we build solutions that can simplify routine tasks, organize information, and improve day-to-day operations. Our focus is on creating software that is reliable, easy to use, secure, and flexible enough to adapt as your business grows.
+          From custom enterprise software, workflow automation portals, and cloud-native systems to integrated CRM and ERP architectures, we build secure, maintainable software engineered for real-world resilience. Our development practices prioritize modular microservices, clean APIs, role-based security, and future-proof flexibility, ensuring your digital infrastructure scales seamlessly alongside your business expansion.
         </p>
       </div>
     </section>
@@ -51,14 +50,54 @@ const DigitalAbout = () => {
 
 // ==================== DigitalServices Component (Updated for Software Development Services) ====================
 const services = [
-  { title: 'Custom Software Development', desc: 'Tailor-made software solutions designed according to your business goals and operational requirements.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'Cloud-Based Software Solutions', desc: 'Secure and scalable cloud applications that support flexibility and remote accessibility.', color: '#fbff06', text: '#000000' },
-  { title: 'Enterprise Software Solutions', desc: 'Scalable enterprise applications that improve workflow management and organizational productivity.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'CRM & ERP Development', desc: 'Integrated CRM and ERP systems designed to streamline customer management and business operations.', color: '#fbff06', text: '#000000' },
-  { title: 'Business Automation Software', desc: 'Smart automation solutions that reduce manual work and improve operational efficiency.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'Web & Desktop Application Development', desc: 'High-performance web and desktop applications built for smooth and efficient business operations.', color: '#fbff06', text: '#000000' },
-  { title: 'API & System Integration', desc: 'Seamless integration of third-party tools, APIs, and business systems for better connectivity.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'Software Maintenance & Support', desc: 'Continuous updates, security improvements, bug fixing, and technical support for reliable software performance.', color: '#fbff06', text: '#000000' },
+  { 
+    title: 'Custom Software Development', 
+    desc: 'Bespoke software applications engineered from the ground up to match your exact business logic and operational processes.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'Cloud-Based Software Solutions', 
+    desc: 'Scalable, multi-tenant cloud applications built with high availability, elastic hosting, and secure global accessibility.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
+  { 
+    title: 'Enterprise Software Solutions', 
+    desc: 'Robust software platforms designed to orchestrate departmental workflows, automate reporting, and boost enterprise productivity.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'CRM & ERP Development', 
+    desc: 'Custom CRM and ERP systems engineered to unify customer relationships, finance, inventory, and supply chain tracking.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
+  { 
+    title: 'Business Automation Software', 
+    desc: 'Intelligent automation tools that eliminate manual repetitive tasks, minimize operational errors, and accelerate throughput.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'Web & Desktop Application Development', 
+    desc: 'Cross-platform web portals and native desktop solutions delivering responsive interfaces and high-performance computing.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
+  { 
+    title: 'API & System Integration', 
+    desc: 'Secure middleware and API connectors that seamlessly bridge legacy software, external SaaS tools, and payment platforms.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'Software Maintenance & Support', 
+    desc: 'Proactive version updates, code refactoring, database optimization, and round-the-clock technical support to ensure peak uptime.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
 ];
 
 const DigitalServices = () => {
@@ -113,12 +152,12 @@ const DigitalServices = () => {
 
 // ==================== DigitalWhyChoose Component (Updated for Software Development Services) ====================
 const benefits = [
-  'Software Built Around Your Needs',
-  'Simpler Business Workflows',
-  'Scalable as Your Business Grows',
-  'Easy-to-Use Interfaces',
-  'Secure & Reliable Functionality',
-  'Ongoing Maintenance & Support',
+  'Custom-engineered software built around your exact operational workflows.',
+  'Seamless enterprise integration with existing CRMs, ERPs, and APIs.',
+  'Scalable cloud architectures engineered to handle expanding user volumes.',
+  'Intuitive UI/UX design ensuring effortless team adoption and productivity.',
+  'Enterprise-grade security with data encryption and vulnerability audits.',
+  'Proactive post-launch support and lifecycle maintenance SLAs.',
 ];
 
 const DigitalWhyChoose = () => {
@@ -129,10 +168,10 @@ const DigitalWhyChoose = () => {
           Why Choose Our Software Development Services?
         </h2>
         <p className="dm-about-text dm-about-text-left">
-          Choosing the right software development partner is about more than just writing code. You need a solution that fits your business processes, is easy for your team to use, and can adapt as your requirements change.
+          Off-the-shelf software rarely fits your operational reality. It frequently imposes rigid workflows, exposes your business to recurring per-seat subscription costs, and struggles to integrate with legacy tools. When your operations require distinct logic or data segregation, commercial packages quickly create costly friction.
         </p>
         <p className="dm-about-text dm-about-text-left" style={{ marginTop: '16px' }}>
-          At Gatecode Technologies, we first understand the problem you're trying to solve and then plan the software around your actual requirements. Our approach focuses on reliable functionality, security, performance, usability, and long-term maintainability rather than adding features that you don't really need.
+          At Gatecode Technologies, we take an engineering-first approach. We build software assets that your organization owns entirely. By focusing on scalable database design, clean documentation, robust security protocols, and human-centric interfaces, we ensure your software simplifies daily tasks, delivers actionable visibility, and supports your long-term growth trajectory.
         </p>
 
         <div className="dm-why-choose-layout">
@@ -164,12 +203,30 @@ const DigitalWhyChoose = () => {
 
 // ==================== DigitalProcess Component (Updated for Software Development Services) ====================
 const processSteps = [
-  { title: 'Requirement Analysis', desc: 'Understanding your business goals, workflows, and software requirements.' },
-  { title: 'Planning & Strategy', desc: 'Creating a structured development roadmap and selecting the right technologies.' },
-  { title: 'UI/UX Design', desc: 'Designing intuitive and user-friendly interfaces for better user experience.' },
-  { title: 'Development & Integration', desc: 'Building secure and scalable software solutions with seamless integrations.' },
-  { title: 'Testing & Quality Assurance', desc: 'Ensuring performance, functionality, security, and reliability.' },
-  { title: 'Deployment & Support', desc: 'Launching the software and providing ongoing maintenance and support.' },
+  { 
+    title: 'Discovery & Workflow Analysis', 
+    desc: 'We analyze your business operations, data dependencies, compliance standards, and user personas to construct a clear system roadmap.' 
+  },
+  { 
+    title: 'Architecture & Database Design', 
+    desc: 'We establish modular software blueprints, database entity relationships, API specifications, and cloud hosting infrastructure.' 
+  },
+  { 
+    title: 'UI/UX Prototyping & Usability Review', 
+    desc: 'We create intuitive wireframes and interactive prototypes to ensure your team can complete tasks quickly and without confusion.' 
+  },
+  { 
+    title: 'Agile Engineering & Integration', 
+    desc: 'Our engineers develop modular frontend and backend code across bi-weekly sprints, continuously integrating databases and third-party APIs.' 
+  },
+  { 
+    title: 'Rigorous Testing & Security Audits', 
+    desc: 'We conduct functional testing, load balancing evaluations, automated unit testing, and vulnerability assessments to guarantee stability.' 
+  },
+  { 
+    title: 'Deployment & SLA-Backed Support', 
+    desc: 'We deploy the software into production, conduct comprehensive team onboarding, and deliver ongoing maintenance under SLA agreements.' 
+  },
 ];
 
 const DigitalProcess = () => {

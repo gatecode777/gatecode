@@ -6,7 +6,7 @@ import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
-// ==================== DigitalHero Component (Updated for Data Cleansing & Validation Services) ====================
+// ==================== DigitalHero Component ====================
 const DigitalHero = () => {
   return (
     <section className="dm-hero">
@@ -20,7 +20,7 @@ const DigitalHero = () => {
             DATA CLEANSING<br />& VALIDATION<br />SERVICES
           </h1>
           <p className="dm-hero-subtitle">
-            Ensure accurate, reliable, and high-quality data with professional cleaning and validation solutions.
+            Restore database integrity, eliminate duplicate records, and maximize operational efficiency with professional data cleansing and validation solutions.
           </p>
           <Link href="/contact" className="dm-cta-button">
             Get Free Consultation
@@ -31,32 +31,69 @@ const DigitalHero = () => {
   );
 };
 
-// ==================== DigitalAbout Component (Updated for Data Cleansing & Validation Services) ====================
+// ==================== DigitalAbout Component ====================
 const DigitalAbout = () => {
   return (
     <section className="dm-about-section">
       <div className="dm-container">
         <p className="dm-about-text">
-          At Gatecode Technologies Pvt. Ltd., we provide expert data cleansing and validation services to help businesses maintain accurate 
-          and reliable data. Poor data quality can lead to errors, inefficiencies, and incorrect decisions. Our solutions focus on identifying 
-          inconsistencies, removing duplicates, correcting errors, and validating data to ensure it is clean, structured, and ready for use. 
-          We help you improve data integrity and maximize the value of your business information.
+          At Gatecode Technologies Pvt. Ltd., we provide comprehensive data cleansing, scrubbing, and validation services designed to eliminate database decay and restore total confidence in your corporate information. Over time, customer records, vendor registries, and product databases accumulate duplicate entries, invalid email addresses, deprecated phone numbers, and inconsistent naming conventions. These data flaws lead to wasted marketing budgets, missed sales opportunities, and inaccurate analytics. Our data quality specialists utilize advanced fuzzy-matching algorithms, regex syntax validation, third-party data enrichment, and address normalization standards to purge redundant records and rectify data anomalies. By restoring pristine data health across your CRM and enterprise systems, we ensure higher deliverability, improved customer outreach, and reliable executive reporting.
         </p>
       </div>
     </section>
   );
 };
 
-// ==================== DigitalServices Component (Updated for Data Cleansing & Validation Services) ====================
+// ==================== DigitalServices Component ====================
 const services = [
-  { title: 'Data Cleaning & Error Correction', desc: 'Identifying and fixing inaccuracies, missing values, and inconsistencies in your data.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'Duplicate Data Removal', desc: 'Eliminating duplicate records to maintain a clean and organized database.', color: '#fbff06', text: '#000000' },
-  { title: 'Data Standardization', desc: 'Formatting data into consistent structures for better usability and reporting.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'Data Verification & Quality Management', desc: 'Ensuring data accuracy through validation rules and cross-checking processes.', color: '#fbff06', text: '#000000' },
-  { title: 'Data Enrichment', desc: 'Enhancing data quality by adding missing or relevant information where needed.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'Database Optimization', desc: 'Improving database structure for better performance and accessibility.', color: '#fbff06', text: '#000000' },
-  { title: 'CRM Data Cleansing', desc: 'Cleaning and validating customer data in CRM systems for better relationship management.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'Ongoing Data Quality Management', desc: 'Continuous monitoring and maintenance to keep your data accurate and up-to-date.', color: '#fbff06', text: '#000000' },
+  { 
+    title: 'Automated Deduplication & Merging', 
+    desc: 'Deploying advanced fuzzy-logic algorithms to identify and merge duplicate records while preserving complete historical transaction trails.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'Syntax & Format Standardization', 
+    desc: 'Normalizing phone numbers, dates, postal codes, and naming conventions to ensure uniform data formatting across all systems.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
+  { 
+    title: 'Address & Geographic Verification', 
+    desc: 'Validating street addresses against postal standards, correcting spelling errors, and appending standardized geographic coordinates.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'Email & Contact Validation', 
+    desc: 'Testing email syntax, domain MX records, and phone availability to eliminate hard bounces and improve marketing campaign deliverability.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
+  { 
+    title: 'Data Enrichment & Appending', 
+    desc: 'Filling in missing contact attributes, job titles, corporate domains, and industry classifications using verified third-party datasets.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'CRM Database Scrubbing', 
+    desc: 'Auditing and deep-cleaning Salesforce, HubSpot, and Zoho databases to restore pipeline hygiene and streamline sales rep workflows.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
+  { 
+    title: 'Relational Integrity & Anomaly Checks', 
+    desc: 'Detecting orphaned records, mismatched foreign keys, impossible numerical values, and illogical date sequences across database tables.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'Continuous Quality Monitoring', 
+    desc: 'Setting up recurring automated validation rules and scheduled cleansing routines to prevent new data decay from entering systems.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
 ];
 
 const DigitalServices = () => {
@@ -109,14 +146,14 @@ const DigitalServices = () => {
   );
 };
 
-// ==================== DigitalWhyChoose Component (Updated for Data Cleansing & Validation Services) ====================
+// ==================== DigitalWhyChoose Component ====================
 const benefits = [
-  'Improved data accuracy and reliability',
-  'Removal of duplicates and inconsistencies',
-  'Better decision-making with clean data',
-  'Enhanced database performance',
-  'Increased operational efficiency',
-  'Secure and structured data management',
+  'Elimination of duplicate records and redundant communication costs',
+  'Measurable increase in email deliverability and campaign open rates',
+  'Enhanced sales team productivity with verified contact phone numbers',
+  'Consistent data formatting across all customer touchpoints',
+  'Flawless analytics derived from clean, error-free databases',
+  'Strict data confidentiality backed by non-disclosure agreements',
 ];
 
 const DigitalWhyChoose = () => {
@@ -127,8 +164,7 @@ const DigitalWhyChoose = () => {
           Why Choose Our Data Cleansing & Validation Services
         </h2>
         <p className="dm-about-text dm-about-text-left">
-          We focus on delivering high-quality, accurate, and reliable data solutions that help businesses operate efficiently and make better 
-          decisions. Our team uses structured processes and advanced techniques to ensure your data is consistent, error-free, and ready for analysis.
+          We combine cutting-edge algorithmic data scrubbing with human analytical review to eliminate data decay without accidental data loss. Our structured cleansing protocols ensure that your customer and corporate records are enriched, standardized, and immediately ready to support high-converting business operations.
         </p>
 
         <div className="dm-why-choose-layout">
@@ -146,7 +182,7 @@ const DigitalWhyChoose = () => {
           <div className="dm-why-choose-image">
             <Image
               src="/images/path.webp"
-              alt="Database Cleansing and Data Integrity Audit Flow - Gatecode Technologies"
+              alt="Data Cleansing and Validation Quality Lifecycle - Gatecode Technologies"
               className="dm-path-illustration"
               width={500}
               height={400}
@@ -158,14 +194,14 @@ const DigitalWhyChoose = () => {
   );
 };
 
-// ==================== DigitalProcess Component (Updated for Data Cleansing & Validation Services) ====================
+// ==================== DigitalProcess Component ====================
 const processSteps = [
-  { title: 'Data Assessment', desc: 'Understand the current state and quality of your data.' },
-  { title: 'Data Cleaning', desc: 'Removing errors, duplicates, and inconsistencies.' },
-  { title: 'Validation & Verification', desc: 'Ensuring data accuracy through structured validation processes.' },
-  { title: 'Standardization', desc: 'Organizing data into consistent formats.' },
-  { title: 'Quality Check', desc: 'Performing final checks to ensure completeness and reliability.' },
-  { title: 'Continuous Maintenance', desc: 'Providing ongoing data quality monitoring and updates.' },
+  { title: 'Data Health Audit & Gap Analysis', desc: 'Profile existing databases to quantify error rates, duplicate clusters, and missing fields.' },
+  { title: 'Cleansing Rules & Merge Logic Definition', desc: 'Define field standardization rules, address formats, and primary record retention criteria.' },
+  { title: 'Algorithmic Deduplication & Merging', desc: 'Execute fuzzy matching algorithms to isolate and merge duplicate contact and account rows.' },
+  { title: 'Verification, Validation & Enrichment', desc: 'Validate syntax, ping domain servers for email validity, and append missing attributes.' },
+  { title: 'Quality Assurance & Sanity Testing', desc: 'Conduct statistical sampling audits to ensure zero legitimate records were corrupted or lost.' },
+  { title: 'Database Re-Integration & Governance', desc: 'Re-import cleansed datasets into live CRM/ERP environments and deploy ongoing validation rules.' },
 ];
 
 const DigitalProcess = () => {
@@ -208,14 +244,14 @@ const DigitalProcess = () => {
   );
 };
 
-// ==================== DigitalIndustries Component (Updated for Data Cleansing & Validation Services) ====================
+// ==================== DigitalIndustries Component ====================
 const industries = [
+  'Healthcare & Medical',
   'E-Commerce & Retail',
-  'Healthcare & Wellness',
+  'Banking & Finance',
   'Education & Training',
-  'Finance & Accounting',
-  'Real Estate & Construction',
   'Corporate Businesses',
+  'Logistics & Operations',
   'Startups & Enterprises',
 ];
 
@@ -236,12 +272,78 @@ const DigitalIndustries = () => {
           </div>
 
           <div className="dm-image-grid">
-            <Image src="/images/1.webp" alt="E-Commerce Customer Directory Data Cleansing - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
-            <Image src="/images/2.webp" alt="Healthcare Medical Records Verification - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
-            <Image src="/images/3.webp" alt="Education Center Student Enrollment Validation - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
-            <Image src="/images/4.webp" alt="Finance and Accounting Transaction Record Cleansing - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
-            <Image src="/images/5.webp" alt="Real Estate Listing Database Standardization - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
+            <Image src="/images/1.webp" alt="Corporate CRM Data Cleansing - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
+            <Image src="/images/2.webp" alt="Healthcare Patient Record Validation - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
+            <Image src="/images/3.webp" alt="E-Commerce Customer Address Verification - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
+            <Image src="/images/4.webp" alt="Financial Ledger Data Deduplication - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
+            <Image src="/images/5.webp" alt="Education Student Database Standardization - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
           </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// ==================== SeoContentSection Component ====================
+const SeoContentSection = () => {
+  return (
+    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
+      <div className="dm-container">
+        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
+          
+          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
+            Professional Data Cleansing and Validation Services
+          </h2>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
+            Operating on decayed datasets wastes substantial marketing spend, inflates email bounce rates, and frustrates sales teams with disconnected phone numbers and duplicate leads. At Gatecode Technologies, our data cleansing specialists use multi-stage scrubbing techniques to purge inaccuracies, standardize inconsistent fields, and validate critical customer records.
+          </p>
+
+          {/* Key Feature Highlight Cards */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px', margin: '30px 0' }}>
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Intelligent Deduplication</h3>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Fuzzy matching algorithms that detect subtle name spelling variations, identical phone numbers, and shared addresses to merge duplicate accounts cleanly.
+              </p>
+            </div>
+            
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Syntax & Address Standardization</h3>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Formatting postal addresses, international phone dialing codes, dates, and currency values into globally consistent relational data models.
+              </p>
+            </div>
+
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Contact Verification</h3>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Real-time validation of email deliverability, domain MX records, and telephone connectivity to safeguard sender reputation across campaigns.
+              </p>
+            </div>
+
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Data Enrichment & Filling</h3>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Appending missing corporate attributes, industry SIC codes, employee counts, and decision-maker roles to enhance lead scoring efficacy.
+              </p>
+            </div>
+          </div>
+
+          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
+            Why Clean Data Directly Multiplies Commercial Revenue
+          </h3>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            A pristine database reduces operational friction, improves customer outreach efficacy, and prevents costly communication errors. Choosing Gatecode Technologies gives you:
+          </p>
+
+          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
+            <li style={{ marginBottom: '10px' }}><strong>Higher Campaign ROI:</strong> Eliminate wasted postage, SMS charges, and invalid email marketing sends.</li>
+            <li style={{ marginBottom: '10px' }}><strong>Productive Sales Reps:</strong> Direct sales outreach exclusively to verified, accurate phone numbers and active emails.</li>
+            <li style={{ marginBottom: '10px' }}><strong>Trustworthy Executive Reports:</strong> Financial and operational reporting free from duplicate transaction distortions.</li>
+          </ul>
+
         </div>
       </div>
     </section>
@@ -262,6 +364,7 @@ const DataCleansingValidationServicesPage = () => {
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
+      <SeoContentSection />
       <ContactSection />
     </div>
   );

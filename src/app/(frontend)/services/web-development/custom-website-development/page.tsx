@@ -21,8 +21,7 @@ const DigitalHero = () => {
             CUSTOM<br />WEBSITE<br />DEVELOPMENT
           </h1>
           <p className="dm-hero-subtitle">
-            We design and develop tailored websites that align perfectly with your business goals, 
-            deliver seamless user experiences, and drive real results.
+            We architect bespoke, high-performance websites engineered around your exact business logic, delivering lightning-fast load speeds, intuitive user experiences, and scalable digital foundations.
           </p>
           <Link href="/contact" className="dm-cta-button">
             Get Free Consultation
@@ -39,10 +38,10 @@ const DigitalAbout = () => {
     <section className="dm-about-section">
       <div className="dm-container">
         <p className="dm-about-text">
-          At Gatecode Technologies Pvt. Ltd., we build custom websites based on how your business actually works. We first understand your goals, audience, and required features, then plan the website around those needs instead of forcing your business into a ready-made template.
+          At Gatecode Technologies Pvt. Ltd., our custom website development services focus on building digital solutions that mirror your exact operational requirements and brand identity. Rather than forcing your business into rigid off-the-shelf templates or generic page builders, we engineer tailored architectures from the ground up, ensuring every feature serves a distinct commercial purpose.
         </p>
         <p className="dm-about-text" style={{ marginTop: '16px' }}>
-          Our focus goes beyond visual design. We work on responsive performance, usability, scalability, and a clean website structure so your site is easy for customers to use and practical for your team to manage. Whether you need a business website, e-commerce platform, or custom web application, we aim to build a solution that can support your business as it grows.
+          Our engineering approach unites intuitive UI/UX design with robust full-stack development, delivering fast load times, seamless responsiveness across devices, and airtight security. Whether you are creating a modern corporate platform, a customer portal, or an intricate web application, we build scalable digital assets designed to perform reliably and adapt to your future growth.
         </p>
       </div>
     </section>
@@ -51,14 +50,54 @@ const DigitalAbout = () => {
 
 // ==================== DigitalServices Component (Updated for Custom Website Development) ====================
 const services = [
-  { title: 'Fully Customized Website Solutions', desc: 'We create websites tailored to your unique business requirements, ensuring a personalized digital presence.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'Responsive & Mobile-Friendly Design', desc: 'Our websites are optimized for all devices, providing seamless experiences across desktops, tablets, and mobiles.', color: '#fbff06', text: '#000000' },
-  { title: 'UI/UX Focused Development', desc: 'User-centric design approach that enhances usability, engagement, and customer satisfaction.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'Scalable & High-Performance Development', desc: 'Websites built with modern technologies to ensure speed, scalability, and long-term reliability.', color: '#fbff06', text: '#000000' },
-  { title: 'SEO-Friendly Structure', desc: 'Optimized website architecture that improves search engine visibility and rankings.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'Secure Development Practices', desc: 'Advanced security measures to protect your website and user data from potential threats.', color: '#fbff06', text: '#000000' },
-  { title: 'API & Third-Party Integration', desc: 'Seamless integration with payment gateways, CRM systems, and other business tools.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'Ongoing Maintenance & Support', desc: 'Continuous updates, performance monitoring, and technical support for smooth website operation.', color: '#fbff06', text: '#000000' },
+  { 
+    title: 'Bespoke UI/UX Design & Prototyping', 
+    desc: 'Unique digital layouts and interactive prototypes crafted to reflect your brand identity, engage visitors, and guide them smoothly toward conversion.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'Mobile-First Responsive Engineering', 
+    desc: 'Fluid responsive layouts optimized for all viewport dimensions, ensuring intuitive navigation and seamless usability across all modern mobile and desktop devices.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
+  { 
+    title: 'Modern Frontend Architecture', 
+    desc: 'Fast, accessible interfaces built with cutting-edge frameworks like React and Next.js, ensuring instantaneous page loads and flawless interactions.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'Robust Backend & Database Systems', 
+    desc: 'Secure server-side architectures, optimized SQL/NoSQL databases, and efficient business logic built to handle complex enterprise workflows.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
+  { 
+    title: 'Technical SEO & Core Web Vitals', 
+    desc: 'Clean semantic code, structured schema markup, and asset optimization engineered to achieve peak scores on Google Core Web Vitals.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'Enterprise Security & Data Protection', 
+    desc: 'Robust security configurations including automated SSL, cross-site scripting prevention, secure authentication, and active vulnerability safeguards.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
+  { 
+    title: 'Custom API & System Integration', 
+    desc: 'Seamless data connectivity linking your custom web platform with CRMs, ERP solutions, payment gateways, and third-party SaaS tools.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'Lifecycle Maintenance & Support', 
+    desc: 'Dedicated post-launch monitoring, security patches, regular version updates, and continuous performance optimization.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
 ];
 
 const DigitalServices = () => {
@@ -113,12 +152,12 @@ const DigitalServices = () => {
 
 // ==================== DigitalWhyChoose Component (Updated for Custom Website Development) ====================
 const benefits = [
-  'Design That Represents Your Brand',
-  'Better Speed & Performance',
-  'Flexible & Ready to Grow',
-  'Security & Reliable Functionality',
-  'SEO-Friendly Structure',
-  'Better User Experience',
+  '100% custom codebase free from redundant plugins and template bloat.',
+  'Tailored UI/UX journeys designed to maximize user conversion rates.',
+  'Sub-second page load times optimized for Google Core Web Vitals.',
+  'Granular security controls with encrypted data transmissions.',
+  'Flexible modular architecture ready to scale with business growth.',
+  'Seamless integration with existing CRM, ERP, and payment platforms.',
 ];
 
 const DigitalWhyChoose = () => {
@@ -129,10 +168,10 @@ const DigitalWhyChoose = () => {
           Why Choose Custom Website Development?
         </h2>
         <p className="dm-about-text dm-about-text-left">
-          A custom website gives you more control over how your business is presented and how customers interact with it. Instead of adjusting your business to fit a pre-built template, you can build the website around your actual goals, features, and customer needs.
+          Generic templates and commercial theme packages often introduce unnecessary scripts, restrictive layouts, and severe performance bottlenecks that impede search visibility and frustrate visitors. When your business needs unique functionality or distinctive brand presentation, pre-packaged solutions quickly become a liability.
         </p>
         <p className="dm-about-text dm-about-text-left" style={{ marginTop: '16px' }}>
-          At Gatecode Technologies, we focus on creating websites that are practical, easy to use, and prepared for future changes. From the website structure and user experience to performance and integrations, each part can be planned according to your business requirements.
+          At Gatecode Technologies, we deliver custom web development that offers total technical freedom. Every module, interface component, and database interaction is engineered specifically for your operational ecosystem, delivering optimal efficiency, superior security, and seamless scalability as your traffic and customer base expand.
         </p>
 
         <div className="dm-why-choose-layout">
@@ -164,12 +203,30 @@ const DigitalWhyChoose = () => {
 
 // ==================== DigitalProcess Component (Updated for Custom Website Development) ====================
 const processSteps = [
-  { title: 'Requirement Analysis', desc: 'Understanding your business goals, target audience, and project requirements.' },
-  { title: 'Planning & Strategy', desc: 'Creating a structured roadmap and selecting the right technologies.' },
-  { title: 'UI/UX Design', desc: 'Designing visually engaging and user-friendly interfaces.' },
-  { title: 'Development', desc: 'Building custom features and functionalities with high performance.' },
-  { title: 'Testing & Quality Assurance', desc: 'Ensuring website functionality, speed, and security.' },
-  { title: 'Deployment & Support', desc: 'Launching the website and providing ongoing maintenance.' },
+  { 
+    title: 'Strategic Discovery & Scoping', 
+    desc: 'We evaluate your brand objectives, user personas, operational workflows, and functional specifications to outline a detailed technical roadmap.' 
+  },
+  { 
+    title: 'Information Architecture & Wireframing', 
+    desc: 'We map site hierarchies, user interaction flows, and structural wireframes to ensure logical navigation and effortless content discovery.' 
+  },
+  { 
+    title: 'Interactive UI Prototyping', 
+    desc: 'We design high-fidelity visual interfaces reflecting your brand aesthetics, typography, and responsive design guidelines.' 
+  },
+  { 
+    title: 'Agile Full-Stack Development', 
+    desc: 'Our engineering team builds modular, clean frontend and backend code, implementing robust database structures and secure API connections.' 
+  },
+  { 
+    title: 'Comprehensive Quality Assurance', 
+    desc: 'We perform cross-browser compatibility testing, accessibility validation, security auditing, and speed benchmarks across all device viewports.' 
+  },
+  { 
+    title: 'Zero-Downtime Deployment & Handover', 
+    desc: 'We launch your custom website smoothly, configure caching, analytics, and server monitoring, and provide complete documentation.' 
+  },
 ];
 
 const DigitalProcess = () => {
@@ -252,6 +309,80 @@ const DigitalIndustries = () => {
   );
 };
 
+// ==================== Section 6: Image Reference Section (SEO & Conversion Highlight) ====================
+const SeoContentSection = () => {
+  return (
+    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
+      <div className="dm-container">
+        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
+          
+          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
+            Top Custom Website Development Company in India
+          </h2>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
+            Welcome to <strong>Gatecode Technologies Pvt. Ltd.</strong>, your strategic engineering partner providing end-to-end <strong>custom website development services</strong>. We empower emerging startups, established brands, and enterprise organizations to transcend template constraints by building bespoke web platforms tailored to their unique commercial logic, operational workflows, and growth targets.
+          </p>
+
+          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
+            Engineering High-Performance Digital Platforms Tailored to Your Business Logic
+          </h3>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            Every business possesses distinct customer touchpoints, product catalogs, and service pathways. Our full-stack engineering team builds custom websites utilizing modular frontend frameworks and robust cloud architectures, ensuring complete flexibility, sub-second page delivery, and seamless third-party software integration.
+          </p>
+
+          {/* Key Feature Highlight Cards */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Zero-Bloat Custom Architecture</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                We write clean, purposeful code without cumbersome theme dependencies, resulting in maintainable and efficient web properties.
+              </p>
+            </div>
+            
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Peak Performance & Speed</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Optimized for Core Web Vitals, our websites ensure rapid page rendering, reducing bounce rates and maximizing conversions.
+              </p>
+            </div>
+
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Seamless System Integration</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Connect proprietary databases, CRM systems, ERP platforms, and payment gateways into a unified, secure digital workflow.
+              </p>
+            </div>
+
+            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Enterprise Security & Protection</h4>
+              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
+                Built-in security protocols including SSL encryption, data sanitization, and defense against common web vulnerabilities.
+              </p>
+            </div>
+          </div>
+
+          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
+            Why Partner with Gatecode Technologies for Custom Web Engineering?
+          </h3>
+          
+          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
+            Partnering with Gatecode Technologies means collaborating with dedicated software engineers and UI/UX designers focused on creating tangible business value:
+          </p>
+
+          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
+            <li style={{ marginBottom: '10px' }}><strong>Tailored Engineering Standards:</strong> Clean, modular code tailored to your exact specifications without generic templates.</li>
+            <li style={{ marginBottom: '10px' }}><strong>Transparent Agile Collaboration:</strong> Direct communication, sprint milestones, and comprehensive source code ownership.</li>
+            <li style={{ marginBottom: '10px' }}><strong>Long-Term Partnership:</strong> Proactive post-launch support, security monitoring, and continuous technical enhancements.</li>
+          </ul>
+
+        </div>
+      </div>
+    </section>
+  );
+};
+
 // ==================== Main Page Component ====================
 const CustomWebsiteDevelopmentPage = () => {
   useEffect(() => {
@@ -266,6 +397,23 @@ const CustomWebsiteDevelopmentPage = () => {
       { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/web-development' },
       { '@type': 'ListItem', position: 3, name: 'Custom Website Development', item: 'https://gatecode.in/services/web-development/custom-website-development' },
     ],
+  };
+
+  const customWebDevServiceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Custom Website Development Services',
+    name: 'Custom Website Development Company in India',
+    provider: {
+      '@type': 'Organization',
+      name: 'Gatecode Technologies Pvt. Ltd.',
+      url: 'https://gatecode.in',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'India',
+    },
+    description: 'Custom website development company delivering tailored, high-performance, and responsive web solutions engineered for business growth.',
   };
 
   const faqSchema = {
@@ -323,6 +471,10 @@ const CustomWebsiteDevelopmentPage = () => {
       />
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(customWebDevServiceSchema) }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <DigitalHero />
@@ -331,6 +483,7 @@ const CustomWebsiteDevelopmentPage = () => {
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
+      <SeoContentSection />
       <ContactSection />
       <FAQSection
         eyebrow="FAQS"

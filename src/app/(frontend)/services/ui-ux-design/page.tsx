@@ -21,8 +21,7 @@ const DigitalHero = () => {
             UI/UX<br />DESIGN<br />SERVICES
           </h1>
           <p className="dm-hero-subtitle">
-            We create intuitive, visually engaging, and user-focused designs that enhance digital experiences<br />
-            and strengthen brand engagement.
+            We craft intuitive, conversion-focused user interfaces and research-driven digital experiences that reduce friction, captivate users, and elevate brand loyalty.
           </p>
           <Link href="/contact" className="dm-cta-button">
             Get Free Consultation
@@ -39,7 +38,10 @@ const DigitalAbout = () => {
     <section className="dm-about-section">
       <div className="dm-container">
         <p className="dm-about-text">
-          At Gatecode Technologies Pvt. Ltd., we believe great design goes beyond making things look beautiful—it’s about how it makes your users feel and act. We partner with you to craft UI/UX experiences that seamlessly blend striking creativity with effortless functionality. Whether we are designing a dynamic website, an engaging mobile app, or a complex data dashboard, our focus is on what truly matters: eliminating user friction and building intuitive journeys. By deeply understanding both your core business goals and your audience's behavior, we deliver digital platforms that don't just look impressive, but actively drive engagement, build trust, and deliver real results.
+          At Gatecode Technologies Pvt. Ltd., we understand that superior digital product design is a balance of human behavioral psychology, visual elegance, and commercial strategy. A visually striking interface fails if users struggle to complete their tasks, while a functional system with poor aesthetics fails to inspire confidence. We bridge this gap by designing user-centric interfaces rooted in empirical research.
+        </p>
+        <p className="dm-about-text" style={{ marginTop: '16px' }}>
+          From enterprise dashboards, fintech portals, and mobile applications to high-converting consumer platforms, our multidisciplinary design team transforms complex operational workflows into natural, effortless interactions. We construct modular design systems, adhere to WCAG accessibility guidelines, and provide pixel-perfect Figma documentation, ensuring a seamless bridge between design and full-stack development.
         </p>
       </div>
     </section>
@@ -48,14 +50,54 @@ const DigitalAbout = () => {
 
 // ==================== DigitalServices Component (Updated for UI/UX Design Services) ====================
 const services = [
-  { title: 'User Interface (UI) Design', desc: 'Modern and visually engaging interfaces designed to create smooth and interactive digital experiences.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'User Experience (UX) Design', desc: 'User-focused designs that improve usability, accessibility, and customer satisfaction.', color: '#fbff06', text: '#000000' },
-  { title: 'Wireframing & Prototyping', desc: 'Interactive wireframes and prototypes to visualize workflows and product functionality before development.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'Website UI/UX Design', desc: 'Responsive and user-friendly website designs tailored to improve engagement and conversions.', color: '#fbff06', text: '#000000' },
-  { title: 'Mobile App UI/UX Design', desc: 'Intuitive mobile app interfaces designed for seamless navigation and enhanced user interaction.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'Dashboard & Admin Panel Design', desc: 'Clean and organized dashboard interfaces for efficient workflow and data management.', color: '#fbff06', text: '#000000' },
-  { title: 'Design System & Branding', desc: 'Consistent design systems and visual branding that strengthen identity and user experience.', color: '#4e7c7e', text: '#ffffff' },
-  { title: 'Responsive & Interactive Design', desc: 'Adaptive and interactive designs optimized for all screen sizes and devices.', color: '#fbff06', text: '#000000' },
+  { 
+    title: 'User Interface (UI) Design', 
+    desc: 'Visually refined, pixel-perfect interfaces designed with balanced typography, harmonious palettes, and modern layout aesthetics.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'User Experience (UX) Architecture', 
+    desc: 'Research-backed user journey mapping, information architecture, and behavioral flows engineered to eliminate user friction.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
+  { 
+    title: 'Interactive Wireframing & Prototyping', 
+    desc: 'Rapid clickable prototypes in Figma that visualize complex application logic, screen transitions, and micro-interactions.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'Web Application & SaaS UI/UX', 
+    desc: 'Intuitive product interfaces designed for dense data handling, modular dashboards, and effortless multi-step workflows.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
+  { 
+    title: 'Mobile App UI/UX Design', 
+    desc: 'Touch-optimized mobile journeys engineered for natural thumb navigation, fluid swipe gestures, and device responsiveness.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'Enterprise Design Systems', 
+    desc: 'Scalable Figma component libraries with unified tokens, typography rules, and interactive states for rapid engineering handoff.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
+  { 
+    title: 'Usability Auditing & Heuristic Reviews', 
+    desc: 'Data-driven usability evaluations, heat map reviews, and user feedback analysis to uncover drop-off points.', 
+    color: '#4e7c7e', 
+    text: '#ffffff' 
+  },
+  { 
+    title: 'Design System Maintenance & Evolution', 
+    desc: 'Continuous component updates, accessibility compliance checks (WCAG 2.1), and design-to-code alignment.', 
+    color: '#fbff06', 
+    text: '#000000' 
+  },
 ];
 
 const DigitalServices = () => {
@@ -110,11 +152,12 @@ const DigitalServices = () => {
 
 // ==================== DigitalWhyChoose Component (Updated for UI/UX Design Services) ====================
 const benefits = [
-  'Intuitive, User-Centric Experiences',
-  'Higher Engagement & Retention',
-  'Flawless Across All Devices',
-  'Unified & Trusted Brand Identity',
-  'Optimized Conversion Journeys',
+  'Intuitive user journeys designed to maximize conversion rates.',
+  'Comprehensive Figma design systems for rapid developer handoff.',
+  'Strict adherence to WCAG 2.1 accessibility standards.',
+  'Data-driven user research eliminating guesswork and friction.',
+  'Flawless responsiveness across mobile, tablet, and desktop screens.',
+  'Transparent iterative sprints with interactive clickable prototypes.',
 ];
 
 const DigitalWhyChoose = () => {
@@ -125,7 +168,10 @@ const DigitalWhyChoose = () => {
           Why Partner With Us for UI/UX Design?
         </h2>
         <p className="dm-about-text dm-about-text-left">
-          We believe that great design is more than just making things look beautiful—it’s a powerful business tool. We don't just design screens; we engineer digital experiences that genuinely connect with your audience. By combining deep user research, creative vision, and proven usability principles, we craft intuitive interfaces that eliminate frustration. The result? Engaging digital journeys that not only strengthen your brand identity but actively boost customer retention and drive measurable business growth.
+          A poorly structured interface silently drives potential customers away. When navigation is cluttered, calls-to-action are obscured, or page layouts are disorienting, bounce rates surge and customer acquisition costs rise unnecessarily.
+        </p>
+        <p className="dm-about-text dm-about-text-left" style={{ marginTop: '16px' }}>
+          At Gatecode Technologies, our design approach solves real usability challenges. By conducting in-depth user persona research, crafting detailed wireframes, and validating interactive prototypes with real user testing, we ensure every screen guides visitors effortlessly toward conversion, strengthening brand perception and accelerating adoption.
         </p>
 
         <div className="dm-why-choose-layout">
@@ -157,12 +203,30 @@ const DigitalWhyChoose = () => {
 
 // ==================== DigitalProcess Component (Updated for UI/UX Design Services) ====================
 const processSteps = [
-  { title: 'Research & Requirement Analysis', desc: 'Understand user behavior, business goals, and project requirements.' },
-  { title: 'Wireframing & Planning', desc: 'Create structured layouts and user flow strategies.' },
-  { title: 'UI Design Creation', desc: 'Designing visually engaging and interactive interfaces.' },
-  { title: 'Prototyping & User Testing', desc: 'Testing user interactions and improving usability.' },
-  { title: 'Design Refinement', desc: 'Optimizing designs based on feedback and performance analysis.' },
-  { title: 'Final Delivery & Support', desc: 'Delivering finalized design assets and ongoing design support.' },
+  { 
+    title: 'Discovery & User Persona Modeling', 
+    desc: 'We uncover stakeholder requirements, conduct demographic research, and define core user personas and success metrics.' 
+  },
+  { 
+    title: 'Information Architecture & User Flows', 
+    desc: 'We structure logical navigation trees, task workflows, and content hierarchies to ensure effortless exploration.' 
+  },
+  { 
+    title: 'Low-Fidelity Wireframing', 
+    desc: 'We create functional wireframe layouts to validate content placement, information grouping, and core user actions early.' 
+  },
+  { 
+    title: 'High-Fidelity UI & Design Systems', 
+    desc: 'We craft polished visual designs, establishing custom color tokens, typography scales, and component libraries in Figma.' 
+  },
+  { 
+    title: 'Prototyping & Usability Testing', 
+    desc: 'We link clickable prototypes to conduct user testing sessions, gather feedback, and refine interaction states.' 
+  },
+  { 
+    title: 'Design Handoff & Developer Collaboration', 
+    desc: 'We provide clean design specifications, exportable CSS tokens, and ongoing collaboration during the build phase.' 
+  },
 ];
 
 const DigitalProcess = () => {

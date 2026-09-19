@@ -72,6 +72,10 @@ function parseFormattedText(text: string) {
 
 function BlockParagraph({ data }) {
   if (!data?.text) return null;
+  const hasBlockHtml = /<(?:div|figure|blockquote|table|ul|ol|p)/i.test(data.text);
+  if (hasBlockHtml) {
+    return <div className="wp-rich-text-block">{parseFormattedText(data.text)}</div>;
+  }
   return <p>{parseFormattedText(data.text)}</p>;
 }
 
