@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'E-Commerce & CMS Website Development Company in India | Hire Shopify & WooCommerce Developers',
+  title: 'E-Commerce & CMS Web Development Company | Gatecode',
   description: 'Looking for an e-commerce website development company in India? Gatecode Technologies provides top e-commerce web development services, CMS development, and dedicated Shopify, WooCommerce, & Magento developers.',
   keywords: [
     'ecommerce app development company',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     canonical: 'https://gatecode.in/expertise/e-commerce-cms',
   },
   openGraph: {
-    title: 'E-Commerce & CMS Website Development Company in India | Hire Shopify & WooCommerce Developers',
+    title: 'E-Commerce & CMS Web Development Company | Gatecode',
     description: 'Looking for an e-commerce website development company in India? Gatecode Technologies provides top e-commerce web development services, CMS development, and dedicated Shopify, WooCommerce, & Magento developers.',
     url: 'https://gatecode.in/expertise/e-commerce-cms',
     siteName: 'Gatecode Technologies',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'E-Commerce & CMS Website Development Company in India | Hire Shopify & WooCommerce Developers',
+    title: 'E-Commerce & CMS Web Development Company | Gatecode',
     description: 'Looking for an e-commerce website development company in India? Gatecode Technologies provides top e-commerce web development services and CMS solutions.',
   },
 };

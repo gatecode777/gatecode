@@ -1,15 +1,18 @@
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import Hero from '@/components/frontend/Hero/Hero';
 import Services from '@/components/frontend/Services/Services';
-import BrandHeader from '@/components/frontend/BrandHeader/BrandHeader';
-import ImageSlider from '@/components/frontend/ImageSlider/ImageSlider';
-import Expertise from '@/components/frontend/Expertise/Expertise';
-import WhatWeDo from '@/components/frontend/WhatWeDo/WhatWeDo';
-import ProcessStack from '@/components/frontend/ProcessStack/ProcessStack';
-import VisionMission from '@/components/frontend/VisionMission/VisionMission';
-import CollaborationClients from '@/components/frontend/CollaborationClients/CollaborationClients';
-import ProjectBanner from '@/components/frontend/ProjectBanner/ProjectBanner';
-import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+
+// Below-the-fold components dynamically imported to minimize main-thread work & eliminate unused initial JS
+const BrandHeader = dynamic(() => import('@/components/frontend/BrandHeader/BrandHeader'));
+const ImageSlider = dynamic(() => import('@/components/frontend/ImageSlider/ImageSlider'));
+const Expertise = dynamic(() => import('@/components/frontend/Expertise/Expertise'));
+const WhatWeDo = dynamic(() => import('@/components/frontend/WhatWeDo/WhatWeDo'));
+const ProcessStack = dynamic(() => import('@/components/frontend/ProcessStack/ProcessStack'));
+const VisionMission = dynamic(() => import('@/components/frontend/VisionMission/VisionMission'));
+const CollaborationClients = dynamic(() => import('@/components/frontend/CollaborationClients/CollaborationClients'));
+const ProjectBanner = dynamic(() => import('@/components/frontend/ProjectBanner/ProjectBanner'));
+const ContactSection = dynamic(() => import('@/components/frontend/ContactSection/ContactSection'));
 
 export const revalidate = 3600;
 

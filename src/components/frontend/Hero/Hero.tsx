@@ -23,7 +23,7 @@ const Hero = () => {
             <Link href="/get-started" className="hero-btn hero-btn-solid" aria-label="Get Free Consultations with Gatecode Technologies">
               Get Free Consultations <span> &rarr;</span>
             </Link>
-            <Link href="/services" className="hero-btn hero-btn-outline" aria-label="Our Services - Explore Our IT and Software Services">
+            <Link href="#services" className="hero-btn hero-btn-outline" aria-label="Our Services - Explore Our IT and Software Services">
               Our Services <span>&rarr;</span>
             </Link>
           </div>

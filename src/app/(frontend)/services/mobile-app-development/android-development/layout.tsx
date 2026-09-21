@@ -1,30 +1,30 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Best Maintenance Management Software & Fleet Solutions System',
+  title: 'Best Android App Development Services In Jaipur',
   description:
-    'Get Expert Android, Mobile, Web, Shopify, And Custom App Development Services To Build Secure, Scalable, And High-performing Applications.',
+    'Get expert Android app development services from Gatecode Technologies. We build custom, secure, and high-performance native Kotlin applications for your business.',
   keywords: [
+    'android app development services',
     'android application development services',
-    'app development services',
-    'mobile app development service',
-    'web app development services',
-    'mobile application development service',
-    'mobile development services',
-    'web application development services',
-    'shopify app development services',
+    'best android app development company in jaipur',
+    'android app development company',
+    'custom android app development services',
+    'native android app development',
+    'kotlin app development company',
+    'mobile app development services in jaipur',
+    'android app developers',
+    'hire android app developers',
     'custom mobile app development services',
-    'custom app development services',
-    'custom web app development services',
-    'educational app development services',
+    'Gatecode Technologies',
   ],
   alternates: {
     canonical: '/services/mobile-app-development/android-development',
   },
   openGraph: {
-    title: 'Best Maintenance Management Software & Fleet Solutions System',
+    title: 'Best Android App Development Services In Jaipur | Gatecode Technologies',
     description:
-      'Get Expert Android, Mobile, Web, Shopify, And Custom App Development Services To Build Secure, Scalable, And High-performing Applications.',
+      'Get expert Android app development services from Gatecode Technologies. We build custom, secure, and high-performance native Kotlin applications.',
     url: 'https://gatecode.in/services/mobile-app-development/android-development',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Maintenance Management Software & Fleet Solutions System',
+    title: 'Best Android App Development Services In Jaipur | Gatecode Technologies',
     description:
-      'Get Expert Android, Mobile, Web, Shopify, And Custom App Development Services To Build Secure, Scalable, And High-performing Applications.',
+      'Get expert Android app development services from Gatecode Technologies. We build custom, secure, and high-performance native Kotlin applications.',
   },
 };
 

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Hire Dedicated Graphic Designers | Top Graphic Design Company in India',
+  title: 'Hire Dedicated Graphic Designers in India | Gatecode',
   description: 'Looking to hire graphic designer experts? Gatecode Technologies is a top graphic design company in India & creative graphic design agency providing logo, branding, social media & custom design services.',
   keywords: [
     'graphic designer',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     canonical: 'https://gatecode.in/expertise/graphic-designers',
   },
   openGraph: {
-    title: 'Hire Dedicated Graphic Designers | Top Graphic Design Company in India',
+    title: 'Hire Dedicated Graphic Designers in India | Gatecode',
     description: 'Looking to hire graphic designer experts? Gatecode Technologies is a top graphic design company in India & creative graphic design agency providing logo, branding, social media & custom design services.',
     url: 'https://gatecode.in/expertise/graphic-designers',
     siteName: 'Gatecode Technologies',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Hire Dedicated Graphic Designers | Top Graphic Design Company in India',
+    title: 'Hire Dedicated Graphic Designers in India | Gatecode',
     description: 'Looking to hire graphic designer experts? Gatecode Technologies is a top graphic design company in India providing creative branding and design services.',
   },
 };

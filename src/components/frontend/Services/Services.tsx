@@ -41,7 +41,7 @@ const servicesData = [
 
 const Services = () => {
   return (
-    <section className="services-section fe-root">
+    <section className="services-section fe-root" id="services">
       <div className="services-header">
         <h2 className="services-title">OUR SERVICES</h2>
         <p className="services-subtitle">
@@ -66,12 +66,6 @@ const Services = () => {
             <h3 className="service-card-title">{service.title}</h3>
           </Link>
         ))}
-      </div>
-
-      <div className="services-view-all-wrapper">
-        <Link href="/services" className="services-view-all-btn">
-          View All Services
-        </Link>
       </div>
     </section>
   );

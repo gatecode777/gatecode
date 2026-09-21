@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Top BPO Companies in India | Business Process Outsourcing Services',
+  title: 'Top BPO Company in India | BPO Services | Gatecode',
   description: 'Gatecode Technologies is among the top BPO companies in India. We provide business process outsourcing services, customer support outsourcing services, and inbound and outbound call center services.',
   keywords: [
     'bpo services',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     canonical: '/services/bpo-services',
   },
   openGraph: {
-    title: 'Top BPO Companies in India | Business Process Outsourcing Services',
+    title: 'Top BPO Company in India | BPO Services | Gatecode',
     description: 'Gatecode Technologies is among the top BPO companies in India offering business process outsourcing services, customer support outsourcing services, and call center services.',
     url: 'https://gatecode.in/services/bpo-services',
     siteName: 'Gatecode Technologies',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Top BPO Companies in India | Business Process Outsourcing Services',
+    title: 'Top BPO Company in India | BPO Services | Gatecode',
     description: 'Gatecode Technologies is among the top BPO companies in India offering business process outsourcing services, customer support outsourcing services, and call center services.',
   },
 };

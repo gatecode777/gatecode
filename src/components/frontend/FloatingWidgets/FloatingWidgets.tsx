@@ -1,15 +1,23 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 
-const ScrollToTop = dynamic(() => import('@/components/frontend/ScrollToTop/ScrollToTop'), { ssr: false });
-const Chatbot = dynamic(() => import('@/components/frontend/Chatbot/Chatbot'), { ssr: false });
+import ScrollToTop from '@/components/frontend/ScrollToTop/ScrollToTop';
+
+const Chatbot = dynamic(() => import('@/components/frontend/Chatbot/Chatbot'));
 
 export default function FloatingWidgets() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <>
       <ScrollToTop />
-      <Chatbot />
+      {mounted && <Chatbot />}
     </>
   );
 }

@@ -8,8 +8,8 @@ import { ServicesDropdown, CompanyDropdown, TechnicalExpertiseDropdown } from '.
 
 const navLinks = [
   { label: 'Company', path: '/about', hasDropdown: true },
-  { label: 'Services', path: '/services', hasDropdown: true },
-  { label: 'Technical Expertise', path: '/services', hasDropdown: true },
+  { label: 'Services', path: '#', hasDropdown: true },
+  { label: 'Technical Expertise', path: '#', hasDropdown: true },
   { label: 'Blog', path: '/blog', hasDropdown: false },
   { label: 'Contact Us', path: '/contact', hasDropdown: false },
 ];
@@ -36,10 +36,19 @@ export default function Navbar() {
     };
   }, []);
 
-  // Scroll listener
+  // Scroll listener with rAF throttle & passive listener
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 10);
-    window.addEventListener('scroll', onScroll);
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 10);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
@@ -49,12 +58,12 @@ export default function Navbar() {
     return () => { document.body.style.overflow = ''; };
   }, [menuOpen]);
 
-  // Close mobile menu on resize to desktop
+  // Close mobile menu on resize to desktop with passive listener
   useEffect(() => {
     const onResize = () => {
       if (window.innerWidth > 968) { setMenuOpen(false); setActiveDropdown(null); }
     };
-    window.addEventListener('resize', onResize);
+    window.addEventListener('resize', onResize, { passive: true });
     return () => window.removeEventListener('resize', onResize);
   }, []);
 

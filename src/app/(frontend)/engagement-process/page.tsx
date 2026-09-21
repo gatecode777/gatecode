@@ -7,7 +7,7 @@ import ProjectBanner from '@/components/frontend/ProjectBanner/ProjectBanner';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
 
 export const metadata: Metadata = {
-  title: 'Agile Software Engagement Process & Work Models | Gatecode Technologies',
+  title: 'Software Engagement Process & Models | Gatecode Tech',
   description: 'Discover the transparent software engagement process at Gatecode Technologies. Explore our agile IT development workflows, dedicated engineering teams, and fixed-price project models.',
   keywords: [
     'software engagement models',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     canonical: 'https://gatecode.in/engagement-process',
   },
   openGraph: {
-    title: 'Agile Software Engagement Process & Work Models | Gatecode Technologies',
+    title: 'Software Engagement Process & Models | Gatecode Tech',
     description: 'Discover the transparent software engagement process at Gatecode Technologies. Explore our agile IT development workflows, dedicated engineering teams, and fixed-price project models.',
     url: 'https://gatecode.in/engagement-process',
     siteName: 'Gatecode Technologies',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Agile Software Engagement Process & Work Models | Gatecode Technologies',
+    title: 'Software Engagement Process & Models | Gatecode Tech',
     description: 'Discover the transparent software engagement process at Gatecode Technologies. Explore our agile IT development workflows.',
   },
 };

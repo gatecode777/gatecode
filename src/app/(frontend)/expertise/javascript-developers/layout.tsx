@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Hire Full Stack JavaScript Developer | Top JavaScript Development Company in India',
+  title: 'Hire Full Stack JavaScript Developers | Gatecode Tech',
   description: 'Looking to hire javascript developer talent? Gatecode Technologies is a premier javascript web development company providing full stack development with javascript, frontend UI, Node.js backend & custom javascript app development.',
   keywords: [
     'javascript developer',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     canonical: 'https://gatecode.in/expertise/javascript-developers',
   },
   openGraph: {
-    title: 'Hire Full Stack JavaScript Developer | Top JavaScript Development Company in India',
+    title: 'Hire Full Stack JavaScript Developers | Gatecode Tech',
     description: 'Looking to hire javascript developer talent? Gatecode Technologies is a premier javascript web development company providing full stack development with javascript, frontend UI, Node.js backend & custom javascript app development.',
     url: 'https://gatecode.in/expertise/javascript-developers',
     siteName: 'Gatecode Technologies',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Hire Full Stack JavaScript Developer | Top JavaScript Development Company in India',
+    title: 'Hire Full Stack JavaScript Developers | Gatecode Tech',
     description: 'Looking to hire javascript developer talent? Gatecode Technologies is a premier javascript web development company providing full stack development with javascript.',
   },
 };

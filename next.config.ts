@@ -14,8 +14,19 @@ const nextConfig: NextConfig = {
     formats: ['image/avif', 'image/webp'],
     unoptimized: false,
   },
+  compress: true,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production' ? { exclude: ['error'] } : false,
+  },
   experimental: {
-    optimizePackageImports: ['lucide-react', 'react-icons', 'framer-motion'],
+    optimizePackageImports: [
+      'lucide-react',
+      'react-icons',
+      'react-icons/fi',
+      'react-icons/fa',
+      'react-icons/bs',
+      'framer-motion',
+    ],
   },
   turbopack: {
     root: __dirname,
@@ -36,3 +47,4 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+

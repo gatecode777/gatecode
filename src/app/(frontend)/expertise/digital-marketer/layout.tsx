@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Best Digital Marketing Company in India | Hire SEO Specialist & Growth Agency',
+  title: 'Hire Dedicated Digital Marketers & SEO Experts | Gatecode',
   description: 'Looking for the best digital marketing agency or digital marketing company in India? Gatecode Technologies provides top digital marketing services, SEO specialist hiring, PPC ads & performance growth marketing.',
   keywords: [
     'digital marketing agency near me',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     canonical: 'https://gatecode.in/expertise/digital-marketer',
   },
   openGraph: {
-    title: 'Best Digital Marketing Company in India | Hire SEO Specialist & Growth Agency',
+    title: 'Hire Dedicated Digital Marketers & SEO Experts | Gatecode',
     description: 'Looking for the best digital marketing agency or digital marketing company in India? Gatecode Technologies provides top digital marketing services, SEO specialist hiring, PPC ads & performance growth marketing.',
     url: 'https://gatecode.in/expertise/digital-marketer',
     siteName: 'Gatecode Technologies',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Digital Marketing Company in India | Hire SEO Specialist & Growth Agency',
+    title: 'Hire Dedicated Digital Marketers & SEO Experts | Gatecode',
     description: 'Looking for the best digital marketing agency or digital marketing company in India? Gatecode Technologies provides top digital marketing services and SEO expertise.',
   },
 };

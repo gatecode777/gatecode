@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Best Digital Marketing Company In Jaipur | Gatecode Technologies',
+  title: 'Best Digital Marketing Company in Jaipur | Gatecode',
   description: 'Best digital marketing company in Jaipur offering SEO, Google Ads, SMM, and result-driven digital solutions to grow your business online.',
   keywords: [
     'digital marketing agency',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     canonical: '/services/digital-marketing',
   },
   openGraph: {
-    title: 'Best Digital Marketing Company In Jaipur | Gatecode Technologies',
+    title: 'Best Digital Marketing Company in Jaipur | Gatecode',
     description: 'Best digital marketing company in Jaipur offering SEO, Google Ads, SMM, and result-driven digital solutions to grow your business online.',
     url: 'https://gatecode.in/services/digital-marketing',
     siteName: 'Gatecode Technologies',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Digital Marketing Company In Jaipur | Gatecode Technologies',
+    title: 'Best Digital Marketing Company in Jaipur | Gatecode',
     description: 'Best digital marketing company in Jaipur offering SEO, Google Ads, SMM, and result-driven digital solutions to grow your business online.',
   },
 };

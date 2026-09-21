@@ -57,13 +57,6 @@ export default function FrontendLayout({ children }: { children: React.ReactNode
 
   return (
     <div className="">
-      <link
-        rel="preload"
-        as="image"
-        href="/images/hero-showcase-1.webp"
-        media="(min-width: 769px)"
-        fetchPriority="high"
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}

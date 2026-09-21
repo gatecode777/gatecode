@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Hire Dedicated Mobile App Developers | Top App Development Company in India',
+  title: 'Hire Dedicated Mobile App Developers | Gatecode Tech',
   description: 'Looking to hire app developer experts? Gatecode Technologies is a top mobile app development company in India. Hire dedicated mobile app developers, Android, iOS, Flutter, React Native, and custom e-commerce app developers.',
   keywords: [
     'hire app developer',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     canonical: 'https://gatecode.in/expertise/app-developers',
   },
   openGraph: {
-    title: 'Hire Dedicated Mobile App Developers | Top App Development Company in India',
+    title: 'Hire Dedicated Mobile App Developers | Gatecode Tech',
     description: 'Looking to hire app developer experts? Gatecode Technologies is a top mobile app development company in India. Hire dedicated mobile app developers, Android, iOS, Flutter & React Native experts.',
     url: 'https://gatecode.in/expertise/app-developers',
     siteName: 'Gatecode Technologies',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Hire Dedicated Mobile App Developers | Top App Development Company in India',
+    title: 'Hire Dedicated Mobile App Developers | Gatecode Tech',
     description: 'Looking to hire app developer experts? Gatecode Technologies is a top mobile app development company in India. Hire dedicated mobile app developers for custom projects.',
   },
 };

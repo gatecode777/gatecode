@@ -193,10 +193,23 @@ export default async function Blog({ searchParams }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
       />
+      <header className="blog-hero">
+        <h1 className="blog-hero-title">OUR BLOGS & INSIGHTS</h1>
+        <p className="blog-hero-subtitle">
+          Explore expert articles, tech insights, and industry trends on software engineering, web development, UI/UX, and IT outsourcing.
+        </p>
+      </header>
+
       <div className="blog-container">
         <CategorySidebar categories={sidebarCats} activeCategory={activeCat?.name || 'All'} />
 
         <main className="blog-content">
+          <div className="blog-section-header">
+            <h2 className="blog-section-title">
+              {activeCat?.slug && activeCat.slug !== 'all' ? `${activeCat.name} Articles` : 'Latest Articles'}
+            </h2>
+          </div>
+
           {visiblePosts.length === 0 ? (
             <div style={{ padding: '60px 20px', textAlign: 'center', color: '#888' }}>
               <p style={{ fontSize: 18, marginBottom: 8 }}>No posts found</p>

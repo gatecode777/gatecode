@@ -11,7 +11,7 @@ import PortfolioCategory from '@/models/PortfolioCategory';
 import PortfolioProject from '@/models/PortfolioProject';
 
 export const metadata: Metadata = {
-  title: 'Web & Software Development Portfolio | Gatecode Technologies Showcase',
+  title: 'Web & Software Development Portfolio | Gatecode Tech',
   description: 'Explore the Gatecode Technologies portfolio showcasing custom web development, mobile app engineering, UI/UX design, and digital marketing success stories.',
   keywords: [
     'web development portfolio',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     canonical: 'https://gatecode.in/portfolio',
   },
   openGraph: {
-    title: 'Web & Software Development Portfolio | Gatecode Technologies Showcase',
+    title: 'Web & Software Development Portfolio | Gatecode Tech',
     description: 'Explore the Gatecode Technologies portfolio showcasing custom web development, mobile app engineering, UI/UX design, and digital marketing success stories.',
     url: 'https://gatecode.in/portfolio',
     siteName: 'Gatecode Technologies',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Web & Software Development Portfolio | Gatecode Technologies Showcase',
+    title: 'Web & Software Development Portfolio | Gatecode Tech',
     description: 'Explore the Gatecode Technologies portfolio showcasing custom web development, mobile app engineering, and UI/UX design.',
   },
 };

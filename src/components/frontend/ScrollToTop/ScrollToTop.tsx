@@ -13,13 +13,20 @@ export default function ScrollToTop() {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-  // Show/hide button based on scroll position
+  // Show/hide button based on scroll position with passive & rAF throttle
   useEffect(() => {
+    let ticking = false;
     const toggleVisibility = () => {
-      const scrolled = window.scrollY || document.documentElement.scrollTop || window.pageYOffset;
-      setIsVisible(scrolled > 100);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const scrolled = window.scrollY || document.documentElement.scrollTop;
+          setIsVisible(scrolled > 100);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
-    window.addEventListener('scroll', toggleVisibility);
+    window.addEventListener('scroll', toggleVisibility, { passive: true });
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 

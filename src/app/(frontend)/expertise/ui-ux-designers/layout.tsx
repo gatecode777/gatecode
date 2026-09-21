@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Hire Dedicated UI UX Designers | Top UI UX Design Company in India',
+  title: 'Hire Dedicated UI/UX Designers in India | Gatecode',
   description: 'Looking to hire UI UX designer talent? Gatecode Technologies is a premier UI UX design company providing custom web & mobile app UI UX design services, Figma prototyping, and expert UI UX developers.',
   keywords: [
     'ui ux design',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     canonical: 'https://gatecode.in/expertise/ui-ux-designers',
   },
   openGraph: {
-    title: 'Hire Dedicated UI UX Designers | Top UI UX Design Company in India',
+    title: 'Hire Dedicated UI/UX Designers in India | Gatecode',
     description: 'Looking to hire UI UX designer talent? Gatecode Technologies is a premier UI UX design company providing custom web & mobile app UI UX design services, Figma prototyping, and expert UI UX developers.',
     url: 'https://gatecode.in/expertise/ui-ux-designers',
     siteName: 'Gatecode Technologies',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Hire Dedicated UI UX Designers | Top UI UX Design Company in India',
+    title: 'Hire Dedicated UI/UX Designers in India | Gatecode',
     description: 'Looking to hire UI UX designer talent? Gatecode Technologies is a premier UI UX design company providing custom web & mobile app UI UX design services.',
   },
 };

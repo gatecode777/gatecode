@@ -11,7 +11,7 @@ export const plusJakartaSans = Plus_Jakarta_Sans({
   weight: ['400', '500', '600', '700'],
   variable: '--font-plus-jakarta',
   display: 'swap',
-  preload: true,
+  preload: false,
 });
 
 export const castoroTitling = Castoro_Titling({
@@ -34,7 +34,7 @@ export const inter = Inter({
   weight: ['400', '500', '600'],
   variable: '--font-inter',
   display: 'swap',
-  preload: true,
+  preload: false,
 });
 
 export const arimo = Arimo({
