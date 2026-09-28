@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Best Android Mobile App Development Company In Jaipur',
-  description: 'Get expert Android app development services from a trusted company for custom, scalable, secure, and high-performance mobile applications.',
+  title: 'Mobile App Development Services In Jaipur | Android & Ios Apps',
+  description: 'Mobile app development services for custom Android & iOS apps with innovative designs, advanced features, and scalable solutions for businesses.',
   keywords: [
     'mobile app development company',
     'mobile app development company in india',
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
     canonical: '/services/mobile-app-development',
   },
   openGraph: {
-    title: 'Mobile App Development Company in India | App Development Services',
-    description: 'Gatecode Technologies is a leading custom mobile app development company in India offering android app development services, ios app development services, and mobile app development solutions.',
+    title: 'Mobile App Development Services In Jaipur | Android & Ios Apps',
+    description: 'Mobile app development services for custom Android & iOS apps with innovative designs, advanced features, and scalable solutions for businesses.',
     url: 'https://gatecode.in/services/mobile-app-development',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mobile App Development Company in India | App Development Services',
-    description: 'Gatecode Technologies is a leading custom mobile app development company in India offering android app development services, ios app development services, and mobile app development solutions.',
+    title: 'Mobile App Development Services In Jaipur | Android & Ios Apps',
+    description: 'Mobile app development services for custom Android & iOS apps with innovative designs, advanced features, and scalable solutions for businesses.',
   },
 };
 

@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Best Android App Development Services In Jaipur',
+  title: 'Android App Development Company in Jaipur | Custom Apps',
   description:
-    'Get expert Android app development services from Gatecode Technologies. We build custom, secure, and high-performance native Kotlin applications for your business.',
+    'Android app development company offering custom mobile apps with innovative designs, advanced features, and scalable solutions for businesses.',
   keywords: [
     'android app development services',
     'android application development services',
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
     canonical: '/services/mobile-app-development/android-development',
   },
   openGraph: {
-    title: 'Best Android App Development Services In Jaipur | Gatecode Technologies',
+    title: 'Android App Development Company in Jaipur | Custom Apps',
     description:
-      'Get expert Android app development services from Gatecode Technologies. We build custom, secure, and high-performance native Kotlin applications.',
+      'Android app development company offering custom mobile apps with innovative designs, advanced features, and scalable solutions for businesses.',
     url: 'https://gatecode.in/services/mobile-app-development/android-development',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Android App Development Services In Jaipur | Gatecode Technologies',
+    title: 'Android App Development Company in Jaipur | Custom Apps',
     description:
-      'Get expert Android app development services from Gatecode Technologies. We build custom, secure, and high-performance native Kotlin applications.',
+      'Android app development company offering custom mobile apps with innovative designs, advanced features, and scalable solutions for businesses.',
   },
 };
 

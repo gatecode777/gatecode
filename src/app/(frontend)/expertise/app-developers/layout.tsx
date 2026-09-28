@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Hire Dedicated Mobile App Developers | Gatecode Tech',
-  description: 'Looking to hire app developer experts? Gatecode Technologies is a top mobile app development company in India. Hire dedicated mobile app developers, Android, iOS, Flutter, React Native, and custom e-commerce app developers.',
+  title: 'Dedicated App Developers in India | Android & iOS Team',
+  description: 'Dedicated app developers delivering Android, iOS, and cross-platform solutions with expert teams, scalable technology, and reliable development support.',
   keywords: [
     'hire app developer',
     'hire mobile app developers',
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     canonical: 'https://gatecode.in/expertise/app-developers',
   },
   openGraph: {
-    title: 'Hire Dedicated Mobile App Developers | Gatecode Tech',
-    description: 'Looking to hire app developer experts? Gatecode Technologies is a top mobile app development company in India. Hire dedicated mobile app developers, Android, iOS, Flutter & React Native experts.',
+    title: 'Dedicated App Developers in India | Android & iOS Team',
+    description: 'Dedicated app developers delivering Android, iOS, and cross-platform solutions with expert teams, scalable technology, and reliable development support.',
     url: 'https://gatecode.in/expertise/app-developers',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
@@ -40,8 +40,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Hire Dedicated Mobile App Developers | Gatecode Tech',
-    description: 'Looking to hire app developer experts? Gatecode Technologies is a top mobile app development company in India. Hire dedicated mobile app developers for custom projects.',
+    title: 'Dedicated App Developers in India | Android & iOS Team',
+    description: 'Dedicated app developers delivering Android, iOS, and cross-platform solutions with expert teams, scalable technology, and reliable development support.',
   },
 };
 
