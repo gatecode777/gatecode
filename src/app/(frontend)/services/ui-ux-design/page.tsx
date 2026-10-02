@@ -189,7 +189,7 @@ const DigitalWhyChoose = () => {
           <div className="dm-why-choose-image">
             <Image
               src="/images/path.webp"
-              alt="User Centric UI UX Design Workflow - Gatecode Technologies"
+              alt="User Centric UI/UX Design Workflow - Gatecode Technologies"
               className="dm-path-illustration"
               width={500}
               height={400}
@@ -297,9 +297,9 @@ const DigitalIndustries = () => {
           </div>
 
           <div className="dm-image-grid">
-            <Image src="/images/1.webp" alt="E-Commerce and Retail UI UX Design - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
-            <Image src="/images/2.webp" alt="Healthcare and Medical Systems UI UX Design - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
-            <Image src="/images/3.webp" alt="Real Estate Platforms UI UX Design - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
+            <Image src="/images/1.webp" alt="E-Commerce and Retail UI/UX Design - Gatecode Technologies" className="dm-industry-img-1" width={200} height={150} />
+            <Image src="/images/2.webp" alt="Healthcare and Medical Systems UI/UX Design - Gatecode Technologies" className="dm-industry-img-2" width={200} height={150} />
+            <Image src="/images/3.webp" alt="Real Estate Platforms UI/UX Design - Gatecode Technologies" className="dm-industry-img-3" width={200} height={150} />
             <Image src="/images/4.webp" alt="Logistics and Shipping Systems User Interface - Gatecode Technologies" className="dm-industry-img-4" width={200} height={150} />
             <Image src="/images/5.webp" alt="Education and E-Learning User Experience Design - Gatecode Technologies" className="dm-industry-img-5" width={200} height={150} />
           </div>
@@ -317,11 +317,11 @@ const SeoContentSection = () => {
         <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
           
           <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Premier UI UX Design Agency in India
+            Premier UI/UX Design Agency in India
           </h2>
           
           <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Welcome to <strong>Gatecode Technologies</strong>, a premier <strong>ui ux design agency in india</strong> and trusted <strong>ui ux design company</strong>. As a leading <strong>ui ux agency</strong>, our dedicated team of senior <strong>ui ux designer</strong> specialists crafts user-centric digital products, delivering high-performance <strong>ui ux design services</strong> and intuitive <strong>ui and ux design</strong> architectures that boost engagement and streamline customer journeys.
+            Welcome to <strong>Gatecode Technologies</strong>, a premier <strong>ui/ux design agency in india</strong> and trusted <strong>ui/ux design company</strong>. As a leading <strong>ui/ux agency</strong>, our dedicated team of senior <strong>ui/ux designer</strong> specialists crafts user-centric digital products, delivering high-performance <strong>ui/ux design services</strong> and intuitive <strong>ui and ux design</strong> architectures that boost engagement and streamline customer journeys.
           </p>
 
           <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
@@ -329,15 +329,15 @@ const SeoContentSection = () => {
           </h3>
           
           <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Transforming product ideas into market-ready applications requires seamless visual hierarchy and user research. Recognizing <strong>what is ui ux design</strong> excellence, we specialize in <strong>wireframing and prototyping</strong> alongside enterprise-grade <strong>design system development services</strong> to ensure consistent typography, component libraries, and visual guidelines across all user touchpoints.
+            Transforming product ideas into market-ready applications requires seamless visual hierarchy and user research. Recognizing <strong>what is ui/ux design</strong> excellence, we specialize in <strong>wireframing and prototyping</strong> alongside enterprise-grade <strong>design system development services</strong> to ensure consistent typography, component libraries, and visual guidelines across all user touchpoints.
           </p>
 
           {/* Key Feature Highlight Cards */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
             <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Mobile App & Web UI UX Design</h4>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Mobile App & Web UI/UX Design</h4>
               <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Partner with an experienced <strong>mobile app ui ux design company</strong>. We build responsive web platforms and iOS/Android app interfaces centered around <strong>ui and ux design</strong> best practices.
+                Partner with an experienced <strong>mobile app ui/ux design company</strong>. We build responsive web platforms and iOS/Android app interfaces centered around <strong>ui and ux design</strong> best practices.
               </p>
             </div>
             
@@ -351,17 +351,17 @@ const SeoContentSection = () => {
             <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
               <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Design System Development Services</h4>
               <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Scale product development with custom <strong>design system development services</strong> from a <strong>best ui ux agency</strong>, creating reusable UI tokens, UI kits, and design specs.
+                Scale product development with custom <strong>design system development services</strong> from a <strong>best ui/ux agency</strong>, creating reusable UI tokens, UI kits, and design specs.
               </p>
             </div>
           </div>
 
           <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Partner with Gatecode as Your Preferred UI UX Design Company?
+            Why Partner with Gatecode as Your Preferred UI/UX Design Company?
           </h3>
           
           <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Partnering with an established <strong>ui ux design agency</strong> guarantees frictionless product adoption and higher conversion rates. Choosing Gatecode Technologies gives you:
+            Partnering with an established <strong>ui/ux design agency</strong> guarantees frictionless product adoption and higher conversion rates. Choosing Gatecode Technologies gives you:
           </p>
 
           <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
@@ -461,8 +461,8 @@ const UIUXDesignServicesPage = () => {
   const uiUxSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    serviceType: 'UI UX Design Services',
-    name: 'UI UX Design Company in India',
+    serviceType: 'UI/UX Design Services',
+    name: 'UI/UX Design Company in India',
     provider: {
       '@type': 'Organization',
       name: 'Gatecode Technologies Pvt. Ltd.',
@@ -472,7 +472,7 @@ const UIUXDesignServicesPage = () => {
       '@type': 'Country',
       name: 'India',
     },
-    description: 'Leading UI UX design company in India providing user research & analysis, wireframing and prototyping, mobile app UI UX design, and design system development services.',
+    description: 'Leading UI/UX design company in India providing user research & analysis, wireframing and prototyping, mobile app UI/UX design, and design system development services.',
   };
 
   const faqSchema = {

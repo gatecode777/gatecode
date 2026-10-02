@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Best Ui Ux Design Company In Jaipur | Gatecode Tech Pvt Ltd',
-  description: 'Get Expert Ui Ux Design Services In Jaipur From A Trusted Company. We Create User-friendly, Engaging, And Conversion-focused Digital Experiences.',
+  title: 'Best Ui/Ux Design Company In Jaipur | Gatecode Tech Pvt Ltd',
+  description: 'Get Expert Ui/Ux Design Services In Jaipur From A Trusted Company. We Create User-friendly, Engaging, And Conversion-focused Digital Experiences.',
   keywords: [
     'ui ux design',
     'ui ux design agency',
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
     canonical: '/services/ui-ux-design',
   },
   openGraph: {
-    title: 'UI UX Design Agency in India | UI UX Design Services',
-    description: 'Gatecode Technologies is a premier UI UX design company in India offering UI UX design services, mobile app UI UX design, and wireframing and prototyping.',
+    title: 'UI/UX Design Agency in India | UI/UX Design Services',
+    description: 'Gatecode Technologies is a premier UI/UX design company in India offering UI/UX design services, mobile app UI/UX design, and wireframing and prototyping.',
     url: 'https://gatecode.in/services/ui-ux-design',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'UI UX Design Agency in India | UI UX Design Services',
-    description: 'Gatecode Technologies is a premier UI UX design company in India offering UI UX design services, mobile app UI UX design, and wireframing and prototyping.',
+    title: 'UI/UX Design Agency in India | UI/UX Design Services',
+    description: 'Gatecode Technologies is a premier UI/UX design company in India offering UI/UX design services, mobile app UI/UX design, and wireframing and prototyping.',
   },
 };
 
