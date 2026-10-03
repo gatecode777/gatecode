@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
 import { FiPhone, FiMail, FiMapPin, FiClock, FiSend, FiCheckCircle } from 'react-icons/fi';
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 import { BsTwitterX } from 'react-icons/bs';
@@ -381,10 +380,6 @@ const ContactPage = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const handleGetDirections = () => {
-    window.open('https://maps.app.goo.gl/makpC6JDuUg7jbgi9', '_blank', 'noopener,noreferrer');
-  };
-
   const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
@@ -469,26 +464,15 @@ const ContactPage = () => {
       <SeoContentSection />
 
       <section className="map-section">
-        <div className="map-overlay">
-          <div className="map-info">
-            <h3>Find Us On Google Maps</h3>
-            <a
-              href="https://maps.app.goo.gl/makpC6JDuUg7jbgi9"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="view-map-btn"
-            >
-              Get Directions
-            </a>
-          </div>
-        </div>
-        <Image
-          src="/images/contact-map-bg.webp"
-          alt="Map Placeholder"
-          className="map-placeholder-img"
-          width={2000}
-          height={600}
-          priority
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d222.5025393089399!2d75.76394306045302!3d26.838660024305852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db51bd1cf3183%3A0xa513eaa0701b81ec!2sGATECODE%20TECHNOLOGIES%20PVT.%20LTD.!5e0!3m2!1sen!2sin!4v1791019481229!5m2!1sen!2sin"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="strict-origin-when-cross-origin"
+          title="GATECODE TECHNOLOGIES PVT. LTD. Location"
         />
       </section>
     </div>
