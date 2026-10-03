@@ -95,6 +95,8 @@
 }
 
 .view-map-btn {
+  display: inline-block;
+  text-decoration: none;
   padding: 16px 40px;
   background: #fff;
   color: #0f172a;

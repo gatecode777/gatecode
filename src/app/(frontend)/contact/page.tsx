@@ -11,34 +11,54 @@ import '@/components/frontend/ContactForm.css';
 import '@/components/frontend/ContactInfo.css';
 
 // ==================== ContactInfo Component ====================
-const InfoCard = ({ icon, title, details }: { icon: React.ReactNode; title: string; details: string[] }) => (
-  <div className="info-card">
-    <div className="info-icon-wrapper">{icon}</div>
-    <div className="info-details">
-      <h3>{title}</h3>
-      {details.map((detail, index) => (
-        <p key={index}>{detail}</p>
-      ))}
+const InfoCard = ({ icon, title, details, link }: { icon: React.ReactNode; title: string; details: string[]; link?: string }) => {
+  const content = (
+    <div className="info-card">
+      <div className="info-icon-wrapper">{icon}</div>
+      <div className="info-details">
+        <h3>{title}</h3>
+        {details.map((detail, index) => (
+          <p key={index}>{detail}</p>
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
+
+  if (link) {
+    return (
+      <a
+        href={link}
+        target={link.startsWith('http') ? '_blank' : undefined}
+        rel={link.startsWith('http') ? 'noopener noreferrer' : undefined}
+        style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return content;
+};
 
 const ContactInfo = () => {
   const contactDetails = [
     {
       icon: <FiPhone />,
       title: 'Call Us',
-      details: ['+91 8502888838', '+91 8502888839']
+      details: ['+91 8502888838', '+91 8502888839'],
+      link: 'tel:+918502888838'
     },
     {
       icon: <FiMail />,
       title: 'Email Us',
-      details: ['info@gatecode.in', 'support@gatecode.in']
+      details: ['info@gatecode.in', 'support@gatecode.in'],
+      link: 'mailto:info@gatecode.in'
     },
     {
       icon: <FiMapPin />,
       title: 'Visit Us',
-      details: ['412, Sumer Nagar, Mansarovar.', 'Jaipur, India']
+      details: ['412, Sumer Nagar, Mansarovar.', 'Jaipur, India'],
+      link: 'https://maps.app.goo.gl/makpC6JDuUg7jbgi9'
     },
     {
       icon: <FiClock />,
@@ -362,7 +382,7 @@ const ContactPage = () => {
   }, []);
 
   const handleGetDirections = () => {
-    window.open('https://maps.app.goo.gl/McNsbMEo8EvS4npw5', '_blank');
+    window.open('https://maps.app.goo.gl/makpC6JDuUg7jbgi9', '_blank', 'noopener,noreferrer');
   };
 
   const localBusinessSchema = {
@@ -374,6 +394,7 @@ const ContactPage = () => {
     url: 'https://gatecode.in',
     telephone: '+918502888838',
     email: 'info@gatecode.in',
+    hasMap: 'https://maps.app.goo.gl/makpC6JDuUg7jbgi9',
     address: {
       '@type': 'PostalAddress',
       streetAddress: '412, Sumer Nagar, Mansarovar',
@@ -451,9 +472,14 @@ const ContactPage = () => {
         <div className="map-overlay">
           <div className="map-info">
             <h3>Find Us On Google Maps</h3>
-            <button className="view-map-btn" onClick={handleGetDirections}>
+            <a
+              href="https://maps.app.goo.gl/makpC6JDuUg7jbgi9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="view-map-btn"
+            >
               Get Directions
-            </button>
+            </a>
           </div>
         </div>
         <Image

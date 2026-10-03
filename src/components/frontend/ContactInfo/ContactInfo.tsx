@@ -6,34 +6,54 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/f
 import { BsTwitterX } from 'react-icons/bs';
 import './ContactInfo.css';
 
-const InfoCard = ({ icon, title, details }) => (
-  <div className="info-card">
-    <div className="info-icon-wrapper">{icon}</div>
-    <div className="info-details">
-      <h3>{title}</h3>
-      {details.map((detail, index) => (
-        <p key={index}>{detail}</p>
-      ))}
+const InfoCard = ({ icon, title, details, link }) => {
+  const content = (
+    <div className="info-card">
+      <div className="info-icon-wrapper">{icon}</div>
+      <div className="info-details">
+        <h3>{title}</h3>
+        {details.map((detail, index) => (
+          <p key={index}>{detail}</p>
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
+
+  if (link) {
+    return (
+      <a
+        href={link}
+        target={link.startsWith('http') ? '_blank' : undefined}
+        rel={link.startsWith('http') ? 'noopener noreferrer' : undefined}
+        style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return content;
+};
 
 const ContactInfo = () => {
   const contactDetails = [
     {
       icon: <FiPhone />,
       title: 'Call Us',
-      details: ['+91 8502888838', '+91 8502888839']
+      details: ['+91 8502888838', '+91 8502888839'],
+      link: 'tel:+918502888838'
     },
     {
       icon: <FiMail />,
       title: 'Email Us',
-      details: ['info@gatecode.in', 'support@gatecode.in']
+      details: ['info@gatecode.in', 'support@gatecode.in'],
+      link: 'mailto:info@gatecode.in'
     },
     {
       icon: <FiMapPin />,
       title: 'Visit Us',
-      details: ['412, Sumer Nagar, Mansarovar', 'Jaipur, India']
+      details: ['412, Sumer Nagar, Mansarovar', 'Jaipur, India'],
+      link: 'https://maps.app.goo.gl/makpC6JDuUg7jbgi9'
     },
     {
       icon: <FiClock />,
