@@ -380,6 +380,13 @@ const ContactPage = () => {
     window.scrollTo(0, 0);
   }, []);
 
+<<<<<<< HEAD
+=======
+  const handleGetDirections = () => {
+    window.open('https://maps.app.goo.gl/makpC6JDuUg7jbgi9', '_blank', 'noopener,noreferrer');
+  };
+
+>>>>>>> c2e3181 (Update Google Maps directions link in contact section)
   const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
@@ -387,6 +394,7 @@ const ContactPage = () => {
     image: 'https://gatecode.in/images/logo.webp',
     '@id': 'https://gatecode.in/#organization',
     url: 'https://gatecode.in',
+    hasMap: 'https://maps.app.goo.gl/makpC6JDuUg7jbgi9',
     telephone: '+918502888838',
     email: 'info@gatecode.in',
     hasMap: 'https://maps.app.goo.gl/makpC6JDuUg7jbgi9',
@@ -464,6 +472,7 @@ const ContactPage = () => {
       <SeoContentSection />
 
       <section className="map-section">
+<<<<<<< HEAD
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d222.5025393089399!2d75.76394306045302!3d26.838660024305852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db51bd1cf3183%3A0xa513eaa0701b81ec!2sGATECODE%20TECHNOLOGIES%20PVT.%20LTD.!5e0!3m2!1sen!2sin!4v1791019481229!5m2!1sen!2sin"
           width="100%"
@@ -473,6 +482,23 @@ const ContactPage = () => {
           loading="lazy"
           referrerPolicy="strict-origin-when-cross-origin"
           title="GATECODE TECHNOLOGIES PVT. LTD. Location"
+=======
+        <div className="map-overlay">
+          <div className="map-info">
+            <h3>Find Us On Google Maps</h3>
+            <button className="view-map-btn" onClick={handleGetDirections}>
+              Get Directions
+            </button>
+          </div>
+        </div>
+        <Image
+          src="/images/contact-map-bg.webp"
+          alt="GATECODE TECHNOLOGIES PVT. LTD. Location Map"
+          className="map-placeholder-img"
+          width={2000}
+          height={600}
+          priority
+>>>>>>> c2e3181 (Update Google Maps directions link in contact section)
         />
       </section>
     </div>

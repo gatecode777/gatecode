@@ -10,22 +10,37 @@ const CollaborationClients = () => {
             <p className="cc-subtitle">Stronger Together for Better Solutions</p>
           </div>
 
-          <div className="cc-rmax">
-            <Image 
-              src="/images/rmax.webp" 
-              alt="Rmax Solutions Partnership Logo - Gatecode Technologies" 
-              width={180} 
-              height={60} 
-              className="cc-rmax-logo" 
-              style={{ width: 'auto', height: 'auto' }}
-            />
+          <div className="cc-collab-logos">
+            <div className="cc-collab-logo-item">
+              <Image 
+                src="/images/rmax.webp" 
+                alt="Rmax Solutions Partnership Logo - Gatecode Technologies" 
+                width={135} 
+                height={61} 
+                className="cc-collab-logo cc-logo-rmax" 
+                style={{ width: 'auto', height: 'auto' }}
+                priority
+              />
+            </div>
+            <div className="cc-collab-logo-divider" aria-hidden="true" />
+            <div className="cc-collab-logo-item">
+              <Image 
+                src="/images/Cars24 new logo.svg" 
+                alt="CARS24 Partnership Logo - Gatecode Technologies" 
+                width={175} 
+                height={36} 
+                className="cc-collab-logo cc-logo-cars24" 
+                style={{ width: 'auto', height: 'auto' }}
+                unoptimized
+                priority
+              />
+            </div>
           </div>
 
           <p className="cc-desc">
-            Gatecode Technologies Pvt. Ltd. collaborates with Rmax Solutions, a trusted manufacturer of innovative
-            products such as napkin incinerator machines and GPS-based solutions. This partnership enables us to
-            integrate smart technology with reliable hardware solutions, delivering efficient, practical,
-            and scalable outcomes for businesses and institutions.
+            Gatecode Technologies Pvt. Ltd. collaborates with industry leaders like{' '}
+            <strong className="cc-partner-highlight">Rmax Solutions</strong> and{' '}
+            <strong className="cc-partner-highlight">CARS24</strong> to deliver tailored, high-impact business solutions. In partnership with Rmax Solutions, we integrate smart technology with innovative hardware such as napkin incinerators and GPS tracking systems. Alongside CARS24, we deliver dedicated BPO services and operational excellence—ensuring efficient, reliable, and scalable outcomes for modern enterprises.
           </p>
         </div>
 

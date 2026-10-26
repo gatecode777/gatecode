@@ -54,6 +54,52 @@
 
 }
 
+.cc-collab-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  margin: 28px auto 30px;
+  flex-wrap: wrap;
+}
+
+.cc-collab-logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cc-collab-logo-item:hover {
+  transform: translateY(-3px) scale(1.03);
+}
+
+.cc-logo-rmax {
+  width: auto;
+  height: 56px;
+  max-height: 60px;
+  object-fit: contain;
+}
+
+.cc-logo-cars24 {
+  width: auto;
+  height: 36px;
+  max-height: 38px;
+  max-width: 175px;
+  object-fit: contain;
+}
+
+.cc-collab-logo-divider {
+  width: 1px;
+  height: 42px;
+  background: #e2e8f0;
+}
+
+.cc-partner-highlight {
+  color: #111827;
+  font-weight: 600;
+}
+
 .cc-rmax {
   display: flex;
   justify-content: center;
@@ -71,9 +117,11 @@
   font-style: Regular;
   font-size: 18px;
   line-height: 1.7;
-  letter-spacing: 5%;
+  letter-spacing: 0.01em;
   text-align: center;
   color: #444;
+  max-width: 980px;
+  margin: 0 auto;
 }
 
 .cc-divider {
@@ -173,5 +221,47 @@
 
   .cc-clients-image {
     max-width: 120px;
+  }
+
+  .cc-collab-logos {
+    gap: 28px;
+    margin: 20px auto 22px;
+  }
+
+  .cc-logo-rmax {
+    height: 48px;
+  }
+
+  .cc-logo-cars24 {
+    height: 30px;
+    max-width: 150px;
+  }
+
+  .cc-collab-logo-divider {
+    height: 34px;
+  }
+
+  .cc-desc {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+}
+
+@media (max-width: 480px) {
+  .cc-collab-logos {
+    gap: 18px;
+  }
+
+  .cc-logo-rmax {
+    height: 40px;
+  }
+
+  .cc-logo-cars24 {
+    height: 25px;
+    max-width: 125px;
+  }
+
+  .cc-collab-logo-divider {
+    height: 28px;
   }
 }
