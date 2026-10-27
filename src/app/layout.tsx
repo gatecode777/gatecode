@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import {
-  plusJakartaSans,
-  castoroTitling,
-  robotoFlex,
-  inter,
-  arimo,
-} from "./fonts";
+import "@fontsource-variable/plus-jakarta-sans";
+import "@fontsource/castoro-titling";
+import "@fontsource-variable/roboto-flex";
+import "@fontsource-variable/inter";
+import "@fontsource-variable/arimo";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -27,10 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="en"
-      className={`${plusJakartaSans.variable} ${castoroTitling.variable} ${robotoFlex.variable} ${inter.variable} ${arimo.variable}`}
-    >
+    <html lang="en">
       <head>
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
