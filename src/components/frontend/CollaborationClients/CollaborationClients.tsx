@@ -40,7 +40,7 @@ const CollaborationClients = () => {
           <p className="cc-desc">
             Gatecode Technologies Pvt. Ltd. collaborates with industry leaders like{' '}
             <strong className="cc-partner-highlight">Rmax Solutions</strong> and{' '}
-            <strong className="cc-partner-highlight">CARS24</strong> to deliver tailored, high-impact business solutions. In partnership with Rmax Solutions, we integrate smart technology with innovative hardware such as napkin incinerators and GPS tracking systems. Alongside CARS24, we deliver dedicated BPO services and operational excellence—ensuring efficient, reliable, and scalable outcomes for modern enterprises.
+            <strong className="cc-partner-highlight">CARS24</strong> to deliver tailored, high-impact business solutions. In partnership with Rmax Solutions, we integrate smart technology with innovative hardware such as napkin incinerators and GPS tracking systems. As a strategic business expansion partner for CARS24, we deliver enterprise business process management and operational excellence—ensuring efficient, reliable, and scalable outcomes for modern enterprises.
           </p>
         </div>
 
