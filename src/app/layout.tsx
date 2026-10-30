@@ -32,33 +32,20 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
       </head>
       <body>
-        {/* Google Tag Manager — loaded on idle in production, skipped on localhost to maintain 100% audit performance */}
-        <Script id="gtm-init" strategy="lazyOnload">
+        {/* Google tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-W2K68Y59QF"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
           {`
-            if (typeof window !== 'undefined' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
-              window.dataLayer = window.dataLayer || [];
-              window.dataLayer.push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-              });
-              function gtag(){dataLayer.push(arguments);}
-              var s = document.createElement('script');
-              s.async = true;
-              s.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-PSVZ559Q';
-              document.head.appendChild(s);
-            }
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-W2K68Y59QF');
           `}
         </Script>
-
-        {/* Google Tag Manager (noscript) */}
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-PSVZ559Q"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          />
-        </noscript>
 
         {children}
       </body>
