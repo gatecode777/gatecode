@@ -8,8 +8,8 @@ import './frontend.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://gatecode.in'),
-  title: 'Best It Services Company In Jaipur | Gatecode Technologies',
-  description: 'Gatecode Technologies, a trusted IT service company in Jaipur, delivers web, software & cloud solutions to 100+ businesses. Get a free quote now!',
+  title: 'Best Software Development Company | It Solutions',
+  description: 'Looking for the best software development companies? We provide top-tier IT software development services to scale and transform your business.',
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
@@ -18,8 +18,8 @@ export const metadata: Metadata = {
     apple: '/images/favicon.png',
   },
   openGraph: {
-    title: 'Best It Services Company In Jaipur | Gatecode Technologies',
-    description: 'Gatecode Technologies, a trusted IT service company in Jaipur, delivers web, software & cloud solutions to 100+ businesses. Get a free quote now!',
+    title: 'Best Software Development Company | It Solutions',
+    description: 'Looking for the best software development companies? We provide top-tier IT software development services to scale and transform your business.',
     url: 'https://gatecode.in',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best It Services Company In Jaipur | Gatecode Technologies',
-    description: 'Gatecode Technologies, a trusted IT service company in Jaipur, delivers web, software & cloud solutions to 100+ businesses. Get a free quote now!',
+    title: 'Best Software Development Company | It Solutions',
+    description: 'Looking for the best software development companies? We provide top-tier IT software development services to scale and transform your business.',
   },
 };
 

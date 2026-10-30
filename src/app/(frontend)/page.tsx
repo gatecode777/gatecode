@@ -17,8 +17,8 @@ const ContactSection = dynamic(() => import('@/components/frontend/ContactSectio
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: 'Best It Services Company In Jaipur | Gatecode Technologies',
-  description: 'Gatecode Technologies, a trusted IT service company in Jaipur, delivers web, software & cloud solutions to 100+ businesses. Get a free quote now!',
+  title: 'Best Software Development Company | It Solutions',
+  description: 'Looking for the best software development companies? We provide top-tier IT software development services to scale and transform your business.',
   keywords: [
     'it solution company',
     'best it company',
