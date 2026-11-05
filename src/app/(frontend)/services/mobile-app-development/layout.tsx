@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     canonical: '/services/mobile-app-development',
   },
   openGraph: {
+    images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'Mobile App Development Services In Jaipur | Android & Ios Apps',
     description: 'Mobile app development services for custom Android & iOS apps with innovative designs, advanced features, and scalable solutions for businesses.',
     url: 'https://gatecode.in/services/mobile-app-development',
@@ -30,6 +31,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: {
+    images: ['/images/og-default.webp'],
     card: 'summary_large_image',
     title: 'Mobile App Development Services In Jaipur | Android & Ios Apps',
     description: 'Mobile app development services for custom Android & iOS apps with innovative designs, advanced features, and scalable solutions for businesses.',

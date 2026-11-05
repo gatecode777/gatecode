@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     canonical: 'https://gatecode.in/internship',
   },
   openGraph: {
+    images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'IT & Software Internship Program in India | Gatecode Technologies',
     description: 'Kickstart your IT career with the Gatecode Technologies internship program. Gain hands-on live project experience, mentorship in software development, web design & digital marketing.',
     url: 'https://gatecode.in/internship',
@@ -31,6 +32,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: {
+    images: ['/images/og-default.webp'],
     card: 'summary_large_image',
     title: 'IT & Software Internship Program in India | Gatecode Technologies',
     description: 'Kickstart your IT career with the Gatecode Technologies internship program.',

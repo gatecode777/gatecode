@@ -34,6 +34,7 @@ export const metadata: Metadata = {
     canonical: 'https://gatecode.in/portfolio',
   },
   openGraph: {
+    images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'Web & Software Development Portfolio | Gatecode Tech',
     description: 'Explore the Gatecode Technologies portfolio showcasing custom web development, mobile app engineering, UI/UX design, and digital marketing success stories.',
     url: 'https://gatecode.in/portfolio',
@@ -42,6 +43,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: {
+    images: ['/images/og-default.webp'],
     card: 'summary_large_image',
     title: 'Web & Software Development Portfolio | Gatecode Tech',
     description: 'Explore the Gatecode Technologies portfolio showcasing custom web development, mobile app engineering, and UI/UX design.',

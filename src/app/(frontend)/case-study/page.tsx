@@ -37,6 +37,7 @@ export const metadata: Metadata = {
     canonical: 'https://gatecode.in/case-study',
   },
   openGraph: {
+    images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'IT Case Studies & Client Success Stories | Gatecode Technologies',
     description: 'Explore software development case studies, IT success stories, and custom web & mobile app engineering solutions delivered by Gatecode Technologies.',
     url: 'https://gatecode.in/case-study',
@@ -45,6 +46,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: {
+    images: ['/images/og-default.webp'],
     card: 'summary_large_image',
     title: 'IT Case Studies & Client Success Stories | Gatecode Technologies',
     description: 'Explore software development case studies, IT success stories, and custom web & mobile app engineering solutions.',

@@ -38,6 +38,7 @@ export const metadata: Metadata = {
     canonical: 'https://gatecode.in/about',
   },
   openGraph: {
+    images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'About Gatecode Technologies | Top IT Software Company in India',
     description: 'Learn about Gatecode Technologies Pvt Ltd. Recognized among the top IT companies in India, we deliver digital transformation services, custom software engineering & IT solutions.',
     url: 'https://gatecode.in/about',
@@ -46,6 +47,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: {
+    images: ['/images/og-default.webp'],
     card: 'summary_large_image',
     title: 'About Gatecode Technologies | Top IT Software Company in India',
     description: 'Learn about Gatecode Technologies Pvt Ltd. Recognized among the top IT companies in India, we deliver digital transformation services and IT solutions.',

@@ -24,6 +24,7 @@ export const metadata: Metadata = {
     canonical: 'https://gatecode.in/expertise/ui-ux-designers',
   },
   openGraph: {
+    images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'Hire Dedicated UI/UX Designers in India | Gatecode',
     description: 'Looking to hire UI UX designer talent? Gatecode Technologies is a premier UI UX design company providing custom web & mobile app UI UX design services, Figma prototyping, and expert UI UX developers.',
     url: 'https://gatecode.in/expertise/ui-ux-designers',
@@ -32,6 +33,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: {
+    images: ['/images/og-default.webp'],
     card: 'summary_large_image',
     title: 'Hire Dedicated UI/UX Designers in India | Gatecode',
     description: 'Looking to hire UI UX designer talent? Gatecode Technologies is a premier UI UX design company providing custom web & mobile app UI UX design services.',

@@ -25,6 +25,7 @@ export const metadata: Metadata = {
     canonical: 'https://gatecode.in/expertise/digital-marketer',
   },
   openGraph: {
+    images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'Hire Dedicated Digital Marketers & SEO Experts | Gatecode',
     description: 'Looking for the best digital marketing agency or digital marketing company in India? Gatecode Technologies provides top digital marketing services, SEO specialist hiring, PPC ads & performance growth marketing.',
     url: 'https://gatecode.in/expertise/digital-marketer',
@@ -33,6 +34,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: {
+    images: ['/images/og-default.webp'],
     card: 'summary_large_image',
     title: 'Hire Dedicated Digital Marketers & SEO Experts | Gatecode',
     description: 'Looking for the best digital marketing agency or digital marketing company in India? Gatecode Technologies provides top digital marketing services and SEO expertise.',

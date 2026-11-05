@@ -15,6 +15,13 @@ const nextConfig: NextConfig = {
     unoptimized: false,
   },
   compress: true,
+  // Real server-side 308s (crawlers see them, unlike a client-side router.replace)
+  async redirects() {
+    return [
+      { source: '/blog/detail', destination: '/blog', permanent: true },
+      { source: '/case-study-detail', destination: '/case-study', permanent: true },
+    ];
+  },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production' ? { exclude: ['error'] } : false,
   },

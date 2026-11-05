@@ -25,6 +25,7 @@ export const metadata: Metadata = {
     canonical: 'https://gatecode.in/engagement-process',
   },
   openGraph: {
+    images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'Software Engagement Process & Models | Gatecode Tech',
     description: 'Discover the transparent software engagement process at Gatecode Technologies. Explore our agile IT development workflows, dedicated engineering teams, and fixed-price project models.',
     url: 'https://gatecode.in/engagement-process',
@@ -33,6 +34,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: {
+    images: ['/images/og-default.webp'],
     card: 'summary_large_image',
     title: 'Software Engagement Process & Models | Gatecode Tech',
     description: 'Discover the transparent software engagement process at Gatecode Technologies. Explore our agile IT development workflows.',

@@ -31,6 +31,7 @@ export const metadata: Metadata = {
     canonical: 'https://gatecode.in/expertise/app-developers',
   },
   openGraph: {
+    images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'Dedicated App Developers in India | Android & iOS Team',
     description: 'Dedicated app developers delivering Android, iOS, and cross-platform solutions with expert teams, scalable technology, and reliable development support.',
     url: 'https://gatecode.in/expertise/app-developers',
@@ -39,6 +40,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: {
+    images: ['/images/og-default.webp'],
     card: 'summary_large_image',
     title: 'Dedicated App Developers in India | Android & iOS Team',
     description: 'Dedicated app developers delivering Android, iOS, and cross-platform solutions with expert teams, scalable technology, and reliable development support.',

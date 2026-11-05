@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     canonical: '/services/software-development/scalable-solutions',
   },
   openGraph: {
+    images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'Best Business Software Solutions Service In Jaipur',
     description:
       'Smart Software Solution Services, Providing Enterprise, Sap, Automotive, Shipping, And Business Software Solutions For Scalable Digital Growth.',
@@ -27,6 +28,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: {
+    images: ['/images/og-default.webp'],
     card: 'summary_large_image',
     title: 'Best Business Software Solutions Service In Jaipur',
     description:

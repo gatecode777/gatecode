@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     canonical: 'https://gatecode.in/careers',
   },
   openGraph: {
+    images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'Careers & IT Job Openings in India | Gatecode Technologies',
     description: 'Join Gatecode Technologies Pvt Ltd. Explore current IT job openings for software developers, web developers, UI/UX designers, and digital marketing experts in India.',
     url: 'https://gatecode.in/careers',
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: {
+    images: ['/images/og-default.webp'],
     card: 'summary_large_image',
     title: 'Careers & IT Job Openings in India | Gatecode Technologies',
     description: 'Join Gatecode Technologies Pvt Ltd. Explore current IT job openings for software developers and designers.',

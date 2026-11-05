@@ -24,11 +24,36 @@ export async function generateMetadata({ params }): Promise<Metadata> {
     return {};
   }
 
+  const title = `${post.title} | Gatecode Technologies Blog`;
+  const description = post.shortDesc || post.subtitle || 'Read our latest blog post.';
+  const url = `https://gatecode.in/blog/${slug}`;
+  // Admin-set OG image first, then the cover image, then the site-wide card
+  const image = post.ogImage || post.coverImage || '/images/og-default.webp';
+  const images = [{ url: image, alt: post.coverImageAlt || post.title }];
+
   return {
-    title: `${post.title} | Gatecode Technologies Blog`,
-    description: post.shortDesc || post.subtitle || 'Read our latest blog post.',
+    title,
+    description,
     alternates: {
       canonical: `/blog/${slug}`,
+    },
+    openGraph: {
+      type: 'article',
+      title,
+      description,
+      url,
+      siteName: 'Gatecode Technologies',
+      locale: 'en_US',
+      images,
+      publishedTime: (post.publishedAt || post.createdAt)?.toISOString?.(),
+      modifiedTime: post.updatedAt?.toISOString?.(),
+      authors: post.authorName ? [post.authorName] : undefined,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [image],
     },
   };
 }

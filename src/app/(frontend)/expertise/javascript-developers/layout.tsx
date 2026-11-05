@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     canonical: 'https://gatecode.in/expertise/javascript-developers',
   },
   openGraph: {
+    images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'Hire Full Stack JavaScript Developers | Gatecode Tech',
     description: 'Looking to hire javascript developer talent? Gatecode Technologies is a premier javascript web development company providing full stack development with javascript, frontend UI, Node.js backend & custom javascript app development.',
     url: 'https://gatecode.in/expertise/javascript-developers',
@@ -27,6 +28,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: {
+    images: ['/images/og-default.webp'],
     card: 'summary_large_image',
     title: 'Hire Full Stack JavaScript Developers | Gatecode Tech',
     description: 'Looking to hire javascript developer talent? Gatecode Technologies is a premier javascript web development company providing full stack development with javascript.',

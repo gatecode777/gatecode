@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     canonical: '/services/accounting',
   },
   openGraph: {
+    images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'Accounting and Bookkeeping Services | Accounting Firm in India',
     description: 'Gatecode Technologies is a leading accounting services company in India providing outsourced accounting and bookkeeping services, GST filing, and payroll management services.',
     url: 'https://gatecode.in/services/accounting',
@@ -30,6 +31,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: {
+    images: ['/images/og-default.webp'],
     card: 'summary_large_image',
     title: 'Accounting and Bookkeeping Services | Accounting Firm in India',
     description: 'Gatecode Technologies is a leading accounting services company in India providing outsourced accounting and bookkeeping services, GST filing, and payroll management services.',

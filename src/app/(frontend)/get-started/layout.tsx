@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     canonical: 'https://gatecode.in/get-started',
   },
   openGraph: {
+    images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'Get Started | Hire Software & Web Developers | Gatecode',
     description: 'Start your digital transformation journey with Gatecode Technologies. Share your requirements for custom software development, web & mobile app engineering, and digital solutions.',
     url: 'https://gatecode.in/get-started',
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: {
+    images: ['/images/og-default.webp'],
     card: 'summary_large_image',
     title: 'Get Started | Hire Software & Web Developers | Gatecode',
     description: 'Start your digital transformation journey with Gatecode Technologies. Share your requirements for custom software development.',

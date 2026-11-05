@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     apple: '/images/favicon.png',
   },
   openGraph: {
+    images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'Best Software Development Company | It Solutions',
     description: 'Looking for the best software development companies? We provide top-tier IT software development services to scale and transform your business.',
     url: 'https://gatecode.in',
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: {
+    images: ['/images/og-default.webp'],
     card: 'summary_large_image',
     title: 'Best Software Development Company | It Solutions',
     description: 'Looking for the best software development companies? We provide top-tier IT software development services to scale and transform your business.',

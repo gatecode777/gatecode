@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     canonical: '/services/web-development/cms-website-development',
   },
   openGraph: {
+    images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'Best Wordpress Website Development Services In Jaipur',
     description:
       'Get Expert Wordpress Website Design, Development, Maintenance And Ecommerce Services To Build A Fast, Secure And Professional Business Website.',
@@ -29,6 +30,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: {
+    images: ['/images/og-default.webp'],
     card: 'summary_large_image',
     title: 'Best Wordpress Website Development Services In Jaipur',
     description:

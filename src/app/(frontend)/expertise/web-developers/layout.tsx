@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     canonical: '/expertise/web-developers',
   },
   openGraph: {
+    images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'Hire Dedicated Web Developers | Full Stack Web Developer Team',
     description: 'Hire dedicated web developers in India from Gatecode Technologies. Top web development agency offering full stack, front end, back end, and custom web app developers.',
     url: 'https://gatecode.in/expertise/web-developers',
@@ -34,6 +35,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: {
+    images: ['/images/og-default.webp'],
     card: 'summary_large_image',
     title: 'Hire Dedicated Web Developers | Full Stack Web Developer Team',
     description: 'Hire dedicated web developers in India from Gatecode Technologies. Top web development agency offering full stack, front end, back end, and custom web app developers.',

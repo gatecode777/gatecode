@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     canonical: '/services/ui-ux-design',
   },
   openGraph: {
+    images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'UI/UX Design Agency in India | UI/UX Design Services',
     description: 'Gatecode Technologies is a premier UI/UX design company in India offering UI/UX design services, mobile app UI/UX design, and wireframing and prototyping.',
     url: 'https://gatecode.in/services/ui-ux-design',
@@ -29,6 +30,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: {
+    images: ['/images/og-default.webp'],
     card: 'summary_large_image',
     title: 'UI/UX Design Agency in India | UI/UX Design Services',
     description: 'Gatecode Technologies is a premier UI/UX design company in India offering UI/UX design services, mobile app UI/UX design, and wireframing and prototyping.',
