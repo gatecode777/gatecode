@@ -27,7 +27,7 @@ const DigitalHero = () => {
             WEB<br />DEVELOPMENT<br />SERVICES
           </h1>
           <p className="dm-hero-subtitle">
-            We engineer high-performance, secure, and responsive web solutions tailored to your business goals, delivering intuitive digital experiences that engage audiences and drive sustained growth.
+            We engineer high-performance, secure, and responsive web solutions tailored to your business goals, delivering intuitive digital experiences that engage audiences, making us the best website development company in Jaipur.
           </p>
           <Link href="/contact" className="dm-cta-button">
             Get Free Consultation
@@ -44,7 +44,7 @@ const DigitalAbout = () => {
     <section className="dm-about-section">
       <div className="dm-container">
         <p className="dm-about-text">
-          At Gatecode Technologies Pvt. Ltd., we engineer custom web solutions rooted in modern architectural standards, reliable performance, and conversion-focused user experiences. We take time to analyze your operational workflows, target audience expectations, and technical needs before writing a single line of code, ensuring every digital product aligns precisely with your strategic goals.
+          Recognized as the best website development company in Jaipur, Gatecode Technologies Pvt. Ltd. engineers custom web solutions rooted in modern architectural standards, reliable performance, and conversion-focused user experiences. We take time to analyze your operational workflows, target audience expectations, and technical needs before writing a single line of code, ensuring every digital product aligns precisely with your strategic goals.
         </p>
         <p className="dm-about-text" style={{ marginTop: '16px' }}>
           From custom corporate websites and high-converting e-commerce platforms to complex web applications and portal architectures, our development methodology emphasizes clean code, lightning-fast load times, mobile responsiveness, and airtight security. We build digital assets that not only look remarkable but also scale effortlessly as your enterprise grows.
@@ -156,6 +156,33 @@ const DigitalServices = () => {
             </div>
           ))}
         </div>
+        <div style={{ textAlign: 'center', marginTop: '50px' }}>
+          <h3 style={{
+            fontFamily: "'Inter', sans-serif",
+            fontSize: 'clamp(20px, 2.2vw, 26px)',
+            fontWeight: 600,
+            color: '#1a1a1a',
+            marginBottom: '20px',
+            lineHeight: 1.4,
+            maxWidth: '850px',
+            marginLeft: 'auto',
+            marginRight: 'auto'
+          }}>
+            Partner with the best website development company in Jaipur to transform your digital presence.
+          </h3>
+          <Link
+            href="/contact"
+            className="dm-cta-button"
+            style={{
+              borderColor: '#041230',
+              color: '#041230',
+              backgroundColor: '#fbff06',
+              fontWeight: 600,
+            }}
+          >
+            Get Free Consultation
+          </Link>
+        </div>
       </div>
     </section>
   );
@@ -176,13 +203,13 @@ const DigitalWhyChoose = () => {
     <section className="dm-why-choose-section">
       <div className="dm-container">
         <h2 className="dm-section-title dm-section-header-left">
-          Why Choose Our Web Development Services
+          Why Choose the Best Website Development Company in Jaipur?
         </h2>
         <p className="dm-about-text dm-about-text-left">
           Off-the-shelf templates and rigid site builders often fall short when your business reaches scale. They introduce unnecessary code bloat, restrictive plugin dependencies, performance bottlenecks, and security vulnerabilities that hinder user experience and conversion rates.
         </p>
         <p className="dm-about-text dm-about-text-left" style={{ marginTop: '16px' }}>
-          At Gatecode Technologies, our engineering methodology centers on precision, scalability, and business outcomes. Having engineered bespoke web solutions for enterprises across diverse sectors—including e-commerce, fintech, manufacturing, healthcare, and education—we construct custom architectures engineered for speed, search visibility, and seamless third-party integrations.
+          At Gatecode Technologies, our position as the best website development company in Jaipur means our engineering methodology centers on precision, scalability, and business outcomes. Having engineered bespoke web solutions for enterprises across diverse sectors—including e-commerce, fintech, manufacturing, healthcare, and education—we construct custom architectures engineered for speed, search visibility, and seamless third-party integrations.
         </p>
 
         <div className="dm-why-choose-layout">
