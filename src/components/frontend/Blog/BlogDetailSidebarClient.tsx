@@ -95,7 +95,7 @@ export default function BlogDetailSidebarClient({ categories, activeCategory, sl
         activeCategory={activeCategory}
         setActiveCategory={(name) => {
           const found = categories.find(c => c.name === name);
-          router.push(found?.slug && found.slug !== 'all' ? `/blog?category=${found.slug}` : '/blog');
+          router.push(found?.slug && found.slug !== 'all' ? `/blog/category/${found.slug}` : '/blog');
         }}
       />
 

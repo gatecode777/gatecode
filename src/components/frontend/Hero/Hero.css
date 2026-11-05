@@ -150,7 +150,8 @@
 }
 
 .stat-item h3,
-.stat-item h4 {
+.stat-item h4,
+.stat-item .stat-value {
     font-family: var(--font-roboto-flex, "Roboto Flex"), sans-serif;
     font-weight: 300;
     font-size: 40px;
@@ -308,7 +309,7 @@
         font-size: 50px;
         line-height: 1.18;
         letter-spacing: 0.04em;
-        margin-bottom: 12px;
+        margin-bottom: 0; /* the 12px gap now sits on the nested .hero-subtitle (it lives inside the h1) */
     }
 
     .hero-title br {
@@ -322,7 +323,7 @@
         font-size: 20px;
         line-height: 1.4;
         letter-spacing: 0.04em;
-        margin-top: 0;
+        margin-top: 12px;
         margin-bottom: 14px;
         color: #fff708c9;
         max-width: 720px;
@@ -365,7 +366,8 @@
     }
 
     .stat-item h3,
-    .stat-item h4 {
+    .stat-item h4,
+    .stat-item .stat-value {
         font-size: 36px;
         line-height: 1;
         margin: 0;
@@ -415,7 +417,8 @@
     }
 
     .stat-item h3,
-    .stat-item h4 {
+    .stat-item h4,
+    .stat-item .stat-value {
         font-size: 32px;
     }
 
@@ -469,7 +472,8 @@
     }
 
     .stat-item h3,
-    .stat-item h4 {
+    .stat-item h4,
+    .stat-item .stat-value {
         font-size: 28px;
     }
 
@@ -537,7 +541,8 @@
     }
 
     .stat-item h3,
-    .stat-item h4 {
+    .stat-item h4,
+    .stat-item .stat-value {
         font-size: 26px;
         line-height: 1;
         margin: 0;
@@ -580,7 +585,8 @@
     }
 
     .stat-item h3,
-    .stat-item h4 {
+    .stat-item h4,
+    .stat-item .stat-value {
         font-size: 24px;
     }
 
@@ -628,7 +634,8 @@
     }
 
     .stat-item h3,
-    .stat-item h4 {
+    .stat-item h4,
+    .stat-item .stat-value {
         font-size: 22px;
     }
 
@@ -669,7 +676,8 @@
     }
 
     .stat-item h3,
-    .stat-item h4 {
+    .stat-item h4,
+    .stat-item .stat-value {
         font-size: 20px;
     }
 

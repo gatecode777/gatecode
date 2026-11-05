@@ -4,6 +4,7 @@ import connectDB from '@/lib/db';
 import BlogPost from '@/models/BlogPost';
 import BlogCategory from '@/models/BlogCategory';
 import type { ApiResponse } from '@/types';
+import { RESERVED_SLUGS } from '@/lib/blogReservedSlugs';
 
 function auth(req: NextRequest) { const t = req.cookies.get(COOKIE_NAME)?.value; return t ? verifyToken(t) : null; }
 type Ctx = { params: Promise<{ id: string }> };
@@ -32,6 +33,7 @@ export async function PATCH(req: NextRequest, { params }: Ctx) {
     const { id } = await params; await connectDB();
     const body = await req.json();
     if (body.slug) body.slug = body.slug.trim().toLowerCase();
+    if (body.slug && RESERVED_SLUGS.includes(body.slug)) return NextResponse.json<ApiResponse>({ success:false, message:'This slug is reserved for blog routes. Please choose another.' }, { status:422 });
     if ('categoryId' in body) {
       body.categoryId = body.categoryId && body.categoryId !== '' && body.categoryId !== 'null' ? body.categoryId : null;
     }

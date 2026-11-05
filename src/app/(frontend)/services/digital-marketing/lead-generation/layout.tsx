@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     canonical: '/services/digital-marketing/lead-generation',
   },
   openGraph: {
+    images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'Top-rated Lead Generation Company & Services Agency',
     description:
       'Looking for a top lead generation company? Our lead generation agency provides expert lead generation services to boost sales for small businesses',
@@ -25,6 +26,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: {
+    images: ['/images/og-default.webp'],
     card: 'summary_large_image',
     title: 'Top-rated Lead Generation Company & Services Agency',
     description:

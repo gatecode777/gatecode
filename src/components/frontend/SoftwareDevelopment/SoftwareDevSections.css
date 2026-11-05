@@ -1,0 +1,109 @@
+/* Sections added to /services/software-development (reuse the dm- layout classes) */
+.sd-section {
+  padding: 50px 0;
+  background-color: #ffffff;
+}
+
+.sd-section--alt {
+  background-color: #fcfcfc;
+}
+
+.sd-lead {
+  max-width: 900px;
+  text-align: center;
+}
+
+/* Technologies */
+.sd-tech-grid {
+  list-style: none;
+  margin: 30px 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.sd-tech-item {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #1a1a1a;
+  background: #ffffff;
+  border: 1px solid #4e7c7e;
+  border-radius: 999px;
+  padding: 10px 22px;
+}
+
+/* 2026 trends */
+.sd-trend-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.sd-trend-card {
+  padding: 24px;
+  background: #f9fafb;
+  border-radius: 12px;
+  border-left: 4px solid #4e7c7e;
+}
+
+.sd-trend-card h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 10px;
+}
+
+.sd-trend-card p {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+  margin: 0;
+}
+
+/* Company details */
+.sd-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin: 30px 0 0;
+}
+
+.sd-fact {
+  padding: 20px 24px;
+  background: #f9fafb;
+  border-radius: 12px;
+  border-left: 4px solid #fbff06;
+}
+
+.sd-fact dt {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #4e7c7e;
+  margin: 0 0 6px;
+}
+
+.sd-fact dd {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .sd-section {
+    padding: 36px 0;
+  }
+  .sd-trend-grid {
+    grid-template-columns: 1fr;
+  }
+}

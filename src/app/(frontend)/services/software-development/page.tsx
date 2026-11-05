@@ -4,7 +4,24 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
-import FAQSection, { softwareDevFaqs } from '@/components/frontend/FAQSection/FAQSection';
+import FAQSection from '@/components/frontend/FAQSection/FAQSection';
+import {
+  TechnologiesWeUse,
+  CostAndTimeline,
+  SoftwareDevIn2026,
+  CompanyDetails,
+} from '@/components/frontend/SoftwareDevelopment/SoftwareDevSections';
+import {
+  CONTACT,
+  FACTS,
+  ORG_ID,
+  SITE,
+  filledList,
+  foundingYear,
+  getSoftwareDevFaqs,
+  isFilled,
+  jsonLd,
+} from '@/components/frontend/SoftwareDevelopment/content';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component (Updated for Software Development Services) ====================
@@ -18,7 +35,7 @@ const DigitalHero = () => {
       <div className="dm-container dm-hero-content">
         <div className="dm-hero-text-wrapper">
           <h1 className="dm-hero-title">
-            SOFTWARE<br />DEVELOPMENT<br />SERVICES
+            Software <br />Development <br />Company in Jaipur
           </h1>
           <p className="dm-hero-subtitle">
             We architect secure, scalable, and custom software systems designed to automate complex workflows, connect business applications, and fuel sustainable operational growth.
@@ -41,7 +58,7 @@ const DigitalAbout = () => {
           At Gatecode Technologies Pvt. Ltd., we engineer software solutions around the way your organization actually functions. Before writing code or selecting frameworks, our technical consultants thoroughly analyze your operational bottlenecks, user roles, data flows, and commercial goals. This disciplined discovery process eliminates unnecessary feature bloat, delivering purposeful software that empowers your workforce and satisfies your users.
         </p>
         <p className="dm-about-text" style={{ marginTop: '16px' }}>
-          From custom enterprise software, workflow automation portals, and cloud-native systems to integrated CRM and ERP architectures, we build secure, maintainable software engineered for real-world resilience. Our development practices prioritize modular microservices, clean APIs, role-based security, and future-proof flexibility, ensuring your digital infrastructure scales seamlessly alongside your business expansion.
+          From custom enterprise software, workflow automation portals, and cloud-native systems to integrated CRM and ERP architectures, we build secure, maintainable software engineered for real-world resilience. Our development practices prioritize modular microservices, clean APIs, role-based security, and future-proof flexibility, ensuring your digital infrastructure scales seamlessly alongside your business expansion. Based in Jaipur, we work with clients in the city, across India and internationally.
         </p>
       </div>
     </section>
@@ -319,17 +336,17 @@ const SeoContentSection = () => {
           <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
             Premier Custom Software Development Company in India
           </h2>
-          
+
           <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Welcome to <strong>Gatecode Technologies</strong>, a leading <strong>custom software development company in India</strong> providing end-to-end <strong>software development services</strong> for global enterprises, mid-sized firms, and fast-growing tech startups. As a trusted <strong>software development company</strong>, our expert team of <strong>software developer</strong> specialists builds secure, robust, and scalable <strong>b2b software</strong> architectures tailored to streamline your operations and drive sustainable business growth.
+            Gatecode Technologies is a Jaipur-based software development company that builds custom software for enterprises, mid-sized businesses and startups across India and abroad. Our team designs secure, scalable applications that fit the way your business actually works, from internal tools and customer portals to systems that connect the platforms you already use.
           </p>
 
           <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Enterprise Application Software & Custom Software Development Services
+            Enterprise Applications and Custom Software
           </h3>
-          
+
           <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Delivering high-performance <strong>custom software development services</strong> requires deep industry knowledge and technical precision. We excel in <strong>enterprise software development</strong> and <strong>software application development services</strong>, engineering mission-critical <strong>enterprise application software</strong> that automates internal workflows, enhances data security, and scales effortlessly alongside organizational expansion.
+            Good enterprise software depends on understanding the work it supports. We start by learning how your teams operate, then build applications that automate internal workflows, protect sensitive data and keep performing as your organization grows.
           </p>
 
           {/* Key Feature Highlight Cards */}
@@ -337,37 +354,37 @@ const SeoContentSection = () => {
             <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
               <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Custom CRM Development Services</h4>
               <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Manage customer relationships, automated lead funnels, and sales pipelines efficiently with our custom tailored <strong>custom crm development services</strong>.
+                Manage customer relationships, lead funnels and sales pipelines in a CRM built around your own sales process.
               </p>
             </div>
-            
+
             <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
               <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>ERP Software Development Services</h4>
               <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Unify organizational databases, inventory tracking, financial ledgers, and human resources with robust <strong>erp software development services</strong>.
+                Bring inventory, finance, HR and operational data together in one system that your teams can rely on.
               </p>
             </div>
 
             <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
               <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Embedded Software Development Services</h4>
               <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Build high-reliability firmware, IoT solutions, and system-level applications with our <strong>embedded software development services</strong>.
+                Develop dependable firmware, IoT solutions and system-level applications for connected devices.
               </p>
             </div>
           </div>
 
           <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Choose Gatecode as Your Custom Software Development Company in India?
+            Why Choose Gatecode for Custom Software Development?
           </h3>
-          
+
           <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            When selecting a <strong>software development company in india</strong>, you need a partner with proven engineering standards. Choosing Gatecode Technologies as your preferred <strong>custom software development company</strong> guarantees:
+            Choosing a development partner is easier when you know how they work. With Gatecode you can expect:
           </p>
 
           <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Tailored Architecture:</strong> Complete custom software development without reliance on restrictive third-party templates.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Enterprise Security:</strong> Strict adherence to cloud data encryption, ISO standards, and zero-vulnerability testing.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Full Lifecycle Support:</strong> Ongoing maintenance, database optimization, and active system integrations.</li>
+            <li style={{ marginBottom: '10px' }}><strong>Tailored architecture:</strong> software designed around your requirements, not restricted by third-party templates.</li>
+            <li style={{ marginBottom: '10px' }}><strong>Security by design:</strong> data encryption, role-based access and testing built into the development process.</li>
+            <li style={{ marginBottom: '10px' }}><strong>Full lifecycle support:</strong> ongoing maintenance, database optimization and help with system integrations after launch.</li>
           </ul>
 
           {/* Smart & Scalable Software Solutions */}
@@ -455,83 +472,76 @@ const SoftwareDevelopmentServicesPage = () => {
     ],
   };
 
+  const faqs = getSoftwareDevFaqs();
+  const year = foundingYear();
+  const countries = filledList(FACTS.COUNTRIES);
+
+  // Same @id as the site-wide LocalBusiness in the frontend layout, so search engines
+  // treat both as one entity and merge the details.
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    '@id': ORG_ID,
+    name: 'Gatecode Technologies Pvt. Ltd.',
+    alternateName: 'Gatecode Technologies',
+    url: SITE,
+    logo: CONTACT.logo,
+    telephone: CONTACT.phone,
+    email: CONTACT.email,
+    address: {
+      '@type': 'PostalAddress',
+      ...(isFilled(FACTS.ADDRESS) ? { streetAddress: FACTS.ADDRESS } : {}),
+      addressLocality: 'Jaipur',
+      addressRegion: 'Rajasthan',
+      addressCountry: 'IN',
+    },
+    ...(year ? { foundingDate: String(year) } : {}),
+    ...(countries.length ? { areaServed: countries.map((name) => ({ '@type': 'Country', name })) } : {}),
+    sameAs: CONTACT.sameAs,
+  };
+
   const softwareDevSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    serviceType: 'Software Development Services',
-    name: 'Custom Software Development Company in India',
-    provider: {
-      '@type': 'Organization',
-      name: 'Gatecode Technologies Pvt. Ltd.',
-      url: 'https://gatecode.in',
-    },
-    areaServed: {
-      '@type': 'Country',
-      name: 'India',
-    },
-    description: 'Top custom software development company in India offering custom software development services, enterprise software development, SaaS product development, CRM & ERP software development.',
+    serviceType: 'Software Development',
+    name: 'Software Development Services',
+    url: `${SITE}/services/software-development`,
+    description:
+      'Custom software development, enterprise applications, CRM and ERP development, business automation and system integration for businesses in Jaipur, across India and internationally.',
+    provider: { '@type': 'LocalBusiness', '@id': ORG_ID, name: 'Gatecode Technologies Pvt. Ltd.' },
+    areaServed: [
+      { '@type': 'City', name: 'Jaipur' },
+      { '@type': 'Country', name: 'India' },
+    ],
   };
 
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'What types of Software Development services does Gatecode Technologies provide?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'We offer custom software development, enterprise solutions, SaaS platforms, and business workflow automation services. Our team designs scalable and secure software tailored specifically to your business needs, helping to enhance your operational efficiency.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'What is the difference between custom software and ready-made (off-the-shelf) software?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Ready-made software is generic and often comes with limited or rigid features. In contrast, we build 100% custom-engineered software that aligns perfectly with your unique business workflows. Custom software provides better security, high scalability, and complete control over your requirements without any unnecessary recurring licensing fees.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Can your custom software integrate with our existing systems like CRM or ERP?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, absolutely! We provide seamless API integration services. We can effectively connect your new software with your existing CRMs, ERPs, payment gateways, third-party tools, and legacy systems to ensure a smooth data flow within a unified architecture.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'What technologies do you use for software development?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'As a leading full-stack development company, we utilize a modern and robust tech stack. This includes advanced frameworks like React, Next.js, Node.js, and Python for both backend architectures and intuitive frontend interfaces, ensuring high performance, speed, and strict data security.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Do you provide post-development support and maintenance after deployment?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: "Our commitment doesn't end with software delivery. We provide end-to-end support and 24/7 maintenance services. This includes active monitoring, security patches, performance tuning, and future technical updates to ensure your software always operates at peak performance.",
-        },
-      },
-    ],
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+    })),
   };
 
   return (
     <div className="digital-marketing-page">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbSchema) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareDevSchema) }}
+        dangerouslySetInnerHTML={{ __html: jsonLd(organizationSchema) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: jsonLd(softwareDevSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLd(faqSchema) }}
       />
       <DigitalHero />
       <DigitalAbout />
@@ -540,13 +550,17 @@ const SoftwareDevelopmentServicesPage = () => {
       <DigitalProcess />
       <DigitalIndustries />
       <SeoContentSection />
+      <TechnologiesWeUse />
+      <CostAndTimeline />
+      <SoftwareDevIn2026 />
       <ContactSection />
+      <CompanyDetails />
       <FAQSection
         eyebrow="FAQS"
         titleLine1="FREQUENTLY ASKED"
         titleHighlight="QUESTIONS"
         subtitle="Everything you need to know about our custom software engineering, tech stack, API integrations, and maintenance services."
-        items={softwareDevFaqs}
+        items={faqs}
       />
     </div>
   );

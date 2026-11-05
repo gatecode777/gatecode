@@ -68,7 +68,7 @@ const AboutExpertise = () => {
               <div className="expertise-card__body">
                 <div className="expertise-card__header">
                   <span className="expertise-card__icon">{card.icon}</span>
-                  <h4>{card.title}</h4>
+                  <h3>{card.title}</h3>
                 </div>
                 <p>{card.desc}</p>
               </div>

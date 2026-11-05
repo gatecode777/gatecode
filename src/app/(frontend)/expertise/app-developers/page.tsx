@@ -426,72 +426,6 @@ const TechnologiesWeUse: React.FC = () => {
     );
 };
 
-// ==================== SeoContentSection Component (SEO Optimized Content) ====================
-const SeoContentSection = () => {
-    return (
-        <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 20px', borderTop: '1px solid #eaeaea', boxSizing: 'border-box', width: '100%' }}>
-            <div style={{ maxWidth: '1300px', margin: '0 auto', width: '100%' }}>
-                <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-                    
-                    <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-                        Hire Dedicated Mobile App Developers in India
-                    </h2>
-                    
-                    <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-                        Welcome to <strong>Gatecode Technologies</strong>, a leading <strong>mobile app development company in india</strong> recognized among the <strong>top app development companies in india</strong>. When you need to <strong>hire app developer</strong> professionals or <strong>hire mobile app developers</strong>, our team delivers high-performance native iOS, Android, and hybrid app solutions. Whether you want to <strong>hire mobile app developer in india</strong> or build a global mobile product, we rank as the <strong>best mobile app development company</strong> for enterprise brands and growing startups.
-                    </p>
-
-                    <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-                        Android, iOS & Cross-Platform Mobile App Development Company in India
-                    </h3>
-                    
-                    <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-                        Building scalable mobile applications requires expert talent across native and multi-platform frameworks. As a full-service <strong>custom app development company</strong> and specialized <strong>ecommerce app development company</strong>, we make it simple to <strong>hire dedicated mobile app developers</strong> who deliver seamless UI/UX, robust security, and cloud integrations.
-                    </p>
-
-                    {/* Key Feature Highlight Cards */}
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
-                        <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-                            <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Hire Android & iOS App Developers</h4>
-                            <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                                Work with a team certified as the <strong>best android app development company in india</strong>. Easily <strong>hire android app developer</strong> engineers or <strong>hire android app developers in india</strong> alongside expert engineers when you <strong>hire ios app developer</strong> or <strong>hire iphone app developer</strong> leads.
-                            </p>
-                        </div>
-                        
-                        <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-                            <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Flutter & React Native Developers</h4>
-                            <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                                Accelerate launch timelines across multi-platforms. <strong>Hire flutter app developers</strong>, <strong>hire flutter app developer india</strong> specialists, or <strong>hire react native app developers</strong> to build cross-platform apps with single-codebase efficiency.
-                            </p>
-                        </div>
-
-                        <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-                            <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Custom & E-Commerce Mobile Apps</h4>
-                            <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                                Partner with the <strong>best custom app development company</strong>. From <strong>ecommerce app development company</strong> solutions to enterprise portals, our engineers deliver tailored mobile software.
-                            </p>
-                        </div>
-                    </div>
-
-                    <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-                        Why Choose Gatecode Technologies Among Top App Development Companies?
-                    </h3>
-                    
-                    <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-                        Choosing from elite <strong>app development companies</strong> ensures your application scales efficiently. When you <strong>hire mobile app developers in india</strong> from Gatecode Technologies, you get:
-                    </p>
-
-                    <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-                        <li style={{ marginBottom: '10px' }}><strong>Agile & Transparent Development:</strong> Direct access to developers with daily code commits and sprint demos.</li>
-                        <li style={{ marginBottom: '10px' }}><strong>Flexible Hiring Models:</strong> Hourly, monthly, or dedicated project teams matched to your budget.</li>
-                        <li style={{ marginBottom: '10px' }}><strong>Full Lifecycle Support:</strong> From UI/UX architecture to App Store/Google Play deployment & maintenance.</li>
-                    </ul>
-
-                </div>
-            </div>
-        </section>
-    );
-};
 
 // ==================== Main Page Component ====================
 const AppDevelopmentPage = () => {
@@ -594,7 +528,6 @@ const AppDevelopmentPage = () => {
             <WhyChoose />
             <DevelopmentProcess />
             <TechnologiesWeUse />
-            <SeoContentSection />
             {/* <TSlider /> */}
             <ContactSection />
         </div>

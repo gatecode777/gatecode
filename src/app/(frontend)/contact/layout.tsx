@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     canonical: 'https://gatecode.in/contact',
   },
   openGraph: {
+    images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'Contact Gatecode Technologies | IT Company in Jaipur',
     description: 'Get in touch with Gatecode Technologies Pvt Ltd. Contact our IT engineering & sales teams for software development inquiries, project estimates, or consultations.',
     url: 'https://gatecode.in/contact',
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: {
+    images: ['/images/og-default.webp'],
     card: 'summary_large_image',
     title: 'Contact Gatecode Technologies | IT Company in Jaipur',
     description: 'Get in touch with Gatecode Technologies Pvt Ltd. Contact our IT engineering & sales teams for software development inquiries.',

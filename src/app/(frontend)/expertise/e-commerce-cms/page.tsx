@@ -426,72 +426,6 @@ const TechnologiesWeUse: React.FC = () => {
     );
 };
 
-// ==================== SeoContentSection Component (SEO Optimized Content) ====================
-const SeoContentSection = () => {
-    return (
-        <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 20px', borderTop: '1px solid #eaeaea', boxSizing: 'border-box', width: '100%' }}>
-            <div style={{ maxWidth: '1300px', margin: '0 auto', width: '100%' }}>
-                <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-                    
-                    <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-                        E-Commerce & CMS Website Development Company in India
-                    </h2>
-                    
-                    <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-                        Welcome to <strong>Gatecode Technologies</strong>, an accredited <strong>ecommerce website development company in india</strong> and trusted <strong>cms development company</strong>. When you are looking to <strong>hire ecommerce developer</strong> specialists, build custom online stores, or launch scalable CMS portals, our team delivers complete <strong>ecommerce web development</strong> and <strong>ecommerce development services</strong> designed to maximize conversions and simplify content management.
-                    </p>
-
-                    <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-                        Custom E-Commerce Web Development & CMS Solutions
-                    </h3>
-                    
-                    <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-                        Transform your digital store with an enterprise <strong>ecommerce development company india</strong> partner. As a top-rated <strong>ecommerce website designing company in india</strong>, we offer end-to-end <strong>ecommerce web development services</strong> that combine seamless shopping cart UX, secure payment gateway integrations, and responsive multi-platform storefronts.
-                    </p>
-
-                    {/* Key Feature Highlight Cards */}
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
-                        <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-                            <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Hire Shopify & Platform Developers</h4>
-                            <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                                Scale your online business effortlessly. Easily <strong>hire shopify developer</strong> leads, <strong>hire shopify developer india</strong> experts, <strong>hire woocommerce developer</strong> specialists, or <strong>hire magento developer</strong> engineers tailored to your store architecture.
-                            </p>
-                        </div>
-                        
-                        <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-                            <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Full-Service E-Commerce Development</h4>
-                            <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                                Work with the <strong>best ecommerce website development company</strong>. We deliver high-speed <strong>ecommerce website development</strong>, custom checkout integrations, and automated catalog syncing.
-                            </p>
-                        </div>
-
-                        <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-                            <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>E-Commerce App & CMS Platforms</h4>
-                            <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                                Connect web and mobile. As a full-suite <strong>ecommerce app development company</strong> and <strong>ecommerce website development company</strong>, we engineer custom mobile apps and headless CMS platforms.
-                            </p>
-                        </div>
-                    </div>
-
-                    <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-                        Why Partner with Gatecode Technologies for E-Commerce & CMS?
-                    </h3>
-                    
-                    <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-                        Choosing a dedicated <strong>ecommerce development</strong> team ensures fast loading speeds, zero checkout friction, and robust database security. Choosing Gatecode Technologies gives you:
-                    </p>
-
-                    <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-                        <li style={{ marginBottom: '10px' }}><strong>Custom & Headless Architecture:</strong> Shopify, WooCommerce, WordPress, Magento, and Next.js headless storefronts.</li>
-                        <li style={{ marginBottom: '10px' }}><strong>Secure Payment Integrations:</strong> Stripe, PayPal, Razorpay, and multi-currency payment checkout setup.</li>
-                        <li style={{ marginBottom: '10px' }}><strong>SEO & Speed Optimization:</strong> Core Web Vitals optimization for top Google rankings and high conversion rates.</li>
-                    </ul>
-
-                </div>
-            </div>
-        </section>
-    );
-};
 
 // ==================== Main Page Component ====================
 const ECommerceCmsPage = () => {
@@ -594,7 +528,6 @@ const ECommerceCmsPage = () => {
             <WhyChoose />
             <DevelopmentProcess />
             <TechnologiesWeUse />
-            <SeoContentSection />
             {/* <TSlider /> */}
             <ContactSection />
         </div>

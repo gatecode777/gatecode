@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     canonical: '/services/mobile-app-development/android-development',
   },
   openGraph: {
+    images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'Android App Development Company in Jaipur | Custom Apps',
     description:
       'Android app development company offering custom mobile apps with innovative designs, advanced features, and scalable solutions for businesses.',
@@ -31,6 +32,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: {
+    images: ['/images/og-default.webp'],
     card: 'summary_large_image',
     title: 'Android App Development Company in Jaipur | Custom Apps',
     description:

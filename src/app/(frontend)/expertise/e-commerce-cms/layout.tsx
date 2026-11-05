@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     canonical: 'https://gatecode.in/expertise/e-commerce-cms',
   },
   openGraph: {
+    images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'E-Commerce & CMS Web Development Company | Gatecode',
     description: 'Looking for an e-commerce website development company in India? Gatecode Technologies provides top e-commerce web development services, CMS development, and dedicated Shopify, WooCommerce, & Magento developers.',
     url: 'https://gatecode.in/expertise/e-commerce-cms',
@@ -34,6 +35,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: {
+    images: ['/images/og-default.webp'],
     card: 'summary_large_image',
     title: 'E-Commerce & CMS Web Development Company | Gatecode',
     description: 'Looking for an e-commerce website development company in India? Gatecode Technologies provides top e-commerce web development services and CMS solutions.',

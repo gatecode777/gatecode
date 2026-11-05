@@ -27,11 +27,33 @@ export async function generateMetadata({ params }): Promise<Metadata> {
     return {};
   }
 
+  const title = `${study.title} | Gatecode Technologies`;
+  const description = study.shortDesc || study.description || undefined;
+  const url = `https://gatecode.in/case-study/${slug}`;
+  const image = study.thumbnail || '/images/og-default.webp';
+
   return {
-    title: `${study.title} | Gatecode Technologies`,
-    description: study.shortDesc,
+    title,
+    description,
     alternates: {
       canonical: `/case-study/${slug}`,
+    },
+    openGraph: {
+      type: 'article',
+      title,
+      description,
+      url,
+      siteName: 'Gatecode Technologies',
+      locale: 'en_US',
+      images: [{ url: image, alt: study.title }],
+      publishedTime: study.createdAt?.toISOString?.(),
+      modifiedTime: study.updatedAt?.toISOString?.(),
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [image],
     },
   };
 }
@@ -44,8 +66,9 @@ function SectionHero({ data, title, shortDesc }) {
     <section className="case-study">
       <div className="case-container">
         <div className="case-text">
-          <h4 className="head_four">CASE STUDIES</h4>
-          <h2 className="head_two">{heading}</h2>
+          {/* Eyebrow label, not a heading: the case study title below is the page's h1 */}
+          <p className="head_four">CASE STUDIES</p>
+          <h1 className="head_two">{heading}</h1>
           <p className="head_p">{sub}</p>
         </div>
         {banner && (

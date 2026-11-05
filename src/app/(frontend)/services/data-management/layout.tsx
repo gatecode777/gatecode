@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     canonical: '/services/data-management',
   },
   openGraph: {
+    images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'Integrated Data Management Services | Data Entry Services India',
     description: 'Gatecode Technologies is a top data management company in India providing integrated data management services, database management system solutions, and data entry services India.',
     url: 'https://gatecode.in/services/data-management',
@@ -29,6 +30,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: {
+    images: ['/images/og-default.webp'],
     card: 'summary_large_image',
     title: 'Integrated Data Management Services | Data Entry Services India',
     description: 'Gatecode Technologies is a top data management company in India providing integrated data management services, database management system solutions, and data entry services India.',

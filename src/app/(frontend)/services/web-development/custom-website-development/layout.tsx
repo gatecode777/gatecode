@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     canonical: '/services/web-development/custom-website-development',
   },
   openGraph: {
+    images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'Best Custom Website Development Services In Jaipur',
     description:
       'Get Custom Website Design, Development, Shopify And Ecommerce Services From A Professional Web Development Company To Grow Your Business Online.',
@@ -28,6 +29,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: {
+    images: ['/images/og-default.webp'],
     card: 'summary_large_image',
     title: 'Best Custom Website Development Services In Jaipur',
     description:

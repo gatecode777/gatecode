@@ -4,6 +4,7 @@ import connectDB from '@/lib/db';
 import BlogPost from '@/models/BlogPost';
 import BlogCategory from '@/models/BlogCategory';
 import type { ApiResponse } from '@/types';
+import { RESERVED_SLUGS } from '@/lib/blogReservedSlugs';
 
 function auth(req: NextRequest) { const t = req.cookies.get(COOKIE_NAME)?.value; return t ? verifyToken(t) : null; }
 
@@ -44,6 +45,7 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     if (!body.title?.trim()) return NextResponse.json<ApiResponse>({ success:false, message:'Title is required' }, { status:422 });
     if (!body.slug?.trim())  return NextResponse.json<ApiResponse>({ success:false, message:'Slug is required' }, { status:422 });
+    if (RESERVED_SLUGS.includes(body.slug.trim().toLowerCase())) return NextResponse.json<ApiResponse>({ success:false, message:'This slug is reserved for blog routes. Please choose another.' }, { status:422 });
     
     const categoryId = body.categoryId && body.categoryId !== '' && body.categoryId !== 'null' ? body.categoryId : null;
     const last = await BlogPost.findOne().sort({ order:-1 }).select('order').lean();

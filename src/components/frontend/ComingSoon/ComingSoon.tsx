@@ -12,7 +12,7 @@ function ComingSoon({ category }: { category?: string }) {
           className="coming-soon__icon"
         />
       </div>
-      <h3 className="coming-soon__title">Coming Soon</h3>
+      <h2 className="coming-soon__title">Coming Soon</h2>
       <p className="coming-soon__description">
         {category
           ? `We're working on amazing ${category} projects. Check back soon!`

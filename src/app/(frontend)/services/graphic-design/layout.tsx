@@ -24,6 +24,7 @@ export const metadata: Metadata = {
     canonical: '/services/graphic-design',
   },
   openGraph: {
+    images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'Best Graphic Design Company in India | Graphic Design Agency',
     description: 'Gatecode Technologies is the best graphic design company in India offering graphic design services in India, logo and brand design, and social media graphic design services.',
     url: 'https://gatecode.in/services/graphic-design',
@@ -32,6 +33,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: {
+    images: ['/images/og-default.webp'],
     card: 'summary_large_image',
     title: 'Best Graphic Design Company in India | Graphic Design Agency',
     description: 'Gatecode Technologies is the best graphic design company in India offering graphic design services in India, logo and brand design, and social media graphic design services.',

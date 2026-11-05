@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Best It Software Development Services Agency In Jaipur',
-  description: 'Get Custom Software Development Services For Web And Business Needs From An Expert Software Development Agency With Scalable, Secure It Solutions.',
+  title: 'Software Development Company in Jaipur | Custom Software Services | Gatecode',
+  description: 'Gatecode is a software development company in Jaipur building custom software, CRM, ERP and integrations for businesses across India and worldwide.',
   keywords: [
     'software development company',
     'custom software development company',
@@ -23,17 +23,19 @@ export const metadata: Metadata = {
     canonical: '/services/software-development',
   },
   openGraph: {
-    title: 'Custom Software Development Company in India | Software Services',
-    description: 'Gatecode Technologies is a leading custom software development company in India offering enterprise software development, custom CRM development services, and software application development.',
+    images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
+    title: 'Software Development Company in Jaipur | Custom Software Services | Gatecode',
+    description: 'Gatecode is a software development company in Jaipur building custom software, CRM, ERP and integrations for businesses across India and worldwide.',
     url: 'https://gatecode.in/services/software-development',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
+    images: ['/images/og-default.webp'],
     card: 'summary_large_image',
-    title: 'Custom Software Development Company in India | Software Services',
-    description: 'Gatecode Technologies is a leading custom software development company in India offering enterprise software development, custom CRM development services, and software application development.',
+    title: 'Software Development Company in Jaipur | Custom Software Services | Gatecode',
+    description: 'Gatecode is a software development company in Jaipur building custom software, CRM, ERP and integrations for businesses across India and worldwide.',
   },
 };
 

@@ -24,11 +24,36 @@ export async function generateMetadata({ params }): Promise<Metadata> {
     return {};
   }
 
+  const title = `${post.title} | Gatecode Technologies Blog`;
+  const description = post.shortDesc || post.subtitle || 'Read our latest blog post.';
+  const url = `https://gatecode.in/blog/${slug}`;
+  // Admin-set OG image first, then the cover image, then the site-wide card
+  const image = post.ogImage || post.coverImage || '/images/og-default.webp';
+  const images = [{ url: image, alt: post.coverImageAlt || post.title }];
+
   return {
-    title: `${post.title} | Gatecode Technologies Blog`,
-    description: post.shortDesc || post.subtitle || 'Read our latest blog post.',
+    title,
+    description,
     alternates: {
       canonical: `/blog/${slug}`,
+    },
+    openGraph: {
+      type: 'article',
+      title,
+      description,
+      url,
+      siteName: 'Gatecode Technologies',
+      locale: 'en_US',
+      images,
+      publishedTime: (post.publishedAt || post.createdAt)?.toISOString?.(),
+      modifiedTime: post.updatedAt?.toISOString?.(),
+      authors: post.authorName ? [post.authorName] : undefined,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [image],
     },
   };
 }
@@ -63,6 +88,9 @@ function parseFormattedText(text: string) {
   );
   html = html.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
   html = html.replace(/__([^_]+)__/g, '<strong>$1</strong>');
+  // The page title is the only h1: demote any h1 the author put in the body, drop empty headings
+  html = html.replace(/<(\/?)h1\b/gi, '<$1h2');
+  html = html.replace(/<h([1-6])[^>]*>\s*(?:&nbsp;|<br\s*\/?>|\s)*<\/h\1>/gi, '');
 
   if (/<[a-z][\s\S]*>/i.test(html)) {
     return <span dangerouslySetInnerHTML={{ __html: html }} />;
@@ -81,7 +109,7 @@ function BlockParagraph({ data }) {
 
 function BlockHeading({ data }) {
   if (!data?.text) return null;
-  const Tag = data.level || 'h3';
+  const Tag = data.level === 'h1' ? 'h2' : (data.level || 'h3'); // the page title is the only h1
   return <Tag className={data.style === 'yellow' ? 'yellow-text' : ''}>{parseFormattedText(data.text)}</Tag>;
 }
 
