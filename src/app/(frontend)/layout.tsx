@@ -38,6 +38,7 @@ export default function FrontendLayout({ children }: { children: React.ReactNode
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
+    '@id': 'https://gatecode.in/#organization',
     name: 'Gatecode Technologies Pvt. Ltd.',
     alternateName: 'Gatecode Technologies',
     url: 'https://gatecode.in',

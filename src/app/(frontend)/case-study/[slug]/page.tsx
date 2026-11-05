@@ -66,8 +66,9 @@ function SectionHero({ data, title, shortDesc }) {
     <section className="case-study">
       <div className="case-container">
         <div className="case-text">
-          <h4 className="head_four">CASE STUDIES</h4>
-          <h2 className="head_two">{heading}</h2>
+          {/* Eyebrow label, not a heading: the case study title below is the page's h1 */}
+          <p className="head_four">CASE STUDIES</p>
+          <h1 className="head_two">{heading}</h1>
           <p className="head_p">{sub}</p>
         </div>
         {banner && (

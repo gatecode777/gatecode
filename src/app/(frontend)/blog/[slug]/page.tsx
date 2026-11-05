@@ -88,6 +88,9 @@ function parseFormattedText(text: string) {
   );
   html = html.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
   html = html.replace(/__([^_]+)__/g, '<strong>$1</strong>');
+  // The page title is the only h1: demote any h1 the author put in the body, drop empty headings
+  html = html.replace(/<(\/?)h1\b/gi, '<$1h2');
+  html = html.replace(/<h([1-6])[^>]*>\s*(?:&nbsp;|<br\s*\/?>|\s)*<\/h\1>/gi, '');
 
   if (/<[a-z][\s\S]*>/i.test(html)) {
     return <span dangerouslySetInnerHTML={{ __html: html }} />;
@@ -106,7 +109,7 @@ function BlockParagraph({ data }) {
 
 function BlockHeading({ data }) {
   if (!data?.text) return null;
-  const Tag = data.level || 'h3';
+  const Tag = data.level === 'h1' ? 'h2' : (data.level || 'h3'); // the page title is the only h1
   return <Tag className={data.style === 'yellow' ? 'yellow-text' : ''}>{parseFormattedText(data.text)}</Tag>;
 }
 

@@ -108,39 +108,6 @@ export const cmsWebsiteDevFaqs: FAQItem[] = [
   },
 ];
 
-export const softwareDevFaqs: FAQItem[] = [
-  {
-    num: '01',
-    question: 'What types of Software Development services does Gatecode Technologies provide?',
-    answer:
-      'We offer custom software development, enterprise solutions, SaaS platforms, and business workflow automation services. Our team designs scalable and secure software tailored specifically to your business needs, helping to enhance your operational efficiency.',
-  },
-  {
-    num: '02',
-    question: 'What is the difference between custom software and ready-made (off-the-shelf) software?',
-    answer:
-      'Ready-made software is generic and often comes with limited or rigid features. In contrast, we build 100% custom-engineered software that aligns perfectly with your unique business workflows. Custom software provides better security, high scalability, and complete control over your requirements without any unnecessary recurring licensing fees.',
-  },
-  {
-    num: '03',
-    question: 'Can your custom software integrate with our existing systems like CRM or ERP?',
-    answer:
-      'Yes, absolutely! We provide seamless API integration services. We can effectively connect your new software with your existing CRMs, ERPs, payment gateways, third-party tools, and legacy systems to ensure a smooth data flow within a unified architecture.',
-  },
-  {
-    num: '04',
-    question: 'What technologies do you use for software development?',
-    answer:
-      'As a leading full-stack development company, we utilize a modern and robust tech stack. This includes advanced frameworks like React, Next.js, Node.js, and Python for both backend architectures and intuitive frontend interfaces, ensuring high performance, speed, and strict data security.',
-  },
-  {
-    num: '05',
-    question: 'Do you provide post-development support and maintenance after deployment?',
-    answer:
-      "Our commitment doesn't end with software delivery. We provide end-to-end support and 24/7 maintenance services. This includes active monitoring, security patches, performance tuning, and future technical updates to ensure your software always operates at peak performance.",
-  },
-];
-
 export const scalableSolutionsFaqs: FAQItem[] = [
   {
     num: '01',
@@ -481,20 +448,21 @@ const FAQSection: React.FC<FAQSectionProps> = ({
                   </div>
                 </div>
 
-                {isActive && (
-                  <div
-                    id={panelId}
-                    role="region"
-                    aria-labelledby={headingId}
-                    itemScope
-                    itemProp="acceptedAnswer"
-                    itemType="https://schema.org/Answer"
-                  >
-                    <p className="faq-how-step__body" itemProp="text">
-                      {item.answer}
-                    </p>
-                  </div>
-                )}
+                {/* Always rendered so every answer is in the HTML for crawlers;
+                    closed answers are only hidden visually via the `hidden` attribute. */}
+                <div
+                  id={panelId}
+                  role="region"
+                  aria-labelledby={headingId}
+                  hidden={!isActive}
+                  itemScope
+                  itemProp="acceptedAnswer"
+                  itemType="https://schema.org/Answer"
+                >
+                  <p className="faq-how-step__body" itemProp="text">
+                    {item.answer}
+                  </p>
+                </div>
               </div>
             );
           })}

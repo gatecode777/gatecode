@@ -48,7 +48,8 @@
   transform: rotate(10deg);
 }
 
-.info-details h3 {
+.info-details h3,
+.info-details h2 {
   font-size: 18px;
   color: #0f172a;
   margin-bottom: 8px;
@@ -70,7 +71,8 @@
   box-shadow: 0 15px 35px rgba(11, 15, 26, 0.2);
 }
 
-.social-connect h3 {
+.social-connect h3,
+.social-connect h2 {
   margin-bottom: 25px;
   font-size: 22px;
   font-weight: 700;
@@ -138,7 +140,8 @@
     padding: 30px 20px;
   }
 
-  .social-connect h3 {
+  .social-connect h3,
+  .social-connect h2 {
     text-align: center;
     font-size: 18px;
   }

@@ -29,7 +29,7 @@ const OurProcess = () => {
             <div className="timeline-card top">
               <div className="timeline-card-header">
                 <FiBarChart2 className="timeline-icon" />
-                <h4>Business Analysis</h4>
+                <h3>Business Analysis</h3>
               </div>
               <p>We start by understanding your business model, challenges, and growth goals to identify key bottlenecks and opportunities.</p>
             </div>
@@ -40,7 +40,7 @@ const OurProcess = () => {
             <div className="timeline-card bottom">
               <div className="timeline-card-header">
                 <FiCpu className="timeline-icon" />
-                <h4>Solution Development</h4>
+                <h3>Solution Development</h3>
               </div>
               <p>We build custom IT solutions, software systems, and automation processes tailored to your specific business needs.</p>
             </div>
@@ -50,7 +50,7 @@ const OurProcess = () => {
             <div className="timeline-card top">
               <div className="timeline-card-header">
                 <FiClipboard className="timeline-icon" />
-                <h4>System Audit</h4>
+                <h3>System Audit</h3>
               </div>
               <p>We evaluate your existing systems, workflows, and tools to uncover inefficiencies and areas for improvement.</p>
             </div>
@@ -62,7 +62,7 @@ const OurProcess = () => {
             <div className="timeline-card bottom">
               <div className="timeline-card-header">
                 <FiTrendingUp className="timeline-icon" />
-                <h4>Optimization & Scaling</h4>
+                <h3>Optimization & Scaling</h3>
               </div>
               <p>We continuously refine and optimize systems to ensure they are scalable, cost-efficient, and aligned with your growth strategy.</p>
             </div>

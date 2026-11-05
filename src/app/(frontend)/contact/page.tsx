@@ -15,7 +15,7 @@ const InfoCard = ({ icon, title, details, link }: { icon: React.ReactNode; title
     <div className="info-card">
       <div className="info-icon-wrapper">{icon}</div>
       <div className="info-details">
-        <h3>{title}</h3>
+        <h2>{title}</h2>
         {details.map((detail, index) => (
           <p key={index}>{detail}</p>
         ))}
@@ -83,7 +83,7 @@ const ContactInfo = () => {
       </div>
 
       <div className="social-connect">
-        <h3 style={{ color: '#ffffff' }}>Connect With Us</h3>
+        <h2 style={{ color: '#ffffff' }}>Connect With Us</h2>
         <div className="social-links">
           {socials.map((social, index) => (
             <a key={index} href={social.link} className="social-btn" target="_blank" rel="noopener noreferrer">
@@ -321,58 +321,6 @@ const ContactForm = () => {
   );
 };
 
-// ==================== SeoContentSection Component ====================
-const SeoContentSection = () => {
-    return (
-        <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 20px', borderTop: '1px solid #eaeaea', boxSizing: 'border-box', width: '100%' }}>
-            <div style={{ maxWidth: '1300px', margin: '0 auto', width: '100%' }}>
-                <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-                    
-                    <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-                        Contact Gatecode Technologies — IT Software Company in Jaipur, India
-                    </h2>
-                    
-                    <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-                        Ready to start your next software project or <strong>hire software developers contact</strong> specialists? <strong>Gatecode Technologies Pvt Ltd</strong> is a premier <strong>contact IT company in India</strong> providing technical consultations, custom project estimates, and full-stack software development services.
-                    </p>
-
-                    <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-                        Get a Custom Software Project Estimate & Technical Consultation
-                    </h3>
-                    
-                    <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-                        Send us your project scope via the form above or visit our corporate office at the <strong>Gatecode Technologies Jaipur office address</strong>. Our engineering leads evaluate your requirements and provide a free <strong>custom software project estimate</strong> within 24 business hours.
-                    </p>
-
-                    {/* Key Feature Highlight Cards */}
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
-                        <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-                            <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Direct Phone & Sales Line</h4>
-                            <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                                Speak with our consultants directly via <strong>Gatecode Technologies phone number</strong> at +91 8502888838 for urgent inquiries.
-                            </p>
-                        </div>
-                        
-                        <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-                            <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Email Support & RFPs</h4>
-                            <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                                Submit your detailed project documentation to <strong>Gatecode Technologies email</strong> at info@gatecode.in.
-                            </p>
-                        </div>
-
-                        <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-                            <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Office Location</h4>
-                            <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                                Located at 412, Sumer Nagar, Mansarovar, Jaipur, India. Schedule an in-person meeting with our team.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-    );
-};
 
 // ==================== Main Contact Page Component ====================
 const ContactPage = () => {
@@ -464,7 +412,6 @@ const ContactPage = () => {
         </div>
       </div>
 
-      <SeoContentSection />
 
       <section className="map-section">
         <iframe

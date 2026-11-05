@@ -34,10 +34,12 @@ const AboutExperience = () => {
       <div className={`about-experience__container ${isVisible ? 'is-visible' : ''}`}>
         <div className="about-experience__grid">
           <div className="about-experience__text">
-            <h1 className="about-experience__heading">
+            {/* h2 (the page h1 is in AboutHero). marginTop keeps the spacing the h1 had:
+                the browser default is 0.67em for h1 vs 0.83em for h2. */}
+            <h2 className="about-experience__heading" style={{ marginTop: '0.67em' }}>
               OUR EXPERIENCE &<br />
               GLOBAL COLLABORATIONS
-            </h1>
+            </h2>
 
             <p className="about-experience__description">
               At Gatecode Technologies Pvt. Ltd., we bring 2+ years of hands-on experience delivering high-performance digital solutions to businesses across the globe. From startups to established enterprises, we have partnered with companies across diverse industries — understanding their unique challenges and turning them into powerful, scalable products.

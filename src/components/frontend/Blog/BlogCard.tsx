@@ -17,11 +17,17 @@ const BlogCard = ({ post }) => {
   const dateStr      = post.publishedAt ? fmtDate(post.publishedAt) : (post.date || '');
   const commentCount = post.commentCount !== undefined ? post.commentCount : (post.comments || '0');
   const slug         = post.slug              || '';
+  // Same URL the old "Explore Blog" button used
+  const href         = slug ? `/blog/${slug}` : '/blog';
 
   return (
     <div className="blog-card">
       <div className="card-image-wrapper">
-        <img src={coverImg} alt={post.title} className="card-image" width={400} height={250} loading="lazy" />
+        {/* Image link: anchor text for crawlers is the alt. Removed from tab order / a11y tree
+            because the title link below already names the same destination. */}
+        <Link href={href} tabIndex={-1} aria-hidden="true" style={{ display: 'block', width: '100%', height: '100%' }}>
+          <img src={coverImg} alt={post.coverImageAlt || post.title} className="card-image" width={400} height={250} loading="lazy" />
+        </Link>
         <div className="card-category">{catName}</div>
       </div>
 
@@ -38,11 +44,19 @@ const BlogCard = ({ post }) => {
           </div>
         </div>
 
-        <h3 className="card-title">{post.title}</h3>
+        <h3 className="card-title">
+          <Link href={href} style={{ color: 'inherit', textDecoration: 'none' }}>{post.title}</Link>
+        </h3>
         <p className="card-description">{post.metaDescription || post.subtitle || ''}</p>
 
-        <Link href={slug ? `/blog/${slug}` : '/blog'} style={{ textDecoration: 'none' }}>
-          <button className="explore-btn">Explore Blog</button>
+        {/* A single link styled as the button (a <button> inside an <a> is invalid HTML) */}
+        <Link
+          href={href}
+          className="explore-btn"
+          aria-label={`Explore Blog: ${post.title}`}
+          style={{ display: 'block', textAlign: 'center', textDecoration: 'none', boxSizing: 'border-box', lineHeight: 'normal' }}
+        >
+          Explore Blog
         </Link>
       </div>
     </div>

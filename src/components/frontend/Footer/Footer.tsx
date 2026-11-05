@@ -35,15 +35,18 @@ export default function Footer() {
             <Link href="/" className="ft-logo"><Image src="/images/gatecode.webp" alt="GATECODE Logo" className="logo-img" width={160} height={80} /></Link>
             <p className="ft-address">Empowering businesses with technology driven solutions, operational excellence, and strategic expertise.</p>
             <div className="ft-socials">
-              <a href="https://in.linkedin.com/company/gatecode-technologies" className="ft-social" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg></a>
-              <a href="https://x.com/gatecodein" target="_blank" rel="noopener noreferrer" className="ft-social" aria-label="X"><BsTwitterX /></a>
-              <a href="https://www.instagram.com/gatecode_technologies_pvt/" className="ft-social" aria-label="Instagram"><FaInstagram /></a>
-              <a href="https://www.facebook.com/people/Gatecode-Technologies-Private-Limited/61583453039836/" className="ft-social" aria-label="Facebook"><FaFacebookF /></a>
-              <a href="https://www.youtube.com/" className="ft-social" aria-label="YouTube"><FaYoutube /></a>
+              <a href="https://in.linkedin.com/company/gatecode-technologies" target="_blank" rel="noopener noreferrer" className="ft-social" aria-label="Gatecode on LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg></a>
+              <a href="https://x.com/gatecodein" target="_blank" rel="noopener noreferrer" className="ft-social" aria-label="Gatecode on X"><BsTwitterX /></a>
+              <a href="https://www.instagram.com/gatecode_technologies_pvt/" target="_blank" rel="noopener noreferrer" className="ft-social" aria-label="Gatecode on Instagram"><FaInstagram /></a>
+              <a href="https://www.facebook.com/people/Gatecode-Technologies-Private-Limited/61583453039836/" target="_blank" rel="noopener noreferrer" className="ft-social" aria-label="Gatecode on Facebook"><FaFacebookF /></a>
+              {/* TODO(seo): this still points at the generic youtube.com homepage. Replace the href with
+                  the official Gatecode channel URL (and set aria-label to "Gatecode on YouTube"),
+                  or delete this link if there is no channel. */}
+              <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" className="ft-social" aria-label="YouTube"><FaYoutube /></a>
             </div>
           </div>
           <div className="ft-col">
-            <h4>COMPANY</h4>
+            <h2>COMPANY</h2>
             <ul>
               <li><Link href="/about">About Us</Link></li>
               <li><Link href="/portfolio">Portfolio</Link></li>
@@ -56,7 +59,7 @@ export default function Footer() {
             </ul>
           </div>
           <div className="ft-col">
-            <h4>SERVICES</h4>
+            <h2>SERVICES</h2>
             <ul>
               {serviceLinks.map(item => (
                 <li key={item.slug}>
@@ -66,7 +69,7 @@ export default function Footer() {
             </ul>
           </div>
           <div className="ft-col">
-            <h4>TECHNICAL EXPERTISE</h4>
+            <h2>TECHNICAL EXPERTISE</h2>
             <ul>
               {expertiseLinks.map(item => (
                 <li key={item.slug}>
@@ -76,7 +79,7 @@ export default function Footer() {
             </ul>
           </div>
           <div className="ft-col ft-col--legal">
-            <h4>LEGAL</h4>
+            <h2>LEGAL</h2>
             <ul>
               <li><Link href="/privacy-policy">Privacy Policy</Link></li>
               <li><Link href="/terms-and-conditions">Terms &amp; Conditions</Link></li>

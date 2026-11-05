@@ -87,7 +87,7 @@
     box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
 }
 
-.ft-col h4 {
+.ft-col h2 {
     margin: 0 0 18px;
     font-family: "Roboto Flex", sans-serif;
     font-size: 13px;
@@ -323,7 +323,7 @@
         max-width: 480px;
     }
 
-    .ft-col h4 {
+    .ft-col h2 {
         margin-bottom: 14px;
     }
 
@@ -385,7 +385,7 @@
         width: 170px;
     }
 
-    .ft-col h4 {
+    .ft-col h2 {
         font-size: 12px;
         letter-spacing: 0.08em;
         margin-bottom: 12px;

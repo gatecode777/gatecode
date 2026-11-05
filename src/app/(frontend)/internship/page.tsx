@@ -39,58 +39,6 @@ export const metadata: Metadata = {
   },
 };
 
-// ==================== SeoContentSection Component ====================
-const SeoContentSection = () => {
-    return (
-        <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 20px', borderTop: '1px solid #eaeaea', boxSizing: 'border-box', width: '100%' }}>
-            <div style={{ maxWidth: '1300px', margin: '0 auto', width: '100%' }}>
-                <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-                    
-                    <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-                        IT & Software Internship Program in India — Gatecode Technologies
-                    </h2>
-                    
-                    <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-                        Accelerate your technical skills through the <strong>Gatecode Technologies internship</strong> program. Designed for freshers, computer science graduates, and aspiring professionals, our <strong>software engineering internship</strong> offers hands-on mentorship on live client projects across full-stack development, mobile apps, and digital marketing.
-                    </p>
-
-                    <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-                        Live Project Experience & Industry Mentorship
-                    </h3>
-                    
-                    <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-                        Unlike theoretical training courses, our <strong>fresher IT internship</strong> pairs candidates with senior software architects. Work with modern technologies like React, Next.js, Node.js, Python, Figma, and performance SEO tools.
-                    </p>
-
-                    {/* Key Feature Highlight Cards */}
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
-                        <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-                            <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Web & Mobile Development Track</h4>
-                            <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                                Join our <strong>web development internship in India</strong> or <strong>React developer internship</strong>. Master frontend, backend APIs, and database design.
-                            </p>
-                        </div>
-                        
-                        <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-                            <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>UI/UX & Brand Design Track</h4>
-                            <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                                Learn wireframing, prototyping, and design systems with our <strong>UI UX design internship</strong> specialists using Figma and Adobe Creative Suite.
-                            </p>
-                        </div>
-
-                        <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-                            <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Digital Marketing Track</h4>
-                            <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                                Gain real experience in Search Engine Optimization, Google Ads, Meta Ads, and content marketing analytics with our performance marketing leads.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-    );
-};
 
 export default function InternshipPage() {
   const breadcrumbSchema = {
@@ -156,7 +104,6 @@ export default function InternshipPage() {
       <InternshipHero />
       <InternshipInfo />
       <CareerSuccess />
-      <SeoContentSection />
       <ApplicationForm />
     </>
   );

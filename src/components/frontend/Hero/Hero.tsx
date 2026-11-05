@@ -8,12 +8,14 @@ const Hero = () => {
           <h1 className="hero-title">
             EMPOWERING {' '}<br />
             BUSINESSES WITH {' '}<br />
-            SMART
+            SMART{' '}
+            {/* Keywords stay inside the single h1 (full headline for crawlers);
+                the span keeps the old subtitle look via its existing class. */}
+            <span className="hero-subtitle" style={{ display: 'block' }}>
+              IT Services, BPO Services, Data Management, {' '}<br />
+              Business Solutions, Accounting, Digital Marketing
+            </span>
           </h1>
-          <h2 className="hero-subtitle">
-            IT Services, BPO Services, Data Management, {' '}<br />
-            Business Solutions, Accounting, Digital Marketing
-          </h2>
           <p className="hero-description">
             Reduce operational costs and scale faster with our expert IT, BPO, {' '}<br />
             and data management services.
@@ -30,19 +32,19 @@ const Hero = () => {
 
           <div className="hero-stats">
             <div className="stat-item">
-              <h3>100+</h3>
+              <div className="stat-value">100+</div>
               <p>Clients Served</p>
             </div>
             <div className="stat-item">
-              <h3>2+</h3>
+              <div className="stat-value">2+</div>
               <p>Years Experience</p>
             </div>
             <div className="stat-item">
-              <h3>98%</h3>
+              <div className="stat-value">98%</div>
               <p>Client Retention</p>
             </div>
             <div className="stat-item">
-              <h3>24/7</h3>
+              <div className="stat-value">24/7</div>
               <p>Support Coverage</p>
             </div>
           </div>
