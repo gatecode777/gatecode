@@ -20,13 +20,13 @@ export const metadata: Metadata = {
     'Gatecode Technologies'
   ],
   alternates: {
-    canonical: 'https://gatecode.in/internship',
+    canonical: 'https://www.gatecode.in/internship',
   },
   openGraph: {
     images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'IT & Software Internship Program in India | Gatecode Technologies',
     description: 'Kickstart your IT career with the Gatecode Technologies internship program. Gain hands-on live project experience, mentorship in software development, web design & digital marketing.',
-    url: 'https://gatecode.in/internship',
+    url: 'https://www.gatecode.in/internship',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',
@@ -45,9 +45,9 @@ export default function InternshipPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
-      { '@type': 'ListItem', position: 2, name: 'Company', item: 'https://gatecode.in/about' },
-      { '@type': 'ListItem', position: 3, name: 'Internship', item: 'https://gatecode.in/internship' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Company', item: 'https://www.gatecode.in/about' },
+      { '@type': 'ListItem', position: 3, name: 'Internship', item: 'https://www.gatecode.in/internship' },
     ],
   };
 
@@ -60,7 +60,7 @@ export default function InternshipPage() {
     provider: {
       '@type': 'Organization',
       name: 'Gatecode Technologies Pvt. Ltd.',
-      url: 'https://gatecode.in',
+      url: 'https://www.gatecode.in',
     },
   };
 

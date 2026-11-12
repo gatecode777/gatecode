@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component ====================
@@ -284,72 +285,6 @@ const DigitalIndustries = () => {
   );
 };
 
-// ==================== SeoContentSection Component ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Accurate and Scalable Data Entry Outsourcing Solutions
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Handling large-scale data entry internally frequently diverts valuable core staff, increases payroll expenses, and results in avoidable transcription mistakes. At Gatecode Technologies, our dedicated data processing teams provide fast, secure, and double-verified data entry services designed to keep your business records structured, up-to-date, and readily accessible.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>High-Volume Alphanumeric Entry</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Rapid conversion of printed or handwritten documents, logbooks, and registration forms into structured digital formats with strict field validation.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>E-Commerce Catalog Management</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Comprehensive SKU uploading, product title and description tagging, pricing updates, and image categorization across Shopify, Magento, and Amazon.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Invoice & Ledger Entry</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Meticulous line-item extraction from vendor bills, expense receipts, and credit notes directly into QuickBooks, Tally Prime, and enterprise ERPs.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>CRM & Contact List Indexing</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Clean capture and categorization of customer contact information, business cards, survey responses, and sales lead lists with syntax checks.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Outsource Your Data Entry to Gatecode Technologies?
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Outsourcing administrative data capture allows your internal team to concentrate on strategic business goals while guaranteeing consistent data quality. Partnering with Gatecode Technologies delivers:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Dual-Operator Quality Control:</strong> Every record is cross-checked against source documents to prevent typo propagation.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Enterprise Confidentiality:</strong> Strict non-disclosure agreements, secure encrypted transfer channels, and role-based access.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Flexible Turnaround Times:</strong> Same-day and overnight batch processing options to match demanding business cycles.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const DataEntryServicesPage = () => {
   useEffect(() => {
@@ -364,7 +299,7 @@ const DataEntryServicesPage = () => {
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="data-management/data-entry" serviceName="data entry" />
       <ContactSection />
     </div>
   );

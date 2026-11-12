@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component ====================
@@ -284,72 +285,6 @@ const DigitalIndustries = () => {
   );
 };
 
-// ==================== SeoContentSection Component ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Multi-Tier Technical Support and IT Helpdesk Outsourcing Solutions
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Software disruptions and infrastructure downtime immediately impair customer productivity and lead to churn. At Gatecode Technologies, our managed technical support teams deliver dependable 24/7 IT helpdesk solutions that diagnose and resolve technical incidents with speed, competence, and structured escalation protocols.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>24/7 Tier 1 & 2 Helpdesk</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Rapid response handling for user credential resets, application installation issues, software permission configurations, and common error alerts.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Tier 3 Engineering Escalations</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Senior engineering diagnostics analyzing server exceptions, database deadlocks, and API payload errors with structured Jira bug hand-offs.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Remote Screen Diagnostics</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Secure remote-access troubleshooting to observe, replicate, and resolve workstation glitches and configuration errors live with users.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Proactive Uptime Monitoring</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Continuous telemetry monitoring evaluating server latency, API response times, and database memory to mitigate outages proactively.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Professional Technical Support Safeguards User Retention
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Providing prompt, technically competent assistance transforms frustrating software moments into trust-building experiences. Choosing Gatecode Technologies ensures:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Strict SLA Compliance:</strong> Defined first-response and resolution time guarantees aligned with enterprise contracts.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Reduced Developer Distraction:</strong> Engineering teams stay focused on building new features while our desk handles support tickets.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Continuous Documentation:</strong> Every resolved incident generates structured knowledge-base entries to expedite future resolutions.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const TechnicalSupportServicesPage = () => {
   useEffect(() => {
@@ -364,7 +299,7 @@ const TechnicalSupportServicesPage = () => {
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="bpo-services/technical-support" serviceName="technical support" />
       <ContactSection />
     </div>
   );

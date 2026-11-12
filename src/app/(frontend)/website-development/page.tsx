@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import AgencyLandingPage from '@/components/frontend/LandingPage/AgencyLandingPage';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/website-development' },
   title: 'Web Design & Development Agency | Gatecode Technologies',
   description: 'We build fast, high-converting custom websites, e-commerce storefronts, and web platforms tailored for business growth.',
   keywords: [

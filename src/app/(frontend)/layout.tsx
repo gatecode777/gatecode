@@ -7,7 +7,7 @@ import FloatingWidgets from '@/components/frontend/FloatingWidgets/FloatingWidge
 import './frontend.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://gatecode.in'),
+  metadataBase: new URL('https://www.gatecode.in'),
   title: 'Best Software Development Company | It Solutions',
   description: 'Looking for the best software development companies? We provide top-tier IT software development services to scale and transform your business.',
   icons: {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'Best Software Development Company | It Solutions',
     description: 'Looking for the best software development companies? We provide top-tier IT software development services to scale and transform your business.',
-    url: 'https://gatecode.in',
+    url: 'https://www.gatecode.in',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',
@@ -38,12 +38,12 @@ export default function FrontendLayout({ children }: { children: React.ReactNode
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    '@id': 'https://gatecode.in/#organization',
+    '@id': 'https://www.gatecode.in/#organization',
     name: 'Gatecode Technologies Pvt. Ltd.',
     alternateName: 'Gatecode Technologies',
-    url: 'https://gatecode.in',
-    logo: 'https://gatecode.in/images/logo.webp',
-    image: 'https://gatecode.in/images/digitalbg1.webp',
+    url: 'https://www.gatecode.in',
+    logo: 'https://www.gatecode.in/images/logo.webp',
+    image: 'https://www.gatecode.in/images/digitalbg1.webp',
     description: 'Gatecode Technologies is a premier Web & Custom Software Development Company in Jaipur, India providing software engineering and digital solutions.',
     address: {
       '@type': 'PostalAddress',

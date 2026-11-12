@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== Section 1: Hero Section ====================
@@ -312,79 +313,6 @@ const DigitalIndustries = () => {
 };
 
 // ==================== Section 6: Image Reference Section (SEO & Conversion Highlight) ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Premier Brand Identity Design Agency for Cohesive Business Authority
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Welcome to Gatecode Technologies Pvt. Ltd., your creative partner for strategic brand identity design, visual architecture, and corporate rebranding. We help ambitious companies establish distinct, memorable identities that command respect, foster loyalty, and communicate lasting quality.
-          </p>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Designing Enduring Visual Systems Built for Multi-Platform Consistency
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Modern brands must perform consistently across smartphones, websites, physical packaging, corporate documents, and large-format signage. Our brand identity methodology ensures every graphic component is engineered for visual clarity, versatility, and emotional resonance.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Logo &amp; Symbol Systems</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Develop versatile vector logo marks with primary, secondary, and responsive badge variations suited for any application.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Color &amp; Typography Rules</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Establish balanced color systems and font hierarchies that guarantee readable, accessible, and on-brand typography everywhere.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Stationery &amp; Collateral Kits</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Project corporate polish with designed business cards, presentation templates, invoice designs, and official stationery.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Comprehensive Brand Manuals</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Provide internal teams and external partners with practical style guides detailing color codes, clear space, and asset usage.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Partner with Gatecode Technologies for Brand Identity?
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            A unified identity sets the standard for all future marketing. Collaborating with our identity studio gives your brand:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Strategic Grounding:</strong> Visuals created to support your actual commercial positioning and customer psychology.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Comprehensive Deliverables:</strong> Complete vector source assets, Pantone/CMYK/RGB codes, and ready-to-use template files.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Long-Term Scalability:</strong> Flexible design systems built to grow as your business expands into new markets and product categories.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const BrandIdentityPage = () => {
   useEffect(() => {
@@ -395,9 +323,9 @@ const BrandIdentityPage = () => {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/graphic-design' },
-      { '@type': 'ListItem', position: 3, name: 'Brand Identity', item: 'https://gatecode.in/services/graphic-design/brand-identity' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.gatecode.in/services/graphic-design' },
+      { '@type': 'ListItem', position: 3, name: 'Brand Identity', item: 'https://www.gatecode.in/services/graphic-design/brand-identity' },
     ],
   };
 
@@ -409,36 +337,13 @@ const BrandIdentityPage = () => {
     provider: {
       '@type': 'Organization',
       name: 'Gatecode Technologies Pvt. Ltd.',
-      url: 'https://gatecode.in',
+      url: 'https://www.gatecode.in',
     },
     areaServed: {
       '@type': 'Country',
       name: 'India',
     },
     description: 'Professional brand identity design agency offering comprehensive corporate visual identity systems, logo guidelines, typography standards, color palettes, and stationery kits.',
-  };
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'What is included in a complete brand identity design package?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'A complete package includes primary and secondary logos, brand color systems (Pantone/CMYK/RGB/HEX), font pairings, iconography, stationery templates, and a brand style manual.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'How long does a typical brand identity project take?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Most comprehensive brand identity design projects take between 2 to 4 weeks, including research, concept exploration, client feedback cycles, and final asset packaging.',
-        },
-      },
-    ],
   };
 
   return (
@@ -451,17 +356,13 @@ const BrandIdentityPage = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(identityServiceSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="graphic-design/brand-identity" serviceName="brand identity design" />
       <ContactSection />
     </div>
   );

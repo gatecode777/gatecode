@@ -15,13 +15,13 @@ export const metadata: Metadata = {
     'IT careers India'
   ],
   alternates: {
-    canonical: 'https://gatecode.in/careers',
+    canonical: 'https://www.gatecode.in/careers',
   },
   openGraph: {
     images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'Careers & IT Job Openings in India | Gatecode Technologies',
     description: 'Join Gatecode Technologies Pvt Ltd. Explore current IT job openings for software developers, web developers, UI/UX designers, and digital marketing experts in India.',
-    url: 'https://gatecode.in/careers',
+    url: 'https://www.gatecode.in/careers',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

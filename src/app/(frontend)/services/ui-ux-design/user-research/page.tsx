@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component ====================
@@ -284,72 +285,6 @@ const DigitalIndustries = () => {
   );
 };
 
-// ==================== SeoContentSection Component ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Professional User Research & UX Behavioral Analysis
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Building digital products without systematic user research introduces substantial risk, often resulting in complex interfaces that confuse target customers and yield low retention. At Gatecode Technologies, our user research consultants employ structured behavioral methodologies that uncover authentic user motivations, evaluate interface workflows, and validate product concepts before significant development capital is spent.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Qualitative User Interviews</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                1-on-1 contextual interviews and task demonstrations that uncover unspoken customer frustrations, mental models, and real-world workarounds.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Empirical Usability Testing</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Moderated testing with target demographics measuring task completion times, error rates, and system usability scores across key user journeys.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Behavioral Analytics & Heatmaps</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Quantitative event tracking, scroll patterns, and session analysis that reveal exact moments where prospective buyers hesitate or churn.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Heuristic & Accessibility Audits</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Expert usability reviews evaluating interface consistency, error prevention, feedback mechanisms, and WCAG accessibility standards.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Data-Backed User Research Accelerates Product Success
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            By grounding product decisions in verified user behaviors rather than internal organizational opinions, businesses dramatically reduce engineering rework, improve product-market fit, and create products customers recommend. Partnering with Gatecode Technologies ensures your team receives:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Objective Evidence:</strong> Unbiased evaluation of user workflows and prototypes directly from real users.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Prioritized Product Roadmaps:</strong> Clear distinction between high-impact user problems and cosmetic suggestions.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Cross-Functional Alignment:</strong> Clear video insights and data reports that build shared empathy across leadership, design, and engineering.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const UserResearchAnalysisServicesPage = () => {
   useEffect(() => {
@@ -364,7 +299,7 @@ const UserResearchAnalysisServicesPage = () => {
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="ui-ux-design/user-research" serviceName="user research" />
       <ContactSection />
     </div>
   );

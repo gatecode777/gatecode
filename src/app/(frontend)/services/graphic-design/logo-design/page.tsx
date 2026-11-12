@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== Section 1: Hero Section ====================
@@ -312,79 +313,6 @@ const DigitalIndustries = () => {
 };
 
 // ==================== Section 6: Image Reference Section (SEO & Conversion Highlight) ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Premier Custom Logo Design &amp; Corporate Branding Agency
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Welcome to Gatecode Technologies Pvt. Ltd., your creative agency for custom vector logo design and foundational corporate branding. We help emerging startups, growing businesses, and established enterprises forge distinctive visual identities that stand out in crowded markets and build enduring brand equity.
-          </p>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Crafting Distinctive, Scalable Logos Built for Timeless Market Impact
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            A superior corporate logo must withstand the test of time and function seamlessly across every physical and digital environment. Our brand designers focus on clean geometry, balanced proportions, and meaningful symbolism, ensuring your mark communicates trust and distinction across all customer touchpoints.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Custom Vector Craftsmanship</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Receive 100% original vector logos crafted from scratch without generic clip-art or template shortcuts.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Multi-Screen Scalability</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Ensure your mark remains razor-sharp whether scaled down to a mobile favicon or enlarged across massive outdoor signage.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Complete Brand Guidelines</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Protect your visual consistency with clear usage standards detailing clear space, approved backgrounds, and color codes.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Full Ownership &amp; Vector Files</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Gain complete legal copyright ownership along with all master vector source files (AI, EPS, SVG, PDF) upon project completion.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Partner with Gatecode Technologies for Custom Logo Design?
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            A professionally designed logo elevates your brand authority immediately. Collaborating with our identity specialists provides:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Strategic Creative Direction:</strong> Concepts grounded in your real commercial positioning, customer psychology, and industry research.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Comprehensive File Packaging:</strong> Organized source files ready for web developers, commercial printers, and internal teams.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Collaborative Revisions:</strong> Structured feedback rounds ensuring the final logo mark aligns with your business goals.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const LogoDesignBrandingServicesPage = () => {
   useEffect(() => {
@@ -395,9 +323,9 @@ const LogoDesignBrandingServicesPage = () => {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/graphic-design' },
-      { '@type': 'ListItem', position: 3, name: 'Logo Design & Branding', item: 'https://gatecode.in/services/graphic-design/logo-design' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.gatecode.in/services/graphic-design' },
+      { '@type': 'ListItem', position: 3, name: 'Logo Design & Branding', item: 'https://www.gatecode.in/services/graphic-design/logo-design' },
     ],
   };
 
@@ -409,36 +337,13 @@ const LogoDesignBrandingServicesPage = () => {
     provider: {
       '@type': 'Organization',
       name: 'Gatecode Technologies Pvt. Ltd.',
-      url: 'https://gatecode.in',
+      url: 'https://www.gatecode.in',
     },
     areaServed: {
       '@type': 'Country',
       name: 'India',
     },
     description: 'Custom logo design and branding agency offering vector logo creation, corporate brand identity, brand style guides, stationery design, and master source file packages.',
-  };
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Why choose Gatecode Technologies for custom logo design & branding services?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Gatecode Technologies delivers 100% original, high-resolution vector logo designs, complete corporate brand guidelines, business cards, stationery templates, and full copyright ownership.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'What file formats will I receive for my custom logo design?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'You will receive complete vector source files (AI, EPS, SVG, PDF) alongside high-resolution print and web formats (PNG, JPG, WebP) with full copyright ownership.',
-        },
-      },
-    ],
   };
 
   return (
@@ -451,17 +356,13 @@ const LogoDesignBrandingServicesPage = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(logoDesignServiceSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="graphic-design/logo-design" serviceName="logo design" />
       <ContactSection />
     </div>
   );

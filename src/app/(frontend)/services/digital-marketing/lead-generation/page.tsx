@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== Section 1: Hero Section ====================
@@ -312,79 +313,6 @@ const DigitalIndustries = () => {
 };
 
 // ==================== Section 6: Image Reference Section (SEO & Conversion Highlight) ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Top-Rated Lead Generation Company &amp; Services Agency
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Welcome to Gatecode Technologies Pvt. Ltd., a trusted lead generation agency helping startups, small businesses, and enterprises build a consistent, high-converting pipeline of qualified prospects. Our multi-channel lead acquisition strategies are tailored to generate measurable, scalable growth for businesses in India and across the globe.
-          </p>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Result-Driven Lead Generation &amp; Conversion Strategies
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Generating high-quality leads requires more than generic outreach; it demands an integrated, intent-driven approach. As a performance-focused lead generation company, our certified marketers combine targeted paid advertising, landing page conversion rate optimization, automated email nurturing, and CRM integration to turn prospects into paying clients cost-effectively.
-          </p>
-
-          {/* Key Feature Highlight Cards matching the visual layout */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>B2B Lead Generation &amp; Growth</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Fuel your sales pipeline with verified decision-makers. We build custom high-converting funnels and outbound outreach campaigns proven to turn industry leads into long-term B2B partnerships.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>PPC &amp; Paid Lead Acquisition</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Reach customers who are actively searching for your solutions. We design laser-targeted Google Ads and social media advertising campaigns that capture high-intent inquiries ready to convert.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Landing Page &amp; Funnel Optimization</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Maximize conversion rates from your ad spend. We create fast, user-centric landing pages with persuasive copy, strategic CTAs, and frictionless lead capture forms.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>CRM Integration &amp; Lead Management</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Never let a qualified opportunity slip through the cracks. We integrate automated lead scoring, CRM pipelines, and behavioral email follow-ups to accelerate your sales cycle.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Partner with Gatecode Technologies for Lead Generation?
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Choosing the right lead generation partner guarantees transparent lead tracking, lower cost-per-acquisition (CPA), and maximum ROI. When you collaborate with our team, you get:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Targeted &amp; Qualified Prospects:</strong> We filter and deliver pre-qualified prospects with genuine interest in your offerings.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Omnichannel Funnel Strategies:</strong> Seamless integration of Google search ads, LinkedIn B2B campaigns, meta lead ads, and email automation.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Continuous Optimization:</strong> Real-time analytics, A/B testing, and sales pipeline optimization to ensure sustainable business growth.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const LeadGenerationServicesPage = () => {
   useEffect(() => {
@@ -395,9 +323,9 @@ const LeadGenerationServicesPage = () => {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/digital-marketing' },
-      { '@type': 'ListItem', position: 3, name: 'Lead Generation Services', item: 'https://gatecode.in/services/digital-marketing/lead-generation' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.gatecode.in/services/digital-marketing' },
+      { '@type': 'ListItem', position: 3, name: 'Lead Generation Services', item: 'https://www.gatecode.in/services/digital-marketing/lead-generation' },
     ],
   };
 
@@ -409,7 +337,7 @@ const LeadGenerationServicesPage = () => {
     provider: {
       '@type': 'Organization',
       name: 'Gatecode Technologies Pvt. Ltd.',
-      url: 'https://gatecode.in',
+      url: 'https://www.gatecode.in',
     },
     areaServed: {
       '@type': 'Country',
@@ -434,7 +362,7 @@ const LeadGenerationServicesPage = () => {
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="digital-marketing/lead-generation" serviceName="lead generation" />
       <ContactSection />
     </div>
   );

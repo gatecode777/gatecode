@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
-import FAQSection from '@/components/frontend/FAQSection/FAQSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component (Updated for Web Development) ====================
@@ -357,101 +357,6 @@ const DigitalIndustries = () => {
   );
 };
 
-// ==================== SeoContentSection Component (SEO Optimized Content) ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Top-Rated Website Development Company in India
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Welcome to <strong>Gatecode Technologies</strong>, a premier <strong>website development company in India</strong> providing end-to-end <strong>web design & development services</strong> to clients worldwide. As a trusted <strong>website development company</strong>, whether you are a startup looking to launch your first online platform or an established enterprise seeking high-performance digital solutions, our team of expert developers and designers builds secure, responsive, and search-engine-optimized websites tailored to your specific business requirements with transparent and <strong>affordable web development services</strong>.
-          </p>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Custom Web App Development Services & Full Stack Solutions
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            As an industry-leading <Link href="/services/web-development/custom-website-development" style={{ color: '#4e7c7e', fontWeight: '600', textDecoration: 'underline' }}>custom web app development services</Link> provider, we specialize in building scalable digital portals, SaaS platforms, and enterprise workflows. Recognizing that every organization has distinct goals, our <strong>full stack development services</strong> combine robust backend architectures with intuitive frontend interfaces. Recognized as a high-performance <strong>react web development company</strong>, we engineer web solutions using modern frameworks like React, Next.js, Node.js, and Python.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Web App Development & Custom Portals</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                From interactive dashboards to complex SaaS web systems, our <strong>web app development</strong> team builds fast, secure, and intuitive web applications tailored to your business operations.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>API Integration Services</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Streamline data flows with custom <strong>api integration services</strong>. We seamlessly connect payment gateways, CRMs, ERPs, third-party software, and legacy systems into a unified architecture.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Website Maintenance Services</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Ensure peak performance with 24/7 <strong>website maintenance services</strong>. We provide active monitoring, security patches, performance tuning, and continuous technical updates.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Hire Dedicated Web Developers in India for Your Next Project
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Looking to expand your technical capabilities or scale your engineering bandwidth efficiently? When you partner with Gatecode Technologies to <strong>hire a web developer in India</strong> or <strong>hire dedicated web developers</strong>, you gain access to skilled full-stack engineers who seamlessly integrate into your team. We offer flexible engagement models that reduce development overhead while guaranteeing high code quality and on-time project delivery.
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Custom Engineered Architecture:</strong> No generic templates. We write clean, maintainable, and modular full-stack code.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Complete Security & Compliance:</strong> Built-in SSL, data encryption, and defense against common web vulnerabilities.</li>
-            <li style={{ marginBottom: '10px' }}><strong>End-to-End Support:</strong> Dedicated project managers, active API integrations, and ongoing <strong>website maintenance services</strong>.</li>
-          </ul>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '36px', marginBottom: '14px' }}>
-            CMS Website Development Services for Scalable &amp; Easy-to-Manage Websites
-          </h3>
-
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            At Gatecode Technologies, we provide{' '}
-            <Link href="/services/web-development/cms-website-development" style={{ color: '#4e7c7e', fontWeight: '600', textDecoration: 'underline' }}>
-              CMS website development services
-            </Link>{' '}
-            for businesses that need a flexible, secure, and easy-to-manage online presence. Our CMS solutions enable business owners and content teams to create, edit, organize, and publish website content without depending on developers for every update.
-          </p>
-
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Our developers build CMS websites around your business goals, content structure, design requirements, and long-term growth plans. From business websites and corporate portals to blogs, service websites, and content-driven platforms, we create responsive CMS solutions with clean architecture, intuitive content management, SEO-friendly structures, and performance-focused development.
-          </p>
-
-          <h4 style={{ fontSize: '20px', fontWeight: '600', color: '#1a1a1a', marginTop: '28px', marginBottom: '12px' }}>
-            Custom CMS Development &amp; Integration
-          </h4>
-
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            We develop and customize CMS websites according to your specific requirements rather than relying only on pre-built templates. Our team can customize website functionality, content structures, themes, plugins/modules, third-party integrations, forms, user roles, and APIs to create a CMS environment that is practical for your team to manage.
-          </p>
-
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            We also focus on essential technical aspects such as mobile responsiveness, website security, page performance, structured content, SEO-friendly URLs, and scalable architecture to support long-term website management.
-          </p>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const WebDevelopmentServicesPage = () => {
   useEffect(() => {
@@ -462,9 +367,9 @@ const WebDevelopmentServicesPage = () => {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/web-development' },
-      { '@type': 'ListItem', position: 3, name: 'Web Development', item: 'https://gatecode.in/services/web-development' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.gatecode.in/services/web-development' },
+      { '@type': 'ListItem', position: 3, name: 'Web Development', item: 'https://www.gatecode.in/services/web-development' },
     ],
   };
 
@@ -476,60 +381,13 @@ const WebDevelopmentServicesPage = () => {
     provider: {
       '@type': 'Organization',
       name: 'Gatecode Technologies Pvt. Ltd.',
-      url: 'https://gatecode.in',
+      url: 'https://www.gatecode.in',
     },
     areaServed: {
       '@type': 'Country',
       name: 'India',
     },
     description: 'Premier website development company in India offering web design & development services, custom web app development services, react web development, and website maintenance services.',
-  };
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'What types of Web Development Services does Gatecode Technologies provide?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'We offer custom website development, e-commerce solutions, CMS development, and dynamic web applications. Our team focuses on building responsive, secure, and SEO-friendly websites that deliver a seamless user experience (UI/UX) across all devices to support your business growth.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Do you offer custom web development or use pre-built templates?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'We deliver 100% custom-engineered architecture. We do not use generic templates; instead, we write clean, maintainable, and modular full-stack code to ensure your SaaS platforms, enterprise workflows, and web apps can scale efficiently.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'What modern technologies do you use to build websites and web apps?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'As a high-performance web development company, we utilize modern frameworks including React, Next.js, Node.js, and Python. We also provide seamless API integration services to connect payment gateways, CRMs, ERPs, and external business tools into a unified system.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Can I hire dedicated web developers from Gatecode for my project?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, absolutely! If you are looking to expand your technical capabilities or scale your engineering bandwidth, you can hire our skilled full-stack engineers in India. We offer flexible engagement models that reduce development overhead while guaranteeing high code quality and on-time delivery.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Do you provide post-launch support and maintenance?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: "Yes, our partnership doesn't end at launch. We provide 24/7 website maintenance and end-to-end technical support. This includes active monitoring, security patches, performance tuning, and continuous updates to ensure your website operates at peak performance.",
-        },
-      },
-    ],
   };
 
   return (
@@ -542,19 +400,14 @@ const WebDevelopmentServicesPage = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webDevServiceSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="web-development" serviceName="web development" />
       <ContactSection />
-      <FAQSection />
     </div>
   );
 };

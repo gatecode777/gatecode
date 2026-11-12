@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
-import FAQSection, { androidAppDevFaqs } from '@/components/frontend/FAQSection/FAQSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component (Updated for Android App Development) ====================
@@ -310,79 +310,6 @@ const DigitalIndustries = () => {
 };
 
 // ==================== Section 6: Image Reference Section (SEO & Conversion Highlight) ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Top Android App Development Company in India
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Welcome to <strong>Gatecode Technologies Pvt. Ltd.</strong>, your trusted engineering partner delivering premier <strong>custom Android app development services</strong>. We engineer native, high-performance Android applications that combine fluid touch interfaces with robust backend infrastructure, serving millions of users across the global Google ecosystem.
-          </p>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Building Scalable Android Applications Engineered for Device Diversity
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Developing for Android requires mastering extreme ecosystem diversity—hundreds of manufacturers, thousands of screen resolutions, and multiple active OS versions. Our Android engineering team crafts resilient software utilizing Kotlin, Jetpack Compose, and clean MVVM architecture, ensuring your application runs flawlessly on entry-level smartphones and flagship devices alike.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Native Kotlin &amp; Jetpack Architecture</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                High-speed reactive code built on Google-recommended modern Android architecture, delivering rock-solid stability and low memory usage.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Device Fragmentation Mastery</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Tested extensively across varied OEM chipsets, screen aspect ratios, and Android versions to guarantee a universal 5-star experience.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Hardware &amp; Sensor Connectivity</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Seamless native integration with device sensors, Bluetooth BLE, GPS tracking, camera modules, and NFC communication.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Google Play Store Support</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Guaranteed compliance with Google Play Developer Policies, target SDK requirements, and privacy transparency standards.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Partner with Gatecode Technologies for Android Development?
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            When partnering with Gatecode Technologies, your Android product benefits from senior engineering oversight:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Dedicated Android Engineers:</strong> Proficient in modern Kotlin, Jetpack Compose, and reactive flow architectures.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Complete Code Ownership:</strong> 100% intellectual property handover, clean Git repositories, and transparent sprint reporting.</li>
-            <li style={{ marginBottom: '10px' }}><strong>SLA-Backed Maintenance:</strong> Continuous crash monitoring, rapid bug triage, and annual Android OS updates.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const AndroidAppDevelopmentPage = () => {
   useEffect(() => {
@@ -393,9 +320,9 @@ const AndroidAppDevelopmentPage = () => {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/mobile-app-development' },
-      { '@type': 'ListItem', position: 3, name: 'Android App Development', item: 'https://gatecode.in/services/mobile-app-development/android-development' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.gatecode.in/services/mobile-app-development' },
+      { '@type': 'ListItem', position: 3, name: 'Android App Development', item: 'https://www.gatecode.in/services/mobile-app-development/android-development' },
     ],
   };
 
@@ -407,60 +334,13 @@ const AndroidAppDevelopmentPage = () => {
     provider: {
       '@type': 'Organization',
       name: 'Gatecode Technologies Pvt. Ltd.',
-      url: 'https://gatecode.in',
+      url: 'https://www.gatecode.in',
     },
     areaServed: {
       '@type': 'Country',
       name: 'India',
     },
     description: 'Premier Android app development company in India delivering custom Kotlin and Java mobile apps for startups and enterprises.',
-  };
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'What types of Android applications do you develop?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'We offer custom Android app development services tailored to your specific business needs. Whether you require a high-performance enterprise solution, an engaging e-commerce application, or a dynamic SaaS mobile platform, our team engineers scalable, secure, and user-friendly Android apps that drive business growth.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'What technologies do you use for Android app development?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: "We utilize modern, robust technologies to build industry-leading Android applications. Depending on your project's performance requirements, we develop using native programming languages like Kotlin and Java, or leverage advanced cross-platform frameworks to ensure efficient development and highly responsive user interfaces.",
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Can your team integrate the Android app with our existing website or software?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, absolutely! We specialize in custom API development and system integration. We can securely connect your new Android application with your existing web platforms, CRMs, ERPs, legacy systems, and third-party payment gateways to ensure seamless, real-time data synchronization.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Do you handle the process of publishing the app on the Google Play Store?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: "Yes, our end-to-end development services include complete Google Play Store deployment. We ensure your application complies with all of Google's strict technical, performance, and security guidelines, managing the entire submission and approval process on your behalf.",
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Do you provide support and updates after the Android app goes live?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Our partnership continues long after your app is launched. We provide ongoing support and maintenance services, which include active performance monitoring, security patches, bug fixes, and upgrading your app to ensure full compatibility with the latest Android OS releases.',
-        },
-      },
-    ],
   };
 
   return (
@@ -473,25 +353,14 @@ const AndroidAppDevelopmentPage = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(androidServiceSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="mobile-app-development/android-development" serviceName="Android app development" />
       <ContactSection />
-      <FAQSection
-        eyebrow="FAQS"
-        titleLine1="FREQUENTLY ASKED"
-        titleHighlight="QUESTIONS"
-        subtitle="Explore answers to essential questions regarding custom Android development, technology stack, API integration, and Google Play Store deployment."
-        items={androidAppDevFaqs}
-      />
     </div>
   );
 };

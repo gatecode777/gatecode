@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component ====================
@@ -284,72 +285,6 @@ const DigitalIndustries = () => {
   );
 };
 
-// ==================== SeoContentSection Component ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Professional Audit Readiness and Regulatory Compliance Support
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Navigating statutory audits without thorough internal preparation often results in delayed filings, qualified auditor remarks, and unexpected tax penalties. At Gatecode Technologies, our audit and compliance specialists work alongside corporate finance teams to structure verifiable transaction trails, test internal controls, and resolve compliance vulnerabilities before external auditors review your ledgers.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Internal Control Reviews</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Rigorous testing of purchase authorisations, expense approvals, segregation of duties, and transaction verification systems.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Statutory Audit Preparation</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Complete workpaper preparation, balance confirmations, asset registers, and audit schedules that expedite auditor sign-offs.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Statutory Filing Compliance</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                End-to-end management of corporate registry filings, annual tax returns, and statutory reporting obligations under corporate law.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Risk Mitigation & SOP Design</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Design of standardized accounting operating procedures, fiscal policy handbooks, and fraud prevention checkpoints.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Proactive Audit Preparation Protects Business Value
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Maintaining organized books and continuous compliance ensures seamless interactions with financial institutions, investors, and regulatory bodies. Choosing Gatecode Technologies gives you:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Zero Statutory Surprises:</strong> Early detection and resolution of reconciliation errors before year-end audits.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Faster Auditor Turnarounds:</strong> Well-structured schedules that reduce external auditor billable hours and delays.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Executive Confidence:</strong> Documented governance and verifiable internal controls ready for board review.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const AuditComplianceSupportServicesPage = () => {
   useEffect(() => {
@@ -364,7 +299,7 @@ const AuditComplianceSupportServicesPage = () => {
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="accounting/audit-compliance" serviceName="audit and compliance" />
       <ContactSection />
     </div>
   );

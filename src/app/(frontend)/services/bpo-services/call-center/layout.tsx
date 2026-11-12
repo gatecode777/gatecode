@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: "Inbound & Outbound Call Center Services | Gatecode",
     description: "24/7 inbound and outbound call center solutions that scale customer engagement, improve first-call resolution and grow your sales pipeline.",
-    url: "https://gatecode.in/services/bpo-services/call-center",
+    url: "https://www.gatecode.in/services/bpo-services/call-center",
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

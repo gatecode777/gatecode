@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: "Wireframing & Prototyping Services | Gatecode",
     description: "Turn product concepts into interactive wireframes and clickable Figma prototypes that de-risk engineering and align stakeholders.",
-    url: "https://gatecode.in/services/ui-ux-design/wireframing",
+    url: "https://www.gatecode.in/services/ui-ux-design/wireframing",
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

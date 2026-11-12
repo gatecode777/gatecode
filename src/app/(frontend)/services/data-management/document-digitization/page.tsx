@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component ====================
@@ -284,72 +285,6 @@ const DigitalIndustries = () => {
   );
 };
 
-// ==================== SeoContentSection Component ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Professional Document Digitization and Paper Archival Services
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Relying on physical paper records slows business operations, occupies costly floor space, and exposes organizations to severe data loss risks. At Gatecode Technologies, our document digitization and scanning services convert paper archives into organized, fully searchable, and encrypted digital records that improve organizational productivity.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>High-Resolution Scanning</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                High-speed industrial scanning capturing invoices, contracts, vouchers, and oversized blueprints with crisp 300-600 DPI clarity.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Searchable Optical OCR</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Multi-lingual OCR algorithms that convert scanned image text into searchable PDF/A files for keyword-level instant document discovery.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Metadata Tagging & Taxonomy</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Indexing critical parameters like invoice number, date, vendor name, and category to support automated document retrieval.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>DMS & Cloud Integration</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Direct ingestion into SharePoint, Google Drive, AWS, or on-premise Document Management Systems with role-based access rules.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Digitizing Paper Archives Protects Corporate Knowledge
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Moving to a paperless digital archive safeguards corporate institutional knowledge and ensures instant cross-departmental access. Choosing Gatecode Technologies delivers:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Zero File Search Latency:</strong> Retrieve any historic voucher or agreement in seconds via automated keyword search.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Reduced Real Estate Overheads:</strong> Free up costly physical office square footage previously dedicated to filing boxes.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Audit & Regulatory Preparedness:</strong> Maintain tamper-proof, time-stamped digital archives ready for legal or tax review.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const DocumentDigitizationServicesPage = () => {
   useEffect(() => {
@@ -364,7 +299,7 @@ const DocumentDigitizationServicesPage = () => {
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="data-management/document-digitization" serviceName="document digitisation" />
       <ContactSection />
     </div>
   );

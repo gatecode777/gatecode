@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { FiPhone, FiMail, FiMapPin, FiClock, FiSend, FiCheckCircle } from 'react-icons/fi';
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { BsTwitterX } from 'react-icons/bs';
 
 import '@/components/frontend/Contact.css';
@@ -70,8 +70,7 @@ const ContactInfo = () => {
     { icon: <FaLinkedinIn />, link: '#' },
     { icon: <BsTwitterX />, link: '#' },
     { icon: <FaInstagram />, link: '#' },
-    { icon: <FaFacebookF />, link: '#' },
-    { icon: <FaYoutube />, link: '#' }
+    { icon: <FaFacebookF />, link: '#' }
   ];
 
   return (
@@ -335,9 +334,9 @@ const ContactPage = () => {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Gatecode Technologies Pvt. Ltd.',
-    image: 'https://gatecode.in/images/logo.webp',
-    '@id': 'https://gatecode.in/#organization',
-    url: 'https://gatecode.in',
+    image: 'https://www.gatecode.in/images/logo.webp',
+    '@id': 'https://www.gatecode.in/#organization',
+    url: 'https://www.gatecode.in',
     hasMap: 'https://maps.app.goo.gl/makpC6JDuUg7jbgi9',
     telephone: '+918502888838',
     email: 'info@gatecode.in',

@@ -139,7 +139,7 @@ const TermsContent = () => {
                   <strong>Phone:</strong> +91 8502888838
                 </div>
                 <div className="privacy-contact__item">
-                  <strong>Address:</strong> 712 Sumer Nagar, Mansarover, 302330
+                  <strong>Address:</strong> 412 Sumer Nagar, Mansarovar, Jaipur, Rajasthan 302020
                 </div>
               </div>
             </div>

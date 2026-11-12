@@ -35,13 +35,13 @@ export const metadata: Metadata = {
     'digital transformation companies'
   ],
   alternates: {
-    canonical: 'https://gatecode.in/about',
+    canonical: 'https://www.gatecode.in/about',
   },
   openGraph: {
     images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'About Gatecode Technologies | Top IT Software Company in India',
     description: 'Learn about Gatecode Technologies Pvt Ltd. Recognized among the top IT companies in India, we deliver digital transformation services, custom software engineering & IT solutions.',
-    url: 'https://gatecode.in/about',
+    url: 'https://www.gatecode.in/about',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',
@@ -61,8 +61,8 @@ const About = () => {
     '@type': 'Organization',
     name: 'Gatecode Technologies Pvt. Ltd.',
     alternateName: 'Gatecode Technologies',
-    url: 'https://gatecode.in',
-    logo: 'https://gatecode.in/images/logo.webp',
+    url: 'https://www.gatecode.in',
+    logo: 'https://www.gatecode.in/images/logo.webp',
     description: 'Gatecode Technologies Pvt. Ltd. is a top IT company in India specializing in custom software development, mobile apps, web development, BPO, and digital marketing.',
     sameAs: [
       'https://www.linkedin.com/company/gatecode-technologies',

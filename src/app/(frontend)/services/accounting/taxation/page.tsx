@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component ====================
@@ -284,72 +285,6 @@ const DigitalIndustries = () => {
   );
 };
 
-// ==================== SeoContentSection Component ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Corporate Taxation & Statutory Compliance Support Services
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Handling complex corporate taxes without experienced compliance oversight leads to missed tax credits, inadvertent filing errors, and interest penalties. At Gatecode Technologies, our taxation consultants manage your ongoing direct and indirect tax responsibilities with rigorous accuracy, ensuring total compliance while safeguarding your legitimate tax deductions.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Direct Corporate Tax (ITR)</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Preparation of taxable profit computations, depreciation schedules, advance tax estimates, and timely annual corporate return filings.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>GST & Indirect Tax Advisory</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Monthly GSTR-1, GSTR-3B filings, supplier input credit reconciliation, annual audits, and cross-state trade compliance.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>TDS / TCS Deductions & Returns</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Accurate deduction rates for contractor payments, rent, salaries, and quarterly electronic return submissions with Form 16 generation.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Tax Notice & Scrutiny Support</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Formal response preparation, documentation compilation, and professional advisory for assessments and department clarifications.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Comprehensive Tax Management Protects Corporate Cash Flow
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            A disciplined taxation program prevents surprise tax liabilities and ensures every eligible deduction and credit is fully utilized. Choosing Gatecode Technologies gives you:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Punctual Filings:</strong> Proactive compliance calendars that guarantee zero late filing fines or portal interest charges.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Reconciled Tax Credits:</strong> Rigorous 2B invoice reconciliation ensuring you claim 100% of eligible input tax credits.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Complete Audit Readiness:</strong> Organized electronic documentation ready for statutory tax audit verification at any time.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const TaxationComplianceSupportServicesPage = () => {
   useEffect(() => {
@@ -364,7 +299,7 @@ const TaxationComplianceSupportServicesPage = () => {
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="accounting/taxation" serviceName="taxation" />
       <ContactSection />
     </div>
   );

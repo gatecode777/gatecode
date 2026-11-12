@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== Section 1: Hero Section ====================
@@ -312,79 +313,6 @@ const DigitalIndustries = () => {
 };
 
 // ==================== Section 6: Image Reference Section (SEO & Conversion Highlight) ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Top-Rated Social Media Marketing Agency for Measurable Brand Growth
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Welcome to Gatecode Technologies Pvt. Ltd., a trusted digital marketing and social media agency dedicated to helping businesses grow their online reach, build brand loyalty, and acquire qualified customers. Our social media marketing solutions blend creative visual storytelling with performance advertising to deliver meaningful, long-term impact.
-          </p>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Strategic Social Media Management &amp; Performance Advertising
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Modern social algorithms favor authenticity, consistency, and viewer retention. As a results-oriented social media agency, our specialists combine platform-native creative design with structured paid campaigns across Instagram, Facebook, LinkedIn, and YouTube, ensuring your brand stays visible, memorable, and trusted by your audience.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Meta Advertising (Instagram &amp; Facebook)</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Reach high-intent audiences with precision targeting. We build full-funnel ad campaigns focused on brand discovery, lead generation, and remarketing that optimize your advertising budget.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>B2B LinkedIn Marketing &amp; Authority</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Establish industry leadership and connect with corporate decision-makers. We manage LinkedIn company pages, executive branding, and sponsored content to generate high-value B2B relationships.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Organic Community Building &amp; Engagement</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Turn casual followers into active brand advocates. We craft consistent, valuable content schedules, reply to community conversations, and cultivate authentic audience relationships.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Cross-Platform Content &amp; Creative Strategy</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Capture attention in fast-scrolling feeds with high-impact visuals, reels, carousels, and educational graphics tailored specifically to each platform’s unique audience behavior.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Partner with Gatecode Technologies for Social Media Marketing?
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Achieving consistent results on social media requires authentic brand voice, rigorous data analysis, and proactive creative iteration. Partnering with our dedicated marketing team provides:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Audience-Centric Content:</strong> Content calendars tailored to your specific buyer personas, answering their questions and reflecting genuine value.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Data-Driven Social Advertising:</strong> Structured budget allocation, ongoing creative A/B testing, and retargeting to maximize return on ad spend.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Transparent Performance Reporting:</strong> Regular reporting on meaningful engagement, follower quality, website referral traffic, and conversion trends.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const SocialMediaMarketingPage = () => {
   useEffect(() => {
@@ -395,9 +323,9 @@ const SocialMediaMarketingPage = () => {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/digital-marketing' },
-      { '@type': 'ListItem', position: 3, name: 'SMM Services', item: 'https://gatecode.in/services/digital-marketing/smm' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.gatecode.in/services/digital-marketing' },
+      { '@type': 'ListItem', position: 3, name: 'SMM Services', item: 'https://www.gatecode.in/services/digital-marketing/smm' },
     ],
   };
 
@@ -409,44 +337,13 @@ const SocialMediaMarketingPage = () => {
     provider: {
       '@type': 'Organization',
       name: 'Gatecode Technologies Pvt. Ltd.',
-      url: 'https://gatecode.in',
+      url: 'https://www.gatecode.in',
     },
     areaServed: {
       '@type': 'Country',
       name: 'India',
     },
     description: 'Professional social media marketing services providing social strategy, Meta & LinkedIn ad management, creative design, community engagement, and performance analytics.',
-  };
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'What social media platforms do you manage for businesses?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'We manage and optimize campaigns across Instagram, Facebook, LinkedIn, YouTube, and X (Twitter), selecting the channels that best match your target audience.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'How soon can we expect results from social media marketing?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Targeted paid ad campaigns typically begin generating reach and leads within days of launch, while organic community growth and authority building establish compounding momentum over 3 to 6 months.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Do you provide content creation along with social media management?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, our end-to-end service includes customized graphics, short-form reels, informative carousels, caption copywriting, and publishing schedules reviewed for your approval.',
-        },
-      },
-    ],
   };
 
   return (
@@ -459,17 +356,13 @@ const SocialMediaMarketingPage = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(smmServiceSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="digital-marketing/smm" serviceName="social media marketing" />
       <ContactSection />
     </div>
   );

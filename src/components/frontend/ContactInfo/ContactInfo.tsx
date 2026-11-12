@@ -2,7 +2,7 @@
 'use client';
 
 import { FiPhone, FiMail, FiMapPin, FiClock } from 'react-icons/fi';
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { BsTwitterX } from 'react-icons/bs';
 import './ContactInfo.css';
 
@@ -66,8 +66,7 @@ const ContactInfo = () => {
     { icon: <FaLinkedinIn />, link: '#' },
     { icon: <BsTwitterX />, link: '#' },
     { icon: <FaInstagram />, link: '#' },
-    { icon: <FaFacebookF />, link: '#' },
-    { icon: <FaYoutube />, link: '#' }
+    { icon: <FaFacebookF />, link: '#' }
   ];
 
   return (

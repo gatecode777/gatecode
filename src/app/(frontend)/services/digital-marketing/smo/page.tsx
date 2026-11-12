@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== Section 1: Hero Section ====================
@@ -312,79 +313,6 @@ const DigitalIndustries = () => {
 };
 
 // ==================== Section 6: Image Reference Section (SEO & Conversion Highlight) ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Professional Social Media Optimization Agency for Organic Growth
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Welcome to Gatecode Technologies Pvt. Ltd., your trusted partner for organic social profile optimization and digital brand alignment. We help businesses transform standard social media handles into high-performing touchpoints that rank in native search results, captivate profile visitors, and consistently generate organic interest.
-          </p>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Maximizing Profile Authority, In-App Search &amp; Brand Trust
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Modern consumers increasingly use social platforms like Instagram, TikTok, and LinkedIn as search engines to evaluate companies before engaging. Our SMO methodology focuses on structured keyword integration, clean visual aesthetics, and seamless conversion links to make sure your profiles make a positive, authoritative impression.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>In-App Social Search Optimization</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Ensure your profiles and posts appear when prospective buyers search for industry topics and services directly within platform search engines.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Unified Cross-Platform Branding</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Maintain complete visual and messaging harmony across every active social channel, reinforcing professionalism and brand recall.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Profile Conversion &amp; Link Architecture</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Guide profile visitors through tailored navigation pathways and dedicated link hubs that guide interest toward inquiries and conversions.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Algorithmic Reach &amp; Tag Strategy</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Leverage targeted hashtags, audio trends, and optimal posting formats designed to earn higher visibility within organic platform feeds.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Partner with Gatecode Technologies for SMO?
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            A disciplined social media optimization strategy protects your brand reputation and maximizes organic discovery. When you partner with our optimization specialists, you benefit from:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Technical Profile Standards:</strong> Rigorous optimization of bio keywords, account categories, highlights, and contact touchpoints.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Platform-Native Experience:</strong> Content formatting and tagging tailored to the unique behavioral algorithms of each network.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Clear Organic Insights:</strong> Measurable tracking of profile visits, in-app search impressions, and website referral traffic.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const SocialMediaOptimizationPage = () => {
   useEffect(() => {
@@ -395,9 +323,9 @@ const SocialMediaOptimizationPage = () => {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/digital-marketing' },
-      { '@type': 'ListItem', position: 3, name: 'SMO Services', item: 'https://gatecode.in/services/digital-marketing/smo' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.gatecode.in/services/digital-marketing' },
+      { '@type': 'ListItem', position: 3, name: 'SMO Services', item: 'https://www.gatecode.in/services/digital-marketing/smo' },
     ],
   };
 
@@ -409,36 +337,13 @@ const SocialMediaOptimizationPage = () => {
     provider: {
       '@type': 'Organization',
       name: 'Gatecode Technologies Pvt. Ltd.',
-      url: 'https://gatecode.in',
+      url: 'https://www.gatecode.in',
     },
     areaServed: {
       '@type': 'Country',
       name: 'India',
     },
     description: 'Professional social media optimization services providing social profile audits, bio keyword optimization, in-app search visibility, and cross-channel brand synchronization.',
-  };
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'What is the difference between SMO and SMM?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'SMO (Social Media Optimization) focuses on optimizing your profiles, bios, searchability, and organic post structure for discoverability, while SMM (Social Media Marketing) emphasizes active campaign execution, paid advertisements, and daily community management.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'How does SMO improve my brand visibility?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'By integrating high-intent keywords into your profile bios, structuring relevant hashtags, and creating platform-native content formats, your profiles rank higher in internal platform searches and explore feeds.',
-        },
-      },
-    ],
   };
 
   return (
@@ -451,17 +356,13 @@ const SocialMediaOptimizationPage = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(smoServiceSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="digital-marketing/smo" serviceName="social media optimisation" />
       <ContactSection />
     </div>
   );

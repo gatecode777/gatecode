@@ -9,26 +9,26 @@
 
 import type { FAQItem } from '@/components/frontend/FAQSection/FAQSection';
 
-export const SITE = 'https://gatecode.in';
+export const SITE = 'https://www.gatecode.in';
 export const ORG_ID = `${SITE}/#organization`;
 
 export const FACTS = {
   /** e.g. 'INR 3 lakh to INR 25 lakh' */
-  COST_RANGE: '{COST_RANGE}',
+  COST_RANGE: 'between INR 1.5 lakh and INR 15 lakh or more',
   /** e.g. '8 to 12 weeks' */
-  BASIC_TIMELINE: '{BASIC_TIMELINE}',
+  BASIC_TIMELINE: '6 to 10 weeks',
   /** e.g. '4 to 9 months' */
-  ENTERPRISE_TIMELINE: '{ENTERPRISE_TIMELINE}',
+  ENTERPRISE_TIMELINE: '4 to 8 months',
   /** Technologies you have confirmed, e.g. ['React', 'Next.js', 'Node.js', 'Python', 'MongoDB'] */
-  TECH_LIST: ['{TECH_LIST}'] as string[],
+  TECH_LIST: ['React', 'Next.js', 'Node.js', 'MongoDB', 'WordPress'] as string[],
   /** Full business address as one line */
-  ADDRESS: '{ADDRESS}',
+  ADDRESS: '412, Sumer Nagar, Mansarovar, Jaipur, Rajasthan 302020',
   /** Founding year as 4 digits, e.g. '2019' (years of experience is calculated from it) */
-  YEAR: '{YEAR}',
+  YEAR: '',
   /** A certification you actually hold, e.g. 'ISO 9001:2015'. Use 'none' if you have none. */
-  CERTIFICATION: '{CERTIFICATION}',
+  CERTIFICATION: 'none',
   /** Countries you serve, e.g. ['India', 'United States', 'United Kingdom'] */
-  COUNTRIES: ['{COUNTRIES}'] as string[],
+  COUNTRIES: ['India'] as string[],
   /** Set to true only once you confirm you sign NDAs; enables the NDA FAQ. */
   SIGNS_NDA: false,
 };

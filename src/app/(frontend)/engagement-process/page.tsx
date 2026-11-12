@@ -22,13 +22,13 @@ export const metadata: Metadata = {
     'Gatecode Technologies'
   ],
   alternates: {
-    canonical: 'https://gatecode.in/engagement-process',
+    canonical: 'https://www.gatecode.in/engagement-process',
   },
   openGraph: {
     images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'Software Engagement Process & Models | Gatecode Tech',
     description: 'Discover the transparent software engagement process at Gatecode Technologies. Explore our agile IT development workflows, dedicated engineering teams, and fixed-price project models.',
-    url: 'https://gatecode.in/engagement-process',
+    url: 'https://www.gatecode.in/engagement-process',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

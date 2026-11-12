@@ -28,13 +28,13 @@ export const metadata: Metadata = {
     'best custom app development company'
   ],
   alternates: {
-    canonical: 'https://gatecode.in/expertise/app-developers',
+    canonical: 'https://www.gatecode.in/expertise/app-developers',
   },
   openGraph: {
     images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'Dedicated App Developers in India | Android & iOS Team',
     description: 'Dedicated app developers delivering Android, iOS, and cross-platform solutions with expert teams, scalable technology, and reliable development support.',
-    url: 'https://gatecode.in/expertise/app-developers',
+    url: 'https://www.gatecode.in/expertise/app-developers',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

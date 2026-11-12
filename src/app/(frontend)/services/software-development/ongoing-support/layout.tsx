@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'It Support Services & Technology Solutions | Expert Team',
     description:
       'Get Reliable It Support Services And Technology Solutions To Improve Performance, Strengthen Security, Reduce Downtime, And Support Business Growth.',
-    url: 'https://gatecode.in/services/software-development/ongoing-support',
+    url: 'https://www.gatecode.in/services/software-development/ongoing-support',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

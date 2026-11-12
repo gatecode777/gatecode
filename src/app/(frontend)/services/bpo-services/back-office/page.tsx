@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component ====================
@@ -284,72 +285,6 @@ const DigitalIndustries = () => {
   );
 };
 
-// ==================== SeoContentSection Component ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Comprehensive Back-Office Support and Administrative Process Outsourcing
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            In-house back-office management frequently consumes excessive managerial bandwidth, inflates payroll costs, and slows operational turnaround times. At Gatecode Technologies, our managed back-office outsourcing services handle routine data entry, document indexing, accounting reconciliation, and order fulfillment with exceptional accuracy and speed.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Accounts Payable & Invoicing</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Three-way matching of vendor invoices with purchase orders, receipt verification, payment tracking, and ledger postings in QuickBooks or SAP.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Order Processing & Logistics Support</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                High-speed order entry, customer address verification, courier dispatch monitoring, and return tracking across e-commerce marketplaces.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Claims Processing & Form Audits</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Systematic review of insurance submissions, warranty documents, and application forms against strict regulatory policy rules.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Document Archival & Database Updates</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Electronic records classification, metadata indexing, and ongoing database maintenance to preserve institutional corporate memory.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Outsourcing Back-Office Operations Delivers Strategic Advantage
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Transitioning routine administrative operations to a specialized BPO provider frees key staff to focus on customer acquisition, product development, and core revenue drivers. Choosing Gatecode Technologies delivers:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Zero Processing Backlogs:</strong> Guaranteed daily turnaround times keeping invoices, claims, and orders moving smoothly.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Dual-Operator Quality Assurance:</strong> Stringent verification protocols ensuring 99.9% error-free data entry and ledger records.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Operational Resilience:</strong> Continuous processing continuity backed by multi-site redundancy and disaster recovery systems.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const BackOfficeServicesPage = () => {
   useEffect(() => {
@@ -364,7 +299,7 @@ const BackOfficeServicesPage = () => {
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="bpo-services/back-office" serviceName="back office" />
       <ContactSection />
     </div>
   );

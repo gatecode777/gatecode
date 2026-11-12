@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: "Social Media Optimization (SMO) Services | Gatecode",
     description: "Boost discoverability, profile credibility and organic reach by optimizing your social channels with Gatecode Technologies.",
-    url: "https://gatecode.in/services/digital-marketing/smo",
+    url: "https://www.gatecode.in/services/digital-marketing/smo",
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: "Brand Strategy & Promotion Services | Gatecode",
     description: "Define your identity and build lasting recognition with competitive positioning, messaging frameworks and multi-channel brand promotion.",
-    url: "https://gatecode.in/services/digital-marketing/brand-strategy",
+    url: "https://www.gatecode.in/services/digital-marketing/brand-strategy",
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

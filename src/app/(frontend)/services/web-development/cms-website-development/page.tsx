@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
-import FAQSection, { cmsWebsiteDevFaqs } from '@/components/frontend/FAQSection/FAQSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component (Updated for CMS Website Development) ====================
@@ -24,7 +24,7 @@ const DigitalHero = () => {
       <div className="dm-container dm-hero-content">
         <div className="dm-hero-text-wrapper">
           <h1 className="dm-hero-title">
-            CMS<br />WEBSITE<br />DEVELOPMENT
+            Best Wordpress<br />Website Development<br />Services In Jaipur
           </h1>
           <p className="dm-hero-subtitle">
             We build flexible, scalable, and intuitive CMS websites that empower marketing teams to publish dynamic content effortlessly while maintaining top-tier security and performance.
@@ -316,79 +316,6 @@ const DigitalIndustries = () => {
 };
 
 // ==================== Section 6: Image Reference Section (SEO & Conversion Highlight) ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Leading CMS Website Development Company in India
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Welcome to <strong>Gatecode Technologies Pvt. Ltd.</strong>, an established <strong>CMS website development company</strong> delivering tailored, secure, and easily manageable content management solutions. We empower corporate enterprises, content publishers, and e-commerce stores to manage digital content effortlessly without sacrificing web speed, search engine performance, or backend security.
-          </p>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Empowering Marketing Teams with Intuitive, Secure, and Scalable CMS Architecture
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Updating business content, launching campaigns, or publishing industry insights should never require constant developer assistance. Our custom CMS solutions combine intuitive editorial dashboards with clean, decoupled frontend codebases, ensuring your website renders instantaneously, ranks higher on search engines, and evolves smoothly alongside your organizational growth.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Headless & Traditional CMS Options</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                From headless CMS setups using React and Next.js to enterprise WordPress implementations, we build solutions matched to your operational scale.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Streamlined Editorial Workflows</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Custom content blocks, live previews, and intuitive media libraries empower non-technical teams to publish polished pages in minutes.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Advanced Security & Backup Controls</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Comprehensive threat protection with automated security patches, two-factor authentication, and encrypted daily cloud backups.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Enterprise Scalability & Localization</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                High-capacity databases engineered to support heavy traffic spikes, multi-language localization, and complex taxonomic hierarchies.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Choose Gatecode Technologies for CMS Engineering?
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            When you partner with Gatecode Technologies, you receive a dedicated team of CMS architects committed to code quality and long-term usability:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>100% Bespoke Codebase:</strong> Custom themes and administrative structures without dependency on heavy commercial page builders.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Complete Editorial Training:</strong> Comprehensive documentation and hands-on walkthroughs for your marketing and content staff.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Ongoing Technical Maintenance:</strong> Regular core updates, proactive database optimization, and continuous security patching.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const CMSWebsiteDevelopmentPage = () => {
   useEffect(() => {
@@ -399,9 +326,9 @@ const CMSWebsiteDevelopmentPage = () => {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/web-development' },
-      { '@type': 'ListItem', position: 3, name: 'CMS Website Development', item: 'https://gatecode.in/services/web-development/cms-website-development' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.gatecode.in/services/web-development' },
+      { '@type': 'ListItem', position: 3, name: 'CMS Website Development', item: 'https://www.gatecode.in/services/web-development/cms-website-development' },
     ],
   };
 
@@ -413,60 +340,13 @@ const CMSWebsiteDevelopmentPage = () => {
     provider: {
       '@type': 'Organization',
       name: 'Gatecode Technologies Pvt. Ltd.',
-      url: 'https://gatecode.in',
+      url: 'https://www.gatecode.in',
     },
     areaServed: {
       '@type': 'Country',
       name: 'India',
     },
     description: 'CMS website development company in India specializing in WordPress, Shopify, Headless CMS, Drupal, Strapi, and custom Content Management System development.',
-  };
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'What is a CMS website, and why does my business need one?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: "A Content Management System (CMS) is a platform that allows you to easily create, manage, and update your website's content without needing to write any code. If your business requires frequent updates—such as publishing blogs, adding new products, or updating company news—a CMS gives you complete control over your website quickly and efficiently.",
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Do I need technical knowledge or coding skills to manage my CMS website?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Not at all! The primary benefit of our CMS development services is providing you with a highly intuitive and user-friendly admin dashboard. You and your team can easily edit text, upload images, manage pages, and publish content with just a few clicks, requiring zero technical expertise.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Do you build custom CMS platforms or use headless CMS architectures?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'We do both based on your specific business requirements. We specialize in building custom-engineered CMS portals tailored to your exact workflows. Additionally, as a high-performance web development company, we integrate modern Headless CMS solutions using frameworks like React and Next.js, which separate the backend content management from the frontend to deliver lightning-fast loading speeds.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Will my CMS website be secure against hacking and vulnerabilities?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, security is a top priority for us. Unlike poorly maintained template sites that are prone to attacks, we build secure CMS architectures with built-in SSL, data encryption, and advanced defenses against common web vulnerabilities. We also offer ongoing maintenance services to ensure your CMS is always updated with the latest security patches.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Are the CMS websites developed by Gatecode SEO-friendly?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Absolutely. We engineer our CMS solutions with search engine optimization (SEO) at their core. We ensure clean code structure, fast page load times, mobile responsiveness, and easy-to-use SEO modules so you can effortlessly optimize your meta tags, URLs, and content to rank higher on Google.',
-        },
-      },
-    ],
   };
 
   return (
@@ -479,25 +359,14 @@ const CMSWebsiteDevelopmentPage = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(cmsServiceSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="web-development/cms-website-development" serviceName="CMS website development" />
       <ContactSection />
-      <FAQSection
-        eyebrow="FAQS"
-        titleLine1="FREQUENTLY ASKED"
-        titleHighlight="QUESTIONS"
-        subtitle="Explore answers to essential questions regarding CMS architecture, admin controls, Headless CMS integrations, security, and SEO optimization."
-        items={cmsWebsiteDevFaqs}
-      />
     </div>
   );
 };

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: 'Affordable Social Media Marketing Services Agency',
     description:
       'Need affordable social media marketing services for small business? Our expert agency provides the best SMM marketing services to grow your brand.',
-    url: 'https://gatecode.in/services/digital-marketing/smm',
+    url: 'https://www.gatecode.in/services/digital-marketing/smm',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

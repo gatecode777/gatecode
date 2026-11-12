@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: 'Best Wordpress Website Development Services In Jaipur',
     description:
       'Get Expert Wordpress Website Design, Development, Maintenance And Ecommerce Services To Build A Fast, Secure And Professional Business Website.',
-    url: 'https://gatecode.in/services/web-development/cms-website-development',
+    url: 'https://www.gatecode.in/services/web-development/cms-website-development',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

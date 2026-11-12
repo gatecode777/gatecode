@@ -22,13 +22,13 @@ export const metadata: Metadata = {
     'hire seo specialist'
   ],
   alternates: {
-    canonical: 'https://gatecode.in/expertise/digital-marketer',
+    canonical: 'https://www.gatecode.in/expertise/digital-marketer',
   },
   openGraph: {
     images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'Hire Dedicated Digital Marketers & SEO Experts | Gatecode',
     description: 'Looking for the best digital marketing agency or digital marketing company in India? Gatecode Technologies provides top digital marketing services, SEO specialist hiring, PPC ads & performance growth marketing.',
-    url: 'https://gatecode.in/expertise/digital-marketer',
+    url: 'https://www.gatecode.in/expertise/digital-marketer',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component ====================
@@ -284,72 +285,6 @@ const DigitalIndustries = () => {
   );
 };
 
-// ==================== SeoContentSection Component ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Professional Data Cleansing and Validation Services
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Operating on decayed datasets wastes substantial marketing spend, inflates email bounce rates, and frustrates sales teams with disconnected phone numbers and duplicate leads. At Gatecode Technologies, our data cleansing specialists use multi-stage scrubbing techniques to purge inaccuracies, standardize inconsistent fields, and validate critical customer records.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Intelligent Deduplication</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Fuzzy matching algorithms that detect subtle name spelling variations, identical phone numbers, and shared addresses to merge duplicate accounts cleanly.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Syntax & Address Standardization</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Formatting postal addresses, international phone dialing codes, dates, and currency values into globally consistent relational data models.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Contact Verification</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Real-time validation of email deliverability, domain MX records, and telephone connectivity to safeguard sender reputation across campaigns.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Data Enrichment & Filling</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Appending missing corporate attributes, industry SIC codes, employee counts, and decision-maker roles to enhance lead scoring efficacy.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Clean Data Directly Multiplies Commercial Revenue
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            A pristine database reduces operational friction, improves customer outreach efficacy, and prevents costly communication errors. Choosing Gatecode Technologies gives you:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Higher Campaign ROI:</strong> Eliminate wasted postage, SMS charges, and invalid email marketing sends.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Productive Sales Reps:</strong> Direct sales outreach exclusively to verified, accurate phone numbers and active emails.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Trustworthy Executive Reports:</strong> Financial and operational reporting free from duplicate transaction distortions.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const DataCleansingValidationServicesPage = () => {
   useEffect(() => {
@@ -364,7 +299,7 @@ const DataCleansingValidationServicesPage = () => {
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="data-management/data-cleansing" serviceName="data cleansing" />
       <ContactSection />
     </div>
   );

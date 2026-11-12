@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: 'Android App Development Company in Jaipur | Custom Apps',
     description:
       'Android app development company offering custom mobile apps with innovative designs, advanced features, and scalable solutions for businesses.',
-    url: 'https://gatecode.in/services/mobile-app-development/android-development',
+    url: 'https://www.gatecode.in/services/mobile-app-development/android-development',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

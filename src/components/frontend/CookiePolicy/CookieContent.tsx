@@ -128,7 +128,7 @@ const CookieContent = () => {
                   <strong>Phone:</strong> <a href="tel:+918502888838">+91 8502888838</a>
                 </div>
                 <div className="privacy-contact__item">
-                  <strong>Address:</strong> 712 Sumer Nagar, Mansarover, 302030
+                  <strong>Address:</strong> 412 Sumer Nagar, Mansarovar, Jaipur, Rajasthan 302020
                 </div>
               </div>
             </div>

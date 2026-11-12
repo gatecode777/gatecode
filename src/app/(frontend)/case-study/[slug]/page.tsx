@@ -29,7 +29,7 @@ export async function generateMetadata({ params }): Promise<Metadata> {
 
   const title = `${study.title} | Gatecode Technologies`;
   const description = study.shortDesc || study.description || undefined;
-  const url = `https://gatecode.in/case-study/${slug}`;
+  const url = `https://www.gatecode.in/case-study/${slug}`;
   const image = study.thumbnail || '/images/og-default.webp';
 
   return {

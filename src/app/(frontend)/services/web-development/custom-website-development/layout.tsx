@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: 'Best Custom Website Development Services In Jaipur',
     description:
       'Get Custom Website Design, Development, Shopify And Ecommerce Services From A Professional Web Development Company To Grow Your Business Online.',
-    url: 'https://gatecode.in/services/web-development/custom-website-development',
+    url: 'https://www.gatecode.in/services/web-development/custom-website-development',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

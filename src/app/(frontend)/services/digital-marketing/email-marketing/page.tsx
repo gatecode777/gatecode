@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== Section 1: Hero Section ====================
@@ -312,79 +313,6 @@ const DigitalIndustries = () => {
 };
 
 // ==================== Section 6: Image Reference Section (SEO & Conversion Highlight) ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Performance-Focused Email Marketing Agency for Sustainable ROI
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Welcome to Gatecode Technologies Pvt. Ltd., your strategic partner for high-impact email marketing and automated customer communication. We help forward-thinking businesses build valuable subscriber relationships, reduce churn, and turn email subscribers into long-term brand advocates through data-backed execution.
-          </p>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Building Automated Customer Journeys &amp; High-Retention Inboxes
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            The secret to high-performing email marketing is relevance. Our email specialists combine deep behavioral segmentation with clean responsive design and deliverability best practices, ensuring your brand stays top-of-mind without fatiguing your audience.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Automated Lifecycle Sequences</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Deploy smart automated triggers including welcome series, browse abandonment, post-purchase follow-ups, and win-back campaigns.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Segmentation &amp; Personalization</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Deliver custom messages based on browsing history, past purchases, engagement frequency, and expressed subscriber interests.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Deliverability &amp; Reputation Management</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Protect domain health through SPF, DKIM, and DMARC configurations, list hygiene protocols, and anti-spam compliance standards.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Conversion-Focused Design &amp; Copy</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Engage readers with clean visual layouts, compelling subject lines, and clear calls-to-action optimized for all screen sizes.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Partner with Gatecode Technologies for Email Marketing?
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            A disciplined email marketing system unlocks steady, predictable revenue. Partnering with our specialized email marketing team delivers:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>End-to-End Workflow Execution:</strong> From ESP integration and template coding to copy creation and automated trigger scheduling.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Subscriber-First Strategy:</strong> High-value content calendars that respect the subscriber’s inbox while maximizing engagement and conversions.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Data-Driven Accountability:</strong> Transparent reporting on open rates, click-through rates, unsubscribe rates, and revenue per recipient.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const EmailMarketingServicesPage = () => {
   useEffect(() => {
@@ -395,9 +323,9 @@ const EmailMarketingServicesPage = () => {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/digital-marketing' },
-      { '@type': 'ListItem', position: 3, name: 'Email Marketing Services', item: 'https://gatecode.in/services/digital-marketing/email-marketing' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.gatecode.in/services/digital-marketing' },
+      { '@type': 'ListItem', position: 3, name: 'Email Marketing Services', item: 'https://www.gatecode.in/services/digital-marketing/email-marketing' },
     ],
   };
 
@@ -409,36 +337,13 @@ const EmailMarketingServicesPage = () => {
     provider: {
       '@type': 'Organization',
       name: 'Gatecode Technologies Pvt. Ltd.',
-      url: 'https://gatecode.in',
+      url: 'https://www.gatecode.in',
     },
     areaServed: {
       '@type': 'Country',
       name: 'India',
     },
     description: 'Professional email marketing agency offering email automation, newsletter management, audience segmentation, responsive email templates, and deliverability optimization.',
-  };
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'What email marketing platforms do you support?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'We support all major Email Service Providers (ESPs) including Klaviyo, Mailchimp, HubSpot, ActiveCampaign, Brevo, Omnisend, and custom SMTP setups.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'How do you ensure emails do not end up in the spam folder?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'We configure proper domain authentication records (DKIM, SPF, DMARC), enforce list hygiene, write spam-compliant copy, and monitor sender reputation metrics continuously.',
-        },
-      },
-    ],
   };
 
   return (
@@ -451,17 +356,13 @@ const EmailMarketingServicesPage = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(emailServiceSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="digital-marketing/email-marketing" serviceName="email marketing" />
       <ContactSection />
     </div>
   );

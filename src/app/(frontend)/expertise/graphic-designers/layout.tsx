@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     'graphic design services company'
   ],
   alternates: {
-    canonical: 'https://gatecode.in/expertise/graphic-designers',
+    canonical: 'https://www.gatecode.in/expertise/graphic-designers',
   },
   openGraph: {
     images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'Hire Dedicated Graphic Designers in India | Gatecode',
     description: 'Looking to hire graphic designer experts? Gatecode Technologies is a top graphic design company in India & creative graphic design agency providing logo, branding, social media & custom design services.',
-    url: 'https://gatecode.in/expertise/graphic-designers',
+    url: 'https://www.gatecode.in/expertise/graphic-designers',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

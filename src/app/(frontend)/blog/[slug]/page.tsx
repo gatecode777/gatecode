@@ -26,7 +26,7 @@ export async function generateMetadata({ params }): Promise<Metadata> {
 
   const title = `${post.title} | Gatecode Technologies Blog`;
   const description = post.shortDesc || post.subtitle || 'Read our latest blog post.';
-  const url = `https://gatecode.in/blog/${slug}`;
+  const url = `https://www.gatecode.in/blog/${slug}`;
   // Admin-set OG image first, then the cover image, then the site-wide card
   const image = post.ogImage || post.coverImage || '/images/og-default.webp';
   const images = [{ url: image, alt: post.coverImageAlt || post.title }];

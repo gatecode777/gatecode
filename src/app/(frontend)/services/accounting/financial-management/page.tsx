@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component ====================
@@ -284,72 +285,6 @@ const DigitalIndustries = () => {
   );
 };
 
-// ==================== SeoContentSection Component ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Accurate Financial Management & Corporate Controller Services
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Without structured financial management, growing companies frequently experience cash flow bottlenecks, delayed collections, and unforeseen operational costs. At Gatecode Technologies, our financial management solutions provide businesses with clear operational visibility, structured expense controls, and robust working capital planning to support long-term stability.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Cash Flow & Liquidity Management</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                13-week rolling cash forecasts and liquidity models that ensure your business maintains optimal operational runway and avoids liquidity crunches.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Working Capital Optimization</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Systematic alignment between payable cycles and receivables collection to preserve cash reserves and reduce external financing costs.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Budgetary Control & Variance</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Monthly performance assessments comparing actual revenues and expenditures against budgeted projections to highlight cost overruns early.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Executive Financial Dashboards</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Clear MIS reports showing gross margins, EBITDA, customer acquisition costs, and unit economics designed for founder decision-making.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Structured Financial Management Drives Enterprise Value
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Empowering your organization with reliable financial data transforms accounting from a reactive administrative task into a strategic growth asset. Partnering with Gatecode Technologies ensures:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Predictable Liquidity:</strong> Confident forecasting that eliminates surprises during payroll and vendor disbursement cycles.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Tighter Cost Controls:</strong> Clear expenditure approval hierarchies and elimination of unnecessary operational overhead.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Investor & Lender Readiness:</strong> Accurate, professionally formatted financial statements ready for financing and diligence.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const AccurateFinancialManagementServicesPage = () => {
   useEffect(() => {
@@ -364,7 +299,7 @@ const AccurateFinancialManagementServicesPage = () => {
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="accounting/financial-management" serviceName="financial management" />
       <ContactSection />
     </div>
   );

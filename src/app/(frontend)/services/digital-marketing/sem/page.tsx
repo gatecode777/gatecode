@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== Section 1: Hero Section ====================
@@ -312,79 +313,6 @@ const DigitalIndustries = () => {
 };
 
 // ==================== Section 6: Image Reference Section (SEO & Conversion Highlight) ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            ROI-Driven Search Engine Marketing Agency for Scalable Paid Acquisition
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Welcome to Gatecode Technologies Pvt. Ltd., your trusted partner for high-performing paid search campaigns and performance marketing management. We help businesses connect with intent-driven buyers, scale qualified lead acquisition, and achieve sustainable return on ad spend across Google Ads and search networks.
-          </p>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Capturing Active Demand Through Precision Paid Search Advertising
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Unlike passive display ads that interrupt users, search ads respond directly to an active query. Our SEM methodology combines granular intent classification, strict negative keyword filtering, and conversion rate optimization to turn search interest into verified commercial results.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>High-Intent Google Search Ads</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Capture users who are actively looking to purchase your services with tightly-themed ad groups and high-converting ad copy.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Strategic Retargeting &amp; Re-engagement</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Keep your brand top-of-mind by serving timely reminder ads to past site visitors who did not convert on their first visit.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Landing Page Conversion Alignment</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Improve ad Quality Scores and lower cost-per-click by aligning landing page content, headlines, and forms with user query intent.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Real-Time Bid &amp; Budget Optimization</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Continuously adjust bids by location, device, and time-of-day to allocate your budget where it delivers the highest return.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Partner with Gatecode Technologies for SEM?
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Disciplined SEM requires continuous hands-on campaign management. Partnering with our dedicated Google Ads specialists gives you:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Waste-Free Budget Management:</strong> Active search query audits and negative keyword lists to prevent paying for non-converting traffic.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Full Funnel Attribution:</strong> Precise conversion tracking setups for lead form submissions, phone calls, and online transactions.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Clear Commercial Metrics:</strong> Real-time reporting focused on cost-per-acquisition (CPA), conversion rates, and return on ad spend (ROAS).</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const SearchEngineMarketingPage = () => {
   useEffect(() => {
@@ -395,9 +323,9 @@ const SearchEngineMarketingPage = () => {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/digital-marketing' },
-      { '@type': 'ListItem', position: 3, name: 'SEM Services', item: 'https://gatecode.in/services/digital-marketing/sem' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.gatecode.in/services/digital-marketing' },
+      { '@type': 'ListItem', position: 3, name: 'SEM Services', item: 'https://www.gatecode.in/services/digital-marketing/sem' },
     ],
   };
 
@@ -409,36 +337,13 @@ const SearchEngineMarketingPage = () => {
     provider: {
       '@type': 'Organization',
       name: 'Gatecode Technologies Pvt. Ltd.',
-      url: 'https://gatecode.in',
+      url: 'https://www.gatecode.in',
     },
     areaServed: {
       '@type': 'Country',
       name: 'India',
     },
     description: 'Professional search engine marketing agency offering Google Ads PPC management, search advertising campaigns, retargeting, keyword optimization, and conversion tracking.',
-  };
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'How quickly do Google Ads campaigns produce results?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Google Ads campaigns begin displaying immediately upon approval, typically generating qualified traffic, inquiries, and calls within the first few days of campaign launch.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'How do you ensure my ad budget is not wasted?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'We utilize strict match types, build extensive negative keyword lists, refine search term reports weekly, and optimize landing page alignment to keep Quality Scores high and cost-per-click low.',
-        },
-      },
-    ],
   };
 
   return (
@@ -451,17 +356,13 @@ const SearchEngineMarketingPage = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(semServiceSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="digital-marketing/sem" serviceName="search engine marketing" />
       <ContactSection />
     </div>
   );

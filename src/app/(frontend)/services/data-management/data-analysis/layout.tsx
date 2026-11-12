@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: "Data Analysis & Reporting Services | Gatecode",
     description: "Turn complex operational data into clear dashboards, trend analysis and executive business intelligence reports with Gatecode Technologies.",
-    url: "https://gatecode.in/services/data-management/data-analysis",
+    url: "https://www.gatecode.in/services/data-management/data-analysis",
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

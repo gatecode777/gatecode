@@ -34,13 +34,13 @@ export const metadata: Metadata = {
     'mobile app UI UX design case study'
   ],
   alternates: {
-    canonical: 'https://gatecode.in/case-study',
+    canonical: 'https://www.gatecode.in/case-study',
   },
   openGraph: {
     images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'IT Case Studies & Client Success Stories | Gatecode Technologies',
     description: 'Explore software development case studies, IT success stories, and custom web & mobile app engineering solutions delivered by Gatecode Technologies.',
-    url: 'https://gatecode.in/case-study',
+    url: 'https://www.gatecode.in/case-study',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',
@@ -74,7 +74,7 @@ export default async function CaseStudyPage() {
       '@type': 'ListItem',
       position: index + 1,
       name: study.title || `Case Study ${index + 1}`,
-      url: `https://gatecode.in/case-study/${study.slug || ''}`,
+      url: `https://www.gatecode.in/case-study/${study.slug || ''}`,
     })),
   };
 

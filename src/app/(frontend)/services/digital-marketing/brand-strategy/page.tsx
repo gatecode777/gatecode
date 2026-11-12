@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== Section 1: Hero Section ====================
@@ -312,79 +313,6 @@ const DigitalIndustries = () => {
 };
 
 // ==================== Section 6: Image Reference Section (SEO & Conversion Highlight) ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Comprehensive Brand Strategy &amp; Promotion Agency for Market Leadership
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Welcome to Gatecode Technologies Pvt. Ltd., your trusted partner for strategic brand positioning, identity creation, and digital brand promotion. We help startups, mid-market businesses, and established enterprises craft compelling brand stories that capture attention and build lasting commercial loyalty.
-          </p>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Building Cohesive Identity, Lasting Market Recall &amp; Authentic Differentiation
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            A memorable brand gives your business pricing power and resilient customer retention. Our brand strategists blend consumer psychology, market analysis, and creative design to position your business where competitors cannot easily follow.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Competitive Market Positioning</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Identify uncontested market spaces and define clear value propositions that articulate why customers should choose your company.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Unified Brand Architecture &amp; Voice</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Establish cohesive visual guidelines, messaging standards, and tone-of-voice frameworks for seamless cross-channel consistency.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Integrated Multi-Channel Promotion</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Launch coordinated promotional campaigns across search, social platforms, and digital PR to build immediate awareness.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Brand Reputation &amp; Recall</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Cultivate long-term customer trust and brand recall through continuous, authentic storytelling and consistent audience interaction.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Partner with Gatecode Technologies for Brand Strategy?
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Transforming your brand identity requires vision paired with commercial realism. Partnering with our branding and promotion experts delivers:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Strategic Business Grounding:</strong> Brand positioning built on actual market economics, customer needs, and genuine competitive advantages.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Actionable Brand Systems:</strong> Practical brand books, digital asset kits, and communication frameworks your internal team can deploy right away.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Sustained Promotional Momentum:</strong> Multi-channel rollout plans designed to generate long-term audience recall rather than fleeting buzz.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const BrandStrategyPromotionPage = () => {
   useEffect(() => {
@@ -395,9 +323,9 @@ const BrandStrategyPromotionPage = () => {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/digital-marketing' },
-      { '@type': 'ListItem', position: 3, name: 'Brand Strategy & Promotion', item: 'https://gatecode.in/services/digital-marketing/brand-strategy' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.gatecode.in/services/digital-marketing' },
+      { '@type': 'ListItem', position: 3, name: 'Brand Strategy & Promotion', item: 'https://www.gatecode.in/services/digital-marketing/brand-strategy' },
     ],
   };
 
@@ -409,36 +337,13 @@ const BrandStrategyPromotionPage = () => {
     provider: {
       '@type': 'Organization',
       name: 'Gatecode Technologies Pvt. Ltd.',
-      url: 'https://gatecode.in',
+      url: 'https://www.gatecode.in',
     },
     areaServed: {
       '@type': 'Country',
       name: 'India',
     },
     description: 'Professional brand strategy and promotion agency offering brand identity development, market positioning, messaging frameworks, and multi-channel brand launch campaigns.',
-  };
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'What does a complete brand strategy include?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'A complete brand strategy includes market competitor analysis, target audience personas, value proposition, messaging architecture, visual identity guidelines, and an execution roadmap for promotions.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'How does brand strategy help small businesses and startups?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'It clarifies your core differentiator, builds immediate credibility with new customers, prevents wasted marketing spend on inconsistent messaging, and establishes a memorable market presence.',
-        },
-      },
-    ],
   };
 
   return (
@@ -451,17 +356,13 @@ const BrandStrategyPromotionPage = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(brandServiceSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="digital-marketing/brand-strategy" serviceName="brand strategy" />
       <ContactSection />
     </div>
   );

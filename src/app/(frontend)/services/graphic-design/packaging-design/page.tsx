@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== Section 1: Hero Section ====================
@@ -312,79 +313,6 @@ const DigitalIndustries = () => {
 };
 
 // ==================== Section 6: Image Reference Section (SEO & Conversion Highlight) ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Professional Product Packaging &amp; Label Design Agency
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Welcome to Gatecode Technologies Pvt. Ltd., your specialized creative partner for custom product packaging, retail box dielines, and product label design. We help consumer brands turn everyday products into sought-after retail selections through compelling shelf presence and technical manufacturing precision.
-          </p>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Engineered for Retail Shelves &amp; Premium Unboxing Experiences
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            A superior package design must capture consumer attention from three feet away, convey primary product benefits, and comply with all regulatory labeling standards. Our packaging team bridges creative visual branding with factory-floor technical production.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Custom Box &amp; Carton Dielines</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Build structurally sound packaging boxes with custom cutouts, fold lines, and closures verified for print manufacturing.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Product Labels &amp; Pouches</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Design eye-catching front and back labels, wrap-around stickers, and stand-up pouches that command retail shelf appeal.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Compliance &amp; Nutrition Layouts</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Ensure regulatory compliance with organized typography for nutritional tables, ingredients, legal notices, and barcodes.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>3D Realistic Visualizations</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Review high-resolution 3D renders showing lighting, paper textures, spot varnishes, and embossed finishes before mass printing.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Partner with Gatecode Technologies for Packaging Design?
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Investing in custom packaging design directly impacts consumer purchase decisions. Working with our packaging studio provides:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Zero Manufacturing Friction:</strong> Production-ready mechanical vector files calibrated to your manufacturer's specific printing press.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Tactile Finish Specifications:</strong> Detailed callouts for foil stamping, embossing, spot UV, and matte/gloss lamination.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Complete Production Ownership:</strong> Full rights and master design files delivered upon project completion.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const PackagingDesignServicesPage = () => {
   useEffect(() => {
@@ -395,9 +323,9 @@ const PackagingDesignServicesPage = () => {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/graphic-design' },
-      { '@type': 'ListItem', position: 3, name: 'Packaging Design', item: 'https://gatecode.in/services/graphic-design/packaging-design' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.gatecode.in/services/graphic-design' },
+      { '@type': 'ListItem', position: 3, name: 'Packaging Design', item: 'https://www.gatecode.in/services/graphic-design/packaging-design' },
     ],
   };
 
@@ -409,36 +337,13 @@ const PackagingDesignServicesPage = () => {
     provider: {
       '@type': 'Organization',
       name: 'Gatecode Technologies Pvt. Ltd.',
-      url: 'https://gatecode.in',
+      url: 'https://www.gatecode.in',
     },
     areaServed: {
       '@type': 'Country',
       name: 'India',
     },
     description: 'Professional packaging design agency providing custom retail box design, product labels, pouch packaging, dieline preparation, and 3D packaging mockups.',
-  };
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Can you create custom dielines for unique packaging box shapes?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, we can either work from dielines supplied by your packaging manufacturer or engineer custom structural vector dielines tailored to your product dimensions.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Do you help with regulatory labeling and barcodes?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, we format nutritional tables, ingredient lists, compliance symbols, batch codes, and generate scannable high-resolution UPC/EAN barcodes directly on the artwork.',
-        },
-      },
-    ],
   };
 
   return (
@@ -451,17 +356,13 @@ const PackagingDesignServicesPage = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(packagingServiceSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="graphic-design/packaging-design" serviceName="packaging design" />
       <ContactSection />
     </div>
   );

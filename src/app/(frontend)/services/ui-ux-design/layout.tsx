@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'UI/UX Design Agency in India | UI/UX Design Services',
     description: 'Gatecode Technologies is a premier UI/UX design company in India offering UI/UX design services, mobile app UI/UX design, and wireframing and prototyping.',
-    url: 'https://gatecode.in/services/ui-ux-design',
+    url: 'https://www.gatecode.in/services/ui-ux-design',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

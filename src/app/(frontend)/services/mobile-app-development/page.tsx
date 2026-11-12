@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
-import FAQSection, { mobileAppDevFaqs } from '@/components/frontend/FAQSection/FAQSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component (Updated for Mobile App Development) ====================
@@ -18,7 +18,7 @@ const DigitalHero = () => {
       <div className="dm-container dm-hero-content">
         <div className="dm-hero-text-wrapper">
           <h1 className="dm-hero-title">
-            MOBILE<br />APP<br />DEVELOPMENT
+            Mobile App<br />Development Services<br />In Jaipur
           </h1>
           <p className="dm-hero-subtitle">
             We architect and engineer high-performance mobile applications across Android and iOS platforms, delivering intuitive user journeys, rock-solid security, and scalable cloud-connected backends.
@@ -309,73 +309,6 @@ const DigitalIndustries = () => {
   );
 };
 
-// ==================== SeoContentSection Component (SEO Optimized Content) ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Leading Mobile App Development Company in India
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Welcome to <strong>Gatecode Technologies</strong>, a premier <strong>mobile app development company in india</strong> providing end-to-end <strong>mobile app development services</strong> for startups, SMEs, and global enterprises. Standing out among premier <strong>app development companies</strong>, our dedicated team of <strong>app developers</strong> designs and builds secure, high-performance, and intuitive mobile applications tailored to drive user engagement and accelerate business growth.
-          </p>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Custom Android & iOS App Development Services
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            As a full-service <strong>custom mobile app development company</strong>, we specialize in building native and cross-platform applications across both Google Play and Apple App Store. Whether you require scalable <Link href="/services/mobile-app-development/android-development" style={{ color: '#4e7c7e', fontWeight: '600', textDecoration: 'underline' }}>android app development services</Link> or high-security <strong>ios app development services</strong>, our engineering team ensures seamless responsiveness, fast load speeds, and robust API connectivity.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Android App Development Services</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Recognized as a <strong>best android app development company in india</strong>, we build custom Kotlin and Java applications optimized for millions of Android devices.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>iOS App Development Services</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                As an experienced <strong>ios app development company</strong>, we craft elegant Swift and Objective-C applications engineered specifically for iPhone, iPad, and Apple ecosystem devices.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>iOS and Android App Development Services</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Save time and development budget with unified <strong>ios and android app development services</strong> powered by Flutter and React Native cross-platform frameworks.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Partner with Gatecode Technologies for Mobile App Development?
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Partnering with a reliable <strong>android app development company</strong> and iOS engineering house ensures your mobile product succeeds in competitive app store markets. When you hire our expert <strong>app developers</strong>, you get:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>User-Centric Architecture:</strong> Intuitive UI/UX design paired with responsive navigation and smooth micro-animations.</li>
-            <li style={{ marginBottom: '10px' }}><strong>High Performance & Security:</strong> Built-in end-to-end encryption, OAuth authentication, and zero latency API integrations.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Complete App Store Support:</strong> Seamless submission to Google Play Store and Apple App Store alongside continuous maintenance.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const MobileAppDevelopmentPage = () => {
   useEffect(() => {
@@ -386,9 +319,9 @@ const MobileAppDevelopmentPage = () => {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/mobile-app-development' },
-      { '@type': 'ListItem', position: 3, name: 'Mobile App Development', item: 'https://gatecode.in/services/mobile-app-development' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.gatecode.in/services/mobile-app-development' },
+      { '@type': 'ListItem', position: 3, name: 'Mobile App Development', item: 'https://www.gatecode.in/services/mobile-app-development' },
     ],
   };
 
@@ -400,60 +333,13 @@ const MobileAppDevelopmentPage = () => {
     provider: {
       '@type': 'Organization',
       name: 'Gatecode Technologies Pvt. Ltd.',
-      url: 'https://gatecode.in',
+      url: 'https://www.gatecode.in',
     },
     areaServed: {
       '@type': 'Country',
       name: 'India',
     },
     description: 'Leading mobile app development company in India offering android app development services, ios app development services, and cross-platform app solutions.',
-  };
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'What platforms do you build mobile applications for?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'We provide end-to-end mobile app development services for both iOS and Android platforms. Whether you need a native application built specifically for Apple or Google ecosystems, or a highly efficient cross-platform app, we deliver solutions that ensure maximum reach and seamless performance across all mobile devices.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Should I choose native or cross-platform app development for my business?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'It depends on your business goals and budget. Cross-platform apps are highly cost-effective and offer a faster time-to-market since they use a single codebase for both iOS and Android. However, if your application requires heavy device-specific hardware integration or complex graphics, we recommend custom native app development for maximum performance.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Can your team integrate a new mobile app with our existing website or internal software?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Absolutely. As full-stack engineering experts, we specialize in seamless custom API integrations. We can connect your new mobile application directly to your existing website, CMS, CRM, ERP, and secure payment gateways, ensuring real-time data synchronization across your entire digital ecosystem.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'How long does it typically take to develop a custom mobile app?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: "The development timeline depends entirely on the app's complexity, required features, and integrations. A standard application may take a few months to develop, while a complex, enterprise-level app will take longer. We always begin with a thorough requirement analysis and provide a clear, structured roadmap and timeline before development begins.",
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Do you assist with App Store deployment and post-launch app maintenance?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, our services cover the entire app development lifecycle. We manage the strict submission and approval processes for both the Apple App Store and Google Play Store. After your app is live, we provide ongoing maintenance, security patches, bug fixes, and continuous performance tuning to keep it running flawlessly.',
-        },
-      },
-    ],
   };
 
   return (
@@ -466,25 +352,14 @@ const MobileAppDevelopmentPage = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(mobileAppSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="mobile-app-development" serviceName="mobile app development" />
       <ContactSection />
-      <FAQSection
-        eyebrow="FAQS"
-        titleLine1="FREQUENTLY ASKED"
-        titleHighlight="QUESTIONS"
-        subtitle="Find answers to key questions regarding mobile app platforms, native vs. cross-platform frameworks, API connectivity, and app store publishing."
-        items={mobileAppDevFaqs}
-      />
     </div>
   );
 };

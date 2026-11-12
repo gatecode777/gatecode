@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component ====================
@@ -284,72 +285,6 @@ const DigitalIndustries = () => {
   );
 };
 
-// ==================== SeoContentSection Component ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Inbound and Outbound Call Center Outsourcing Services
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Managing a full-scale corporate call center internally requires significant capital investments in telephony hardware, recurring recruitment, and floor supervision. At Gatecode Technologies, our managed call center services give businesses access to highly trained voice professionals, enterprise cloud PBX technology, and round-the-clock coverage that drives customer satisfaction.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>24/7 Inbound Customer Service</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Delivering responsive assistance for billing questions, account troubleshooting, product orders, and complaint escalations.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Outbound Sales & Telemarketing</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Targeted outreach campaigns designed to qualify warm marketing leads, re-engage dormant customers, and schedule executive sales meetings.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Order Processing & Returns (RMA)</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Managing telephone order placements, payment verifications, logistics updates, and dispute resolutions directly inside your CRM.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Intelligent Cloud Telephony</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Advanced IVR menus, predictive dialers, automatic call distribution (ACD), and real-time CRM screen-pops that streamline caller routing.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Outsource Your Call Center to Gatecode Technologies?
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Partnering with an accredited contact center provider elevates customer loyalty while dramatically reducing operational overhead. Choosing Gatecode Technologies gives you:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Low Call Abandonment:</strong> Dynamic workforce scheduling ensuring minimal hold times during peak inquiry windows.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Strict Quality Benchmarks:</strong> Every agent is scored weekly on tonality, script compliance, empathy, and product knowledge.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Transparent Telemetry:</strong> Real-time access to call logs, recording archives, CSAT metrics, and executive reporting dashboards.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const CallCenterServicesPage = () => {
   useEffect(() => {
@@ -364,7 +299,7 @@ const CallCenterServicesPage = () => {
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="bpo-services/call-center" serviceName="call center" />
       <ContactSection />
     </div>
   );

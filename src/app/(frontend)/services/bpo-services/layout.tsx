@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'Top BPO Company in India | BPO Services | Gatecode',
     description: 'Gatecode Technologies is among the top BPO companies in India offering business process outsourcing services, customer support outsourcing services, and call center services.',
-    url: 'https://gatecode.in/services/bpo-services',
+    url: 'https://www.gatecode.in/services/bpo-services',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component ====================
@@ -284,80 +285,6 @@ const DigitalIndustries = () => {
   );
 };
 
-// ==================== SeoContentSection Component (Optimized Existing Section - In Place) ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Enterprise Data Management & Data Processing Services Company
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            At <strong>Gatecode Technologies</strong>, we provide comprehensive <strong>integrated data management services</strong> designed to resolve data fragmentation, eliminate processing backlogs, and ensure total data integrity for enterprises worldwide. Our specialized specialists deliver structured <strong>data entry</strong> solutions, automated processing pipelines, and secure database optimization tailored to maintain accurate and compliant corporate records.
-          </p>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            High-Speed Data Processing & Database Management Architecture
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Modern business operations rely on responsive, error-free databases. As an established data management partner, our teams implement structured data pipelines that guarantee fast query execution, organized catalog taxonomy, and seamless synchronization across your critical CRM and ERP applications.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Verified Data Entry Services</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                High-volume alphanumeric entry with dual-operator verification, catalog indexing, and format standardization for clean records.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Database Management & Hygiene</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Structured indexing, automated deduplication, and schema optimization that maintain high query performance across enterprise databases.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Document Digitization & OCR</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Converting physical forms, legal archives, and billing invoices into searchable, indexed digital assets with automated text recognition.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>CRM & Analytics Integration</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Cleansing, migrating, and structuring contact records into Salesforce, HubSpot, and Zoho to power targeted marketing and sales workflows.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Partner with Gatecode Technologies for Integrated Data Management?
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Outsourcing data operations to a specialized provider guarantees 99.9% accuracy, rapid scalability, and complete data privacy. Choosing Gatecode Technologies ensures:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Double-Verified Accuracy:</strong> Rigorous quality control checks that eliminate duplicate entries, typos, and formatting flaws.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Strict Data Confidentiality:</strong> Comprehensive non-disclosure agreements, encrypted transmission, and role-based access control.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Scalable Processing Turnaround:</strong> Flexible operational shifts capable of handling high-volume surges and seasonal demands effortlessly.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const DataManagementServicesPage = () => {
   useEffect(() => {
@@ -368,9 +295,9 @@ const DataManagementServicesPage = () => {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/data-management' },
-      { '@type': 'ListItem', position: 3, name: 'Data Management', item: 'https://gatecode.in/services/data-management' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.gatecode.in/services/data-management' },
+      { '@type': 'ListItem', position: 3, name: 'Data Management', item: 'https://www.gatecode.in/services/data-management' },
     ],
   };
 
@@ -382,7 +309,7 @@ const DataManagementServicesPage = () => {
     provider: {
       '@type': 'Organization',
       name: 'Gatecode Technologies Pvt. Ltd.',
-      url: 'https://gatecode.in',
+      url: 'https://www.gatecode.in',
     },
     areaServed: {
       '@type': 'Country',
@@ -407,7 +334,7 @@ const DataManagementServicesPage = () => {
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="data-management" serviceName="data management" />
       <ContactSection />
     </div>
   );

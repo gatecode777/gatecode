@@ -326,136 +326,6 @@ const DigitalIndustries = () => {
   );
 };
 
-// ==================== SeoContentSection Component (SEO Optimized Content) ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Premier Custom Software Development Company in India
-          </h2>
-
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Gatecode Technologies is a Jaipur-based software development company that builds custom software for enterprises, mid-sized businesses and startups across India and abroad. Our team designs secure, scalable applications that fit the way your business actually works, from internal tools and customer portals to systems that connect the platforms you already use.
-          </p>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Enterprise Applications and Custom Software
-          </h3>
-
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Good enterprise software depends on understanding the work it supports. We start by learning how your teams operate, then build applications that automate internal workflows, protect sensitive data and keep performing as your organization grows.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Custom CRM Development Services</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Manage customer relationships, lead funnels and sales pipelines in a CRM built around your own sales process.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>ERP Software Development Services</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Bring inventory, finance, HR and operational data together in one system that your teams can rely on.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Embedded Software Development Services</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Develop dependable firmware, IoT solutions and system-level applications for connected devices.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Choose Gatecode for Custom Software Development?
-          </h3>
-
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Choosing a development partner is easier when you know how they work. With Gatecode you can expect:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Tailored architecture:</strong> software designed around your requirements, not restricted by third-party templates.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Security by design:</strong> data encryption, role-based access and testing built into the development process.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Full lifecycle support:</strong> ongoing maintenance, database optimization and help with system integrations after launch.</li>
-          </ul>
-
-          {/* Smart & Scalable Software Solutions */}
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '36px', marginBottom: '14px' }}>
-            Smart &amp; Scalable Software Solutions
-          </h3>
-
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Our approach to{' '}
-            <Link href="/services/software-development/scalable-solutions" style={{ color: '#4e7c7e', fontWeight: '600', textDecoration: 'underline' }}>
-              smart and scalable software solutions
-            </Link>{' '}
-            focuses on solving real business challenges through reliable technology and well-planned software architecture. We develop solutions that are aligned with your operational requirements, user needs, data workflows, and long-term business objectives rather than relying on a one-size-fits-all approach.
-          </p>
-
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            From business automation and enterprise applications to industry-specific software platforms, our development team works across modern technologies to build applications that can adapt as your organization grows. We emphasize performance, security, usability, maintainability, and scalability throughout the development lifecycle, helping businesses manage increasing users, data, integrations, and operational complexity.
-          </p>
-
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '28px' }}>
-            Our software solutions are designed with future requirements in mind, making it easier to introduce new features, connect additional systems, and improve functionality as your business evolves.
-          </p>
-
-          {/* Custom Development & System Integration */}
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '8px', marginBottom: '14px' }}>
-            Custom Development &amp; System Integration
-          </h3>
-
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Every business has different processes, workflows, and technology requirements. Our{' '}
-            <Link href="/services/software-development/system-integration" style={{ color: '#4e7c7e', fontWeight: '600', textDecoration: 'underline' }}>
-              custom software development and system integration services
-            </Link>{' '}
-            help organizations create software around their specific operational needs instead of adjusting their processes to fit generic applications.
-          </p>
-
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            We design and develop custom applications with appropriate technologies, databases, APIs, and system architecture based on the project's functional and technical requirements. Our team can integrate existing business systems such as CRM, ERP, payment platforms, third-party APIs, databases, and other enterprise applications to establish a more connected technology environment.
-          </p>
-
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '28px' }}>
-            By combining custom development with reliable system integration, we help reduce disconnected workflows, improve data accessibility, and create smoother communication between different business applications. Our focus remains on building maintainable solutions that can be managed, enhanced, and integrated as technical requirements change.
-          </p>
-
-          {/* Ongoing Support & Future-Ready Technology */}
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '8px', marginBottom: '14px' }}>
-            Ongoing Support &amp; Future-Ready Technology
-          </h3>
-
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Software development does not end when an application goes live.{' '}
-            <Link href="/services/software-development/ongoing-support" style={{ color: '#4e7c7e', fontWeight: '600', textDecoration: 'underline' }}>
-              Ongoing maintenance and technical support
-            </Link>{' '}
-            are important for keeping business-critical software secure, stable, compatible, and performant as technology and business requirements evolve.
-          </p>
-
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Our ongoing software support services include application maintenance, bug resolution, performance optimization, security updates, compatibility improvements, technical enhancements, and integration support. We can also help businesses evaluate existing applications and identify areas where improvements can increase reliability, usability, or operational efficiency.
-          </p>
-
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            With a focus on maintainable architecture and modern technology practices, we help organizations prepare their software for future changes. Whether you need to enhance an existing application, introduce new functionality, integrate another platform, or scale your software infrastructure, our team works to ensure your technology can evolve alongside your business.
-          </p>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const SoftwareDevelopmentServicesPage = () => {
   useEffect(() => {
@@ -466,9 +336,9 @@ const SoftwareDevelopmentServicesPage = () => {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/software-development' },
-      { '@type': 'ListItem', position: 3, name: 'Software Development', item: 'https://gatecode.in/services/software-development' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.gatecode.in/services/software-development' },
+      { '@type': 'ListItem', position: 3, name: 'Software Development', item: 'https://www.gatecode.in/services/software-development' },
     ],
   };
 
@@ -549,11 +419,9 @@ const SoftwareDevelopmentServicesPage = () => {
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
       <TechnologiesWeUse />
       <CostAndTimeline />
       <SoftwareDevIn2026 />
-      <ContactSection />
       <CompanyDetails />
       <FAQSection
         eyebrow="FAQS"
@@ -562,6 +430,7 @@ const SoftwareDevelopmentServicesPage = () => {
         subtitle="Everything you need to know about our custom software engineering, tech stack, API integrations, and maintenance services."
         items={faqs}
       />
+      <ContactSection />
     </div>
   );
 };
