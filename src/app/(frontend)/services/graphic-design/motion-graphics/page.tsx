@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== Section 1: Hero Section ====================
@@ -312,79 +313,6 @@ const DigitalIndustries = () => {
 };
 
 // ==================== Section 6: Image Reference Section (SEO & Conversion Highlight) ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Professional Motion Graphics Agency for Engaging Visual Storytelling
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Welcome to Gatecode Technologies Pvt. Ltd., your creative studio for high-impact motion graphics and dynamic visual content. We help forward-thinking companies clarify complex messages, captivate digital viewers, and boost engagement across marketing channels through purposeful animation.
-          </p>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Engaging Audiences with Fluid Animation &amp; Clear Communication
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Animation combines visual art, sound, and timing into a single cohesive medium. Our motion design team focuses on practical business communication — whether showcasing how your mobile app functions, highlighting key product specifications, or driving paid ad conversions.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>2D Explainer Animations</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Simplify complex software workflows and corporate services into engaging, easily understood animated video narratives.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Logo Stings &amp; Intros</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Reinforce brand identity across webinars, YouTube channels, and sales videos with fluid, polished logo reveal animations.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Social Media Motion Ads</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Drive higher click-through rates across Instagram, TikTok, and Meta Ads with short, high-energy animated video creatives.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>UI Demos &amp; Micro-Animations</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Bring software user experiences to life with smooth interface mockups and lightweight Lottie animations for websites.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Partner with Gatecode Technologies for Motion Graphics?
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Quality animation delivers measurable viewer retention. Partnering with our motion studio gives your business:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Complete Production Pipeline:</strong> In-house scriptwriting, custom illustration, animation keyframing, and sound design.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Platform-Optimized Deliverables:</strong> Formats tailored for web performance, video feeds, presentation decks, and advertising networks.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Transparent Collaboration:</strong> Structured storyboard reviews and milestone approvals to ensure seamless execution.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const MotionGraphicsPage = () => {
   useEffect(() => {
@@ -395,9 +323,9 @@ const MotionGraphicsPage = () => {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/graphic-design' },
-      { '@type': 'ListItem', position: 3, name: 'Motion Graphics', item: 'https://gatecode.in/services/graphic-design/motion-graphics' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.gatecode.in/services/graphic-design' },
+      { '@type': 'ListItem', position: 3, name: 'Motion Graphics', item: 'https://www.gatecode.in/services/graphic-design/motion-graphics' },
     ],
   };
 
@@ -409,36 +337,13 @@ const MotionGraphicsPage = () => {
     provider: {
       '@type': 'Organization',
       name: 'Gatecode Technologies Pvt. Ltd.',
-      url: 'https://gatecode.in',
+      url: 'https://www.gatecode.in',
     },
     areaServed: {
       '@type': 'Country',
       name: 'India',
     },
     description: 'Professional motion graphics agency offering 2D explainer video animations, logo stings, kinetic typography, animated social media ads, and product video demos.',
-  };
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'What types of motion graphics do you produce?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'We create 2D explainer animations, animated social media ads, logo reveals, kinetic typography, UI/UX software demos, and corporate video graphics.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Do you provide voiceovers and sound design for animations?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, we provide full audio mixing including licensed background music, sound effects, and professional voiceover coordination.',
-        },
-      },
-    ],
   };
 
   return (
@@ -451,17 +356,13 @@ const MotionGraphicsPage = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(motionServiceSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="graphic-design/motion-graphics" serviceName="motion graphics" />
       <ContactSection />
     </div>
   );

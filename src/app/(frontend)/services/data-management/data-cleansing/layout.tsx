@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: "Data Cleansing & Validation Services | Gatecode",
     description: "Restore database integrity, remove duplicate records and improve efficiency with professional data cleansing and validation services.",
-    url: "https://gatecode.in/services/data-management/data-cleansing",
+    url: "https://www.gatecode.in/services/data-management/data-cleansing",
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

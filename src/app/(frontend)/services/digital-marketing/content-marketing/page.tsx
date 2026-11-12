@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== Section 1: Hero Section ====================
@@ -312,79 +313,6 @@ const DigitalIndustries = () => {
 };
 
 // ==================== Section 6: Image Reference Section (SEO & Conversion Highlight) ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Authority-Building Content Marketing Agency for Sustainable Organic Growth
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Welcome to Gatecode Technologies Pvt. Ltd., your strategic content marketing partner dedicated to turning informative writing into business growth. We help brands build authority, earn high-intent search visibility, and nurture prospective clients through comprehensive, high-value content solutions.
-          </p>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Connecting Buyer Intent with Thoughtful, High-Value Educational Content
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            In an era overflowing with generic information, depth and authenticity stand out. Our content marketing strategists craft well-researched, readable assets that answer complex questions, demonstrate real subject-matter expertise, and establish your brand as a trusted industry advisor.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Educational Content Hubs</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Build comprehensive resource centers and topic clusters that solve audience challenges while earning sustainable search engine authority.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>High-Converting Gated Assets</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Develop informative guides, industry checklists, and whitepapers that attract decision-makers and generate qualified leads.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Multi-Channel Syndication</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Distribute and repurpose long-form assets into engaging newsletters, social threads, and visual slides to amplify content reach.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Long-Term Search Authority</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Earn valuable organic rankings and natural backlinks with evergreen, helpful content structured for both human readers and search engines.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Partner with Gatecode Technologies for Content Marketing?
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Producing high-caliber content requires a strategic editorial engine. Collaborating with our content marketing team provides:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Audience-Aligned Editorial Direction:</strong> Topic discovery centered around what your prospects search for, read, and share.</li>
-            <li style={{ marginBottom: '10px' }}><strong>High Editorial Standards:</strong> Meticulous research, original perspectives, and readable formatting without filler.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Measurable Lead Impact:</strong> Clear conversion funnels linking educational reading directly to service inquiries and demo requests.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const ContentMarketingServicesPage = () => {
   useEffect(() => {
@@ -395,9 +323,9 @@ const ContentMarketingServicesPage = () => {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/digital-marketing' },
-      { '@type': 'ListItem', position: 3, name: 'Content Marketing Services', item: 'https://gatecode.in/services/digital-marketing/content-marketing' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.gatecode.in/services/digital-marketing' },
+      { '@type': 'ListItem', position: 3, name: 'Content Marketing Services', item: 'https://www.gatecode.in/services/digital-marketing/content-marketing' },
     ],
   };
 
@@ -409,36 +337,13 @@ const ContentMarketingServicesPage = () => {
     provider: {
       '@type': 'Organization',
       name: 'Gatecode Technologies Pvt. Ltd.',
-      url: 'https://gatecode.in',
+      url: 'https://www.gatecode.in',
     },
     areaServed: {
       '@type': 'Country',
       name: 'India',
     },
     description: 'Professional content marketing agency offering strategic content planning, SEO blog writing, lead magnets, case studies, and multi-channel content distribution.',
-  };
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'How does content marketing generate business leads?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'By answering key customer questions and offering downloadable resources like guides and templates, content marketing attracts prospects during their research phase and provides natural pathways to get in touch.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Do you help with content distribution as well as writing?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, we develop multi-channel distribution strategies including email newsletters, social media snippets, and community syndication to ensure your content reaches active readers.',
-        },
-      },
-    ],
   };
 
   return (
@@ -451,17 +356,13 @@ const ContentMarketingServicesPage = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(contentServiceSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="digital-marketing/content-marketing" serviceName="content marketing" />
       <ContactSection />
     </div>
   );

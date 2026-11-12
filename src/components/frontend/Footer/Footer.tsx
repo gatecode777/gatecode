@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 import { BsTwitterX } from 'react-icons/bs';
-import { FiMail, FiPhone } from 'react-icons/fi';
+import { FiMail, FiPhone, FiMapPin } from 'react-icons/fi';
 
 const serviceLinks = [
   { name: 'Web Development', slug: 'web-development' },
@@ -39,10 +39,6 @@ export default function Footer() {
               <a href="https://x.com/gatecodein" target="_blank" rel="noopener noreferrer" className="ft-social" aria-label="Gatecode on X"><BsTwitterX /></a>
               <a href="https://www.instagram.com/gatecode_technologies_pvt/" target="_blank" rel="noopener noreferrer" className="ft-social" aria-label="Gatecode on Instagram"><FaInstagram /></a>
               <a href="https://www.facebook.com/people/Gatecode-Technologies-Private-Limited/61583453039836/" target="_blank" rel="noopener noreferrer" className="ft-social" aria-label="Gatecode on Facebook"><FaFacebookF /></a>
-              {/* TODO(seo): this still points at the generic youtube.com homepage. Replace the href with
-                  the official Gatecode channel URL (and set aria-label to "Gatecode on YouTube"),
-                  or delete this link if there is no channel. */}
-              <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" className="ft-social" aria-label="YouTube"><FaYoutube /></a>
             </div>
           </div>
           <div className="ft-col">
@@ -94,6 +90,12 @@ export default function Footer() {
                 <span className="ft-contact-icon ft-contact-icon--email"><FiMail size={14} /></span>
                 <a href="mailto:info@gatecode.in" className="ft-contact-text">info@gatecode.in</a>
               </div>
+              <div className="ft-contact-row ft-contact-row--address">
+                <span className="ft-contact-icon ft-contact-icon--address"><FiMapPin size={12} /></span>
+                <span className="ft-contact-text ft-contact-text--address">
+                  P.NO 412, SUMER NAGAR, Kalyanpura, Mansarovar, Jaipur, Rajasthan 302020
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -111,7 +113,7 @@ export default function Footer() {
 
       <div className="ft-bottom">
         <div className="ft-bottom-inner">
-          <p><a href="https://gatecode.in/" rel="noopener noreferrer" aria-label="Gatecode Technologies Pvt. Ltd. Homepage">Gatecode Technologies Pvt. Ltd.</a> &copy; Copyright 2026</p>
+          <p><a href="https://www.gatecode.in/" rel="noopener noreferrer" aria-label="Gatecode Technologies Pvt. Ltd. Homepage">Gatecode Technologies Pvt. Ltd.</a> &copy; Copyright 2026</p>
         </div>
       </div>
     </footer>

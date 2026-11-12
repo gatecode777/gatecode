@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: 'Best Custom App Development & System Integration Services',
     description:
       'Custom Application Development, System Integration, Custom Software And App Development, And Integrated Management Services For Businesses.',
-    url: 'https://gatecode.in/services/software-development/system-integration',
+    url: 'https://www.gatecode.in/services/software-development/system-integration',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

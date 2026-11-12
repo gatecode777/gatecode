@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component ====================
@@ -284,72 +285,6 @@ const DigitalIndustries = () => {
   );
 };
 
-// ==================== SeoContentSection Component ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Professional CRM Data Hygiene and Pipeline Management Services
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Poor CRM data quality creates friction across sales organizations, resulting in duplicate outreach, uncontacted leads, and unreliable pipeline forecasts. At Gatecode Technologies, our CRM data management specialists clean, enrich, and organize your databases across Salesforce, HubSpot, and Zoho, ensuring your commercial teams operate with accurate customer intelligence.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Account & Contact Deduplication</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Merging duplicate records while consolidating historical communication logs, opportunities, and email correspondence.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Lead Enrichment & Validation</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Appending missing corporate parameters, verified decision-maker job titles, and direct dials to boost sales conversion rates.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Audience Segmentation Architecture</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Structuring behavioral tags, industry verticals, and buying intent stages to enable high-performing nurture campaigns.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Platform Migration & Setup</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Transferring databases smoothly during CRM platform upgrades with full relational mapping and zero data truncation.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Clean CRM Data Directly Accelerates Closed Deals
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            A dependable CRM infrastructure empowers sales development reps and account executives to spend time selling rather than fixing broken records. Partnering with Gatecode Technologies ensures:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Zero Territory Conflicts:</strong> Clear account ownership rules and elimination of duplicate leads assigned to multiple reps.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Dependable Pipeline Forecasting:</strong> Clean opportunity stages that give executive leadership real visibility into expected revenues.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Maximum Software ROI:</strong> Ensure your investment in enterprise CRM tools delivers genuine commercial productivity.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const CRMDataManagementServicesPage = () => {
   useEffect(() => {
@@ -364,7 +299,7 @@ const CRMDataManagementServicesPage = () => {
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="data-management/crm-data" serviceName="CRM data management" />
       <ContactSection />
     </div>
   );

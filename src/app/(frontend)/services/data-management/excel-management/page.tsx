@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component ====================
@@ -284,72 +285,6 @@ const DigitalIndustries = () => {
   );
 };
 
-// ==================== SeoContentSection Component ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Professional Excel Spreadsheet Modeling and Process Automation Services
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Poorly structured spreadsheets cost businesses thousands of wasted hours through manual data re-entry, broken formulas, and calculation mistakes. At Gatecode Technologies, our spreadsheet consultants design automated, durable, and visually polished Excel and Google Sheets solutions that transform routine workbook management into an efficient operational asset.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Automated Power Query Pipelines</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Automating multi-file consolidation, database extraction, and data reshaping into one-click refreshes without writing code.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Custom VBA & Macro Development</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Developing custom Visual Basic macros that automate repetitive formatting, invoice generation, email dispatching, and file exporting.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Interactive Spreadsheet Dashboards</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Creating presentation-ready visual dashboards with dynamic slicers, interactive charts, and executive KPI summary cards.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Financial & Operational Modeling</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Structuring robust, audited financial forecast models, inventory tracking systems, and unit economics templates built for scale.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Professional Spreadsheet Engineering Protects Bottom-Line Accuracy
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Eliminating fragile formulas and manual data manipulation prevents costly fiscal errors and frees your team for high-value strategic work. Choosing Gatecode Technologies delivers:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Zero Calculation Errors:</strong> Audit-tested formulas that prevent circular references and incorrect financial totals.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Rapid Data Processing:</strong> Optimized workbook calculations that eliminate lag and crashing on large data tables.</li>
-            <li style={{ marginBottom: '10px' }}><strong>User-Friendly Design:</strong> Clean, intuitive user interfaces with locked formulas and dropdown validation menus.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const ExcelSpreadsheetManagementServicesPage = () => {
   useEffect(() => {
@@ -364,7 +299,7 @@ const ExcelSpreadsheetManagementServicesPage = () => {
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="data-management/excel-management" serviceName="Excel and spreadsheet management" />
       <ContactSection />
     </div>
   );

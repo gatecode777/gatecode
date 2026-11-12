@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: "Financial Management Services for Businesses | Gatecode",
     description: "Strengthen cash flow, optimize working capital and gain real-time financial control with accurate corporate financial management from Gatecode Technologies.",
-    url: "https://gatecode.in/services/accounting/financial-management",
+    url: "https://www.gatecode.in/services/accounting/financial-management",
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

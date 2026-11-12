@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'UX Design Services Company In Jaipur | Trusted UX Experts',
     description: 'Professional UX design services including UX audits, ecommerce UX design & user experience solutions to boost engagement and conversions.',
-    url: 'https://gatecode.in/services/ui-ux-design/ux-design',
+    url: 'https://www.gatecode.in/services/ui-ux-design/ux-design',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

@@ -111,7 +111,7 @@ const Careers = () => {
       hiringOrganization: {
         '@type': 'Organization',
         name: 'Gatecode Technologies Pvt. Ltd.',
-        sameAs: 'https://gatecode.in',
+        sameAs: 'https://www.gatecode.in',
       },
       jobLocation: {
         '@type': 'Place',

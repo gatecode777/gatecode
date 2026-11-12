@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: "Packaging Design Services | Gatecode",
     description: "Commercially smart product packaging and label design that boosts shelf appeal, with dieline planning and print-ready production files.",
-    url: "https://gatecode.in/services/graphic-design/packaging-design",
+    url: "https://www.gatecode.in/services/graphic-design/packaging-design",
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component ====================
@@ -284,72 +285,6 @@ const DigitalIndustries = () => {
   );
 };
 
-// ==================== SeoContentSection Component ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Tailored Customer Support and Dedicated Helpdesk Outsourcing
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Standard call centers often treat customer support as a generic transactional activity, leaving customers dissatisfied and damaging brand perception. At Gatecode Technologies, our custom customer support services deploy dedicated brand specialists trained to act as an authentic extension of your internal company culture, ensuring personalized and memorable support.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Dedicated Agent Pods</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Agents allocated exclusively to your business who master your product specifications, internal software tools, and customer nuances.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Multi-Channel Helpdesk Management</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Managing live chat, incoming emails, social direct messages, and in-app feedback from a unified customer inbox with custom SLAs.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Bespoke Escalation Protocols</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Configuring clear tiers for technical bugs, critical accounts, and urgent billing disputes that ensure rapid internal handoffs.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Continuous Knowledge Base Curation</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Continuously updating customer-facing FAQs and internal training docs to accelerate first-contact resolution and enable self-service.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Custom Support Directs Stronger Customer Retention
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Providing thoughtful, technically competent customer assistance converts frustrated users into vocal brand champions. Choosing Gatecode Technologies delivers:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Brand-Aligned Communication:</strong> Seamless alignment with your exact brand tone, whether friendly, professional, or technical.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Elevated Customer Lifetime Value:</strong> Rapid resolution of customer complaints preventing churn and protecting monthly recurring revenue.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Operational Flexibility:</strong> Easily adjust agent headcounts and coverage hours as your business scales across new territories.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const CustomSupportServicesPage = () => {
   useEffect(() => {
@@ -364,7 +299,7 @@ const CustomSupportServicesPage = () => {
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="bpo-services/custom-support" serviceName="custom support" />
       <ContactSection />
     </div>
   );

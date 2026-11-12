@@ -8,7 +8,7 @@ import CaseStudyModel from '@/models/CaseStudy';
 // the admin appear without a redeploy.
 export const dynamic = 'force-dynamic';
 
-const SITE = 'https://gatecode.in';
+const SITE = 'https://www.gatecode.in';
 
 // Static pages have no per-page modified date. Use a fixed date (bump it when the
 // static content changes) instead of `new Date()`, which would claim every page
@@ -51,8 +51,8 @@ const EXPERTISE = [
 
 // Landing / solution pages that were already in the previous sitemap
 const SOLUTIONS = [
-  '/app-development', '/website-development', '/custom-software', '/crm-custom-software',
-  '/mobile-apps', '/technology-banking', '/connected-banking',
+  '/app-development', '/website-development', '/custom-software',
+  '/technology-banking',
 ];
 
 const LEGAL = ['/privacy-policy', '/terms-and-conditions', '/cookie-policy'];
@@ -60,6 +60,7 @@ const LEGAL = ['/privacy-policy', '/terms-and-conditions', '/cookie-policy'];
 function staticEntries(): MetadataRoute.Sitemap {
   return [
     entry('/', 1.0, 'weekly'),
+    entry('/services', 0.9, 'monthly'),
     ...CORE.map(p => entry(p, 0.8, 'monthly')),
     ...Object.entries(SERVICES).flatMap(([service, subs]) => [
       entry(`/services/${service}`, 0.9, 'monthly'),

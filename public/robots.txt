@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin
 Disallow: /api
 
-Sitemap: https://gatecode.in/sitemap.xml
+Sitemap: https://www.gatecode.in/sitemap.xml

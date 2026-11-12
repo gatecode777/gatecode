@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== Section 1: Hero Section ====================
@@ -312,79 +313,6 @@ const DigitalIndustries = () => {
 };
 
 // ==================== Section 6: Image Reference Section (SEO & Conversion Highlight) ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Professional Social Media Post Design Agency for High-Engagement Feeds
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Welcome to Gatecode Technologies Pvt. Ltd., your creative agency for custom social media post design, swipeable carousel infographics, and high-converting ad graphics. We help brands capture attention in crowded feeds, foster community discussions, and turn followers into paying clients.
-          </p>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Designed for Mobile Screens &amp; High-Retention Social Algorithms
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Modern social platforms prioritize content that commands viewer dwell time, saves, and shares. Our social creative specialists design purposeful visual sequences that balance aesthetic beauty with clear information hierarchy, ensuring every post reinforces your brand authority.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Educational Carousel Decks</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Increase viewer dwell time and saves with structured, multi-slide swipeable carousels packed with digestible insights.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Conversion-Focused Ad Creatives</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Drive lower cost-per-click and higher conversion rates on Meta Ads with eye-catching, high-contrast promotional creatives.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>High-CTR Video Thumbnails</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Maximize clicks on YouTube and social video platforms with bold typography, expressive imagery, and clear focal cues.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Brand Template Systems</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Empower rapid internal posting with custom Figma and Canva templates aligned with your corporate visual standards.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Partner with Gatecode Technologies for Social Media Design?
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            High-caliber social media design builds compounded audience trust. Collaborating with our design studio delivers:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Mobile-First Formatting:</strong> Pixel-perfect aspect ratios (1:1, 4:5, 9:16, 16:9) tested for clarity across all device screens.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Brand-Aligned Consistency:</strong> Custom design systems that prevent your feed from looking disjointed or template-driven.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Predictable Workflow Schedules:</strong> Efficient batch production that keeps your content calendar filled weeks in advance.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const SocialMediaPostDesignServicesPage = () => {
   useEffect(() => {
@@ -395,9 +323,9 @@ const SocialMediaPostDesignServicesPage = () => {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/graphic-design' },
-      { '@type': 'ListItem', position: 3, name: 'Social Media Post Design', item: 'https://gatecode.in/services/graphic-design/social-media-design' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.gatecode.in/services/graphic-design' },
+      { '@type': 'ListItem', position: 3, name: 'Social Media Post Design', item: 'https://www.gatecode.in/services/graphic-design/social-media-design' },
     ],
   };
 
@@ -409,36 +337,13 @@ const SocialMediaPostDesignServicesPage = () => {
     provider: {
       '@type': 'Organization',
       name: 'Gatecode Technologies Pvt. Ltd.',
-      url: 'https://gatecode.in',
+      url: 'https://www.gatecode.in',
     },
     areaServed: {
       '@type': 'Country',
       name: 'India',
     },
     description: 'Professional social media post design agency creating Instagram carousels, feed graphics, story templates, YouTube thumbnails, and LinkedIn post visuals.',
-  };
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'What platforms do you design social media posts for?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'We create tailored designs for Instagram (posts, carousels, stories), LinkedIn, Facebook, YouTube (thumbnails, banners), and X (Twitter).',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Can you provide editable templates in Figma or Canva?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, we can build custom, reusable brand templates in Canva or Figma so your internal marketing team can produce on-brand graphics quickly.',
-        },
-      },
-    ],
   };
 
   return (
@@ -451,17 +356,13 @@ const SocialMediaPostDesignServicesPage = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(socialDesignServiceSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="graphic-design/social-media-design" serviceName="social media design" />
       <ContactSection />
     </div>
   );

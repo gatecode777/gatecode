@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: "Search Engine Marketing (SEM) Services | Gatecode",
     description: "Capture high-intent demand with paid search: granular keyword targeting, smart bidding, persuasive ad copy and landing page alignment.",
-    url: "https://gatecode.in/services/digital-marketing/sem",
+    url: "https://www.gatecode.in/services/digital-marketing/sem",
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

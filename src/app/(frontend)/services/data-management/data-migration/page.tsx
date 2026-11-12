@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component ====================
@@ -284,72 +285,6 @@ const DigitalIndustries = () => {
   );
 };
 
-// ==================== SeoContentSection Component ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Enterprise Data Migration and Cloud Transition Services
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Migrating critical business databases without experienced technical oversight introduces serious risks of data corruption, lost historical records, and prolonged operational disruption. At Gatecode Technologies, our database migration engineers execute secure, meticulously tested data transfers across relational databases, enterprise applications, and cloud environments with zero data loss.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Relational Database Transfers</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                High-fidelity migrations between SQL Server, Oracle, PostgreSQL, and MySQL maintaining table constraints and foreign key relationships.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Cloud Infrastructure Migration</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Transitioning on-premise servers and legacy storage repositories to scalable cloud environments on AWS, Microsoft Azure, and GCP.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Pre-Migration Data Cleansing</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Auditing, purging duplicate records, and normalizing data types prior to migration to ensure only pristine records populate the new environment.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Checksum Verification & Testing</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Automated row count validation, cryptographic checksum audits, and functional integration tests to guarantee 100% data fidelity.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Professional Migration Planning Guarantees Seamless Upgrades
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            A structured migration methodology allows organizations to modernize their digital infrastructure without fear of operational interruption or data loss. Choosing Gatecode Technologies ensures:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Zero Business Interruption:</strong> Live parallel staging and off-peak production cutovers that minimize system downtime.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Complete Data Integrity:</strong> Multi-point verification protocols ensuring no records are truncated, dropped, or corrupted.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Post-Migration Peace of Mind:</strong> Continuous performance monitoring and immediate developer support during the stabilization period.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const DataMigrationServicesPage = () => {
   useEffect(() => {
@@ -364,7 +299,7 @@ const DataMigrationServicesPage = () => {
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="data-management/data-migration" serviceName="data migration" />
       <ContactSection />
     </div>
   );

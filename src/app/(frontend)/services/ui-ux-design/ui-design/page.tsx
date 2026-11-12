@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
-import FAQSection, { uiDesignFaqs } from '@/components/frontend/FAQSection/FAQSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component (Updated for UI Design Services) ====================
@@ -18,7 +18,7 @@ const DigitalHero = () => {
       <div className="dm-container dm-hero-content">
         <div className="dm-hero-text-wrapper">
           <h1 className="dm-hero-title">
-            UI (USER INTERFACE)<br />DESIGN<br />SERVICES
+            User Interface<br />Design Services<br />In Jaipur
           </h1>
           <p className="dm-hero-subtitle">
             We design modern, pixel-perfect user interfaces that blend visual elegance with purposeful functionality, transforming digital products into engaging, intuitive experiences.
@@ -310,79 +310,6 @@ const DigitalIndustries = () => {
 };
 
 // ==================== Section 6: Image Reference Section (SEO & Conversion Highlight) ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Top User Interface (UI) Design Company in India
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Welcome to <strong>Gatecode Technologies Pvt. Ltd.</strong>, your dedicated <strong>user interface design company</strong> delivering bespoke, conversion-oriented UI design services. We craft visually stunning and technically sound interfaces that empower web, mobile, and software applications to captivate audiences and inspire user trust.
-          </p>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Engineering Aesthetic Clarity and Intuitive Visual Interaction
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            User interface design is not merely decoration; it is the visual language through which your users interact with your business. Our UI designers combine artistic creativity with mathematical layout grids, clear visual hierarchy, and WCAG accessibility compliance, ensuring every button, card, and dashboard widget serves a distinct user goal.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Pixel-Perfect Visual Hierarchy</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Guide user attention naturally toward high-value actions with strategic contrast, balanced spacing, and purposeful typography.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Scalable Figma Design Systems</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Unified component libraries that keep your branding consistent across products while dramatically reducing engineering build time.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Multi-Platform Responsiveness</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Interfaces specifically tailored to touch navigation on smartphones, tablet aspect ratios, and ultra-wide desktop monitors.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Accessibility &amp; WCAG Compliance</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Calibrated color palettes and legible font sizing ensuring all users, regardless of visual ability, navigate comfortably.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Partner with Gatecode Technologies for UI Design?
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Collaborating with Gatecode Technologies pairs your project with seasoned interface specialists:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Figma Auto-Layout Prowess:</strong> Clean design files structured with auto-layouts, variants, and design tokens for swift engineering.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Complete Asset Deliverables:</strong> Scalable vector graphics, iconography, typography guides, and interactive prototypes.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Continuous Design Governance:</strong> Post-delivery design oversight ensuring frontend developers match design specs exactly.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const UIDesignServicesPage = () => {
   useEffect(() => {
@@ -393,9 +320,9 @@ const UIDesignServicesPage = () => {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/ui-ux-design' },
-      { '@type': 'ListItem', position: 3, name: 'UI Design', item: 'https://gatecode.in/services/ui-ux-design/ui-design' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.gatecode.in/services/ui-ux-design' },
+      { '@type': 'ListItem', position: 3, name: 'UI Design', item: 'https://www.gatecode.in/services/ui-ux-design/ui-design' },
     ],
   };
 
@@ -407,52 +334,13 @@ const UIDesignServicesPage = () => {
     provider: {
       '@type': 'Organization',
       name: 'Gatecode Technologies Pvt. Ltd.',
-      url: 'https://gatecode.in',
+      url: 'https://www.gatecode.in',
     },
     areaServed: {
       '@type': 'Country',
       name: 'India',
     },
     description: 'Specialized UI design agency in India crafting responsive web UI, mobile app interfaces, SaaS dashboards, and design systems.',
-  };
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'What does a User Interface (UI) designer do?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'A UI designer focuses on the visual presentation and interactive elements of a digital product. This includes creating typography systems, color schemes, buttons, icons, responsive grids, and design systems that ensure your application is visually compelling and effortless to navigate.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Do you create responsive UI designs for both web and mobile?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes! Every interface we design is created with responsiveness in mind. We provide complete layout variants for mobile, tablet, laptop, and large desktop screens, ensuring visual harmony and usability across every viewport.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'What deliverables will we receive at the end of the UI design phase?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'You will receive fully organized Figma files with auto-layouts, custom component variants, design tokens (colors, typography, spacing), exportable SVG/PNG assets, and interactive clickable prototypes ready for developer inspection.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Can you redesign our existing application interface to make it modern?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Absolutely. We frequently redesign legacy software, web portals, and mobile apps. We analyze your current usability issues, modernize your visual branding, and engineer a contemporary interface that improves engagement and conversion metrics.',
-        },
-      },
-    ],
   };
 
   return (
@@ -465,25 +353,14 @@ const UIDesignServicesPage = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(uiServiceSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="ui-ux-design/ui-design" serviceName="UI design" />
       <ContactSection />
-      <FAQSection
-        eyebrow="FAQS"
-        titleLine1="FREQUENTLY ASKED"
-        titleHighlight="QUESTIONS"
-        subtitle="Explore answers to essential questions regarding custom UI design, responsive interfaces, visual revamps, and design systems."
-        items={uiDesignFaqs}
-      />
     </div>
   );
 };

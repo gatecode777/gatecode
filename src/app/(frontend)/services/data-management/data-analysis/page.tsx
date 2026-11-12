@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component ====================
@@ -284,72 +285,6 @@ const DigitalIndustries = () => {
   );
 };
 
-// ==================== SeoContentSection Component ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Enterprise Data Analytics and Business Intelligence Reporting
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Relying on fragmented spreadsheets and delayed manual reporting prevents leadership teams from identifying revenue opportunities and operational bottlenecks. At Gatecode Technologies, our business intelligence consultants transform raw transactional data into interactive visual dashboards and automated executive reports that guide strategic growth.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Interactive Visual Dashboards</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Custom Power BI and Tableau dashboards engineered with real-time automated data refreshes and multi-dimensional drill-downs.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Cohort & Customer Analytics</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Evaluating customer retention rates, lifetime values (LTV), acquisition costs (CAC), and repeat purchasing dynamics over time.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Executive Management Reporting</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                High-level operational summaries, variance analyses, and monthly performance decks formatted for board members and investors.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Predictive Trend Forecasting</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Applying mathematical regression models and seasonality adjustments to forecast sales demand, cash flows, and inventory cycles.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Data-Driven Reporting Directs Confident Corporate Growth
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Replacing guesswork with real-time business telemetry equips teams to make informed decisions and pivot faster than competitors. Choosing Gatecode Technologies gives you:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Instant Decision Visibility:</strong> Unified dashboards aggregating metrics from CRM, accounting, and marketing platforms.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Zero Manual Overhead:</strong> Automated data pipelines that update visualizations without human intervention.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Actionable Prioritization:</strong> Direct insight into which products, campaigns, and channels generate the highest gross margins.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const DataAnalysisReportingServicesPage = () => {
   useEffect(() => {
@@ -364,7 +299,7 @@ const DataAnalysisReportingServicesPage = () => {
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="data-management/data-analysis" serviceName="data analysis and reporting" />
       <ContactSection />
     </div>
   );

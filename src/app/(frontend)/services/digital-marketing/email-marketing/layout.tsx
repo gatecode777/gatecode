@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: "Email Marketing Services | Gatecode",
     description: "Nurture leads and boost retention with lifecycle automation, audience segmentation, responsive design and conversion-focused email copy.",
-    url: "https://gatecode.in/services/digital-marketing/email-marketing",
+    url: "https://www.gatecode.in/services/digital-marketing/email-marketing",
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

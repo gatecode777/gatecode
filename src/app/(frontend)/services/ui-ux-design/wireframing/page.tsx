@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component (Updated for Wireframing & Prototyping Services) ====================
@@ -309,79 +310,6 @@ const DigitalIndustries = () => {
 };
 
 // ==================== Section 6: Image Reference Section (SEO & Conversion Highlight) ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Premier Wireframing &amp; Prototyping Services Company in India
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Welcome to <strong>Gatecode Technologies Pvt. Ltd.</strong>, your strategic design partner for professional <strong>wireframing and prototyping services</strong>. We empower tech startups, product teams, and enterprise innovators to validate concepts, iterate workflows, and eliminate engineering risks before committing code.
-          </p>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Bringing Product Visions to Life with Testable Interactive Prototypes
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Building digital products without prototyping is like constructing a building without blueprints—it leads to structural failure and expensive reconstruction. Our wireframing specialists create interactive digital models in Figma that simulate real application behavior, allowing you to test usability, align stakeholders, and refine workflows with minimal turnaround time.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Rapid Conceptual Validation</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Test product logic and explore multiple layout variations quickly without investing weeks in full visual design.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Interactive Clickable Models</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Experience the feel of a live application with realistic gestures, screen routing, and dynamic micro-animations.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Substantial Cost Reduction</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Identify and fix critical usability flaws during the wireframing phase, avoiding expensive code refactoring down the line.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Developer-Ready Annotations</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Comprehensive interaction notes and screen specs that provide developers with an exact blueprint to build from.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Partner with Gatecode Technologies for Prototyping?
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Transforming product concepts into interactive blueprints requires technical design rigor:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Figma &amp; Protopie Mastery:</strong> Advanced component variables, component states, and realistic touch gesture triggers.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Agile Turnaround:</strong> Iterative sprint delivery enabling fast design sprints and immediate user testing cycles.</li>
-            <li style={{ marginBottom: '10px' }}><strong>End-to-End Design Continuity:</strong> Seamless progression from wireframe blueprints into high-fidelity UI and code.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const WireframingPrototypingServicesPage = () => {
   useEffect(() => {
@@ -392,9 +320,9 @@ const WireframingPrototypingServicesPage = () => {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/ui-ux-design' },
-      { '@type': 'ListItem', position: 3, name: 'Wireframing & Prototyping', item: 'https://gatecode.in/services/ui-ux-design/wireframing' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.gatecode.in/services/ui-ux-design' },
+      { '@type': 'ListItem', position: 3, name: 'Wireframing & Prototyping', item: 'https://www.gatecode.in/services/ui-ux-design/wireframing' },
     ],
   };
 
@@ -406,7 +334,7 @@ const WireframingPrototypingServicesPage = () => {
     provider: {
       '@type': 'Organization',
       name: 'Gatecode Technologies Pvt. Ltd.',
-      url: 'https://gatecode.in',
+      url: 'https://www.gatecode.in',
     },
     areaServed: {
       '@type': 'Country',
@@ -431,7 +359,7 @@ const WireframingPrototypingServicesPage = () => {
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="ui-ux-design/wireframing" serviceName="wireframing and prototyping" />
       <ContactSection />
     </div>
   );

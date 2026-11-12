@@ -1,0 +1,148 @@
+.sh-page {
+  background: #ffffff;
+  color: #1e293b;
+}
+
+.sh-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.sh-hero {
+  background: linear-gradient(135deg, #031330 0%, #06224a 100%);
+  color: #ffffff;
+  padding: clamp(56px, 9vw, 110px) 0 clamp(48px, 7vw, 90px);
+}
+
+.sh-page .sh-hero .sh-hero-title {
+  color: #ffffff;
+  font-size: clamp(34px, 6vw, 60px);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 18px;
+}
+
+.sh-hero-sub {
+  max-width: 720px;
+  font-size: clamp(15px, 1.6vw, 18px);
+  line-height: 1.7;
+  color: #cbd5e1;
+  margin: 0 0 28px;
+}
+
+.sh-cta {
+  display: inline-block;
+  padding: 14px 28px;
+  border: 1.5px solid #38bdf8;
+  color: #38bdf8;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.sh-cta:hover {
+  background: #38bdf8;
+  color: #031330;
+}
+
+.sh-section {
+  padding: clamp(40px, 6vw, 72px) 0;
+}
+
+.sh-section-title {
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 600;
+  margin: 0 0 28px;
+  color: #0f172a;
+}
+
+.sh-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.sh-card {
+  display: flex;
+  flex-direction: column;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 26px 24px;
+  transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+}
+
+.sh-card:hover {
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+  transform: translateY(-2px);
+  border-color: #0d9488;
+}
+
+.sh-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+
+.sh-card-title a {
+  color: #0f172a;
+  text-decoration: none;
+}
+
+.sh-card-title a:hover {
+  color: #0d9488;
+}
+
+.sh-card-desc {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #475569;
+  margin: 0 0 16px;
+}
+
+.sh-sub-list {
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.sh-sub-list a {
+  font-size: 14px;
+  color: #0f766e;
+  text-decoration: none;
+}
+
+.sh-sub-list a:hover {
+  text-decoration: underline;
+}
+
+.sh-more {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0d9488;
+  text-decoration: none;
+}
+
+.sh-more:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .sh-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .sh-container { padding: 0 16px; }
+  .sh-grid { grid-template-columns: 1fr; }
+}

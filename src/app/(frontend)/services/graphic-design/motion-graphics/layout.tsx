@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: "Motion Graphics & Animation Services | Gatecode",
     description: "Captivating motion graphics, 2D explainer animations, animated social assets and promo visuals that lift viewer retention and brand recall.",
-    url: "https://gatecode.in/services/graphic-design/motion-graphics",
+    url: "https://www.gatecode.in/services/graphic-design/motion-graphics",
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component (Updated for Accounting Services) ====================
@@ -284,72 +285,6 @@ const DigitalIndustries = () => {
   );
 };
 
-// ==================== SeoContentSection Component (Optimized Existing Section - In Place) ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Trusted Accounting and Financial Compliance Services Company
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Managing business finances requires rigorous attention to detail, strict adherence to statutory deadlines, and organized record-keeping. At <strong>Gatecode Technologies</strong>, our seasoned accountants and financial consultants deliver dependable corporate accounting, bookkeeping, and regulatory tax compliance solutions designed to free business leaders from administrative burdens while ensuring total transparency.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Daily Bookkeeping & General Ledger</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Systematic transaction recording, multi-currency ledger reconciliation, and strict adherence to double-entry accounting principles.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>GST & Corporate Tax Preparation</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                End-to-end GST return filings, input tax credit verification, and advance corporate tax estimation to eliminate compliance notices.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Payroll & Statutory Deductions</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Structured salary calculations, employee tax deductions (TDS), provident fund filings, and comprehensive wage register compliance.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Management Reporting & MIS</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Comprehensive financial statements, cash flow monitoring, and monthly MIS reports that give leadership strategic fiscal visibility.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Partner with Gatecode Technologies for Corporate Accounting?
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Partnering with an experienced accounting service provider guarantees peace of mind and audit-readiness throughout every fiscal cycle. Choosing Gatecode Technologies delivers tangible benefits:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>100% Tax & Legal Compliance:</strong> Timely GST returns, income tax filings, and strict regulatory adherence without late penalties.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Cloud Software Integration:</strong> Seamless operation on Tally Prime, QuickBooks, Zoho Books, and modern ERP environments.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Bank-Grade Data Confidentiality:</strong> Strict non-disclosure agreements and secure cloud protocols protecting sensitive financial data.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const AccountingServicesPage = () => {
   useEffect(() => {
@@ -364,7 +299,7 @@ const AccountingServicesPage = () => {
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="accounting" serviceName="accounting" />
       <ContactSection />
     </div>
   );

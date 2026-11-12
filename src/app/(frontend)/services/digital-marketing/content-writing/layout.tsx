@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: "Professional Content Writing Services | Gatecode",
     description: "Clear, compelling, human-first content in your brand voice: website copy, articles, SEO blog posts, product descriptions and more.",
-    url: "https://gatecode.in/services/digital-marketing/content-writing",
+    url: "https://www.gatecode.in/services/digital-marketing/content-writing",
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

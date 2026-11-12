@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: "Document Digitization & OCR Services | Gatecode",
     description: "Convert paper archives into secure, indexed and fully searchable digital records using high-precision scanning and OCR solutions.",
-    url: "https://gatecode.in/services/data-management/document-digitization",
+    url: "https://www.gatecode.in/services/data-management/document-digitization",
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

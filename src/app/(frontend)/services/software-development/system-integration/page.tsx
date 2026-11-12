@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
-import FAQSection, { systemIntegrationFaqs } from '@/components/frontend/FAQSection/FAQSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component (Updated for Custom Development & System Integration) ====================
@@ -18,7 +18,7 @@ const DigitalHero = () => {
       <div className="dm-container dm-hero-content">
         <div className="dm-hero-text-wrapper">
           <h1 className="dm-hero-title">
-            CUSTOM DEVELOPMENT<br />& SYSTEM<br />INTEGRATION
+            Best Custom App<br />Development &amp; System<br />Integration Services
           </h1>
           <p className="dm-hero-subtitle">
             We build purpose-driven software and engineer reliable API bridges to unify disconnected business systems, automate data synchronization, and eliminate operational friction.
@@ -310,79 +310,6 @@ const DigitalIndustries = () => {
 };
 
 // ==================== Section 6: Image Reference Section (SEO & Conversion Highlight) ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Leading Custom Development &amp; System Integration Services in India
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Welcome to <strong>Gatecode Technologies Pvt. Ltd.</strong>, your enterprise technology partner for bespoke custom software engineering and <strong>system integration services</strong>. We bridge the gap between disconnected software applications, cloud databases, and legacy infrastructure to create a unified, automated digital ecosystem.
-          </p>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Eliminating Data Silos Through Resilient Middleware and Modern APIs
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Disconnected enterprise systems force teams to waste hundreds of hours manually transferring records between CRMs, ERPs, inventory software, and accounting platforms. Our integration architects design secure, scalable middleware solutions and custom API layers that ensure instant data synchronization, transactional integrity, and automated operational efficiency.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Real-Time Data Synchronization</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Keep all business records perfectly synchronized across cloud applications, databases, and third-party platforms with zero latency.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Legacy Software Modernization</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Extend the lifespan of valuable proprietary systems by wrapping them in modern REST and GraphQL APIs without risky migrations.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Bank-Grade Security & Encryption</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Protect confidential business data during transit and rest with OAuth 2.0, token authentication, and TLS 1.3 encryption.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Automated Error Recovery & Queues</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Built-in dead-letter queues and automated retry logic ensure no transaction is ever dropped during network interruptions.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Choose Gatecode Technologies for System Integration?
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Integrating complex enterprise systems requires rigorous testing and deep architectural expertise. Collaborating with Gatecode Technologies ensures:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Protocol & Platform Versatility:</strong> Proven fluency across REST, GraphQL, SOAP, Webhooks, and legacy database drivers.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Zero Data Loss Guarantee:</strong> Atomic transactions and idempotent endpoints ensure data consistency under all network conditions.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Proactive Telemetry:</strong> Real-time API uptime monitoring, automated alerts, and continuous maintenance support.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const CustomDevelopmentSystemIntegrationPage = () => {
   useEffect(() => {
@@ -393,9 +320,9 @@ const CustomDevelopmentSystemIntegrationPage = () => {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/software-development' },
-      { '@type': 'ListItem', position: 3, name: 'Custom Development & System Integration', item: 'https://gatecode.in/services/software-development/system-integration' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.gatecode.in/services/software-development' },
+      { '@type': 'ListItem', position: 3, name: 'Custom Development & System Integration', item: 'https://www.gatecode.in/services/software-development/system-integration' },
     ],
   };
 
@@ -407,52 +334,13 @@ const CustomDevelopmentSystemIntegrationPage = () => {
     provider: {
       '@type': 'Organization',
       name: 'Gatecode Technologies Pvt. Ltd.',
-      url: 'https://gatecode.in',
+      url: 'https://www.gatecode.in',
     },
     areaServed: {
       '@type': 'Country',
       name: 'India',
     },
     description: 'Custom software development and system integration agency delivering API middleware, ERP/CRM bridges, and real-time cloud synchronization.',
-  };
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'What is system integration, and how does it help our business?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'System integration connects different software applications, third-party platforms, and legacy databases into a single cohesive network. It allows information to flow automatically in real time, eliminating manual data entry, reducing human errors, and giving leadership a centralized view of business operations.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Can you integrate modern cloud applications with our older, legacy software?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes! We specialize in legacy system modernization. We build secure custom APIs and middleware that act as a bridge between your established legacy databases and modern cloud-based tools, allowing you to access new capabilities without undergoing an expensive or risky system replacement.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'How does API integration improve our daily business operations?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Custom API integration enables real-time data syncing across all your software tools. This means your team no longer has to manually enter data into multiple systems, which reduces human error, saves countless administrative hours, and provides you with accurate, up-to-date analytics for better decision-making.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: "Is our company's data secure during and after the integration process?",
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Data security is our top priority. We implement robust security protocols, including end-to-end data encryption, secure authentication (like OAuth), and strict compliance checks. We ensure that data flows securely between systems without exposing your architecture to common web vulnerabilities or unauthorized access.',
-        },
-      },
-    ],
   };
 
   return (
@@ -465,25 +353,14 @@ const CustomDevelopmentSystemIntegrationPage = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(integrationServiceSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="software-development/system-integration" serviceName="system integration and custom software" />
       <ContactSection />
-      <FAQSection
-        eyebrow="FAQS"
-        titleLine1="FREQUENTLY ASKED"
-        titleHighlight="QUESTIONS"
-        subtitle="Explore answers to essential questions regarding system integration, API bridges, legacy synchronization, and enterprise security."
-        items={systemIntegrationFaqs}
-      />
     </div>
   );
 };

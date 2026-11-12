@@ -439,20 +439,20 @@ const AppDevelopmentPage = () => {
         name: 'Gatecode Technologies App Development Process',
         description: 'Watch our 6-step mobile app development process covering Research & Strategy, UI/UX Design, Development, Testing, Launch, and Support at Gatecode Technologies.',
         thumbnailUrl: [
-            'https://gatecode.in/images/2.webp',
-            'https://gatecode.in/images/digitalbg1.webp',
+            'https://www.gatecode.in/images/2.webp',
+            'https://www.gatecode.in/images/digitalbg1.webp',
         ],
         uploadDate: '2026-01-15T08:00:00+05:30',
-        contentUrl: 'https://gatecode.in/videos/expertise_video.mp4',
+        contentUrl: 'https://www.gatecode.in/videos/expertise_video.mp4',
     };
 
     const breadcrumbSchema = {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
-            { '@type': 'ListItem', position: 2, name: 'Technical Expertise', item: 'https://gatecode.in/expertise/app-developers' },
-            { '@type': 'ListItem', position: 3, name: 'App Developers', item: 'https://gatecode.in/expertise/app-developers' },
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.gatecode.in' },
+            { '@type': 'ListItem', position: 2, name: 'Technical Expertise', item: 'https://www.gatecode.in/expertise/app-developers' },
+            { '@type': 'ListItem', position: 3, name: 'App Developers', item: 'https://www.gatecode.in/expertise/app-developers' },
         ],
     };
 
@@ -464,7 +464,7 @@ const AppDevelopmentPage = () => {
         provider: {
             '@type': 'Organization',
             name: 'Gatecode Technologies Pvt. Ltd.',
-            url: 'https://gatecode.in',
+            url: 'https://www.gatecode.in',
         },
         areaServed: {
             '@type': 'Country',

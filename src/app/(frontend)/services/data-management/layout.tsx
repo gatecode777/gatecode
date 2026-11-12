@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'Integrated Data Management Services | Data Entry Services India',
     description: 'Gatecode Technologies is a top data management company in India providing integrated data management services, database management system solutions, and data entry services India.',
-    url: 'https://gatecode.in/services/data-management',
+    url: 'https://www.gatecode.in/services/data-management',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: 'Best SEO Services in Jaipur | Expert SEO Company',
     description:
       'Looking for the best SEO services in Jaipur? Our expert services company delivers affordable search engine optimization for unmatched local growth.',
-    url: 'https://gatecode.in/services/digital-marketing/seo',
+    url: 'https://www.gatecode.in/services/digital-marketing/seo',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

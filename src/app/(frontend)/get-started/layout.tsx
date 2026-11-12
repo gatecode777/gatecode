@@ -15,13 +15,13 @@ export const metadata: Metadata = {
     'Gatecode Technologies'
   ],
   alternates: {
-    canonical: 'https://gatecode.in/get-started',
+    canonical: 'https://www.gatecode.in/get-started',
   },
   openGraph: {
     images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'Get Started | Hire Software & Web Developers | Gatecode',
     description: 'Start your digital transformation journey with Gatecode Technologies. Share your requirements for custom software development, web & mobile app engineering, and digital solutions.',
-    url: 'https://gatecode.in/get-started',
+    url: 'https://www.gatecode.in/get-started',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

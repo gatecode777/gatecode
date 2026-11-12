@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: "Banner & Poster Design Services | Gatecode",
     description: "Eye-catching banners and posters for print and digital: event posters, web ads, trade show backdrops, standees and outdoor graphics.",
-    url: "https://gatecode.in/services/graphic-design/banner-design",
+    url: "https://www.gatecode.in/services/graphic-design/banner-design",
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

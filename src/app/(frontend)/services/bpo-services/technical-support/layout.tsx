@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: "24/7 Technical Support & IT Helpdesk | Gatecode",
     description: "Reliable multi-tier technical support and IT helpdesk services that resolve issues fast, reduce downtime and keep your systems running smoothly.",
-    url: "https://gatecode.in/services/bpo-services/technical-support",
+    url: "https://www.gatecode.in/services/bpo-services/technical-support",
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

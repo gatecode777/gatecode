@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: "Taxation & Compliance Support Services | Gatecode",
     description: "Stay fully tax compliant, legally optimize corporate liabilities and avoid penalties with dedicated direct and indirect tax management support.",
-    url: "https://gatecode.in/services/accounting/taxation",
+    url: "https://www.gatecode.in/services/accounting/taxation",
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

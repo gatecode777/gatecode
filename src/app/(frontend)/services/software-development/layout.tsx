@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'Software Development Company in Jaipur | Custom Software Services | Gatecode',
     description: 'Gatecode is a software development company in Jaipur building custom software, CRM, ERP and integrations for businesses across India and worldwide.',
-    url: 'https://gatecode.in/services/software-development',
+    url: 'https://www.gatecode.in/services/software-development',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

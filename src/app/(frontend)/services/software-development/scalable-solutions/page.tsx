@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
-import FAQSection, { scalableSolutionsFaqs } from '@/components/frontend/FAQSection/FAQSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component (Updated for Smart & Scalable Software Solutions) ====================
@@ -18,7 +18,7 @@ const DigitalHero = () => {
       <div className="dm-container dm-hero-content">
         <div className="dm-hero-text-wrapper">
           <h1 className="dm-hero-title">
-            SMART & SCALABLE<br />SOFTWARE<br />SOLUTIONS
+            Best Business<br />Software Solutions<br />Service In Jaipur
           </h1>
           <p className="dm-hero-subtitle">
             We architect intelligent, high-availability software platforms built to handle expanding user loads, automate complex business workflows, and scale seamlessly with your enterprise.
@@ -310,79 +310,6 @@ const DigitalIndustries = () => {
 };
 
 // ==================== Section 6: Image Reference Section (SEO & Conversion Highlight) ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Expert Smart &amp; Scalable Software Solutions in India
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Welcome to <strong>Gatecode Technologies Pvt. Ltd.</strong>, your premier engineering partner for <strong>smart and scalable software solutions</strong>. We specialize in designing distributed software systems that maintain uncompromising speed, reliability, and security as user concurrency and database sizes grow exponentially.
-          </p>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Building High-Throughput Architectures Engineered for Continuous Growth
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Software scalability is not merely about adding cloud servers; it requires sophisticated database partitioning, asynchronous task processing, modular service decoupling, and intelligent caching. Our software architects construct resilient cloud-native ecosystems that eliminate single points of failure and keep your operational overhead lean.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Decoupled Microservices</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Eliminate system-wide dependencies by isolating critical business functions into independently deployable, autoscaling microservices.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Real-Time Event Processing</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Process millions of transactions and user events concurrently utilizing high-speed messaging brokers and queue architectures.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Distributed Data Management</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Optimize database performance through smart indexing, read/write replicas, distributed caches, and horizontal sharding.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Cost-Optimized Cloud Scaling</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Auto-scale cloud resources dynamically based on real-time traffic spikes, paying only for the compute power your application needs.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Partner with Gatecode Technologies for Scalable Engineering?
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Engineering scalable applications requires deep algorithmic understanding and cloud proficiency. When partnering with Gatecode Technologies, you receive:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Cloud-Native Expertise:</strong> Proven mastery across AWS, Google Cloud, Docker, Kubernetes, and serverless compute paradigms.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Zero Technical Debt:</strong> Clean, thoroughly documented codebases designed for effortless team onboarding and maintenance.</li>
-            <li style={{ marginBottom: '10px' }}><strong>24/7 APM Monitoring:</strong> Proactive telemetry, automated alerting, and dedicated SLAs ensuring uninterrupted application availability.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const SmartScalableSoftwareSolutionsPage = () => {
   useEffect(() => {
@@ -393,9 +320,9 @@ const SmartScalableSoftwareSolutionsPage = () => {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/software-development' },
-      { '@type': 'ListItem', position: 3, name: 'Smart & Scalable Software Solutions', item: 'https://gatecode.in/services/software-development/scalable-solutions' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.gatecode.in/services/software-development' },
+      { '@type': 'ListItem', position: 3, name: 'Smart & Scalable Software Solutions', item: 'https://www.gatecode.in/services/software-development/scalable-solutions' },
     ],
   };
 
@@ -407,52 +334,13 @@ const SmartScalableSoftwareSolutionsPage = () => {
     provider: {
       '@type': 'Organization',
       name: 'Gatecode Technologies Pvt. Ltd.',
-      url: 'https://gatecode.in',
+      url: 'https://www.gatecode.in',
     },
     areaServed: {
       '@type': 'Country',
       name: 'India',
     },
     description: 'Smart and scalable software development company delivering high-concurrency microservices, cloud automation, and distributed enterprise platforms.',
-  };
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'What does "scalable software" mean, and why is it crucial for growing businesses?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Scalable software is architected to handle growing volumes of users, transactions, and data seamlessly without experiencing slowdowns, crashes, or requiring a complete rebuild. As your business grows, a scalable system ensures consistent performance and reliability while keeping infrastructure costs predictable.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'How do you engineer software to handle sudden traffic spikes and heavy concurrent users?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'We employ modern cloud-native architectures including decoupled microservices, containerization with Docker and Kubernetes, automated horizontal load balancing, distributed caching layers (such as Redis), and asynchronous message queues to handle peak concurrency effortlessly.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Can you migrate or re-architect our existing legacy software to make it scalable?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes! Our team can conduct a comprehensive technical audit of your current system to identify performance bottlenecks. We can then restructure, optimize, or entirely migrate your legacy application to a more robust framework, improving database queries and integrating modern cloud hosting solutions for superior resource management.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Are scalable digital solutions cost-effective in the long run?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Absolutely. While engineering a scalable architecture requires strategic initial planning, it is highly cost-effective long term. It prevents the need for expensive, complete system rebuilds every few years. Furthermore, modern scalable cloud infrastructure allows you to optimize costs by only paying for the computing resources you actually use during traffic peaks.',
-        },
-      },
-    ],
   };
 
   return (
@@ -465,25 +353,14 @@ const SmartScalableSoftwareSolutionsPage = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(scalableServiceSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="software-development/scalable-solutions" serviceName="scalable software" />
       <ContactSection />
-      <FAQSection
-        eyebrow="FAQS"
-        titleLine1="FREQUENTLY ASKED"
-        titleHighlight="QUESTIONS"
-        subtitle="Find answers to key questions about building, optimizing, and future-proofing scalable web and software architecture."
-        items={scalableSolutionsFaqs}
-      />
     </div>
   );
 };

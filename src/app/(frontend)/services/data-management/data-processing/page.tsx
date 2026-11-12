@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component ====================
@@ -284,72 +285,6 @@ const DigitalIndustries = () => {
   );
 };
 
-// ==================== SeoContentSection Component ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Enterprise Data Processing & ETL Transformation Services
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Unprocessed raw data is full of formatting inconsistencies, syntax errors, and duplicate entries that break analytical tools and mislead business strategies. At Gatecode Technologies, our data processing solutions systematically organize, clean, and convert massive enterprise datasets into standardized formats that seamlessly power operational databases and executive dashboards.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Automated ETL Pipelines</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                End-to-end extraction, transformation, and loading pipelines that automatically cleanse and format incoming records for target databases.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Format Normalization & Mapping</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Translating disparate file types including XML, JSON, CSV, and legacy flat files into consistent relational structures.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>High-Volume Batch Processing</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Processing large transaction logs, credit reports, customer records, and inventory catalogs with rapid turnaround SLAs.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Integrity Audits & Quality Control</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Automated regex checks, schema verification, and statistical sampling to guarantee zero data loss during transformation.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why High-Quality Data Processing Powers Strategic Growth
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Transforming raw data into validated records allows organizations to eliminate manual spreadsheet management and make confident decisions. Choosing Gatecode Technologies ensures:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Accelerated Business Intelligence:</strong> Analytics teams spend zero time cleaning datasets and immediately extract value.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Universal System Compatibility:</strong> Seamless data flows between external partners, internal legacy systems, and modern cloud ERPs.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Enterprise Reliability:</strong> Rigorous validation protocols ensuring 99.9% data accuracy across every operational row.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const DataProcessingServicesPage = () => {
   useEffect(() => {
@@ -364,7 +299,7 @@ const DataProcessingServicesPage = () => {
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="data-management/data-processing" serviceName="data processing" />
       <ContactSection />
     </div>
   );

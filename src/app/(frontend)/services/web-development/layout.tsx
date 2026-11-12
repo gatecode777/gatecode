@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: 'Website Development Company in India | Web Design & Development Services',
     description: 'Gatecode Technologies is a premier website development company in India delivering custom web app development services, react web development, and full stack development services.',
-    url: 'https://gatecode.in/services/web-development',
+    url: 'https://www.gatecode.in/services/web-development',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

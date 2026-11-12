@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== Section 1: Hero Section ====================
@@ -312,79 +313,6 @@ const DigitalIndustries = () => {
 };
 
 // ==================== Section 6: Image Reference Section (SEO & Conversion Highlight) ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Expert Content Writing Agency Delivering Clarity, Voice &amp; Impact
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Welcome to Gatecode Technologies Pvt. Ltd., your professional content writing agency dedicated to communicating your commercial message with clarity, style, and precision. We help modern businesses articulate their value proposition, educate prospective clients, and drive conversions across all digital touchpoints.
-          </p>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Compelling Written Content Tailored for Humans and Search Visibility
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            High-ranking content requires more than repeating search phrases; it demands readable structure, authoritative depth, and genuine empathy for the reader’s challenges. Our content writers craft engaging copy that holds reader interest, answers queries thoroughly, and builds genuine brand trust.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>High-Converting Website Copy</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Communicate your products and service benefits clearly with headlines, feature breakdowns, and calls-to-action that drive action.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>In-Depth Technical &amp; B2B Articles</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Demonstrate industry leadership with well-researched, authoritative articles that simplify complex topics for decision-makers.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Brand Storytelling &amp; Microcopy</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Infuse your brand voice into social captions, product descriptions, interface microcopy, and email communications.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Editorial Proofreading &amp; Polishing</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Ensure your drafts are completely free of grammatical errors, repetitive phrasing, and inconsistencies before going live.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Partner with Gatecode Technologies for Content Writing?
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            A skilled content team elevates your brand’s authority. Partnering with our specialized copywriting team provides:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Zero Artificial Filler:</strong> Human-researched writing that reflects real knowledge and speaks directly to your audience.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Seamless Search Integration:</strong> Natural keyword implementation that enhances search engine crawlability without hurting readability.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Predictable Turnarounds:</strong> Transparent drafting, revision, and delivery timelines designed to support your marketing schedule.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const ContentWritingServicesPage = () => {
   useEffect(() => {
@@ -395,9 +323,9 @@ const ContentWritingServicesPage = () => {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/digital-marketing' },
-      { '@type': 'ListItem', position: 3, name: 'Content Writing Services', item: 'https://gatecode.in/services/digital-marketing/content-writing' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.gatecode.in/services/digital-marketing' },
+      { '@type': 'ListItem', position: 3, name: 'Content Writing Services', item: 'https://www.gatecode.in/services/digital-marketing/content-writing' },
     ],
   };
 
@@ -409,36 +337,13 @@ const ContentWritingServicesPage = () => {
     provider: {
       '@type': 'Organization',
       name: 'Gatecode Technologies Pvt. Ltd.',
-      url: 'https://gatecode.in',
+      url: 'https://www.gatecode.in',
     },
     areaServed: {
       '@type': 'Country',
       name: 'India',
     },
     description: 'Professional content writing agency providing website copywriting, SEO blog articles, technical writing, product descriptions, and promotional marketing content.',
-  };
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Is the content 100% original and human-written?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, all content is researched, written, and edited by professional human copywriters. We do not use robotic automated text, ensuring authentic tone and unique perspectives.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'How do you match our company brand voice?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'We review your existing collateral, website, and target audience guidelines during the initial briefing stage, establishing a custom style guide before drafting begins.',
-        },
-      },
-    ],
   };
 
   return (
@@ -451,17 +356,13 @@ const ContentWritingServicesPage = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(writingServiceSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="digital-marketing/content-writing" serviceName="content writing" />
       <ContactSection />
     </div>
   );

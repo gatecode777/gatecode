@@ -1,6 +1,16 @@
+"use client";
+
 import Link from 'next/link';
 
 const Hero = () => {
+  const handleScrollToServices = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const servicesSection = document.getElementById('services');
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <section className="hero-section fe-root">
       <div className="hero-container">
@@ -25,7 +35,12 @@ const Hero = () => {
             <Link href="/get-started" className="hero-btn hero-btn-solid" aria-label="Get Free Consultations with Gatecode Technologies">
               Get Free Consultations <span> &rarr;</span>
             </Link>
-            <Link href="#services" className="hero-btn hero-btn-outline" aria-label="Our Services - Explore Our IT and Software Services">
+            <Link
+              href="#services"
+              onClick={handleScrollToServices}
+              className="hero-btn hero-btn-outline"
+              aria-label="Our Services - Explore Our IT and Software Services"
+            >
               Our Services <span>&rarr;</span>
             </Link>
           </div>

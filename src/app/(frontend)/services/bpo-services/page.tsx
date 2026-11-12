@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component ====================
@@ -284,80 +285,6 @@ const DigitalIndustries = () => {
   );
 };
 
-// ==================== SeoContentSection Component (Optimized Existing Section - In Place) ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Enterprise Business Process Outsourcing (BPO) and Contact Center Solutions
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            At <strong>Gatecode Technologies</strong>, we stand out as a trusted provider of <strong>business process outsourcing services</strong>, specialized <strong>customer support outsourcing services</strong>, and scalable <strong>call center services</strong>. Our dedicated teams manage high-volume customer interactions, complex technical inquiries, and back-office administrative workflows for global businesses seeking exceptional service delivery and operational efficiency.
-          </p>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            24/7 Omnichannel Customer Care & Call Center Operations
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Delivering memorable customer experiences requires empathetic communication, rapid response times, and high resolution rates. Operating as a specialized contact center partner, our certified agents manage voice calls, live website chats, email ticketing, and social media interactions to maximize customer loyalty and lifetime value.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Inbound Customer Support</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Round-the-clock voice and live chat assistance delivering swift query resolution, billing support, and order management.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Outbound Call Center Services</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                High-converting telemarketing, prospective lead qualification, customer feedback surveys, and renewal follow-up campaigns.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Tiered Technical Helpdesk</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                L1 and L2 technical troubleshooting, remote application support, password resets, and structured ticketing escalation workflows.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Back-Office Process Management</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                High-speed data verification, claim documentation audits, order entry, and database administration with strict SLA guarantees.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Partner with Gatecode Technologies for BPO Operations?
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Partnering with an experienced BPO service provider guarantees consistent service quality, zero operational downtime, and scalable cost advantages. Choosing Gatecode Technologies ensures:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>24/7 Multi-Shift Coverage:</strong> Uninterrupted global operations across US, UK, and European business hours.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Comprehensive Quality Assurance:</strong> Continuous call monitoring, speech analytics, and regular agent coaching sessions.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Rapid Elastic Scalability:</strong> Seamlessly scale team headcount during peak shopping seasons without fixed facility overheads.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const BPOServicesPage = () => {
   useEffect(() => {
@@ -368,9 +295,9 @@ const BPOServicesPage = () => {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/bpo-services' },
-      { '@type': 'ListItem', position: 3, name: 'BPO Services', item: 'https://gatecode.in/services/bpo-services' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.gatecode.in/services/bpo-services' },
+      { '@type': 'ListItem', position: 3, name: 'BPO Services', item: 'https://www.gatecode.in/services/bpo-services' },
     ],
   };
 
@@ -382,7 +309,7 @@ const BPOServicesPage = () => {
     provider: {
       '@type': 'Organization',
       name: 'Gatecode Technologies Pvt. Ltd.',
-      url: 'https://gatecode.in',
+      url: 'https://www.gatecode.in',
     },
     areaServed: {
       '@type': 'Country',
@@ -407,7 +334,7 @@ const BPOServicesPage = () => {
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="bpo-services" serviceName="BPO" />
       <ContactSection />
     </div>
   );

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: 'Gatecode Technologies' }],
     title: "Social Media Post Design Services | Gatecode",
     description: "Scroll-stopping social creatives: Instagram carousels, story templates, YouTube thumbnails and LinkedIn graphics tailored to your brand.",
-    url: "https://gatecode.in/services/graphic-design/social-media-design",
+    url: "https://www.gatecode.in/services/graphic-design/social-media-design",
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: 'Best Business Software Solutions Service In Jaipur',
     description:
       'Smart Software Solution Services, Providing Enterprise, Sap, Automotive, Shipping, And Business Software Solutions For Scalable Digital Growth.',
-    url: 'https://gatecode.in/services/software-development/scalable-solutions',
+    url: 'https://www.gatecode.in/services/software-development/scalable-solutions',
     siteName: 'Gatecode Technologies',
     locale: 'en_US',
     type: 'website',

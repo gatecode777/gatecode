@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== Section 1: Hero Section ====================
@@ -311,80 +312,6 @@ const DigitalIndustries = () => {
   );
 };
 
-// ==================== Section 6: Existing SeoContentSection (Optimized In-Place) ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Creative Graphic Design Agency for Cohesive Brand Storytelling
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Welcome to Gatecode Technologies Pvt. Ltd., your trusted creative partner for bespoke graphic design, brand identity systems, and high-impact marketing visuals. We help growing businesses and established enterprises translate core ideas into visually captivating assets that command attention and foster customer trust.
-          </p>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Transforming Business Communication Through Thoughtful Visual Design
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Effective graphic design is more than decorative artwork; it is a strategic tool that structures information, clarifies value, and drives user action. Our experienced design team develops unified visual assets across digital platforms, advertising networks, packaging, and physical print mediums.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Logo Design &amp; Brand Systems</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Establish an enduring corporate identity with custom vector logos, balanced color palettes, typography standards, and usage manuals.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Social Media &amp; Ad Creatives</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Capture viewer attention in fast-scrolling feeds with high-contrast social graphics, carousel templates, and digital display banners.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Packaging &amp; Product Labels</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Elevate shelf presence with structural packaging graphics, die-cut box layouts, and retail product labels compliant with print standards.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Marketing Collateral &amp; Print</h4>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Communicate complex offerings clearly through corporate brochures, presentation pitch decks, roll-up banners, and sales collateral.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Partner with Gatecode Technologies for Graphic Design?
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Professional graphic design delivers compounding brand recognition and credibility. Working with our creative studio provides:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Strategic Brand Cohesion:</strong> Harmonious visual assets that ensure your brand looks consistent across web, mobile, and print.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Production-Grade Deliverables:</strong> Full access to layered source files, vectors, web-optimized formats, and print-ready proofs.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Dedicated Creative Collaboration:</strong> Direct communication with professional visual artists focused on your business objectives.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const GraphicDesignServicesPage = () => {
   useEffect(() => {
@@ -395,9 +322,9 @@ const GraphicDesignServicesPage = () => {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gatecode.in' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://gatecode.in/services/graphic-design' },
-      { '@type': 'ListItem', position: 3, name: 'Graphic Design', item: 'https://gatecode.in/services/graphic-design' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.gatecode.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.gatecode.in/services/graphic-design' },
+      { '@type': 'ListItem', position: 3, name: 'Graphic Design', item: 'https://www.gatecode.in/services/graphic-design' },
     ],
   };
 
@@ -409,44 +336,13 @@ const GraphicDesignServicesPage = () => {
     provider: {
       '@type': 'Organization',
       name: 'Gatecode Technologies Pvt. Ltd.',
-      url: 'https://gatecode.in',
+      url: 'https://www.gatecode.in',
     },
     areaServed: {
       '@type': 'Country',
       name: 'India',
     },
     description: 'Professional graphic design agency providing custom logo design, brand identity systems, social media graphics, corporate marketing collateral, and packaging design.',
-  };
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'What types of graphic design services does Gatecode Technologies offer?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'We provide end-to-end design solutions including logo and brand identity, social media creatives, print collateral, packaging design, banners, brochures, and digital ad graphics.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'What file formats will I receive upon project completion?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'You will receive complete vector source files (AI, EPS, SVG, PDF) alongside high-resolution web formats (PNG, JPEG, WebP) and pre-press CMYK print files.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Do you create designs for both digital and print mediums?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, our team creates assets optimized for both digital displays (RGB, responsive dimensions) and commercial offset/digital printing (CMYK, bleeds, proper DPI).',
-        },
-      },
-    ],
   };
 
   return (
@@ -459,17 +355,13 @@ const GraphicDesignServicesPage = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(graphicDesignSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <DigitalHero />
       <DigitalAbout />
       <DigitalServices />
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="graphic-design" serviceName="graphic design" />
       <ContactSection />
     </div>
   );

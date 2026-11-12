@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactSection from '@/components/frontend/ContactSection/ContactSection';
+import ServiceFAQ from '@/components/frontend/FAQSection/ServiceFAQ';
 import '@/components/frontend/DigitalMarketing/DigitalMarketing.css';
 
 // ==================== DigitalHero Component ====================
@@ -284,72 +285,6 @@ const DigitalIndustries = () => {
   );
 };
 
-// ==================== SeoContentSection Component ====================
-const SeoContentSection = () => {
-  return (
-    <section className="dm-seo-content-section" style={{ backgroundColor: '#ffffff', padding: '60px 0', borderTop: '1px solid #eaeaea' }}>
-      <div className="dm-container">
-        <div style={{ width: '100%', color: '#333333', lineHeight: '1.8' }}>
-          
-          <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px', textAlign: 'left' }}>
-            Strategic Financial Solutions & Advisory for Growth Enterprises
-          </h2>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '24px' }}>
-            Scaling a business requires data-driven financial architecture that aligns commercial aspirations with fiscal reality. At Gatecode Technologies, our strategic finance advisors help executive teams navigate capital allocation, model multi-scenario growth forecasts, and optimize core unit economics to build enduring enterprise value.
-          </p>
-
-          {/* Key Feature Highlight Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px', margin: '30px 0' }}>
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Financial Modeling & Projections</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Institutional 3-statement models, headcount planning frameworks, and sensitivity analyses built for executive planning and investor review.
-              </p>
-            </div>
-            
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Unit Economics & Margin Analysis</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Detailed evaluation of CAC, payback schedules, gross margins, and churn dynamics to identify highest-leverage revenue drivers.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Fundraising & Capital Strategy</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Financial deck preparation, investor data room structuring, and strategic counsel on equity dilution vs. non-dilutive financing.
-              </p>
-            </div>
-
-            <div style={{ padding: '24px', backgroundColor: '#f9fafb', borderRadius: '12px', borderLeft: '4px solid #4e7c7e' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>Spend Governance & Restructuring</h3>
-              <p style={{ fontSize: '15px', color: '#666666', margin: 0 }}>
-                Systematic evaluation of fixed overheads, vendor contracts, and departmental budgets to eliminate structural waste.
-              </p>
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '22px', fontWeight: '600', color: '#1a1a1a', marginTop: '30px', marginBottom: '14px' }}>
-            Why Strategic Financial Leadership Transforms Business Trajectory
-          </h3>
-          
-          <p style={{ fontSize: '16px', color: '#555555', marginBottom: '20px' }}>
-            Transforming corporate accounting into forward-looking strategic intelligence provides the clarity needed to make high-conviction decisions. Partnering with Gatecode Technologies ensures:
-          </p>
-
-          <ul style={{ paddingLeft: '20px', marginBottom: '24px', fontSize: '16px', color: '#555555' }}>
-            <li style={{ marginBottom: '10px' }}><strong>Clear Financial Vision:</strong> Granular multi-year projections and cash runway clarity under diverse market scenarios.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Optimized Profitability:</strong> Direct alignment of marketing, hiring, and capital expenditure with unit profitability.</li>
-            <li style={{ marginBottom: '10px' }}><strong>Investor Credibility:</strong> Institutional-grade financial reporting that builds unwavering confidence with capital partners.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // ==================== Main Page Component ====================
 const StrategicFinancialSolutionsServicesPage = () => {
   useEffect(() => {
@@ -364,7 +299,7 @@ const StrategicFinancialSolutionsServicesPage = () => {
       <DigitalWhyChoose />
       <DigitalProcess />
       <DigitalIndustries />
-      <SeoContentSection />
+      <ServiceFAQ slug="accounting/financial-solutions" serviceName="financial solutions" />
       <ContactSection />
     </div>
   );

@@ -8,7 +8,7 @@ import connectDB from '@/lib/db';
 import BlogPost from '@/models/BlogPost';
 import BlogCategory from '@/models/BlogCategory';
 
-export const SITE_URL = 'https://gatecode.in';
+export const SITE_URL = 'https://www.gatecode.in';
 export const postsPerPage = 6;
 
 const DEFAULT_TITLE = 'IT, Software & Web Development Blog | Gatecode Technologies';

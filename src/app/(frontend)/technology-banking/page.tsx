@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import TechBankingLandingPage from '@/components/frontend/LandingPage/TechBankingLandingPage';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/technology-banking' },
   title: 'Technology & Connected Banking Services | Gatecode Technologies',
   description:
     'Custom core banking systems, digital lending platforms, UPI/NACH API integrations, and RBI-compliant fintech solutions for banks, NBFCs, and cooperative societies across India.',
