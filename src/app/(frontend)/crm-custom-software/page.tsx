@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import CrmLandingPage from '@/components/frontend/LandingPage/CrmLandingPage';
 
 export const metadata: Metadata = {
-  alternates: { canonical: '/custom-software' },
+  alternates: { canonical: '/crm-custom-software' },
   title: 'Custom CRM & Software Engineering | Gatecode Technologies',
   description: 'Tailored CRM systems, ERP business portals, and custom enterprise software automation engines.',
 };

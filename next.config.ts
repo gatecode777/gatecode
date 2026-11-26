@@ -65,6 +65,13 @@ const nextConfig: NextConfig = {
   // Real server-side 308s (crawlers see them, unlike a client-side router.replace)
   async redirects() {
     return [
+      // Canonical domain redirect: gatecode.in -> www.gatecode.in
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'gatecode.in' }],
+        destination: 'https://www.gatecode.in/:path*',
+        permanent: true,
+      },
       { source: '/blog/detail', destination: '/blog', permanent: true },
       { source: '/case-study-detail', destination: '/case-study', permanent: true },
       ...Object.entries(LEGACY_FLAT_SERVICE_SLUGS).map(([slug, category]) => ({

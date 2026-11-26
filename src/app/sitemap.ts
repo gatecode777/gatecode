@@ -52,7 +52,7 @@ const EXPERTISE = [
 // Landing / solution pages that were already in the previous sitemap
 const SOLUTIONS = [
   '/app-development', '/website-development', '/custom-software',
-  '/technology-banking',
+  '/technology-banking', '/crm-custom-software',
 ];
 
 const LEGAL = ['/privacy-policy', '/terms-and-conditions', '/cookie-policy'];
