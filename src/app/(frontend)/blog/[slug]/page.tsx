@@ -1,6 +1,7 @@
 // @ts-nocheck
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { notFound } from 'next/navigation';
 import '@/components/frontend/Blog/BlogDetail.css';
 import '@/components/frontend/Blog/Blog.css';
 import connectDB from '@/lib/db';
@@ -21,7 +22,7 @@ export async function generateMetadata({ params }): Promise<Metadata> {
   const post = await BlogPost.findOne({ slug, status: 'published', isActive: true }).lean();
 
   if (!post) {
-    return {};
+    notFound();
   }
 
   const title = `${post.title} | Gatecode Technologies Blog`;
@@ -277,26 +278,11 @@ export default async function BlogDetailPage({ params }) {
     { returnDocument: 'after' }
   ).populate('categoryId', 'name slug').lean();
 
-  const categories = await getBlogCategories();
-
   if (!post) {
-    return (
-      <div className="blog-detail-page">
-        <div className="blog-detail-container">
-          <BlogDetailSidebarClient categories={plain(categories)} activeCategory="" slug={slug} initialComments={[]} />
-          <main className="blog-detail-content">
-            <div style={{ padding: '60px 20px', textAlign: 'center' }}>
-              <h2 style={{ marginBottom: 12 }}>Post Not Found</h2>
-              <p style={{ color: '#888', marginBottom: 20 }}>This blog post doesn&apos;t exist or has been removed.</p>
-              <Link href="/blog" style={{ background: '#0fb9b1', color: '#fff', border: 'none', padding: '10px 24px', borderRadius: 6, cursor: 'pointer', fontWeight: 600, textDecoration: 'none', display: 'inline-block' }}>
-                Back to Blog
-              </Link>
-            </div>
-          </main>
-        </div>
-      </div>
-    );
+    notFound();
   }
+
+  const categories = await getBlogCategories();
 
   const blogPost = plain(post);
   const sidebarCats = plain(categories);
