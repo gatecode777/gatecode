@@ -74,6 +74,11 @@ const nextConfig: NextConfig = {
       },
       { source: '/blog/detail', destination: '/blog', permanent: true },
       { source: '/case-study-detail', destination: '/case-study', permanent: true },
+      {
+        source: '/blog/what-is-digital-marketing-types-strategies-examples',
+        destination: '/blog',
+        permanent: true,
+      },
       ...Object.entries(LEGACY_FLAT_SERVICE_SLUGS).map(([slug, category]) => ({
         source: `/services/${slug}`,
         destination: `/services/${category}/${slug}`,

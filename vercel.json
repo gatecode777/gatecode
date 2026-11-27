@@ -1,0 +1,21 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "gatecode.in"
+        }
+      ],
+      "destination": "https://www.gatecode.in/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/blog/what-is-digital-marketing-types-strategies-examples",
+      "destination": "https://www.gatecode.in/blog",
+      "permanent": true
+    }
+  ]
+}

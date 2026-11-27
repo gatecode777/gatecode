@@ -23,9 +23,19 @@ async function verifyEdgeToken(token: string): Promise<{ id: string; email: stri
 }
 
 export async function middleware(request: NextRequest) {
+  // 1. Enforce Server-Side HTTP 308 Wildcard Redirect (gatecode.in -> www.gatecode.in)
+  const host = request.headers.get('x-forwarded-host') || request.headers.get('host') || request.nextUrl.hostname;
+  const cleanHost = host.split(':')[0].toLowerCase();
+
+  if (cleanHost === 'gatecode.in') {
+    const { pathname, search } = request.nextUrl;
+    const destination = new URL(`${pathname}${search}`, 'https://www.gatecode.in');
+    return NextResponse.redirect(destination, 308);
+  }
+
   const { pathname } = request.nextUrl;
 
-  // Only handle /admin routes
+  // 2. Only handle /admin routes for authentication
   if (!pathname.startsWith(ADMIN_PREFIX)) {
     return NextResponse.next();
   }
@@ -68,5 +78,14 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/admin/:path*'],
+  matcher: [
+    /*
+     * Match all request paths except:
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico (favicon file)
+     * - public files with extensions (.svg, .png, .jpg, .jpeg, .gif, .webp, .ico)
+     */
+    '/((?!_next/static|_next/image|favicon\\.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico)$).*)',
+  ],
 };
