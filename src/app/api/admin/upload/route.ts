@@ -59,6 +59,37 @@ function sanitizeFilename(name: string): string {
 }
 
 const useBlob = !!process.env.BLOB_READ_WRITE_TOKEN;
+const useImageKit = !!process.env.IMAGEKIT_PRIVATE_KEY;
+
+async function uploadToImageKit(file: File, filename: string, subfolder: string): Promise<string> {
+  const privateKey = process.env.IMAGEKIT_PRIVATE_KEY!;
+  const buffer = Buffer.from(await file.arrayBuffer());
+  const base64File = buffer.toString('base64');
+
+  const formData = new FormData();
+  formData.append('file', base64File);
+  formData.append('fileName', filename);
+  formData.append('folder', `/uploads/${subfolder}`);
+  formData.append('useUniqueFileName', 'false');
+
+  const authHeader = `Basic ${Buffer.from(`${privateKey}:`).toString('base64')}`;
+
+  const res = await fetch('https://upload.imagekit.io/api/v1/files/upload', {
+    method: 'POST',
+    headers: {
+      Authorization: authHeader,
+    },
+    body: formData,
+  });
+
+  if (!res.ok) {
+    const errData = await res.json().catch(() => ({}));
+    throw new Error(errData.message || `ImageKit upload failed with status ${res.status}`);
+  }
+
+  const data = await res.json();
+  return data.url;
+}
 
 async function uploadToVercelBlob(file: File, filename: string): Promise<string> {
   const blob = await put(filename, file, { access: 'public' });
@@ -116,20 +147,22 @@ export async function POST(req: NextRequest) {
     const base     = sanitizeFilename(path.basename(file.name, ext)) || 'file';
     const filename = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}-${base}${ext}`;
 
+    let subfolder = 'general';
+    if (category) {
+      subfolder = sanitizeFilename(category);
+    } else if (isImage) {
+      subfolder = 'images';
+    } else {
+      subfolder = 'documents';
+    }
+
     let url: string;
 
-    if (useBlob) {
+    if (useImageKit) {
+      url = await uploadToImageKit(file, filename, subfolder);
+    } else if (useBlob) {
       url = await uploadToVercelBlob(file, filename);
     } else {
-      let subfolder = 'general';
-      const category = formData.get('category') as string | null;
-      if (category) {
-        subfolder = sanitizeFilename(category);
-      } else if (isImage) {
-        subfolder = 'images';
-      } else {
-        subfolder = 'documents';
-      }
       url = await uploadToLocal(file, subfolder, filename);
     }
 
@@ -145,8 +178,8 @@ export async function POST(req: NextRequest) {
         isImage,
       },
     });
-  } catch (e) {
+  } catch (e: any) {
     console.error('Upload error:', e);
-    return NextResponse.json<ApiResponse>({ success: false, message: 'Upload failed. Please try again.' }, { status: 500 });
+    return NextResponse.json<ApiResponse>({ success: false, message: e?.message || 'Upload failed. Please try again.' }, { status: 500 });
   }
 }
